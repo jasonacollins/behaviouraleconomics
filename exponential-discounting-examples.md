@@ -1,0 +1,62 @@
+# Exponential discounting examples
+
+## Example 1
+
+Suppose we have an exponential discounter with $\delta=0.95$ and utility each period of $u(x_n)=x_n$.
+
+Choice 1: Would this agent prefer \$100 today ($t=0$) or \$110 next week ($t=1$)? 
+
+\begin{align*}
+U_0(0,\$100)&=u(\$100) \\
+&=100
+\end{align*}
+
+\begin{align*}
+U_0(1,\$110)&=\delta u(\$110) \\
+&=0.95*110 \\
+&=104.50
+\end{align*}
+
+The exponential discounter will prefer to receive \$110 next week.
+
+Choice 2: Would this agent prefer \$100 next week ($t=1$) or \$110 in two weeks ($t=2$)? 
+
+\begin{align*}
+U_1(1,\$100)&=\delta u(\$110) \\
+&=0.95*100 \\
+&=95
+\end{align*}
+
+\begin{align*}
+U_1(2,\$110)&=\delta^2 u(\$110) \\
+&=0.95^2*110 \\
+&=99.275
+\end{align*}
+
+The exponential discounter will prefer to receive \$110 in two weeks. The set of decisions across Choice 1 and Choice 2 are time consistent. If the agent selected \$110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively Choice 1), they would not change.
+
+## Example 2
+
+Suppose we have an exponential discounter with $\delta=0.95$ per week and utility each period of $u(x_n)=x_n$
+
+They are offered \$100 today. What sum would they need to be offered in one year (52 weeks) to prefer that later payment to the \$100 today?
+
+\begin{align*}
+U_0(0,\$100)&=u(\$100) \\
+&=100
+\end{align*}
+
+\begin{align*}
+U_0(52,\$x)&=\delta^{52} u(\$x) \\
+&=0.95^{52}*x
+\end{align*}
+
+They will prefer \$$x$ in 52 weeks if $U(\$x \text{ at } t=52)$ is greater than 100.
+
+\begin{align*}
+0.95^{52}*x&>100 \\[6pt]
+x&>\frac{100}{0.95^{52}} \\[6pt]
+x&>\$1440.03
+\end{align*}
+
+The agent would be willing to wait a year for payment if they were paid more than $1440.03.

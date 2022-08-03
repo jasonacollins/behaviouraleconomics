@@ -1,0 +1,31 @@
+# Decision making under risk and uncertainty
+
+In this part I examine the basic economic approach to decision making under risk and uncertainty.
+
+I introduce the basic axioms on which the economic approach is based, discuss expected utility theory, and provide a set of empirical anomalies in expected utility theory that provide grounds for the behavioural economic approach.
+
+## Notation
+
+At times when discussing decision making under risk and uncertainty, I will use the following notation:
+
+Suppose we have a lottery L that gives outcomes $x_1, x_2, ..., x_n$ with probabilities $p_1, p_2, ..., p_n$. We can write this as:
+
+
+
+
+$$L=(x_1,p_1; x_2,p_2; ...; x_n,p_n)$$
+
+
+
+
+For example:
+
+
+
+
+$$L=(−100, 0.5; 200, 0.5)$$
+
+
+
+
+means that the gambler loses 100 with 50% probability and wins 200 with 50% probability.

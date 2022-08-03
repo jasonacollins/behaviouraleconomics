@@ -1,0 +1,92 @@
+project:
+  type: book
+
+book:
+  title: "Course notes on Behavioural Economics"
+  site-url: https://behaviouraleconomics.jasoncollins.blog
+  author: "Jason Collins"
+  date: "1 August 2022"
+  chapters:
+    - index.qmd
+    - what-is-behavioural-economics.qmd
+    - part: economic-foundations.qmd
+      chapters:
+      - preferences.qmd
+      - rationality.qmd
+      - utility-functions.qmd
+#      - economic-foundation-exercises.qmd
+    - part: decision-making-under-risk-and-uncertainty.qmd
+      chapters:
+      - expected-value.qmd
+      - axioms-for-expected-utility-theory.qmd
+      - expected-utility-theory.qmd
+      - subjective-expected-utility.qmd
+      - expected-utility-examples.qmd
+      - anomalies-of-expected-utility-theory.qmd
+#      - risk-and-uncertainty-exercises.qmd
+    - part: prospect-theory.qmd
+      chapters:
+      - probability-weighting.qmd
+      - loss-aversion.qmd
+      - reflection-effect.qmd
+      - reference-dependence.qmd
+      - value-function.qmd
+      - prospect-theory-implementation.qmd
+      - prospect-theory-examples.qmd
+      - prospect-theory-applications.qmd
+    - part: intertemporal-choice.qmd
+      chapters: 
+      - exponential-discounting.qmd
+      - exponential-discounting-examples.qmd
+      - exponential-discounting-anomalies.qmd
+      - present-bias.qmd
+      - present-bias-examples.qmd
+      - sophisticated-present-bias.qmd
+      - commitment.qmd
+    - references.qmd
+  navbar:
+    background: primary
+    search: true
+    right:
+      - text: "PDF version"
+        href: https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf
+      - text: "Blog"
+        href: https://www.jasoncollins.blog/
+      - text: "About"
+        href: https://www.jasoncollins.blog/about/
+      - icon: twitter
+        href: https://twitter.com/jasonacollins
+  sidebar:
+    collapse-level: 1
+  page-footer: 
+    center:
+      - text: "Copyright: CC-BY"
+        href: https://creativecommons.org/licenses/by/4.0/
+      - icon: twitter 
+        href: https://twitter.com/jasonacollins
+  opengraph: true
+  twitter-card: true
+
+bibliography: references.bib
+csl: apa-no-ampersand.csl
+
+format:
+  html:
+    theme: cosmo
+    fontcolor: black
+    fontsize: 20px
+    css: styles.css
+    html-math-method: katex
+    link-external-newwindow: true
+    ink-external-filter: '^(?:http:|https:)\/\/cfdm\.jasoncollins\.blog\/custom'
+    code-fold: true
+  pdf:
+    documentclass: scrreprt
+    echo: false
+
+execute:
+  freeze: auto
+  keep-md: true
+  
+editor: source
+
