@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "Course notes on Behavioural Economics"
+  title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
   date: "10 August 2022"

@@ -129,50 +129,78 @@ You receive the following payoffs for each course of action:
 |       | t=0 | t=1 | t=2 |
 |-------|:---:|:---:|:---:|
 | Save  |  0  |  0  | 45  |
-| Spend |  10  |  10  |  10  |
+| Spend | 10  | 10  | 10  |
 
 At $t=0$ the highest discounted utility is for Save. You plan to save for the jacket.
 
 Save:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=0+\beta\delta *0+\beta\delta^2*45 \\
 &=0.5*45 \\
 &=22.5
 \end{align*}
+```
+
+
 
 Spend:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=10+\beta\delta *10+\beta\delta^2*10 \\
 &=10+0.5*10+0.5*10 \\
 &=20
 \end{align*}
+```
+
+
 
 One month now passes. You have saved for a month. You could now spend both your savings from last month and this month, giving a short term boost, or keep saving for your jacket.
 
 |         | t=1 | t=2 |
-|---------|:---:|:-------------:|
-| Save    |  0  |      45       |
-| *Spend* | 20  |       10       |
+|---------|:---:|:---:|
+| Save    |  0  | 45  |
+| *Spend* | 20  | 10  |
 
 At $t=1$ spending now has the highest discounted utility. After saving for the first period, you spend.
 
 Save:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=0+\beta\delta*45 \\
 &=0.5*45 \\
 &=22.5
 \end{align*}
+```
+
+
 
 Spend:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=20+\beta\delta *10 \\
 &=20+0.5*10 \\
 &=25
 \end{align*}
+```
+
+
 
 You spend despite initially wanting to save.
 
@@ -180,9 +208,9 @@ Now let's consider this problem from the point of view of a sophisticated presen
 
 |                       | t=0 | t=1 | t=2 |
 |-----------------------|:---:|:---:|:---:|
-| Save  |  0  |  0  | 45  |
-| Start spending at t=1 |  0  | 20  |  10  |
-| Spend                 |  10  |  10  |  10  |
+| Save                  |  0  |  0  | 45  |
+| Start spending at t=1 |  0  | 20  | 10  |
+| Spend                 | 10  | 10  | 10  |
 
 You work backward through time. At $t=2$, you will buy the jacket.
 
@@ -190,19 +218,33 @@ The utility of each option at $t=1$ is as follows:
 
 Save:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=0+\beta\delta*45 \\
 &=0.5*45 \\
 &=22.5
 \end{align*}
+```
+
+
 
 Spend:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=20+\beta\delta *10 \\
 &=20+0.5*10 \\
 &=25
 \end{align*}
+```
+
+
 
 If you had spent at $t=0$, you have no choice but to spend at $t=2$.
 
@@ -210,19 +252,168 @@ The sophisticated quasi-hyperbolic discounter now knows that saving for the jack
 
 Start spending at t=1:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=0+\beta\delta *20+\beta\delta^2*10 \\
 &=0.5*20+0.5*10 \\
 &=15
 \end{align*}
+```
+
+
 
 Spend:
 
+
+
+
+```{=tex}
 \begin{align*}
 U(x)&=10+\beta\delta *10+\beta\delta^2*10 \\
 &=10+0.5*10+0.5*10 \\
 &=20
 \end{align*}
+```
+
+
 
 They start to spend at $t=0$. Contrast this with the naïve agent who chooses Save at $t=0$. The sophisticated agent would also prefer Save at $t=0$, but knows that Save is not available to them as they will spend at $t=1$.
+
+Now consider what the sophisticated agent may do in the presence of lay-by.
+
+For payment of an administrative fee equivalent to 1 unit of utility and an initial deposit (your savings in $t=0$), you reserve the jacket, preventing you from spending that money in period 2. The new set of options is:
+
+|                       | t=0 | t=1 | t=2 |
+|-----------------------|:---:|:---:|:---:|
+| Save                  |  0  |  0  | 45  |
+| Start spending at t=1 |  0  | 20  | 10  |
+| Spend                 | 10  | 10  | 10  |
+| Lay-by                | -1  |  0  | 45  |
+
+The lay-by option is strictly worse than Save. But what happens if lay-by is available to the sophisticated present-biased agent?
+
+Again, working backward, at $t=2$, the agent buys the jacket.
+
+At $t=1$, by the same logic we looked at previously, they spend if they are able to do so. That eliminates Save from their choice set. At \$ $t=0$, they now compare the feasible options:
+
+Start spending at t=1:
+
+
+
+
+```{=tex}
+\begin{align*}
+U(x)&=0+\beta\delta *20+\beta\delta^2*10 \\
+&=0.5*20+0.5*10 \\
+&=15
+\end{align*}
+```
+
+
+
+Spend:
+
+
+
+
+```{=tex}
+\begin{align*}
+U(x)&=10+\beta\delta *10+\beta\delta^2*10 \\
+&=10+0.5*10+0.5*10 \\
+&=20
+\end{align*}
+```
+
+
+
+Lay-by:
+
+
+
+
+```{=tex}
+\begin{align*}
+U(x)&=-1+\beta\delta *0+\beta\delta^2*45 \\
+&=-1+0.5*0+0.5*45 \\
+&=21.5
+\end{align*}
+```
+
+
+
+Lay-by is the preferred option at $t=0$. As it binds the agent in the future, they are able to stick to this plan.
+
+Note that lay-by is strictly worse than Save as the agent must pay the administrative fee. But it is chosen by the sophisticated quasi-hyperbolic discounter as the only feasible way to get their jacket. Without lay-by they will spend at $t=1$ and end up with lower utility from the perspective of their $t=0$ self.
+
+### Depressing the value of the bad course of action
+
+[Stickk](ADDLINK) is a online platform that enables people to commit to future courses of action. It works as follows:
+
+1. You state a time-based goal, such as not smoking during the next month, losing 5kg over the next 90 days, or writing the next chapter of your PhD thesis by Christmas.
+
+2. You commit a stake that will be paid to a charity (or an anti-charity) if you fail to meet your goal.
+
+3. At the stated time you report (or a referee appointed by you reports) whether you have met your goal.
+
+4. If you fail to report or report that you failed to meet your goal, your credit card is debited by the staked amount.
+
+![](img/stickk.jpg)
+
+The following is an illustration of how it works mathematically.
+
+A sophisticated present-biased agent with $\delta=1$ and $\beta=1/2$ enjoys smoking. It gives utility of 5. However, the agents also likes being healthy. Higher health gives utility of 8.
+
+At $t=0$ the agent is deciding whether you will smoke over the next month ($t=1$). If it doesn't smoke, it will have better health at $t=2$.
+
+The sophisticated agent works backward through time. At $t=1$ its payoffs are:
+
+\begin{align*}
+U(smoking)&=5 \\
+\\
+U(healthy)&=\beta\delta*8 \\
+&=4
+\begin{align*}
+
+It decides to smoke.
+
+As a result, at $t=0$, knowing that it will cave, it doesn't bother committing to not smoking, even though from the perspective of $t=0$ refraining from smoking is the better option:
+
+\begin{align*}
+U(smoking)&=\beta\delta*5 \\
+&=2.5
+\\
+U(healthy)&=\beta\delta^2*8 \\
+&=4
+\begin{align*}
+
+But now suppose it learns about Stickk. It now has the option of staking a sum at $t=0$ to prevent it from smoking. It decides to stake an amount equivalent to utility 5.
+
+Working backward through time, it knows that at $t=1$ if it has not staked any money with Stickk, it will smoke. But what if it has?
+
+\begin{align*}
+U(smoking)&=5-\beta\delta*5 \\
+&=2.5
+\\
+U(healthy)&=\beta\delta*8 \\
+&=4
+\begin{align*}
+
+It would refrain from smoking.
+
+This means its options at $t=0$ are effectively:
+
+\begin{align*}
+U(smoking)&=\beta\delta*5 \\
+&=2.5
+\\
+U(stickk+healthy)&=\beta\delta*8 \\
+&=4
+\begin{align*}
+
+It chooses to commit using Stickk.
+
+For a problem of this form it could always successfully use Stickk to commit to any action. It just needs to make the stake high enough.
 
