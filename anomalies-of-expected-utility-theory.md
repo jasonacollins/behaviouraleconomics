@@ -32,6 +32,7 @@ According to Expected Utility Theory, if an agent selects B:
 
 
 
+
 $$
 U(2400)>0.33U(2500)+0.66U(2400)+0.01U(0)
 $$
@@ -42,7 +43,9 @@ $$
 
 
 
+
 According to Expected Utility Theory, if an agent selects C:
+
 
 
 
@@ -53,6 +56,7 @@ $$
 $$
 0.33U(2500)+0.01U(0)> 0.34U(2400)
 $$
+
 
 
 
@@ -81,7 +85,9 @@ Recall that the formal definition for the independence of irrelevant alternative
 
 
 
+
 $$pz+(1-p)x\succcurlyeq pz+(1-p)y$$
+
 
 
 

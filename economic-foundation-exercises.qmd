@@ -44,18 +44,22 @@ a\) From [Robert Frank in the New York Times](https://www.nytimes.com/2008/02/10
 
 > TRADITIONAL economic models assume that people are self-interested in the narrow sense. If “homo economicus” - the stereotypical rational actor in these models - finds a wallet on the sidewalk, he keeps the cash inside. He doesn’t leave tips after dining in restaurants that he will never visit again. And he would never vote in a presidential election, much less make an anonymous donation of money or time to a presidential campaign.
 
+::: {.callout-tip collapse="true"}
+## Question 3a) answer
+
+The traditional economic axioms assume self-interest in a narrow sense, in that people make decisions in accordance with their preferences. However, completeness and transitivity say nothing about the content of those preferences. A person might prefer to return the wallet or leave a large tip for the good feeling they get. They might enjoy voting and care about outcomes for others.
+
+Even auxiliary axioms such as monotonicity or non-satiation leave these possibilities open in that while the agent will always want more, they do not require that it is purely for their own benefit.
+:::
+
 b\) From [Brian Easton in interest.co.nz](https://www.interest.co.nz/public-policy/116603/economist-brian-easton-says-behavioural-economics-challenges-our-assumptions):
 
 >For the last 150 years much economic analysis has been based on homo economicus, an ‘economic’ man who is rational and narrowly self-interested and who pursues his subjectively defined ends optimally.
 
 ::: {.callout-tip collapse="true"}
-## Question 3 answer
+## Question 3b) answer
 
-a\) The traditional economic axioms assume self-interest in a narrow sense, in that people make decisions in accordance with their preferences. However, completeness and transitivity say nothing about the content of those preferences. A person might prefer to return the wallet or leave a large tip for the good feeling they get. They might enjoy voting and care about outcomes for others.
-
-Even auxiliary axioms such as monotonicity or non-satiation leave these possibilities open in that while the agent will always want more, they do not require that it is purely for their own benefit.
-
-b\) First, "man who is rational" accords with the technical definition in economics but differs from how used in common speech (and likely that of readers of the article).
+First, "man who is rational" accords with the technical definition in economics but differs from how used in common speech (and likely that of readers of the article).
 
 If we read "narrowly self-interested" to mean that they make decisions in accordance with their preferences, then we might agree with that statement. However, we cannot place any further content into that idea of self-interest.
 

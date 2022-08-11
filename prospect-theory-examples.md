@@ -16,7 +16,9 @@ Would an expected value maximiser or risk neutral person purchase the insurance?
 
 
 
+
 $$E[\text{purchase}]=-\text{premium}=-\$1,100$$
+
 
 
 
@@ -50,12 +52,14 @@ Consider an agent who is risk seeking in the domain of losses but weights probab
 
 
 
+
 $$
 v(x)=\left\{\begin{matrix}
 x^{0.8} \qquad &\textrm{where} \space x \geq 0\\
 -2(-x)^{0.8} \quad &\textrm{where} \space x < 0 
 \end{matrix}\right.
 $$
+
 
 
 
@@ -111,6 +115,7 @@ Suppose an agent has the following reference-dependent utility function:
 
 
 
+
 $$
 v(x)=\left\{\begin{matrix}
 x^{1/2} \qquad &\textrm{where} \space x \geq 0\\
@@ -120,13 +125,16 @@ $$
 
 
 
+
 Where $x$ is the realised outcome relative to the reference point.
 
 Assume that the agent’s reference point is the status quo and the agent is offered the gamble A:
 
 
 
+
 $$(\$110, 0.5; −\$100, 0.5)$$
+
 
 
 

@@ -5,7 +5,7 @@ book:
   title: "Course notes on Behavioural Economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "1 August 2022"
+  date: "10 August 2022"
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -14,7 +14,7 @@ book:
       - preferences.qmd
       - rationality.qmd
       - utility-functions.qmd
-#      - economic-foundation-exercises.qmd
+      - economic-foundation-exercises.qmd
     - part: decision-making-under-risk-and-uncertainty.qmd
       chapters:
       - expected-value.qmd
@@ -23,7 +23,7 @@ book:
       - subjective-expected-utility.qmd
       - expected-utility-examples.qmd
       - anomalies-of-expected-utility-theory.qmd
-#      - risk-and-uncertainty-exercises.qmd
+      - risk-and-uncertainty-exercises.qmd
     - part: prospect-theory.qmd
       chapters:
       - probability-weighting.qmd

@@ -32,7 +32,7 @@ $$S=(t_1,x_1;t_2,x_2;...;t_n,x_n)$$
 
 An example of a stream of income is a salary: \$50,000 this year, \$50,000 next year, and so on.
 
-Let’s consider a two simple streams of payoffs. The first stream is $100 now and the second stream is $107 in one year. We can write these two streams as:
+Let’s consider a two simple streams of payoffs. The first stream is \$100 now and the second stream is \$107 in one year. We can write these two streams as:
 
 
 

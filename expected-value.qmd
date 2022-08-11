@@ -29,6 +29,7 @@ E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
 &=\$1
 \end{align*}
 
+\newpage
 Your chance of winning increases to 60%. The expected value of the gamble is:
 
 \begin{align*}

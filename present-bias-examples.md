@@ -24,37 +24,34 @@ Suppose we have a present biased agent with $\delta=0.95$, $\beta=0.95$ and util
 
 Choice 1: Would this agent prefer \$100 today ($t=0$) or \$110 next week ($t=1$)? 
 
-
-
-$$
-U(\$100 \text{ at }t=0)=U(\$100)
-$$
-
-
+\begin{align*}
+U_0(0,\$100)&=u(\$100)\\
+&-100
+\end{align*}
 
 \begin{align*}
-U(\$110 \text{ at } t=1)&=\beta\delta U(\$110) \\
+U_0(1,\$110)&=\beta\delta u(\$110) \\
 &=0.95*0.95*110 \\
 &=99.275
 \end{align*}
         
-As $U(\$100 \text{ at }t=0) > U(\$110 \text{ at } t=1)$, the present-biased agent will prefer to receive $100 this week.
+As $U_0(0,\$100) > U_0(1,\$110)$, the present-biased agent will prefer to receive \$100 this week.
 
 Choice 2: Would this agent prefer \$100 next week ($t=1$) or \$110 in two weeks ($t=2$)? 
 
 \begin{align*}
-U(\$100 \text{ at } t=1)&=\beta\delta U(\$100) \\
+U_0(1,\$100)&=\beta\delta u(\$100) \\
 &=0.95*0.95*100 \\
 &=90.25
 \end{align*}
 
 \begin{align*}
-U(\$110 \text{ at } t=2)&=\beta\delta^2 U(\$110) \\
+U_0(2,\$110)&=\beta\delta^2 u(\$110) \\
 &=0.95*0.95^2*110 \\
 &=94.31
 \end{align*}
 
-As $U(\$100 \text{ at }t=1) < U(\$110 \text{ at } t=1)$, the present-biased agent will prefer to receive $110 in two weeks.
+As $U_0(1,\$100) < U_0(2,\$110)$, the present-biased agent will prefer to receive \$110 in two weeks.
 
 Putting those two choices together:
 

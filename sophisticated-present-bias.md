@@ -42,23 +42,41 @@ The present-based agent that we examined in the earlier example was naïve. They
 
 When making their initial decision, the comparison they are making from the perspective of today is simply between the discounted utilities from the perspective of today:
 
-$U_0(1,\$100)=90.25$
 
-$U_0(2,\$110)=94.32$
+
+
+$$U_0(1,\$100)=90.25$$
+
+$$U_0(2,\$110)=94.32$$
+
+
+
 
 But this is an incorrect view as to their preferences next week. Next week they will calculate utility as:
 
-$U_1(1,\$100)=100$
 
-$U_1(2,\$100)=99.275$
+
+
+$$U_1(1,\$100)=100$$
+
+$$U_1(2,\$100)=99.275$$
+
+
+
 
 Today they hold an incorrect belief as to what their preference will be next week .
 
 The sophisticated agent will first consider how they will look at the choice next week:
 
-$U_1(1,\$1001)=100$
 
-$U_1(2,\$110)=99.275$
+
+
+$$U_1(1,\$1001)=100$$
+
+$$U_1(2,\$110)=99.275$$
+
+
+
 
 The sophisticated agent sees that next week they will take the \$100.
 
@@ -171,13 +189,13 @@ U_0(0,-\$10)&=u(-\$10) \\
 
 \begin{align*}
 U_0(1,-\$15)&=\beta\delta u(-\$15) \\
-&=0.5*1*(-15)
+&=0.5*1*(-15) \\
 &=-7.5
 \end{align*}
 
 \begin{align*}
 U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
-&=0.5*1^2*(-25)
+&=0.5*1^2*(-25) \\
 &=-12.5
 \end{align*}
 
@@ -192,7 +210,7 @@ U_1(1,-\$15)&=u(-\$15) \\
 
 \begin{align*}
 U_1(2,-\$25)&=\beta\delta u(-\$25) \\
-&=0.5*1*(-25)
+&=0.5*1*(-25) \\
 &=-12.5
 \end{align*}
 
@@ -223,7 +241,7 @@ U_1(1,-\$15)&=u(-\$15) \\
 
 \begin{align*}
 U_1(2,-\$25)&=\beta\delta u(-\$25) \\
-&=0.5*1*(-25)
+&=0.5*1*(-25) \\
 &=-12.5
 \end{align*}
 
@@ -238,7 +256,7 @@ U_0(0,-\$10)&=u(-\$10) \\
 
 \begin{align*}
 U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
-&=0.5*1^2*(-25)
+&=0.5*1^2*(-25) \\
 &=-12.5
 \end{align*}
 

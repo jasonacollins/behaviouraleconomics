@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.634">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>expected-utility-exercises</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="expected-utility-exercises_files/libs/clipboard/clipboard.min.js"></script>
+<script src="expected-utility-exercises_files/libs/quarto-html/quarto.js"></script>
+<script src="expected-utility-exercises_files/libs/quarto-html/popper.min.js"></script>
+<script src="expected-utility-exercises_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="expected-utility-exercises_files/libs/quarto-html/anchor.min.js"></script>
+<link href="expected-utility-exercises_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="expected-utility-exercises_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="expected-utility-exercises_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="expected-utility-exercises_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="expected-utility-exercises_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="expected-utility-exercises" class="level1">
+<h1>Expected utility exercises</h1>
+<section id="question-1." class="level2">
+<h2 class="anchored" data-anchor-id="question-1.">Question 1.</h2>
+<p>Anika is an expected utility maximiser with the following utility function:</p>
+<p><span class="math display">\[
+U(x)=\sqrt{x}
+\]</span></p>
+<p>Anika is offered the following choice:</p>
+<ol type="A">
+<li><p>A 50% chance of winning $10 and a 50% chance of winning nothing</p></li>
+<li><p>$4 for certain</p></li>
+</ol>
+<p>Anika has zero wealth besides this offer.</p>
+<ol type="a">
+<li><p>What is the expected value of option A?</p></li>
+<li><p>Will Anika choose A or B? Why?</p></li>
+<li><p>What is the certainty equivalent of option A?</p></li>
+<li><p>Draw a graph showing Anika’s utility curve, the expected value of option A, the expected utility of options A and B and the certainty equivalent of option A.</p></li>
+</ol>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 1 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>a) The expected value of option A) is:</p>
+<span class="math display">\[\begin{align*}
+E[A]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
+&amp;=0.5*\$10+0.5*0 \\[6pt]
+&amp;=\$5
+\end{align*}\]</span>
+<p>b) We need to determine the expected utility of each option. Anika will selection the option with the highest expected utility.</p>
+<p>The expected utility of option A) is:</p>
+<span class="math display">\[\begin{align*}
+EU(A)&amp;=p_1U(x_1)+p_2U(x_2) \\[6pt]
+&amp;=0.5*\sqrt{10}+0.5*\sqrt{0} \\[6pt]
+&amp;=1.58
+\end{align*}\]</span>
+<p>The expected utility of option B) is:</p>
+<span class="math display">\[\begin{align*}
+EU(B)&amp;=U(4) \\
+&amp;=\sqrt{4} \\
+&amp;=2
+\end{align*}\]</span>
+<p>Anika will choose option B) as it gives her higher expected utility. Anika is risk averse.</p>
+<p>c) To calculate the certainty equivalent of option A, we calculate what payment with certainty would deliver equivalent expected utility. That is:</p>
+<span class="math display">\[\begin{align*}
+EU(CE)&amp;=1.58 \\[6pt]
+\sqrt{CE}&amp;=1.58 \\[6pt]
+CE&amp;=1.58^2 \\[6pt]
+&amp;=2.5
+\end{align*}\]</span>
+<p>The certainty equivalent of option A is $2.50. That is, Anika would be indifferent between option A and a payment of $2.50 for certain.</p>
+<p>d)</p>
+<p><img src="tutorial_1_question_1.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Consider the following gamble:</p>
+<blockquote class="blockquote">
+<p>(0.5; $550; 0.5, -$500)</p>
+</blockquote>
+<p>This gamble provides a 50% chance of winning $550 and a 50% chance of losing $500.</p>
+<p>a) Would a risk neutral agent (who maximises expected value) be willing to pay $20 to play this gamble? What is the most they would be willing to pay to play?</p>
+<p>b) Would a risk averse expected utility maximiser with wealth $1000 and utility function <span class="math inline">\(U(x)=x^{1/2}\)</span> be willing to pay $20 to play this gamble? What is the most they would be willing to pay to play?</p>
+<p>c) Would the expected utility maximiser with utility function <span class="math inline">\(U(x)=x^{1/2}\)</span> change their decision if they had $1 million in wealth? Explain.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 2 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>a) The expected value of the gamble is:</p>
+<span class="math display">\[\begin{align*}
+E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
+&amp;=0.5(550)+0.5(-500) \\[6pt]
+&amp;=25
+\end{align*}\]</span>
+<p>This is greater than $20, so a risk neutral agent will be willing to pay $20 to participate in the gamble.</p>
+<p>We could also have solved this by determining the expected value if they had paid $20:</p>
+<span class="math display">\[\begin{align*}
+E[X]-c&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
+&amp;=0.5(550)+0.5(-500)-20 \\[6pt]
+&amp;=5
+\end{align*}\]</span>
+<p>As the expected value is positive, the agent would be willing to pay $20.</p>
+<p>b) The expected utility of the gamble for the risk averse agent if they paid $20 to play is:</p>
+<span class="math display">\[\begin{align*}
+EU(x)&amp;=p_1(W+x_1-c)+p_2(W+x_2-c) \\[6pt]
+&amp;=0.5(1000+550-20)^{1/2}+0.5(1000-500-20)^{1/2} \\[6pt]
+&amp;=30.51
+\end{align*}\]</span>
+<p>The expected utility of not playing the gamble is:</p>
+<span class="math display">\[\begin{align*}
+EU(x)&amp;=(1000)^{1/2} \\[6pt]
+&amp;=31.62
+\end{align*}\]</span>
+<p>They would not pay $20 as they would have higher utility if they turned down the gamble.</p>
+<p>In fact, they would not pay any positive sum to participate in the gamble. If they were offered the gamble for free, their expected utility would be:</p>
+<span class="math display">\[\begin{align*}
+EU(x)&amp;=0.5(1000+550)^{1/2}+0.5(1000-500)^{1/2} \\[6pt]
+&amp;=30.86
+\end{align*}\]</span>
+<p>This is less than if they simply turned down the gamble. They would be willing to pay to avoid the gamble. How much?</p>
+<p>We can determine this by asking what wealth a utility of 30.86 is:</p>
+<span class="math display">\[\begin{align*}
+W^{1/2}&amp;=30.86 \\[6pt]
+W&amp;=30.51^2 \\[6pt]
+&amp;=\$952.67
+\end{align*}\]</span>
+<p>The certainty equivalent of the gamble is $952.67. The agent would be willing to pay up to $47.33 to avoid the gamble.</p>
+<p>c) If they now have $1 million in wealth, we simply repeat the calculations above with the new wealth.</p>
+<span class="math display">\[\begin{align*}
+EU(x)&amp;=0.5(1000000+550-20)^{1/2}+0.5(1000000-500-20)^{1/2} \\[6pt]
+&amp;=1000.00246
+\end{align*}\]</span>
+<p>The expected utility of not playing the gamble is:</p>
+<span class="math display">\[\begin{align*}
+EU(x)&amp;=(1000000)^{1/2} \\[6pt]
+&amp;=1000
+\end{align*}\]</span>
+<p>They would be willing to pay $20 as they would have higher utility if they accepted the gamble.</p>
+<p>What is the most they would be willing to pay? If they were offered the gamble for free, their expected utility would be:</p>
+<span class="math display">\[\begin{align*}
+EU(x)&amp;=0.5(1000000+550)^{1/2}+0.5(1000000-500)^{1/2} \\[6pt]
+&amp;=1000.0125
+\end{align*}\]</span>
+<p>How much would they be willing to pay for this opportunity? We can determine this by asking what wealth a utility of 1000.0125 is: <span class="math display">\[\begin{align*}
+W&amp;=(1000.0125)^2 \\[6pt]
+&amp;=\$1000024.93
+\end{align*}\]</span></p>
+<p>The agent would be willing to pay up to $24.93 for the gamble. This is close to the expected value of $25.</p>
+<p>Intuitively, as the agent’s wealth increases their utility function becomes increasingly linear (second derivative approaches zero) and they become closer to risk neutral.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>Consider the following two choices:</p>
+<p><strong>Choice 1</strong>: Choose one of the following bets:</p>
+<p>Bet A:</p>
+<ul>
+<li>$10,000 with probability: 11%</li>
+<li>$0 with probability: 89%</li>
+</ul>
+<p>Bet B:</p>
+<ul>
+<li>$50,000 with probability: 10%</li>
+<li>$0 with probability: 90%</li>
+</ul>
+<p><strong>Choice 2</strong>: Choose one of the following bets:</p>
+<p>Bet A’:</p>
+<ul>
+<li>$10,000 with probability: 100%</li>
+</ul>
+<p>Bet B’:</p>
+<ul>
+<li>$50,000 with probability: 10%</li>
+<li>$10,000 with probability: 89%</li>
+<li>$0 with probability: 1%</li>
+</ul>
+<p>Many people pick B for Choice 1 and A’ for Choice 2.</p>
+<p>Does this pair of choices conform with Expected Utility Theory? Why?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>According to Expected Utility Theory, if an agent selects B:</p>
+<span class="math display">\[\begin{align*}
+0.10U(50,000)+0.90U(0)&amp;&gt; 0.11U(10,000)+ 0.89U(0) \\[6pt]
+0.10U(50,000)+0.01U(0)&amp;&gt; 0.11U(10,000)
+\end{align*}\]</span>
+<p>According to Expected Utility Theory, if an agent selects A’:</p>
+<span class="math display">\[\begin{align*}
+U(10,000)&amp;&gt;0.10U(50,000)+0.89U(10,000)+0.01U(0) \\[6pt]
+0.11U(10,000)&amp;&gt;0.89U(50,000)+0.01U(0)
+\end{align*}\]</span>
+<p>This is a contradiction. Under expected utility theory, if an agent chooses B it should choose B’. And if the agent chooses A it should choose A’.</p>
+<p>This occurs due to a breach in the principle of independence.</p>
+<p>Here is a representation of the choices.</p>
+<p><img src="img/allais-paradox-4.jpg" class="img-fluid"></p>
+<p>The bets in the two shaded areas are the same. They are paired with an outcomes of either $10,000 or $0. Preferring B to A and A’ to B’ is a violation of the axiom of the <a href="@sec-independence">independence of irrelevant alternatives</a>: Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble.</p>
+<p>Using this representation in the table, here is another way of understanding why this combination of choices is an anomaly. Imagine there are 100 tickets numbered 1 to 100. One ticket will be drawn. If a ticket between 1 and 89 is drawn, you win the prize in the first column. If a ticket between 90 and 99 is drawn, you win the amount in the second. If a 100 is drawn, you win the sum in the third.</p>
+<p>Suppose that you know the ticket that is drawn is between 1 and 89. Would you prefer A or B? As you would win $0 with either choice, you will be indifferent. You will similarly be indifferent between A’ and B’, winning $10,00 no matter what.</p>
+<p>Suppose instead that a ticket between 90 and 100 is drawn, but you know which. You can see that if you prefer A to B, you should also prefer A’ to B’. In each choice you are effectively facing the same bet. Let’s assume for the moment that you prefer B and B’.</p>
+<p>Finally, suppose you don’t know what ticket will be drawn. We have just determined that if you know the ticket is between 1 and 89 you are indifferent between the options, but if between 90 and 100 is drawn you prefer B and B’. You do not prefer A or A’ when the ticket range is 1 to 89 or 90 to 100, so you should not prefer A or A’ when the ticket number is unknown.</p>
+<p>Finally, using the formal definition for the independence of irrelevant alternatives axiom:</p>
+<ul>
+<li>if <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are lotteries with <span class="math inline">\(x\succcurlyeq y\)</span> and</li>
+<li><span class="math inline">\(p\)</span> is the probability that a third option <span class="math inline">\(z\)</span> is present, then: <span class="math display">\[
+pz+(1-p)x\succcurlyeq pz+(1-p)y
+\]</span></li>
+</ul>
+<p>For each of the choices in our lottery:</p>
+<ul>
+<li><p><span class="math inline">\(p=89\%\)</span></p></li>
+<li><p><span class="math inline">\(x\)</span> is a 100% chance of $10,000</p></li>
+<li><p><span class="math inline">\(y\)</span> is a 0.01/(1-0.89) chance of $0 and 0.10/(1-0.89) chance of $50,000</p></li>
+<li><p><span class="math inline">\(z\)</span> is $10,000 in choice 1 and $0 in choice 2, although <span class="math inline">\(z\)</span>’s value does not matter due to its assumed irrelevance.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

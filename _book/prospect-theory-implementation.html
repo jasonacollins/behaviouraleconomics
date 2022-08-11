@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course notes on Behavioural Economics - 15&nbsp; Prospect theory implementation</title>
+<title>Course notes on Behavioural Economics - 17&nbsp; Prospect theory implementation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -156,7 +156,7 @@ div.csl-indent {
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Course notes on Behavioural Economics - 15&nbsp; Prospect theory implementation">
+<meta name="twitter:title" content="Course notes on Behavioural Economics - 17&nbsp; Prospect theory implementation">
 <meta name="twitter:description" content="Under Prospect theory, people evaluate the utility of a prospect by two phases: editing and evaluation.">
 <meta name="twitter:card" content="summary">
 </head>
@@ -196,7 +196,7 @@ div.csl-indent {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -247,6 +247,11 @@ div.csl-indent {
   <a href="./utility-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility functions</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./economic-foundation-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></a>
+  </div>
+</li>
     </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -259,32 +264,37 @@ div.csl-indent {
     <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./expected-value.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Expected value</span></a>
+  <a href="./expected-value.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Expected value</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./axioms-for-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></a>
+  <a href="./axioms-for-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></a>
+  <a href="./expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></a>
+  <a href="./subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./expected-utility-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Expected utility examples</span></a>
+  <a href="./expected-utility-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Expected utility examples</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./anomalies-of-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Anomalies of expected utility theory</span></a>
+  <a href="./anomalies-of-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Anomalies of expected utility theory</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./risk-and-uncertainty-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Risk and uncertainty exercises</span></a>
   </div>
 </li>
     </ul>
@@ -299,42 +309,42 @@ div.csl-indent {
     <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./probability-weighting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Probability weighting</span></a>
+  <a href="./probability-weighting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Probability weighting</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./loss-aversion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Loss aversion</span></a>
+  <a href="./loss-aversion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Loss aversion</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reflection-effect.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The reflection effect</span></a>
+  <a href="./reflection-effect.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The reflection effect</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference-dependence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reference dependence</span></a>
+  <a href="./reference-dependence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Reference dependence</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./value-function.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The value function</span></a>
+  <a href="./value-function.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">The value function</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prospect-theory-implementation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></a>
+  <a href="./prospect-theory-implementation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></a>
+  <a href="./prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prospect-theory-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></a>
+  <a href="./prospect-theory-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></a>
   </div>
 </li>
     </ul>
@@ -349,32 +359,37 @@ div.csl-indent {
     <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exponential-discounting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Exponential discounting</span></a>
+  <a href="./exponential-discounting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Exponential discounting</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exponential-discounting-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Exponential discounting examples</span></a>
+  <a href="./exponential-discounting-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exponential discounting examples</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exponential-discounting-anomalies.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Exponential discounting anomalies</span></a>
+  <a href="./exponential-discounting-anomalies.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Exponential discounting anomalies</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Present bias</span></a>
+  <a href="./present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Present bias</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./present-bias-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Present bias examples</span></a>
+  <a href="./present-bias-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Present bias examples</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sophisticated-present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Sophisticated present bias</span></a>
+  <a href="./sophisticated-present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Sophisticated present bias</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./commitment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Commitment</span></a>
   </div>
 </li>
     </ul>
@@ -393,9 +408,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#editing" id="toc-editing" class="nav-link active" data-scroll-target="#editing"> <span class="header-section-number">15.1</span> Editing</a></li>
-  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"> <span class="header-section-number">15.2</span> Evaluation</a></li>
-  <li><a href="#fourfold-pattern-of-risk-attitudes" id="toc-fourfold-pattern-of-risk-attitudes" class="nav-link" data-scroll-target="#fourfold-pattern-of-risk-attitudes"> <span class="header-section-number">15.3</span> Fourfold pattern of risk attitudes</a></li>
+  <li><a href="#editing" id="toc-editing" class="nav-link active" data-scroll-target="#editing"> <span class="header-section-number">17.1</span> Editing</a></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"> <span class="header-section-number">17.2</span> Evaluation</a></li>
+  <li><a href="#fourfold-pattern-of-risk-attitudes" id="toc-fourfold-pattern-of-risk-attitudes" class="nav-link" data-scroll-target="#fourfold-pattern-of-risk-attitudes"> <span class="header-section-number">17.3</span> Fourfold pattern of risk attitudes</a></li>
   </ul>
 </nav>
     </div>
@@ -404,7 +419,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></h1>
 </div>
 
 
@@ -419,8 +434,8 @@ div.csl-indent {
 </header>
 
 <p>Under Prospect theory, people evaluate the utility of a prospect by two phases: editing and evaluation.</p>
-<section id="editing" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="editing"><span class="header-section-number">15.1</span> Editing</h2>
+<section id="editing" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="editing"><span class="header-section-number">17.1</span> Editing</h2>
 <p>Editing involves simplification of prospects for subsequent evaluation.</p>
 <p><span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> describes the editing phase as having four main operations:</p>
 <ul>
@@ -430,8 +445,8 @@ div.csl-indent {
 <li><p>Cancellation: Components that are shared by two prospects are ignored.</p></li>
 </ul>
 </section>
-<section id="evaluation" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="evaluation"><span class="header-section-number">15.2</span> Evaluation</h2>
+<section id="evaluation" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="evaluation"><span class="header-section-number">17.2</span> Evaluation</h2>
 <p>In the evaluation phase the prospects are evaluated and the option with the highest value chosen.</p>
 <p>The value of a prospect is made up of:</p>
 <p>1. a decision weight applied to each probability <span class="math inline">\pi(p_i)</span></p>
@@ -499,8 +514,8 @@ V(X)&amp;=\sum_{i=1}^n\pi(p_i)v(x_i)\\[6pt]
 </div>
 </div>
 </section>
-<section id="fourfold-pattern-of-risk-attitudes" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="fourfold-pattern-of-risk-attitudes"><span class="header-section-number">15.3</span> Fourfold pattern of risk attitudes</h2>
+<section id="fourfold-pattern-of-risk-attitudes" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="fourfold-pattern-of-risk-attitudes"><span class="header-section-number">17.3</span> Fourfold pattern of risk attitudes</h2>
 <p>Prospect theory results in a four-fold pattern of risk attitudes, as shown in this table. For moderate to high probability gambles, the reflection effect dominates and people are risk averse in the domain of gains and risk seeking in the domain of losses.</p>
 <p>But for low probability gambles, the probability weighting shifts the decision calculus. The possibility of a gain is overweighted, making the gamble attractive and inducing risk seeking behaviour. A similar effect occurs for a low probability of loss, with the overweighted probability making the potential loss less attractive, inducing risk averse behaviour.</p>
 <table class="table">
@@ -635,12 +650,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./value-function.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The value function</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">The value function</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./prospect-theory-examples.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
