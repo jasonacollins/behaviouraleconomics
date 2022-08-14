@@ -97,10 +97,8 @@ They apply decision weights as per the following table:
 \begin{align*}
 V(purchase)&=v(-1,100) \\
 &=-(1,100)^{0.8} \\
-&=-271
-\end{align*}
-
-\begin{align*}
+&=-271 \\
+\\
 V(don't)&=\sum_{i=1}^n \pi(p_i)v(x_i) \\
 &=\pi(0.999)*v(0)+\pi(0.001)*v(-1,000,000) \\
 &=0.99*0-0.01*(1,000,000)^{0.8} \\

@@ -5,7 +5,7 @@ book:
   title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "10 August 2022"
+  date: "15 August 2022"
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -43,6 +43,7 @@ book:
       - present-bias-examples.qmd
       - sophisticated-present-bias.qmd
       - commitment.qmd
+      - intertemporal-choice-applications.qmd
     - references.qmd
   navbar:
     background: primary

@@ -25,7 +25,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./intertemporal-choice-applications.html" rel="next">
 <link href="./sophisticated-present-bias.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -310,6 +310,11 @@ ul.task-list{list-style: none;}
   <a href="./commitment.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Commitment</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intertemporal-choice-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></a>
+  </div>
+</li>
     </ul>
   </li>
         <li class="sidebar-item">
@@ -332,6 +337,7 @@ ul.task-list{list-style: none;}
   <li><a href="#forcing-the-optimal-course-of-action-odysseus" id="toc-forcing-the-optimal-course-of-action-odysseus" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action-odysseus"> <span class="header-section-number">26.1.2</span> Forcing the optimal course of action: Odysseus</a></li>
   <li><a href="#forcing-the-optimal-course-of-action-lay-by" id="toc-forcing-the-optimal-course-of-action-lay-by" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action-lay-by"> <span class="header-section-number">26.1.3</span> Forcing the optimal course of action: lay-by</a></li>
   <li><a href="#depressing-the-value-of-the-bad-course-of-action" id="toc-depressing-the-value-of-the-bad-course-of-action" class="nav-link" data-scroll-target="#depressing-the-value-of-the-bad-course-of-action"> <span class="header-section-number">26.1.4</span> Depressing the value of the bad course of action</a></li>
+  <li><a href="#increasing-the-value-of-the-optimal-action-temptation-bundling" id="toc-increasing-the-value-of-the-optimal-action-temptation-bundling" class="nav-link" data-scroll-target="#increasing-the-value-of-the-optimal-action-temptation-bundling"> <span class="header-section-number">26.1.5</span> Increasing the value of the optimal action: temptation bundling</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -623,7 +629,7 @@ U(x)&amp;=-1+\beta\delta *0+\beta\delta^2*45 \\
 </section>
 <section id="depressing-the-value-of-the-bad-course-of-action" class="level3" data-number="26.1.4">
 <h3 data-number="26.1.4" class="anchored" data-anchor-id="depressing-the-value-of-the-bad-course-of-action"><span class="header-section-number">26.1.4</span> Depressing the value of the bad course of action</h3>
-<p><a href="ADDLINK">Stickk</a> is a online platform that enables people to commit to future courses of action. It works as follows:</p>
+<p><a href="https://www.stickk.com">stickK</a> is a online platform that enables people to commit to future courses of action. stickK works as follows:</p>
 <ol type="1">
 <li><p>You state a time-based goal, such as not smoking during the next month, losing 5kg over the next 90 days, or writing the next chapter of your PhD thesis by Christmas.</p></li>
 <li><p>You commit a stake that will be paid to a charity (or an anti-charity) if you fail to meet your goal.</p></li>
@@ -632,21 +638,79 @@ U(x)&amp;=-1+\beta\delta *0+\beta\delta^2*45 \\
 </ol>
 <p><img src="img/stickk.jpg" class="img-fluid"></p>
 <p>The following is an illustration of how it works mathematically.</p>
-<p>A sophisticated present-biased agent with <span class="math inline">\delta=1</span> and <span class="math inline">\beta=1/2</span> enjoys smoking. It gives utility of 5. However, the agents also likes being healthy. Higher health gives utility of 8.</p>
-<p>At <span class="math inline">t=0</span> the agent is deciding whether you will smoke over the next month (<span class="math inline">t=1</span>). If it doesn’t smoke, it will have better health at <span class="math inline">t=2</span>.</p>
+<p>A sophisticated present-biased agent with <span class="math inline">\delta=1</span> and <span class="math inline">\beta=1/2</span> enjoys smoking. Smoking gives utility of 5. However, the agent also likes being healthy. Higher health gives utility of 8.</p>
+<p>At <span class="math inline">t=0</span> the agent is deciding whether to smoke over the next month (<span class="math inline">t=1</span>). If the agent doesn’t smoke, it will have better health at <span class="math inline">t=2</span>.</p>
 <p>The sophisticated agent works backward through time. At <span class="math inline">t=1</span> its payoffs are:</p>
-<p>\begin{align<em>} U(smoking)&amp;=5 \ \ U(healthy)&amp;= \ &amp;=4 \begin{align</em>}</p>
-<p>It decides to smoke.</p>
-<p>As a result, at <span class="math inline">t=0</span>, knowing that it will cave, it doesn’t bother committing to not smoking, even though from the perspective of <span class="math inline">t=0</span> refraining from smoking is the better option:</p>
-<p>\begin{align<em>} U(smoking)&amp;= \ &amp;=2.5 \ U(healthy)&amp;=^2</em>8 \ &amp;=4 \begin{align*}</p>
-<p>But now suppose it learns about Stickk. It now has the option of staking a sum at <span class="math inline">t=0</span> to prevent it from smoking. It decides to stake an amount equivalent to utility 5.</p>
-<p>Working backward through time, it knows that at <span class="math inline">t=1</span> if it has not staked any money with Stickk, it will smoke. But what if it has?</p>
-<p>\begin{align<em>} U(smoking)&amp;=5- \ &amp;=2.5 \ U(healthy)&amp;= \ &amp;=4 \begin{align</em>}</p>
-<p>It would refrain from smoking.</p>
-<p>This means its options at <span class="math inline">t=0</span> are effectively:</p>
-<p>\begin{align<em>} U(smoking)&amp;= \ &amp;=2.5 \ U(stickk+healthy)&amp;= \ &amp;=4 \begin{align</em>}</p>
-<p>It chooses to commit using Stickk.</p>
-<p>For a problem of this form it could always successfully use Stickk to commit to any action. It just needs to make the stake high enough.</p>
+<span class="math display">\begin{align*}
+U_1(smoking)&amp;=5 \\
+\\
+U_1(healthy)&amp;=\beta\delta*8 \\
+&amp;=4
+\end{align*}</span>
+<p>The agent decides to smoke.</p>
+<p>As a result, at <span class="math inline">t=0</span>, knowing that it will cave at <span class="math inline">t=1</span>, the agent doesn’t bother committing to not smoking, even though from the perspective of <span class="math inline">t=0</span> refraining from smoking is the better option:</p>
+<span class="math display">\begin{align*}
+U_0(smoking)&amp;=\beta\delta*5 \\
+&amp;=2.5
+\\
+U_0(healthy)&amp;=\beta\delta^2*8 \\
+&amp;=4
+\end{align*}</span>
+<p>But now suppose the agent learns about stickK. The agent now has the option of staking a sum at <span class="math inline">t=0</span> to prevent it from smoking. The agent decides to stake an amount equivalent to utility 5 that would be incurred at <span class="math inline">t=2</span>.</p>
+<p>Working backward through time, the agent knows that at <span class="math inline">t=1</span> if it has not staked any money with stickK, it will smoke. But what if it has?</p>
+<span class="math display">\begin{align*}
+U_1(stickK+smoking)&amp;=5-\beta\delta*5 \\
+&amp;=2.5
+\\
+U_1(stickK+healthy)&amp;=\beta\delta*8 \\
+&amp;=4
+\end{align*}</span>
+<p>The agent would refrain from smoking at <span class="math inline">t=1</span> due to the penalty it would have to pay.</p>
+<p>This means the agent’s options at <span class="math inline">t=0</span> are effectively:</p>
+<span class="math display">\begin{align*}
+U_0(smoking)&amp;=\beta\delta*5 \\
+&amp;=2.5
+\\
+U_0(stickK+healthy)&amp;=\beta\delta^2*8 \\
+&amp;=4
+\end{align*}</span>
+<p>The agent chooses to commit using stickK.</p>
+<p>For a problem of this form the agent could always successfully use stickK to commit to any action. The agent just needs to make the stake high enough.</p>
+</section>
+<section id="increasing-the-value-of-the-optimal-action-temptation-bundling" class="level3" data-number="26.1.5">
+<h3 data-number="26.1.5" class="anchored" data-anchor-id="increasing-the-value-of-the-optimal-action-temptation-bundling"><span class="header-section-number">26.1.5</span> Increasing the value of the optimal action: temptation bundling</h3>
+<p>“Temptation bundling” involves increasing the value of the optimal course of action by adding a temptation to that course.</p>
+<p>Consider the following example.</p>
+<p>Beth has the choice between the following options:</p>
+<ul>
+<li><p>Exercising at <span class="math inline">t=0</span> (utility = 0) which leads her to being healthy and happy at time 1 (utility = 12)</p></li>
+<li><p>Watching television at time 0 (utility = 6) and being unhealthy and unhappy at time 1 (utility = 0)</p></li>
+</ul>
+<p>Beth discounts the future quasi-hyperbolically. Beth’s <span class="math inline">\beta=1/2</span> and her <span class="math inline">\delta=2/3</span>. Does Beth exercise?</p>
+<p>We solve as follows:</p>
+<span class="math display">\begin{align*}
+U_0(exercise)&amp;=u(x_0)+\beta\delta u(x_1) \\
+&amp;=0+\frac{1}{2}*{2}{3}*12 \\
+&amp;=4
+\\
+U_0(television)&amp;=u(x_0)+\beta\delta u(x_1) \\
+&amp;=6+\frac{1}{2}*{2}{3}*0 \\
+&amp;=6
+\end{align*}</span>
+<p>Beth chooses to watch television.</p>
+<p>But what if Beth loved massages and remembers she has a massage voucher she has been saving? What if she decides that if she exercises today, she will go for a massage straight after? Let us assume that the utility of a massage is 3.</p>
+<p>We solve as follows:</p>
+<span class="math display">\begin{align*}
+U_0(exercise+massage)&amp;=u(x_0)+\beta\delta u(x_1) \\
+&amp;=3+\frac{1}{2}*{2}{3}*12 \\
+&amp;=7
+\\
+U_0(television)&amp;=u(x_0)+\beta\delta u(x_1) \\
+&amp;=6+\frac{1}{2}*{2}{3}*0 \\
+&amp;=6
+\end{align*}</span>
+<p>Beth now chooses to exercise.</p>
+<p>This example is not strictly a commitment device as Beth could cheat. Beth could watch television and get the massage. But people are often good at creating “mental accounts” by which they make certain money or activities out-of-bounds unless certain conditions are met.</p>
 
 
 </section>
@@ -753,8 +817,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intertemporal-choice-applications.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -373,6 +373,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="./commitment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Commitment</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intertemporal-choice-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></a>
+  </div>
+</li>
     </ul>
   </li>
         <li class="sidebar-item">
@@ -480,58 +485,47 @@ E[U(X)]&amp;=\sum_{i=1}^n p_iU(X_i) \\[6pt]
 </section>
 <section id="example-4-the-st.-petersburg-game" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="example-4-the-st.-petersburg-game"><span class="header-section-number">9.4</span> Example 4: The St.&nbsp;Petersburg game</h2>
-<p>The St.&nbsp;Petersburg game runs as follows.</p>
-<p>A dealer flips a coin. The pot starts at $2 and doubles every time a head appears. The game ends and you win the pot as soon as tails appears.</p>
+<p>The St.&nbsp;Petersburg game was invented by Swiss mathematician Nicolas Bernoulli.</p>
+<p>The game starts with a pot containing $2. A dealer then flips a coin. The pot doubles every time a head appears. The game ends and the player win the pot as soon as tails appears.</p>
 <ul>
-<li>Tail on the first toss: $2</li>
-<li>Tail on the second toss: $4</li>
-<li>Tail on the third toss: $8</li>
-<li>Tail on the fourth toss: $16</li>
+<li>Tail on the first flip: $2</li>
+<li>Tail on the second flip: $4</li>
+<li>Tail on the third flip: $8</li>
+<li>Tail on the fourth flip: $16</li>
 </ul>
 <p>And so on.</p>
-<p>What would you be willing to pay to play this game?</p>
 <p>The expected value of this game is equal to:</p>
 <p><span class="math display">\begin{align*}
-E[X]&amp;=\underbrace{\frac{1}{2}*2}_\textrm{Tail first}+\underbrace{(\frac{1}{2}*\frac{1}{2})*4}_\textrm{Tail second}+\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*8}_\textrm{Tail third}+\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*16}_\textrm{Tail fourth}+... \\[24pt]
+E[X]&amp;=\underbrace{\frac{1}{2}*2}_\textrm{Tail first}+\underbrace{(\frac{1}{2}*\frac{1}{2})*4}_\textrm{Tail second}+\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*8}_\textrm{Tail third} \\[24pt]
+&amp;\qquad +\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*16}_\textrm{Tail fourth}+... \\[24pt]
 &amp;=1+1+1+1+... \\
-&amp;=\sum_{k=1}^\infty 1=\infty
+&amp;=\sum_{k=1}^\infty 1 \\
+&amp;=\infty
 \end{align*}</span></p>
-<p>The <span class="math inline">\sum</span> operator means “for <span class="math inline">k=1</span> to <span class="math inline">k=\infty</span>”.</p>
-<p>For any player, the change in expected utility from playing the game is (where W is wealth, <span class="math inline">p_{tk}</span> is the probability of a tail on the <span class="math inline">k^{th}</span> flip and <span class="math inline">p_{hk}</span> of a head on the <span class="math inline">k^{th}</span> flip):</p>
+<p>The <span class="math inline">\sum</span> operator means “sum for <span class="math inline">k=1</span> to <span class="math inline">k=\infty</span>”.</p>
+<p>The expected utility of this game is equal to:</p>
 <p><span class="math display">\begin{align*}
-\Delta E[U(&amp;X \text{ in } t=1,2,3,...)] \\[6pt]
-&amp;=p_{t1}*\Delta U(\text{tail 1st})+p_{h1}*\Delta E[U(X\text{ in }t=2,3,4)] \\[6pt]
-&amp;=\frac{1}{2}(U(W+\$2-c)-U(W))\\
-&amp; \qquad +\frac{1}{2}\Delta E[U(X\text{ in }t=2,3,4)] \\[6pt]
-&amp;=\frac{1}{2}(U(W+\$2-c)-U(W))+\frac{1}{2}(p_{t2}*\Delta U(\text{tail 2nd}) \\[6pt]
-&amp; \qquad +p_{h2}\Delta E[U(X\text{ in }t=3,4,5)] \\[6pt]
-&amp;=\frac{1}{2}(U(W+\$2-c)-U(W))+\frac{1}{2}(\frac{1}{2}(U(W+\$4-c) \\
-&amp; \qquad+\frac{1}{2}\Delta E[U(X\text{ in }t=3,4,5)]
+E[U(X)]&amp;=\underbrace{\frac{1}{2}*U(W+2)}_\textrm{Tail first}+\underbrace{(\frac{1}{2}*\frac{1}{2})*U(W+4)}_\textrm{Tail second} \\[24pt]
+&amp;\qquad +\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*U(W+8)}_\textrm{Tail third}
++\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*U(W+16)}_\textrm{Tail fourth}+... \\[24pt]
+&amp;=\frac{1}{2}U(W+2)+\frac{1}{4}U(W+4)+\frac{1}{8}U(W+8)+\frac{1}{16}U(W+16)+...  \\[12pt]
+&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+2^k)
 \end{align*}</span></p>
-<p>And so on.</p>
-<p>(<span class="math inline">\Delta</span> represents “change in”.)</p>
-<p>The sum can be written as:</p>
+<p>What is the maximum $<span class="math inline">c</span> a risk neutral player with <span class="math inline">U(x)=x</span> would be willing to pay to play the game? One strategy to determine $<span class="math inline">c</span> is to ask at what $<span class="math inline">c</span> the player would be indifferent between accepting and rejecting a chance to play. That is the maximum $<span class="math inline">c</span> that they would be willing to pay. They will be indifferent when <span class="math inline">U(W)=E[U(X-c)]</span>.</p>
 <p><span class="math display">\begin{align*}
-\Delta E[U(X)]&amp;=\sum_{k=1}^{k=t}\frac{1}{2^k}\Delta U(\text{tail }i^{th})+\frac{1}{2^t}\Delta E[U(X\text{ in }k=(t+1,t+2,...))] \\[6pt]
-&amp;=\sum_{k=1}^{k=t}\frac{1}{2^k}(U(\$2^k+W-c)-U(W)) \\[6pt]
-&amp; \qquad +\frac{1}{2^t}\Delta E[U(X\text{ in }k=(t+1,t+2,...))]
+U(W)&amp;=E[U(X-c)] \\[6pt]
+U(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(W+\$2^k-c) \\[6pt]
+W&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(W+2^k-c) \\[6pt]
+W&amp;=W-c+\sum_{k=1}^{k=\infty}1 \qquad \bigg(\text{as }\sum_{k=1}^{k=\infty}\frac{1}{2^k}=1\bigg) \\[12pt]
+c&amp;=\infty
 \end{align*}</span></p>
-<p>As <span class="math inline">t\rightarrow \infty</span> the second term tends to zero:</p>
-<p><span class="math display">\Delta E[U(X)]=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(\$2^k+W-c)-U(W))</span></p>
-<p>What is the maximum $<span class="math inline">c</span> a risk neutral player with <span class="math inline">U(x)=x</span> would be willing to pay to play the game?</p>
-<p><span class="math display">\begin{align*}
-\Delta E[U(X)]&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(\$2^k+W-c)-U(W)) \\[6pt]
-&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(2^k+W-c-W) \\[6pt]
-&amp;=\sum_{k=1}^{k=\infty}(1-\frac{c}{2^k}) \\[6pt]
-&amp;=E[X]-\sum_{k=1}^{k=\infty}(\frac{c}{2^k}) \\
-&amp;=E[X]-c
-\end{align*}</span></p>
-<p>As <span class="math inline">E[X]=\infty</span>, a risk-neutral player would pay any amount <span class="math inline">c</span> to play.</p>
+<p>A risk-neutral player would pay any amount $<span class="math inline">c</span> to play.</p>
 <p>What is the maximum <span class="math inline">\$c</span> a risk averse player with <span class="math inline">U(x)=ln(x)</span> player would be willing to pay to play the game? How does their wealth affect their willingness to pay?</p>
-<p>For a risk averse player <span class="math inline">U(x)=ln(x)</span>, <span class="math inline">\Delta</span> expected utility ≤ <span class="math inline">\Delta</span> expected value:</p>
+<p>Again we will determine at what $<span class="math inline">c</span> the player is indifferent between accepting and rejecting a chance to play, which occurs when <span class="math inline">U(W)=E[U(X-c)]</span>.</p>
 <p><span class="math display">\begin{align*}
-\Delta E[U(X)]&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(\$2^k+W-c)-U(W)) \\[6pt]
-&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(ln(\$2^k+W-c)-ln(W))
+U(W)&amp;=E[U(X-c)] \\[6pt]
+U(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
+ln(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(W+\$2^k-c)
 \end{align*}</span></p>
 <div class="cell">
 <details>
@@ -568,20 +562,20 @@ E[X]&amp;=\underbrace{\frac{1}{2}*2}_\textrm{Tail first}+\underbrace{(\frac{1}{2
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>c001 <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">find_c</span>(<span class="fl">0.01</span>), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>There is no closed form solution to this equation to enable us to determine <span class="math inline">c</span>. It needs to be solved via numerical methods (such as testing and iterating to a solution as in the code under the fold above). Someone who has wealth of $0.01 would be willing to pay up to $2.01 (they would need to borrow). Someone with wealth $1000 would be willing to pay $10.95, while a person with wealth of $1 million would be willing to pay $20.87.</p>
+<p>There is no closed form solution to this equation to enable us to determine <span class="math inline">c</span>. It needs to be solved via numerical methods (such as testing and iterating to a solution). Someone who has wealth of $0.01 would be willing to pay up to $2.01 (they would need to borrow). Someone with wealth $1000 would be willing to pay $10.95, while a person with wealth of $1 million would be willing to pay $20.87.</p>
 <p>Note: we cannot solve for a person with no wealth as ln⁡(0) is undefined.</p>
-<p>Let us look at this problem in another way to give you the intuition of what is happening by asking what is the utility of a risk averse player whose only asset is the opportunity to play this game.</p>
+<p>Another way to gain an intuition of what is happening to ask what is the utility of a risk averse player whose only asset is the opportunity to play this game.</p>
 <p><span class="math display">\begin{align*}
-E[U(X)]&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[6pt]
-&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(2^k) \\[6pt]
-&amp;=\sum_{k=1}^{k=\infty}\frac{k}{2^k}ln(2) \\[6pt]
-&amp;=\frac{1}{2}ln(2)+\frac{2}{4}ln(2)+\frac{3}{8}ln(2)+\frac{4}{16}ln(2)+\frac{5}{32}ln(2)+... \\[6pt]
+E[U(X)]&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[12pt]
+&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(2^k) \\[12pt]
+&amp;=\sum_{k=1}^{k=\infty}\frac{k}{2^k}ln(2) \\[12pt]
+&amp;=\frac{1}{2}ln(2)+\frac{2}{4}ln(2)+\frac{3}{8}ln(2)+\frac{4}{16}ln(2)+\frac{5}{32}ln(2)+... \\[12pt]
 &amp;=(\frac{1}{2}+\frac{1}{2}+\frac{3}{8}+\frac{1}{4}+\frac{5}{32}+...)ln(2) \\[12pt]
 &amp;=2ln(2)
 \end{align*}</span></p>
-<p>The change in utility from each flip rapidly converges – the series of fractions sums to two. The expected utility from the game is equal to the utility of $4 <span class="math inline">(U(W)=ln(W)=2ln(2);\space W=4)</span>.</p>
-<p>So why does willingness to pay increase with wealth?</p>
-<p>With the log utility function, as wealth increases the slope of the log function increasingly approximates a linear function (the second derivative approaches zero). Hence, the gambler displays less risk averse (closer to risk neutral) behaviour.</p>
+<p>The change in utility from each flip rapidly converges as the series of fractions sums to two. The expected utility from the game is equal to the utility of $4 <span class="math inline">(U(W)=ln(W)=2ln(2);\space W=e^{2ln2}=4)</span>.</p>
+<p>Why does willingness to pay increase with wealth?</p>
+<p>With log utility, as wealth increases the slope of the log function increasingly approximates a linear function (the second derivative approaches zero). Hence, the gambler displays less risk averse (closer to risk neutral) behaviour.</p>
 
 
 </section>

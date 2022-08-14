@@ -104,83 +104,59 @@ Here we have a gamble with a positive expected value, 5% of your wealth, but low
 
 ## Example 4: The St. Petersburg game
 
-The St. Petersburg game runs as follows.
+The St. Petersburg game was invented by Swiss mathematician Nicolas Bernoulli.
 
-A dealer flips a coin. The pot starts at \$2 and doubles every time a head appears. The game ends and you win the pot as soon as tails appears.
+The game starts with a pot containing \$2. A dealer then flips a coin. The pot doubles every time a head appears. The game ends and the player win the pot as soon as tails appears.
 
-- Tail on the first toss: \$2
-- Tail on the second toss: \$4
-- Tail on the third toss: \$8
-- Tail on the fourth toss: \$16
+- Tail on the first flip: \$2
+- Tail on the second flip: \$4
+- Tail on the third flip: \$8
+- Tail on the fourth flip: \$16
 
 And so on.
-
-What would you be willing to pay to play this game?
 
 The expected value of this game is equal to:
 
 \begin{align*}
-E[X]&=\underbrace{\frac{1}{2}*2}_\textrm{Tail first}+\underbrace{(\frac{1}{2}*\frac{1}{2})*4}_\textrm{Tail second}+\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*8}_\textrm{Tail third}+\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*16}_\textrm{Tail fourth}+... \\[24pt]
+E[X]&=\underbrace{\frac{1}{2}*2}_\textrm{Tail first}+\underbrace{(\frac{1}{2}*\frac{1}{2})*4}_\textrm{Tail second}+\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*8}_\textrm{Tail third} \\[24pt]
+&\qquad +\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*16}_\textrm{Tail fourth}+... \\[24pt]
 &=1+1+1+1+... \\
-&=\sum_{k=1}^\infty 1=\infty
+&=\sum_{k=1}^\infty 1 \\
+&=\infty
 \end{align*}
 
-The $\sum$ operator means “for $k=1$ to $k=\infty$”.
+The $\sum$ operator means “sum for $k=1$ to $k=\infty$”.
 
-For any player, the change in expected utility from playing the game is (where W is wealth, $p_{tk}$ is the probability of a tail on the $k^{th}$ flip and $p_{hk}$ of a head on the $k^{th}$ flip):
+The expected utility of this game is equal to:
 
 \begin{align*}
-\Delta E[U(&X \text{ in } t=1,2,3,...)] \\[6pt]
-&=p_{t1}*\Delta U(\text{tail 1st})+p_{h1}*\Delta E[U(X\text{ in }t=2,3,4)] \\[6pt]
-&=\frac{1}{2}(U(W+\$2-c)-U(W))\\
-& \qquad +\frac{1}{2}\Delta E[U(X\text{ in }t=2,3,4)] \\[6pt]
-&=\frac{1}{2}(U(W+\$2-c)-U(W))+\frac{1}{2}(p_{t2}*\Delta U(\text{tail 2nd}) \\[6pt]
-& \qquad +p_{h2}\Delta E[U(X\text{ in }t=3,4,5)] \\[6pt]
-&=\frac{1}{2}(U(W+\$2-c)-U(W))+\frac{1}{2}(\frac{1}{2}(U(W+\$4-c) \\
-& \qquad+\frac{1}{2}\Delta E[U(X\text{ in }t=3,4,5)]
+E[U(X)]&=\underbrace{\frac{1}{2}*U(W+2)}_\textrm{Tail first}+\underbrace{(\frac{1}{2}*\frac{1}{2})*U(W+4)}_\textrm{Tail second} \\[24pt] 
+&\qquad +\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*U(W+8)}_\textrm{Tail third}
++\underbrace{(\frac{1}{2}*\frac{1}{2}*\frac{1}{2}*\frac{1}{2})*U(W+16)}_\textrm{Tail fourth}+... \\[24pt]
+&=\frac{1}{2}U(W+2)+\frac{1}{4}U(W+4)+\frac{1}{8}U(W+8)+\frac{1}{16}U(W+16)+...  \\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+2^k)
 \end{align*}
 
-And so on.
-
-($\Delta$ represents "change in".)
-
-The sum can be written as:
+What is the maximum \$$c$ a risk neutral player with $U(x)=x$ would be willing to pay to play the game? One strategy to determine \$$c$ is to ask at what \$$c$ the player would be indifferent between accepting and rejecting a chance to play. That is the maximum \$$c$ that they would be willing to pay. They will be indifferent when $U(W)=E[U(X-c)]$.
 
 \begin{align*}
-\Delta E[U(X)]&=\sum_{k=1}^{k=t}\frac{1}{2^k}\Delta U(\text{tail }i^{th})+\frac{1}{2^t}\Delta E[U(X\text{ in }k=(t+1,t+2,...))] \\[6pt]
-&=\sum_{k=1}^{k=t}\frac{1}{2^k}(U(\$2^k+W-c)-U(W)) \\[6pt]
-& \qquad +\frac{1}{2^t}\Delta E[U(X\text{ in }k=(t+1,t+2,...))]
+U(W)&=E[U(X-c)] \\[6pt]
+U(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(W+\$2^k-c) \\[6pt]
+W&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(W+2^k-c) \\[6pt]
+W&=W-c+\sum_{k=1}^{k=\infty}1 \qquad \bigg(\text{as }\sum_{k=1}^{k=\infty}\frac{1}{2^k}=1\bigg) \\[12pt]
+c&=\infty
 \end{align*}
 
-As $t\rightarrow \infty$ the second term tends to zero:
-
-
-
-
-$$\Delta E[U(X)]=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(\$2^k+W-c)-U(W))$$
-
-
-
-
-What is the maximum \$$c$ a risk neutral player with $U(x)=x$ would be willing to pay to play the game?
-
-\begin{align*}
-\Delta E[U(X)]&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(\$2^k+W-c)-U(W)) \\[6pt]
-&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(2^k+W-c-W) \\[6pt]
-&=\sum_{k=1}^{k=\infty}(1-\frac{c}{2^k}) \\[6pt]
-&=E[X]-\sum_{k=1}^{k=\infty}(\frac{c}{2^k}) \\
-&=E[X]-c
-\end{align*}
-
-As $E[X]=\infty$, a risk-neutral player would pay any amount $c$ to play.
+A risk-neutral player would pay any amount \$$c$ to play.
 
 What is the maximum $\$c$ a risk averse player with $U(x)=ln(x)$ player would be willing to pay to play the game? How does their wealth affect their willingness to pay?
 
-For a risk averse player $U(x)=ln(x)$, $\Delta$ expected utility ≤ $\Delta$ expected value:
+Again we will determine at what \$$c$ the player is indifferent between accepting and rejecting a chance to play, which occurs when $U(W)=E[U(X-c)]$.
 
 \begin{align*}
-\Delta E[U(X)]&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(U(\$2^k+W-c)-U(W)) \\[6pt]
-&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(ln(\$2^k+W-c)-ln(W))
+U(W)&=E[U(X-c)] \\[6pt]
+U(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
+ln(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(W+\$2^k-c)
 \end{align*}
 
 
@@ -191,23 +167,23 @@ For a risk averse player $U(x)=ln(x)$, $\Delta$ expected utility ≤ $\Delta$ ex
 
 
 
-There is no closed form solution to this equation to enable us to determine $c$. It needs to be solved via numerical methods (such as testing and iterating to a solution as in the code under the fold above). Someone who has wealth of \$0.01 would be willing to pay up to \$2.01 (they would need to borrow). Someone with wealth \$1000 would be willing to pay \$10.95, while a person with wealth of \$1 million would be willing to pay \$20.87.
+There is no closed form solution to this equation to enable us to determine $c$. It needs to be solved via numerical methods (such as testing and iterating to a solution). Someone who has wealth of \$0.01 would be willing to pay up to \$2.01 (they would need to borrow). Someone with wealth \$1000 would be willing to pay \$10.95, while a person with wealth of \$1 million would be willing to pay \$20.87.
 
 Note: we cannot solve for a person with no wealth as ln⁡(0) is undefined. 
 
-Let us look at this problem in another way to give you the intuition of what is happening by asking what is the utility of a risk averse player whose only asset is the opportunity to play this game.
+Another way to gain an intuition of what is happening to ask what is the utility of a risk averse player whose only asset is the opportunity to play this game.
 
 \begin{align*}
-E[U(X)]&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[6pt]
-&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(2^k) \\[6pt]
-&=\sum_{k=1}^{k=\infty}\frac{k}{2^k}ln(2) \\[6pt]
-&=\frac{1}{2}ln(2)+\frac{2}{4}ln(2)+\frac{3}{8}ln(2)+\frac{4}{16}ln(2)+\frac{5}{32}ln(2)+... \\[6pt]
+E[U(X)]&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(2^k) \\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{k}{2^k}ln(2) \\[12pt]
+&=\frac{1}{2}ln(2)+\frac{2}{4}ln(2)+\frac{3}{8}ln(2)+\frac{4}{16}ln(2)+\frac{5}{32}ln(2)+... \\[12pt]
 &=(\frac{1}{2}+\frac{1}{2}+\frac{3}{8}+\frac{1}{4}+\frac{5}{32}+...)ln(2) \\[12pt]
 &=2ln(2)
 \end{align*}
 
-The change in utility from each flip rapidly converges – the series of fractions sums to two. The expected utility from the game is equal to the utility of \$4 $(U(W)=ln(W)=2ln(2);\space W=4)$.
+The change in utility from each flip rapidly converges as the series of fractions sums to two. The expected utility from the game is equal to the utility of \$4 $(U(W)=ln(W)=2ln(2);\space W=e^{2ln2}=4)$.
 
-So why does willingness to pay increase with wealth?
+Why does willingness to pay increase with wealth?
 
-With the log utility function, as wealth increases the slope of the log function increasingly approximates a linear function (the second derivative approaches zero). Hence, the gambler displays less risk averse (closer to risk neutral) behaviour.
+With log utility, as wealth increases the slope of the log function increasingly approximates a linear function (the second derivative approaches zero). Hence, the gambler displays less risk averse (closer to risk neutral) behaviour.

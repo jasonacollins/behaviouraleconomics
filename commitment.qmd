@@ -256,70 +256,124 @@ Note that lay-by is strictly worse than Save as the agent must pay the administr
 
 ### Depressing the value of the bad course of action
 
-[Stickk](ADDLINK) is a online platform that enables people to commit to future courses of action. It works as follows:
+[stickK](https://www.stickk.com) is a online platform that enables people to commit to future courses of action. stickK works as follows:
 
-1. You state a time-based goal, such as not smoking during the next month, losing 5kg over the next 90 days, or writing the next chapter of your PhD thesis by Christmas.
+1.  You state a time-based goal, such as not smoking during the next month, losing 5kg over the next 90 days, or writing the next chapter of your PhD thesis by Christmas.
 
-2. You commit a stake that will be paid to a charity (or an anti-charity) if you fail to meet your goal.
+2.  You commit a stake that will be paid to a charity (or an anti-charity) if you fail to meet your goal.
 
-3. At the stated time you report (or a referee appointed by you reports) whether you have met your goal.
+3.  At the stated time you report (or a referee appointed by you reports) whether you have met your goal.
 
-4. If you fail to report or report that you failed to meet your goal, your credit card is debited by the staked amount.
+4.  If you fail to report or report that you failed to meet your goal, your credit card is debited by the staked amount.
 
 ![](img/stickk.jpg)
 
 The following is an illustration of how it works mathematically.
 
-A sophisticated present-biased agent with $\delta=1$ and $\beta=1/2$ enjoys smoking. It gives utility of 5. However, the agents also likes being healthy. Higher health gives utility of 8.
+A sophisticated present-biased agent with $\delta=1$ and $\beta=1/2$ enjoys smoking. Smoking gives utility of 5. However, the agent also likes being healthy. Higher health gives utility of 8.
 
-At $t=0$ the agent is deciding whether you will smoke over the next month ($t=1$). If it doesn't smoke, it will have better health at $t=2$.
+At $t=0$ the agent is deciding whether to smoke over the next month ($t=1$). If the agent doesn't smoke, it will have better health at $t=2$.
 
 The sophisticated agent works backward through time. At $t=1$ its payoffs are:
 
+```{=tex}
 \begin{align*}
-U(smoking)&=5 \\
+U_1(smoking)&=5 \\
 \\
-U(healthy)&=\beta\delta*8 \\
+U_1(healthy)&=\beta\delta*8 \\
 &=4
+\end{align*}
+```
+The agent decides to smoke.
+
+As a result, at $t=0$, knowing that it will cave at $t=1$, the agent doesn't bother committing to not smoking, even though from the perspective of $t=0$ refraining from smoking is the better option:
+
+```{=tex}
 \begin{align*}
-
-It decides to smoke.
-
-As a result, at $t=0$, knowing that it will cave, it doesn't bother committing to not smoking, even though from the perspective of $t=0$ refraining from smoking is the better option:
-
-\begin{align*}
-U(smoking)&=\beta\delta*5 \\
+U_0(smoking)&=\beta\delta*5 \\
 &=2.5
 \\
-U(healthy)&=\beta\delta^2*8 \\
+U_0(healthy)&=\beta\delta^2*8 \\
 &=4
+\end{align*}
+```
+But now suppose the agent learns about stickK. The agent now has the option of staking a sum at $t=0$ to prevent it from smoking. The agent decides to stake an amount equivalent to utility 5 that would be incurred at $t=2$.
+
+Working backward through time, the agent knows that at $t=1$ if it has not staked any money with stickK, it will smoke. But what if it has?
+
+```{=tex}
 \begin{align*}
-
-But now suppose it learns about Stickk. It now has the option of staking a sum at $t=0$ to prevent it from smoking. It decides to stake an amount equivalent to utility 5.
-
-Working backward through time, it knows that at $t=1$ if it has not staked any money with Stickk, it will smoke. But what if it has?
-
-\begin{align*}
-U(smoking)&=5-\beta\delta*5 \\
+U_1(stickK+smoking)&=5-\beta\delta*5 \\
 &=2.5
 \\
-U(healthy)&=\beta\delta*8 \\
+U_1(stickK+healthy)&=\beta\delta*8 \\
 &=4
+\end{align*}
+```
+The agent would refrain from smoking at $t=1$ due to the penalty it would have to pay.
+
+This means the agent's options at $t=0$ are effectively:
+
+```{=tex}
 \begin{align*}
-
-It would refrain from smoking.
-
-This means its options at $t=0$ are effectively:
-
-\begin{align*}
-U(smoking)&=\beta\delta*5 \\
+U_0(smoking)&=\beta\delta*5 \\
 &=2.5
 \\
-U(stickk+healthy)&=\beta\delta*8 \\
+U_0(stickK+healthy)&=\beta\delta^2*8 \\
 &=4
+\end{align*}
+```
+The agent chooses to commit using stickK.
+
+For a problem of this form the agent could always successfully use stickK to commit to any action. The agent just needs to make the stake high enough.
+
+### Increasing the value of the optimal action: temptation bundling
+
+“Temptation bundling” involves increasing the value of the optimal course of action by adding a temptation to that course.
+
+Consider the following example.
+
+Beth has the choice between the following options:
+
+- Exercising at $t=0$ (utility = 0) which leads her to being healthy and happy at time 1 (utility = 12)
+
+- Watching television at time 0 (utility = 6) and being unhealthy and unhappy at time 1 (utility = 0) 
+
+Beth discounts the future quasi-hyperbolically. Beth’s $\beta=1/2$ and her $\delta=2/3$. Does Beth exercise? 
+
+We solve as follows:
+
+```{=tex}
 \begin{align*}
+U_0(exercise)&=u(x_0)+\beta\delta u(x_1) \\
+&=0+\frac{1}{2}*{2}{3}*12 \\
+&=4
+\\
+U_0(television)&=u(x_0)+\beta\delta u(x_1) \\
+&=6+\frac{1}{2}*{2}{3}*0 \\
+&=6
+\end{align*}
+```
 
-It chooses to commit using Stickk.
+Beth chooses to watch television.
 
-For a problem of this form it could always successfully use Stickk to commit to any action. It just needs to make the stake high enough.
+But what if Beth loved massages and remembers she has a massage voucher she has been saving? What if she decides that if she exercises today, she will go for a massage straight after? Let us assume that the utility of a massage is 3.
+
+We solve as follows:
+
+```{=tex}
+\begin{align*}
+U_0(exercise+massage)&=u(x_0)+\beta\delta u(x_1) \\
+&=3+\frac{1}{2}*{2}{3}*12 \\
+&=7
+\\
+U_0(television)&=u(x_0)+\beta\delta u(x_1) \\
+&=6+\frac{1}{2}*{2}{3}*0 \\
+&=6
+\end{align*}
+```
+
+Beth now chooses to exercise.
+
+This example is not strictly a commitment device as Beth could cheat. Beth could watch television and get the massage. But people are often good at creating “mental accounts” by which they make certain money or activities out-of-bounds unless certain conditions are met.
 
