@@ -12,5 +12,5 @@ This book covers the following areas:
 
 - **Economic foundations**: In this part I introduce some core economic concepts that we will use and modify in exploring behavioural economics
 - **Decision making under risk and uncertainty**: In this part I introduce the traditional economic approach to decision making under risk and uncertainty, and provide some empirical anomalies that arise when using this approach.
-- **Prospect theory**: In this part I describe the pre-emininent alternative to expected utility theory, prospect theory. I also provide examples and possible applications.
+- **Prospect theory**: In this part I describe the pre-eminent alternative to expected utility theory, prospect theory. I also provide examples and possible applications.
 - **Intertemporal choice**: In this part I explore decision making involving costs and benefits occurring at different times. I look at two types of time preference: exponential discounting and quasi-hyperbolic discounting.

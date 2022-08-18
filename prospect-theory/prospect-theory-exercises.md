@@ -1,0 +1,255 @@
+# Prospect theory exercises
+
+## Question 1
+
+You are in a draw for $1 million. Consider the following four scenarios where your chances of winning increases by 5%:
+
+A) From 0% to 5%
+B) From 5% to 10%
+C) From 50% to 55%
+D) From 95% to 100%
+
+Most people report that scenarios A) and D) represent better news. Why?
+
+::: {.callout-tip collapse="true"}
+## Question 1 answer
+
+There is strong experimental evidence that we overweight certain events relative to near certain events. In this instance, we will tend to overweight the shift to a certain result (scenario D) relative to shifts involving intermediate probabilities (e.g. scenario B and C). This overweighting of certainty is effectively the same as overweighting low probability events. As a result, the probability shift that provides an initial chance at $1 million is also overweighted (scenario A).
+
+The result is that scenarios A and D tend to be seen as better news than scenarios B and C.
+:::
+
+## Question 2
+
+Edna, Ferdinand and Gretel each bought some Bicoin at \$50,000. The price rose to \$80,000 and then dropped to \$60,000, at which time they sold it.
+
+All three are loss averse and have the following reference-dependent value function:
+
+
+
+$$
+v(x)=\left\{\begin{matrix}
+x \quad &\textrm{where} \quad x \geq 0\\
+2x \quad &\textrm{where} \quad x < 0 
+\end{matrix}\right.
+$$
+
+
+
+Edna uses the purchase price as her reference point. Ferdinand uses the peak price as his reference point. Gretel uses the sale price as her reference point.
+
+What is the change in value for each person? Who is happiest?
+
+::: {.callout-tip collapse="true"}
+## Question 2 answer
+
+Value for Edna:
+
+\begin{align*}
+v(x)&=v(60-50) \\
+&=10
+\end{align*}
+
+Value for Ferdinand:
+
+\begin{align*}
+v(x)&=v(60-90) \\
+&=-2*30 \\
+&=-60
+\end{align*}
+
+Value for Gretel:
+
+\begin{align*}
+v(x)&=v(60-60) \\
+&=0
+\end{align*}
+
+Edna is happiest whereas Ferdinand is most disappointed. Both Edna and Gretel see the peak price as a foregone gain, whereas Ferdinand sees the failure to sell at the peak as a loss.
+:::
+
+## Question 3
+
+Megan has the following reference-dependent value function:
+
+
+
+$$
+v(x)=\left\{\begin{matrix}
+x \quad &\textrm{where} \quad x \geq 0\\
+2x \quad &\textrm{where} \quad x < 0 
+\end{matrix}\right.
+$$
+
+
+
+where $x$ is the realised outcome relative to the reference point.
+
+a\) If you look at $v(x)$, we expect Megan to be:
+
+- loss averse
+- have no decreased sensitivity to changes of greater magnitude.
+
+Why?
+
+::: {.callout-tip collapse="true"}
+## Question 3a) answer
+
+Megan is loss averse as the slope of the value function in the loss domain is steeper than in the gain domain. One unit of loss leads to a greater change in value than one unit of gain.
+
+There is no decreases sensitivity as the value function is linear in both domains. Sensitivity is constant. As the size of the loss or gain increases, the change in value remains constant despite the increasing magnitude.
+:::
+
+b\) Assume Megan has received a birthday card from her aunt, which some years contains \$25 and other years contains nothing.
+
+She opens the card and it contains \$10\.
+
+Consider two alternative reference points: Megan is pessimistic and expects no money in the card, and Megan is optimistic and expects \$25.
+
+Compute Megan’s value under each reference point. Which reference point yields higher value?
+
+::: {.callout-tip collapse="true"}
+## Question 3b) answer
+
+The value of the \$10 from the reference point of expecting nothing is:
+
+\begin{align*}
+v(x)&=v(10) \\[6pt]
+&=10
+\end{align*}
+
+\newpage
+The value of the \$10 from the reference point of expecting \$25 is:
+
+\begin{align*}
+v(x)&=v(10-25) \\[6pt]
+&=2*(-15) \\[6pt]
+&=-30
+\end{align*}
+
+Megan has higher value when she does not expect to receive any money. She gets the value of a gain of \$10. If she expected the \$25, she suffered the value of a loss of \$15.
+:::
+
+c\) Megan has received the \$10 in the card and a piece of birthday cake. Her value function over money and pieces of birthday cake is:
+
+
+
+$$
+v(x)=v(m-r_m)+v(4c-4r_c)
+$$
+
+
+
+Where $m$ is the amount of money she receives, $r_m$ is her reference point of how much money she expects, $c$ is how many pieces of birthday cake she receives and $r_c$ is how many pieces of birthday cake she expects.
+
+To illustrate how this value function works, imagine Megan expects two pieces of cake and her dog jumps onto the table and eats one of them. Her change in the value function is:
+
+
+
+$$
+v(4*1-4*2)=v(-4)
+$$
+
+
+
+As $v(x)=2x$ when $x<0$:
+
+
+
+$$
+v(-4)=-8
+$$
+
+
+
+For this question, assume Megan does not believe that she will receive any money and she expects to eat two pieces of birthday cake. Her reference point is therefore $r_m=0$ and $r_c=2$. She receives \$10 from her aunt.
+
+Her brother - who loves cake - offers to buy one of her pieces of birthday cake. What price $p_s$ would make Megan indifferent between selling and keeping the piece of cake?
+
+::: {.callout-tip collapse="true"}
+## Question 3c) answer
+
+Megan will be indifferent when the value from each option is the same:
+
+\begin{align*}
+\underbrace{v(10-0+p_s)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money plus} \\  \textrm{payment} \\ \textrm{for cake}}}+
+\underbrace{v(4\cdot 1-4\cdot 2)}_{\substack{\textrm{Value lost from} \\ \textrm{giving up cake}}}
+&=\underbrace{v(10-0)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money}}}+
+v\underbrace{(4\cdot 1-4\cdot1)}_{\substack{\textrm{Value of} \\ \textrm{keeping cake}}} \\[12pt]
+v(10+p_s)+v(-4)&=v(10)+v(0) \\[6pt]
+10+p_s-8&=10\\[6pt]
+p_s&=8
+\end{align*}
+:::
+
+d\) Assume that Megan expects to receive only one piece of birthday cake. Her brother then offers to sell her his piece of cake. For $r_m=0$ and $r_c=1$, what price $p_b$ would make Megan indifferent between buying the cake and eating only her own piece?
+
+::: {.callout-tip collapse="true"}
+## Question 3d) answer
+
+Megan will be indifferent when the value from each option is the same:
+
+\begin{align*}
+\underbrace{v(10-0-p_b)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money minus} \\  \textrm{payment} \\ \textrm{for cake}}}+
+\underbrace{v(4\cdot 2-4\cdot 1)}_{\substack{\textrm{Value gained from} \\ \textrm{buying cake}}}
+&=\underbrace{v(10-0)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money}}}+
+v\underbrace{(4\cdot 1-4\cdot1)}_{\substack{\textrm{Value of} \\ \textrm{only one piece}}} \\[12pt]
+v(10-p_b)+v(4)&=v(10)+v(0) \\[6pt]
+10-p_b+4&=10\\[6pt]
+p_b&=4
+\end{align*}
+:::
+
+e\) Why is there a difference between the price at which Megan was willing to sell cake in part c) compared to the price she was willing to pay in part d)?
+
+::: {.callout-tip collapse="true"}
+## Question 3e) answer
+
+The willingness to accept in part c) is higher than the willingness to pay in part d) as in part c) the foregone cake is coded as a loss. This loss reduces value at twice the rate of a gain in cake. The payment for the cake in both parts is in the gain domain due to the birthday present of $10, so the payment received or paid is given less weight than any loss.
+:::
+
+## Question 4
+
+Consider the following two scenarios:
+
+A\) You are considering buying a new type of coffee bean for your home coffee machine. It costs \$50 at your local hipster cafe, but you discover that it is for sale for \$40 at the supermarket 20 minutes drive from your home. Do you make the trip?
+
+B\) You are considering buying a new laptop. It costs \$1990 at your local computer store, but you discover that it is for sale for \$1980 at another computer store 20 minutes drive from your home. Do you make the trip?
+
+When people are presented with scenarios such as this, they tend to report that they are less likely to make the trip in Scenario B for the more expensive product.
+
+Explain how an S-shaped value function with diminishing value in both gains and losses could result in this behaviour.
+
+::: {.callout-tip collapse="true"}
+## Question 4 answer
+
+Diminishing value means that the absolute difference between $v(-40)$ and $v(-50)$ is much larger than the absolute difference between $v(-1980)$ and $v(-1990)$. For example, suppose the value function was:
+
+
+
+$$
+v(x)=\left\{\begin{matrix}
+x^\frac{1}{2} \quad &\textrm{where} \quad x \geq 0\\
+-2(-x)^\frac{1}{2} \quad &\textrm{where} \quad x < 0 
+\end{matrix}\right.
+$$
+
+
+
+\newpage
+This would mean that the difference between $v(-40)$ and $v(-50)$ is:
+
+\begin{align*}
+v(-40)-v(-50)&=-2(40^\frac{1}{2}-50^\frac{1}{2}) \\
+&=1.493025
+\end{align*}
+
+The difference between $v(-1980)$ and $v(-1990)$ is:
+
+\begin{align*}
+v(-1980)-v(-1990)&=-2(1980^\frac{1}{2}-1990^\frac{1}{2}) \\
+&=0.2244502
+\end{align*}
+
+Much less value is gained by driving for the 20 minutes across town for the computer.
+:::

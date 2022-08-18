@@ -34,3 +34,67 @@ The effect persisted in a surprise tests at 12 months.
 -   Simply receiving a free audiobook with no explicit instruction boosts exercise.
 
 -   Teaching temptation bundling modestly outperforms simply giving gym-goers free audiobooks.
+
+## Organ donation
+
+In European countries there are registers of people who will donate their organs in case of death. There is a considerable gap in the percentage of registered organ donors. Why?
+
+![](img/Johnson_and_Goldstein_2003_Figure.png) Figure from @johnson2003.
+
+Yellow countries have an opt-in policy. People are required to register as an organ donor.
+
+Green countries have an opt-out policy known as presumed consent. They are presumed to consent unless they opt-out (often through submission of a form).
+
+This is a classic example of a default effect. Defaults are sticky. The stickiness of defaults is typically assumed to come from loss aversion or present-bias.
+
+-   There is an immediate cost of changing from the default (time, effort, money). That cost is not discounted.
+
+-   The future benefit of their action is discounted.
+
+-   Agents put off a switch even though cost is low since they believe they will switch later.
+
+-   Consequently, people do not exert their right to choose once they are allocated some options.
+
+It is also possible to make an argument that the stickiness of the defaults is due to a rational cost-benefit calculation, rather than due to loss aversion of present bias.
+
+-   The cost of opting out is real.
+
+-   People may not have a strong preference about whether they are an organ donor
+
+-   Registration does not mean that your organs will be donated. Other factors such as family preference affect donation. As a result, registration might be seen as having little effect on the outcome you care about (actual organ donation). @johnson2003 argue that there is a positive relationship between an opt-out policy and organ donations, but it is much weaker than the registration numbers would suggest and based on a simple regression that likely does not capture all relevant variables.
+
+-   Further, the absence of any active consent in situations of presumed consent means that the family cannot take their presence on the organ donation register as an indication of the deceased's wishes.
+
+Put together, the failure to opt-out may reflect a simple cost-benefit analysis.
+
+There are alternatives to presumed
+
+One alternative is the use of defaults in a more transparent way where opting out is easy. For example, when obtaining your driver's licence there could be a section stating "Please tick this box if you do not wish to be registered as an organ donor". This measure would likely increase registration over the alternative of asking people to tick the box if they wish to be an organ donor.
+
+Another alternative is "active choice", where citizens are required to indicate whether or not they wish to be registered. This could also be built into a form such as a driver's licence application.
+
+## Save More Tomorrow
+
+The Save More Tomorrow program (@thaler2004) combines principles relating to both prospect theory and time preference to increase retirement savings.
+
+Under Save More Tomorrow, customers are asked to commit in advance to allocating a fraction of their future salary increases toward their retirement savings accounts.
+
+Save More Tomorrow is designed to reduce loss aversion as a factor in deciding contribution amounts. A commitment of a proportion of pay rises means that the contribution can increase over time, but pay never decreases.
+
+The program capitalises on participants' propensity to stick with the status quo, as people are unlikely to unwind their future commitments despite being able to opt out at any time.
+
+That ability opt-out also reduces regret/disappointment aversion.
+
+The first tests of the Save More Tomorrow program by @thaler2004 resulted in 78 per cent of those offered the plan joining, 80% of those remaining in the plan through the fourth pay rise, and average savings rates increasing from 3.5% to 13.6% over 40 months. This compares to much lower savings rates by those who declined advice, accepted a recommended savings rate or took advice but declined to enrol in Save More Tomorrow.
+
+
+
+::: {.cell}
+::: {.cell-output-display}
+![Savings rates for SMarT](intertemporal-choice-applications_files/figure-pdf/fig-smart-1.pdf){#fig-smart}
+:::
+:::
+
+
+
+Note the savings rate is higher than the default rate in Australia. Could the default in Australia create a low anchor for some people?

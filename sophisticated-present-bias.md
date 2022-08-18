@@ -42,41 +42,30 @@ The present-based agent that we examined in the earlier example was naïve. They
 
 When making their initial decision, the comparison they are making from the perspective of today is simply between the discounted utilities from the perspective of today:
 
-
-
-
-$$U_0(1,\$100)=90.25$$
-
-$$U_0(2,\$110)=94.32$$
-
-
-
+\begin{align*}
+U_0(1,\$100)&=90.25 \\
+\\
+U_0(2,\$110)&=94.32
+\end{align*}
 
 But this is an incorrect view as to their preferences next week. Next week they will calculate utility as:
 
-
-
-
-$$U_1(1,\$100)=100$$
-
-$$U_1(2,\$100)=99.275$$
-
-
+\begin{align*}
+U_1(1,\$100)&=100 \\
+\\
+U_1(2,\$100)&=99.275
+\end{align*}
 
 
 Today they hold an incorrect belief as to what their preference will be next week .
 
 The sophisticated agent will first consider how they will look at the choice next week:
 
-
-
-
-$$U_1(1,\$1001)=100$$
-
-$$U_1(2,\$110)=99.275$$
-
-
-
+\begin{align*}
+U_1(1,\$1001)&=100 \\
+\\
+U_1(2,\$110)&=99.275
+\end{align*}
 
 The sophisticated agent sees that next week they will take the \$100.
 
@@ -104,16 +93,12 @@ First, we consider the naive agent. They calculate utility from the perspective 
 
 \begin{align*}
 U_0(0,\$6)&=u(\$6) \\
-&=6
-\end{align*}
-
-\begin{align*}
+&=6 \\
+\\
 U_0(1,\$10)&=\beta\delta u(\$10) \\
 &=0.5*1*10 \\
-&=5
-\end{align*}
-
-\begin{align*}
+&=5 \\
+\\
 U_0(2,\$16)&=\beta\delta^2 u(\$16) \\
 &=0.5*1^2*16 \\
 &=8
@@ -125,10 +110,8 @@ But what then happens when the naive agent is given the chance to change their m
 
 \begin{align*}
 U_1(\$10 \text{ at }t=1)&=u(\$10) \\
-&=10
-\end{align*}
-
-\begin{align*}
+&=10 \\
+\\
 U_1(\$16 \text{ at }t=2)&=\beta\delta u(\$16) \\
 &=0.5*1*16 \\
 &=8
@@ -140,10 +123,8 @@ What of our sophisticated agent? They will make their decision today based on th
 
 \begin{align*}
 U_1(1,\$10)&=u(\$10) \\
-&=10
-\end{align*}
-
-\begin{align*}
+&=10 \\
+\\
 U_1(2,\$16)&=\beta\delta u(\$16) \\
 &=0.5*1*16 \\
 &=8
@@ -155,10 +136,8 @@ Knowing this is the case, the sophisticated agent now decides whether they prefe
 
 \begin{align*}
 U_0(0,\$6)&=u(\$6) \\
-&=6
-\end{align*}
-
-\begin{align*}
+&=6 \\
+\\
 U_0(1,\$10)&=\beta\delta u(\$10) \\
 &=0.5*1*10 \\
 &=5
@@ -184,16 +163,12 @@ We start calculating utility from today:
 
 \begin{align*}
 U_0(0,-\$10)&=u(-\$10) \\
-&=-10
-\end{align*}
-
-\begin{align*}
+&=-10 \\
+\\
 U_0(1,-\$15)&=\beta\delta u(-\$15) \\
 &=0.5*1*(-15) \\
-&=-7.5
-\end{align*}
-
-\begin{align*}
+&=-7.5 \\
+\\
 U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
 &=0.5*1^2*(-25) \\
 &=-12.5
@@ -205,10 +180,8 @@ Now we move to $t=1$, when the naive agent reconsiders their decision:
 
 \begin{align*}
 U_1(1,-\$15)&=u(-\$15) \\
-&=-15
-\end{align*}
-
-\begin{align*}
+&=-15 \\
+\\
 U_1(2,-\$25)&=\beta\delta u(-\$25) \\
 &=0.5*1*(-25) \\
 &=-12.5
@@ -236,10 +209,8 @@ What of $t=1$?
 
 \begin{align*}
 U_1(1,-\$15)&=u(-\$15) \\
-&=-15
-\end{align*}
-
-\begin{align*}
+&=-15 \\
+\\
 U_1(2,-\$25)&=\beta\delta u(-\$25) \\
 &=0.5*1*(-25) \\
 &=-12.5
@@ -251,10 +222,8 @@ Now we iterate at t = 0. The sophisticated agent only compares \$10 at $t=0$ wit
 
 \begin{align*}
 U_0(0,-\$10)&=u(-\$10) \\
-&=-10
-\end{align*}
-
-\begin{align*}
+&=-10 \\
+\\
 U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
 &=0.5*1^2*(-25) \\
 &=-12.5

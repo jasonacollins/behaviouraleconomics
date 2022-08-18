@@ -1,0 +1,20 @@
+{
+  "hash": "2272236738419d697106c6b0c8622d96",
+  "result": {
+    "markdown": "# Loss aversion\n\nLoss aversion can explain why we behave differently depending on whether the decision making induces a gain or a loss. Loss aversion is the concept that losses loom larger than gains.\n\nPeople feel more strongly about a loss than they do an equivalent gain, so are often willing to reject gambles with a materially positive expected value.\n\nFor instance, if someone feels losses with twice the feeling of gains, a 50:50 bet to win \\$550, lose \\$500 will be unattractive. This provides an alternative explanation to the absurd levels of risk aversion required to reject this bet (as discussed in @sec-absurd).\n\n## Loss aversion in a deterministic environment: the endowment effect\n\n@kahneman1991 ran one of the most famous and replicated experiments in economics.\n\nThey randomly assigned a free mug to members of a group and asked how much money they would accept for returning the mug (i.e. willingness to accept). The remaining participants were only shown a mug and asked their willingness to pay for the mug.\n\n@kahneman1991 found that the willingness to accept (\\$5.75) was substantially higher than the willingness to pay (\\$2.25).\n\nThis experiment has been replicated in real estate markets, the stock market, with basketball tickets and in other domains. \n\nThe endowment effect is this phenomena where people impute additional value to the items they own. The endowment effect is argued to be an empirical expression of loss aversion. Willingness to accept is higher as it is payment to incur the loss of the mug.\n\n## A value function with loss aversion\n\nThe following is an example of a value function with loss aversion:\n\n\n\n$$\nv(x)=\\left\\{\\begin{matrix}\nx \\space &\\textrm{where} \\space x \\geq 0\\\\\n2x \\space &\\textrm{where} \\space x<0\n\\end{matrix}\\right.\n$$\n\n\n\nwhere $x$ is the outcome relative to the reference point.\n\nFor example, suppose someone is given \\$100. If their initial reference point is their  wealth before receiving the \\$100, $x$ will be \\$100. Therefore their utility is +100. If the same person instead loses \\$100, their utility would be -200.\n\nThe following plot shows the increased effect of the loss under this value function:\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](loss-aversion_files/figure-pdf/unnamed-chunk-1-1.pdf)\n:::\n:::\n\n\n\nThe kink where the axes intercept is representative of the greater effect of losses.\n",
+    "supporting": [
+      "loss-aversion_files/figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
