@@ -12,19 +12,25 @@ The following numerical example is an illustration.
 
 An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for \$1100. (Note: \$1000 is the actuarially fair price, the additional \$100 might represent profit or administrative costs.)
 
+### Expected value
+
 Would an expected value maximiser or risk neutral person purchase the insurance?
 
-$$E[\text{purchase}]=-\text{premium}=-\$1,100$$
+$$
+E[\text{purchase}]=-\text{premium}=-\$1,100
+$$
 
 The expected value of purchasing insurance is the guaranteed loss of the premium.
 
 \begin{align*}
-E[\text{don't}]&=P_{\text{burn}}*-value_{\text{house}} \\
-&=-0.001*1000000 \\
+E[\text{don't}]&=P_{\text{burn}}\times -value_{\text{house}} \\
+&=-0.001\times 1000000 \\
 &=-\$1000
 \end{align*}
 
 The expected value of purchasing insurance is \$100 less than the expected value of risking the house burning down. A risk neutral agent (who maximises expected value) would not purchase this insurance.
+
+### Expected utility
 
 Would a risk averse agent purchase the insurance? Suppose they have a logarithmic utility function ($U(x)=ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000.
 
@@ -33,12 +39,16 @@ E[U(\text{purchase})]&=ln(W-premium) \\
 &=ln(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
 &=`r round(log(1000000+10000-1100), 4)` \\
 \\
-E[U(\text{don't})]&=0.999*ln(W)+0.001*ln(W-value_{\text{house}}) \\
-&=0.999*ln(1,010,000)+0.001*ln(10,000) \\
+E[U(\text{don't})]&=0.999\times ln(W)+0.001\times ln(W-value_{\text{house}}) \\
+&=0.999\times ln(1,010,000)+0.001\times ln(10,000) \\
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 
 The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
+
+![](img/expected-utility.jpg)
+
+### The reflection effect
 
 Consider an agent who is risk seeking in the domain of losses but weights probability linearly. Their value function is:
 
@@ -60,14 +70,18 @@ V(purchase)&=v(-1,100) \\
 &=-(1,100)^{0.8} \\
 &=`r round(-(1100)^(0.8), 1)` \\
 \\
-V(don't)&=0.999*(0)+0.001*v(-1,000,000) \\
-&=0.999*0-0.001*(1,000,000)^{0.8} \\
+V(don't)&=0.999\times (0)+0.001\times v(-1,000,000) \\
+&=0.999\times 0-0.001\times (1,000,000)^{0.8} \\
 &=`r round(0.999*0-0.001*(1000000)^(0.8), 1)`
 \end{align*}
 
 As $V(purchase)<V(don't)$, the agent does not purchase insurance. The diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house.
 
 Including loss aversion in the value function does not change the decision as all possible outcomes are in the loss domain.
+
+![](img/reflection-effect.jpg)
+
+### Probability weighting
 
 Would a person who is risk seeking in the domain of losses (i.e. the value function with reflection effect above) and applies the decision weights described below purchase the insurance?
 
@@ -84,8 +98,8 @@ V(purchase)&=v(-1,100) \\
 &=`r round(-(1100)^(0.8), 0)` \\
 \\
 V(don't)&=\sum_{i=1}^n \pi(p_i)v(x_i) \\
-&=\pi(0.999)*v(0)+\pi(0.001)*v(-1,000,000) \\
-&=0.99*0-0.01*(1,000,000)^{0.8} \\
+&=\pi(0.999)\times v(0)+\pi(0.001)\times v(-1,000,000) \\
+&=0.99\times 0-0.01\times (1,000,000)^{0.8} \\
 &=`r round(0.99*0-0.01*(1000000)^(0.8), 0)`
 \end{align*}
 
@@ -115,8 +129,8 @@ Will they want to play this gamble?
 The utility from the gamble is:
 
 \begin{align*}
-V(A)&=0.5*v(110)-0.5*v(-100) \\
-&=0.5*(110)^{0.5}-0.5*2*(100)^{0.5} \\
+V(A)&=0.5v(110)+0.5v(-100) \\
+&=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\
 &=-4.76
 \end{align*}
 
@@ -131,8 +145,8 @@ Suppose the agent loses their wallet containing \$100. They feel bad about it an
 After losing \$100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of \$10 (winning \$110 minus the lost money in the wallet) and a loss of \$200 (losing \$100 and also losing their wallet).
 
 \begin{align*}
-V(A)&=0.5*v(-100+110)-0.5*v(-100-100) \\
-&=0.5*(10)^{0.5}-0.5*2*(200)^{0.5} \\
+V(A)&=0.5v(110-100)-0.5v(-100-100) \\
+&=0.5\times (10)^{0.5}-0.5\times 2\times (200)^{0.5} \\
 &=-12.56
 \end{align*}
 
@@ -140,7 +154,7 @@ The utility of not playing the gamble involves remaining with a loss of \$100:
 
 \begin{align*}
 V(\neg A)&=v(-100) \\
-&=-2*(100)^{0.5} \\
+&=-2\times (100)^{0.5} \\
 &=-20
 \end{align*}
 
@@ -159,8 +173,8 @@ The agent wins \$10,000 at the casino. They feel good about their win, so their 
 With the additional \$10,000, the value from the gamble is now:
 
 \begin{align*}
-V(A)&=0.5*v(10000+110)+0.5*v(10000-100) \\[6pt]
-&=0.5*(10110)^{0.5}+0.5*(9900)^{0.5} \\[6pt]
+V(A)&=0.5v(10000+110)+0.5v(10000-100) \\[6pt]
+&=0.5\times (10110)^{0.5}+0.5\times (9900)^{0.5} \\[6pt]
 &=100.02
 \end{align*}
 

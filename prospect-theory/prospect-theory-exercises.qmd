@@ -2,7 +2,7 @@
 
 ## Question 1
 
-You are in a draw for $1 million. Consider the following four scenarios where your chances of winning increases by 5%:
+You are in a draw for \$1 million. Consider the following four scenarios where your chances of winning increases by 5%:
 
 A) From 0% to 5%
 B) From 5% to 10%
@@ -14,21 +14,27 @@ Most people report that scenarios A) and D) represent better news. Why?
 ::: {.callout-tip collapse="true"}
 ## Question 1 answer
 
-There is strong experimental evidence that we overweight certain events relative to near certain events. In this instance, we will tend to overweight the shift to a certain result (scenario D) relative to shifts involving intermediate probabilities (e.g. scenario B and C). This overweighting of certainty is effectively the same as overweighting low probability events. As a result, the probability shift that provides an initial chance at $1 million is also overweighted (scenario A).
+There is strong experimental evidence that we overweight certain events relative to near certain events. In this instance, we will tend to overweight the shift to a certain result (scenario D) relative to shifts involving intermediate probabilities (e.g. scenario B and C). This overweighting of certainty is effectively the same as overweighting low probability events. As a result, the probability shift that provides an initial chance at \$1 million is also overweighted (scenario A).
 
 The result is that scenarios A and D tend to be seen as better news than scenarios B and C.
+
+The following diagram illustrates. On the horizontal axis is the probability ($p$). On the vertical axis is the decision weight applied to each probability ($\pi$). If people applied probability weights linearly as they do in expected utility theory, the dashed line would represent how probabilities map to weights. Under prospect theory, people overweight small probabilities and underweight probabilities short of certainty. The solid line represents one functional mapping of these possibility and certainty effects.
+
+From this diagram, you can then see the change in decision weight from each change in probability. The changes from 0% to 5% and from 95% to 100% represent much larger changes in decision weight than the changes in intermediate probabilities.
+
+![](img/Exercise_Q1.jpg)
 :::
 
 ## Question 2
 
-Edna, Ferdinand and Gretel each bought some Bicoin at \$50,000. The price rose to \$80,000 and then dropped to \$60,000, at which time they sold it.
+Edna, Ferdinand and Gretel each bought some Bitcoin at \$50,000. The price rose to \$80,000 and then dropped to \$60,000, at which time they sold it.
 
 All three are loss averse and have the following reference-dependent value function:
 
 $$
 v(x)=\left\{\begin{matrix}
 x \quad &\textrm{where} \quad x \geq 0\\
-2x \quad &\textrm{where} \quad x < 0 
+2x \quad &\textrm{where} \quad x < 0
 \end{matrix}\right.
 $$
 
@@ -49,8 +55,8 @@ v(x)&=v(60-50) \\
 Value for Ferdinand:
 
 \begin{align*}
-v(x)&=v(60-90) \\
-&=-2*30 \\
+v(x)&=v(60-80) \\
+&=-2\times 30 \\
 &=-60
 \end{align*}
 
@@ -71,7 +77,7 @@ Megan has the following reference-dependent value function:
 $$
 v(x)=\left\{\begin{matrix}
 x \quad &\textrm{where} \quad x \geq 0\\
-2x \quad &\textrm{where} \quad x < 0 
+2x \quad &\textrm{where} \quad x < 0
 \end{matrix}\right.
 $$
 
@@ -132,9 +138,11 @@ Where $m$ is the amount of money she receives, $r_m$ is her reference point of h
 
 To illustrate how this value function works, imagine Megan expects two pieces of cake and her dog jumps onto the table and eats one of them. Her change in the value function is:
 
-$$
-v(4*1-4*2)=v(-4)
-$$
+\begin{align*}
+v(x)&=v(4c-4r_c) \\
+&=v(4\times 1-4\times 2) \\
+&=v(-4)
+\end{align*}
 
 As $v(x)=2x$ when $x<0$:
 
@@ -153,9 +161,9 @@ Megan will be indifferent when the value from each option is the same:
 
 \begin{align*}
 \underbrace{v(10-0+p_s)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money plus} \\  \textrm{payment} \\ \textrm{for cake}}}+
-\underbrace{v(4\cdot 1-4\cdot 2)}_{\substack{\textrm{Value lost from} \\ \textrm{giving up cake}}}
+\underbrace{v(4\times 1-4\times 2)}_{\substack{\textrm{Value lost from} \\ \textrm{giving up cake}}}
 &=\underbrace{v(10-0)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money}}}+
-v\underbrace{(4\cdot 1-4\cdot1)}_{\substack{\textrm{Value of} \\ \textrm{keeping cake}}} \\[12pt]
+v\underbrace{(4\times 2-4\times 2)}_{\substack{\textrm{Value of} \\ \textrm{keeping cake}}} \\[12pt]
 v(10+p_s)+v(-4)&=v(10)+v(0) \\[6pt]
 10+p_s-8&=10\\[6pt]
 p_s&=8
@@ -171,9 +179,9 @@ Megan will be indifferent when the value from each option is the same:
 
 \begin{align*}
 \underbrace{v(10-0-p_b)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money minus} \\  \textrm{payment} \\ \textrm{for cake}}}+
-\underbrace{v(4\cdot 2-4\cdot 1)}_{\substack{\textrm{Value gained from} \\ \textrm{buying cake}}}
+\underbrace{v(4\times 2-4\times 1)}_{\substack{\textrm{Value gained from} \\ \textrm{buying cake}}}
 &=\underbrace{v(10-0)}_{\substack{\textrm{Value from} \\ \textrm{unexpected} \\ \textrm{money}}}+
-v\underbrace{(4\cdot 1-4\cdot1)}_{\substack{\textrm{Value of} \\ \textrm{only one piece}}} \\[12pt]
+v\underbrace{(4\times 1-4\times 1)}_{\substack{\textrm{Value of} \\ \textrm{only one piece}}} \\[12pt]
 v(10-p_b)+v(4)&=v(10)+v(0) \\[6pt]
 10-p_b+4&=10\\[6pt]
 p_b&=4
@@ -185,7 +193,7 @@ e\) Why is there a difference between the price at which Megan was willing to se
 ::: {.callout-tip collapse="true"}
 ## Question 3e) answer
 
-The willingness to accept in part c) is higher than the willingness to pay in part d) as in part c) the foregone cake is coded as a loss. This loss reduces value at twice the rate of a gain in cake. The payment for the cake in both parts is in the gain domain due to the birthday present of $10, so the payment received or paid is given less weight than any loss.
+The willingness to accept in part c) is higher than the willingness to pay in part d) as in part c) the foregone cake is coded as a loss. This loss reduces value at twice the rate of a gain in cake. The payment for the cake in both parts is in the gain domain due to the birthday present of \$10, so the payment received or paid is given less weight than any loss.
 :::
 
 ## Question 4
@@ -208,7 +216,7 @@ Diminishing value means that the absolute difference between $v(-40)$ and $v(-50
 $$
 v(x)=\left\{\begin{matrix}
 x^\frac{1}{2} \quad &\textrm{where} \quad x \geq 0\\
--2(-x)^\frac{1}{2} \quad &\textrm{where} \quad x < 0 
+-2(-x)^\frac{1}{2} \quad &\textrm{where} \quad x < 0
 \end{matrix}\right.
 $$
 
@@ -228,4 +236,168 @@ v(-1980)-v(-1990)&=-2(1980^\frac{1}{2}-1990^\frac{1}{2}) \\
 \end{align*}
 
 Much less value is gained by driving for the 20 minutes across town for the computer.
+
+![](img/Exercise_Q4.jpg){width=70%}
+:::
+
+## Question 5
+
+Suppose an agent has the following reference-dependent value function:
+
+$$
+v(x)=\left\{\begin{matrix}
+x^{3/4} \qquad &\textrm{where} \space &x \geq 0\\
+-2(-x)^{3/4} \quad &\textrm{where} \space &x < 0
+\end{matrix}\right.
+$$
+
+Where $x$ is the realised outcome relative to the reference point.
+
+Assume that the agent’s reference point is the status quo and the agent is offered the gamble A:
+
+$$(\$100, 0.6; −\$100, 0.4)$$
+
+a\) Will they want to play this gamble? Why?
+
+::: {.callout-tip collapse="true"}
+## Question 5a) answer
+
+The utility from the gamble is:
+
+\begin{align*}
+V(A)&=0.6v(100)-0.4v(-100) \\
+&=0.6\times (100)^{0.75}-0.4\times 2\times (100)^{0.75} \\
+&=`r 0.6*(100)^0.75-0.4*2*(100)^0.75`
+\end{align*}
+
+They will not want to play this gamble as it has a negative value for the agent. They could receive value of 0 by simply not playing.
+
+The reason for this negative value is that the agent is loss averse. The loss of \$100 is given twice the weight of an equivalent gain, meaning that they reject the bet despite a win of \$100 being more probable.
+:::
+
+b\) Suppose the agent takes this gamble and loses \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo. They are offered gamble A again? Do they accept this second time? Why?
+
+::: {.callout-tip collapse="true"}
+## Question 5b) answer
+
+After losing \$100 but not changing their reference point, they have two possible outcomes relative to their reference point: recovery of their loss of \$100 so they come out even and a loss of \$200 (losing \$100 twice).
+
+\begin{align*}
+V(A)&=0.6v(-100+10)-0.4v(-100-100) \\
+&=0.6\times (0)^{0.75}-0.4\times 2\times (200)^{0.75} \\
+&=`r 0.6*(0)^0.75-0.4*2*(200)^0.75`
+\end{align*}
+
+The utility of not playing the gamble involves remaining with a loss of \$100:
+
+\begin{align*}
+V(\neg A)&=v(-100) \\
+&=-2\times (100)^{0.75} \\
+&=`r -2*(100)^0.75`
+\end{align*}
+
+They will now want to play the gamble as it has a greater value than staying with their current loss. The reason the gamble becomes attractive is because it gives an opportunity to recover the loss. The agent is risk seeking over the loss domain.
+:::
+
+c\) The agent is offered a new job for which they receive a \$50,000 sign-on bonus. They adapt to their new wealth, so their reference point changes to accommodate their new situation. They are now offered gamble A again. Do they accept? Why?
+
+::: {.callout-tip collapse="true"}
+## Question 5c) answer
+
+With their new reference point, this question is effectively the same as part a). They will refuse the bet.
+:::
+
+## Question 6
+
+Explain how probability weighting as proposed under Prospect Theory can lead a person to simultaneously gamble and purchase insurance.
+
+::: {.callout-tip collapse="true"}
+## Question 6 answer
+
+Decisions under Prospect Theory are the outcome of two factors:
+
+-   The value function that gives a value to each outcome relative to a reference point
+-   The probability weighting function that gives a decision weight to the probability of each outcome.
+
+The Prospect Theory value function leads people to be risk averse in the domain of gains and risk seeking in the loss domain. This combination would tend to lead people to purchase neither insurance or lotteries. Their risk seeking behaviour could lead them to avoid the certain loss of the insurance premium. They would rather risk the loss of the insurable asset.
+
+![](img/Exercise_Q6a.jpg){width=48%}
+
+Their risk averse behaviour in the domain of gains would make a lottery with a negative expected value unattractive.
+
+![](img/Exercise_Q6b.jpg){width=48%}
+
+However, the probability weighting function can counteract that effect. By overweighting the small probability of an insurable event or a lottery win, the agent may decide to insure or purchase a lottery despite the risk attitudes inherent in the value function.
+
+As an example, consider an agent who overweights a probability of 1 in a million lottery win by 1,000 times, acting as though they would win the \$1 million prize once every 1000 lotteries. They also overweight the probability of a one in a thousand fire that would destroy their million dollar house by 100 times, acting as though it is a 1-in-10 chance. (These numbers are extreme, but I am creating a toy example.)
+
+Suppose the lottery ticket is \$1 and their utility function is:
+
+$$
+v(x)=\left\{\begin{matrix}
+x^{1/2} \quad &\textrm{where} \space &x \geq 0\\
+-(-x)^{1/2} \quad &\textrm{where} \space &x < 0
+\end{matrix}\right.
+$$
+
+Value of purchasing the lottery:
+
+```{=tex}
+\begin{align*}
+v(x)&=\sum_{i=1}^{n} \pi(x_i)v(x_i) \\[6pt]
+&=0.001\times (1000000-1)^{1/2}-0.999\times (1)^{1/2} \\[6pt]
+&=0.000999
+\end{align*}
+```
+
+The value of not purchasing the lottery is zero.
+
+They will purchase the lottery as it has the higher value.
+
+Value of not purchasing insurance, which involves the potential loss of the house:
+
+```{=tex}
+\begin{align*}
+v(x)&=\sum_{i=1}^{n} \pi(x_i)v(x_i) \\[6pt]
+&=-0.1\times (1000000)^{1/2}+0.9\times (0)^{1/2} \\[6pt]
+&=-100
+\end{align*}
+```
+
+Value of purchasing insurance, which is the certain loss of the premium:
+
+```{=tex}
+\begin{align*}
+v(x)&=\sum_{i=1}^{n} \pi(x_i)v(x_i) \\[6pt]
+&=-(1000)^{1/2} \\[6pt]
+&=-31.6
+\end{align*}
+```
+
+They purchase insurance as it has higher value than not purchasing it.
+:::
+
+## Question 7
+
+Amber sued a tabloid newspaper for defamation. The trial has completed and the judge has retired to make her decision.
+
+Amber's lawyer tells her that she has a 95% chance of winning and receiving \$1,000,000 in damages, meaning she has a 5% chance of leaving with nothing. (Ignore any potential costs.) She then receives an offer of settlement from the newspaper for \$800,000. Amber accepts.
+
+Use the fourfold pattern of attitudes to risk under Prospect Theory to explore why Amber accepted the settlement offer.
+
+::: {.callout-tip collapse="true"}
+## Question 7 answer
+
+Rejecting the offer has a higher expected value than the value of the settlement:
+
+\begin{align*}
+E[\text{reject}]&=p_{win} x_{win} \\
+&=0.95\times 1000000 \\
+&=950000
+\end{align*}
+
+There are two forces under prospect theory that would lead Amber to take the option with the lower expected value:
+
+- People are risk averse in the gain domain. Amber would prefer certainty to a gamble with the same expected value, and depending on the level of risk aversion, would be willing to accept an amount for certain lower than the expected value of the bet. That is, the certainty equivalent of the gamble would be less than its expected value.
+- People overweight small probabilities. The 5% probability of losing is likely overweighted by Amber.
 :::

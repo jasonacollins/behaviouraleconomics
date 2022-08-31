@@ -4,7 +4,7 @@ In Expected Utility Theory, probabilities enter the expected utility function li
 
 Experimental observation confirms that we approximate linear probabilities for intermediate probabilities. But, there is strong evidence that we give overweight certain events (i.e. when $p$ = 1) relative to near certain events (e.g. when $p$ = 0.99). This is effectively the same as overweighting very low probability events.
 
-![](img/tversky_and_kahneman_1992_figure_1.jpg)
+![](img/tversky_and_kahneman_1992_figure_1.jpg){width=60%}
 
 Recall our discussion of the Allais Paradox in @sec-allais.
 

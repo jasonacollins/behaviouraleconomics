@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Course notes on behavioural economics - 11&nbsp; Risk and uncertainty exercises</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../prospect-theory/prospect-theory.html" rel="next">
+<link href="../risk-and-uncertainty/anomalies-of-expected-utility-theory.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<link rel="stylesheet" href="../styles.css">
+<meta name="twitter:title" content="Course notes on behavioural economics - 11&nbsp; Risk and uncertainty exercises">
+<meta name="twitter:description" content="You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36).">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Course notes on behavioural economics</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf">PDF version</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/">Blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jasonacollins"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Risk and uncertainty exercises</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../what-is-behavioural-economics.html" class="sidebar-item-text sidebar-link">What is behavioural economics?</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">Economic foundations</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/utility-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html" class="sidebar-item-text sidebar-link">Decision making under risk and uncertainty</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-value.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Expected value</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/axioms-for-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-utility-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Expected utility examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/anomalies-of-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Anomalies of expected utility theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/risk-and-uncertainty-exercises.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Risk and uncertainty exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../prospect-theory/prospect-theory.html" class="sidebar-item-text sidebar-link">Prospect theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reference-dependence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reference dependence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/loss-aversion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Loss aversion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reflection-effect.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The reflection effect</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/value-function.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The value function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/probability-weighting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Probability weighting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-implementation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prospect theory exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../intertemporal-choice/intertemporal-choice.html" class="sidebar-item-text sidebar-link">Intertemporal choice</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exponential discounting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Exponential discounting examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-anomalies.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Exponential discounting anomalies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Present bias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Present bias examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/sophisticated-present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Sophisticated present bias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/commitment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Commitment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Preference over profiles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Intertemporal choice exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#question-1-expected-value" id="toc-question-1-expected-value" class="nav-link active" data-scroll-target="#question-1-expected-value"> <span class="header-section-number">11.1</span> Question 1: Expected value</a></li>
+  <li><a href="#question-2-expected-value" id="toc-question-2-expected-value" class="nav-link" data-scroll-target="#question-2-expected-value"> <span class="header-section-number">11.2</span> Question 2: Expected value</a></li>
+  <li><a href="#question-3-expected-utility" id="toc-question-3-expected-utility" class="nav-link" data-scroll-target="#question-3-expected-utility"> <span class="header-section-number">11.3</span> Question 3: Expected utility</a></li>
+  <li><a href="#question-4-expected-utility" id="toc-question-4-expected-utility" class="nav-link" data-scroll-target="#question-4-expected-utility"> <span class="header-section-number">11.4</span> Question 4: Expected utility</a></li>
+  <li><a href="#question-5-expected-utility-insurance" id="toc-question-5-expected-utility-insurance" class="nav-link" data-scroll-target="#question-5-expected-utility-insurance"> <span class="header-section-number">11.5</span> Question 5: Expected utility: insurance</a></li>
+  <li><a href="#question-6-an-anomaly-in-expected-utility" id="toc-question-6-an-anomaly-in-expected-utility" class="nav-link" data-scroll-target="#question-6-an-anomaly-in-expected-utility"> <span class="header-section-number">11.6</span> Question 6: An anomaly in expected utility</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Risk and uncertainty exercises</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="question-1-expected-value" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="question-1-expected-value"><span class="header-section-number">11.1</span> Question 1: Expected value</h2>
+<p>You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36). If you make a straight up bet on one of the 37 single numbers, you are paid $35 for every dollar you bet. What is the expected value of a $20 bet.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 1 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The expected value of the Roulette bet is:</p>
+<p><span class="math display">\begin{align*}
+E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
+&amp;=\frac{36}{37}*(-\$20)+\frac{1}{37}*(35*\$20) \\[6pt]
+&amp;=\$-0.54
+\end{align*}</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-2-expected-value" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="question-2-expected-value"><span class="header-section-number">11.2</span> Question 2: Expected value</h2>
+<p>An agent is considering insurance against bushfire for its $1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for $1100.</p>
+<p>a) What is the expected value of purchasing insurance?</p>
+<p>b) What is the expected value of not purchasing insurance?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 2 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>a) What is the expected value of purchasing insurance?</p>
+<p><span class="math display">
+E[\text{purchase}]=-\text{premium}=-\$1,100
+</span></p>
+<p>The expected value of purchasing insurance is the guaranteed loss of the premium.</p>
+<p>b) What is the expected value of not purchasing insurance?</p>
+<p><span class="math display">\begin{align*}
+E[\text{don't}]&amp;=P_{\text{burn}}*-value_{\text{house}} \\
+&amp;=-0.001*1000000 \\
+&amp;=-\$1000
+\end{align*}</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-3-expected-utility" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="question-3-expected-utility"><span class="header-section-number">11.3</span> Question 3: Expected utility</h2>
+<p>Anika is an expected utility maximiser with the following utility function:</p>
+<p><span class="math display">U(x)=\sqrt{x}</span></p>
+<p>Anika is offered the following choice:</p>
+<ol type="A">
+<li>A 50% chance of winning $10 and a 50% chance of winning nothing</li>
+<li>$4 for certain</li>
+</ol>
+<p>Anika has zero wealth besides this offer.</p>
+<p>a) What is the expected value of option A)?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3(a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The expected value of option A) is:</p>
+<span class="math display">\begin{align*}
+E[A]&amp;=\sum_{i=1}^n p_ix_i \\[12pt]
+&amp;=0.5*\$10+0.5*0 \\[6pt]
+&amp;=\$5
+\end{align*}</span>
+</div>
+</div>
+</div>
+<p>b) Will Anika choose A) or B)? Why?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3(b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We need to determine the expected utility of each option. Anika will selection the option with the highest expected utility.</p>
+<p>The expected utility of option A) is:</p>
+<span class="math display">\begin{align*}
+EU(A)&amp;=p_1U(x_1)+p_2U(x_2) \\
+&amp;=0.5*\sqrt{10}+0.5*\sqrt{0} \\
+&amp;=1.58
+\end{align*}</span>
+<p>The expected utility of option B) is:</p>
+<span class="math display">\begin{align*}
+EU(B)&amp;=U(4) \\
+&amp;=\sqrt{4} \\
+&amp;=2
+\end{align*}</span>
+<p>Anika will choose option B) as it gives her higher expected utility. Anika is risk averse.</p>
+</div>
+</div>
+</div>
+<p>c) What is the certainty equivalent of option A?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3(c) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>To calculate the certainty equivalent of option A, we calculate what payment with certainty would deliver equivalent expected utility. That is:</p>
+<span class="math display">\begin{align*}
+EU(CE)&amp;=1.58 \\
+\sqrt{CE}&amp;=1.58 \\
+CE&amp;=1.58^2 \\
+&amp;=2.5
+\end{align*}</span>
+<p>The certainty equivalent of option A is $2.50. That is, Anika would be indifferent between option A and a payment of $2.50 for certain.</p>
+</div>
+</div>
+</div>
+<p>d) Draw a graph showing Anika’s utility curve, the expected value of option A, the expected utility of options A) and B) and the certainty equivalent of option A).</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3(d) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="img/expected-utility-exercises-question-1.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-4-expected-utility" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="question-4-expected-utility"><span class="header-section-number">11.4</span> Question 4: Expected utility</h2>
+<p>Consider the following gamble:</p>
+<blockquote class="blockquote">
+<p>(0.5; $550; 0.5, -$500)</p>
+</blockquote>
+<p>This gamble provides a 50% chance of winning $550 and a 50% chance of losing $500.</p>
+<p>a) Would a risk neutral agent (who maximises expected value) be willing to pay $20 to play this gamble? What is the most they would be willing to pay to play?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 4(a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The expected value of the gamble is:</p>
+<span class="math display">\begin{align*}
+E[X]&amp;=\sum_{i=1}^n p_ix_i \\[12pt]
+&amp;=0.5(550)+0.5(-500) \\[6pt]
+&amp;=25
+\end{align*}</span>
+<p>This is greater than $20, so a risk neutral agent will be willing to pay $20 to participate in the gamble.</p>
+<p>We could also have solved this by determining the expected value if they had paid $20:</p>
+<span class="math display">\begin{align*}
+E[X]-c&amp;=\sum_{i=1}^n p_ix_i-c \\[12pt]
+&amp;=0.5(550)+0.5(-500)-20 \\[6pt]
+&amp;=5
+\end{align*}</span>
+<p>As the expected value is positive, the agent would be willing to pay $20.</p>
+</div>
+</div>
+</div>
+<p>b) Would a risk averse expected utility maximiser with wealth $1000 and utility function <span class="math inline">U(x)=x^{1/2}</span> be willing to pay $20 to play this gamble? What is the most they would be willing to pay to play?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 4(b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The expected utility of the gamble for the risk averse agent if they paid $20 to play is:</p>
+<span class="math display">\begin{align*}
+EU(x)&amp;=p_1(W+x_1-c)+p_2(W+x_2-c) \\[6pt]
+&amp;=0.5(1000+550-20)^{1/2}+0.5(1000-500-20)^{1/2} \\[6pt]
+&amp;=30.51
+\end{align*}</span>
+<p>The expected utility of not playing the gamble is:</p>
+<span class="math display">\begin{align*}
+EU(x)&amp;=(1000)^{1/2} \\[6pt]
+&amp;=31.62
+\end{align*}</span>
+<p>They would not pay $20 as they would have higher utility if they turned down the gamble.</p>
+<p>In fact, they would not pay any positive sum to participate in the gamble. If they were offered the gamble for free, their expected utility would be:</p>
+<span class="math display">\begin{align*}
+EU(x)&amp;=0.5(1000+550)^{1/2}+0.5(1000-500)^{1/2} \\[6pt]
+&amp;=30.86
+\end{align*}</span>
+<p>This is less than if they simply turned down the gamble. They would be willing to pay to avoid the gamble. How much?</p>
+<p>We can determine this by asking what wealth a utility of 30.86 is:</p>
+<span class="math display">\begin{align*}
+W^{1/2}&amp;=30.86 \\[6pt]
+W&amp;=30.51^2 \\[6pt]
+&amp;=\$952.67
+\end{align*}</span>
+<p>The certainty equivalent of the gamble is $952.67. The agent would be willing to pay up to $47.33 to avoid the gamble.</p>
+</div>
+</div>
+</div>
+<p>c) Would the expected utility maximiser with utility function <span class="math inline">U(x)=x^{1/2}</span> change their decision if they had $1 million in wealth? Explain.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 4(c) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If they now have $1 million in wealth, we simply repeat the calculations above with the new wealth.</p>
+<span class="math display">\begin{align*}
+EU(x)&amp;=0.5(1000000+550-20)^{1/2}+0.5(1000000-500-20)^{1/2} \\[6pt]
+&amp;=1000.00247
+\end{align*}</span>
+<p>The expected utility of not playing the gamble is:</p>
+<span class="math display">\begin{align*}
+EU(x)&amp;=(1000000)^{1/2} \\[6pt]
+&amp;=1000
+\end{align*}</span>
+<p>They would be willing to pay $20 as they would have higher utility if they accepted the gamble.</p>
+<p>What is the most they would be willing to pay? If they were offered the gamble for free, their expected utility would be:</p>
+<span class="math display">\begin{align*}
+EU(x)&amp;=0.5(1000000+550)^{1/2}+0.5(1000000-500)^{1/2} \\[6pt]
+&amp;=1000.0125
+\end{align*}</span>
+<p>How much would they be willing to pay for this opportunity? We can determine this by asking what wealth a utility of 1000.0125 is:</p>
+<span class="math display">\begin{align*}
+W&amp;=(1000.0124655)^2 \\[6pt]
+&amp;=\$1000024.93
+\end{align*}</span>
+<p>The agent would be willing to pay up to $24.93 for the gamble. This is close to the expected value of $25.</p>
+<p>Intuitively, as the agent’s wealth increases their utility function becomes increasingly linear (second derivative approaches zero) and they become closer to risk neutral.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-5-expected-utility-insurance" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="question-5-expected-utility-insurance"><span class="header-section-number">11.5</span> Question 5: Expected utility: insurance</h2>
+<p>An agent is considering insurance against bushfire for its $1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for $1100.</p>
+<p>a) Would a risk neutral agent purchase the insurance?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 5a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We have already calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk neutral agent would not purchase the insurance.</p>
+</div>
+</div>
+</div>
+<p>b) Suppose an agent has a logarithmic utility function (<span class="math inline">U(x)=ln(x)</span>) and they have $10,000 in cash in addition to their house, giving them wealth (<span class="math inline">W</span>) of $1,010,000. Would this agent purchase the insurance? Are they risk seeking, risk neutral or risk averse?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 5b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+E[U(\text{purchase})]&amp;=ln(W-premium) \\
+&amp;=ln(1,008,900) \\
+&amp;=13.8244\\
+\\
+E[U(\text{don't})]&amp;=0.999*ln(W)+0.001*ln(W-value_{\text{house}}) \\
+&amp;=0.999*ln(1,010,000)+0.001*ln(10,000) \\
+&amp;=13.8208
+\end{align*}</span></p>
+<p>The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will purchase insurance. They are risk averse.</p>
+<p>What is the intuition for this agent’s purchase of insurance? Diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth (e.g.&nbsp;<span class="math inline">U(\$0)+U(\$200)&lt;U(\$100)+U(\$100)</span>). Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-6-an-anomaly-in-expected-utility" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="question-6-an-anomaly-in-expected-utility"><span class="header-section-number">11.6</span> Question 6: An anomaly in expected utility</h2>
+<p>Consider the following two choices:</p>
+<p><strong>Choice 1</strong>: Choose one of the following bets:</p>
+<p>Bet A:</p>
+<ul>
+<li>$10,000 with probability: 11%</li>
+<li>$0 with probability: 89%</li>
+</ul>
+<p>Bet B:</p>
+<ul>
+<li>$50,000 with probability: 10%</li>
+<li>$0 with probability: 90%</li>
+</ul>
+<p><strong>Choice 2</strong>: Choose one of the following bets:</p>
+<p>Bet A’:</p>
+<ul>
+<li>$10,000 with probability: 100%</li>
+</ul>
+<p>Bet B’:</p>
+<ul>
+<li>$50,000 with probability: 10%</li>
+<li>$10,000 with probability: 89%</li>
+<li>$0 with probability: 1%</li>
+</ul>
+<p>Many people pick B for Choice 1 and A’ for Choice 2.</p>
+<p>Does this pair of choices conform with Expected Utility Theory? Why?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 6 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>According to Expected Utility Theory, if an agent selects B:</p>
+<span class="math display">\begin{align*}
+0.10U(50,000)+0.90U(0)&amp;&gt; 0.11U(10,000)+ 0.89U(0) \\[6pt]
+0.10U(50,000)+0.01U(0)&amp;&gt; 0.11U(10,000)
+\end{align*}</span>
+<p>According to Expected Utility Theory, if an agent selects A’:</p>
+<span class="math display">\begin{align*}
+U(10,000)&amp;&gt;0.10U(50,000)+0.89U(10,000)+0.01U(0) \\[6pt]
+0.11U(10,000)&amp;&gt;0.89U(50,000)+0.01U(0)
+\end{align*}</span>
+<p>This is a contradiction. Under expected utility theory, if an agent chooses B it should choose B’. And if the agent chooses A it should choose A’.</p>
+<p>This occurs due to a breach in the principle of independence.</p>
+<p>Here is a representation of the choices.</p>
+<p><img src="img/allais-paradox-4.jpg" class="img-fluid"></p>
+<p>The bets in the two shaded areas are the same. They are paired with an outcomes of either $10,000 or $0. Preferring B to A and A’ to B’ is a violation of the axiom of the <a href="@sec-independence">independence of irrelevant alternatives</a>: Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble.</p>
+<p>Using this representation in the table, here is another way of understanding why this combination of choices is an anomaly. Imagine there are 100 tickets numbered 1 to 100. One ticket will be drawn. If a ticket between 1 and 89 is drawn, you win the prize in the first column. If a ticket between 90 and 99 is drawn, you win the amount in the second. If a 100 is drawn, you win the sum in the third.</p>
+<p>Suppose that you know the ticket that is drawn is between 1 and 89. Would you prefer A or B? As you would win $0 with either choice, you will be indifferent. You will similarly be indifferent between A’ and B’, winning $10,00 no matter what.</p>
+<p>Suppose instead that a ticket between 90 and 100 is drawn, but you know which. You can see that if you prefer A to B, you should also prefer A’ to B’. In each choice you are effectively facing the same bet. Let’s assume for the moment that you prefer B and B’.</p>
+<p>Finally, suppose you don’t know what ticket will be drawn. We have just determined that if you know the ticket is between 1 and 89 you are indifferent between the options, but if between 90 and 100 is drawn you prefer B and B’. You do not prefer A or A’ when the ticket range is 1 to 89 or 90 to 100, so you should not prefer A or A’ when the ticket number is unknown.</p>
+<p>Finally, using the formal definition for the independence of irrelevant alternatives axiom:</p>
+<ul>
+<li>if <span class="math inline">x</span> and <span class="math inline">y</span> are lotteries with <span class="math inline">x\succcurlyeq y</span> and</li>
+<li><span class="math inline">p</span> is the probability that a third option <span class="math inline">z</span> is present, then: <span class="math display">
+pz+(1-p)x\succcurlyeq pz+(1-p)y
+</span></li>
+</ul>
+<p>For each of the choices in our lottery:</p>
+<ul>
+<li><p><span class="math inline">p=89\%</span></p></li>
+<li><p><span class="math inline">x</span> is a 100% chance of $10,000</p></li>
+<li><p><span class="math inline">y</span> is a 0.01/(1-0.89) chance of $0 and 0.10/(1-0.89) chance of $50,000</p></li>
+<li><p><span class="math inline">z</span> is $10,000 in choice 1 and $0 in choice 2, although <span class="math inline">z</span>’s value does not matter due to its assumed irrelevance.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/behaviouraleconomics\.jasoncollins\.blog/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../risk-and-uncertainty/anomalies-of-expected-utility-theory.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Anomalies of expected utility theory</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../prospect-theory/prospect-theory.html" class="pagination-link">
+        <span class="nav-page-text">Prospect theory</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">Copyright: CC-BY</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jasonacollins">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+
+
+
+</body></html>
