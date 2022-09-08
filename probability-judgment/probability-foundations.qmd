@@ -1,0 +1,17 @@
+# Probability foundations
+
+Consider the following judgments:
+
+- An investor picking which stock or fund they should invest in
+
+- A surgeon deciding whether an operation would result in a good outcome for the patient
+
+- You considering how much you need to save for retirement
+
+- A judgment as to whether your friend is bluffing or genuinely has a strong hand.
+
+All of these judgments involve risk or uncertainty. We either know the probability (risk) or do not know the probability (uncertainty). We do not know all elements of the current state of the world and the probabilities that we are in any particular state. We do not know what is going to happen in the future and the probability with which each state occurs.
+
+To analyse decision under risk and uncertainty we need to consider how people compute and weight probabilities.
+
+In this part I examine the foundations of probability judgment, some basic rules of probability, empirical evidence of how people make judgments under risk and uncertainty, and some possible explanations for what is observed.

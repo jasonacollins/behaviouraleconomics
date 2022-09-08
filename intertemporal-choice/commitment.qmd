@@ -83,7 +83,7 @@ Odysseus was required to sail past the sirens at $t=1$. At that time he can eith
 
 As Odysseus is a sophisticated present-biased agent, he considers what he is likely to do at that time. He realises that he will jump of the ship for the immediate benefit of joining the sirens at the loss of the longer-term benefit of living.
 
-But from the perspective of Odysseus today, with both the benefits of the siren and living in the future, Odysseus would prefer to live. As a result, he decides to commit himself to that course of action by instructing his crew to tie him to the mast (plus leaving his ears unplugged so that he also gets some benefits from the siren song).
+But from the perspective of Odysseus today, with both the benefits of the siren and living in the future discounted, Odysseus would prefer to live. As a result, he decides to commit himself to that course of action by instructing his crew to tie him to the mast (plus leaving his ears unplugged so that he also gets some benefits from the siren song).
 
 ![[John William Waterhouse, Ulysses and the Sirens (1891)](https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Ulysses_and_the_Sirens_(1891).jpg)](img/John_William_Waterhouse_-_Ulysses_and_the_Sirens_(1891).jpg)
 
@@ -102,54 +102,42 @@ You receive the following payoffs for each course of action:
 | Save  |  0  |  0  | 45  |
 | Spend | 10  | 10  | 10  |
 
+First, consider what a naive quasi-hyperbolic discounter chooses.
+
 At $t=0$ the highest discounted utility is for Save. You plan to save for the jacket.
 
-Save:
-
 ```{=tex}
 \begin{align*}
-U(x)&=0+\beta\delta \times 0+\beta\delta^2\times 45 \\
+U_0(\text{Save})&=0+\beta\delta \times 0+\beta\delta^2\times 45 \\
 &=0.5\times 45 \\
-&=22.5
-\end{align*}
-```
-Spend:
-
-```{=tex}
-\begin{align*}
-U(x)&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
+&=22.5 \\
+\\
+U_0(\text{Spend})&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
 &=10+0.5\times 10+0.5\times 10 \\
 &=20
 \end{align*}
 ```
+
 One month now passes. You have saved for a month. You could now spend both your savings from last month and this month, giving a short term boost, or keep saving for your jacket.
 
 |         | t=1 | t=2 |
 |---------|:---:|:---:|
 | Save    |  0  | 45  |
-| Spend | 20  | 10  |
+| Start spending at $t=1$ | 20  | 10  |
 
-At $t=1$ spending now has the highest discounted utility. After saving for the first period, you spend.
-
-Save:
+At $t=1$ spending now has the highest discounted utility. After saving for the first period, you spend despite initially wanting to save.
 
 ```{=tex}
 \begin{align*}
-U(x)&=0+\beta\delta\times 45 \\
+U_1(\text{Save})&=0+\beta\delta\times 45 \\
 &=0.5\times 45 \\
-&=22.5
-\end{align*}
-```
-Spend:
-
-```{=tex}
-\begin{align*}
-U(x)&=20+\beta\delta \times 10 \\
+&=22.5 \\
+\\
+U_1(\text{Start spending at t=1})&=20+\beta\delta \times 10 \\
 &=20+0.5\times 10 \\
 &=25
 \end{align*}
 ```
-You spend despite initially wanting to save.
 
 Now let's consider this problem from the point of view of a sophisticated present-biased agent. They see their full choice set as:
 
@@ -163,51 +151,39 @@ You work backward through time. At $t=2$, you will buy the jacket.
 
 The utility of each option at $t=1$ is as follows:
 
-Save:
-
 ```{=tex}
 \begin{align*}
-U(x)&=0+\beta\delta\times 45 \\
+U_1(\text{Save})&=0+\beta\delta\times 45 \\
 &=0.5\times 45 \\
-&=22.5
-\end{align*}
-```
-Spend:
-
-```{=tex}
-\begin{align*}
-U(x)&=20+\beta\delta \times 10 \\
+&=22.5 \\
+\\
+U_1(\text{Start spending at }t=1)&=20+\beta\delta \times 10 \\
 &=20+0.5\times 10 \\
 &=25
 \end{align*}
 ```
-If you had spent at $t=0$, you have no choice but to spend at $t=2$.
+
+If the agent had spent at $t=0$, you have no choice but to spend at $t=1$.
 
 The sophisticated quasi-hyperbolic discounter now knows that saving for the jacket is not available to them as they will spend at $t=1$ regardless of their initial actions. As a result, at $t=0$ they choose between the two feasible options:
 
-Start spending at t=1:
-
 ```{=tex}
 \begin{align*}
-U(x)&=0+\beta\delta \times 20+\beta\delta^2\times 10 \\
+U_0(\text{Start spending at }t=1)&=0+\beta\delta \times 20+\beta\delta^2\times 10 \\
 &=0.5\times 20+0.5\times 10 \\
-&=15
-\end{align*}
-```
-Spend:
-
-```{=tex}
-\begin{align*}
-U(x)&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
+&=15 \\
+\\
+U_0(\text{Save})&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
 &=10+0.5\times 10+0.5\times 10 \\
 &=20
 \end{align*}
 ```
+
 They start to spend at $t=0$. Contrast this with the naïve agent who chooses Save at $t=0$. The sophisticated agent would also prefer Save at $t=0$, but knows that Save is not available to them as they will spend at $t=1$.
 
 Now consider what the sophisticated agent may do in the presence of lay-by.
 
-For payment of an administrative fee equivalent to 1 unit of utility and an initial deposit (your savings in $t=0$), you reserve the jacket, preventing you from spending that money in period 2. The new set of options is:
+For payment of an administrative fee equivalent to 1 unit of utility and an initial deposit (the agent's savings in $t=0$), you reserve the jacket, preventing you from spending that money in period 2. The new set of options is:
 
 |                       | t=0 | t=1 | t=2 |
 |-----------------------|:---:|:---:|:---:|
@@ -220,38 +196,27 @@ The lay-by option is strictly worse than Save. But what happens if lay-by is ava
 
 Again, working backward, at $t=2$, the agent buys the jacket.
 
-At $t=1$, by the same logic we looked at previously, they spend if they are able to do so. That eliminates Save from their choice set. At \$ $t=0$, they now compare the feasible options:
-
-Start spending at t=1:
+At $t=1$, by the same logic we looked at previously, they spend if they are able to do so. That eliminates Save from their choice set. At $t=0$, they now compare the feasible options:
 
 ```{=tex}
 \begin{align*}
-U(x)&=0+\beta\delta \times 20+\beta\delta^2\times 10 \\
+U_0(\text{Start spending at }t=1)&=0+\beta\delta \times 20+\beta\delta^2\times 10 \\
 &=0.5\times 20+0.5\times 10 \\
-&=15
-\end{align*}
-```
-Spend:
-
-```{=tex}
-\begin{align*}
-U(x)&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
+&=15 \\
+\\
+U_0(\text{Spend})&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
 &=10+0.5\times 10+0.5\times 10 \\
-&=20
-\end{align*}
-```
-Lay-by:
-
-```{=tex}
-\begin{align*}
-U(x)&=-1+\beta\delta \times 0+\beta\delta^2\times 45 \\
+&=20 \\
+\\
+U_0(\text{Lay-by})&=-1+\beta\delta \times 0+\beta\delta^2\times 45 \\
 &=-1+0.5\times 0+0.5\times 45 \\
 &=21.5
 \end{align*}
 ```
+
 Lay-by is the preferred option at $t=0$. As it binds the agent in the future, they are able to stick to this plan.
 
-Note that lay-by is strictly worse than Save as the agent must pay the administrative fee. But it is chosen by the sophisticated quasi-hyperbolic discounter as the only feasible way to get their jacket. Without lay-by they will spend at $t=1$ and end up with lower utility from the perspective of their $t=0$ self.
+Note that Lay-by is strictly worse than Save as the agent must pay the administrative fee. But the sophisticated quasi-hyperbolic discounter chooses it as the only feasible way to get their jacket. Without Lay-by they know they will Start spending at $t=1$ and end up with lower utility from the perspective of their $t=0$ self.
 
 ### Depressing the value of the bad course of action
 
@@ -277,9 +242,9 @@ The sophisticated agent works backward through time. At $t=1$ its payoffs are:
 
 ```{=tex}
 \begin{align*}
-U_1(smoking)&=5 \\
+U_1(\text{smoking})&=5 \\
 \\
-U_1(healthy)&=\beta\delta\times 8 \\
+U_1(\text{healthy})&=\beta\delta\times 8 \\
 &=4
 \end{align*}
 ```
@@ -289,10 +254,10 @@ As a result, at $t=0$, knowing that it will cave at $t=1$, the agent doesn't bot
 
 ```{=tex}
 \begin{align*}
-U_0(smoking)&=\beta\delta\times 5 \\
+U_0(\text{smoking})&=\beta\delta\times 5 \\
 &=2.5
 \\
-U_0(healthy)&=\beta\delta^2\times 8 \\
+U_0(\text{healthy})&=\beta\delta^2\times 8 \\
 &=4
 \end{align*}
 ```
@@ -302,10 +267,10 @@ Working backward through time, the agent knows that at $t=1$ if it has not stake
 
 ```{=tex}
 \begin{align*}
-U_1(stickK+smoking)&=5-\beta\delta\times 5 \\
+U_1(\text{stickK+smoking})&=5-\beta\delta\times 5 \\
 &=2.5
 \\
-U_1(stickK+healthy)&=\beta\delta\times 8 \\
+U_1(\text{stickK+healthy})&=\beta\delta\times 8 \\
 &=4
 \end{align*}
 ```
@@ -315,10 +280,10 @@ This means the agent's options at $t=0$ are effectively:
 
 ```{=tex}
 \begin{align*}
-U_0(smoking)&=\beta\delta\times 5 \\
+U_0(\text{smoking})&=\beta\delta\times 5 \\
 &=2.5
 \\
-U_0(stickK+healthy)&=\beta\delta^2\times 8 \\
+U_0(\text{stickK+healthy})&=\beta\delta^2\times 8 \\
 &=4
 \end{align*}
 ```
@@ -344,11 +309,11 @@ We solve as follows:
 
 ```{=tex}
 \begin{align*}
-U_0(exercise)&=u(x_0)+\beta\delta u(x_1) \\
+U_0(\text{exercise})&=u(x_0)+\beta\delta u(x_1) \\
 &=0+\frac{1}{2}\times {2}{3}\times 12 \\
 &=4
 \\
-U_0(television)&=u(x_0)+\beta\delta u(x_1) \\
+U_0(\text{television})&=u(x_0)+\beta\delta u(x_1) \\
 &=6+\frac{1}{2}\times {2}{3}\times 0 \\
 &=6
 \end{align*}
@@ -362,11 +327,11 @@ We solve as follows:
 
 ```{=tex}
 \begin{align*}
-U_0(exercise+massage)&=u(x_0)+\beta\delta u(x_1) \\
+U_0(\text{exercise+massage})&=u(x_0)+\beta\delta u(x_1) \\
 &=3+\frac{1}{2}\times {2}{3}\times 12 \\
 &=7
 \\
-U_0(television)&=u(x_0)+\beta\delta u(x_1) \\
+U_0(\text{television})&=u(x_0)+\beta\delta u(x_1) \\
 &=6+\frac{1}{2}\times {2}{3}\times 0 \\
 &=6
 \end{align*}

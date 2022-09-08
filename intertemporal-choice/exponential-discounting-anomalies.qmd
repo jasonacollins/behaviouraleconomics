@@ -20,12 +20,12 @@ For example, some subjects were asked how large a future prize would need to be 
 
 Across the choices offered to the experimental subjects, there was a consistent effect whereby incrementing the delay for both rewards equally would result in a switch from the small sooner reward to the latter larger reward.
 
-In a study by @kirby1995, 34 of 36 experimental subjects reversed preference from a. Larger later reward to a smaller earlier reward as the delays to both decreased.
+In a study by @kirby1995, 34 of 36 experimental subjects reversed preference from a larger later reward to a smaller earlier reward as the delays to both decreased.
 
 ### Healthy choices
 
 @read1998 asked 200 study participants to make a choice between healthy or unhealthy snacks (e.g., banana or apple versus Mars bar or Snickers bar) that they would receive in one week. 48% of men and 51% of women chose the healthy choice.
 
-At the scheduled time one week later they asked the participants to choose again. Although no reference was made to their previous choice, this effectively gave them the opportunity to change their mind. This time, only 25% of men and 11% of women chose the healthy snack. While many changed from the healthy to unhealthy snack, almost no changed from the unhealthy to healthy snack.
+At the scheduled time one week later they asked the participants to choose again. Although no reference was made to their previous choice, this effectively gave them the opportunity to change their mind. This time, only 25% of men and 11% of women chose the healthy snack. While many changed from the healthy to unhealthy snack, almost no-one changed from the unhealthy to healthy snack.
 
 This result is evidence of time inconsistency. The participants made different decisions depending upon when they made the decision.

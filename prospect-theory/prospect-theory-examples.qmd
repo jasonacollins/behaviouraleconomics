@@ -16,9 +16,10 @@ An agent is considering insurance against bushfire for its \$1,000,000 house. Th
 
 Would an expected value maximiser or risk neutral person purchase the insurance?
 
-$$
-E[\text{purchase}]=-\text{premium}=-\$1,100
-$$
+\begin{align*}
+E[\text{purchase}]&=-\text{premium} \\
+&=-\$1,100
+\end{align*}
 
 The expected value of purchasing insurance is the guaranteed loss of the premium.
 
