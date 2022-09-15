@@ -15,14 +15,12 @@ a\) Olga discounts the future exponentially with $\delta=2/3$. At $t=0$, what is
 
 \begin{align*}
 U_0(exercise)&=u(x_0)+\delta u(x_1) \\
-&=0+\frac{2}{3}\times 12 \\
-&=8
-\end{align*}
-
-\begin{align*}
+&=0+\frac{2}{3}\times 30 \\
+&=20 \\
+\\
 U_0(television)&=u(x_0)+\delta u(x_1) \\
-&=6+\frac{2}{3}\times 0 \\
-&=6
+&=15+\frac{2}{3}\times 0 \\
+&=15
 \end{align*}
 
 Olga gets higher discounted utility from exercising, so chooses to exercise.
@@ -35,14 +33,12 @@ b\) Paul discounts the future quasi-hyperbolically with $\beta=3/4$ and $\delta=
 
 \begin{align*}
 U_0(exercise)&=u(x_0)+\beta\delta u(x_1) \\
-&=0+\frac{3}{4}\times \frac{2}{3}\times 12 \\
-&=6
-\end{align*}
-
-\begin{align*}
+&=0+\frac{3}{4}\times \frac{2}{3}\times 30 \\
+&=15 \\
+\\
 U_0(television)&=u(x_0)+\beta\delta u(x_1) \\
 &=6+\frac{3}{4}\times \frac{2}{3}\times 0 \\
-&=6
+&=15
 \end{align*}
 
 Paul is indifferent between the two options, so could choose either.

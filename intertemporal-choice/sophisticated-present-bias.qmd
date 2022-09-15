@@ -1,28 +1,32 @@
 # Sophisticated present bias
 
+In our analysis of present bias, I have made an implicit assumption that the agent is unaware that their present-bias will lead them to make inconsistent decisions over time. This present-biased agent decides that they will wait for a larger, later pay-off despite the possibility that they will change their mind when a smaller pay-off becomes immediately available. The larger pay-off is never truly available to them.
+
+For many of us, this does not match our experience. We know that we often cave when faced with immediate temptation. And more than that, because of our self-awareness we often plan around it. We hide the jar of cookies or do not keep them in the house. We place our money in savings account with no special features beyond an inability to access the money.
+
+To bring this idea into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated present-biased agents.
+
 ## Naïve and sophisticated present-biased agents
 
 A naive present-biased agent discounts all future periods but incorrectly believes that they do not have this problem in the future.
 
-A sophisticated present-biased agent discounts all future periods and correctly believes that they will have this problem also in the future. They understand that if faced with the temptation to take benefits today or delay costs, they will do so.
+A sophisticated present-biased agent discounts all future periods and correctly believes that they will also have this problem in the future. They understand that if faced with the temptation to take benefits today or delay costs, they will do so.
 
 A sophisticated and naive person can make different decisions despite having the same level of impatience, $\delta$, and the same level of present bias, $\beta$.
 
-The naive agent makes its plans by forward reasoning, starting from today.
+The naive agent makes its plans by forward reasoning, starting from today ($t=0$).
 
-1. Solve for the optimal action given the possible futures, believing they will stick to the plan once they move to next period.
+1. First they decide their preferred option, believing they will stick to the plan once they move to next period.
 
-2. Move to next time period ($t+1$)
+2. When they move to next time period ($t+1$) they recompute their optimal plan, again believing they will stick to the plan once they move to next period.
 
-3. Recompute their optimal plan, believing they will stick to the plan once they move to next period.
+3. They repeat this process as they move through time.
 
-4. Iterate
+The sophisticated agent makes its plans by backward reasoning, starting from the final time period ($t=T$).
 
-The sophisticated agent makes its plans by backward reasoning, starting from the final time period.
+1. For that final time period, they solve for the optimal action
 
-1. Solve for the optimal action
-
-2. Go back one time period and solve for preferred action, accounting for the decision in (1)
+2. Go back one time period ($t=T-1$) and solve for preferred action, accounting for the decision in (1)
 
 3. Iterate
 
@@ -55,7 +59,6 @@ U_1(1,\$100)&=100 \\
 \\
 U_1(2,\$100)&=99.275
 \end{align*}
-
 
 Today they hold an incorrect belief as to what their preference will be next week .
 

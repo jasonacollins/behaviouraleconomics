@@ -75,7 +75,7 @@ ul.task-list{list-style: none;}
 
 <link rel="stylesheet" href="../styles.css">
 <meta name="twitter:title" content="Course notes on behavioural economics - 26&nbsp; Sophisticated present bias">
-<meta name="twitter:description" content="A naive present-biased agent discounts all future periods but incorrectly believes that they do not have this problem in the future.">
+<meta name="twitter:description" content="In our analysis of present bias, I have made an implicit assumption that the agent is unaware that their present-bias will lead them to make inconsistent decisions over time.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -332,6 +332,36 @@ ul.task-list{list-style: none;}
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../probability-judgment/probability-judgment.html" class="sidebar-item-text sidebar-link">Probability judgment</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/probability-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability foundations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/heuristics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Heuristics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
@@ -375,22 +405,24 @@ ul.task-list{list-style: none;}
 
 </header>
 
+<p>In our analysis of present bias, I have made an implicit assumption that the agent is unaware that their present-bias will lead them to make inconsistent decisions over time. This present-biased agent decides that they will wait for a larger, later pay-off despite the possibility that they will change their mind when a smaller pay-off becomes immediately available. The larger pay-off is never truly available to them.</p>
+<p>For many of us, this does not match our experience. We know that we often cave when faced with immediate temptation. And more than that, because of our self-awareness we often plan around it. We hide the jar of cookies or do not keep them in the house. We place our money in savings account with no special features beyond an inability to access the money.</p>
+<p>To bring this idea into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated present-biased agents.</p>
 <section id="naïve-and-sophisticated-present-biased-agents" class="level2" data-number="26.1">
 <h2 data-number="26.1" class="anchored" data-anchor-id="naïve-and-sophisticated-present-biased-agents"><span class="header-section-number">26.1</span> Naïve and sophisticated present-biased agents</h2>
 <p>A naive present-biased agent discounts all future periods but incorrectly believes that they do not have this problem in the future.</p>
-<p>A sophisticated present-biased agent discounts all future periods and correctly believes that they will have this problem also in the future. They understand that if faced with the temptation to take benefits today or delay costs, they will do so.</p>
+<p>A sophisticated present-biased agent discounts all future periods and correctly believes that they will also have this problem in the future. They understand that if faced with the temptation to take benefits today or delay costs, they will do so.</p>
 <p>A sophisticated and naive person can make different decisions despite having the same level of impatience, <span class="math inline">\delta</span>, and the same level of present bias, <span class="math inline">\beta</span>.</p>
-<p>The naive agent makes its plans by forward reasoning, starting from today.</p>
+<p>The naive agent makes its plans by forward reasoning, starting from today (<span class="math inline">t=0</span>).</p>
 <ol type="1">
-<li><p>Solve for the optimal action given the possible futures, believing they will stick to the plan once they move to next period.</p></li>
-<li><p>Move to next time period (<span class="math inline">t+1</span>)</p></li>
-<li><p>Recompute their optimal plan, believing they will stick to the plan once they move to next period.</p></li>
-<li><p>Iterate</p></li>
+<li><p>First they decide their preferred option, believing they will stick to the plan once they move to next period.</p></li>
+<li><p>When they move to next time period (<span class="math inline">t+1</span>) they recompute their optimal plan, again believing they will stick to the plan once they move to next period.</p></li>
+<li><p>They repeat this process as they move through time.</p></li>
 </ol>
-<p>The sophisticated agent makes its plans by backward reasoning, starting from the final time period.</p>
+<p>The sophisticated agent makes its plans by backward reasoning, starting from the final time period (<span class="math inline">t=T</span>).</p>
 <ol type="1">
-<li><p>Solve for the optimal action</p></li>
-<li><p>Go back one time period and solve for preferred action, accounting for the decision in (1)</p></li>
+<li><p>For that final time period, they solve for the optimal action</p></li>
+<li><p>Go back one time period (<span class="math inline">t=T-1</span>) and solve for preferred action, accounting for the decision in (1)</p></li>
 <li><p>Iterate</p></li>
 </ol>
 </section>

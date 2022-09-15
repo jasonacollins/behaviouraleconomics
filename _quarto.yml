@@ -5,7 +5,7 @@ book:
   title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "8 September 2022"
+  date: "14 September 2022"
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -47,9 +47,12 @@ book:
       - intertemporal-choice/preference-over-profiles.qmd
       - intertemporal-choice/intertemporal-choice-applications.qmd
       - intertemporal-choice/intertemporal-choice-exercises.qmd
-#    - part: probability-judgment/probability-judgment.qmd
-#      chapters: 
-#      - probability-judgment/probability-foundations.qmd
+    - part: probability-judgment/probability-judgment.qmd
+      chapters: 
+      - probability-judgment/probability-foundations.qmd
+      - probability-judgment/heuristics.qmd
+      - probability-judgment/biases-in-probability-judgment.qmd
+      - probability-judgment/heuristics-and-the-bias-variance-trade-off.qmd
     - references.qmd
   navbar:
     background: primary
