@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Course notes on behavioural economics - 36&nbsp; Probability judgment exercises</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../game-theory/game-theory.html" rel="next">
+<link href="../probability-judgment/overconfidence.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<link rel="stylesheet" href="../styles.css">
+<meta name="twitter:title" content="Course notes on behavioural economics - 36&nbsp; Probability judgment exercises">
+<meta name="twitter:description" content="You want to know if a fund manager is skilled as you believe skilled management can lead to outperformance. The following is known:">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Course notes on behavioural economics</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf">PDF version</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/">Blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jasonacollins"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../what-is-behavioural-economics.html" class="sidebar-item-text sidebar-link">What is behavioural economics?</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">Economic foundations</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/utility-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html" class="sidebar-item-text sidebar-link">Decision making under risk and uncertainty</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-value.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Expected value</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/axioms-for-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-utility-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Expected utility examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/anomalies-of-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Anomalies of expected utility theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/risk-and-uncertainty-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Risk and uncertainty exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../prospect-theory/prospect-theory.html" class="sidebar-item-text sidebar-link">Prospect theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reference-dependence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reference dependence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/loss-aversion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Loss aversion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reflection-effect.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The reflection effect</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/value-function.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The value function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/probability-weighting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Probability weighting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-implementation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prospect theory exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../intertemporal-choice/intertemporal-choice.html" class="sidebar-item-text sidebar-link">Intertemporal choice</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exponential discounting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Exponential discounting examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-anomalies.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Exponential discounting anomalies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Present bias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Present bias examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/sophisticated-present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Sophisticated present bias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/commitment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Commitment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Preference over profiles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Intertemporal choice exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../probability-judgment/probability-judgment.html" class="sidebar-item-text sidebar-link">Probability judgment</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/probability-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability foundations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/heuristics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Heuristics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/overconfidence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/probability-judgment-exercises.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../game-theory/game-theory.html" class="sidebar-item-text sidebar-link">Game theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1"><span class="toc-section-number">36.1</span>  Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2"><span class="toc-section-number">36.2</span>  Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3"><span class="toc-section-number">36.3</span>  Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4"><span class="toc-section-number">36.4</span>  Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5"><span class="toc-section-number">36.5</span>  Question 5</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6"><span class="toc-section-number">36.6</span>  Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7"><span class="toc-section-number">36.7</span>  Question 7</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8"><span class="toc-section-number">36.8</span>  Question 8</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9"><span class="toc-section-number">36.9</span>  Question 9</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="question-1" class="level2" data-number="36.1">
+<h2 data-number="36.1" class="anchored" data-anchor-id="question-1"><span class="header-section-number">36.1</span> Question 1</h2>
+<p>You want to know if a fund manager is skilled as you believe skilled management can lead to outperformance. The following is known:</p>
+<ul>
+<li><p>20% of fund managers are skilled.</p></li>
+<li><p>If a fund manager is skilled, the probability that they outperform the market is 80%.</p></li>
+<li><p>If a fund manager is unskilled, the probability that they outperform the market is 40%.</p></li>
+</ul>
+<p>You observe an outperforming fund manager. What is the probability that the fund manager is skilled?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 1 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We calculate the solution using Bayes’ rule.</p>
+<span class="math display">\begin{align*}
+P(\text{skilled}|\text{outperform})&amp;=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
+&amp;=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{\begin{aligned}P(&amp;\text{outperform}|\text{skilled})P(\text{skilled})\\&amp;+P(\text{outperform}|\text{unskilled})P(\text{unskilled})\end{aligned}} \\[6pt]
+&amp;=\frac{0.8\times 0.2}{0.8\times 0.2+0.4\times 0.8} \\[6pt]
+&amp;=0.333
+\end{align*}</span>
+<p>A fund manager who outperforms is skilled with 33% probability. You cannot neglect that low base rate of skilled managers.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-2" class="level2" data-number="36.2">
+<h2 data-number="36.2" class="anchored" data-anchor-id="question-2"><span class="header-section-number">36.2</span> Question 2</h2>
+<p>Every month 100 million people fly on commercial airlines. Imagine 10 of them are terrorists.</p>
+<p>Airport security are able to correctly identify that a person is a terrorist in 99% of cases and a non-terrorist in 99.9% of cases.</p>
+<p>a) A person is identified by airport security as a terrorist. Using Bayes’ rule, what is the probability that they are a terrorist?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 2a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We can use Bayes’ Theorem to calculate the conditional probability:</p>
+<p><span class="math display">
+\begin{aligned}
+P(\text{terrorist | identified}) &amp;= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
+&amp;= \dfrac{0.99*0.0000001}{0.99*0.0000001+0.001*0.999999} \\[12 pt]
+&amp;= 0.000099
+\end{aligned}
+</span></p>
+<p>Or approximately 1 in 10,000.</p>
+</div>
+</div>
+</div>
+<p>b) State and solve the question in part a) in terms of natural frequencies.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 2b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Number of passengers: 100,000,000</p>
+<p>Number of terrorists: 10</p>
+<p>Number of terrorists identified as terrorists: 10*0.999 <span class="math inline">\approx</span> 10</p>
+<p>Number of non-terrorists identified as terrorists: 0.001*100,000,000=100,000</p>
+<p>Proportion of people identified as terrorists who are terrorists = 10/(10+100000) <span class="math inline">\approx</span> 1 in 10000</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-3" class="level2" data-number="36.3">
+<h2 data-number="36.3" class="anchored" data-anchor-id="question-3"><span class="header-section-number">36.3</span> Question 3</h2>
+<p>These two related questions come from magazine columnist Marilyn vos Savant.</p>
+<p>a) A shopkeeper says she has two new baby beagles to show you, but she doesn’t know whether they’re male, female, or a pair. You tell her that you want only a male, and she telephones the fellow who’s giving them a bath. “Is at least one a male?” she asks him. “Yes!” she informs you with a smile. What is the probability that the other one is a male?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The prior probabilities are:</p>
+<span class="math display">\begin{align*}
+P(MM)&amp;=0.25 \\
+P(MF)&amp;=P(FM)=0.25 \\
+P(FF)&amp;=0.25
+\end{align*}</span>
+<p>Using Bayes’ rule:</p>
+<span class="math display">\begin{align*}
+P(MM|M)&amp;=\frac{P(M|MM)P(MM)}{P(M)} \\[6pt]
+&amp;=\frac{P(M|MM)P(MM)}{\begin{aligned}P(&amp;M|MM)P(MM)+P(M|MF)P(MF)\\&amp;+P(M|FM)P(FM)+P(M|FF)P(FF)\end{aligned}} \\[6pt]
+&amp;=\frac{1\times\frac{1}{4}}{1\times\frac{1}{4}+1\times\frac{1}{4}+1\times\frac{1}{4}+0\times\frac{1}{4}} \\[6pt]
+&amp;=\frac{\frac{1}{4}}{\frac{3}{4}} \\[6pt]
+&amp;=\frac{1}{3}
+\end{align*}</span>
+</div>
+</div>
+</div>
+<p>b) Say that a woman and a man (who are unrelated) each have two children. We know that at least one of the woman’s children is a boy and that the man’s oldest child is a boy. Can you explain why the chances that the woman has two boys do not equal the chances that the man has two boys?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 3b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For the woman, the prior probabilities before learning she has a boy are:</p>
+<span class="math display">\begin{align*}
+P(BB)&amp;=0.25 \\[6pt]
+P(BG)&amp;=P(GB)=0.25 \\[6pt]
+P(GG)&amp;=0.25
+\end{align*}</span>
+<p>Using Bayes’ rule:</p>
+<span class="math display">\begin{align*}
+P(BB|B)&amp;=\frac{P(B|BB)P(BB)}{P(B)} \\[12pt]
+&amp;=\frac{P(B|BB)P(BB)}{\begin{aligned}P(&amp;B|BB)P(BB)+P(B|BG)P(BG)\\&amp;+P(B|GB)P(GB)+P(B|GG)P(GG)\end{aligned}} \\[12pt]
+&amp;=\frac{1\times\frac{1}{4}}{1\times\frac{1}{4}+1\times\frac{1}{4}+1\times\frac{1}{4}+0\times\frac{1}{4}} \\[12pt]
+&amp;=\frac{\frac{1}{4}}{\frac{3}{4}} \\[12pt]
+&amp;=\frac{1}{3}
+\end{align*}</span>
+<p>For the man, the prior probabilities before learning his eldest is a boy are:</p>
+<span class="math display">\begin{align*}
+P(BB)&amp;=0.25 \\[6pt]
+P(BG)&amp;=0.25 \\[6pt]
+P(GB)&amp;=0.25 \\[6pt]
+P(GG)&amp;=0.25
+\end{align*}</span>
+<p>Using Bayes’ rule:</p>
+<span class="math display">\begin{align*}
+P(BB|B)&amp;=\frac{P(B|BB)P(BB)}{P(B)} \\[12pt]
+&amp;=\frac{P(B|BB)P(BB)}{\begin{aligned}P(&amp;B|BB)P(BB)+P(B|BG)P(BG)\\&amp;+P(B|GB)P(GB)+P(B|GG)P(GG)\end{aligned}} \\[12pt]
+&amp;=\frac{1\times\frac{1}{4}}{1\times\frac{1}{4}+1\times\frac{1}{4}+0\times\frac{1}{4}+0\times\frac{1}{4}} \\[12pt]
+&amp;=\frac{\frac{1}{4}}{\frac{2}{4}} \\[12pt]
+&amp;=\frac{1}{2}
+\end{align*}</span>
+<p>Note: questions such are these are typically sensitive to unstated assumptions, particularly around the procedure used to elicit the information around the sex of the child. Due to this, part a) is probably less vulnerable to alternative assumptions than b) as it contains information about the elicitation procedure in the question.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-4" class="level2" data-number="36.4">
+<h2 data-number="36.4" class="anchored" data-anchor-id="question-4"><span class="header-section-number">36.4</span> Question 4</h2>
+<p>You have taken a flight with Qantas and are worried that your luggage will not be on the flight. You know that 20% of bags have not been arriving with the passenger.</p>
+<p>The following table of conditional probabilities (from Pearl &amp; Mackenzie (2018)) gives the probability that your bag will be on the luggage carousel conditional on the bag being on the flight and how long you have been waiting at the carousel.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Bag on plane</th>
+<th style="text-align: center;">Time elapsed</th>
+<th style="text-align: center;">Carousel=true</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>False</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td>False</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td>False</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td>False</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td>False</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td>False</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td>True</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="odd">
+<td>True</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr class="odd">
+<td>True</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">60</td>
+</tr>
+<tr class="odd">
+<td>True</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">70</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">80</td>
+</tr>
+<tr class="odd">
+<td>True</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">90</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">100</td>
+</tr>
+</tbody>
+</table>
+<p>a) You have been waiting 5 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 4a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+P(\text{false}|\text{not arrived after 5})&amp;=\frac{P(\text{not arrived after 5}|\text{false})P(\text{false})}{P(\text{not arrived after 5})} \\[12pt]
+&amp;=\frac{P(\text{not arrived after 5}|\text{false})P(\text{false})}{\begin{aligned}P(&amp;\text{not arrived after 5}|\text{false})P(\text{false})\\&amp;+P(\text{not arrived after 5}|\text{true})P(\text{true})\end{aligned}} \\[12pt]
+&amp;=\frac{1\times 0.2}{1\times 0.2+0.5\times 0.8} \\[12pt]
+&amp;=0.333
+\end{align*}</span></p>
+<p>The probability that the bag was not on the flight is 33%.</p>
+</div>
+</div>
+</div>
+<p>b) You have been waiting 9 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 4b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+P(\text{false}|\text{not arrived after 9})&amp;=\frac{P(\text{not arrived after 9}|\text{false})P(\text{false})}{P(\text{not arrived after 9})} \\[12pt]
+&amp;=\frac{P(\text{not arrived after 9}|\text{false})P(\text{false})}{\begin{aligned}P(&amp;\text{not arrived after 9}|\text{false})P(\text{false})\\&amp;+P(\text{not arrived after 9}|\text{true})P(\text{true})\end{aligned}} \\[12pt]
+&amp;=\frac{1\times 0.2}{1\times 0.2+0.1\times 0.8} \\[12pt]
+&amp;=0.714
+\end{align*}</span></p>
+<p>The probability that the bag was not on the flight is 71%.</p>
+</div>
+</div>
+</div>
+<p>c) You have been waiting 10 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 4c) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\begin{align*}
+P(\text{false}|\text{not arrived after 10})&amp;=\frac{P(\text{not arrived after 10}|\text{false})P(\text{false})}{P(\text{not arrived after 10})} \\[12pt]
+&amp;=\frac{P(\text{not arrived after 10}|\text{false})P(\text{false})}{\begin{aligned}P(&amp;\text{not arrived after 10}|\text{false})P(\text{false})\\&amp;+P(\text{not arrived after 10}|\text{true})P(\text{true})\end{aligned}} \\[12pt]
+&amp;=\frac{1\times 0.2}{1\times 0.2+0\times 0.8} \\[12pt]
+&amp;=1
+\end{align*}</span></p>
+<p>The probability that the bag was not on the flight is 100%.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-5" class="level2" data-number="36.5">
+<h2 data-number="36.5" class="anchored" data-anchor-id="question-5"><span class="header-section-number">36.5</span> Question 5</h2>
+<p>In a <a href="https://en.wikipedia.org/wiki/Sally_Clark">now famous case</a>, Sally Clark was convicted of murder after the death of her two sons. The defence argued both children had died of sudden infant death syndrome. The prosecution called statistical evidence that the chance of a SIDS death was 1 in 8543, so the chance of two children dying of SIDS was 1 in 73 million (<span class="math inline">8543\times 8543</span>).</p>
+<p>The conviction was overturned on a second appeal. For what reasons could the following simple calculation be misleading?</p>
+<p><span class="math display">\begin{align*}
+P(\text{SIDS death}\land\text{SIDS death})&amp;=P(\text{SIDS death})\times P(\text{SIDS death}) \\
+&amp;=\frac{1}{8543}\times\frac{1}{8543} \\
+&amp;=\frac{1}{7.3\times 10^{7}}
+\end{align*}</span></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 5 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Reason 1: The probability of a 2nd SIDS death given first SIDS death is not independent. e.g.&nbsp;SIDS deaths are related due to genetics, family environment. That is, the relevant probability is:</p>
+<p><span class="math display">
+P(\text{SIDS death}|\text{genetics, family environment, etc})
+</span></p>
+<p>This would mean that:</p>
+<p><span class="math display">
+P(\text{2 SIDS deaths in same family})&gt;(P(\text{1 SIDS death}))^2
+</span></p>
+<p>The appropriate calculation is:</p>
+<p><span class="math display">
+P(\text{SIDS death}\land\text{SIDS death})=P(1^{st}\text{ SIDS death})\times P(2^{nd}\text{ SIDS death}|1^{st}\text{ SIDS death})
+</span></p>
+<p>Reason 2: We also need to consider the probability of alternative possibility - i.e.&nbsp;murder. We want calculate:</p>
+<p><span class="math display">
+P(\text{murder}|{2\text{ deaths}})=\frac{P(2\text{ deaths}|\text{murder})P(\text{murder})}{P(2\text{ deaths})}
+</span></p>
+<p>If murder itself is also unlikely, then it is not correct to simply attribute the alternative to SIDS the residual probability.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-6" class="level2" data-number="36.6">
+<h2 data-number="36.6" class="anchored" data-anchor-id="question-6"><span class="header-section-number">36.6</span> Question 6</h2>
+<p>Consider question 1 above.</p>
+<p>A person calculates the probability that the fund manager is skilled by putting the same probability on all possible hypotheses (a uniform prior). What do they believe is the probability that the fund manager is skilled?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 1 answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We use Bayes’ Theorem but with uniform priors.</p>
+<p><span class="math display">\begin{align*}
+P(\text{skilled}|\text{outperform})&amp;=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
+&amp;=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{\begin{aligned}P(&amp;\text{outperform}|\text{skilled})P(\text{skilled})\\&amp;+P(\text{outperform}|\text{unskilled})P(\text{unskilled})\end{aligned}} \\[6pt]
+&amp;=\frac{0.8\times 0.5}{0.8\times 0.5+0.4\times 0.5} \\[6pt]
+&amp;=0.667
+\end{align*}</span></p>
+<p>Starting with uniform priors – effectively ignoring the base rate – gives us a higher probability of 67%.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-7" class="level2" data-number="36.7">
+<h2 data-number="36.7" class="anchored" data-anchor-id="question-7"><span class="header-section-number">36.7</span> Question 7</h2>
+<p>Consider question 2 above.</p>
+<p>Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to:</p>
+<ol type="a">
+<li>confusion of conditional probabilities</li>
+</ol>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 7a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If a person confuses <span class="math inline">P(\text{terrorist | identified})</span> with <span class="math inline">P(\text{identified | terrorist})</span> they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g.&nbsp;identification of cabs problem discussed in class.</p>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>people placing the same probability on all possible hypotheses (uniform priors).</li>
+</ol>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 7b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If a person assumed uniform priors on any individual, they would calculate Bayes’ Theorem as follows:</p>
+<p><span class="math display">
+\begin{aligned}
+P(\text{terrorist | identified}) &amp;= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
+&amp;= \dfrac{0.99*0.5}{0.99*0.5+0.001*0.5} \\[12 pt]
+&amp;= 0.999
+\end{aligned}
+</span></p>
+<p>This is substantially higher than the actual probability.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-8" class="level2" data-number="36.8">
+<h2 data-number="36.8" class="anchored" data-anchor-id="question-8"><span class="header-section-number">36.8</span> Question 8</h2>
+<p>Lincoln observes performance by fund manager Neville. Neville may be a skilled, mediocre or unskilled manager:</p>
+<ul>
+<li><p>A skilled fund manager has a 75% chance of beating the market each quarter.</p></li>
+<li><p>A mediocre fund manager has a 50% chance of beating the market each quarter.</p></li>
+<li><p>An unskilled fund manager has a 25% chance of beating the market each quarter.</p></li>
+</ul>
+<p>Lincoln knows these odds.</p>
+<p>The performance of a fund manager is independent from quarter to quarter.</p>
+<p>Consider the model we used to examine behaviour involving a belief in the law of small numbers whereby the decision maker acts as though the process has the character of balls being drawn out of an urn without replacement. Lincoln develops his beliefs using this model with <span class="math inline">N = 12</span>.</p>
+<p>a) Lincoln thinks Neville is mediocre. What does Lincoln believe is the probability that Neville beats the market in the first quarter?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 8a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Lincoln thinks the realisation of Neville’s performance is like drawing from an urn with <span class="math inline">N=12</span> balls. Because he believes Neville is mediocre, he thinks half (6) of the balls are good-performance balls and half (6) are bad-performance balls. The likelihood of drawing a good ball (<span class="math inline">G</span>) the first quarter is <span class="math inline">6/12</span>.</p>
+<p><span class="math display">\begin{align*}
+\hat P(G)&amp;=\frac{G}{N} \\
+&amp;=\frac{6}{12} \\
+&amp;=0.5
+\end{align*}</span></p>
+</div>
+</div>
+</div>
+<p>b) Neville beats the market in the first quarter. What does Lincoln believe is the probability he does it again in the second quarter?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 8b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In Lincoln’s mind, the balls are not replaced once drawn. If Neville has a good first quarter, Lincoln believes that only five good balls remain. Therefore, Lincoln believes that the probability of Neville having a good second quarter is <span class="math inline">5/11</span>.</p>
+<p><span class="math display">\begin{align*}
+\hat P(GG|G)&amp;=\frac{G-1}{N-1} \\
+&amp;=\frac{5}{11}
+\end{align*}</span></p>
+</div>
+</div>
+</div>
+<p>c) Neville beats the market again. What does Lincoln believe is the probability that he will do so in the third quarter?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 8c) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>After two good quarters, Lincoln believes only four good balls remain. Therefore, the probability of Neville having another good quarter is <span class="math inline">4/10</span>.</p>
+<p><span class="math display">\begin{align*}
+\hat P(GGG|GG)&amp;=\frac{G-2}{N-2} \\
+&amp;=\frac{4}{10}
+\end{align*}</span></p>
+</div>
+</div>
+</div>
+<p>d) Lincoln observes Jill, who he believes is a skilled fund manager. What does Lincoln believe is the probability of her having 10 consecutive periods of out-performance?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 8d) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Lincoln believes that in 12 quarters Jill will have nine quarters of out-performance. As a result, he does not believe it is possible for her to have ten consecutive periods of out-performance. After nine periods, only three balls are left in the urn. None of those balls are good.</p>
+<p><span class="math display">\begin{align*}
+\hat P(GGGGGGGGGG|GGGGGGGGG)&amp;=\frac{G-9}{N-9} \\
+&amp;=\frac{0}{3} \\
+&amp;=0
+\end{align*}</span></p>
+</div>
+</div>
+</div>
+<p>e) What psychological bias does Lincoln’s behaviour reflect? Explain.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 8e) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Each time Neville has a good quarter, Lincoln thinks it is less likely that Neville will have another. This is an example of gambler’s fallacy. Lincoln thinks that Neville’s sequence of pxerformances should be the typical sequence of a mediocre fund manager, with the same number of good and bad quarters. This leads Lincoln to expect bad quarters to be more likely after a sequence of good quarters.</p>
+<p>Similarly for Jill, Lincoln expects a string of success to correct itself and her record to revert to the average for a skilled manager.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-9" class="level2" data-number="36.9">
+<h2 data-number="36.9" class="anchored" data-anchor-id="question-9"><span class="header-section-number">36.9</span> Question 9</h2>
+<p>For each of the following experiments from Tverksy and Kahneman (1974), explain what heuristic may be leading to the belief or decision.</p>
+<p>a) Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>Subjects were shown brief personality descriptions of several individuals, allegedly sampled at random from a group of 100 professionals-engineers and lawyers. The subjects were askcd to assess, for each description, the probability that it belonged to an engineer rather than to a lawyer. In one experimental condition, subjects were told that the group from which the descriptions had been drawn consisted of 70 engineers and 30 lawyers. In another condition, subjects were told that the group consisted of 30 engineers and 70 lawyers. The odds that any particular description belongs to an engineer rather than to a lawyer should be higher in the first condition, where there is a majority of engineers, than in the second condition, where there is a majority of lawyers. Specifically, it can be shown by applying Bayes’ rule that the ratio of these odds should be (<span class="math inline">.7/.3^2</span>), or 5.44, for each description. In a sharp violation of Bayes’ rule, the subjects in the two conditions produced essentially the same probability judgments.</p>
+</blockquote>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 9a) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>[S]ubjects evaluated the likelihood that a particular description belonged to an engineer rather than to a lawyer, by the degree to which this description was representative of the two stereotypes, with little or no regard for the prior probabilities of the categories.</p>
+<p>The subjects used prior probabilities correctly when they had no other information. In the absence of a personality sketch, they judged the probability that an unknown individual is an engineer to be .7 and .3, respectively, in the two base-rate conditions. However, prior probabilities were effectively ignored when a description was introduced, even when this description was totally uninformative.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<p>b) Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>Suppose one samples a word (of three letters or more) at random from an English text. Is it more likely that the word starts with r or that r is the third letter? … [M]ost people judge words that begin with a given consonant to be more numerous than words in which the same consonant appears in the third position. They do so even for consonants, such as r or k, that are more frequent in the third position than in the first.</p>
+</blockquote>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 9b) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This behaviour might be explained by availability. Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>People approach this problem by recalling words that begin with r (road) and words that have r in the third position (car) and assess the relative frequency by the ease with which words of the two types come to mind. Because it is much easier to search for words by their first letter than by their third letter, most people judge words that begin with a given consonant to be more numerous than words in which the same consonant appears in the third position.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<p>c) Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>Two groups of high school students estimated, within 5 seconds, a numerical expression that was written on the blackboard. One group estimated the product</p>
+<p><span class="math display">8\times 7\times 6\times 5\times 4\times 3\times 2\times 1</span></p>
+<p>while another group estimated the product</p>
+<p><span class="math display">1\times 2\times 3\times 4\times 5\times 6\times 7\times 8</span></p>
+<p>…</p>
+<p>The median estimate for the ascending sequence was 512, while the median estimate for the descending sequence was 2,250. The correct answer is 40,320.</p>
+</blockquote>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 9c) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This behaviour might be explained by anchoring and adjustment. Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>To rapidly answer such questions, people may perform a few steps of computation and estimate the product by extrapolation or adjustment. Because adjustments are typically insufficient, this procedure should lead to underestimation. Furthermore, because the result of the first few steps of multiplication (performed from left to right) is higher in the descending sequence than in the ascending sequence, the former expression should be judged larger than the latter.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<p>d) Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>In considering tosses of a coin for heads or tails … people regard the sequence H-T-H-T-T-H to be more likely than the sequence H-H-H-T-T-T … [or] … the sequence H-H-H-H-T-H.</p>
+</blockquote>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question 9d) answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:</p>
+<blockquote class="blockquote">
+<p>People expect that a sequence of events generated by a random process will represent the essential characteristics of that process even when the sequence is short. …</p>
+<p>[P]eople expect that the essential characteristics of the process will be represented, not only globally in the entire sequence, but also locally in each of its parts. A locally representative sequence, however, deviates systematically from chance expectation: it contains too many alternations and too few runs. Another consequence of the belief in local representativeness is the well-known gambler’s fallacy. After observing a long run of red on the roulette wheel. for example, most people erroneously believe that black is now due, presumably because the occurrence of black will result in a more representative sequence than the occurrence of an additional red.</p>
+</blockquote>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/behaviouraleconomics\.jasoncollins\.blog/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../probability-judgment/overconfidence.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../game-theory/game-theory.html" class="pagination-link">
+        <span class="nav-page-text">Game theory</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">Copyright: CC-BY</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jasonacollins">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -1,0 +1,38 @@
+# Game theory
+
+In many situations, your outcome depends on others’ behaviour. Their outcomes depends on your behaviour.
+
+Your strategy will depend on your belief about others’ strategy. Their strategy  depend on their beliefs about your strategy.
+
+Game theory studies this strategic interaction between players. We can solve strategic problems using the tools of game theory.
+
+In this book I will focus on non-cooperative games where negotiation and enforcement of a binding contract is not possible.
+
+Cooperative game theory enables players to negotiate binding contracts that allow them to implement joint strategies.
+
+## The players
+
+In game theoretical analysis, players typically:
+
+- Are rational optimisers
+
+- Understand the game they are playing 
+
+- Assume that other players are also rational optimisers who understand the game 
+
+## Components of a game
+
+A game has the following components:
+
+- Players: $i=1,2,...,n$
+
+- Actions (e.g. to contribute or defect)
+
+- Strategies comprising a complete contingent plan of action
+
+- Information available to players (we generally assume perfect information)
+
+- Rules of the game
+
+- Payoffs, comprising a complete summary of the value to each player
+

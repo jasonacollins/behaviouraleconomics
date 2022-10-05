@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -44,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./probability-judgment/heuristics-and-the-bias-variance-trade-off.html" rel="prev">
+<link href="./game-theory/simultaneous-move-one-shot-games.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,9 +91,11 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Course notes on behavioural economics</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -361,6 +368,31 @@ div.csl-indent {
   <a href="./probability-judgment/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./probability-judgment/overconfidence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./probability-judgment/probability-judgment-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./game-theory/game-theory.html" class="sidebar-item-text sidebar-link">Game theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -405,6 +437,11 @@ Ashraf, N., Karlan, D., and Yin, W. (2006). Tying odysseus to the mast:
 Evidence from a commitment savings product in the philippines*. <em>The
 Quarterly Journal of Economics</em>, <em>121</em>(2), 635–672. <a href="https://doi.org/10.1162/qjec.2006.121.2.635">https://doi.org/10.1162/qjec.2006.121.2.635</a>
 </div>
+<div id="ref-barber2001" class="csl-entry" role="doc-biblioentry">
+Barber, B. M., and Odean, T. (2001). Boys will be boys: Gender,
+overconfidence, and common stock investment*. <em>The Quarterly Journal
+of Economics</em>, <em>116</em>(1), 261–292. <a href="https://doi.org/10.1162/003355301556400">https://doi.org/10.1162/003355301556400</a>
+</div>
 <div id="ref-barberis2006" class="csl-entry" role="doc-biblioentry">
 Barberis, N., Huang, M., and Thaler, R. H. (2006). Individual
 Preferences, Monetary Gambles, and Stock Market Participation: A Case
@@ -416,6 +453,11 @@ Bar-Eli, M., Avugos, S., and Raab, M. (2006). Twenty years of
 <span>“</span>hot hand<span>”</span> research: Review and critique.
 <em>Psychology of Sport and Exercise</em>, <em>7</em>(6), 525–553. <a href="https://doi.org/10.1016/j.psychsport.2006.03.001">https://doi.org/10.1016/j.psychsport.2006.03.001</a>
 </div>
+<div id="ref-camerer1999" class="csl-entry" role="doc-biblioentry">
+Camerer, C., and Lovallo, D. (1999). Overconfidence and Excess Entry: An
+Experimental Approach. <em>The American Economic Review</em>,
+<em>89</em>(1), 13.
+</div>
 <div id="ref-cosmides1996" class="csl-entry" role="doc-biblioentry">
 Cosmides, L., and Tooby, J. (1996). Are humans good intuitive
 statisticians after all? Rethinking some conclusions from the literature
@@ -426,6 +468,11 @@ on judgment under uncertainty. <em>Cognition</em>, <em>58</em>(1), 1–73.
 Davidson, D., McKinsey, J. C. C., and Suppes, P. (1955). Outlines of a
 Formal Theory of Value, I. <em>Philosophy of Science</em>,
 <em>22</em>(2), 140–160. <a href="https://doi.org/10.1086/287412">https://doi.org/10.1086/287412</a>
+</div>
+<div id="ref-debondt1995" class="csl-entry" role="doc-biblioentry">
+De Bondt, W. F. M., and Thaler, R. H. (1995). <em>Chapter 13 Financial
+decision-making in markets and firms: A behavioral perspective</em>
+(Vol. 9, pp. 385–410). Elsevier. <a href="https://doi.org/10.1016/S0927-0507(05)80057-X">https://doi.org/10.1016/S0927-0507(05)80057-X</a>
 </div>
 <div id="ref-farber2005" class="csl-entry" role="doc-biblioentry">
 Farber, H. S. (2005). Is tomorrow another day? The labor supply of new
@@ -532,6 +579,11 @@ Kőszegi, B., and Rabin, M. (2006). A model of reference-dependent
 preferences. <em>The Quarterly Journal of Economics</em>,
 <em>121</em>(4), 1133–1165. <a href="https://www.jstor.org/stable/25098823">https://www.jstor.org/stable/25098823</a>
 </div>
+<div id="ref-malmendier2005" class="csl-entry" role="doc-biblioentry">
+Malmendier, U., and Tate, G. (2005). CEO Overconfidence and Corporate
+Investment. <em>The Journal of Finance</em>, <em>60</em>(6), 2661–2700.
+<a href="https://doi.org/10.1111/j.1540-6261.2005.00813.x">https://doi.org/10.1111/j.1540-6261.2005.00813.x</a>
+</div>
 <div id="ref-martin2017" class="csl-entry" role="doc-biblioentry">
 Martin, V. (2017). When to quit: Narrow bracketing and reference
 dependence in taxi drivers. <em>Journal of Economic Behavior &amp;
@@ -541,6 +593,11 @@ Organization</em>, <em>144</em>, 166–187. <a href="https://doi.org/10.1016/j.j
 Miller, J. B., and Sanjurjo, A. (2018). Surprised by the Hot Hand
 Fallacy? A Truth in the Law of Small Numbers. <em>Econometrica</em>,
 <em>86</em>(6), 2019–2047. <a href="https://doi.org/10.3982/ECTA14943">https://doi.org/10.3982/ECTA14943</a>
+</div>
+<div id="ref-moore2007" class="csl-entry" role="doc-biblioentry">
+Moore, D. A., Oesch, J. M., and Zietsma, C. (2007). What Competition?
+Myopic Self-Focus in Market-Entry Decisions. <em>Organization
+Science</em>, <em>18</em>(3), 440–454. <a href="https://doi.org/10.1287/orsc.1060.0243">https://doi.org/10.1287/orsc.1060.0243</a>
 </div>
 <div id="ref-rabin2000" class="csl-entry" role="doc-biblioentry">
 Rabin, M. (2000). Risk Aversion and Expected-Utility Theory: A
@@ -681,7 +738,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
@@ -725,8 +783,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./probability-judgment/heuristics-and-the-bias-variance-trade-off.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></span>
+      <a href="./game-theory/simultaneous-move-one-shot-games.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

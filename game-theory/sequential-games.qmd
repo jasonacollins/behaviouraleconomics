@@ -1,0 +1,89 @@
+# Sequential games
+
+In sequential games, players make sequential decisions knowing the action of the other player.
+
+## The extensive form
+
+The extensive form representation explicitly shows the timing of play.
+
+Payoffs are represented in a game tree.
+
+I will now illustrate the extensive form of the game with a game called the centipede game.
+
+### The centipede game
+
+This centipede game has six stages. At each stage, a player can “take” and end the game or they can “pass”, increasing the total payoff. The other player then has a move.
+
+![](img/centipede-game-1.jpg)
+
+## Subgame perfect Nash equilibrium
+
+A subgame is a part of a game that can be played as a game itself. It begins at a single node and contains every successor node.
+
+A Nash Equilibrium is subgame perfect if every player plays the Nash Equilibrium in every subgame
+
+We can solve for the subgame perfect Nash equilibrium of sequential games by backward induction: 
+
+- solve for the decision nodes at the end of the game first
+
+- work your way to the beginning of the game.
+
+In our centipede game, using backward induction, player 2 at the final stage will take for a payoff of 6 (relative to 5 for passing).
+
+![](img/centipede-game-2.jpg)
+
+Therefore, player 1 at the stage before will take for a payoff of 5 (relative to the payoff of 4 they would receive for passing, given player 2 will then take).
+
+Therefore, player 2 at the stage before will take for a payoff of 4.
+
+And so on.
+
+![](img/centipede-game-3.jpg)
+
+There is a unique subgame perfect equilibrium: $S_1=(\text{take, take, take})$ and $S_2=(\text{take, take, take})$, where $S_1$ and $S_2$ are the set of strategies for player 1 and player 2 respectively.
+
+In the subgame perfect Nash equilibrium, player 1 takes at the first stage.
+
+## Sequential game examples
+
+### The ultimatum game
+
+The ultimatum game involves two players: the proposer and the responder.
+
+The proposer is given a fixed amount of money $m$. They then offer a portion $x$ of the sum $m$ to the responder.
+
+The responder can either accept of reject the offer. They make this decision knowing $m$ and $x$.
+
+If the responder accepts, the responder receives $x$ and the proposer gets $m-x$. If the responder rejects, both players receive nothing.
+
+Below is the extensive form of the ultimatum game with $m=\$10$ and an assumption that the offer must be a whole dollar amount.
+
+![](img/ultimatum-game-1.jpg)
+
+If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is there the offer is $0$.
+
+Given this, the proposer will offer $\$1$ only.
+
+![](img/ultimatum-game-2.jpg)
+
+More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If $u(x)=x$:
+
+- The responder accepts any $x>0$.
+
+- The proposer offers $x=\epsilon$, where $\epsilon$ is the smallest non-zero amount the proposer can offer.
+
+![](img/ultimatum-game-3.jpg)
+
+The equilibrium is therefore that the proposer offers the minimum possible amount and the responder accepts it.
+
+### The dictator game
+
+The dictator game is even simpler that the ultimatum game.
+
+The dictator allocates some resources between themselves and receivers. Exchange is unilateral. Receivers have an empty strategy set.
+
+The standard game theory prediction is no interaction whatsoever. Therefore, any result different from 0 is reflective of social preferences.
+
+In experiments dictators tend to give a positive sum of money.
+
+

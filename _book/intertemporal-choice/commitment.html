@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -85,9 +90,11 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Course notes on behavioural economics</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -360,6 +367,31 @@ ul.task-list{list-style: none;}
   <a href="../probability-judgment/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/overconfidence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/probability-judgment-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../game-theory/game-theory.html" class="sidebar-item-text sidebar-link">Game theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -372,18 +404,18 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition"> <span class="header-section-number">27.1</span> Definition</a></li>
-  <li><a href="#commitment-examples" id="toc-commitment-examples" class="nav-link" data-scroll-target="#commitment-examples"> <span class="header-section-number">27.2</span> Commitment examples</a>
+  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition"><span class="toc-section-number">27.1</span>  Definition</a></li>
+  <li><a href="#commitment-examples" id="toc-commitment-examples" class="nav-link" data-scroll-target="#commitment-examples"><span class="toc-section-number">27.2</span>  Commitment examples</a>
   <ul class="collapse">
-  <li><a href="#forcing-the-optimal-course-of-action" id="toc-forcing-the-optimal-course-of-action" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action"> <span class="header-section-number">27.2.1</span> Forcing the optimal course of action</a></li>
-  <li><a href="#forcing-the-optimal-course-of-action-odysseus" id="toc-forcing-the-optimal-course-of-action-odysseus" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action-odysseus"> <span class="header-section-number">27.2.2</span> Forcing the optimal course of action: Odysseus</a></li>
-  <li><a href="#forcing-the-optimal-course-of-action-lay-by" id="toc-forcing-the-optimal-course-of-action-lay-by" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action-lay-by"> <span class="header-section-number">27.2.3</span> Forcing the optimal course of action: lay-by</a></li>
-  <li><a href="#depressing-the-value-of-the-bad-course-of-action" id="toc-depressing-the-value-of-the-bad-course-of-action" class="nav-link" data-scroll-target="#depressing-the-value-of-the-bad-course-of-action"> <span class="header-section-number">27.2.4</span> Depressing the value of the bad course of action</a></li>
-  <li><a href="#increasing-the-value-of-the-optimal-action-temptation-bundling" id="toc-increasing-the-value-of-the-optimal-action-temptation-bundling" class="nav-link" data-scroll-target="#increasing-the-value-of-the-optimal-action-temptation-bundling"> <span class="header-section-number">27.2.5</span> Increasing the value of the optimal action: temptation bundling</a></li>
+  <li><a href="#forcing-the-optimal-course-of-action" id="toc-forcing-the-optimal-course-of-action" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action"><span class="toc-section-number">27.2.1</span>  Forcing the optimal course of action</a></li>
+  <li><a href="#forcing-the-optimal-course-of-action-odysseus" id="toc-forcing-the-optimal-course-of-action-odysseus" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action-odysseus"><span class="toc-section-number">27.2.2</span>  Forcing the optimal course of action: Odysseus</a></li>
+  <li><a href="#forcing-the-optimal-course-of-action-lay-by" id="toc-forcing-the-optimal-course-of-action-lay-by" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action-lay-by"><span class="toc-section-number">27.2.3</span>  Forcing the optimal course of action: lay-by</a></li>
+  <li><a href="#depressing-the-value-of-the-bad-course-of-action" id="toc-depressing-the-value-of-the-bad-course-of-action" class="nav-link" data-scroll-target="#depressing-the-value-of-the-bad-course-of-action"><span class="toc-section-number">27.2.4</span>  Depressing the value of the bad course of action</a></li>
+  <li><a href="#increasing-the-value-of-the-optimal-action-temptation-bundling" id="toc-increasing-the-value-of-the-optimal-action-temptation-bundling" class="nav-link" data-scroll-target="#increasing-the-value-of-the-optimal-action-temptation-bundling"><span class="toc-section-number">27.2.5</span>  Increasing the value of the optimal action: temptation bundling</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -820,7 +852,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

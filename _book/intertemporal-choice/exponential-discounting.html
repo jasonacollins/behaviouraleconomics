@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -85,9 +90,11 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Course notes on behavioural economics</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -360,6 +367,31 @@ ul.task-list{list-style: none;}
   <a href="../probability-judgment/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/overconfidence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-judgment/probability-judgment-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../game-theory/game-theory.html" class="sidebar-item-text sidebar-link">Game theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -372,18 +404,18 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exponential-discounted-utility-model-assumptions" id="toc-exponential-discounted-utility-model-assumptions" class="nav-link active" data-scroll-target="#exponential-discounted-utility-model-assumptions"> <span class="header-section-number">21.1</span> Exponential discounted utility model assumptions</a>
+  <li><a href="#exponential-discounted-utility-model-assumptions" id="toc-exponential-discounted-utility-model-assumptions" class="nav-link active" data-scroll-target="#exponential-discounted-utility-model-assumptions"><span class="toc-section-number">21.1</span>  Exponential discounted utility model assumptions</a>
   <ul class="collapse">
-  <li><a href="#time-consistency" id="toc-time-consistency" class="nav-link" data-scroll-target="#time-consistency"> <span class="header-section-number">21.1.1</span> Time-consistency</a></li>
-  <li><a href="#consumption-independence" id="toc-consumption-independence" class="nav-link" data-scroll-target="#consumption-independence"> <span class="header-section-number">21.1.2</span> Consumption independence</a></li>
-  <li><a href="#stationary-preferences" id="toc-stationary-preferences" class="nav-link" data-scroll-target="#stationary-preferences"> <span class="header-section-number">21.1.3</span> Stationary preferences</a></li>
-  <li><a href="#utility-independence" id="toc-utility-independence" class="nav-link" data-scroll-target="#utility-independence"> <span class="header-section-number">21.1.4</span> Utility independence</a></li>
+  <li><a href="#time-consistency" id="toc-time-consistency" class="nav-link" data-scroll-target="#time-consistency"><span class="toc-section-number">21.1.1</span>  Time-consistency</a></li>
+  <li><a href="#consumption-independence" id="toc-consumption-independence" class="nav-link" data-scroll-target="#consumption-independence"><span class="toc-section-number">21.1.2</span>  Consumption independence</a></li>
+  <li><a href="#stationary-preferences" id="toc-stationary-preferences" class="nav-link" data-scroll-target="#stationary-preferences"><span class="toc-section-number">21.1.3</span>  Stationary preferences</a></li>
+  <li><a href="#utility-independence" id="toc-utility-independence" class="nav-link" data-scroll-target="#utility-independence"><span class="toc-section-number">21.1.4</span>  Utility independence</a></li>
   </ul></li>
-  <li><a href="#visualising-exponential-discounting" id="toc-visualising-exponential-discounting" class="nav-link" data-scroll-target="#visualising-exponential-discounting"> <span class="header-section-number">21.2</span> Visualising exponential discounting</a></li>
+  <li><a href="#visualising-exponential-discounting" id="toc-visualising-exponential-discounting" class="nav-link" data-scroll-target="#visualising-exponential-discounting"><span class="toc-section-number">21.2</span>  Visualising exponential discounting</a></li>
   </ul>
 </nav>
     </div>
@@ -449,7 +481,7 @@ U_0&amp;=u(x_0)+\delta u(x_1)+\delta^2u(x_2)+\delta^3u(x_3)+...+\delta^Tu(x_T) \
 <p><a href="exponential-discounting-examples.html#fig-exponential">Figure&nbsp;<span>22.4</span></a> plots the size of the discount as a function of <span class="math inline">t</span> for an exponential discounter with <span class="math inline">\delta=0.9</span> and <span class="math inline">\delta=0.75</span>.</p>
 <div id="fig-exponential" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Figure 21.1: Exponential discount curves</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;21.1: Exponential discount curves</figcaption><p></p>
 <p><img src="img/exponential-discounting.jpg" class="img-fluid figure-img"></p>
 </figure>
 </div>
@@ -527,7 +559,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
