@@ -74,16 +74,58 @@ More generally, game theory makes a clear prediction on the outcome of the ultim
 
 ![](img/ultimatum-game-3.jpg)
 
-The equilibrium is therefore that the proposer offers the minimum possible amount and the responder accepts it.
+The other (weak) subgame perfect Nash equilibrium is an offer of \$0 and acceptance.
+
+Where the strategy space is continuous (i.e $\epsilon$ could always be made smaller) the only subgame perfect Nash equilibrium is for the proposer to offer \$0 and the receiver to accept.
 
 ### The dictator game
 
-The dictator game is even simpler that the ultimatum game.
+In the dictator game, the dictator is given a fixed amount of money 𝑚. They then offer a portion 𝑥 of the sum 𝑚 to the receiver. The game then ends.
 
-The dictator allocates some resources between themselves and receivers. Exchange is unilateral. Receivers have an empty strategy set.
+Exchange is unilateral. Receivers have an empty strategy set.
 
-The standard game theory prediction is no interaction whatsoever. Therefore, any result different from 0 is reflective of social preferences.
+![](img/dictator-game-1.jpg)
 
-In experiments dictators tend to give a positive sum of money.
+The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves.
 
+![](img/dictator-game-2.jpg)
 
+### The trust game
+
+The trust game involves two players: a sender and a receiver
+
+Both the sender and receiver are given an initial sum $m$.
+
+The sender sends a share $x$ of their $m$ to the receiver (the investment).
+
+Before the investment is received by the receiver, it is multiplied by some factor $k$.
+
+The receiver receives $kx$.
+
+The receiver then returns to the sender some share $y$ of their total allocation $m+kx$.
+
+The final outcome is ($m-x+y$, $m+kx-y$).
+
+Here is a numerical example.
+
+Suppose the sender and receiver are given an initial sum of $10.
+
+The sender decides to send \$5 of their \$10 to the receiver (the investment).
+
+This is multiplied by a factor of 3. Therefore, the receiver receives \$15 and now has \$25.
+
+The receiver then returns to the sender \$7.50 of their \$25.
+
+The final outcome is (\$10−5+7.50,  \$10+15−7.50)=(\$12.50, \$17.50).
+
+The extensive form of the game is as follows.
+
+![](img/trust-game-1.jpg)
+
+If both receivers have utility function $u(x)=x$ the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.
+
+One way to think about this problem is that the receiver is effectively playing a dictator game.
+
+![](img/trust-game-2.jpg)
+
+Relative to the Pareto optimal outcome whereby the sender's full endowment is tripled and they receive a positive return on their investment, both players are worse off under the equilibrium outcome.

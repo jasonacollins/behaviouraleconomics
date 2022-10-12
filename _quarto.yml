@@ -5,7 +5,7 @@ book:
   title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "5 October 2022"
+  date: "12 October 2022"
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -58,7 +58,20 @@ book:
     - part: game-theory/game-theory.qmd
       chapters:
       - game-theory/simultaneous-move-one-shot-games.qmd
-#      - game-theory/sequential-games.qmd
+      - game-theory/sequential-games.qmd
+      - game-theory/asymmetric-information.qmd
+      - game-theory/strategic-moves-and-commitment.qmd
+      - game-theory/game-theory-exercises.qmd
+    - part: behavioural-game-theory/behavioural-game-theory.qmd
+      chapters:
+      - behavioural-game-theory/level-k-thinking.qmd
+      - behavioural-game-theory/asymmetric-information.qmd
+      - behavioural-game-theory/emotions.qmd
+      - behavioural-game-theory/behavioural-game-theory-exercises.qmd
+#    - part: social-preferences/social-preferences.qmd
+#      chapters:
+#      - social-preferences/distributional-preferences.qmd
+#      - social-preferences/social-preferences-examples.qmd
     - references.qmd
   navbar:
     background: primary
@@ -88,9 +101,10 @@ csl: apa-no-ampersand.csl
 
 format:
   html:
-    theme: cosmo
+    theme: spacelab
     fontcolor: black
     fontsize: 20px
+    linkcolor: blue
     css: styles.css
     html-math-method: katex
     link-external-newwindow: true

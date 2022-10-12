@@ -1,0 +1,120 @@
+# Level-k thinking
+
+The idea behind level-k thinking is that a player forms an expectation of what others will do and tries to be "one step ahead".
+
+A level-k player best-responds to level-(k-1) players.
+
+Level-0 players do not engage in strategic thinking. This is usually modelled as randomisation across all strategies. For example, in the beauty contest this implies the selection of a number between 0 and 100 with equal probability.
+
+Level-1 players assume other players are level-0 and act optimally conditional on this assumption.
+
+Level-2 players assume other players are level-1 and act optimally conditional on this assumption.
+
+## Beauty contest with level-k thinking.
+
+Returning to the beauty contest, suppose $p=2/3$.
+
+Level-0: Players randomly select a number in the interval \[0, ..., 100\].
+
+Level-1: If level-0 players select across the interval \[0, ..., 100\], the best response is:
+
+$$
+y_1=\frac{2}{3}\bar y=\frac{2}{3}\times 50=33.3
+$$
+
+Level-2: Assume all other players are level-1 and select 33.3, so the best response is:
+
+$$
+y_2=\frac{2}{3}\bar y=2/3\times 33.3=22.2
+$$
+
+Level-3: Assume all other players are level-2 and select 22.2, so the best response is:
+
+$$
+y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
+$$
+
+And so on.
+
+Looking at experimental data with the filter of level-k theory, there are few level-0 players. Most are level-1, level-2 and level-3 players. For example, the data reported in @nagel1995 where $p=2/3$ shows a spike at 33.3, indicative of level-1 players and another at 22.2, indicative of level-2 players.
+
+![$p=2/3$](img/nagel-1995-23.jpg)
+
+The lab evidence doesn't necessarily imply level-k is "right model". Data and theory appear to match but it is hard to know whether this is how subjects are thinking.
+
+### Heterogeneous players
+
+Imagine a beauty contest with nine rational and one level-0 player. Each has to guess $p\bar y$where $p=1/2$. The rational players knows that the irrational player picks 50 every time.
+
+Round 1: If the rational players play the Nash equilibrium of $y=0$ then:
+
+$$
+\bar y=\frac{50+0+...+0}{10}=5
+$$
+
+Round 2: If the rational players play $p\bar y=1/2\times 5=2.5$ then:
+
+$$
+\bar y=\frac{50+2.5+...+2.5}{10}=7.25
+$$
+
+Round 3: If the rational players play $p\bar y=1/2\times 7.25=3.625$ then:
+
+$$
+\bar y=\frac{50+3.6+...+3.6}{10}=...
+$$
+
+If we iterate we converge on the rational players all guessing:
+
+```{=tex}
+\begin{align*}
+&p\bar y=\frac{1}{2}\times 9.09=4.55 \\[6pt]
+&\text{with} \\[6pt]
+&\bar y=\frac{50+4.55+...+4.55}{10}=9.09
+\end{align*}
+```
+## The assignment game with level-k thinking
+
+Consider the following game:
+
+![](img/assignment-1.jpg)
+
+There is a unique Nash equilibrium (work, shirk) with shirk dominant strategy for Player 2
+
+With a level-k model the outcome depends on the assumption on players' level-k. When level-k thinking is introduced, the symmetries required by Nash Equilbrium break apart.
+
+If a player has a dominant strategy, they "discover" it at $k=1$ and always uses it for $k\geq 1$.
+
+Here, Nash equilibrium requires a $k\geq 2$ level of thinking. Nash equilibrium is the best people can do conditional on the strategy selected by other players.
+
+If players endowed with level $k=\bar k$ rationality play Nash, all players with $k>\bar k$ play Nash.
+
+| Level-k | Player 1 | Player 2 |
+|---------|----------|----------|
+| $k=0$   | Random   | Random   |
+| $k=1$   | Shirk    | Shirk    |
+| $k=2$   | Work     | Shirk    |
+
+## Centipede game
+
+Recall the centipede game.
+
+This centipede game has six stages. At each stage, a player can “take” and end the game or they can “pass”, increasing the total payoff. The other player then has a move.
+
+![](img/centipede.jpg)
+
+What do people do when playing the centipede game in the lab?
+
+People tend to pass until a few stages before the end (depending on the length of the centipede) and then take.
+
+Can level-k thinking provide an insight into this behaviour?
+
+Suppose a level-0 player passes until the end. They are possibly lucky if they are player 1 playing against another level-0 player.
+
+A level-1 player 2 would take at (4,6) as they know the level-0 player 1 would pass until then. A Level-1 player 1 would be planning to take (6,5) at the end as they believe the level-0 player 2 will keep passing
+
+A level-2 player 2 would plan to take at the final stage (4,6) as they believe the level-1 player 1 pass. A level-2 player 1 would take the payoff at (5,3) as they believe a level-1 player 2 would take at (4,6).
+
+A level-3 player 2 would plan to take at (2,4) as they believe the level-1 player 1 will take at (5,3). A level-3 player 1 would plan to take at (5,3) as they believe a level-2 player 2 would take at (4,6).
+
+And so on.

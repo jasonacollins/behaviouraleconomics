@@ -1,0 +1,175 @@
+# Asymmetric information
+
+To date we have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.
+
+I will now explore two examples where we relax this assumption and allow the parties to have different information. However, we will retain the assumption of rational behaviour.
+
+## The market for lemons
+
+An agent decides to buy a used car. Price $p$ is fixed and quality is unobservable.
+
+Suppose there are two types of cars: good cars and lemons. A car is good with probability $q$ and a lemon with probability $1−q$.
+
+The seller knows the type. To the seller, good cars are worth \$10,000 and lemons \$5,000.
+
+To potential buyers, good cars are worth \$15,000 and lemons \$7,500.
+
+Before the purchase, the buyer knows the types of cars in the market and the frequency of each. After the purchase, the buyer discovers the true type.
+
+Selling is the efficient solution as both car types worth more to buyers than sellers. But what happens?
+
+How much is a buyer willing to pay will depend on the proportion of good cars and lemons offered for sale.
+
+Let 𝜇 be the probability that a car that is sold is good. If sellers are willing to sell their good cars, $\mu=q$. If not, $\mu=0$.
+
+The expected value of a car to a buyer is:
+
+$E=\mu 15000+(1−\mu)7500=7500+\mu 7500$
+
+Hence, the buyer will be willing to pay up to $p=7500+\mu 7500$.
+
+Sellers will sell a lemon if 𝑝≥5000 and a good car if $p≥10000$.
+
+They will be able to sell the lemon if:
+
+$$
+5000≤p≤7500+\mu7500
+$$
+
+This always holds, so the seller will always be willing and able to sell the lemon.
+
+They will be able to sell the good car if:
+
+$$
+10000≤p≤7500+\mu7500
+$$
+
+This can only hold if $\mu≥1/3$.
+
+Assuming risk neutral buyers, there are two equilibria.
+
+If $q≥1/3$, sellers sell both types of cars:
+
+$$
+\mu=q≥1/3→10000≤p^∗≤7500+\mu7500
+$$
+
+If $q<1/3$, sellers sell only lemons:
+
+$$
+𝜇=0→5000≤p^∗≤7500
+$$
+
+Generalising:
+
+1. When buyers cannot observe product quality, given 𝑝, sellers have an incentive to lower product quality. That is, sellers try to pass off lemons.
+
+2. Rational buyers expect this seller behaviour and they lower their willingness to pay.
+
+3. Prices decline.
+
+4. Sellers lower quality further to make profits at the lower prices. Sellers cannot sell high quality cars at high prices even though buyers would be willing to pay the high prices for the high quality cars.
+
+5. Quality declines until nothing but lemons are left.
+
+Information asymmetry is sufficient to result in a market failure even if agents are rational.
+
+## The winner's curse
+
+A common-value auction is an auction in which the item for sale has the same value to all the bidders.
+
+Examples include:
+
+- Stocks, which all have one value, whatever traders’ expectations
+
+- Oil, where the amount of oil in a tract is the same for all oil companies.
+
+This contrasts with a private-value auction in which bidders have different valuations for the item for sale. This typically occurs where the item’s valuation reflects bidder tastes, such as art.
+
+The winner’s curse is phenomenon in common value auctions whereby the winner tends to experience a loss.
+
+The term was invented by petroleum engineers in discussing why oil companies in the Gulf of Mexico had mediocre results in the 1950−1970s.
+
+Oil companies in the Gulf of Mexico acquired drilling rights through auctions.
+
+Their rights yielded losses or less in profits than expected. In hindsight, the winning bids were unreasonably high.
+
+The winner’s curse is widely documented in experimental settings and has been observed in corporate environments.
+
+### Winner's curse example
+
+Company 1 and company 2 hire a geologist to estimate the value of an oil field. The (truthful) geologist of company $i$ privately reports their estimated valuation $v_i$ to company $i$. Company 1 learns $v_1$ and company 2 learns $v_2$.
+
+$v_1$ and $v_2$ are uniformly distributed between \$0 and \$100 and independent. Assume the true value of the oil field is the mean of $v_1$ and $v_2$: $\frac{v_1+v_2}{2}$
+
+The two companies simultaneously bid for the field. The highest bid wins and pays their bid (first-price auction).
+
+What should a company bid in this auction?
+
+Suppose both companies bid the private valuation they receive. Company 1 receives $v_1=50$, bids \$50 and wins.
+
+- If they win, $v_1=\$50>v_2$.
+
+- On average, in this state of the world company 2’s signal is \$25 (due to uniform distribution). The average value of the tract is $(50+25)/2=\$37.50$.
+
+- Company 1 loses \$50 − \$37.50 = \$12.50 on average.
+
+What if $v_1=50$ and company 1 bids \$37.50 instead, company 2 continues to bid $v_2$ and company 1 wins?
+
+- If company 1 wins, $\$37.50>v_2$.
+
+- On average, in this state of the world company 2’s signal is \$18.75 (due to uniform distribution). The average value of the tract is $(50 + 18.75)/2=\$34.37$.
+
+- Company 1’s loses \$37.50− \$34.37=\$3.13 on average.
+
+What if $v_1=50$ and company 1 bids \$25 instead, company 2 continues to bid $v_2$ and company 1 wins?
+
+- If company 1 wins, $25>v_2$.
+
+- On average, in this state of the world company 2’s signal is \$12.50 (due to uniform distribution), so the average value of the tract is $(50 +12.50)/2=\$31.25$.
+
+- Company 1’s profit is $31.25 − $25 = $6.25 on average. However, they will win only 25% of the time.
+
+What if company 1 bids $\delta v_1$, company 2 continues to bid $v_2$ and company 1 wins?
+
+- If they win, $\delta v_1>v_2$.
+
+- On average, in this state of the world company 2’s signal is $0.5\delta v_1$ (due to uniform distribution). The average value of the tract is therefore $(v_1+0.5\delta v_1 )∕2=(0.5+0.25\delta)v_1$.
+
+- Company 1’s net profit on average is $\pi=(0.5+0.25\delta)v_1−\delta v_1=(0.5−0.75\delta)v_1$. They make a profit where $0.5−0.75\delta>0$, i.e. where $\delta<2/3$. 
+
+- The lower $\delta$ the higher their profit, but that is conditional on company 1 having the winning bid, which decreases in probability as they decrease $\delta$.
+
+This analysis has a complication in that it does not account for the fact that company 2 is also a strategic player. We assumed company bids $v_2$, but as for company 1, this would strategy lead to an expected loss for company 2.
+
+For example, what if company 1 bids $x=\delta v_1=2/3v_1$, company 2 bids $v_2$ and company 2 wins?
+
+- If they win, $x=\delta v_1<v_2$.
+
+- On average, in this state of the world company 1’s bid is $0.5v_2$ (due to uniform distribution) and company 1’s signal $\frac{0.5v_2}{2/3}=3/4v_2$. The average value of the tract is therefore $(\frac{3}{4}v_2+v_2 )/2=0.875v_2$.
+
+- Company 2’s net profit on average is $\pi=0.875v_2−v_2=−0.125v_2$.
+
+What does each firm do at equilibrium?
+
+As each firm will have the same strategy at equilibrium, we can solve for company 1 assuming company 2 does the same strategy in response. At equilibrium we can also assume that each company will have an expected profit of zero as each company would otherwise have an incentive to change their bid to gain a share of that profit.
+
+Company 1 will win if $\delta v_1>\delta v_2$; i.e. if $v_1>v_2$. On average, in this state of the world company 2’s signal is $0.5v_1$ (due to uniform distribution), so that the average value of the tract is $(v_1+0.5v_1)/2=0.75v_1$.
+
+Company 1’s profit is:
+
+$$
+\pi_1=(v_1+v_2)/2−\delta𝑣_1=(0.75−\delta)v_1
+$$
+
+Profit is zero when $\delta=0.75$. The Nash equilibrium is that both parties bid 75% of their private valuation.
+
+In summary, bidding based purely on your own valuation fails to take into account that you only win if player 2’s signal is low.
+
+Alternatively, we may say that winning the auction is bad news regarding the value of the field. This is the winner’s curse.
+
+Because of the winner’s curse, the Nash equilibrium is to bid more conservatively.
+
+The mistake oil companies is to ignore or underestimate the winner’s curse.
+
+If an oil company wins an auction, it’s likely in part because its geologists have the highest estimates of the field’s value. But if all other geologists have lower estimates of the value, the company’s geologists have probably overestimated it.

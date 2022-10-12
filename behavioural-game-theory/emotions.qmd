@@ -1,0 +1,37 @@
+# Emotions
+
+Emotions are mental states that signal positive or negative outcomes.
+
+It is possible that one function of emotions is to act as a commitment device:
+
+- The emotion of guilt can constrain a desire to “cheat” where cheating delivers a higher pay-off. This in turn may allow people to trust you.
+
+- The emotion of anger may lead you to punish someone even where delivering the punishment also harms you. This in turn may lead people to be less likely to cheat you.
+
+While this behaviour may appear “irrational”, it allows people to make credible commitments that in turn allow them to enter beneficial trades and cooperative arrangements, while being less likely to being cheated.
+
+## Commitment
+
+Recall our earlier example of a customer threatening to complain if they receive bad service.
+
+![](img/complain-2.jpg)
+
+What if the customer gets a strong sense of satisfaction from complaining worth +3? Then their payoffs become as follows:
+
+![](img/complain-3.jpg)
+
+The threat to complain is now credible. The company now provides good service.
+
+![](img/complain-4.jpg)
+
+## Chicken
+
+Recall the game of chicken.
+
+![](img/chicken-1.jpg)
+
+Player A is crazy. They are afraid of nothing and will never swerve. Player B knows this.
+
+Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If Player A will not swerve, Player B will.
+
+![](img/chicken-3.jpg)
