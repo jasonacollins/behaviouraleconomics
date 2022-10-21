@@ -5,7 +5,7 @@ book:
   title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "12 October 2022"
+  date: "21 October 2022"
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -68,10 +68,12 @@ book:
       - behavioural-game-theory/asymmetric-information.qmd
       - behavioural-game-theory/emotions.qmd
       - behavioural-game-theory/behavioural-game-theory-exercises.qmd
-#    - part: social-preferences/social-preferences.qmd
-#      chapters:
-#      - social-preferences/distributional-preferences.qmd
-#      - social-preferences/social-preferences-examples.qmd
+    - part: social-preferences/social-preferences.qmd
+      chapters:
+      - social-preferences/distribution.qmd
+      - social-preferences/reputation.qmd
+      - social-preferences/reciprocity.qmd
+      - social-preferences/social-preferences-examples.qmd
     - references.qmd
   navbar:
     background: primary
@@ -93,8 +95,12 @@ book:
         href: https://creativecommons.org/licenses/by/4.0/
       - icon: twitter 
         href: https://twitter.com/jasonacollins
-  opengraph: true
+  open-graph: true
   twitter-card: true
+
+#filters:
+#   - lightbox
+#lightbox: auto
 
 bibliography: references.bib
 csl: apa-no-ampersand.csl

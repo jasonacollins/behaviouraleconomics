@@ -1,2 +1,69 @@
 # Social preferences
 
+## The ultimatum game
+
+Recall our earlier discussion of the ultimatum game.
+
+> The ultimatum game involves two players: the proposer and the responder.
+>
+> The proposer is given a fixed amount of money $m$. They then offer a portion $x$ of the sum $m$ to the responder.
+>
+> The responder can either accept of reject the offer. They make this decision knowing $m$ and $x$. If the responder accepts, the responder receives 𝑥 and the proposer gets $m-x$. If the responder rejects, both players receive nothing.
+
+Generally, if the players have monotonic preferences and the offer strategy set is discrete:
+
+-   The responder accepts any $x>0$.
+
+-   The proposer offers $x=\epsilon$, where $\epsilon$ is the smallest non-zero amount the proposer can offer.
+
+The other (weak) subgame perfect Nash equilibrium is an offer of \$0 and acceptance.
+
+What do people do in the ultimatum game?
+
+Unlike the game theoretic predictions:
+
+-   Proposers rarely offer the minimum amount.
+
+-   Responders often reject non-zero offers.
+
+For example, @henrich2001 recruited subjects from 15 small-scale societies to play the ultimatum game. The mean offer is all societies was substantially above zero. The rejection rate was low but non-zero.
+
+![](img/henrich-2001-table-1.jpg)
+
+## The dictator game
+
+Recall our earlier discussion of the dictator game.
+
+> In the dictator game, the dictator is given a fixed amount of money 𝑚. They then offer a portion 𝑥 of the sum 𝑚 to the receiver. The game then ends.
+>
+> Exchange is unilateral. Receivers have an empty strategy set.
+
+The standard game theory prediction is no interaction.
+
+However, in experiments dictators tend to give a positive sum of money.
+
+::: {#fig-dictator layout-ncol="2"}
+![Mean per treatment](img/engel-2011-fig-1.jpg){#fig-engel1}
+
+![Individual give rates](img/engel-2011-fig-1.jpg){#fig-engel2}
+
+Distribution of amount given in the dictator game [@engel2011].
+:::
+
+## Social preferences
+
+The results of these two games are evidence of social preferences, or what are sometimes called "other-regarding preferences".
+
+People do not care solely about their own outcomes.
+
+In this subject we will examine the following types of social preferences.
+
+-   Distribution: People care about the split of the resources. Reasons for distributional preferences include:
+
+    -   Altruism: People care about others.
+
+    -   Inequality aversion: People care about the relative distribution.
+
+-   Reputation: People care about what other people think. They fear the social stigma that can result from "selfish" behaviour.
+
+-   Reciprocity: We care about the intentions of others and often reciprocate others' actions.

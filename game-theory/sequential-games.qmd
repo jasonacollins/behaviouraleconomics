@@ -66,7 +66,7 @@ Given this, the proposer will offer $\$1$ only.
 
 ![](img/ultimatum-game-2.jpg)
 
-More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If $u(x)=x$:
+More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If the players have monotonic preferences and the offer strategy set is discrete:
 
 - The responder accepts any $x>0$.
 

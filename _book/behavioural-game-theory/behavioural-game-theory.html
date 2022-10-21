@@ -98,6 +98,9 @@ div.csl-indent {
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Course notes on behavioural economics - Behavioural game theory">
+<meta property="og:description" content="In our analysis of game theory, we have assumed rational agents in that they use all available information and are able to successfully determine their best action given their opponents (also…">
+<meta property="og:site-name" content="Course notes on behavioural economics">
 <meta name="twitter:title" content="Course notes on behavioural economics - Behavioural game theory">
 <meta name="twitter:description" content="In our analysis of game theory, we have assumed rational agents in that they use all available information and are able to successfully determine their best action given their opponents (also…">
 <meta name="twitter:card" content="summary">
@@ -463,6 +466,36 @@ div.csl-indent {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../social-preferences/social-preferences.html" class="sidebar-item-text sidebar-link">Social preferences</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/distribution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reputation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Reputation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reciprocity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Reciprocity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/social-preferences-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Social preferences examples</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
@@ -509,11 +542,11 @@ div.csl-indent {
 <section id="the-beauty-contest" class="level2">
 <h2 class="anchored" data-anchor-id="the-beauty-contest">The beauty contest</h2>
 <p>The beauty contest illustrates this problem.</p>
-<p>From Keynes (1936):</p>
+<p>From <span class="citation" data-cites="keynes1936">Keynes (<a href="../references.html#ref-keynes1936" role="doc-biblioref">1936</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>[P]rofessional investment may be likened to those newspaper competitions in which the competitors have to pick out the six prettiest faces from a hundred photographs, the prize being awarded to the competitor whose choice most nearly corresponds to the average preferences of the competitors as a whole; so that each competitor has to pick, not those faces which he himself finds prettiest, but those which he thinks likeliest to catch the fancy of the other competitors, all of whom are looking at the problem from the same point of view. It is not a case of choosing those which, to the best of one’s judgment, are really the prettiest, nor even those which average opinion genuinely thinks the prettiest. We have reached the third degree where we devote our intelligences to anticipating what average opinion expects the average opinion to be. And there are some, I believe, who practise the fourth, fifth and higher degrees.</p>
 </blockquote>
-<p>This thought experiment has since been developed into a game, the p-beauty contest (Moulin XXXX). The p-beauty contest runs as follows:</p>
+<p>This thought experiment has since been developed into a game, the p-beauty contest (<span class="citation" data-cites="moulin1986">Moulin (<a href="../references.html#ref-moulin1986" role="doc-biblioref">1986</a>)</span>). The p-beauty contest runs as follows:</p>
 <p>Each of <span class="math inline">n</span> players pick a number <span class="math inline">y\in[0,100]</span>.</p>
 <p>The winner is the player whose chosen number is closest to the mean of all the chosen numbers (<span class="math inline">\bar y</span>) multiplied by a parameter <span class="math inline">p</span>.</p>
 <p>That is, the winner is the player with their chosen number closest to <span class="math inline">p\bar y</span>.</p>
@@ -530,9 +563,9 @@ y_i=\frac{2}{3}\bar y=\frac{2}{3}\times 33.3=22.2
 </span></p>
 <p>As nobody has selected <span class="math inline">y_i=22.2</span>, so this can’t be an equilibrium.</p>
 <p>If we iterate this further, everybody selects <span class="math inline">y=50×(2∕3)^{(n−1)}</span> and winner <span class="math inline">i</span> has to pick:</p>
-<p><span class="math display">\begin{align*}
+<span class="math display">\begin{align*}
 y_i=\frac{2}{3}\bar y=\bigg(\frac{2}{3}\bigg)^n\times 50
-\end{align*}</span></p>
+\end{align*}</span>
 <p>As <span class="math inline">n\rightarrow \infty</span>, each player should play <span class="math inline">y_i=0</span>. This is the Nash equilibrium for the game. But what actually occurs?</p>
 <p>The following charts come from <span class="citation" data-cites="nagel1995">Nagel (<a href="../references.html#ref-nagel1995" role="doc-biblioref">1995</a>)</span>.</p>
 <div id="fig-nagel1" class="quarto-layout-panel">
@@ -561,6 +594,12 @@ y_i=\frac{2}{3}\bar y=\bigg(\frac{2}{3}\bigg)^n\times 50
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
+<div id="ref-keynes1936" class="csl-entry" role="doc-biblioentry">
+Keynes, J. M. (1936). <em>The general theory of employment, interest, and money</em>. Macmillan. <a href="http://gutenberg.net.au/ebooks03/0300071h/printall.html">http://gutenberg.net.au/ebooks03/0300071h/printall.html</a>
+</div>
+<div id="ref-moulin1986" class="csl-entry" role="doc-biblioentry">
+Moulin, H. (1986). <em>Game theory for social sciences</em>. New York Press.
+</div>
 <div id="ref-nagel1995" class="csl-entry" role="doc-biblioentry">
 Nagel, R. (1995). Unraveling in guessing games: An experimental study. <em>The American Economic Review</em>, <em>85</em>(5), 1313–1326. <a href="https://www.jstor.org/stable/2950991">https://www.jstor.org/stable/2950991</a>
 </div>
