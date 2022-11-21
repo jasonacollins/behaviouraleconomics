@@ -77,7 +77,7 @@ If we iterate we converge on the rational players all guessing:
 
 Consider the following game:
 
-![](img/assignment-1.jpg)
+![](img/assignment-1.jpg){width=60%}
 
 There is a unique Nash equilibrium (work, shirk) with shirk dominant strategy for Player 2
 

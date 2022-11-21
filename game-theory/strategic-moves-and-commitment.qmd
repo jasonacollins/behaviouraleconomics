@@ -2,7 +2,7 @@
 
 ## Chicken
 
-Consider the following game of chicken. Two players are driving toward each other. Whoever swerves first wins. If neither swerves, they crash and die.
+Consider the following game of chicken. Two players are driving toward each other. Whoever swerves first loses. If neither swerves, they crash and die.
 
 ![](img/chicken-1.jpg)
 
@@ -60,10 +60,10 @@ If the proposer loses too much from carrying out a threat or promise, they will 
 
 ### Example
 
-You threaten to complain about a poor service by a company.
+You threaten to complain about a poor service by a company. Complaining is costly.
 
 ![](img/complain-1.jpg)
 
-There are two sub-game perfect Nash equilibria: (Bad Service, Does not complain) and (Bad Service, Threaten to complain, Does not complain). The threat to complain is not credible.
+There are two sub-game perfect Nash equilibria: (Threatens to complain, Bad service, Does not complain) and (No threat, Bad service). The threat to complain is not credible.
 
 ![](img/complain-2.jpg)

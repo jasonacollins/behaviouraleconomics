@@ -46,13 +46,15 @@ $$
 
 The three terms in this function represent:
 
--   The utility of their own outcome
+-   The utility of their own outcome $x_i$
 
--   Their dislike of having less than the other agent
+-   Their dislike of having less than the other agent (with $\alpha>0$)
 
--   Their dislike of having more than the other agent
+-   Their dislike of having more than the other agent (where $\beta>0$)
 
-This utility function has a kink at $x_j$ where the agent $i$ moves from having less to more than agent $j$. If $\beta<1$ as in this diagram, $U(x_i)$ continues to increase in $x_i$ above $x_j$, but at a decreasing rate as inequality degrades the benefits of having more.
+Typically $\alpha>\beta$ as people dislike having less than others than they dislike having more than others. We could also set $\beta<0$ for an agent that likes to be better off than others.
+
+This utility function has a kink at $x_j$ where the agent $i$ moves from having less to more than agent $j$. If $0<\beta<1$ as in this diagram, $U(x_i)$ continues to increase in $x_i$ above $x_j$, but at a decreasing rate as inequality degrades the benefits of having more.
 
 ![](img/inequality-aversion-1.jpg)
 
@@ -96,7 +98,7 @@ x−\alpha(10−2x)>0 \\
 (1+\alpha)x−\alpha(10−𝑥)>0
 \end{align*}
 ```
-Whether this holds depends on the value of \$\alpha4 and the precise size of $x$. If $\alpha=1/2$, then:
+Whether this holds depends on the value of $\alpha$ and the precise size of $x$. If $\alpha=1/2$, then:
 
 ```{=tex}
 \begin{align*}

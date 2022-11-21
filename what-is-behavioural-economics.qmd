@@ -2,25 +2,25 @@
 
 Behavioural economics is a discipline that seeks to increase the explanatory power of traditional economic approaches by incorporating more realistic psychological foundations.
 
-Behavioural economics retains the general framework and tools used by economists, such as utility maximisation, but deviates from some assumptions to generate new insights and better predictions. These deviations are generally grounded in observed behaviour rather than abstract principles.
-
-As behavioural economics revisits our fundamental understanding of economic behaviour, it has implications for all areas of economics.
+Behavioural economics retains the general framework and tools used by economists, but deviates from some assumptions to generate new insights and better predictions. These deviations are generally grounded in observed behaviour rather than abstract principles.
 
 ## What is not behavioural economics?
 
-The term "behavioural economics" is commonly used to describe work that is better described as psychology or "behavioural science".
+You have probably heard the term behavioural economics in the popular press and books. Many of those references are not what I would consider to be behavioural economics. As a result, it is worth identifying what is not behavioural economics.
 
-Economics is the study of how economic agents make decisions under conditions of scarcity and of the interactions between those agents.
+The word economics is the key. Economics is the study of how economic agents make decisions under conditions of scarcity and the study of the interactions between those agents.
 
-Behavioural science is the study of human behaviour. Behavioural economics is not just about studying human behaviour, but about how a better understanding of human behaviour could improve the study of the decisions of economic agents and their interactions.
+As I noted, behavioural economics involves the introduction of more realistic psychological foundations to that economic approach.
 
-Similarly, psychology is the study of the human mind, decisions and behaviour. It is part of the behavioural sciences. Psychology is broad with many discrete fields. Behavioural economics tends to draw on a small subset of psychological research in refining the economic view on human behaviour.
+Behavioural economics is not the general study of human behaviour. Behavioural science is a better term for that general study.
+
+Similarly, psychology is the study of the human mind, decisions and behaviour. Psychology is part of the behavioural sciences. Behavioural economics draws on a small subset of psychology to develop a better understanding of human behaviour.
 
 ## Three thought experiments
 
-Many early behavioural economics experiments were built on thought experiments concerning human behaviour that was hard to explain with traditional economic frameworks.
+Many early ideas in behavioural economics emerged from thought experiments concerning human behaviour that was hard to explain with traditional economic frameworks.
 
-Below are three thought experiments to illustrate the types of problems that concern behavioural economists. In this book I will examine potential explanations for each of these behaviours.
+Here are three thought experiments to illustrate the types of problems that concern behavioural economists. In this course I will examine potential explanations for each of these behaviours.
 
 ### Thought experiment 1
 

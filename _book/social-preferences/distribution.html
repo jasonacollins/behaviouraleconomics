@@ -577,11 +577,12 @@ U_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
 </span></p>
 <p>The three terms in this function represent:</p>
 <ul>
-<li><p>The utility of their own outcome</p></li>
-<li><p>Their dislike of having less than the other agent</p></li>
-<li><p>Their dislike of having more than the other agent</p></li>
+<li><p>The utility of their own outcome <span class="math inline">x_i</span></p></li>
+<li><p>Their dislike of having less than the other agent (with <span class="math inline">\alpha&gt;0</span>)</p></li>
+<li><p>Their dislike of having more than the other agent (where <span class="math inline">\beta&gt;0</span>)</p></li>
 </ul>
-<p>This utility function has a kink at <span class="math inline">x_j</span> where the agent <span class="math inline">i</span> moves from having less to more than agent <span class="math inline">j</span>. If <span class="math inline">\beta&lt;1</span> as in this diagram, <span class="math inline">U(x_i)</span> continues to increase in <span class="math inline">x_i</span> above <span class="math inline">x_j</span>, but at a decreasing rate as inequality degrades the benefits of having more.</p>
+<p>Typically <span class="math inline">\alpha&gt;\beta</span> as people dislike having less than others than they dislike having more than others. We could also set <span class="math inline">\beta&lt;0</span> for an agent that likes to be better off than others.</p>
+<p>This utility function has a kink at <span class="math inline">x_j</span> where the agent <span class="math inline">i</span> moves from having less to more than agent <span class="math inline">j</span>. If <span class="math inline">0&lt;\beta&lt;1</span> as in this diagram, <span class="math inline">U(x_i)</span> continues to increase in <span class="math inline">x_i</span> above <span class="math inline">x_j</span>, but at a decreasing rate as inequality degrades the benefits of having more.</p>
 <p><img src="img/inequality-aversion-1.jpg" class="img-fluid"></p>
 </section>
 <section id="the-ultimatum-game" class="level3" data-number="46.2.2">
@@ -610,7 +611,7 @@ x−\alpha\text{max}\{10−2x,0\}&gt;0 \\
 x−\alpha(10−2x)&gt;0 \\
 (1+\alpha)x−\alpha(10−𝑥)&gt;0
 \end{align*}</span>
-<p>Whether this holds depends on the value of $ and the precise size of <span class="math inline">x</span>. If <span class="math inline">\alpha=1/2</span>, then:</p>
+<p>Whether this holds depends on the value of <span class="math inline">\alpha</span> and the precise size of <span class="math inline">x</span>. If <span class="math inline">\alpha=1/2</span>, then:</p>
 <span class="math display">\begin{align*}
 (1+1/2)x−1/2 (10−x)&amp;&gt;0 \\
 2x−5&amp;&gt;0 \\

@@ -5,7 +5,7 @@ book:
   title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "21 October 2022"
+  date: "25 October 2022"
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -13,7 +13,7 @@ book:
       chapters:
       - foundations/preferences.qmd
       - foundations/rationality.qmd
-      - foundations/utility-functions.qmd
+      - foundations/utility.qmd
       - foundations/economic-foundation-exercises.qmd
     - part: risk-and-uncertainty/decision-making-under-risk-and-uncertainty.qmd
       chapters:
@@ -89,6 +89,8 @@ book:
         href: https://twitter.com/jasonacollins
   sidebar:
     collapse-level: 1
+  repo-url: https://github.com/jasonacollins/behaviouraleconomics
+  repo-actions: [issue]
   page-footer: 
     center:
       - text: "Copyright: CC-BY"
@@ -97,10 +99,6 @@ book:
         href: https://twitter.com/jasonacollins
   open-graph: true
   twitter-card: true
-
-#filters:
-#   - lightbox
-#lightbox: auto
 
 bibliography: references.bib
 csl: apa-no-ampersand.csl
@@ -114,12 +112,15 @@ format:
     css: styles.css
     html-math-method: katex
     link-external-newwindow: true
-    ink-external-filter: '^(?:http:|https:)\/\/behaviouraleconomics\.jasoncollins\.blog\/custom'
     code-fold: true
     fig-cap-location: top
   pdf:
     documentclass: scrreprt
     echo: false
+
+#filters:
+#  - lightbox
+#lightbox: auto
 
 execute:
   freeze: auto

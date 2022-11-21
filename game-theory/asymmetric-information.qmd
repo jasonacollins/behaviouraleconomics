@@ -6,6 +6,8 @@ I will now explore two examples where we relax this assumption and allow the par
 
 ## The market for lemons
 
+This example draws on the work of @akerlof1970
+
 An agent decides to buy a used car. Price $p$ is fixed and quality is unobservable.
 
 Suppose there are two types of cars: good cars and lemons. A car is good with probability $q$ and a lemon with probability $1−q$.
@@ -62,15 +64,15 @@ $$
 
 Generalising:
 
-1. When buyers cannot observe product quality, given 𝑝, sellers have an incentive to lower product quality. That is, sellers try to pass off lemons.
+1.  When buyers cannot observe product quality, given 𝑝, sellers have an incentive to lower product quality. That is, sellers try to pass off lemons.
 
-2. Rational buyers expect this seller behaviour and they lower their willingness to pay.
+2.  Rational buyers expect this seller behaviour and they lower their willingness to pay.
 
-3. Prices decline.
+3.  Prices decline.
 
-4. Sellers lower quality further to make profits at the lower prices. Sellers cannot sell high quality cars at high prices even though buyers would be willing to pay the high prices for the high quality cars.
+4.  Sellers lower quality further to make profits at the lower prices. Sellers cannot sell high quality cars at high prices even though buyers would be willing to pay the high prices for the high quality cars.
 
-5. Quality declines until nothing but lemons are left.
+5.  Quality declines until nothing but lemons are left.
 
 Information asymmetry is sufficient to result in a market failure even if agents are rational.
 
@@ -80,13 +82,13 @@ A common-value auction is an auction in which the item for sale has the same val
 
 Examples include:
 
-- Stocks, which all have one value, whatever traders’ expectations
+-   Stocks, which all have one value, whatever traders' expectations
 
-- Oil, where the amount of oil in a tract is the same for all oil companies.
+-   Oil, where the amount of oil in a tract is the same for all oil companies.
 
-This contrasts with a private-value auction in which bidders have different valuations for the item for sale. This typically occurs where the item’s valuation reflects bidder tastes, such as art.
+This contrasts with a private-value auction in which bidders have different valuations for the item for sale. This typically occurs where the item's valuation reflects bidder tastes, such as art.
 
-The winner’s curse is phenomenon in common value auctions whereby the winner tends to experience a loss.
+The winner's curse is phenomenon in common value auctions whereby the winner tends to experience a loss.
 
 The term was invented by petroleum engineers in discussing why oil companies in the Gulf of Mexico had mediocre results in the 1950−1970s.
 
@@ -94,7 +96,7 @@ Oil companies in the Gulf of Mexico acquired drilling rights through auctions.
 
 Their rights yielded losses or less in profits than expected. In hindsight, the winning bids were unreasonably high.
 
-The winner’s curse is widely documented in experimental settings and has been observed in corporate environments.
+The winner's curse is widely documented in experimental settings and has been observed in corporate environments.
 
 ### Winner's curse example
 
@@ -108,55 +110,55 @@ What should a company bid in this auction?
 
 Suppose both companies bid the private valuation they receive. Company 1 receives $v_1=50$, bids \$50 and wins.
 
-- If they win, $v_1=\$50>v_2$.
+-   If they win, $v_1=\$50>v_2$.
 
-- On average, in this state of the world company 2’s signal is \$25 (due to uniform distribution). The average value of the tract is $(50+25)/2=\$37.50$.
+-   On average, in this state of the world company 2's signal is \$25 (due to uniform distribution). The average value of the tract is $(50+25)/2=\$37.50$.
 
-- Company 1 loses \$50 − \$37.50 = \$12.50 on average.
+-   Company 1 loses \$50 − \$37.50 = \$12.50 on average.
 
 What if $v_1=50$ and company 1 bids \$37.50 instead, company 2 continues to bid $v_2$ and company 1 wins?
 
-- If company 1 wins, $\$37.50>v_2$.
+-   If company 1 wins, $\$37.50>v_2$.
 
-- On average, in this state of the world company 2’s signal is \$18.75 (due to uniform distribution). The average value of the tract is $(50 + 18.75)/2=\$34.37$.
+-   On average, in this state of the world company 2's signal is \$18.75 (due to uniform distribution). The average value of the tract is $(50 + 18.75)/2=\$34.37$.
 
-- Company 1’s loses \$37.50− \$34.37=\$3.13 on average.
+-   Company 1's loses \$37.50− \$34.37=\$3.13 on average.
 
 What if $v_1=50$ and company 1 bids \$25 instead, company 2 continues to bid $v_2$ and company 1 wins?
 
-- If company 1 wins, $25>v_2$.
+-   If company 1 wins, $25>v_2$.
 
-- On average, in this state of the world company 2’s signal is \$12.50 (due to uniform distribution), so the average value of the tract is $(50 +12.50)/2=\$31.25$.
+-   On average, in this state of the world company 2's signal is \$12.50 (due to uniform distribution), so the average value of the tract is $(50 +12.50)/2=\$31.25$.
 
-- Company 1’s profit is $31.25 − $25 = $6.25 on average. However, they will win only 25% of the time.
+-   Company 1's profit is \$31.25 − \$25 = \$6.25 on average. However, they will win only 25% of the time.
 
 What if company 1 bids $\delta v_1$, company 2 continues to bid $v_2$ and company 1 wins?
 
-- If they win, $\delta v_1>v_2$.
+-   If they win, $\delta v_1>v_2$.
 
-- On average, in this state of the world company 2’s signal is $0.5\delta v_1$ (due to uniform distribution). The average value of the tract is therefore $(v_1+0.5\delta v_1 )∕2=(0.5+0.25\delta)v_1$.
+-   On average, in this state of the world company 2's signal is $0.5\delta v_1$ (due to uniform distribution). The average value of the tract is therefore $(v_1+0.5\delta v_1 )∕2=(0.5+0.25\delta)v_1$.
 
-- Company 1’s net profit on average is $\pi=(0.5+0.25\delta)v_1−\delta v_1=(0.5−0.75\delta)v_1$. They make a profit where $0.5−0.75\delta>0$, i.e. where $\delta<2/3$. 
+-   Company 1's net profit on average is $\pi=(0.5+0.25\delta)v_1−\delta v_1=(0.5−0.75\delta)v_1$. They make a profit where $0.5−0.75\delta>0$, i.e. where $\delta<2/3$.
 
-- The lower $\delta$ the higher their profit, but that is conditional on company 1 having the winning bid, which decreases in probability as they decrease $\delta$.
+-   The lower $\delta$ the higher their profit, but that is conditional on company 1 having the winning bid, which decreases in probability as they decrease $\delta$.
 
 This analysis has a complication in that it does not account for the fact that company 2 is also a strategic player. We assumed company bids $v_2$, but as for company 1, this would strategy lead to an expected loss for company 2.
 
 For example, what if company 1 bids $x=\delta v_1=2/3v_1$, company 2 bids $v_2$ and company 2 wins?
 
-- If they win, $x=\delta v_1<v_2$.
+-   If they win, $x=\delta v_1<v_2$.
 
-- On average, in this state of the world company 1’s bid is $0.5v_2$ (due to uniform distribution) and company 1’s signal $\frac{0.5v_2}{2/3}=3/4v_2$. The average value of the tract is therefore $(\frac{3}{4}v_2+v_2 )/2=0.875v_2$.
+-   On average, in this state of the world company 1's bid is $0.5v_2$ (due to uniform distribution) and company 1's signal $\frac{0.5v_2}{2/3}=3/4v_2$. The average value of the tract is therefore $(\frac{3}{4}v_2+v_2 )/2=0.875v_2$.
 
-- Company 2’s net profit on average is $\pi=0.875v_2−v_2=−0.125v_2$.
+-   Company 2's net profit on average is $\pi=0.875v_2−v_2=−0.125v_2$.
 
 What does each firm do at equilibrium?
 
 As each firm will have the same strategy at equilibrium, we can solve for company 1 assuming company 2 does the same strategy in response. At equilibrium we can also assume that each company will have an expected profit of zero as each company would otherwise have an incentive to change their bid to gain a share of that profit.
 
-Company 1 will win if $\delta v_1>\delta v_2$; i.e. if $v_1>v_2$. On average, in this state of the world company 2’s signal is $0.5v_1$ (due to uniform distribution), so that the average value of the tract is $(v_1+0.5v_1)/2=0.75v_1$.
+Company 1 will win if $\delta v_1>\delta v_2$; i.e. if $v_1>v_2$. On average, in this state of the world company 2's signal is $0.5v_1$ (due to uniform distribution), so that the average value of the tract is $(v_1+0.5v_1)/2=0.75v_1$.
 
-Company 1’s profit is:
+Company 1's profit is:
 
 $$
 \pi_1=(v_1+v_2)/2−\delta𝑣_1=(0.75−\delta)v_1
@@ -164,12 +166,12 @@ $$
 
 Profit is zero when $\delta=0.75$. The Nash equilibrium is that both parties bid 75% of their private valuation.
 
-In summary, bidding based purely on your own valuation fails to take into account that you only win if player 2’s signal is low.
+In summary, bidding based purely on your own valuation fails to take into account that you only win if player 2's signal is low.
 
-Alternatively, we may say that winning the auction is bad news regarding the value of the field. This is the winner’s curse.
+Alternatively, we may say that winning the auction is bad news regarding the value of the field. This is the winner's curse.
 
-Because of the winner’s curse, the Nash equilibrium is to bid more conservatively.
+Because of the winner's curse, the Nash equilibrium is to bid more conservatively.
 
-The mistake oil companies is to ignore or underestimate the winner’s curse.
+The mistake oil companies is to ignore or underestimate the winner's curse.
 
-If an oil company wins an auction, it’s likely in part because its geologists have the highest estimates of the field’s value. But if all other geologists have lower estimates of the value, the company’s geologists have probably overestimated it.
+If an oil company wins an auction, it's likely in part because its geologists have the highest estimates of the field's value. But if all other geologists have lower estimates of the value, the company's geologists have probably overestimated it.
