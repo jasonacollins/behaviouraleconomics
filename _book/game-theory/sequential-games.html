@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,18 +107,26 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf">PDF version</a>
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf">
+ <span class="menu-text">PDF version</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/">Blog</a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/">
+ <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/about/">About</a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/jasonacollins"><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+</i> 
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -172,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility functions</span></a>
+  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -503,7 +514,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-trust-game" id="toc-the-trust-game" class="nav-link" data-scroll-target="#the-trust-game"><span class="toc-section-number">38.3.3</span>  The trust game</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -518,6 +529,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -533,7 +545,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-centipede-game" class="level3" data-number="38.1.1">
 <h3 data-number="38.1.1" class="anchored" data-anchor-id="the-centipede-game"><span class="header-section-number">38.1.1</span> The centipede game</h3>
 <p>This centipede game has six stages. At each stage, a player can “take” and end the game or they can “pass”, increasing the total payoff. The other player then has a move.</p>
-<p><img src="img/centipede-game-1.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/centipede-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/centipede-game-1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="subgame-perfect-nash-equilibrium" class="level2" data-number="38.2">
@@ -546,11 +562,19 @@ ul.task-list li input[type="checkbox"] {
 <li><p>work your way to the beginning of the game.</p></li>
 </ul>
 <p>In our centipede game, using backward induction, player 2 at the final stage will take for a payoff of 6 (relative to 5 for passing).</p>
-<p><img src="img/centipede-game-2.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/centipede-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/centipede-game-2.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>Therefore, player 1 at the stage before will take for a payoff of 5 (relative to the payoff of 4 they would receive for passing, given player 2 will then take).</p>
 <p>Therefore, player 2 at the stage before will take for a payoff of 4.</p>
 <p>And so on.</p>
-<p><img src="img/centipede-game-3.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/centipede-game-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/centipede-game-3.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>There is a unique subgame perfect equilibrium: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player 1 and player 2 respectively.</p>
 <p>In the subgame perfect Nash equilibrium, player 1 takes at the first stage.</p>
 </section>
@@ -563,16 +587,28 @@ ul.task-list li input[type="checkbox"] {
 <p>The responder can either accept of reject the offer. They make this decision knowing <span class="math inline">m</span> and <span class="math inline">x</span>.</p>
 <p>If the responder accepts, the responder receives <span class="math inline">x</span> and the proposer gets <span class="math inline">m-x</span>. If the responder rejects, both players receive nothing.</p>
 <p>Below is the extensive form of the ultimatum game with <span class="math inline">m=\$10</span> and an assumption that the offer must be a whole dollar amount.</p>
-<p><img src="img/ultimatum-game-1.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/ultimatum-game-1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is there the offer is <span class="math inline">0</span>.</p>
 <p>Given this, the proposer will offer <span class="math inline">\$1</span> only.</p>
-<p><img src="img/ultimatum-game-2.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ultimatum-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/ultimatum-game-2.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If the players have monotonic preferences and the offer strategy set is discrete:</p>
 <ul>
 <li><p>The responder accepts any <span class="math inline">x&gt;0</span>.</p></li>
 <li><p>The proposer offers <span class="math inline">x=\epsilon</span>, where <span class="math inline">\epsilon</span> is the smallest non-zero amount the proposer can offer.</p></li>
 </ul>
-<p><img src="img/ultimatum-game-3.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ultimatum-game-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/ultimatum-game-3.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>The other (weak) subgame perfect Nash equilibrium is an offer of $0 and acceptance.</p>
 <p>Where the strategy space is continuous (i.e <span class="math inline">\epsilon</span> could always be made smaller) the only subgame perfect Nash equilibrium is for the proposer to offer $0 and the receiver to accept.</p>
 </section>
@@ -580,9 +616,17 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="38.3.2" class="anchored" data-anchor-id="the-dictator-game"><span class="header-section-number">38.3.2</span> The dictator game</h3>
 <p>In the dictator game, the dictator is given a fixed amount of money 𝑚. They then offer a portion 𝑥 of the sum 𝑚 to the receiver. The game then ends.</p>
 <p>Exchange is unilateral. Receivers have an empty strategy set.</p>
-<p><img src="img/dictator-game-1.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/dictator-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/dictator-game-1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves.</p>
-<p><img src="img/dictator-game-2.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/dictator-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/dictator-game-2.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 </section>
 <section id="the-trust-game" class="level3" data-number="38.3.3">
 <h3 data-number="38.3.3" class="anchored" data-anchor-id="the-trust-game"><span class="header-section-number">38.3.3</span> The trust game</h3>
@@ -600,10 +644,18 @@ ul.task-list li input[type="checkbox"] {
 <p>The receiver then returns to the sender $7.50 of their $25.</p>
 <p>The final outcome is ($10−5+7.50, $10+15−7.50)=($12.50, $17.50).</p>
 <p>The extensive form of the game is as follows.</p>
-<p><img src="img/trust-game-1.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/trust-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/trust-game-1.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>If both receivers have utility function <span class="math inline">u(x)=x</span> the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.</p>
 <p>One way to think about this problem is that the receiver is effectively playing a dictator game.</p>
-<p><img src="img/trust-game-2.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/trust-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/trust-game-2.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>Relative to the Pareto optimal outcome whereby the sender’s full endowment is tripled and they receive a positive return on their investment, both players are worse off under the equilibrium outcome.</p>
 
 
@@ -652,7 +704,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -688,24 +757,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp(/https:\/\/behaviouraleconomics\.jasoncollins\.blog/);
@@ -713,7 +800,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -753,6 +840,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 

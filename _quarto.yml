@@ -5,7 +5,7 @@ book:
   title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "25 October 2022"
+  date: "21 November 2022"
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -105,7 +105,7 @@ csl: apa-no-ampersand.csl
 
 format:
   html:
-    theme: spacelab
+    theme: cosmo
     fontcolor: black
     fontsize: 20px
     linkcolor: blue
@@ -118,9 +118,9 @@ format:
     documentclass: scrreprt
     echo: false
 
-#filters:
-#  - lightbox
-#lightbox: auto
+filters:
+  - lightbox
+lightbox: auto
 
 execute:
   freeze: auto

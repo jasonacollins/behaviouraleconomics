@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,6 +60,9 @@ div.csl-indent {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -123,18 +126,26 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf">PDF version</a>
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf">
+ <span class="menu-text">PDF version</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/">Blog</a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/">
+ <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/about/">About</a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/jasonacollins"><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+</i> 
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -191,7 +202,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility-functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility functions</span></a>
+  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -529,7 +540,7 @@ div.csl-indent {
   <li><a href="#the-hot-hand-fallacy-for-truly-random-sequences" id="toc-the-hot-hand-fallacy-for-truly-random-sequences" class="nav-link" data-scroll-target="#the-hot-hand-fallacy-for-truly-random-sequences"><span class="toc-section-number">33.5.3</span>  The hot hand fallacy for truly random sequences</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -544,6 +555,7 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -657,7 +669,11 @@ P(\text{COVID}|\text{positive})&amp;=\frac{P(\text{positive}|\text{COVID})P(\tex
 <p>Use of natural frequencies in this way was first proposed by Cosmides and Tooby <span class="citation" data-cites="cosmides1996">(<a href="../references.html#ref-cosmides1996" role="doc-biblioref">1996</a>)</span>. Natural frequencies are derived from observing cases that have been representatively sampled from a population.</p>
 <p><span class="citation" data-cites="hoffrage1998">Hoffrage and Gigerenzer (<a href="../references.html#ref-hoffrage1998" role="doc-biblioref">1998</a>)</span> report that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.</p>
 <p>There is some evidence that you can get further gains through a frequency tree representation (e.g. <span class="citation" data-cites="spiegelhalter2015">Spiegelhalter and Gage (<a href="../references.html#ref-spiegelhalter2015" role="doc-biblioref">2015</a>)</span>). Below is one such tree from <span class="citation" data-cites="gigerenzer2011">Gigerenzer (<a href="../references.html#ref-gigerenzer2011" role="doc-biblioref">2011</a>)</span>.</p>
-<p><img src="img/gigerenzer_2011.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/gigerenzer_2011.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/gigerenzer_2011.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>The numbers at the bottom of the conditional probability tree do not contain the base rate information. You can’t simply compare across them in calculating conditional probabilities. You also need to refer back to the middle layer. Conversely, the natural frequency tree contains all you need in the bottom row.</p>
 <p>Note that we could convert the numbers in the bottom of the conditional probability tree into frequencies: 900 in 1000, 10 in 1000, 90 in 1000 and 910 in 1000. Gigerenzer calls these simple frequencies.</p>
 <p>There are many scenarios where simple frequencies can make a problem more tractable, but they do not solve the computational complexity here. Simple frequencies are just a restatement of the probabilities. In contrast, natural frequencies are joint frequencies, such as the number of people who test positive and who have COVID-19.</p>
@@ -698,7 +714,11 @@ P(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
 <p>The gambler’s fallacy is the false belief that in a sequence of independent draws from a distribution an outcome that has not realized for a while is more likely to occur on the next draw.</p>
 <p>For example, following three flips of a coin that all come up heads, a person experiencing the gambler’s fallacy would believe that a tail is more likely on the next flip.</p>
 <p>Using data from <span class="citation" data-cites="rapoport1997">Rapoport and Budescu (<a href="../references.html#ref-rapoport1997" role="doc-biblioref">1997</a>)</span>, <span class="citation" data-cites="rabin2010">Rabin and Vayanos (<a href="../references.html#ref-rabin2010" role="doc-biblioref">2010</a>)</span> derived the probability with which the next flip of a coin will be heads given the last three flips being heads or tails.</p>
-<p><img src="img/gamblers-fallacy.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/gamblers-fallacy.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/gamblers-fallacy.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>One explanation for the gambler’s fallacy is representativeness. For example, the sequence of coin flips HHHHHH is not seen as representative of flipping a fair coin six times. HHTTHH is seen as more representative.</p>
 <p>An alternative explanation is that people believe in the “law of small numbers”. They overestimate the degree to which a small sample will resemble the population from which it is drawn. For example, if a fair coin is flipped six times, they will overestimate the likelihood the result will be three heads and three tails.</p>
 <section id="the-law-of-small-numbers" class="level3" data-number="33.4.1">
@@ -741,7 +761,11 @@ P(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
 <p>An example comes from <span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span>.</p>
 <p>Imagine a person who took ten shots in a basketball game. A ball is a hit, an X is a miss.</p>
 <p>What would count as evidence of a hot hand? What we can do is look at shots following a previous hit. For instance, in this sequence of shots there are 6 occasions where we have a shot following a previous hit. Five of those shots, such as the seventh here, are followed by another hit.</p>
-<p><img src="img/hot-hand.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/hot-hand.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/hot-hand.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>We can then compare their normal shooting percentage with the proportion of shots they hit if the shot immediately before was a hit. If their hit rate after a hit is higher than their normal shot probability, then we might say they get a hot hand.</p>
 <p>Using this methodology, Gilovich et al TO ADD took shot data from a variety of sources, including the Philadelphia 76ers and Boston Celtics, and examined it for evidence of a hot hand. They also looked at whether there was a hit or miss after longer streaks of hits or misses.</p>
 <p>From this data, they argued that the hot hand was an illusion.</p>
@@ -925,7 +949,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -961,24 +1002,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp(/https:\/\/behaviouraleconomics\.jasoncollins\.blog/);
@@ -986,7 +1045,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1026,6 +1085,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true});</script>
 
 
 
