@@ -93,7 +93,8 @@ The first tests of the Save More Tomorrow program by @thaler2004 resulted in 78 
 #| warning: false
 
 library(ggplot2)
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 
 df <- data.frame( "Raise" = c("Pre-advice", "First", "Second", "Third", "Fourth"),
                   "Declined-advice"=c(6.6, 6.5, 6.8, 6.6, 6.2),
