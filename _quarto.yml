@@ -5,7 +5,8 @@ book:
   title: "Course notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "21 November 2022"
+  date: "29 January 2023"
+  date-format: D MMMM YYYY
   chapters:
     - index.qmd
     - what-is-behavioural-economics.qmd
@@ -74,6 +75,7 @@ book:
       - social-preferences/reputation.qmd
       - social-preferences/reciprocity.qmd
       - social-preferences/social-preferences-examples.qmd
+      - social-preferences/social-preferences-exercises.qmd
     - references.qmd
   navbar:
     background: primary

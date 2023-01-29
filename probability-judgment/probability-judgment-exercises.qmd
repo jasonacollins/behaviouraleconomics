@@ -1,6 +1,6 @@
 # Probability judgment exercises
 
-## Question 1
+## Judging a fund manager
 
 You want to know if a fund manager is skilled as you believe skilled management can lead to outperformance. The following is known:
 
@@ -10,26 +10,58 @@ You want to know if a fund manager is skilled as you believe skilled management 
 
 -   If a fund manager is unskilled, the probability that they outperform the market is 40%.
 
-You observe an outperforming fund manager. What is the probability that the fund manager is skilled?
+a\) You observe an outperforming fund manager. What is the probability that the fund manager is skilled?
 
 ::: {.callout-tip collapse="true"}
-## Question 1 answer
+## Answer
 
 We calculate the solution using Bayes' rule.
+
+$$
+P(\text{skilled}|\text{outperform})=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})}
+$$
+
+We can calculate $P(outperform)$ using the law of total probability.
+
+```{=tex}
+\begin{align*}
+P(\text{outperform})&=P(\text{outperform}|\text{skilled})P(\text{skilled})+P(\text{outperform}|\text{unskilled})P(\text{unskilled}) \\[6pt]
+&=0.8\times 0.2+0.4\times 0.8 \\[6pt]
+&=`r PO=0.8*0.2+0.4*0.8; PO`
+\end{align*}
+```
+
+Inputting this into Bayes' rule, we get:
 
 ```{=tex}
 \begin{align*}
 P(\text{skilled}|\text{outperform})&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
-&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{\begin{aligned}P(&\text{outperform}|\text{skilled})P(\text{skilled})\\&+P(\text{outperform}|\text{unskilled})P(\text{unskilled})\end{aligned}} \\[6pt]
-&=\frac{0.8\times 0.2}{0.8\times 0.2+0.4\times 0.8} \\[6pt]
-&=`r round((0.8*0.2)/(0.8*0.2+0.4*0.8), 3)`
+&=\frac{0.8\times 0.2}{`r PO`} \\[6pt]
+&=`r PSO=round((0.8*0.2)/PO, 3); PSO`
 \end{align*}
 ```
 
-A fund manager who outperforms is skilled with 33% probability. You cannot neglect that low base rate of skilled managers.
+A fund manager who outperforms is skilled with `r PSO` probability. You cannot neglect that low base rate of skilled managers.
 :::
 
-## Question 2
+b\) A person calculates the probability that the fund manager is skilled by putting the same probability on all possible hypotheses (a uniform prior). What do they believe is the probability that the fund manager is skilled?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We use Bayes’ Theorem but with uniform priors.
+
+\begin{align*}
+P(\text{skilled}|\text{outperform})&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
+&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{\begin{aligned}P(&\text{outperform}|\text{skilled})P(\text{skilled})\\&+P(\text{outperform}|\text{unskilled})P(\text{unskilled})\end{aligned}} \\[6pt]
+&=\frac{0.8\times 0.5}{0.8\times 0.5+0.4\times 0.5} \\[6pt]
+&=`r round((0.8*0.5)/(0.8*0.5+0.4*0.5), 3)`
+\end{align*}
+
+Starting with uniform priors – effectively ignoring the base rate – gives us a higher probability of 67%.
+:::
+
+## Detecting a terrorist
 
 Every month 100 million people fly on commercial airlines. Imagine 10 of them are terrorists.
 
@@ -38,7 +70,7 @@ Airport security are able to correctly identify that a person is a terrorist in 
 a\) A person is identified by airport security as a terrorist. Using Bayes' rule, what is the probability that they are a terrorist?
 
 ::: {.callout-tip collapse="true"}
-## Question 2a) answer
+## Answer
 
 We can use Bayes' Theorem to calculate the conditional probability:
 
@@ -53,10 +85,38 @@ $$
 Or approximately 1 in 10,000.
 :::
 
-b\) State and solve the question in part a) in terms of natural frequencies.
+b\) Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to:
+
+i) confusion of conditional probabilities
 
 ::: {.callout-tip collapse="true"}
-## Question 2b) answer
+## Answer
+
+If a person confuses $P(\text{terrorist | identified})$ with $P(\text{identified | terrorist})$ they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g. identification of cabs problem discussed in class.
+:::
+
+ii) people placing the same probability on all possible hypotheses (uniform priors).
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If a person assumed uniform priors on any individual, they would calculate Bayes' Theorem as follows:
+
+$$
+\begin{aligned}
+P(\text{terrorist | identified}) &= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
+&= \dfrac{0.99*0.5}{0.99*0.5+0.001*0.5} \\[12 pt]
+&= 0.999
+\end{aligned}
+$$
+
+This is substantially higher than the actual probability.
+:::
+
+c\) State and solve the question in part a) in terms of natural frequencies.
+
+::: {.callout-tip collapse="true"}
+## Answer
 
 Number of passengers: 100,000,000
 
@@ -69,14 +129,14 @@ Number of non-terrorists identified as terrorists: 0.001\*100,000,000=100,000
 Proportion of people identified as terrorists who are terrorists = 10/(10+100000) $\approx$ 1 in 10000
 :::
 
-## Question 3
+## Male or female
 
 These two related questions come from magazine columnist Marilyn vos Savant.
 
 a\) A shopkeeper says she has two new baby beagles to show you, but she doesn't know whether they're male, female, or a pair. You tell her that you want only a male, and she telephones the fellow who's giving them a bath. "Is at least one a male?" she asks him. "Yes!" she informs you with a smile. What is the probability that the other one is a male?
 
 ::: {.callout-tip collapse="true"}
-## Question 3a) answer
+## Answer
 
 The prior probabilities are:
 
@@ -104,7 +164,7 @@ P(MM|M)&=\frac{P(M|MM)P(MM)}{P(M)} \\[6pt]
 b\) Say that a woman and a man (who are unrelated) each have two children. We know that at least one of the woman's children is a boy and that the man's oldest child is a boy. Can you explain why the chances that the woman has two boys do not equal the chances that the man has two boys?
 
 ::: {.callout-tip collapse="true"}
-## Question 3b) answer
+## Answer
 
 For the woman, the prior probabilities before learning she has a boy are:
 
@@ -154,9 +214,9 @@ P(BB|B)&=\frac{P(B|BB)P(BB)}{P(B)} \\[12pt]
 Note: questions such are these are typically sensitive to unstated assumptions, particularly around the procedure used to elicit the information around the sex of the child. Due to this, part a) is probably less vulnerable to alternative assumptions than b) as it contains information about the elicitation procedure in the question.
 :::
 
-## Question 4
+## Luggage
 
-You have taken a flight with Qantas and are worried that your luggage will not be on the flight. You know that 20% of bags have not been arriving with the passenger.
+You have taken a flight  and are worried that your luggage will not be on the flight. You know that 20% of bags have not been arriving with the passenger.
 
 The following table of conditional probabilities (from Pearl & Mackenzie (2018)) gives the probability that your bag will be on the luggage carousel conditional on the bag being on the flight and how long you have been waiting at the carousel.
 
@@ -188,7 +248,7 @@ The following table of conditional probabilities (from Pearl & Mackenzie (2018))
 a\) You have been waiting 5 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
 
 ::: {.callout-tip collapse="true"}
-## Question 4a) answer
+## Answer
 
 \begin{align*}
 P(\text{false}|\text{not arrived after 5})&=\frac{P(\text{not arrived after 5}|\text{false})P(\text{false})}{P(\text{not arrived after 5})} \\[12pt]
@@ -203,7 +263,7 @@ The probability that the bag was not on the flight is `r round(false5*100, 0)`%.
 b\) You have been waiting 9 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
 
 ::: {.callout-tip collapse="true"}
-## Question 4b) answer
+## Answer
 
 \begin{align*}
 P(\text{false}|\text{not arrived after 9})&=\frac{P(\text{not arrived after 9}|\text{false})P(\text{false})}{P(\text{not arrived after 9})} \\[12pt]
@@ -218,7 +278,7 @@ The probability that the bag was not on the flight is `r round(false9*100, 0)`%.
 c\)  You have been waiting 10 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
 
 ::: {.callout-tip collapse="true"}
-## Question 4c) answer
+## Answer
 
 \begin{align*}
 P(\text{false}|\text{not arrived after 10})&=\frac{P(\text{not arrived after 10}|\text{false})P(\text{false})}{P(\text{not arrived after 10})} \\[12pt]
@@ -230,7 +290,7 @@ P(\text{false}|\text{not arrived after 10})&=\frac{P(\text{not arrived after 10}
 The probability that the bag was not on the flight is `r round(false9*100, 0)`%.
 :::
 
-## Question 5
+## Murder?
 
 In a [now famous case](https://en.wikipedia.org/wiki/Sally_Clark), Sally Clark was convicted of murder after the death of her two sons. The defence argued both children had died of sudden infant death syndrome. The prosecution called statistical evidence that the chance of a SIDS death was 1 in 8543, so the chance of two children dying of SIDS was 1 in 73 million ($8543\times 8543$).
 
@@ -243,7 +303,7 @@ P(\text{SIDS death}\land\text{SIDS death})&=P(\text{SIDS death})\times P(\text{S
 \end{align*}
 
 ::: {.callout-tip collapse="true"}
-## Question 5 answer
+## Answer
 
 Reason 1: The probability of a 2nd SIDS death given first SIDS death is not independent. e.g. SIDS deaths are related due to genetics, family environment. That is, the relevant probability is:
 
@@ -272,61 +332,7 @@ $$
 If murder itself is also unlikely, then it is not correct to simply attribute the alternative to SIDS the residual probability.
 :::
 
-## Question 6
-
-Consider question 1 above.
-
-A person calculates the probability that the fund manager is skilled by putting the same probability on all possible hypotheses (a uniform prior). What do they believe is the probability that the fund manager is skilled?
-
-::: {.callout-tip collapse="true"}
-## Question 1 answer
-
-We use Bayes’ Theorem but with uniform priors.
-
-\begin{align*}
-P(\text{skilled}|\text{outperform})&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
-&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{\begin{aligned}P(&\text{outperform}|\text{skilled})P(\text{skilled})\\&+P(\text{outperform}|\text{unskilled})P(\text{unskilled})\end{aligned}} \\[6pt]
-&=\frac{0.8\times 0.5}{0.8\times 0.5+0.4\times 0.5} \\[6pt]
-&=`r round((0.8*0.5)/(0.8*0.5+0.4*0.5), 3)`
-\end{align*}
-
-Starting with uniform priors – effectively ignoring the base rate – gives us a higher probability of 67%.
-:::
-
-
-## Question 7
-
-Consider question 2 above.
-
-Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to:
-
-a) confusion of conditional probabilities
-
-::: {.callout-tip collapse="true"}
-## Question 7a) answer
-
-If a person confuses $P(\text{terrorist | identified})$ with $P(\text{identified | terrorist})$ they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g. identification of cabs problem discussed in class.
-:::
-
-b) people placing the same probability on all possible hypotheses (uniform priors).
-
-::: {.callout-tip collapse="true"}
-## Question 7b) answer
-
-If a person assumed uniform priors on any individual, they would calculate Bayes' Theorem as follows:
-
-$$
-\begin{aligned}
-P(\text{terrorist | identified}) &= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
-&= \dfrac{0.99*0.5}{0.99*0.5+0.001*0.5} \\[12 pt]
-&= 0.999
-\end{aligned}
-$$
-
-This is substantially higher than the actual probability.
-:::
-
-## Question 8
+## The law of small numbers
 
 Lincoln observes performance by fund manager Neville. Neville may be a skilled, mediocre or unskilled manager:
 
@@ -345,7 +351,7 @@ Consider the model we used to examine behaviour involving a belief in the law of
 a\) Lincoln thinks Neville is mediocre. What does Lincoln believe is the probability that Neville beats the market in the first quarter?
 
 ::: {.callout-tip collapse="true"}
-## Question 8a) answer
+## Answer
 
 Lincoln thinks the realisation of Neville's performance is like drawing from an urn with $N=12$ balls. Because he believes Neville is mediocre, he thinks half (6) of the balls are good-performance balls and half (6) are bad-performance balls. The likelihood of drawing a good ball ($G$) the first quarter is $6/12$.
 
@@ -359,7 +365,7 @@ Lincoln thinks the realisation of Neville's performance is like drawing from an 
 b\) Neville beats the market in the first quarter. What does Lincoln believe is the probability he does it again in the second quarter?
 
 ::: {.callout-tip collapse="true"}
-## Question 8b) answer
+## Answer
 
 In Lincoln's mind, the balls are not replaced once drawn. If Neville has a good first quarter, Lincoln believes that only five good balls remain. Therefore, Lincoln believes that the probability of Neville having a good second quarter is $5/11$.
 
@@ -372,7 +378,7 @@ In Lincoln's mind, the balls are not replaced once drawn. If Neville has a good 
 c\) Neville beats the market again. What does Lincoln believe is the probability that he will do so in the third quarter?
 
 ::: {.callout-tip collapse="true"}
-## Question 8c) answer
+## Answer
 
 After two good quarters, Lincoln believes only four good balls remain. Therefore, the probability of Neville having another good quarter is $4/10$. 
 
@@ -385,7 +391,7 @@ After two good quarters, Lincoln believes only four good balls remain. Therefore
 d\) Lincoln observes Jill, who he believes is a skilled fund manager. What does Lincoln believe is the probability of her having 10 consecutive periods of out-performance?
 
 ::: {.callout-tip collapse="true"}
-## Question 8d) answer
+## Answer
 
 Lincoln believes that in 12 quarters Jill will have nine quarters of out-performance. As a result, he does not believe it is possible for her to have ten consecutive periods of out-performance. After nine periods, only three balls are left in the urn. None of those balls are good. 
 
@@ -399,14 +405,14 @@ Lincoln believes that in 12 quarters Jill will have nine quarters of out-perform
 e\) What psychological bias does Lincoln's behaviour reflect? Explain.
 
 ::: {.callout-tip collapse="true"}
-## Question 8e) answer
+## Answer
 
 Each time Neville has a good quarter, Lincoln thinks it is less likely that Neville will have another. This is an example of gambler's fallacy. Lincoln thinks that Neville's sequence of pxerformances should be the typical sequence of a mediocre fund manager, with the same number of good and bad quarters. This leads Lincoln to expect bad quarters to be more likely after a sequence of good quarters.
 
 Similarly for Jill, Lincoln expects a string of success to correct itself and her record to revert to the average for a skilled manager.
 :::
 
-## Question 9
+## Heuristics
 
 For each of the following experiments from Tverksy and Kahneman (1974), explain what heuristic may be leading to the belief or decision.
 
@@ -415,7 +421,7 @@ a\) Tverksy and Kahneman (1974) write:
 >Subjects were shown brief personality descriptions of several individuals, allegedly sampled at random from a group of 100 professionals-engineers and lawyers. The subjects were askcd to assess, for each description, the probability that it belonged to an engineer rather than to a lawyer. In one experimental condition, subjects were told that the group from which the descriptions had been drawn consisted of 70 engineers and 30 lawyers. In another condition, subjects were told that the group consisted of 30 engineers and 70 lawyers. The odds that any particular description belongs to an engineer rather than to a lawyer should be higher in the first condition, where there is a majority of engineers, than in the second condition, where there is a majority of lawyers. Specifically, it can be shown by applying Bayes' rule that the ratio of these odds should be ($.7/.3^2$), or 5.44, for each description. In a sharp violation of Bayes' rule, the subjects in the two conditions produced essentially the same probability judgments.
 
 ::: {.callout-tip collapse="true"}
-## Question 9a) answer
+## Answer
 
 This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:
 
@@ -429,7 +435,7 @@ b\) Tverksy and Kahneman (1974) write:
 >Suppose one samples a word (of three letters or more) at random from an English text. Is it more likely that the word starts with r or that r is the third letter? ... [M]ost people judge words that begin with a given consonant to be more numerous than words in which the same consonant appears in the third position. They do so even for consonants, such as r or k, that are more frequent in the third position than in the first.
 
 ::: {.callout-tip collapse="true"}
-## Question 9b) answer
+## Answer
 
 This behaviour might be explained by availability. Tverksy and Kahneman (1974) write:
 
@@ -451,7 +457,7 @@ while another group estimated the product
 >The median estimate for the ascending sequence was 512, while the median estimate for the descending sequence was 2,250. The correct answer is 40,320.
 
 ::: {.callout-tip collapse="true"}
-## Question 9c) answer
+## Answer
 
 This behaviour might be explained by anchoring and adjustment. Tverksy and Kahneman (1974) write:
 
@@ -463,7 +469,7 @@ d\) Tverksy and Kahneman (1974) write:
 >In considering tosses of a coin for heads or tails ... people regard the sequence H-T-H-T-T-H to be more likely than the sequence H-H-H-T-T-T ... [or] ... the sequence H-H-H-H-T-H.
 
 ::: {.callout-tip collapse="true"}
-## Question 9d) answer
+## Answer
 
 This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:
 
@@ -471,3 +477,79 @@ This behaviour might be explained by representativeness. Tverksy and Kahneman (1
 >
 >[P]eople expect that the essential characteristics of the process will be represented, not only globally in the entire sequence, but also locally in each of its parts. A locally representative sequence, however, deviates systematically from chance expectation: it contains too many alternations and too few runs. Another consequence of the belief in local representativeness is the well-known gambler's fallacy. After observing a long run of red on the roulette wheel. for example, most people erroneously believe that black is now due, presumably because the occurrence of black will result in a more representative sequence than the occurrence of an additional red.
 :::
+
+### The Linda problem
+
+a\) What heuristic can lead to this erroneous assessment?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Representativeness
+:::
+
+
+b\) Explain how that heuristic can lead to this error.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+When judging the probability someone belongs to a class, people instead answer the question "how representative is that person of the class". In this example, Linda was deliberately crafted to be representative of a feminist. As a result, someone using the representativeness heuristic would judge "is a bank teller and is active in the feminist movement" as more representative than "is a bankteller" and hence would judge the former to be more probable.
+:::
+
+
+### The United Nations
+
+a\) What heuristic can lead to this outcome?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Anchoring and adjustment
+:::
+
+b\) Explain how the heuristic can lead to this error.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+When using the anchoring and adjustment, people estimate by starting from an initial value and adjusting from that value to obtain the final estimate.
+
+The errors arises from two sources. People often use a weak or irrelevant anchor. The outcome of the wheel is irrelevant. Sceond, people tend to adjust insufficiently, meaning that the effect of a weak or irrelevant anchor persists.
+:::
+
+
+### Overconfidence
+
+a\) 90% of students believe they will score above the class average in the final exam.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Overplacement.
+
+Overplacement is the erroneous relative judgement that we are better than others.
+:::
+
+
+b\) 90% of students believe they will receive a high distinction.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Overestimation.
+
+Overestimation is the belief that we can perform at a level beyond that which we realistically can.
+:::
+
+c\) Arthur believes with 90% probability that he will score between 74% and 76% in the final exam.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Overprecision.
+
+Overprecision is the tendency to believe that our predictions or estimates are more accurate than they actually are. 
+:::
+
+
