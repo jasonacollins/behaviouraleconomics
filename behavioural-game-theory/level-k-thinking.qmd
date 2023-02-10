@@ -10,9 +10,35 @@ Level-1 players assume other players are level-0 and act optimally conditional o
 
 Level-2 players assume other players are level-1 and act optimally conditional on this assumption.
 
-## Beauty contest with level-k thinking.
+## The beauty contest
 
-Returning to the beauty contest, suppose $p=2/3$.
+From @keynes1936:
+
+> \[P\]rofessional investment may be likened to those newspaper competitions in which the competitors have to pick out the six prettiest faces from a hundred photographs, the prize being awarded to the competitor whose choice most nearly corresponds to the average preferences of the competitors as a whole; so that each competitor has to pick, not those faces which he himself finds prettiest, but those which he thinks likeliest to catch the fancy of the other competitors, all of whom are looking at the problem from the same point of view. It is not a case of choosing those which, to the best of one's judgment, are really the prettiest, nor even those which average opinion genuinely thinks the prettiest. We have reached the third degree where we devote our intelligences to anticipating what average opinion expects the average opinion to be. And there are some, I believe, who practise the fourth, fifth and higher degrees.
+
+This thought experiment has since been developed into a game, the p-beauty contest (@moulin1986). The p-beauty contest runs as follows:
+
+Each of $n$ players pick a number $y\in[0,100]$.
+
+The winner is the player whose chosen number is closest to the mean of all the chosen numbers ($\bar y$) multiplied by a parameter $p$.
+
+That is, the winner is the player with their chosen number closest to $p\bar y$.
+
+$p$ is typically chosen such $0\leq p\leq 1$, with $p=1/2$ and $p=2/3$ common.
+
+Each player should play $y_i=0$. This is the Nash equilibrium for the game. But what actually occurs?
+
+The following charts come from @nagel1995.
+
+::: {#fig-nagel1 layout-ncol="2"}
+![$p=1/2$](img/nagel-1995-12.jpg)
+
+![$p=2/3$](img/nagel-1995-23.jpg)
+
+Choices by players of the p-beauty game
+:::
+
+Suppose $p=2/3$.
 
 Level-0: Players randomly select a number in the interval \[0, ..., 100\].
 
@@ -36,43 +62,10 @@ $$
 
 And so on.
 
-Looking at experimental data with the filter of level-k theory, there are few level-0 players. Most are level-1, level-2 and level-3 players. For example, the data reported in @nagel1995 where $p=2/3$ shows a spike at 33.3, indicative of level-1 players and another at 22.2, indicative of level-2 players.
-
-![$p=2/3$](img/nagel-1995-23.jpg)
+Looking at experimental data with the filter of level-k theory, there are few level-0 players. Most are level-1, level-2 and level-3 players. For example, the data shown above reported in @nagel1995 where $p=2/3$ shows a spike at 33.3, indicative of level-1 players and another at 22.2, indicative of level-2 players.
 
 The lab evidence doesn't necessarily imply level-k is "right model". Data and theory appear to match but it is hard to know whether this is how subjects are thinking.
 
-### Heterogeneous players
-
-Imagine a beauty contest with nine rational and one level-0 player. Each has to guess $p\bar y$where $p=1/2$. The rational players knows that the irrational player picks 50 every time.
-
-Round 1: If the rational players play the Nash equilibrium of $y=0$ then:
-
-$$
-\bar y=\frac{50+0+...+0}{10}=5
-$$
-
-Round 2: If the rational players play $p\bar y=1/2\times 5=2.5$ then:
-
-$$
-\bar y=\frac{50+2.5+...+2.5}{10}=7.25
-$$
-
-Round 3: If the rational players play $p\bar y=1/2\times 7.25=3.625$ then:
-
-$$
-\bar y=\frac{50+3.6+...+3.6}{10}=...
-$$
-
-If we iterate we converge on the rational players all guessing:
-
-```{=tex}
-\begin{align*}
-&p\bar y=\frac{1}{2}\times 9.09=4.55 \\[6pt]
-&\text{with} \\[6pt]
-&\bar y=\frac{50+4.55+...+4.55}{10}=9.09
-\end{align*}
-```
 ## The assignment game with level-k thinking
 
 Consider the following game:

@@ -1,6 +1,6 @@
 # Game theory exercises
 
-## Question 1
+## The cold war
 
 The year is 1964 and the Soviet Union and the United States are in the midst of the cold war.
 
@@ -13,7 +13,7 @@ The payoffs ($x,y$) of each option for the Soviet Union and United States is as 
 a\) What is the Nash equilibrium of this game? What other game does this resemble? 
 
 ::: {.callout-tip collapse="true"}
-## Question 1a) answer
+## Answer
 
 The preferred action in response to the action of the other player are indicated in the below diagram.
 
@@ -29,7 +29,7 @@ b\) In the movie Dr Strangelove, the Soviet Union created a doomsday machine tha
 Explain how the doomsday device could act as a commitment device?
 
 ::: {.callout-tip collapse="true"}
-## Question 1b) answer
+## Answer
 
 By removing dove as a response to hawk, the game effectively changes to the following:
 
@@ -41,12 +41,12 @@ The Soviet Union can now credibly signal that it will respond to hawk with hawk.
 c\) In the movie, the Soviet Union failed to inform the United States of the existence of the device. How could this failure to inform undermine its effectiveness as a commitment device?
 
 ::: {.callout-tip collapse="true"}
-## Question 1c) answer
+## Answer
 
 A commitment will only be effective if it is both observable and irreversible. While the doomsday machine is irreversible, by not being observable it will not change the response of the United States. The United States will think they are playing the game analysed in part a), not that in part b).
 :::
 
-## Question 2
+## Hiring
 
 Robyn is hunting for a new employee. Robyn's company uses highly-technical equipment and needs to invest heavily in training the new employee. If the new employee leaves straight after training, Robyn's company will suffer a net loss from the employee. If the employee stays long-term, they will have a large gain.
 
@@ -61,7 +61,7 @@ a\) Will Robyn offer the position to Sean?
 ![](img/employment-1.jpg)
 
 ::: {.callout-tip collapse="true"}
-## Question 2a) answer
+## Answer
 
 We work through the problem by backward induction.
 
@@ -79,14 +79,14 @@ The subgame-perfect equilibrium is (No offer; State interested, Leave after trai
 b\) What sort of strategic move could help John? What could make the move credible?
 
 ::: {.callout-tip collapse="true"}
-## Question 2b) answer
+## Answer
 
 One option is to sign a binding contract with penalties if he leaves early. Any penalty greater than -1 would make staying more attractive.
 
 A contract is both observable and irreversible (at least without mutual agreement).
 :::
 
-## Question 3
+## Investment
 
 Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by an Marco. Marco is looking for seed funding.
 
@@ -99,7 +99,7 @@ If Linda does not invest, Linda keeps the \$10. The start-up gets \$0.
 a\) Draw the extensive form representation of the above sequential game.
 
 ::: {.callout-tip collapse="true"}
-## Question 3a) answer
+## Answer
 
 ![](img/applied-trust-1.jpg)
 :::
@@ -107,7 +107,7 @@ a\) Draw the extensive form representation of the above sequential game.
 b\) What is the equilibrium of this game if Linda and Marco are purely self-interested?
 
 ::: {.callout-tip collapse="true"}
-## Question 3b) answer
+## Answer
 
 Marco will shutdown (payoff 30 versus payoff of 15), so Linda will not invest (payoff of 10 versus payoff of zero).
 
@@ -115,7 +115,7 @@ Marco will shutdown (payoff 30 versus payoff of 15), so Linda will not invest (p
 
 :::
 
-## Question 4
+## War
 
 Two city states, Atlantis and El Dorado, are divided by a body of water. In the middle is an island that both states claim sovereignty over.
 
@@ -134,7 +134,7 @@ These decisions and the payoffs ($x,y$) from each decision for El Dorado and Atl
 a\) What is the subgame-perfect equilibrium of this game?
 
 ::: {.callout-tip collapse="true"}
-## Question 4a) answer
+## Answer
 
 By backward induction, Atlantis would prefer to retreat (payoff of 2) compared to fighting (payoff of 1). El Dorado then has a choice between attacking (payoff of 3) and conceding (payoff of 2). El Dorado attacks.
 
@@ -148,7 +148,7 @@ b\) An adviser to the Atlantis army suggests that they burn the bridge behind th
 Draw the new extensive form game that would emerge if Atlantis had the option of the burning the bridge. What is the subgame-perfect equilibrium?
 
 ::: {.callout-tip collapse="true"}
-## Question 4b) answer
+## Answer
 
 The new game is as follows (maintaining the payoffs as $x,y$ for El Dorado and Atlantis respectively):
 
@@ -171,4 +171,52 @@ Atlantis burns the bridge.
 ![](img/island-4.jpg)
 
 The subgame-perfect equilibrium is (Burn, Retreat; Attack, Concede).
+:::
+
+## Buying a car
+
+Hayley wants to buy a car. The used-car salesman can sell her a good car (for which he earns a small profit) or a lemon (for which he earns a large profit).
+
+The payoffs (x,y) for each decision are indicated in the game tree below, with $x$ being the Hayley's satisfaction and $y$ being the salesman's profit.
+
+![](img/car-1.jpg){width=60%}
+
+a\) Assume the salesman only cares about his profit. What would the salesman do if Hayley chooses to purchase? Why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The salesman will compare payoffs of 8 for selling a lemon and 5 for selling a good car. He will choose to sell a lemon.
+:::
+
+b\) Given the anticipated choice of the salesman, would Hayley purchase the car? Why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Hayley will compare a payoff of 0 for no purchase and a payoff of -1 for buying a car that will be a lemon. She chooses not to purchase.
+:::
+
+c\) Suppose Hayley can take legal action if she is sold a lemon. If Hayley is successful in court, she will be refunded the purchase price but would suffer a cost of -5 due to the effort involved. Would this change the outcome? Why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+![](img/car-2.jpg){width=80%}
+
+Working by backward induction, Hayley has a choice between taking legal action for a payoff of -5 or not complaining for a payoff of -1. She will not complain.
+
+The rest of the game plays out as per questions a) and b). There is no change to the outcome as she cannot commit to complain in advance. The threat to take legal action is not credible.
+:::
+
+d\) Suppose Hayley has a reputation of being quick to anger and always carrying out her threats. Suppose Hayley would experience satisfaction of +6 from taking legal action (in addition to the effort cost of -5). The salesman knows this and believes it to be a credible commitment. Would this change the outcome? Why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+![](img/car-3.jpg){width=80%}
+
+Hayley now has a choice between a payoff of 1 by taking legal action and a payoff of -1 for accepting the lemon. She would take legal action.
+
+The salesman now has a choice between a payoff of 0 for selling the lemon (as Hayley takes legal action and the sale is refunded) and 5 for selling a good car. He sells the good car
+
+Hayley now has a choice of a payoff of 0 for not purchasing a car, and 5 for purchasing. She makes the purchase and gets a good car.
 :::

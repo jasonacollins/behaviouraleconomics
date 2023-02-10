@@ -1,12 +1,12 @@
 # Preface {.unnumbered}
 
-In these course notes I examine the foundations of behavioural economics.
+In these notes I examine the foundations of behavioural economics.
 
-These course notes are based on an undergraduate subject I teach in as part of UTS’s Bachelor of Economics program, [23005 Behavioural Economics](https://handbook.uts.edu.au/subjects/23005.html).
+These notes are based on an undergraduate subject I teach in as part of UTS’s Bachelor of Economics program, [23005 Behavioural Economics](https://handbook.uts.edu.au/subjects/23005.html).
 
 There are no mathematical prerequisites for this subject. Hence, the mathematics is kept at a basic level.
 
-In these course notes I take a traditional approach to behavioural economics, providing the basic economics foundations and examining how modifications to the core economic axioms lead to new insight. There is ample critique of the field (as you can read [here](https://www.jasoncollins.blog/a-critical-behavioural-economics-and-behavioural-science-reading-list/)), but these course notes are not about that critique. Those foundations can be the launchpad for a critique, and without understanding those foundations the critique can be hollow.
+In these notes I take a traditional approach to behavioural economics, providing the basic economics foundations and examining how modifications to the core economic axioms lead to new insight. There is ample critique of the field (as you can read [here](https://www.jasoncollins.blog/a-critical-behavioural-economics-and-behavioural-science-reading-list/)), but these course notes are not about that critique. Those foundations can be the launchpad for a critique, and without understanding those foundations the critique can be hollow.
 
 These course notes cover the following areas:
 
@@ -14,7 +14,7 @@ These course notes cover the following areas:
 - **Decision making under risk and uncertainty**: The traditional economic approach to decision making under risk and uncertainty, and some empirical anomalies that arise when using this approach.
 - **Prospect theory**: The pre-eminent alternative to expected utility theory, prospect theory, with examples and possible applications.
 - **Inter-temporal choice**: Decision making involving costs and benefits occurring at different times. I look at two types of time preference: exponential discounting and quasi-hyperbolic discounting.
-- **Probability judgment**: Some core concepts of probability judgment and then examine the empirical evidence on how humans do not adhere to these foundational principles.
+- **Beliefs**: Some core concepts on beliefs and probability judgment and the empirical evidence on how humans do not adhere to these foundational principles.
 - **Game theory**: The game theoretic concepts that we use in our analysis of behavioural game theory and social preferences.
 - **Behavioural game theory**: How heterogeneous agents and bounded rationality can change our analysis of economic games.
-- **Social preferences**: How agents might incorporate concerns about the outcomes and beliefs of others into their decisions.
+- **Social preferences**: How agents might incorporate the outcomes and beliefs of others into their decisions.

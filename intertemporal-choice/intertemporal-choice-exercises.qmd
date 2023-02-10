@@ -1,6 +1,6 @@
 # Intertemporal choice exercises
 
-## Question 1
+## Exercise or television?
 
 Olga and Paul can choose one of the following options:
 
@@ -11,7 +11,7 @@ Olga and Paul can choose one of the following options:
 a\) Olga discounts the future exponentially with $\delta=2/3$. At $t=0$, what is Olga’s utility of exercising and watching television? What does Olga do?
 
 ::: {.callout-tip collapse="true"}
-## Question 1a) answer
+## Answer
 
 \begin{align*}
 U_0(exercise)&=u(x_0)+\delta u(x_1) \\
@@ -29,7 +29,7 @@ Olga gets higher discounted utility from exercising, so chooses to exercise.
 b\) Paul discounts the future quasi-hyperbolically with $\beta=3/4$ and $\delta=2/3$. At $t=0$, what is Paul’s utility of exercising and watching television? What does Paul do?
 
 ::: {.callout-tip collapse="true"}
-## Question 1b) answer
+## Answer
 
 \begin{align*}
 U_0(exercise)&=u(x_0)+\beta\delta u(x_1) \\
@@ -44,7 +44,7 @@ U_0(television)&=u(x_0)+\beta\delta u(x_1) \\
 Paul is indifferent between the two options, so could choose either.
 :::
 
-## Question 2
+## Today or tomorrow?
 
 Terry and Andy are given the choice between the following three options:
 
@@ -57,7 +57,7 @@ Terry and Andy are given the choice between the following three options:
 a\) Suppose that Terry discounts the future exponentially with $0<\delta<1$. He is indifferent between A and B at $t=0$. What does this tell you about Terry's $\delta$?
 
 ::: {.callout-tip collapse="true"}
-## Question 2a) answer
+## Answer
 
 The utility of A and B must be equal.
 
@@ -71,7 +71,7 @@ U_0(A)&=U_0(B) \\[6pt]
 b\) Andy discounts the future quasi-hyperbolically with $0<\beta<1$ and $0<\delta<1$. At $t=0$, Andy is indifferent between A and B. What does this tell you about Andy's $\beta$ and $\delta$?
 
 ::: {.callout-tip collapse="true"}
-## Question 2b) answer
+## Answer
 
 The utility of A and B must be equal.
 
@@ -87,7 +87,7 @@ We cannot determine anything else about the two as the discounting between $t=0$
 c\) At $t=0$, Andy is indifferent between B and C. What does this tell you about Andy's $\beta$ and $\delta$?
 
 ::: {.callout-tip collapse="true"}
-## Question 2c) answer
+## Answer
 
 The utility of B and C must be equal.
 
@@ -102,7 +102,7 @@ U_0(B)&=U_0(C) \\[6pt]
 d\) Combining the results of (b) and (c), compute Andy's $\beta$ and $\delta$?
 
 ::: {.callout-tip collapse="true"}
-## Question 2d) answer
+## Answer
 
 We have already computed:
 
@@ -120,14 +120,14 @@ Accordingly, substituting (1) into (2):
 \end{align*}
 :::
 
-## Question 3{#sec-Q3}
+## Today or tonight?{#sec-Q3}
 
 Kate and Jack have utility function $u(x)=x$ and can choose one of \$3 now ($t=0$), \$4 this afternoon (at $t=1$), or \$7 tonight ($t=2$).
 
 a\) Kate is an exponential discounter with $delta=\frac{1}{2}$. What does she choose?
 
 ::: {.callout-tip collapse="true"}
-## Question 3a) answer
+## Answer
 
 We calculate discounted utility of each option and choose the highest.
 
@@ -145,7 +145,7 @@ Kate chooses the $3 now.
 b\) Jack is a hyperbolic discounter with $\beta=\frac{1}{2}$ and $delta=1$ what does Jack choose?
 
 ::: {.callout-tip collapse="true"}
-## Question 3b) answer
+## Answer
 
 You calculate discounted utility of each option and choose the highest.
 
@@ -167,7 +167,7 @@ Although Jack is a hyperbolic discounter, the short-term discount factor is only
 c\) This afternoon ($t=1$) comes and Jack reconsiders his decision. Should he take \$4 this afternoon ($t=1$), or \$7 tonight ($t=2$). What does Jack decide?
 
 ::: {.callout-tip collapse="true"}
-## Question 3c) answer
+## Answer
 
 We calculate discounted utility of each option and choose the highest.
 
@@ -184,7 +184,7 @@ Jack changes his mind and takes the \$4 immediately.
 d\) Why did or did not Jack change his mind?
 
 ::: {.callout-tip collapse="true"}
-## Question 3d) answer
+## Answer
 
 At $t=0$ the difference in discount between the \$4 at $t=1$ and \$7 at $t=2$ is $\delta$. Both are discounted by $\beta$ as neither is immediately available. However, at $t=0$ the difference in discount between the \$4 and \$7 is $\beta\delta$. The \$4 is no longer subject to the immediate discount of $\beta$, making it relatively more attractive.
 :::
@@ -192,7 +192,7 @@ At $t=0$ the difference in discount between the \$4 at $t=1$ and \$7 at $t=2$ is
 e\) Show the answers to parts a) to d) using a diagram.
 
 ::: {.callout-tip collapse="true"}
-## Question 3e) answer
+## Answer
 
 The below figure shows the each of the payoffs that Kate could receive at $t=0,1,2$. The lines represent the discounted utility of each option at each time.
 
@@ -211,14 +211,14 @@ In the next figure we move forward to $t=1$. Jack's preferred option changes. He
 ![](img/Jack2.jpg){width=50%}
 :::
 
-## Question 4
+## Small reward now or large reward later?
 
 a\) Alfred and Blake are exponential discounters. They can choose between a small reward now or a larger reward later. Alfred discounts the future heavily (low $\delta$). Blake does not ($\delta$ close to one).
 
 How might Alfred and Blake’s choices be affected by their discount factor?
 
 ::: {.callout-tip collapse="true"}
-## Question 4a) answer
+## Answer
 
 Each will discount the two rewards, with the size of the discount for the larger reward reflecting the size of the delay relative to the delay for the small reward.
 
@@ -232,14 +232,14 @@ b\) Catherine is a quasi-hyperbolic discounter. She can choose between the same 
 Why did Catherine change her mind?
 
 ::: {.callout-tip collapse="true"}
-## Question 4b) answer
+## Answer
 
 If Catherine prefers the large reward, this means the discounted utility of the larger reward is higher than that for the small reward. As both rewards are experienced with delay, the small and large reward are discounted by the short-term discount factor, plus the exponential discount factor proportional to the delay.
 
 When the small reward becomes available, Catherine no longer applies any discount to the small reward. The exponential discount factor applied to the larger reward also decreases for the time that has passed. Despite the size of the exponential discount being applied to each reward decreasing by the same amount, the removal of the short-term discount factor from the small reward must have been of sufficient that it now has the larger expected utility.
 :::
 
-## Question 5
+## Credit score
 
 A credit score is a score developed by credit agencies and lenders as a measure of how risky a borrower is. The score is derived using data on past behaviour. A person with a higher credit score is considered more likely to repay a loan on time.
 
@@ -248,7 +248,7 @@ Researchers found a correlation between people’s discount factors, $\beta$ and
 What would this correlation be? Explain why you might see this relationship.
 
 ::: {.callout-tip collapse="true"}
-## Question 5 answer
+## Answer
 
 You would expect to see a positive correlation between the credit score and the discount factors.
 
@@ -269,7 +269,7 @@ If someone with low $\delta$ borrowed money with the intention to pay it off in 
 Someone with low $\beta$ may borrow with the intention to pay it off. However, when the day of payment arrives, they may change their mind and prefer not to incur the immediate cost of payment as that exceeds the discounted costs in the future (such as penalty interest and a low credit score). This would also hurt their credit score.
 :::
 
-## Question 6
+## Time inconsistent preferences
 
 Recall the question in @sec-Q3.
 
@@ -280,7 +280,7 @@ Jack's friend Allan is a sophisticated quasi-hyperbolic discounter with $\beta=\
 Does your answer change for Allan? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 6 answer
+## Answer
 
 The behaviour of Jack that we observed in Tutorial 5 was that of a naive hyperbolic discounter. In each period he calculated his preferred option and acted as though he would stick to that decision in the future. He did not anticipate changing his mind at $t=1$.
 
@@ -312,7 +312,7 @@ U_0(\$4\text{ at }t=1)&=\beta\delta\times 4 \\
 At $t=0$ Allan chooses the \$3. His sophistication leads him to preproperate. He takes a lower amount earlier than the naive Jack.
 :::
 
-## Question 7
+## Eating cake
 
 Kelvin and Linda both like chocolate cake. There are two periods in which they can eat cake, $t=1,2$. They receive an immediate benefit of 12 for eating cake at $t=1$ and 6 for eating cake at $t=2$
 
@@ -327,7 +327,7 @@ Kelvin is naive, Linda is sophisticated.
 a\) When will Kelvin eat?
 
 ::: {.callout-tip collapse="true"}
-## Question 7a) answer
+## Answer
 
 We can calculate utility of eating in each round separately as the utilities are additive.
 
@@ -381,7 +381,7 @@ Kelvin, being naive, thinks he will stick to his initial plan of eating at $t=1$
 b\) When will Linda eat?
 
 ::: {.callout-tip collapse="true"}
-## Question 7b) answer
+## Answer
 
 Linda is sophisticated and solves their problem backward.
 
@@ -419,7 +419,7 @@ At $t=0$, Linda can now see that she will eat at $t=1$ and $t=2$ no matter what 
 c\) Assume that Kelvin and Linda can pay price $p$ at $t=0$ for a binding commitment device that prevents them from eating more than they initially plan. Assuming costs and benefits are measured in dollars, what is the maximum price $p$ that Linda would pay to use the commitment device?
 
 ::: {.callout-tip collapse="true"}
-## Question 7c) answer
+## Answer
 
 From the perspective of period $t=0$ all costs and benefits are discounted. At $t=0$:
 
@@ -441,12 +441,12 @@ From the perspective of $t=0$, eating at $t=2$ has negative discounted utility. 
 d\) What happens to Kelvin, a naive agent, in the presence of the commitment device?
 
 ::: {.callout-tip collapse="true"}
-## Question 7a) answer
+## Answer
 
 Being naive, Kelvin does not perceive the necessity of using a commitment device as he trusts he will comply with his plans.
 :::
 
-## Question 8
+## Completing an assignment
 
 Your assignment is due today at $t=0$.
 
@@ -469,7 +469,7 @@ You are a hyperbolic discounter with $\beta=0.75$ and $\delta=1$.
 a\) When do you finish if you are naive?
 
 ::: {.callout-tip collapse="true"}
-## Question 8a) answer
+## Answer
 
 At $t=0$ you have 7 possible plans to consider: finishing your assignment at $t=0$ through to $t=6$. You compare the discounted utilities from the various plans as follows.
 
@@ -503,7 +503,7 @@ This pattern continues day after day, always intending to complete tomorrow, unt
 b\) When do you finish if you are sophisticated?
 
 ::: {.callout-tip collapse="true"}
-## Question 8b) answer
+## Answer
 
 If you are sophisticated, you will start at the end and work backwards.
 
@@ -552,7 +552,7 @@ At $t=0$, you choose between:
 You will not change your intentions further and will complete the assignment at $t=2$.
 :::
 
-## Question 9
+## Saving for retirement
 
 Citizens of Perthia have the choice between the following options:
 
@@ -562,7 +562,7 @@ Citizens of Perthia have the choice between the following options:
 a\) Ellie is an exponential discounter with $\delta=3/4$. What does Ellie choose at $t=0$ and $t=1$? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 9a) answer
+## Answer
 
 ```{=tex}
 \begin{align*}
@@ -590,7 +590,7 @@ Ellie intends to save in both periods and does so. Ellie is time consistent. Kno
 b\) Freddie is a naive quasi-hyperbolic discounter with $\beta=1/4$ and $\delta=1$. What does Freddie choose at $t=0$ and $t=1$? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 9b) answer
+## Answer
 
 ```{=tex}
 \begin{align*}
@@ -624,7 +624,7 @@ At $t=1$ Freddie chooses to spend Freddie has changed his mind. He is time incon
 c\) Grant is a sophisticated quasi-hyperbolic discounter with $\beta=1/4$ and $\delta=1$. What does Grant do? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 9c) answer
+## Answer
 
 Grant works through his options using backward induction.
 
@@ -654,7 +654,7 @@ Ultimately, Grant takes the same action as Freddie. However, he can see his futu
 d\) Grant is offered the opportunity to bind himself to a course of action at $t=0$ at the cost of 1 point of utility at $t=2$. What does Grant do?
 
 ::: {.callout-tip collapse="true"}
-## Question 9d) answer
+## Answer
 
 In the presence of the commitment device, Grant now has two feasible options to consider at $t=0$.
 
@@ -671,4 +671,122 @@ U_0(spend)&=\beta\delta u_1+\beta\delta^2 u_2 \\
 ```
 
 Grant now chooses to commit at a price of one unit of utility at $t=2$.
+:::
+
+## Work or party?
+
+Ruby is a sophisticated present-biased agent with $\beta=0.5$ and $\delta=1$. She has utility function $u(x)=x$.
+
+Ruby is deciding today ($t=0$) whether she will either:
+
+- work tomorrow ($t=1$) for \$10 income to be received the day after she works ($t=2$) or
+- party tomorrow ($t=1$) for immediate utility of 8 but no income.
+
+That is, she is deciding between (2, 10) and (1,8).
+
+a\) What does Ruby decide?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Ruby is sophisticated, so uses backward induction to decide her preferred course of action.
+
+At $t=2$ there is no decision to make. Ruby bears the consequences of her earlier decisions.
+
+At $t=1$ she compares the discounted utility of the two options:
+
+\begin{align*}
+U_1(\text{work})&=\beta\delta u(\text{work}) \\
+&=0.5\times 1\times 10 \\
+&=5 \\
+\\
+U_1(\text{party})&=u(\text{party}) \\
+&=8
+\end{align*}
+
+At $t=1$ the discounted utility partying is higher than that of working ($U_1(\text{party})>U_1(\text{work})$), so Penny prefers to party.
+
+At $t=0$ Penny knows that she will party at $t=1$ no matter what she decides at $t=0$, so she accepts that she will party.
+:::
+
+b\) Ruby is able to commit to working at $t=1$ by posting a letter at $t=0$ declining the party invitation (at no cost). Once she sends the letter, she cannot change her mind. Will she decline the invitation?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The presence of the commitment device allows Ruby to include the option of working when she makes a decision at $t=0$. She will now compare the discounted utility of using the commitment device with the discounted utility of working.
+
+\begin{align*}
+U_0(\text{commit+work})&=\beta\delta^2 u(\text{commit+work}) \\
+&=0.5\times 1^2\times 10 \\
+&=5 \\
+\\
+U_0(\text{party})&=\beta\delta u(\text{party}) \\
+&=0.5\times 1\times 8 \\
+&=4
+\end{align*}
+
+$U_0(\text{commit+work})>U_0(\text{party})$, so Ruby commits to working by declining the invitation.
+:::
+
+c\) Suppose declining the party invitation comes at a cost to Ruby's reputation at $t=2$. What is the largest utility cost that Ruby would be willing to incur such that she would still use the commitment device of declining the invitation?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The largest cost she would be willing to incur is the cost where the discounted utility of each option is equal. Setting the cost as $c$:
+
+\begin{align*}
+U_0(\text{commit})&=\beta\delta^2 u(\text{work}-c) \\
+&=0.5\times 1^2\times (10-c) \\
+&=5-0.5c \\
+\\
+U_0(\text{party})&=\beta\delta u(\text{party}) \\
+&=0.5\times 1\times 8 \\
+&=4
+\end{align*}
+
+Ruby will be indifferent where $5-0.5c=4$ or where $c=2$. The largest utility cost she would be willing to incur is 2.
+
+:::
+
+d\) Victoria is a naive present-biased agent with $\beta=0.5$ and $\delta=1$. She has utility function $u(x)=x$.
+
+Victoria faces the same choice as Ruby and also has the chance to decline at $t=0$ the party invitation at a cost to Victoria's reputation at $t=2$. Will Victoria decline the invitation?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+As Victoria has the same discount function as Ruby, we know from question b) that Victoria will decide to work at $t=0$. We also know from question a) that she will then change her mind and party at $t=1$.
+
+However, as Victoria is naive she does not see her future self-control problem and does not have the foresight to realise at $t=0$ that she will not work as planned. As a result, she would see no need in the commitment device and would not be willing to incur any cost to use it.
+:::
+
+## Buy-now pay-later
+
+Buy-now pay-later works as follows: a person purchases an item with an initial payment of one-quarter of the purchase price. They get access to the purchased item immediately. They then pay three equal instalments each fortnight until they have paid for the purchase in full. If they fail to make a payment on time, they are required to pay a fee of $10 and are barred from using the buy-now pay-later facility in the future.
+
+Vernon used a buy-now pay-later provider to purchase a new jacket for \$200. He paid \$50 on the day of the purchase and is now required to pay the next \$50 instalment in two weeks. That is, Vernon's schedule of costs and benefits is:
+
+- Purchase date: Gains jacket and pays $50
+- In two weeks: Pays $50
+- In four weeks: Pays $50
+- In six weeks: Pays $50
+
+At that time of the purchase Vernon intends to pay for the jacket as required by the buy-now pay-later provider in two, four and six weeks.
+
+Two weeks after the purchase when his payment became due Vernon changed his mind and did not make the payment. He purchased a carton of beer for a party that night with the money instead. Vernon's options and the cost and benefits of those options had not changed since the purchase date.
+
+Is Vernon an exponential discounter or present-biased? Why? Explain why Vernon changed his mind. 
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+As Vernon has exhibited time inconsistent behaviour, he must be present-biased. An exponential discounter would be time consistent.
+
+A present-based person subjects costs and benefits experienced with any delay to a short-term discount factor.
+
+When Vernon purchased the jacket, the benefit of the jacket and the cost of \$50 would not have been subject to any discount. The cost of the three future payments (or the benefit of alternative uses of that money such as purchasing beer) would be subject to the short-term discount. Any fee for failing to make a payment and the loss of the buy-now pay-later facility for that failure would also be subject to that short-term discount factor.
+
+When the next payment is due, the cost of that payment (or the benefit of the beer) is no longer subject to the short-term discount factor, whereas any fee from failing to make the payment and the loss of the facility are still subject to that short-term discount factor. As a result, cost of the payment / benefit of the beer now has relatively greater weight than the future costs, leading Vernon to change his mind.
 :::

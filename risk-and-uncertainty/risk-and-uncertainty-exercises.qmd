@@ -1,11 +1,11 @@
 # Risk and uncertainty exercises
 
-## Question 1: Expected value
+## Expected value of roulette
 
 You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36). If you make a straight up bet on one of the 37 single numbers, you are paid \$35 for every dollar you bet. What is the expected value of a \$20 bet.
 
 ::: {.callout-tip collapse="true"}
-## Question 1 answer
+## Answer
 
 The expected value of the Roulette bet is:
 
@@ -16,7 +16,7 @@ E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
 \end{align*}
 :::
 
-## Question 2: Expected value
+## Expected value of insurance
 
 An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for \$1100.
 
@@ -25,7 +25,7 @@ a\) What is the expected value of purchasing insurance?
 b\) What is the expected value of not purchasing insurance?
 
 ::: {.callout-tip collapse="true"}
-## Question 2 answer
+## Answer
 
 a\) What is the expected value of purchasing insurance?
 
@@ -44,7 +44,7 @@ E[\text{don't}]&=P_{\text{burn}}*-value_{\text{house}} \\
 \end{align*}
 :::
 
-## Question 3: Expected utility
+## A bet or a certain payment?
 
 Anika is an expected utility maximiser with the following utility function:
 
@@ -60,7 +60,7 @@ Anika has zero wealth besides this offer.
 a\) What is the expected value of option A)?
 
 ::: {.callout-tip collapse="true"}
-## Question 3(a) answer
+## Answer
 
 The expected value of option A) is:
 
@@ -73,10 +73,10 @@ E[A]&=\sum_{i=1}^n p_ix_i \\[12pt]
 ```
 :::
 
-b\) Will Anika choose A) or B)? Why?
+b\) Will Anika choose A or B? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 3(b) answer
+## Answer
 
 We need to determine the expected utility of each option. Anika will selection the option with the highest expected utility.
 
@@ -105,7 +105,7 @@ Anika will choose option B) as it gives her higher expected utility. Anika is ri
 c\) What is the certainty equivalent of option A?
 
 ::: {.callout-tip collapse="true"}
-## Question 3(c) answer
+## Answer
 
 To calculate the certainty equivalent of option A, we calculate what payment with certainty would deliver equivalent expected utility. That is:
 
@@ -124,12 +124,12 @@ The certainty equivalent of option A is \$2.50. That is, Anika would be indiffer
 d\) Draw a graph showing Anika's utility curve, the expected value of option A, the expected utility of options A) and B) and the certainty equivalent of option A).
 
 ::: {.callout-tip collapse="true"}
-## Question 3(d) answer
+## Answer
 
 ![](img/expected-utility-exercises-question-1.jpg)
 :::
 
-## Question 4: Expected utility
+## A 50:50 gamble
 
 Consider the following gamble:
 
@@ -140,7 +140,7 @@ This gamble provides a 50% chance of winning \$550 and a 50% chance of losing \$
 a\) Would a risk neutral agent (who maximises expected value) be willing to pay \$20 to play this gamble? What is the most they would be willing to pay to play?
 
 ::: {.callout-tip collapse="true"}
-## Question 4(a) answer
+## Answer
 
 The expected value of the gamble is:
 
@@ -170,7 +170,7 @@ As the expected value is positive, the agent would be willing to pay \$20.
 b\) Would a risk averse expected utility maximiser with wealth \$1000 and utility function $U(x)=x^{1/2}$ be willing to pay \$20 to play this gamble? What is the most they would be willing to pay to play?
 
 ::: {.callout-tip collapse="true"}
-## Question 4(b) answer
+## Answer
 
 The expected utility of the gamble for the risk averse agent if they paid \$20 to play is:
 
@@ -220,7 +220,7 @@ The certainty equivalent of the gamble is \$952.67. The agent would be willing t
 c\) Would the expected utility maximiser with utility function $U(x)=x^{1/2}$ change their decision if they had \$1 million in wealth? Explain.
 
 ::: {.callout-tip collapse="true"}
-## Question 4(c) answer
+## Answer
 
 If they now have \$1 million in wealth, we simply repeat the calculations above with the new wealth.
 
@@ -266,21 +266,187 @@ The agent would be willing to pay up to \$`r W-1000000` for the gamble. This is 
 Intuitively, as the agent's wealth increases their utility function becomes increasingly linear (second derivative approaches zero) and they become closer to risk neutral.
 :::
 
-## Question 5: Expected utility: insurance
+## A 60:40 gamble
+
+Penny is an expected utility maximiser with utility function $u(x)=ln(x)$ and wealth of \$300.
+
+Penny is offered the following bet A:
+
+- a 60% probability to win \$150
+- a 40% probability to lose \$100.
+
+a\) Does Penny accept bet A?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Penny compares the utility of taking versus not taking the bet:
+
+\begin{align*}
+U(\text{A})&=p_1u(x_1)+p_2u(x_2) \\
+&=0.6ln(W+150)+0.4ln(W-100) \\
+&=0.6ln(450)+0.4ln(200) \\
+&=`r round(0.6*log(450)+0.4*log(200), 3)` \\
+\\
+U(W)&=ln(W) \\
+&=ln(300) \\
+&=`r round(log(300), 3)`
+\end{align*}
+
+$U(A)>U(W)$, so Penny accepts the bet.
+:::
+
+b\) Following some bad economic news, Penny wealth declines to \$150.
+
+Penny is offered bet A again. Does Penny accept the bet?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Penny compares the utility of taking versus not taking the bet:
+
+\begin{align*}
+U(\text{A})&=p_1u(x_1)+p_2u(x_2) \\
+&=0.6ln(W+150)+0.4ln(W-100) \\
+&=0.6ln(300)+0.4ln(50) \\
+&=`r round(0.6*log(300)+0.4*log(50), 3)` \\
+\\
+U(W)&=ln(W) \\
+&=ln(150) \\
+&=`r round(log(150), 3)`
+\end{align*}
+
+$U(A)<U(W)$, so Penny rejects the bet.
+:::
+
+## Another 60:40 gamble
+
+Gamble A is as follows:
+
+(\$100, 0.6; -\$100, 0.4)
+
+This is a gamble with a 60% chance of winning \$100 and a 40% chance of losing \$100.
+
+a\) Would a risk neutral decision-maker (who maximises expected value) be willing to pay \$10 to play gamble A? What is the most they would be willing to pay to play?
+
+::: {.callout-tip collapse="true"}
+## Answer
+A risk neutral decision maker will accept any offer with positive expected value. The expected value of the bet is:
+
+\begin{align*}
+E[A]&=p_1x_1+p_2x_2 \\
+&=0.6*100+0.4*(-100) \\
+&=\$`r 0.6*100+0.4*(-100)`
+\end{align*}
+
+The risk neutral decision maker would pay $10 as this is less than the expected value of the bet. They would be willing to pay up to the expected value of the bet: \$20. At that point they would be indifferent between paying for the bet and refusing the bet.
+:::
+
+b\) Would an expected utility maximiser with wealth \$200 and utility function $U(x)=ln(x)$ be willing to pay \$10 to play gamble A? What is the most they would be willing to pay to play?
+
+::: {.callout-tip collapse="true"}
+## Answer
+The expected utility maximiser will play if their utility from playing and paying is greater than their utility of refusing.
+
+\begin{align*}
+U(W)&=ln(W) \\
+&=ln(\$200) \\
+&=`r log(200)` \\
+\\
+E[U(A-c)]&=p_1U(x_1)+p_2U(x_2) \\
+&=0.6U(W+100-10)+0.4U(W-100-10) \\
+&=0.6ln(200+100-10)+0.4ln(200-100-10) \\
+&=`r 0.6*log(200+100-10)+0.4*log(200-100-10)`
+\end{align*}
+
+$U(W)>U(A-c)$ so the decision maker will not be willing to pay \$10.
+
+To determine the most they would be willing to pay, we will first check whether they will pay any positive sum. We will do that by examining the expected utility of the gamble with no payment.
+
+\begin{align*}
+E[U(A)]&=p_1U(x_1)+p_2U(x_2) \\
+&=0.6U(W+100)+0.4U(W-100) \\
+&=0.6ln(200+100)+0.4ln(200-100) \\
+&=`r b1<-0.6*log(200+100)+0.4*log(200-100); b1`
+\end{align*}
+
+$U(W)>U()$ so the decision maker will not be willing to pay any amount. In fact, they would pay to avoid the bet.
+
+To calculate how much, we determine what the certainty equivalent of the bet is:
+
+\begin{align*}
+U(CE)&=E[U(A)] \\
+ln(CE)&=`r b1`\\
+CE&=e^{`r b1`} \\
+&=\$`r b2<-round(exp(b1),2)`
+\end{align*}
+
+Having wealth of \$200 and the bet is the equivalent of having wealth of \$`r b2`. They would be willing to pay up to \$`r 200-b2` to avoid the bet.
+:::
+
+c\) Would the expected utility maximiser with utility function change their decision if they had \$1000 in wealth? Explain.
+
+::: {.callout-tip collapse="true"}
+## Answer
+The expected utility maximiser will play if their utility from playing and paying is greater than their utility of refusing.
+
+\begin{align*}
+U(W)&=ln(W) \\
+&=ln(\$1000) \\
+&=`r log(1000)` \\
+\\
+E[U(A-c)]&=p_1U(x_1)+p_2U(x_2) \\
+&=0.6U(W+100-10)+0.4U(W-100-10) \\
+&=0.6ln(1000+100-10)+0.4ln(1000-100-10) \\
+&=`r 0.6*log(1000+100-10)+0.4*log(1000-100-10)`
+\end{align*}
+
+$U(W)<U(A-c)$ so the decision maker is now willing to pay \$10.
+
+As the agent’s wealth increases their utility function becomes increasingly linear (second derivative approaches zero) and they become closer to risk neutral. As a result, the positive expected value bet becomes increasingly attractive.
+:::
+
+d\) At what wealth is the expected utility maximiser with utility function $U(x)=ln(x)$ indifferent between accepting gamble A or not?
+
+::: {.callout-tip collapse="true"}
+## Answer
+The expected utility maximiser will be indifferent when:
+
+\begin{align*}
+U(W)&=E[U(A)] \\
+U(W)&=0.6U(W+100)+0.4U(W-100) \\
+ln(W)&=0.6ln(W+100)+0.4ln(W-100)
+\end{align*}
+
+There isn't a simple closed form solution to this equation, but we know from questions b) and c) that $W$ is somewhere between \$200 and \$1000.
+
+If we wanted to calculate exact solution, you could use tool such as Mathematica or Matlab to solve, write a short code to solve in R or even iterate toward a solution using Excel. Below is example code in R.
+```{r}
+equation <- function(W){
+  log(W) - 0.6 * log(W + 100) - 0.4 * log(W - 100)
+}
+
+indifference <- uniroot(equation, c(200, 1000))
+```
+
+The expected utility maximiser is indifferent when $W=$\$`r round(indifference$root, 2)`.
+:::
+
+## Purchasing insurance
 
 An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for \$1100.
 
 a\) Would a risk neutral agent purchase the insurance?
 
 ::: {.callout-tip collapse="true"}
-## Question 5a) answer
+## Answer
 We have already calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk neutral agent would not purchase the insurance.
 :::
 
 b\) Suppose an agent has a logarithmic utility function ($U(x)=\ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000. Would this agent purchase the insurance? Are they risk seeking, risk neutral or risk averse?
 
 ::: {.callout-tip collapse="true"}
-## Question 5b) answer
+## Answer
 \begin{align*}
 E[U(\text{purchase})]&=\ln(W-premium) \\
 &=\ln(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
@@ -296,7 +462,20 @@ The expected utility of purchasing insurance is greater than the expected utilit
 What is the intuition for this agent's purchase of insurance? Diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth (e.g. $U(\$0)+U(\$200)<U(\$100)+U(\$100)$). Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.
 :::
 
-## Question 6: An anomaly in expected utility
+## Insurance but not a lottery ticket
+
+In your own words but using concepts from this subject explain why a risk averse agent who makes decisions according to expected utility theory might purchase insurance but not a lottery ticket.
+
+::: {.callout-tip collapse="true"}
+## Answer
+Both lotteries and insurance have a negative expected value.
+
+The risk averse agent will typically reject a lottery as it has a small probability of a large win for the price of a small loss. Due to diminishing marginal returns, the average weight given to each dollar in the large gain is weighted much less than the average weight given to each dollar in the small price. This makes the lottery unattractive.
+
+In contrast, a risk averse agent may purchase insurance as for a small price they can avoid the possibility of a large loss. Due to diminishing marginal returns, the large loss can have much higher average weight given to each dollar than to the weight given to each dollar for the small premium.
+:::
+
+## An anomaly in expected utility
 
 Consider the following two choices:
 
@@ -329,7 +508,7 @@ Many people pick B for Choice 1 and A' for Choice 2.
 Does this pair of choices conform with Expected Utility Theory? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 6 answer
+## Answer
 According to Expected Utility Theory, if an agent selects B:
 
 ```{=tex}

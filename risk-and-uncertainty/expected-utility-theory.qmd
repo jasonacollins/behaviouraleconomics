@@ -60,4 +60,4 @@ For a risk averse person, the certainty equivalent is equal to the expected valu
 
 For a risk seeking person, the certainty equivalent is more than the expected value of the gamble. The gamble has value in and of itself.
 
-![](img/risk-seeking.jpg)
+![](img/risk-seeking.png)

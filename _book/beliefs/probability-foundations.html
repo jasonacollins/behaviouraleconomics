@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Notes on behavioural economics - 31&nbsp; Probability foundations</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../beliefs/heuristics.html" rel="next">
+<link href="../beliefs/beliefs.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Notes on behavioural economics - 31&nbsp; Probability foundations">
+<meta property="og:description" content="The probability of an outcome is the chance with which it occurs.">
+<meta property="og:site-name" content="Notes on behavioural economics">
+<meta name="twitter:title" content="Notes on behavioural economics - 31&nbsp; Probability foundations">
+<meta name="twitter:description" content="The probability of an outcome is the chance with which it occurs.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes on behavioural economics</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Course-notes-on-behavioural-economics.pdf">
+ <span class="menu-text">PDF version</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jasonacollins"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability foundations</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../what-is-behavioural-economics.html" class="sidebar-item-text sidebar-link">What is behavioural economics?</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">Economic foundations</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html" class="sidebar-item-text sidebar-link">Decision making under risk and uncertainty</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-value.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Expected value</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/axioms-for-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/expected-utility-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Expected utility examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/anomalies-of-expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Anomalies of expected utility theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../risk-and-uncertainty/risk-and-uncertainty-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Risk and uncertainty exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../prospect-theory/prospect-theory.html" class="sidebar-item-text sidebar-link">Prospect theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reference-dependence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reference dependence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/loss-aversion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Loss aversion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reflection-effect.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The reflection effect</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/value-function.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The value function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/probability-weighting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Probability weighting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-implementation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prospect theory exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../intertemporal-choice/intertemporal-choice.html" class="sidebar-item-text sidebar-link">Intertemporal choice</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exponential discounting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Exponential discounting examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-anomalies.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Exponential discounting anomalies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Present bias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Present bias examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/sophisticated-present-bias.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Sophisticated present bias</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/commitment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Commitment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Preference over profiles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Intertemporal choice exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../beliefs/beliefs.html" class="sidebar-item-text sidebar-link">Beliefs</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../beliefs/probability-foundations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability foundations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../beliefs/heuristics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Heuristics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../beliefs/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../beliefs/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../beliefs/overconfidence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../beliefs/beliefs-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../game-theory/game-theory.html" class="sidebar-item-text sidebar-link">Game theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/sequential-games.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Sequential games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/asymmetric-information.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Asymmetric information</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/strategic-moves-and-commitment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Strategic moves and commitment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/game-theory-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Game theory exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../behavioural-game-theory/behavioural-game-theory.html" class="sidebar-item-text sidebar-link">Behavioural game theory</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/level-k-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Level-k thinking</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/asymmetric-information.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Asymmetric information</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/emotions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Emotions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/behavioural-game-theory-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Behavioural game theory exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../social-preferences/social-preferences.html" class="sidebar-item-text sidebar-link">Social preferences</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/distribution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reputation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Reputation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reciprocity.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Reciprocity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/social-preferences-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Social preferences examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/social-preferences-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Social preferences exercises</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#definitions-and-axioms" id="toc-definitions-and-axioms" class="nav-link active" data-scroll-target="#definitions-and-axioms"><span class="toc-section-number">31.1</span>  Definitions and axioms</a>
+  <ul class="collapse">
+  <li><a href="#rule-1" id="toc-rule-1" class="nav-link" data-scroll-target="#rule-1"><span class="toc-section-number">31.1.1</span>  Rule 1</a></li>
+  <li><a href="#rule-2" id="toc-rule-2" class="nav-link" data-scroll-target="#rule-2"><span class="toc-section-number">31.1.2</span>  Rule 2</a></li>
+  <li><a href="#rule-3" id="toc-rule-3" class="nav-link" data-scroll-target="#rule-3"><span class="toc-section-number">31.1.3</span>  Rule 3</a></li>
+  <li><a href="#rule-4" id="toc-rule-4" class="nav-link" data-scroll-target="#rule-4"><span class="toc-section-number">31.1.4</span>  Rule 4</a></li>
+  </ul></li>
+  <li><a href="#conditional-probability" id="toc-conditional-probability" class="nav-link" data-scroll-target="#conditional-probability"><span class="toc-section-number">31.2</span>  Conditional probability</a>
+  <ul class="collapse">
+  <li><a href="#formula" id="toc-formula" class="nav-link" data-scroll-target="#formula"><span class="toc-section-number">31.2.1</span>  Formula</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="toc-section-number">31.2.2</span>  Example</a></li>
+  <li><a href="#the-monty-hall-problem" id="toc-the-monty-hall-problem" class="nav-link" data-scroll-target="#the-monty-hall-problem"><span class="toc-section-number">31.2.3</span>  The Monty Hall problem</a></li>
+  </ul></li>
+  <li><a href="#bayes-rule" id="toc-bayes-rule" class="nav-link" data-scroll-target="#bayes-rule"><span class="toc-section-number">31.3</span>  Bayes’ rule</a>
+  <ul class="collapse">
+  <li><a href="#bayes-rule-example-1" id="toc-bayes-rule-example-1" class="nav-link" data-scroll-target="#bayes-rule-example-1"><span class="toc-section-number">31.3.1</span>  Bayes’ rule example 1</a></li>
+  <li><a href="#bayes-rule-example-2" id="toc-bayes-rule-example-2" class="nav-link" data-scroll-target="#bayes-rule-example-2"><span class="toc-section-number">31.3.2</span>  Bayes’ rule example 2</a></li>
+  <li><a href="#bayes-rule-example-3" id="toc-bayes-rule-example-3" class="nav-link" data-scroll-target="#bayes-rule-example-3"><span class="toc-section-number">31.3.3</span>  Bayes’ rule example 3</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability foundations</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="definitions-and-axioms" class="level2" data-number="31.1">
+<h2 data-number="31.1" class="anchored" data-anchor-id="definitions-and-axioms"><span class="header-section-number">31.1</span> Definitions and axioms</h2>
+<p>The probability of an outcome is the chance with which it occurs. We denote the probability of outcome <span class="math inline">A</span> as <span class="math inline">P(A)</span>, where <span class="math inline">P(\cdot)</span> represents a probability function that assigns a real number to each event.</p>
+<p>The probability function has the following features.</p>
+<section id="rule-1" class="level3" data-number="31.1.1">
+<h3 data-number="31.1.1" class="anchored" data-anchor-id="rule-1"><span class="header-section-number">31.1.1</span> Rule 1</h3>
+<p><span class="math inline">0 \leq P(A) \leq 1</span>.</p>
+<p>That is, the probability of outcome <span class="math inline">A</span> lies between 0 and 1.</p>
+<p>For example, the probability of drawing the Ace of Spades from a full deck of 52 cards is 1⁄52 or ~0.02.</p>
+<p>The probability of flipping a head with a fair coin is 1⁄2 or 0.5.</p>
+</section>
+<section id="rule-2" class="level3" data-number="31.1.2">
+<h3 data-number="31.1.2" class="anchored" data-anchor-id="rule-2"><span class="header-section-number">31.1.2</span> Rule 2</h3>
+<p>The sum of the probabilities of all outcomes in the outcome space equals 1.</p>
+<p>For example, if we have 52 possible cards we can draw from the deck, each with 1⁄52 probability, the sum of all probabilities is:</p>
+<p><span class="math display">
+\sum_{n=1}^{n=52}\frac{1}{52}=1
+</span></p>
+</section>
+<section id="rule-3" class="level3" data-number="31.1.3">
+<h3 data-number="31.1.3" class="anchored" data-anchor-id="rule-3"><span class="header-section-number">31.1.3</span> Rule 3</h3>
+<p>If outcomes <span class="math inline">A</span> and <span class="math inline">B</span> are mutually exclusive:</p>
+<p><span class="math inline">P(A \text{ or } B)=P(A \cup B)=P(A)+P(B)</span>.</p>
+<p>For example, if we have a deck with 52 cards, the probability of pulling out an Ace with a single draw is:</p>
+<p><span class="math display">\begin{align*}
+P(A\spadesuit \cup A\heartsuit \cup A\diamondsuit \cup A\clubsuit)&amp;=P(A\spadesuit)+P(A\heartsuit)+P(A\diamondsuit)+P(A\clubsuit) \\
+&amp;=\frac{1}{52}+\frac{1}{52}+\frac{1}{52}+\frac{1}{52} \\
+&amp;=\frac{4}{52}
+\end{align*}</span></p>
+<p>If outcomes <span class="math inline">A</span> and <span class="math inline">B</span> are not mutually exclusive:</p>
+<p><span class="math inline">P(A \cup B)=P(A)+P(B)-P(A\cap B)</span></p>
+</section>
+<section id="rule-4" class="level3" data-number="31.1.4">
+<h3 data-number="31.1.4" class="anchored" data-anchor-id="rule-4"><span class="header-section-number">31.1.4</span> Rule 4</h3>
+<p>If outcomes <span class="math inline">A</span> and <span class="math inline">B</span> are independent:</p>
+<p><span class="math inline">P(A \text{ and } B)=P(A \cap B)=P(A)+P(B)</span>.</p>
+<p>where <span class="math inline">P(A \cap B)</span> is the probability of both outcome <span class="math inline">A</span> and <span class="math inline">B</span>. That is, the conjunction of two independent outcomes is the product of their probabilities.</p>
+<p>For example, suppose we draw a single card from a decks of cards, place that card back in the deck, and then make another draw. The probability of drawing the Ace of Spades in either draw is 1⁄52. The probability of drawing the Ace of Spades twice is:</p>
+<p><span class="math display">\begin{align*}
+P(A\spadesuit \cap A\spadesuit)&amp;=P(A\spadesuit)P(A\spadesuit) \\
+&amp;=\frac{1}{52}+\frac{1}{52} \\
+&amp;=\frac{1}{2704}
+\end{align*}</span></p>
+<p>Note: if <span class="math inline">A</span> and <span class="math inline">B</span> are mutually exclusive, they are not independent and <span class="math inline">P(A \cap B)=0</span>.</p>
+</section>
+</section>
+<section id="conditional-probability" class="level2" data-number="31.2">
+<h2 data-number="31.2" class="anchored" data-anchor-id="conditional-probability"><span class="header-section-number">31.2</span> Conditional probability</h2>
+<p>Drawing a card from a deck of cards with replacement means that whatever card was drawn in the first draw does not affect the probability of the outcome from the second draw. Each draw is independent of the other.</p>
+<p>What if you draw two cards from the same deck without replacement?</p>
+<p>In that case, the two draws are not independent of each other. For instance, if the Ace of Spades is pulled out first, the second card cannot be the Ace of Spades. We say here that the probability of drawing an Ace of Spades on the second draw is conditional on the result of the first draw.</p>
+<p>When one outcome is conditional on another, such as the probability of outcome <span class="math inline">A</span> conditional on outcome <span class="math inline">B</span> occurring, we write this conditional probability as <span class="math inline">P(A|B)</span>.</p>
+<p>Suppose we draw two cards from a deck without replacement. What is the probability of drawing an Ace for both draws?</p>
+<p>We know that the probability of drawing an Ace on the second draw is affected by the first draw. If the first card is an Ace, there is one less Ace in the deck that could be pulled on the second draw.</p>
+<p>The probability of drawing an Ace on the first draw is 4⁄52. If an Ace is drawn in the first draw, the probability of drawing an Ace on the second is 3⁄51. There is one less Ace and one less card than for the first draw. By multiplying the probability of these two events together we can get the probability of an Ace on both draws:</p>
+<p><span class="math display">\begin{align*}
+P(\text{Ace on first}\cap\text{Ace on sceond})&amp;=P(\text{Ace on first})P(\text{Ace on second}|\text{Ace on first}) \\
+&amp;=\frac{4}{52}\times \frac{3}{51} \\
+&amp;=\frac{1}{221}
+\end{align*}</span></p>
+<section id="formula" class="level3" data-number="31.2.1">
+<h3 data-number="31.2.1" class="anchored" data-anchor-id="formula"><span class="header-section-number">31.2.1</span> Formula</h3>
+<p>We can see that the solution to this problem has taken the form:</p>
+<p><span class="math display">
+P(A\cap B)=P(A|B)P(B)
+</span></p>
+<p>The joint probability of the two outcomes is equal to the probability of <span class="math inline">A</span> conditional on <span class="math inline">B</span> multiplied by the probability of <span class="math inline">B</span>.</p>
+<p>We can rearrange this formula to determine what is the probability of <span class="math inline">A</span> given outcome <span class="math inline">B</span>.</p>
+<p><span class="math display">
+P(A|B)=\frac{P(A\cap B)}{P(B)}
+</span></p>
+<p>If <span class="math inline">A</span> and <span class="math inline">B</span> are independent, <span class="math inline">P(A|B)=P(A)</span> and this simplifies to the formula for calculating the probability of the conjunction of independent outcomes we saw earlier. The equation <span class="math inline">P(A\cap B)=P(A|B)P(B)</span> is a more general version of how to calculate the conjunction of two events.</p>
+<p>Due to symmetry, we can also write the conditional probability as:</p>
+<p><span class="math display">
+P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
+</span></p>
+</section>
+<section id="example" class="level3" data-number="31.2.2">
+<h3 data-number="31.2.2" class="anchored" data-anchor-id="example"><span class="header-section-number">31.2.2</span> Example</h3>
+<p>As a test of this formula, let’s take our previous example of drawing two Aces from the same deck. What is the probability of drawing an Ace on the second draw if you drew an Ace on the first?</p>
+<p><span class="math display">\begin{align*}
+P(\text{Ace on second}|\text{Ace on first})&amp;=\frac{P(\text{Ace on first}\cap\text{Ace on second})}{P(\text{Ace on first})} \\
+&amp;=\frac{1}{221}\times \frac{4}{52} \\
+&amp;=\frac{3}{51}
+\end{align*}</span></p>
+</section>
+<section id="the-monty-hall-problem" class="level3" data-number="31.2.3">
+<h3 data-number="31.2.3" class="anchored" data-anchor-id="the-monty-hall-problem"><span class="header-section-number">31.2.3</span> The Monty Hall problem</h3>
+<p>Consider the following problem:</p>
+<blockquote class="blockquote">
+<p>Suppose you’re on a game show and you’re given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No.&nbsp;1, and the host, who knows what’s behind the doors, opens another door, say No.&nbsp;3, which has a goat. He then says to you, “Do you want to pick door No.&nbsp;2?” Is it to your advantage to switch your choice?</p>
+</blockquote>
+<p>Assume that the rules of this game show are that:</p>
+<ul>
+<li><p>The host must always open a door that you did not choose.</p></li>
+<li><p>The host must always open a door to reveal a goat and never the car.</p></li>
+<li><p>The host must always offer you the choice to switch between the chosen door and the remaining closed door.</p></li>
+</ul>
+<p>For this question, you are effectively being asked: what is the probability that the car is behind door 2 conditional on the host opening door 3. To help us think about this problem, consider the following tree:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/monty-hall.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/monty-hall.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Given the host opened Door 3:</p>
+<p><span class="math display">\begin{align*}
+P(C2|D3)&amp;=\frac{P(C2\cap D3)}{P(D3)} \\[12pt]
+&amp;=\frac{\frac{1}{3}}{\frac{1}{3}+\frac{1}{6}} \\[12pt]
+&amp;=\frac{2}{3}
+\end{align*}</span></p>
+</section>
+</section>
+<section id="bayes-rule" class="level2" data-number="31.3">
+<h2 data-number="31.3" class="anchored" data-anchor-id="bayes-rule"><span class="header-section-number">31.3</span> Bayes’ rule</h2>
+<p>Bayes’ Rule enables estimation of the conditional probability of outcome <span class="math inline">A</span> given outcome <span class="math inline">B</span> when you have the following information:</p>
+<ul>
+<li>The unconditional probability of outcome <span class="math inline">A</span></li>
+<li>The probability of observing outcome <span class="math inline">B</span> given outcome <span class="math inline">A</span></li>
+<li>The total probability of outcome <span class="math inline">B</span>.</li>
+</ul>
+<p>Bayes’ rule is calculated as follows:</p>
+<p><span class="math display">\begin{align*}
+P(A|B)&amp;=\frac{P(A\cap B)}{P(B)} \\[12pt]
+&amp;=\frac{P(B|A)P(A)}{P(B)}
+\end{align*}</span></p>
+<p>The denominator is the total probability of event <span class="math inline">B</span>. If we do not have it directly available, we are often able to construct it with available information concerning the conditional probabilities of <span class="math inline">B</span> given the occurrence (or not) of <span class="math inline">A</span>.</p>
+<p><span class="math display">
+P(B)=P(B|A)P(A)+P(B|\neg A)P(\neg A)
+</span></p>
+<p>The symbol <span class="math inline">\neg</span> represents “not”.</p>
+<p>We can therefore write Bayes’ rule as follows:</p>
+<p><span class="math display">\begin{align*}
+P(A|B)&amp;=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
+&amp;=\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|\neg A)P(\neg A)}
+\end{align*}</span></p>
+<p>We can also think of Bayes’ rule as how we should update our belief <span class="math inline">H</span> (“hypothesis”) in the light of a new event <span class="math inline">E</span>.</p>
+<p>Rational agents should update their belief <span class="math inline">H</span> using Bayes’ rule.</p>
+<p>In this case we have the following elements:</p>
+<ul>
+<li><p>A belief <span class="math inline">H</span> (often called the posterior belief)</p></li>
+<li><p>The prior probability <span class="math inline">P(H)</span> of <span class="math inline">H</span>𝐻 being true</p></li>
+<li><p>The probability <span class="math inline">P(E|H)</span> of observing event <span class="math inline">E</span> given a belief</p></li>
+<li><p>The posterior probability <span class="math inline">P(H|E)</span> of the belief given the event <span class="math inline">E</span></p></li>
+</ul>
+<p>Under this framing, Bayes’ rule is formulated as follows:</p>
+<p><span class="math display">\begin{align*}
+\underbrace{P(H|E)}_\text{Posterior belief}&amp;=\frac{P(E|H)\overbrace{P(H)}^\text{Prior belief}}{P(E)} \\[12pt]
+&amp;=\frac{P(E|H)P(H)}{P(E|H)P(H)+P(E|\neg H)P(\neg H)}
+\end{align*}</span></p>
+<section id="bayes-rule-example-1" class="level3" data-number="31.3.1">
+<h3 data-number="31.3.1" class="anchored" data-anchor-id="bayes-rule-example-1"><span class="header-section-number">31.3.1</span> Bayes’ rule example 1</h3>
+<p>Suppose your friend has two coins. One is a fair coin with a head on one face and a tail on the other. The second coin is a rigged coin with heads on both faces.</p>
+<p>Your friend then takes one of the coins and flips it. It shows a head. What is the probability that it is the rigged coin?</p>
+<p>We will assume that he randomly selected either coin with probability 50%. We take that as our prior belief:</p>
+<p><span class="math display">
+P(\text{rigged})=0.5
+</span></p>
+<p>The probability of a head if it is the rigged coin is 1.</p>
+<p><span class="math display">
+P(\text{head}|\text{rigged})=1
+</span></p>
+<p>To use Bayes’ rule we need the total probability that a head comes up, <span class="math inline">P(\text{head})</span>.</p>
+<p>Here we will use the formula for total probability that we looked at previously.</p>
+<p><span class="math display">\begin{align*}
+P(\text{head})&amp;=P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair}) \\
+&amp;=1\times 0.5+0.5\times 0.5 \\
+&amp;=0.75
+\end{align*}</span></p>
+<p>Putting this into Bayes rule:</p>
+<p><span class="math display">\begin{align*}
+P(\text{rigged}|\text{head})&amp;=\frac{P(\text{head}|\text{rigged})P(\text{rigged})}{P(\text{head})} \\[12pt]
+&amp;=\frac{1\times 0.5}{0.75} \\
+&amp;=\frac{2}{3}
+\end{align*}</span></p>
+<p>Your friend flips the coin again and gets another head. What is the updated probability that the coin is rigged?</p>
+<p><span class="math display">\begin{align*}
+P(\text{rigged}|\text{head})&amp;=\frac{P(\text{head}|\text{rigged})P(\text{rigged})}{P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair})} \\[12pt]
+&amp;=\frac{1\times \frac{2}{3}}{1\times\frac{2}{3}+\frac{1}{2}\times\frac{1}{3}} \\
+&amp;=\frac{4}{5}
+\end{align*}</span></p>
+<p>Your friend flips the coin 10 more times and gets 10 more heads. What is the updated probability that the coin is rigged?</p>
+<p><span class="math display">\begin{align*}
+P(\text{rigged}|\text{10 heads})&amp;=\frac{P(\text{10 heads}|\text{rigged})P(\text{rigged})}{P(\text{10 heads}|\text{rigged})P(\text{rigged})+P(\text{10 heads}|\text{fair})P(\text{fair})} \\[12pt]
+&amp;=\frac{1\times \frac{4}{5}}{1\times\frac{4}{5}+(\frac{1}{2})^{10}\times\frac{1}{5}} \\[6pt]
+&amp;=\frac{1\times \frac{4}{5}}{1\times\frac{4}{5}+\frac{1}{1024}\times\frac{1}{5}} \\[6pt]
+&amp;=0.9997559
+\end{align*}</span></p>
+</section>
+<section id="bayes-rule-example-2" class="level3" data-number="31.3.2">
+<h3 data-number="31.3.2" class="anchored" data-anchor-id="bayes-rule-example-2"><span class="header-section-number">31.3.2</span> Bayes’ rule example 2</h3>
+<p>You have two urns. Urn one has 30% black balls and 70% yellow balls. Urn two has 70% black balls and 30% yellow balls. The labels have fallen off the urns so you do not know which urn is which.</p>
+<p>You reach into one of the urns and pull out a yellow ball. What is the probability that you have drawn the ball from urn one?</p>
+<p><span class="math display">\begin{align*}
+P(\text{urn one}|\text{yellow ball})&amp;=\frac{P(\text{yellow ball}|\text{urn one})P(\text{urn one})}{P(\text{yellow ball})} \\[6pt]
+&amp;=\frac{P(\text{yellow ball}|\text{urn one})P(\text{urn one})}{P(\text{yellow ball}|\text{urn one})P(\text{urn one})+P(\text{yellow ball}|\text{urn two})P(\text{urn two})} \\[6pt]
+&amp;=\frac{0.7\times 0.5}{0.7\times 0.5+0.3\times 0.5} \\[6pt]
+&amp;=\frac{0.35}{0.5} \\
+&amp;=0.7
+\end{align*}</span></p>
+<p>You put the first ball back in the urn, reach in again and pull out a black ball. What is the probability that you have drawn the ball from urn one?</p>
+<p><span class="math display">\begin{align*}
+P(\text{urn one}|\text{black ball})&amp;=\frac{P(\text{black ball}|\text{urn one})P(\text{urn one})}{P(\text{black ball})} \\[6pt]
+&amp;=\frac{P(\text{black ball}|\text{urn one})P(\text{urn one})}{P(\text{black ball}|\text{urn one})P(\text{urn one})+P(\text{black ball}|\text{urn two})P(\text{urn two})} \\[6pt]
+&amp;=\frac{0.3\times 0.7}{0.3\times 0.7+0.7\times 0.3} \\[6pt]
+&amp;=\frac{0.21}{0.42} \\
+&amp;=0.5
+\end{align*}</span></p>
+</section>
+<section id="bayes-rule-example-3" class="level3" data-number="31.3.3">
+<h3 data-number="31.3.3" class="anchored" data-anchor-id="bayes-rule-example-3"><span class="header-section-number">31.3.3</span> Bayes’ rule example 3</h3>
+<p>Recall the Monty Hall problem:</p>
+<blockquote class="blockquote">
+<p>Suppose you’re on a game show and you’re given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No.&nbsp;1, and the host, who knows what’s behind the doors, opens another door, say No.&nbsp;3, which has a goat. He then says to you, “Do you want to pick door No.&nbsp;2?” Is it to your advantage to switch your choice?</p>
+</blockquote>
+<p>Assume that the rules of this game show are that:</p>
+<ul>
+<li><p>The host must always open a door that you did not choose.</p></li>
+<li><p>The host must always open a door to reveal a goat and never the car.</p></li>
+<li><p>The host must always offer you the choice to switch between the chosen door and the remaining closed door.</p></li>
+</ul>
+<p>We want to know the probability that the car is behind door 2 given the host opened door 3. That is, we want to know <span class="math inline">P(C2|D3)</span>. [Technically we want <span class="math inline">P(C2|D3\cap X1)</span> where X1 is our selection of door 1. However, adding this complication to the calculation does not change the answer.]</p>
+<p>To determine this using Bayes rule, we would use the following formula:</p>
+<p><span class="math display">\begin{align*}
+P(A|B)&amp;=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
+P(C2|D3)&amp;=\frac{P(D3|C2)P(C2)}{P(D3)} \\[12pt]
+&amp;=\frac{P(D3|C2)P(C2)}{P(D3|C2)P(C2)+P(D3|C1)P(C1)+P(D3|C3)P(C3)} \\[12pt]
+&amp;=\frac{1\times\frac{1}{3}}{1\times\frac{1}{3}+\frac{1}{2}\times\frac{1}{3}+0\times\frac{1}{3}} \\[12pt]
+&amp;=\frac{\frac{1}{3}}{\frac{1}{2}} \\[12pt]
+&amp;=\frac{2}{3}
+\end{align*}</span></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/behaviouraleconomics\.jasoncollins\.blog/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../beliefs/beliefs.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Beliefs</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../beliefs/heuristics.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Heuristics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">Copyright: CC-BY</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jasonacollins">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+
+
+
+</body></html>

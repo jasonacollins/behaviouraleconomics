@@ -1,6 +1,6 @@
 # Prospect theory exercises
 
-## Question 1
+## Changes in probability
 
 You are in a draw for \$1 million. Consider the following four scenarios where your chances of winning increases by 5%:
 
@@ -12,7 +12,7 @@ D) From 95% to 100%
 Most people report that scenarios A) and D) represent better news. Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 1 answer
+## Answer
 
 There is strong experimental evidence that we overweight certain events relative to near certain events. In this instance, we will tend to overweight the shift to a certain result (scenario D) relative to shifts involving intermediate probabilities (e.g. scenario B and C). This overweighting of certainty is effectively the same as overweighting low probability events. As a result, the probability shift that provides an initial chance at \$1 million is also overweighted (scenario A).
 
@@ -25,7 +25,7 @@ From this diagram, you can then see the change in decision weight from each chan
 ![](img/Exercise_Q1.jpg)
 :::
 
-## Question 2
+## Bitcoin
 
 Edna, Ferdinand and Gretel each bought some Bitcoin at \$50,000. The price rose to \$80,000 and then dropped to \$60,000, at which time they sold it.
 
@@ -43,7 +43,7 @@ Edna uses the purchase price as her reference point. Ferdinand uses the peak pri
 What is the change in value for each person? Who is happiest?
 
 ::: {.callout-tip collapse="true"}
-## Question 2 answer
+## Answer
 
 Value for Edna:
 
@@ -70,7 +70,7 @@ v(x)&=v(60-60) \\
 Edna is happiest whereas Ferdinand is most disappointed. Both Edna and Gretel see the peak price as a foregone gain, whereas Ferdinand sees the failure to sell at the peak as a loss.
 :::
 
-## Question 3
+## Reference points
 
 Megan has the following reference-dependent value function:
 
@@ -91,7 +91,7 @@ a\) If you look at $v(x)$, we expect Megan to be:
 Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 3a) answer
+## Answer
 
 Megan is loss averse as the slope of the value function in the loss domain is steeper than in the gain domain. One unit of loss leads to a greater change in value than one unit of gain.
 
@@ -107,7 +107,7 @@ Consider two alternative reference points: Megan is pessimistic and expects no m
 Compute Megan’s value under each reference point. Which reference point yields higher value?
 
 ::: {.callout-tip collapse="true"}
-## Question 3b) answer
+## Answer
 
 The value of the \$10 from the reference point of expecting nothing is:
 
@@ -155,7 +155,7 @@ For this question, assume Megan does not believe that she will receive any money
 Her brother - who loves cake - offers to buy one of her pieces of birthday cake. What price $p_s$ would make Megan indifferent between selling and keeping the piece of cake?
 
 ::: {.callout-tip collapse="true"}
-## Question 3c) answer
+## Answer
 
 Megan will be indifferent when the value from each option is the same:
 
@@ -173,7 +173,7 @@ p_s&=8
 d\) Assume that Megan expects to receive only one piece of birthday cake. Her brother then offers to sell her his piece of cake. For $r_m=0$ and $r_c=1$, what price $p_b$ would make Megan indifferent between buying the cake and eating only her own piece?
 
 ::: {.callout-tip collapse="true"}
-## Question 3d) answer
+## Answer
 
 Megan will be indifferent when the value from each option is the same:
 
@@ -191,12 +191,12 @@ p_b&=4
 e\) Why is there a difference between the price at which Megan was willing to sell cake in part c) compared to the price she was willing to pay in part d)?
 
 ::: {.callout-tip collapse="true"}
-## Question 3e) answer
+## Answer
 
 The willingness to accept in part c) is higher than the willingness to pay in part d) as in part c) the foregone cake is coded as a loss. This loss reduces value at twice the rate of a gain in cake. The payment for the cake in both parts is in the gain domain due to the birthday present of \$10, so the payment received or paid is given less weight than any loss.
 :::
 
-## Question 4
+## Saving on a purchase
 
 Consider the following two scenarios:
 
@@ -209,7 +209,7 @@ When people are presented with scenarios such as this, they tend to report that 
 Explain how an S-shaped value function with diminishing value in both gains and losses could result in this behaviour.
 
 ::: {.callout-tip collapse="true"}
-## Question 4 answer
+## Answer
 
 Diminishing value means that the absolute difference between $v(-40)$ and $v(-50)$ is much larger than the absolute difference between $v(-1980)$ and $v(-1990)$. For example, suppose the value function was:
 
@@ -240,7 +240,7 @@ Much less value is gained by driving for the 20 minutes across town for the comp
 ![](img/Exercise_Q4.jpg){width=70%}
 :::
 
-## Question 5
+## A 60:40 gamble
 
 Suppose an agent has the following reference-dependent value function:
 
@@ -260,7 +260,7 @@ $$(\$100, 0.6; −\$100, 0.4)$$
 a\) Will they want to play this gamble? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 5a) answer
+## Answer
 
 The utility from the gamble is:
 
@@ -278,7 +278,7 @@ The reason for this negative value is that the agent is loss averse. The loss of
 b\) Suppose the agent takes this gamble and loses \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo. They are offered gamble A again? Do they accept this second time? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 5b) answer
+## Answer
 
 After losing \$100 but not changing their reference point, they have two possible outcomes relative to their reference point: recovery of their loss of \$100 so they come out even and a loss of \$200 (losing \$100 twice).
 
@@ -302,17 +302,78 @@ They will now want to play the gamble as it has a greater value than staying wit
 c\) The agent is offered a new job for which they receive a \$50,000 sign-on bonus. They adapt to their new wealth, so their reference point changes to accommodate their new situation. They are now offered gamble A again. Do they accept? Why?
 
 ::: {.callout-tip collapse="true"}
-## Question 5c) answer
+## Answer
 
 With their new reference point, this question is effectively the same as part a). They will refuse the bet.
 :::
 
-## Question 6
+## A 50:50 gamble
+
+Suppose Tim has the following reference-dependent value function:
+
+$$
+v(x)=\left\{\begin{matrix}
+x^{1/2} \qquad &\textrm{where} &\space x \geq 0\\
+-2(-x)^{1/2} \quad &\textrm{where} &\space x < 0 
+\end{matrix}\right.
+$$
+
+$x$ is the change in Tim's position relative to his reference point.
+
+a\) What feature of Tim's value function leads to loss aversion? Explain.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The part of the value function that applies when $x<0$ is increased by a factor of two relative to that part of the value function for when $x>0$. This is done by multiplying the bottom portion by 2.
+:::
+
+b\) Tim considers the gamble A: (\$250, 0.5; -\$100, 0.5).
+
+i) Will Tim want to play this gamble?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+\begin{align*}
+V(A)&=p_1v(x_1)+p_2v(x_2) \\
+&=0.5v(\$250)+0.5v(-\$100) \\
+&=0.5*250^{1/2}-0.5*2*100^{1/2} \\
+&=`r 0.5*250^(1/2)-0.5*2*100^(1/2)`
+\end{align*}
+
+Tim has negative value from the gamble, when he could simply have zero value by declining. He rejects.
+:::
+
+ii) Explain what features of the value function lead him to accept or reject the gamble.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Two features of the value function lead him to reject:
+
+- Tim is loss averse (the -2 in the bottom equation), which leads him to give twice the weight to losses relative to an equal sized gain.
+- Tim has diminishing sensitivity to losses and gains. The larger gain is reduced proportionately more by this diminishing sensitivity.
+:::
+
+c\) Suppose Tim were to experience a large positive or negative shock to his wealth that does not immediately change his reference point. Could either shock cause him to change his decision concerning gamble A? Explain.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Both a positive and negative shock could lead Tim to change his decision.
+
+A large positive shock would place the entire bet into the gain domain. That would remove loss aversion as a factor in rejecting the bet. Given the high expected value, that would likely be sufficient for him to accept. However, a large shock would also place Tim further up the value function to a region where it is more linear (i.e. he is less risk averse). This will also increase the tendency to accept the bet.
+
+A large negative shock would place the entire bet into the loss domain. That would remove loss aversion as a factor in rejecting the bet as there is no gain against which the loss can be given relatively greater weight. Due to diminishing sensitivity to losses, Tim is also risk seeking in the loss domain. This would lead him to accept any bet with a positive expected value.
+:::
+
+## Insurance
 
 Explain how probability weighting as proposed under Prospect Theory can lead a person to simultaneously gamble and purchase insurance.
 
 ::: {.callout-tip collapse="true"}
-## Question 6 answer
+## Answer
 
 Decisions under Prospect Theory are the outcome of two factors:
 
@@ -377,7 +438,7 @@ v(x)&=\sum_{i=1}^{n} \pi(x_i)v(x_i) \\[6pt]
 They purchase insurance as it has higher value than not purchasing it.
 :::
 
-## Question 7
+## Locking in a win
 
 Amber sued a tabloid newspaper for defamation. The trial has completed and the judge has retired to make her decision.
 
@@ -386,7 +447,7 @@ Amber's lawyer tells her that she has a 95% chance of winning and receiving \$1,
 Use the fourfold pattern of attitudes to risk under Prospect Theory to explore why Amber accepted the settlement offer.
 
 ::: {.callout-tip collapse="true"}
-## Question 7 answer
+## Answer
 
 Rejecting the offer has a higher expected value than the value of the settlement:
 
@@ -400,4 +461,28 @@ There are two forces under prospect theory that would lead Amber to take the opt
 
 - People are risk averse in the gain domain. Amber would prefer certainty to a gamble with the same expected value, and depending on the level of risk aversion, would be willing to accept an amount for certain lower than the expected value of the bet. That is, the certainty equivalent of the gamble would be less than its expected value.
 - People overweight small probabilities. The 5% probability of losing is likely overweighted by Amber.
+:::
+
+## Lotteries
+
+A common intervention to encourage behaviour change is to offer a lottery ticket as an incentive. For example, a lottery ticket might be offered to people who complete a survey.
+
+The government is considering whether it should incentivise vaccination with either:
+
+i) a payment of \$10 or
+
+ii) a lottery ticket with a 1 in a million chance of winning \$10 million.
+
+Use concepts from Prospect Theory to explain why either option might be more successful.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+There are two opposing forces that could lead to either option being preferred.
+
+Both the lottery and payment of $10 are in the gain domain. Under prospect theory, people tend to be risk averse in the gain domain. This will make the payment, which has the same expected value as the lottery, more attractive.
+
+Conversely, under prospect theory people do not weight outcomes directly by their probability. They apply decision weights that tend to overweight small probabilities and underweight probabilities just short of certainty. This means that the small chance of $10 million will likely be overweighted. This could lead to the value of the lottery exceeding that of the certain payment.
+
+Which effect dominates depends on how risk averse people are and how much they overweight the probability.
 :::

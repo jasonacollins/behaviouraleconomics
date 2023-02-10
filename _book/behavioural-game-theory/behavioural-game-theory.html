@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course notes on behavioural economics - Behavioural game theory</title>
+<title>Notes on behavioural economics - Behavioural game theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,25 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
-}
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
 }
 </style>
 
@@ -60,9 +41,6 @@ div.csl-indent {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,28 +61,12 @@ div.csl-indent {
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Course notes on behavioural economics - Behavioural game theory">
+<meta property="og:title" content="Notes on behavioural economics - Behavioural game theory">
 <meta property="og:description" content="In our analysis of game theory, we have assumed rational agents in that they use all available information and are able to successfully determine their best action given their opponents (also…">
-<meta property="og:site-name" content="Course notes on behavioural economics">
-<meta name="twitter:title" content="Course notes on behavioural economics - Behavioural game theory">
+<meta property="og:site-name" content="Notes on behavioural economics">
+<meta name="twitter:title" content="Notes on behavioural economics - Behavioural game theory">
 <meta name="twitter:description" content="In our analysis of game theory, we have assumed rational agents in that they use all available information and are able to successfully determine their best action given their opponents (also…">
 <meta name="twitter:card" content="summary">
 </head>
@@ -117,7 +79,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Course notes on behavioural economics</span>
+    <span class="navbar-title">Notes on behavioural economics</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -374,7 +336,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../probability-judgment/probability-judgment.html" class="sidebar-item-text sidebar-link">Probability judgment</a>
+            <a href="../beliefs/beliefs.html" class="sidebar-item-text sidebar-link">Beliefs</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -382,32 +344,32 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../probability-judgment/probability-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability foundations</span></a>
+  <a href="../beliefs/probability-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability foundations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../probability-judgment/heuristics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Heuristics</span></a>
+  <a href="../beliefs/heuristics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Heuristics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../probability-judgment/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a>
+  <a href="../beliefs/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../probability-judgment/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
+  <a href="../beliefs/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../probability-judgment/overconfidence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></a>
+  <a href="../beliefs/overconfidence.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Overconfidence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../probability-judgment/probability-judgment-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
+  <a href="../beliefs/beliefs-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
   </div>
 </li>
       </ul>
@@ -522,14 +484,7 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#limited-or-heterogeneous-rationality" id="toc-limited-or-heterogeneous-rationality" class="nav-link active" data-scroll-target="#limited-or-heterogeneous-rationality">Limited or heterogeneous rationality</a></li>
-  <li><a href="#the-beauty-contest" id="toc-the-beauty-contest" class="nav-link" data-scroll-target="#the-beauty-contest">The beauty contest</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -551,73 +506,10 @@ div.csl-indent {
 
 </header>
 
-<section id="limited-or-heterogeneous-rationality" class="level2">
-<h2 class="anchored" data-anchor-id="limited-or-heterogeneous-rationality">Limited or heterogeneous rationality</h2>
 <p>In our analysis of game theory, we have assumed rational agents in that they use all available information and are able to successfully determine their best action given their opponents (also rational) action.</p>
 <p>What if agents have limited rationality or vary in their rationality?</p>
-</section>
-<section id="the-beauty-contest" class="level2">
-<h2 class="anchored" data-anchor-id="the-beauty-contest">The beauty contest</h2>
-<p>The beauty contest illustrates this problem.</p>
-<p>From <span class="citation" data-cites="keynes1936">Keynes (<a href="../references.html#ref-keynes1936" role="doc-biblioref">1936</a>)</span>:</p>
-<blockquote class="blockquote">
-<p>[P]rofessional investment may be likened to those newspaper competitions in which the competitors have to pick out the six prettiest faces from a hundred photographs, the prize being awarded to the competitor whose choice most nearly corresponds to the average preferences of the competitors as a whole; so that each competitor has to pick, not those faces which he himself finds prettiest, but those which he thinks likeliest to catch the fancy of the other competitors, all of whom are looking at the problem from the same point of view. It is not a case of choosing those which, to the best of one’s judgment, are really the prettiest, nor even those which average opinion genuinely thinks the prettiest. We have reached the third degree where we devote our intelligences to anticipating what average opinion expects the average opinion to be. And there are some, I believe, who practise the fourth, fifth and higher degrees.</p>
-</blockquote>
-<p>This thought experiment has since been developed into a game, the p-beauty contest (<span class="citation" data-cites="moulin1986">Moulin (<a href="../references.html#ref-moulin1986" role="doc-biblioref">1986</a>)</span>). The p-beauty contest runs as follows:</p>
-<p>Each of <span class="math inline">n</span> players pick a number <span class="math inline">y\in[0,100]</span>.</p>
-<p>The winner is the player whose chosen number is closest to the mean of all the chosen numbers (<span class="math inline">\bar y</span>) multiplied by a parameter <span class="math inline">p</span>.</p>
-<p>That is, the winner is the player with their chosen number closest to <span class="math inline">p\bar y</span>.</p>
-<p><span class="math inline">p</span> is typically chosen such <span class="math inline">0\leq p\leq 1</span>, with <span class="math inline">p=1/2</span> and <span class="math inline">p=2/3</span> common.</p>
-<p>Imagine a player thinking through the this problem and testing different solutions.</p>
-<p>A player can pick any number in the interval <span class="math inline">y\in [0,…,100]</span>. If other players randomly select from this interval, the average is 50 and winner <span class="math inline">i</span> picks:</p>
-<p><span class="math display">
-y_i=\frac{2}{3}\bar y=\frac{2}{3}\times 50=33.3
-</span></p>
-<p>As most players have not selected <span class="math inline">y_i=33.3</span>, this cannot be an equilibrium.</p>
-<p>If everybody selects 33.3, winner <span class="math inline">i</span> has to pick:</p>
-<p><span class="math display">
-y_i=\frac{2}{3}\bar y=\frac{2}{3}\times 33.3=22.2
-</span></p>
-<p>As nobody has selected <span class="math inline">y_i=22.2</span>, so this can’t be an equilibrium.</p>
-<p>If we iterate this further, everybody selects <span class="math inline">y=50×(2∕3)^{(n−1)}</span> and winner <span class="math inline">i</span> has to pick:</p>
-<span class="math display">\begin{align*}
-y_i=\frac{2}{3}\bar y=\bigg(\frac{2}{3}\bigg)^n\times 50
-\end{align*}</span>
-<p>As <span class="math inline">n\rightarrow \infty</span>, each player should play <span class="math inline">y_i=0</span>. This is the Nash equilibrium for the game. But what actually occurs?</p>
-<p>The following charts come from <span class="citation" data-cites="nagel1995">Nagel (<a href="../references.html#ref-nagel1995" role="doc-biblioref">1995</a>)</span>.</p>
-<div id="fig-nagel1" class="quarto-layout-panel">
-<p></p><figcaption>Figure&nbsp;1: Choices by players of the p-beauty game</figcaption><p></p>
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
-<p></p><figcaption class="figure-caption"><span class="math inline">p=1/2</span></figcaption><p></p>
-<p><a href="img/nagel-1995-12.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="p=1/2"><img src="img/nagel-1995-12.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
-<p></p><figcaption class="figure-caption"><span class="math inline">p=2/3</span></figcaption><p></p>
-<p><a href="img/nagel-1995-23.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="p=2/3"><img src="img/nagel-1995-23.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</figure>
-</div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
-<div id="ref-keynes1936" class="csl-entry" role="doc-biblioentry">
-Keynes, J. M. (1936). <em>The general theory of employment, interest, and money</em>. Macmillan. <a href="http://gutenberg.net.au/ebooks03/0300071h/printall.html">http://gutenberg.net.au/ebooks03/0300071h/printall.html</a>
-</div>
-<div id="ref-moulin1986" class="csl-entry" role="doc-biblioentry">
-Moulin, H. (1986). <em>Game theory for social sciences</em>. New York Press.
-</div>
-<div id="ref-nagel1995" class="csl-entry" role="doc-biblioentry">
-Nagel, R. (1995). Unraveling in guessing games: An experimental study. <em>The American Economic Review</em>, <em>85</em>(5), 1313–1326. <a href="https://www.jstor.org/stable/2950991">https://www.jstor.org/stable/2950991</a>
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -797,7 +689,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 

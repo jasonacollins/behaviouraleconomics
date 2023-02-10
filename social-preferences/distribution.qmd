@@ -251,11 +251,3 @@ Putting those payoffs into the extensive form of the game, we get the following:
 The new equilibrium is that Macro will return a dividend, so Linda invests.
 
 ![](img/trust-distributional-2.jpg)
-
-## Model limitations
-
-These two models of distributional preferences cannot explain all of the social preferences that we observe.
-
-For example, suppose we have an agent that has @fehr1999 preferences and rejects an offer of \$2.
-
-That agent then plays another game, but this time the proposer is restricted to offering either \$0 or \$2. Under the Fehr and Schmidt model (and the Charness and Rabin model) the only thing that matters are the final outcomes. If you reject \$2 in the ultimatum game, you should also reject even if \$2 was all that the proposer was able to offer. However, experimental evidence suggests that receivers are more likely to accept the \$2 where the proposer's choice is constrained. Social preferences must involve more than just distributional concerns.
