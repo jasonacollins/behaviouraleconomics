@@ -10,16 +10,20 @@ The third is indifference. Indifference occurs where an agent considers that eac
 
 Here are a couple of illustrations of these relations.
 
-Suppose I strongly prefer bananas to apples. I would write my preference as:
+Suppose I strongly prefer bananas to apples. I would write:
 
 - bananas $\succ$ apples
+
+Bananas are better than apples.
 
 Similarly, if I am indifferent between bananas and oranges I would write:
 
 - bananas $\sim$ oranges
 
-There is an important link between indifference and the weak preference relation. $x \sim y$ if and only if $x \succcurlyeq y$ and $y \succcurlyeq x$. The weak preference relation includes the possibility of indifference.
+Bananas are as good as oranges. Oranges are as good as bananas.
 
-In that case of my example of my indifference between oranges and bananas, I could also say that:
+There is an important link between indifference and the weak preference relation. I am indifferent to $x$ and $y$ ($x \sim y$) if and only if I weakly prefer $x$ to $y$ ($x \succcurlyeq y$) and I weakly prefer $y$ to $$x$ ($y \succcurlyeq x$). The weak preference relation includes the possibility of indifference.
+
+In that case of my example of my indifference between oranges and bananas, I could also say that I weakly prefer bananas to oranges, and that I weakly prefer oranges to bananas:
 
 - bananas $\succcurlyeq$ oranges and oranges $\succcurlyeq$ bananas
