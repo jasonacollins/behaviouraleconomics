@@ -13,7 +13,7 @@ a decision maker behaves as if choosing between risky prospects by selecting the
 
 The four axioms of completeness, transitivity, continuity and independence are often called the von Neumann--Morgenstern axioms for a rational decision maker. You can see now we have a second potential benchmark of "rationality".
 
-Note: Preferences under these assumptions are cardinal.
+Importantly, preferences under these assumptions are cardinal.
 
 Beyond those four axioms, some additional axioms are often adopted for practical purposes. These are also discussed below.
 
@@ -79,7 +79,7 @@ ggplot()+
   coord_fixed(ratio = 1, xlim = c(0,20), ylim = c(0,20), expand = TRUE, clip = "on")
 ```
 
-Note: If you read the literature about expected utility, you may come across an axiom called the Archimedean property. Only one of continuity or the Archimedean property need be assumed. I will not cover the Archimedean property in this book.
+Note: If you read the literature about expected utility, you may come across an axiom called the Archimedean property. Only one of continuity or the Archimedean property need be assumed. I will not cover the Archimedean property in these notes.
 
 ### Example of discontinuous preferences
 

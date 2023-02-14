@@ -6,7 +6,7 @@ However, rationality in economics has a different definition to the 'lay' defini
 
 Rationality simply means that preferences respect some desirable principles. These principles are assumptions, not rules of behaviour.
 
-Economists tend to keep the number of assumptions as small as possible. Economists choose the assumptions that they need for the particular analytical problem they have at hand.
+Economists tend to keep the number of assumptions as small as possible. They choose the assumptions that they need for the particular analytical problem they have at hand.
 
 In its most stripped back form, analysis of consumer choice rests on just two assumptions. These are completeness and transitivity.
 
@@ -52,8 +52,8 @@ That preference ordering, a simple rank of which options an agent prefers, is al
 
 This definition of rationality, accordance to the axioms of completeness and transitivity, provides little constraint on preferences.
 
-You could prefer less money to more, or like sums of money that are divisible by seven with no remainder. You could prefer more for yourself or more for someone else.
+You could prefer less money to more. You could prefer sums of money that are divisible by seven with no remainder. You could prefer more for yourself or more for someone else.
 
 These axioms do not lead to an assumption that people are selfish, unless you define selfishness to be simply acting in accordance with their preferences.
 
-These axioms place some constraints on behaviour, and as I have hinted those constraints are sometimes breached by decision makers. But they are constraints that allow much behaviour to be described as rational.
+These axioms place some constraints on behaviour, and empirical evidence suggests those constraints are sometimes breached by decision makers. But they are constraints that allow much behaviour to be described as rational.

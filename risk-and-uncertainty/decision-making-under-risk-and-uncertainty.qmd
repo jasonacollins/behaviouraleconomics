@@ -10,10 +10,16 @@ At times when discussing decision making under risk and uncertainty, I will use 
 
 Suppose we have a lottery L that gives outcomes $x_1, x_2, ..., x_n$ with probabilities $p_1, p_2, ..., p_n$. We can write this as:
 
-$$L=(x_1,p_1; x_2,p_2; ...; x_n,p_n)$$
+$$L=(p_1,x_1; p_2,x_2; ...; p_n,x_n)$$
 
 For example:
 
-$$L=(−100, 0.5; 200, 0.5)$$
+$$L=(0.5, −100; 0.5, 200)$$
 
 means that the gambler loses 100 with 50% probability and wins 200 with 50% probability.
+
+You may also see gambles represented with the outcome and probability in a different order, such as:
+
+$$L=(x_1,p_1; x_2,p_2; ...; x_n,p_n)$$
+
+It is typically not difficult to determine which is which.

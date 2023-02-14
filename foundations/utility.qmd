@@ -8,7 +8,7 @@ A utility function associates a number with each member of the universe. For exa
 - Orange: 2
 - Apple: 1
 
-This does not mean that I rate bananas three times higher than apples. This utility scale is ordinal, not cardinal. The following is equivalent:
+This does not mean that I rate bananas three times higher than apples. It simply means that I prefer bananas to apples. This utility scale is ordinal, not cardinal. The following is equivalent:
 
 - Banana: 300
 - Orange: 2
@@ -19,7 +19,7 @@ Formally, the utility function $u(\cdot)$:
 - maps the set of alternatives into the set of real numbers
 - assigns larger numbers to preferred alternatives.
 
-For example, following from the above, we might write:
+For example, we might write:
 
 \begin{align*}
 u(\text{banana})&=3 \\[6pt]
