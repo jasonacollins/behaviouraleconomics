@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/index.html</loc>
-    <lastmod>2023-02-10T06:19:17.158Z</lastmod>
+    <lastmod>2023-02-14T05:17:30.849Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/what-is-behavioural-economics.html</loc>
@@ -10,15 +10,15 @@
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/economic-foundations.html</loc>
-    <lastmod>2023-02-10T06:19:17.160Z</lastmod>
+    <lastmod>2023-02-16T20:01:40.563Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/preferences.html</loc>
-    <lastmod>2023-02-10T06:19:17.161Z</lastmod>
+    <lastmod>2023-02-14T04:47:19.395Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/rationality.html</loc>
-    <lastmod>2023-02-10T06:19:17.162Z</lastmod>
+    <lastmod>2023-02-14T04:47:18.227Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/utility.html</loc>
@@ -30,19 +30,19 @@
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html</loc>
-    <lastmod>2023-02-10T06:19:17.164Z</lastmod>
+    <lastmod>2023-02-14T22:07:17.066Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-value.html</loc>
-    <lastmod>2023-02-13T20:51:26.812Z</lastmod>
+    <lastmod>2023-02-16T20:01:40.564Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/axioms-for-expected-utility-theory.html</loc>
-    <lastmod>2023-02-13T20:51:25.840Z</lastmod>
+    <lastmod>2023-02-16T21:39:42.408Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-utility-theory.html</loc>
-    <lastmod>2023-02-10T06:19:17.167Z</lastmod>
+    <lastmod>2023-02-15T00:29:18.298Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/subjective-expected-utility.html</loc>
@@ -247,5 +247,9 @@
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf</loc>
     <lastmod>2023-02-10T06:19:16.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/notation.html</loc>
+    <lastmod>2023-02-16T20:01:40.564Z</lastmod>
   </url>
 </urlset>

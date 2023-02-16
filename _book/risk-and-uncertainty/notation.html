@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on behavioural economics - 8&nbsp; Expected Utility Theory</title>
+<title>Notes on behavioural economics - 5&nbsp; Notation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../risk-and-uncertainty/subjective-expected-utility.html" rel="next">
-<link href="../risk-and-uncertainty/axioms-for-expected-utility-theory.html" rel="prev">
+<link href="../risk-and-uncertainty/expected-value.html" rel="next">
+<link href="../risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,9 +41,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,11 +79,11 @@ ul.task-list li input[type="checkbox"] {
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Notes on behavioural economics - 8&nbsp; Expected Utility Theory">
-<meta property="og:description" content="People do not seek to maximize expected value, but instead maximize expected utility.">
+<meta property="og:title" content="Notes on behavioural economics - 5&nbsp; Notation">
+<meta property="og:description" content="Before we get into our analysis of decision-making under risk and uncertainty, I will introduce some notation.">
 <meta property="og:site-name" content="Notes on behavioural economics">
-<meta name="twitter:title" content="Notes on behavioural economics - 8&nbsp; Expected Utility Theory">
-<meta name="twitter:description" content="People do not seek to maximize expected value, but instead maximize expected utility.">
+<meta name="twitter:title" content="Notes on behavioural economics - 5&nbsp; Notation">
+<meta name="twitter:description" content="Before we get into our analysis of decision-making under risk and uncertainty, I will introduce some notation.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -135,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -203,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/notation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation</span></a>
+  <a href="../risk-and-uncertainty/notation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -218,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/expected-utility-theory.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></a>
+  <a href="../risk-and-uncertainty/expected-utility-theory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -508,26 +505,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#maximising-expected-utility" id="toc-maximising-expected-utility" class="nav-link active" data-scroll-target="#maximising-expected-utility"><span class="toc-section-number">8.1</span>  Maximising expected utility</a></li>
-  <li><a href="#attitudes-toward-risk" id="toc-attitudes-toward-risk" class="nav-link" data-scroll-target="#attitudes-toward-risk"><span class="toc-section-number">8.2</span>  Attitudes toward risk</a>
-  <ul class="collapse">
-  <li><a href="#risk-aversion" id="toc-risk-aversion" class="nav-link" data-scroll-target="#risk-aversion"><span class="toc-section-number">8.2.1</span>  Risk aversion</a></li>
-  <li><a href="#risk-neutrality" id="toc-risk-neutrality" class="nav-link" data-scroll-target="#risk-neutrality"><span class="toc-section-number">8.2.2</span>  Risk neutrality</a></li>
-  <li><a href="#risk-seeking" id="toc-risk-seeking" class="nav-link" data-scroll-target="#risk-seeking"><span class="toc-section-number">8.2.3</span>  Risk seeking</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation</span></h1>
 </div>
 
 
@@ -542,66 +527,26 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="maximising-expected-utility" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="maximising-expected-utility"><span class="header-section-number">8.1</span> Maximising expected utility</h2>
-<p>People do not seek to maximize expected value, but instead maximize expected utility.</p>
-<p>Under expected utility theory, people choose between risky prospects (another word for lottery or gamble common in the literature) by comparing expected utility values. The agent maximises expected utility, <span class="math inline">E[U(x)]</span>:</p>
-<p><span class="math display">\begin{align*}
-E[U(x)]&amp;=p_1U(x_1)+p_2U(x_2)+ ... +p_nU(x_n) \\[6pt]
-&amp;=\sum_{i=1}^n p_iU(x_i)
-\end{align*}</span></p>
-<p><span class="math inline">p_i</span> is the probability of outcome <span class="math inline">x_i</span>.</p>
-<p><span class="math inline">U(x_i)</span> is the utility of outcome <span class="math inline">x_i</span></p>
-<p>Under Expected Utility Theory, risky options are evaluated in 3 steps:</p>
-<ol type="1">
-<li><p>Define utility over final outcomes <span class="math inline">x_1, ..., x_n</span></p></li>
-<li><p>Weight utility of each outcome <span class="math inline">U(x_i)</span> by the probability of outcome <span class="math inline">p_i</span></p></li>
-<li><p>Add the weighted utilities</p></li>
-</ol>
-<p>There is an important note to make here regarding outcomes <span class="math inline">x_1, ..., x_n</span>. Typically, these outcomes are not just the payoffs from the gamble, but rather the agent’s final position. If the agent has wealth of $100 and is offered a coin flip to win or lose $10, the outcomes are typically taken to be $90 and $110. Their decision depends on their current wealth. As a result, expected utility is often represented as:</p>
-<p><span class="math display">\begin{align*}
-E[U(W+x)]&amp;=p_1U(W+x_1)+p_2U(W+x_2)+ ... +p_nU(W+x_n) \\[6pt]
-&amp;=\sum_{i=1}^n p_iU(W+x_i)
-\end{align*}</span></p>
-</section>
-<section id="attitudes-toward-risk" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="attitudes-toward-risk"><span class="header-section-number">8.2</span> Attitudes toward risk</h2>
-<p>Expected utility theory captures an individual’s risk preference by means of their utility function.</p>
-<p>If a person prefers a sure amount over a gamble with comparable expected value, they are risk averse.</p>
-<p>If a person prefers the gamble over the sure amount, they are risk seeking.</p>
-<p>If a person is indifferent, they are risk neutral.</p>
-<p>The certainty equivalent (CE) of a gamble X is the the amount of money such that you are indifferent between taking the gamble and taking the money:</p>
-<p><span class="math display">u(CE)=EU(X)</span></p>
-<section id="risk-aversion" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="risk-aversion"><span class="header-section-number">8.2.1</span> Risk aversion</h3>
-<p>For a risk averse person, the certainty equivalent is less than the expected value of the gamble.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/risk-averse.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/risk-averse.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</section>
-<section id="risk-neutrality" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="risk-neutrality"><span class="header-section-number">8.2.2</span> Risk neutrality</h3>
-<p>For a risk averse person, the certainty equivalent is equal to the expected value of the gamble. A risk neutral person is an expected value maximiser.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/risk-neutral.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/risk-neutral.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</section>
-<section id="risk-seeking" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="risk-seeking"><span class="header-section-number">8.2.3</span> Risk seeking</h3>
-<p>For a risk seeking person, the certainty equivalent is more than the expected value of the gamble. The gamble has value in and of itself.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/risk-seeking.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/risk-seeking.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p>Before we get into our analysis of decision-making under risk and uncertainty, I will introduce some notation.</p>
+<p>Suppose we have a lottery <span class="math inline">L</span> with <span class="math inline">n</span> possible outcomes <span class="math inline">x_1, x_2, ..., x_n</span> each with probabilities <span class="math inline">p_1, p_2, ..., p_n</span>. A shorthand way to write this is:</p>
+<p><span class="math display">
+L=(p_1,x_1; p_2,x_2; ...; p_n,x_n)
+</span></p>
+<p>For example, suppose you are offered a gamble with a 50% probability of winning $200 and a 50% probability of losing $100. We can write this as:</p>
+<p><span class="math display">
+L=(0.5, −100; 0.5, 200)
+</span></p>
+<p>The order of each outcome-probability pair does not matter. I could also write:</p>
+<p><span class="math display">
+L=(0.5, 200; 0.5, -100)
+</span></p>
+<p>You may also see gambles represented with the outcome and probability in a different order, such as:</p>
+<p><span class="math display">
+L=(x_1,p_1; x_2,p_2; ...; x_n,p_n)
+</span></p>
+<p>It is typically not difficult to determine which is which.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -753,13 +698,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../risk-and-uncertainty/axioms-for-expected-utility-theory.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></span>
+      <a href="../risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Decision making under risk and uncertainty</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../risk-and-uncertainty/expected-value.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Expected value</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -781,7 +726,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 

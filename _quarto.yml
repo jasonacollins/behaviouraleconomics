@@ -18,6 +18,7 @@ book:
       - foundations/economic-foundation-exercises.qmd
     - part: risk-and-uncertainty/decision-making-under-risk-and-uncertainty.qmd
       chapters:
+      - risk-and-uncertainty/notation.qmd
       - risk-and-uncertainty/expected-value.qmd
       - risk-and-uncertainty/axioms-for-expected-utility-theory.qmd
       - risk-and-uncertainty/expected-utility-theory.qmd

@@ -1,12 +1,18 @@
 # Preface {.unnumbered}
 
-In these notes I examine the foundations of behavioural economics.
+My name is Jason Collins.
+
+Welcome to these notes on behavioural economics.
 
 These notes are based on an undergraduate subject I teach in as part of UTS’s Bachelor of Economics program, [23005 Behavioural Economics](https://handbook.uts.edu.au/subjects/23005.html).
 
+I take a traditional approach. I start with the basic economic and game theory foundations. I then examine what happens when we introduce a richer view of human behaviour. I look at how we make decisions under risk and uncertainty, and over time, how we judge probability and how we interact with others.
+
+The result is a new set of predictions as to how humans might behave and what economic phenomena might emerge.
+
 There are no mathematical prerequisites for this subject. Hence, the mathematics is kept at a basic level.
 
-In these notes I take a traditional approach to behavioural economics, providing the basic economics foundations and examining how modifications to the core economic axioms lead to new insight. There is ample critique of the field (as you can read [here](https://www.jasoncollins.blog/a-critical-behavioural-economics-and-behavioural-science-reading-list/)), but these course notes are not about that critique. Those foundations can be the launchpad for a critique, and without understanding those foundations the critique can be hollow.
+I have created videos to accompany these notes. You can find links to them and other teaching materials on my website at [www.jasoncollins.blog/teaching/](https://www.jasoncollins.blog/teaching/).
 
 These course notes cover the following areas:
 
