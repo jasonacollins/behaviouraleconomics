@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -843,6 +843,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 data-number="7.3.3" class="anchored" data-anchor-id="monotonicity"><span class="header-section-number">7.3.3</span> Monotonicity</h3>
 <p>Preferences are monotone if more of any good in the bundle makes the agent strictly better off. Non-satiation is implied by monotonicity, but not the other way around.</p>
 <p>Monotonicity implies downward-sloping indifference curves. This is because any increase of a good in your bundle would take you to a higher indifference curve. A horizontal indifference curve is not feasible as moving along that indifference curve implies more of the good, but that is not possible as monotonicity implies you are better off and hence on a higher indifference curve.</p>
+<p>This can be seen in the following diagram. Point x lies on the indifference curve. Increasing the amount of either good will take you to a higher indifference curve. That is true for all points on that indifference curve.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -860,20 +861,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">data =</span> df, <span class="at">mapping =</span> <span class="fu">aes</span>(x, y), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)<span class="sc">+</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add points and labels</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fl">7.5</span>, <span class="at">y=</span><span class="fl">4.5</span>, <span class="at">label=</span><span class="st">"x"</span>))<span class="sc">+</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">8</span>)) <span class="sc">+</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="fl">7.5</span>, <span class="at">label=</span><span class="st">"y"</span>))<span class="sc">+</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add vertical and horizontal axis lines</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Remove x and y axis labels </span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>)<span class="sc">+</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set the limits of the plot</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_fixed</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">8</span>)) <span class="sc">+</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="fl">7.5</span>, <span class="at">label=</span><span class="st">"x"</span>))<span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add vertical and horizontal axis lines</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Remove x and y axis labels </span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>)<span class="sc">+</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set the limits of the plot</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_fixed</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -944,6 +943,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="diminishing-marginal-utility" class="level3" data-number="7.3.5">
 <h3 data-number="7.3.5" class="anchored" data-anchor-id="diminishing-marginal-utility"><span class="header-section-number">7.3.5</span> Diminishing marginal utility</h3>
+<p>Suppose you want some chocolate. You eat a piece. You then eat another. And another. How much utility do you imagine getting from the first piece compared to the 100th piece. The first piece will likely be much more satisfying than the 100th. This is the idea of diminishing marginal utility.</p>
 <p>Marginal utility is how much utility you get or lose from an incremental decrease or increase in consumption. Under diminishing marginal utility, each successive additional unit of consumption delivers a smaller (diminishing) amount of utility than the last.</p>
 <p>Diminishing marginal utility leads to risk-averse preferences. Someone is risk averse if they strictly prefer the expected value of a gamble to the gamble itself.</p>
 <p>Diminishing marginal utility is related to the axiom of convexity. Diminishing marginal utility will lead to convex indifference curves. However, the reverse relationship does not always hold.</p>
@@ -1130,7 +1130,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":true});</script>
 
 
 

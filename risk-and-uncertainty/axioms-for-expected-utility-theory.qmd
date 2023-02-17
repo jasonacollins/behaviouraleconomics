@@ -338,6 +338,8 @@ For two equivalent goods or bundles, a weighted average of the two bundles is be
 
 ### Diminishing marginal utility
 
+Suppose you want some chocolate. You eat a piece. You then eat another. And another. How much utility do you imagine getting from the first piece compared to the 100th piece. The first piece will likely be much more satisfying than the 100th. This is the idea of diminishing marginal utility.
+
 Marginal utility is how much utility you get or lose from an incremental decrease or increase in consumption. Under diminishing marginal utility, each successive additional unit of consumption delivers a smaller (diminishing) amount of utility than the last.
 
 Diminishing marginal utility leads to risk-averse preferences. Someone is risk averse if they strictly prefer the expected value of a gamble to the gamble itself.
