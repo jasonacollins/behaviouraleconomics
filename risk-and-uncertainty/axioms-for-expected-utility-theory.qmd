@@ -192,7 +192,7 @@ These include:
 -   Convexity
 -   Diminishing marginal utility
 
-I provide further detail on several of these below.
+I provide further detail on these.
 
 ### Reference point of zero wealth
 
@@ -246,6 +246,37 @@ df <- data.frame(
 Preferences are monotone if more of any good in the bundle makes the agent strictly better off. Non-satiation is implied by monotonicity, but not the other way around.
 
 Monotonicity implies downward-sloping indifference curves. This is because any increase of a good in your bundle would take you to a higher indifference curve. A horizontal indifference curve is not feasible as moving along that indifference curve implies more of the good, but that is not possible as monotonicity implies you are better off and hence on a higher indifference curve.
+
+```{r, warning=FALSE, message=FALSE}
+## Load ggplot2
+library(ggplot2)
+
+## Create a data frame with 2 columns and 4 rows
+df <- data.frame(
+  x = c(1, 4, 8, 15, 20),
+  y = c(20, 10, 8, 6, 3)
+)
+
+# Plot a smooth line through the points
+  ggplot()+
+    geom_smooth(data = df, mapping = aes(x, y), color = "black", na.rm = TRUE)+
+
+    # Add points and labels
+    geom_point(aes(x=8, y=5)) +
+    geom_text(aes(x=7.5, y=4.5, label="x"))+
+    geom_point(aes(x=8, y=8)) +
+    geom_text(aes(x=8, y=7.5, label="y"))+
+
+    # Add vertical and horizontal axis lines
+    geom_vline(xintercept = 0, linewidth=0.25)+ 
+    geom_hline(yintercept = 0, linewidth=0.25)+
+
+    # Remove x and y axis labels 
+    labs(x = "", y = "")+
+
+    # Set the limits of the plot
+    coord_fixed(xlim = c(0,20), ylim = c(0,20))
+```
 
 ### Convexity
 
