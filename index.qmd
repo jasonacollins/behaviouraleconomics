@@ -1,7 +1,5 @@
 # Preface {.unnumbered}
 
-My name is Jason Collins.
-
 Welcome to these notes on behavioural economics.
 
 These notes are based on an undergraduate subject I teach in as part of UTS’s Bachelor of Economics program, [23005 Behavioural Economics](https://handbook.uts.edu.au/subjects/23005.html).
