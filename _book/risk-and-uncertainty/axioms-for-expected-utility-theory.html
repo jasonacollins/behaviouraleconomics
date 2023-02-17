@@ -622,13 +622,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Completeness</li>
 <li>Transitivity</li>
 <li>Continuity</li>
-<li>Independence</li>
+<li>Independence of irrelevant alternatives</li>
 </ul>
 <p>Under these axioms, a decision maker behaves as if choosing between risky prospects by selecting the one with the highest expected utility.</p>
 <p>The four axioms are often called the von Neumann–Morgenstern axioms for a rational agent. This gives us another benchmark of “rationality”. An agent is rational if they conform with these four axioms.</p>
 <p>One important feature of preferences under these assumptions is that utility is cardinal. The magnitude, not just rank, of the numbers matters.</p>
 <p>If you look at other resources on the axioms underlying expected utility theory, you may come across an axiom called the Archimedean property. The Archimedean property is an alternative assumption to continuity. Only one of continuity or the Archimedean property need be assumed. I will not cover the Archimedean property in these notes.</p>
-<p>Beyond the axioms of completeness, transitivity, continuity and independence, some additional axioms are often adopted for practical purposes. These include calculating utility over total wealth, non-satiation, monotonicity, convexity and diminishing marginal utility.</p>
+<p>Beyond the axioms of completeness, transitivity, continuity and independence of irrelevant alternatives, some additional axioms are often adopted for practical purposes. These include using a reference point of zero wealth, non-satiation, monotonicity, convexity and diminishing marginal utility.</p>
 <section id="continuity" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="continuity"><span class="header-section-number">7.1</span> Continuity</h2>
 <p>The idea behind continuity is that people have similar preferences for similar bundles. If <span class="math inline">x</span> is preferred to <span class="math inline">y</span>, bundles close to <span class="math inline">x</span> are preferred to bundles close to <span class="math inline">y</span>. There are no “jumps” in utility.</p>
@@ -758,7 +758,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the second, they are offered a choice between two gambles. The first gamble is a 50% chance of an orange and a 50% chance of nothing. The second is a 50% chance of an apple and a 50% chance of nothing. They state that they strictly prefer the gamble with a 50% chance of an orange.</p>
 <p>Compare the two scenarios. The choice between an apple or an orange from the first scenario is mixed with a 50% probability of getting nothing in the second.</p>
 <p>Under the axiom of irrelevant alternatives, a person who prefers the orange in the first will prefer the gamble with the orange in the second. The addition of the irrelevant third option - in this case, a 50% probability of nothing - will not change their order of preference.</p>
-<p>More generally, under the axiom of independence of irrelevant alternatives, a person who mixes two gambles with an irrelevant third gamble will maintain the same order of preference forXXXXX the two original gambles as when the two are presented independently of the third.</p>
+<p>More generally, under the axiom of independence of irrelevant alternatives, a person who mixes two gambles with an irrelevant third gamble will maintain the same order of preference when the gambles are mixed as they had for the two original gambles when they were presented independently of the third.</p>
 <p>A formal definition states that if:</p>
 <ul>
 <li><span class="math inline">x</span> and <span class="math inline">y</span> are lotteries with <span class="math inline">x\succcurlyeq y</span> and</li>
@@ -813,20 +813,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot a smooth line through the points</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">data =</span> df, <span class="at">mapping =</span> <span class="fu">aes</span>(x, y), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)<span class="sc">+</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fl">7.5</span>, <span class="at">y=</span><span class="fl">4.5</span>, <span class="at">label=</span><span class="st">"x"</span>))<span class="sc">+</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">8</span>)) <span class="sc">+</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="fl">7.5</span>, <span class="at">label=</span><span class="st">"y"</span>))<span class="sc">+</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add vertical and horizontal axis lines</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove x and y axis labels </span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>)<span class="sc">+</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set the limits of the plot</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_fixed</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add points and labels</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fl">7.5</span>, <span class="at">y=</span><span class="fl">4.5</span>, <span class="at">label=</span><span class="st">"x"</span>))<span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">8</span>)) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="fl">7.5</span>, <span class="at">label=</span><span class="st">"y"</span>))<span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add vertical and horizontal axis lines</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Remove x and y axis labels </span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>)<span class="sc">+</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set the limits of the plot</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_fixed</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1088,7 +1090,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 

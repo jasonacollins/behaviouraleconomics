@@ -6,7 +6,7 @@ Suppose I offer to flip a coin. I give you \$1 if it is heads and you will give 
 
 The expected value is \$0. You lose \$1 half the time and gain \$1 half the time.
 
-Formally, given a gamble, the expected value $E[X]$ of the random variable $X$ is the probability weighted sum of the potential outcomes. That is, we calculate the expected value by multiplying each possible outcome by the probability with which it occurs.
+Formally, given a gamble, the expected value $E[X]$ of the random variable $X$ is the probability-weighted sum of the potential outcomes. That is, we calculate the expected value by multiplying each possible outcome by the probability with which it occurs.
 
 We calculate the expected value of a gamble with $n$ possible outcomes using the following equation:
 

@@ -7,7 +7,7 @@ That gives us four axioms:
 -   Completeness
 -   Transitivity
 -   Continuity
--   Independence
+-   Independence of irrelevant alternatives
 
 Under these axioms, a decision maker behaves as if choosing between risky prospects by selecting the one with the highest expected utility.
 
@@ -17,7 +17,7 @@ One important feature of preferences under these assumptions is that utility is 
 
 If you look at other resources on the axioms underlying expected utility theory, you may come across an axiom called the Archimedean property. The Archimedean property is an alternative assumption to continuity. Only one of continuity or the Archimedean property need be assumed. I will not cover the Archimedean property in these notes.
 
-Beyond the axioms of completeness, transitivity, continuity and independence, some additional axioms are often adopted for practical purposes. These include calculating utility over total wealth, non-satiation, monotonicity, convexity and diminishing marginal utility.
+Beyond the axioms of completeness, transitivity, continuity and independence of irrelevant alternatives, some additional axioms are often adopted for practical purposes. These include using a reference point of zero wealth, non-satiation, monotonicity, convexity and diminishing marginal utility.
 
 ## Continuity
 
