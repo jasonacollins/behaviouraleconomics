@@ -32,7 +32,7 @@ Under transitivity, if a person prefers A to B and B to C, they will prefer A to
 
 Formally, we can state the transitivity axiom as follows:
 
-> For all $x$, $y$, $z$, if $x \geq y$ and $y \geq z$, then $x \geq z$.
+> For all $x$, $y$, $z$, if $x \succcurlyeq y$ and $y \succcurlyeq z$, then $x \succcurlyeq z$.
 
 One classic argument for transitivity is the concept of a "money pump" (@davidson1955).
 

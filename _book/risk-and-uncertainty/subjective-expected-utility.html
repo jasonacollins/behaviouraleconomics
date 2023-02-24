@@ -528,18 +528,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Subjective expected utility theory is used in situations of uncertainty, where the probabilities are not known. People maximize expected utility using a subjective estimate of probability.</p>
-<p>The agent maximises subjective expected utility, <span class="math inline">E[U(x)]</span>:</p>
+<p>The agent maximises subjective expected utility, <span class="math inline">E[U(x)]</span>, using a subjective probability <span class="math inline">\pi(x_i)</span> for each outcome <span class="math inline">x_i</span>.</p>
+<p>While people may have different beliefs about the probabilities of different outcomes, as the word “subjective” indicates, these are typically assumed to comply with Bayesian probability theory. Decision makers are Bayesian, in that, given the evidence, they have beliefs that are consistent with Bayes’ rule.</p>
+<p>The equation for subjective utility theory is as that for expected utility theory, except that the probabilities are subjective.</p>
 <p><span class="math display">\begin{align*}
 E[U(x)]&amp;=\pi(x_1)U(x_1)+\pi(x_2)U(x_2)+...+\pi(x_n)U(x_n)\\[6pt]
 &amp;=\sum_{i=1}^n \pi(x_i)U(x_i)
 \end{align*}</span></p>
-<p>where <span class="math inline">\pi(x_i)</span> is the subjective probability of <span class="math inline">x_i</span>.</p>
-<p>People have different beliefs about the probabilities of different outcomes, but these typically come from a “sound” foundation such as Bayesian probability theory. Decision makers are Bayesian, in that, given the evidence, they have beliefs which are consistent with Bayes’ rule.</p>
-<p>In Subjective Expected Utility Theory, uncertain options are evaluated in 4 steps:</p>
+<p>You can think of this formula as comprising the following steps:</p>
 <ol type="1">
-<li><p>Define utility over final outcomes <span class="math inline">x_1,...,x_n</span>.</p></li>
+<li><p>Define utility <span class="math inline">U(x_i)</span> over final outcomes <span class="math inline">x_1,...,x_n</span>.</p></li>
 <li><p>Define subjective probability <span class="math inline">\pi(x_i)</span> over final outcomes <span class="math inline">x_1,...,x_n</span>.</p></li>
-<li><p>Weight utility of each outcome <span class="math inline">U(x_i)</span> by the subjective probability <span class="math inline">\pi(x_i)</span>.</p></li>
+<li><p>Weight the utility of each outcome <span class="math inline">U(x_i)</span> by the subjective probability <span class="math inline">\pi(x_i)</span>.</p></li>
 <li><p>Add the weighted utilities.</p></li>
 </ol>
 

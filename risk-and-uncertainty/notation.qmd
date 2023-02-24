@@ -26,4 +26,10 @@ $$
 L=(x_1,p_1; x_2,p_2; ...; x_n,p_n)
 $$
 
+Or:
+
+$$
+L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
+$$
+
 It is typically not difficult to determine which is which.
