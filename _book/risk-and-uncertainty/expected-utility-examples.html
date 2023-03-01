@@ -146,10 +146,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 10&nbsp; Expected utility examples">
-<meta property="og:description" content="Suppose your utility function is U(x)=ln(x).">
+<meta property="og:description" content="Suppose your utility function is U(x)=\text{ln}(x).">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 10&nbsp; Expected utility examples">
-<meta name="twitter:description" content="Suppose your utility function is U(x)=ln(x).">
+<meta name="twitter:description" content="Suppose your utility function is U(x)=\text{ln}(x).">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -219,11 +219,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../what-is-behavioural-economics.html" class="sidebar-item-text sidebar-link">What is behavioural economics?</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -604,7 +599,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="example-1" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">10.1</span> Example 1</h2>
-<p>Suppose your utility function is <span class="math inline">U(x)=ln(x)</span>.</p>
+<p>Suppose your utility function is <span class="math inline">U(x)=\text{ln}(x)</span>.</p>
 <p>You have a 50% chance of winning $10 and a 50% chance of losing $10. Assume your starting wealth is $20.</p>
 <p>What is the expected value of this game?</p>
 <p><span class="math display">\begin{align*}
@@ -617,11 +612,11 @@ E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
 <p><span class="math display">\begin{align*}
 E[U(W+X)]&amp;=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
 &amp;=0.5U(20-10)+0.5U(20+10) \\[6pt]
-&amp;=0.5ln(10)+0.5ln(30) \\[6pt]
+&amp;=0.5\text{ln}(10)+0.5\text{ln}(30) \\[6pt]
 &amp;=2.85
 \end{align*}</span></p>
 <p>What does an expected utility of 2.85 mean? To make it tangible, we can ask what wealth would give that utility.</p>
-<p><span class="math display">U(W)=ln(W)=2.85</span> <span class="math display">W=e^{2.85}=\$17.30</span></p>
+<p><span class="math display">U(W)=\text{ln}(W)=2.85</span> <span class="math display">W=e^{2.85}=\$17.30</span></p>
 <p>This gamble with an expected value of zero reduces utility by an amount equivalent to $2.70.</p>
 <p>We could also say that the certainty equivalent of this gamble is the final wealth of $17.30, or a loss of $2.70.</p>
 <p>This chart illustrates the example. On the x-axis, we have the outcomes and on the y-axis, we have the utility.</p>
@@ -636,7 +631,7 @@ E[U(W+X)]&amp;=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
 </section>
 <section id="example-2" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="example-2"><span class="header-section-number">10.2</span> Example 2</h2>
-<p>Suppose your utility function is <span class="math inline">\small U(x)=ln(x)</span>.</p>
+<p>Suppose your utility function is <span class="math inline">U(x)\text{ln}(x)</span>.</p>
 <p>You have an 80% chance of winning $10 and a 50% chance of losing $10. Assume your starting wealth is $20.</p>
 <p>What are the expected value and the expected utility of this game?</p>
 <p><span class="math display">\begin{align*}
@@ -649,11 +644,11 @@ E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
 <p><span class="math display">\begin{align*}
 E[U(W+x)]&amp;=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
 &amp;=0.8U(20+10)+0.2U(20-10) \\[6pt]
-&amp;=0.8ln(30)+0.2ln(10) \\[6pt]
+&amp;=0.8\text{ln}(30)+0.2\text{ln}(10) \\[6pt]
 &amp;=3.18
 \end{align*}</span></p>
 <p>What does an expected utility of 3.18 mean? To make it tangible, we can ask what wealth would give that utility.</p>
-<p><span class="math display">U(W)=ln(W)=3.18</span> <span class="math display">W=e^{3.18}=\$24.08</span></p>
+<p><span class="math display">U(W)=\text{ln}(W)=3.18</span> <span class="math display">W=e^{3.18}=\$24.08</span></p>
 <p>This gamble with an expected value of $6 increases utility by an amount equivalent to $4.08.</p>
 <p>We could also say that the certainty equivalent of this gamble is the final wealth of $24.08.</p>
 <p>This chart illustrates the example.</p>
@@ -667,7 +662,7 @@ E[U(W+x)]&amp;=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
 </section>
 <section id="example-3" class="level2" data-number="10.3">
 <h2 data-number="10.3" class="anchored" data-anchor-id="example-3"><span class="header-section-number">10.3</span> Example 3</h2>
-<p>Suppose your utility function is <span class="math inline">U(x)=ln(x)</span>.</p>
+<p>Suppose your utility function is <span class="math inline">U(x)=\text{ln}(x)</span>.</p>
 <p>You have a 50% chance of increasing your wealth by 50% and a 50% chance of decreasing your wealth by 40%.</p>
 <p>What are the expected value and the expected utility of this game?</p>
 <p><span class="math display">\begin{align*}
@@ -680,9 +675,9 @@ E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
 <p><span class="math display">\begin{align*}
 E[U(X)]&amp;=\sum_{i=1}^n p_iU(X_i) \\[6pt]
 &amp;=0.5U(0.6W)+0.5U(1.5W) \\[6pt]
-&amp;=0.5ln(0.6)+0.5\times ln(W)+0.5ln(1.5)+0.5\times ln(W) \\[6pt]
-&amp;=-0.255+0.203+ln(W) \\[6pt]
-&amp;=−0.053+ln(W)
+&amp;=0.5\text{ln}(0.6)+0.5\times \text{ln}(W)+0.5\text{ln}(1.5)+0.5\times \text{ln}(W) \\[6pt]
+&amp;=-0.255+0.203+\text{ln}(W) \\[6pt]
+&amp;=−0.053+\text{ln}(W)
 \end{align*}</span></p>
 <p>Here we have a gamble with a positive expected value, 5% of your wealth, but lower expected utility. Someone with log utility would reject this bet.</p>
 <p>This chart illustrates the example.</p>
@@ -733,12 +728,12 @@ W&amp;=W-c+\sum_{k=1}^{k=\infty}1 \qquad \Bigg(\text{as }\sum_{k=1}^{k=\infty}\f
 c&amp;=\infty
 \end{align*}</span></p>
 <p>That is, a risk-neutral player would pay any amount $<span class="math inline">c</span> to play.</p>
-<p>What is the maximum sum a risk-averse player with <span class="math inline">U(x)=ln(x)</span> would be willing to pay to play the game? How does their wealth affect their willingness to pay?</p>
+<p>What is the maximum sum a risk-averse player with <span class="math inline">U(x)=\text{ln}(x)</span> would be willing to pay to play the game? How does their wealth affect their willingness to pay?</p>
 <p>Again we will determine at what $<span class="math inline">c</span> the player is indifferent between accepting and rejecting a chance to play, which occurs when <span class="math inline">U(W)=E[U(X-c)]</span>.</p>
 <p><span class="math display">\begin{align*}
 U(W)&amp;=E[U(X-c)] \\[6pt]
 U(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
-ln(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(W+\$2^k-c)
+\text{ln}(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(W+\$2^k-c)
 \end{align*}</span></p>
 <div class="cell">
 <details>
@@ -777,7 +772,7 @@ ln(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(W+\$2^k-c)
 </div>
 <p>There is no closed-form solution to this equation to enable us to determine <span class="math inline">c</span>. It needs to be solved via numerical methods (such as testing and iterating to a solution).</p>
 <p>If we did solve, we would find that someone who has wealth of $0.01 would be willing to pay up to $2.01. They would need to borrow. Someone with wealth $1000 would be willing to pay $10.95. A person with a wealth of $1 million would be willing to pay $20.87.</p>
-<p>We cannot solve for a person with no wealth as ln⁡(0) is undefined.</p>
+<p>We cannot solve for a person with no wealth as <span class="math inline">\text{ln}⁡(0)</span> is undefined.</p>
 <p>Why does willingness to pay increase with wealth?</p>
 <p>With log utility, as wealth increases, the slope of the log function increasingly approximates a linear function (the second derivative approaches zero). Hence, the gambler displays less risk-averse (closer to risk-neutral) behaviour.</p>
 <p>One way to gain an intuition for why this gamble now has a finite value is to calculate the utility of a risk-averse player whose only asset is the opportunity to play this game.</p>
@@ -792,8 +787,8 @@ E[U(X)]&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[12pt]
 <p>The change in the utility from each flip rapidly declines. Ultimately the series of fractions sum to two.</p>
 <p>We can then calculate what wealth is equivalent to this expected utility.</p>
 <p><span class="math display">
-U(W)=ln(W)=2ln(2) \\[12pt]
-W=e^{2ln2}=4
+U(W)=\text{ln}(W)=2\text{ln}(2) \\[12pt]
+W=e^{2\text{ln}2}=4
 </span></p>
 <p>The expected utility from the game is equal to the utility of $4</p>
 
@@ -978,7 +973,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 

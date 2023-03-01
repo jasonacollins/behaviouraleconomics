@@ -221,11 +221,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../what-is-behavioural-economics.html" class="sidebar-item-text sidebar-link">What is behavioural economics?</a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">Economic foundations</a>
@@ -609,7 +604,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="expected-value-of-roulette" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="expected-value-of-roulette"><span class="header-section-number">12.1</span> Expected value of roulette</h2>
-<p>You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36). If you make a straight up bet on one of the 37 single numbers, you are paid $35 for every dollar you bet. What is the expected value of a $20 bet.</p>
+<p>You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36). If you make a straight up bet on one of the 37 single numbers, you are paid $35 for every dollar you bet (in addition to receiving back your bet). What is the expected value of a $20 bet.</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -625,7 +620,7 @@ Answer
 <p>The expected value of the Roulette bet is:</p>
 <p><span class="math display">\begin{align*}
 E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
-&amp;=\frac{36}{37}*(-\$20)+\frac{1}{37}*(35*\$20) \\[6pt]
+&amp;=\frac{36}{37}\times(-\$20)+\frac{1}{37}\times(35\times\$20) \\[6pt]
 &amp;=\$-0.54
 \end{align*}</span></p>
 </div>
@@ -634,7 +629,7 @@ E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
 </section>
 <section id="expected-value-of-insurance" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="expected-value-of-insurance"><span class="header-section-number">12.2</span> Expected value of insurance</h2>
-<p>An agent is considering insurance against bushfire for its $1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for $1100.</p>
+<p>An agent is considering insurance against bushfire for its $1,000,000 house. The house has a 1 in 1000 (<span class="math inline">p=0.001</span>) chance of burning down. An insurer is willing to offer full coverage for premium $1100.</p>
 <p>a) What is the expected value of purchasing insurance?</p>
 <p>b) What is the expected value of not purchasing insurance?</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -650,14 +645,24 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>a) What is the expected value of purchasing insurance?</p>
+<p>If you purchase insurance, you pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.</p>
 <p><span class="math display">
 E[\text{purchase}]=-\text{premium}=-\$1,100
 </span></p>
 <p>The expected value of purchasing insurance is the guaranteed loss of the premium.</p>
+<p>You could also think of the expected value of purchasing insurance as involving both the loss of the house and the insurance payout in case of fire. In that case, you would write:</p>
+<p><span class="math display">\begin{align*}
+E[\text{purchase}]&amp;=p\times(-value_{\text{house}}+payout-premium) \\[6pt]
+&amp;\qquad +(1-p)\times(-premium) \\[6pt]
+&amp;=0.001\times(-1000000+1000000-1100) \\[6pt]
+&amp;\qquad +0.999\times(-1100) \\[6pt]
+&amp;=-\$1,100
+\end{align*}</span></p>
+<p>This gives the same answer as the first method.</p>
 <p>b) What is the expected value of not purchasing insurance?</p>
 <p><span class="math display">\begin{align*}
-E[\text{don't}]&amp;=P_{\text{burn}}*-value_{\text{house}} \\
-&amp;=-0.001*1000000 \\
+E[\text{don't}]&amp;=p\times-value_{\text{house}} \\
+&amp;=-0.001\times 1000000 \\
 &amp;=-\$1000
 \end{align*}</span></p>
 </div>
@@ -1424,7 +1429,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 

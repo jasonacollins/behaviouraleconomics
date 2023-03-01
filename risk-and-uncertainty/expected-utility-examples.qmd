@@ -2,7 +2,7 @@
 
 ## Example 1
 
-Suppose your utility function is $U(x)=ln(x)$.
+Suppose your utility function is $U(x)=\text{ln}(x)$.
 
 You have a 50% chance of winning \$10 and a 50% chance of losing \$10. Assume your starting wealth is \$20.
 
@@ -21,13 +21,13 @@ What is the expected utility of this game?
 \begin{align*}
 E[U(W+X)]&=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
 &=0.5U(20-10)+0.5U(20+10) \\[6pt]
-&=0.5ln(10)+0.5ln(30) \\[6pt]
+&=0.5\text{ln}(10)+0.5\text{ln}(30) \\[6pt]
 &=2.85
 \end{align*}
 
 What does an expected utility of 2.85 mean? To make it tangible, we can ask what wealth would give that utility.
 
-$$U(W)=ln(W)=2.85$$
+$$U(W)=\text{ln}(W)=2.85$$
 $$W=e^{2.85}=\$17.30$$
 
 This gamble with an expected value of zero reduces utility by an amount equivalent to \$2.70. 
@@ -46,7 +46,7 @@ Also plotted is the certainty equivalent. We can identify it as the point on the
 
 ## Example 2
 
-Suppose your utility function is $\small U(x)=ln(x)$.
+Suppose your utility function is $U(x)\text{ln}(x)$.
 
 You have an 80% chance of winning \$10 and a 50% chance of losing \$10. Assume your starting wealth is \$20.
 
@@ -65,13 +65,13 @@ What is the expected utility of this game?
 \begin{align*}
 E[U(W+x)]&=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
 &=0.8U(20+10)+0.2U(20-10) \\[6pt]
-&=0.8ln(30)+0.2ln(10) \\[6pt]
+&=0.8\text{ln}(30)+0.2\text{ln}(10) \\[6pt]
 &=3.18
 \end{align*}
 
 What does an expected utility of 3.18 mean? To make it tangible, we can ask what wealth would give that utility.
 
-$$U(W)=ln(W)=3.18$$
+$$U(W)=\text{ln}(W)=3.18$$
 $$W=e^{3.18}=\$24.08$$
 
 This gamble with an expected value of \$6 increases utility by an amount equivalent to \$4.08.
@@ -88,7 +88,7 @@ Also plotted is the certainty equivalent. We can identify it as the point on the
 
 ## Example 3
 
-Suppose your utility function is $U(x)=ln(x)$.
+Suppose your utility function is $U(x)=\text{ln}(x)$.
 
 You have a 50% chance of increasing your wealth by 50% and a 50% chance of decreasing your wealth by 40%.
 
@@ -106,9 +106,9 @@ The expected value of the gamble is 5% of your wealth. The gamble has a positive
 \begin{align*}
 E[U(X)]&=\sum_{i=1}^n p_iU(X_i) \\[6pt]
 &=0.5U(0.6W)+0.5U(1.5W) \\[6pt]
-&=0.5ln(0.6)+0.5\times ln(W)+0.5ln(1.5)+0.5\times ln(W) \\[6pt]
-&=-0.255+0.203+ln(W) \\[6pt]
-&=−0.053+ln(W)
+&=0.5\text{ln}(0.6)+0.5\times \text{ln}(W)+0.5\text{ln}(1.5)+0.5\times \text{ln}(W) \\[6pt]
+&=-0.255+0.203+\text{ln}(W) \\[6pt]
+&=−0.053+\text{ln}(W)
 \end{align*}
 
 Here we have a gamble with a positive expected value, 5% of your wealth, but lower expected utility. Someone with log utility would reject this bet.
@@ -173,14 +173,14 @@ c&=\infty
 
 That is, a risk-neutral player would pay any amount \$$c$ to play.
 
-What is the maximum sum a risk-averse player with $U(x)=ln(x)$ would be willing to pay to play the game? How does their wealth affect their willingness to pay?
+What is the maximum sum a risk-averse player with $U(x)=\text{ln}(x)$ would be willing to pay to play the game? How does their wealth affect their willingness to pay?
 
 Again we will determine at what \$$c$ the player is indifferent between accepting and rejecting a chance to play, which occurs when $U(W)=E[U(X-c)]$.
 
 \begin{align*}
 U(W)&=E[U(X-c)] \\[6pt]
 U(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
-ln(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}ln(W+\$2^k-c)
+\text{ln}(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(W+\$2^k-c)
 \end{align*}
 
 ```{r}
@@ -221,7 +221,7 @@ There is no closed-form solution to this equation to enable us to determine $c$.
 
 If we did solve, we would find that someone who has wealth of \$0.01 would be willing to pay up to \$`r c001`. They would need to borrow. Someone with wealth \$1000 would be willing to pay \$`r c1000`. A person with a wealth of \$1 million would be willing to pay \$`r c1000000`.
 
-We cannot solve for a person with no wealth as ln⁡(0) is undefined. 
+We cannot solve for a person with no wealth as $\text{ln}⁡(0)$ is undefined. 
 
 Why does willingness to pay increase with wealth?
 
@@ -243,8 +243,8 @@ The change in the utility from each flip rapidly declines. Ultimately the series
 We can then calculate what wealth is equivalent to this expected utility.
 
 $$
-U(W)=ln(W)=2ln(2) \\[12pt]
-W=e^{2ln2}=4
+U(W)=\text{ln}(W)=2\text{ln}(2) \\[12pt]
+W=e^{2\text{ln}2}=4
 $$
 
 The expected utility from the game is equal to the utility of \$4 

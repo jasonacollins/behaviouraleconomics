@@ -103,7 +103,7 @@ U_0(10,\$20)&=\delta^{10} u(\$20) \\
 
 This exponential discounter will prefer to receive \$20 in 10 days.
 
-::: {#fig-exponential layout-ncol=2}
+::: {#fig-example3 layout-ncol=2}
 
 ![$\delta=0.75$](img/example_3.jpg){#fig-example_3}
 

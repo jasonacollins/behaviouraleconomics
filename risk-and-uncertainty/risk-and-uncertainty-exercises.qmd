@@ -2,7 +2,7 @@
 
 ## Expected value of roulette
 
-You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36). If you make a straight up bet on one of the 37 single numbers, you are paid \$35 for every dollar you bet. What is the expected value of a \$20 bet.
+You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36). If you make a straight up bet on one of the 37 single numbers, you are paid \$35 for every dollar you bet (in addition to receiving back your bet). What is the expected value of a \$20 bet.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -11,14 +11,14 @@ The expected value of the Roulette bet is:
 
 \begin{align*}
 E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
-&=\frac{36}{37}*(-\$20)+\frac{1}{37}*(35*\$20) \\[6pt]
+&=\frac{36}{37}\times(-\$20)+\frac{1}{37}\times(35\times\$20) \\[6pt]
 &=\$`r round(36/37*(-20)+1/37*(35*20), 2)`
 \end{align*}
 :::
 
 ## Expected value of insurance
 
-An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for \$1100.
+An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for premium \$1100.
 
 a\) What is the expected value of purchasing insurance?
 
@@ -29,17 +29,31 @@ b\) What is the expected value of not purchasing insurance?
 
 a\) What is the expected value of purchasing insurance?
 
+If you purchase insurance, you pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.
+
 $$
 E[\text{purchase}]=-\text{premium}=-\$1,100
 $$
 
 The expected value of purchasing insurance is the guaranteed loss of the premium.
 
+You could also think of the expected value of purchasing insurance as involving both the loss of the house and the insurance payout in case of fire. In that case, you would write:
+
+\begin{align*}
+E[\text{purchase}]&=p\times(-value_{\text{house}}+payout-premium) \\[6pt]
+&\qquad +(1-p)\times(-premium) \\[6pt]
+&=0.001\times(-1000000+1000000-1100) \\[6pt]
+&\qquad +0.999\times(-1100) \\[6pt]
+&=-\$1,100
+\end{align*}
+
+This gives the same answer as the first method.
+
 b\) What is the expected value of not purchasing insurance?
 
 \begin{align*}
-E[\text{don't}]&=P_{\text{burn}}*-value_{\text{house}} \\
-&=-0.001*1000000 \\
+E[\text{don't}]&=p\times-value_{\text{house}} \\
+&=-0.001\times 1000000 \\
 &=-\$1000
 \end{align*}
 :::
