@@ -83,6 +83,25 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -146,10 +165,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 15&nbsp; The reflection effect">
-<meta property="og:description" content="When people make a risky choice related to gains, they are risk averse. They prefer a certain option with lower expected utility than the expected utility of the risky choice.">
+<meta property="og:description" content="The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 15&nbsp; The reflection effect">
-<meta name="twitter:description" content="When people make a risky choice related to gains, they are risk averse. They prefer a certain option with lower expected utility than the expected utility of the risky choice.">
+<meta name="twitter:description" content="The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -594,12 +613,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>When people make a risky choice related to gains, they are risk averse. They prefer a certain option with lower expected utility than the expected utility of the risky choice. When making a choice in the loss domain, they become risk seeking. This phenomena is called the reflection effect.</p>
-<p>This phenomena might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory where the pain of losses increases as they grow in size.</p>
-<p>The reflection effect provides an explanation for the framing effects we observed in the question about the unusual disease. In the gain frame, the preferred option is risk averse. In the loss frame, the preferred option tends to be the risk seeking option.</p>
+<p>The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.</p>
+<p>When people make a risky choice related to gains, they are risk averse. They prefer a certain option with lower expected utility than the expected utility of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.</p>
+<p>The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory where the pain of losses increases as they grow in size.</p>
+<p>The reflection effect explains the framing effects in the following experiment by <span class="citation" data-cites="kahneman1984">Kahneman and Tversky (<a href="../references.html#ref-kahneman1984" role="doc-biblioref">1984</a>)</span>.</p>
+<p>One group of experimental subjects were asked the following.</p>
+<blockquote class="blockquote">
+<p>Imagine that the U.S. is preparing for the outbreak of an unusual Asian disease, which is expected to kill 600 people. Two alternative programs to combat the disease have been proposed. Assume that the exact scientific estimates of the consequences of the programs are as follows:</p>
+<p>If Program A is adopted, 200 people will be saved.</p>
+<p>If Program B is adopted, there is a one-third probability that 600 people will be saved and a two-thirds probability that no people will be saved.</p>
+<p>Which of the two programs would you favour?</p>
+</blockquote>
+<p>72% of participants chose option A.</p>
+<p>Another group of experimental participants were shown the following:</p>
+<blockquote class="blockquote">
+<p>Imagine that the U.S. is preparing for the outbreak of an unusual Asian disease, which is expected to kill 600 people. Two alternative programs to combat the disease have been proposed. Assume that the exact scientific estimates of the consequences of the programs are as follows:</p>
+<p>If Program C is adopted, 400 people will die.</p>
+<p>If Program D is adopted, there is a one-third probability that nobody will die and a two-thirds probability that 600 people will die.</p>
+<p>Which of the two programs would you favour?</p>
+</blockquote>
+<p>22% of participants chose option C.</p>
+<p>72% of participants chose A and 22% of participants chose option C. Yet these two are equivalent. Option A and B are in the gain domain. Therefore the less risky option A is preferred. Options C and D are in the loss domain. Therefore the more risky option C is preferred.</p>
 <section id="the-reflection-effect-in-the-value-function" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="the-reflection-effect-in-the-value-function"><span class="header-section-number">15.1</span> The reflection effect in the value function</h2>
-<p>The following value function is an example of a function where there is diminishing sensitivity to both gains and losses.</p>
+<p>The following value function is an example of a function where there is diminishing sensitivity to both gains and losses. This function can generate the reflection effect.</p>
 <p><span class="math display">\begin{equation*}
 v(x)= \Bigg\{
 \begin{matrix}
@@ -607,8 +644,8 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 -(-x)^\frac{1}{2} \space \text{where} \space x&lt;0
 \end{matrix}
 \end{equation*}</span></p>
-<p>As <span class="math inline">x</span> increases in magnitude in either direction, the marginal increase in value from each additional unit of <span class="math inline">x</span> decreases.</p>
-<p>The result of this is risk averse behaviour in the gain domain and risk seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.</p>
+<p>As <span class="math inline">x</span> increases in magnitude in either direction, the marginal increase in value from each incremental unit of <span class="math inline">x</span> decreases.</p>
+<p>The result of this value function is risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -648,32 +685,37 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 </div>
 </div>
 </div>
-<p>In the gain domain the function is convex, indicating risk aversion. In the loss domain the concave function indicates risk seeking behaviour.</p>
+<p>In the gain domain, the function is convex, indicating risk aversion. In the loss domain, the concave function indicates risk-seeking behaviour.</p>
 <p>The following numerical example illustrates further.</p>
-<p>Suppose an agent with the above value function is offered a choice between $10 for certain and a 50:50 bet to win $20 or end up with nothing. The value of each choice is:</p>
+<p>Suppose an agent with the above value function is offered a choice between $10 for certain and a 50:50 bet to win $20 or end up with nothing. The value of each choice is as follows.</p>
 <p><span class="math display">\begin{align*}
-v(\text{certainty})&amp;=v(10) \\
-&amp;=10^{\frac{1}{2}} \\
-&amp;=3.1622777 \\
+v(\text{certainty})&amp;=v(10) \\[6pt]
+&amp;=10^{\frac{1}{2}} \\[6pt]
+&amp;=3.16 \\
 \\
-v(\text{bet})&amp;=0.5*v(20)+0.5*v(0) \\
-&amp;=0.5*20^{\frac{1}{2}}+0.5*0 \\
-&amp;=2.236068
+v(\text{bet})&amp;=0.5\times v(20)+0.5\times v(0) \\[6pt]
+&amp;=0.5\times 20^{\frac{1}{2}}+0.5\times 0 \\[6pt]
+&amp;=2.24
 \end{align*}</span></p>
-<p>The $10 for certain has a higher value for the agent. This agent is risk averse in the gain domain and therefore prefers an amount for certainty over a bet with the same expected value.</p>
-<p>Suppose the agent is now offered another choice. They can now have a certain loss of $10 or a 50:50 bet to lose $20 or to lose nothing. The value of each choice is:</p>
+<p>The $10 for certain has a higher value for the agent. This agent is risk averse in the gain domain and therefore prefers an amount for certain over a bet with the same expected value.</p>
+<p>Suppose the agent is now offered another choice. They can now have a certain loss of $10 or a 50:50 bet to lose $20 or to lose nothing. The value of each choice is as follows.</p>
 <p><span class="math display">\begin{align*}
-v(\text{certainty})&amp;=v(-10) \\
-&amp;=-10^{\frac{1}{2}} \\
-&amp;=-3.1622777 \\
+v(\text{certainty})&amp;=v(-10) \\[6pt]
+&amp;=-10^{\frac{1}{2}} \\[6pt]
+&amp;=-3.16 \\
 \\
-v(\text{bet})&amp;=0.5*v(-20)+0.5*v(0) \\
-&amp;=-0.5*20^{\frac{1}{2}}+0.5*0 \\
-&amp;=-2.236068
+v(\text{bet})&amp;=0.5\times v(-20)+0.5\times v(0) \\[6pt]
+&amp;=-0.5\times 20^{\frac{1}{2}}+0.5\times 0 \\[6pt]
+&amp;=-2.24
 \end{align*}</span></p>
 <p>This bet delivers higher value than the certain loss, despite the bet and the certain loss having the same expected value. The agent is willing to take a risk to avoid a loss. They are risk seeking in the loss domain.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
+<div id="ref-kahneman1984" class="csl-entry" role="doc-biblioentry">
+Kahneman, D., and Tversky, A. (1984). Choices, values, and frames. <em>American Psychologist</em>, <em>39</em>(4), 341–350. <a href="https://doi.org/10.1037/0003-066X.39.4.341">https://doi.org/10.1037/0003-066X.39.4.341</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -854,7 +896,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true,"openEffect":"zoom"});</script>
 
 
 

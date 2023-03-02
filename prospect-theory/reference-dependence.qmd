@@ -2,15 +2,21 @@
 
 Under Prospect Theory, people assess choices based on a reference point, as opposed to an absolute assessment of their position. Outcomes are coded as losses and gains relative to that reference point.
 
-The earlier example of assessing a share portfolio worth \$30,000 from a reference point of either \$20,000 or \$40,000 is an example of reference dependence.
+Consider the following two scenarios:
 
-Under expected utility theory, utility is typically thought of as being the product of your entire wealth ($W$). For example, if you gain \$100, your utility increases from $u(W)$ to $u(W+\$100)$.
+-  Scenario 1: You have not checked your share portfolio in a while. You expect it to be worth around \$40,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
 
-In contrast, under prospect theory, the value function (what the utility function is typically called in Prospect Theory) applies to changes relative to the reference point. If their initial reference point is their wealth before receiving the \$100, the value of that change is $v(\$100)$. The importance of that distinction becomes apparent when we consider how people consider losses and gains.
+-  Scenario 2: You have not checked your share portfolio in a while. You expect it to be worth around \$20,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
+
+Under expected utility theory, those two scenarios should feel the same as you have $U$(\$30,000) in both cases.
+
+In contrast, under prospect theory, the value function - value function being what the utility function is typically called in Prospect Theory - applies to changes relative to the reference point.
+
+If their initial reference point is their expectation, the value of that change is $v(\$10,000)$ or $v(\-$10,000)$ depending on whether their expectation is exceeded or not. The importance of that distinction becomes apparent when we examine how people consider choices involving either losses and gains.
 
 ## Theories of reference depdendence
 
-There are a number of theories on reference point formation. These include:
+There are several theories on reference point formation. These include:
 
 -   The status quo
 -   Lagged consumption
@@ -19,15 +25,17 @@ There are a number of theories on reference point formation. These include:
 
 ### The status quo
 
-A common assumption in Prospect Theory is that the reference point is the status quo (as it was for many examples in the original paper by @kahneman1979). The status quo implies a preference for the current state. Any negative change is perceived as a loss.
+A common assumption in Prospect Theory is that the reference point is the status quo, as it was for many examples in the original paper by @kahneman1979. The status quo implies a preference for the current state. Any negative change is perceived as a loss.
 
-The status quo appears straightforward and has been shown to be effective in contexts such as lab experiments.
+The status quo appears straightforward and is a reasonable description in contexts such as lab experiments.
 
 However, the status quo as a reference point does not appear to be a useful assumption for describing many economic interactions. Suppose you decide to sell your bike. Do you see the foregoing of the bike as a loss?
 
-What is you run a bike shop? Does every sale involve a feeling of loss? For markets in which intangible and fungible goods are exchanged (e.g. stock market) the status quo assumption appears a poor fit.
+What if you run a bike shop? Does every sale involve a feeling of loss? For markets in which intangible and fungible goods are exchanged (for example, the stock market) the status quo assumption appears a poor fit.
 
 ### Lagged consumption
+
+A second theory is that the reference point is lagged consumption.
 
 Imagine you win the lottery.
 
@@ -39,10 +47,12 @@ Your reference point likely reflects more recent consumption.
 
 Lagged consumption introduces adaptation into reference point determination:
 
-1.  We react to shocks
-2.  The effect of the shock fades in time
+1.  First, we react to shocks
+2.  Then the effect of the shock fades in time
 
 ### Goals
+
+Another theory is that our goals are our reference point.
 
 Consider the following problem from @heath1999:
 
@@ -50,18 +60,20 @@ Consider the following problem from @heath1999:
 >
 > One day, Sally sets a goal of performing 31 sit-ups. She finds herself very tired after performing 35 sit-ups and stops.
 >
-> Trish sets a goal of performing 39 sit-ups. She finds herself very tired after per- forming 35 sit-ups and stops.
+> Trish sets a goal of performing 39 sit-ups. She finds herself very tired after performing 35 sit-ups and stops.
 >
 > What emotion is each person experiencing?
 
-With goals as reference points, people see success or failure to achieve a goal as a loss or gain. Although both have the same performance, Sally will have a positive emotional reaction and Trish a negative reaction.
+With goals as reference points, people see success or failure to achieve a goal as a loss or gain. Although both Sally and Trish have the same performance, Sally will have a positive emotional reaction and Trish a negative reaction.
 
 ### Recent expectations
 
+A fourth theory of reference point determination is recent expectations.
+
 In this approach, the reference point is beliefs about future outcomes (@koszegi2006). For example, a 5% pay rise when expecting a 10% pay rise may be perceived as a loss.
 
-The expectations-based theory can produce the same predictions of alternative theories:
+The expectations-based theory can produce the same predictions as alternative theories:
 
-1.  Status-quo: if expectations are stable, recent expectations will reflect the status quo
-2.  Lagged consumption: recent consumption will shape expectations
-3.  Goals: goals can shape (or be shaped by) expectations
+1.  If expectations are stable, recent expectations will reflect the status quo.
+2.  Recent consumption will shape expectations, making lagged consumption a reasonable reference point.
+3.  Goals can also shape (or be shaped by) expectations

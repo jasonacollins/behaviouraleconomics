@@ -119,7 +119,7 @@ format:
   pdf:
     documentclass: report
     echo: false
-    toc-depth: 2
+    toc-depth: 1
 
 filters:
   - lightbox
