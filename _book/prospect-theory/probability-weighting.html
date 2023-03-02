@@ -102,10 +102,10 @@ div.csl-indent {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 17&nbsp; Probability weighting">
-<meta property="og:description" content="In Expected Utility Theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.">
+<meta property="og:description" content="In expected utility theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 17&nbsp; Probability weighting">
-<meta name="twitter:description" content="In Expected Utility Theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.">
+<meta name="twitter:description" content="In expected utility theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -143,7 +143,7 @@ div.csl-indent {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -237,7 +237,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></a>
+  <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Subjective expected utility theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -297,7 +297,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></a>
+  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -551,17 +551,21 @@ div.csl-indent {
 
 </header>
 
-<p>In Expected Utility Theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.</p>
+<p>In expected utility theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.</p>
 <p>Experimental observation confirms that we approximate linear probabilities for intermediate probabilities. But, there is strong evidence that we overweight certain events, when the probability of the event <span class="math inline">p</span> = 1, relative to near certain events, such as when the probability <span class="math inline">p</span> = 0.99. This is effectively the same as overweighting very low-probability events.</p>
-<p>The following diagram from <span class="citation" data-cites="tversky1992">Tversky and Kahneman (<a href="../references.html#ref-tversky1992" role="doc-biblioref">1992</a>)</span> illustrates the relationship between objective utility and the weight applied to the value function.</p>
+<p>The consequence of this is that the value in prospect theory is calculated using weighted probabilities, with those weights reflecting the empirical observations.</p>
+<p>The following diagram from <span class="citation" data-cites="tversky1992">Tversky and Kahneman (<a href="../references.html#ref-tversky1992" role="doc-biblioref">1992</a>)</span> illustrates the relationship between objective utility and the weight applied to the value function. On the x-axis is the probability of the event. On the y-axis is the weight applied to the value function for that probability. The straight line at 45 degrees represents linear weighting of probabilities. The curve represents the weighting function.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/tversky_and_kahneman_1992_figure_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/tversky_and_kahneman_1992_figure_1.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
+<p>Where the probability is very low, such as around <span class="math inline">p=0.05</span>, the weight is around 0.15. Similarly, at high <span class="math inline">p=0.95</span>, the weight is around 0.8. For intermediate probabilities, the observed weight is close to the probability.</p>
+<p><span class="citation" data-cites="kahneman2011">Kahneman (<a href="../references.html#ref-kahneman2011" role="doc-biblioref">2011</a>)</span> calls the large psychological value of the change from 0 to 5% (or some other small probability) the possibility effect. Very unlikely but possible outcomes are given more weight than similar increases in probability for events that are already possible. He calls the large psychological value of the change to 100% the certainty effect. We will pay a lot more for certainty than near certainty.</p>
 <section id="the-allais-paradox" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="the-allais-paradox"><span class="header-section-number">17.1</span> The Allais Paradox</h2>
-<p>Probability weighting is often offered as an explanation for the Allais Paradox, which we discuss in <a href="../risk-and-uncertainty/anomalies-of-expected-utility-theory.html#sec-allais"><span>Section&nbsp;11.1</span></a>.</p>
+<p>Probability weighting is often offered as an explanation for the Allais Paradox, which I discuss in <a href="../risk-and-uncertainty/anomalies-of-expected-utility-theory.html#sec-allais"><span>Section&nbsp;11.1</span></a>.</p>
+<p>The Allais paradox can be illustrated as follows.</p>
 <p>You are given the following pair of choices.</p>
 <p><strong>Choice 1</strong>: Choose one of the following bets:</p>
 <p>Bet A:</p>
@@ -587,9 +591,9 @@ div.csl-indent {
 <li>$2400 with probability: 34%</li>
 <li>$0 with probability: 66%</li>
 </ul>
-<p>People tend to prefer Bet C. It can be shown that this pair of preferences, Bet B and Bet C, does not conform with expected utility.</p>
-<p>One explanation for this comes from probability weighting. If you look at Bet B, this involves a certain outcome, which tends to be overweighted relative to near-certain events, the 99% chance of $2400 or $2500 in Bet A. An alternative way of thinking about this is that the 1% probability of nothing in Bet A is overweighted.</p>
-<p><span class="citation" data-cites="kahneman2011">Kahneman (<a href="../references.html#ref-kahneman2011" role="doc-biblioref">2011</a>)</span> calls the large psychological value of the change from 0 to 5% (or some other small probability) the possibility effect. Very unlikely but possible outcomes are given more weight than similar increases in probability for events that are already possible. He calls the large psychological value of the change to 100% the certainty effect. We will pay a lot more for certainty than near certainty.</p>
+<p>People tend to prefer Bet C. It can be shown that this pair of preferences, Bet B and Bet C, does not conform with expected utility theory.</p>
+<p>One explanation for this comes from probability weighting. If you look at Bet B, the outcome is certain. Certain events tend to be overweighted relative to near-certain events, such as the 99% chance of $2400 or $2500 in Bet A. An alternative way of thinking about this is that the 1% probability of nothing in Bet A is overweighted.</p>
+<p>Conversely, for the intermediate probabilities in Bet C and Bet D, they are weighted closer to linearly, which can result in the slightly higher expected value Bet C being preferred.</p>
 </section>
 <section id="the-decision-weight" class="level2" data-number="17.2">
 <h2 data-number="17.2" class="anchored" data-anchor-id="the-decision-weight"><span class="header-section-number">17.2</span> The decision weight</h2>
@@ -787,7 +791,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true,"closeEffect":"zoom"});</script>
 
 
 

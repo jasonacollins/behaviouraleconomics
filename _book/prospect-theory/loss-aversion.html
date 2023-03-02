@@ -206,7 +206,7 @@ div.csl-indent {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -300,7 +300,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Subjective Expected Utility</span></a>
+  <a href="../risk-and-uncertainty/subjective-expected-utility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Subjective expected utility theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -360,7 +360,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect Theory examples</span></a>
+  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -695,6 +695,14 @@ x \space &amp;\textrm{where} \space x \geq 0\\
 V(x)=v(m-r_m)+v(5c-5r_c)
 </span></p>
 <p><span class="math inline">r_m</span> is Bruce’s reference point as it relates to money and <span class="math inline">r_c</span> is his reference point as it relates to mugs.</p>
+<p>To illustrate how this value function works, imagine Bruce has two mugs and he drops one. It breaks. His change in the value function is:</p>
+<p><span class="math display">\begin{align*}
+V(x)&amp;=v(5c-5r_c) \\
+&amp;=v(5\times 1-5\times 2) \\
+&amp;=v(-5) \\
+&amp;=-10 \qquad(\text{as } v(x)=2x \text{ when } x&lt;0)
+\end{align*}</span></p>
+<p>The loss of a mug results in value of -10.</p>
 <p>At the beginning of the experiment, Bruce is given a mug. Assuming Bruce’s reference point adapts such that he considers the mug his, how much would Bruce need to be paid to give up the mug?</p>
 <p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between losing the mug and gaining $p.&nbsp;We assume a reference point for money of his current wealth and are instructed that his reference point for mugs is ownership of the mug.</p>
 <p><span class="math display">\begin{align*}
@@ -904,7 +912,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 

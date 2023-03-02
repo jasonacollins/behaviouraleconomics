@@ -1,4 +1,4 @@
-# Subjective Expected Utility
+# Subjective expected utility theory
 
 Subjective expected utility theory is used in situations of uncertainty, where the probabilities are not known. People maximize expected utility using a subjective estimate of probability.
 
