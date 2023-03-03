@@ -206,7 +206,7 @@ div.csl-indent {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -704,8 +704,10 @@ V(x)&amp;=v(5c-5r_c) \\
 \end{align*}</span></p>
 <p>The loss of a mug results in value of -10.</p>
 <p>At the beginning of the experiment, Bruce is given a mug. Assuming Bruce’s reference point adapts such that he considers the mug his, how much would Bruce need to be paid to give up the mug?</p>
-<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between losing the mug and gaining $p.&nbsp;We assume a reference point for money of his current wealth and are instructed that his reference point for mugs is ownership of the mug.</p>
+<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between losing the mug and gaining $p.&nbsp;That is the point where, after losing the mug and receiving payment, Bruce’s change in value is equal to zero.</p>
+<p>We assume a reference point for money of his current wealth and are instructed that his reference point for mugs is ownership of the mug.</p>
 <p><span class="math display">\begin{align*}
+V(x)&amp;=0 \\[6pt]
 V(x)&amp;=v(m-r_m)+v(5c-5r_c) \\[6pt]
 &amp;=v(W+p-W)+v(5\times 0-5\times 1) \\[6pt]
 &amp;=v(p)+v(-5) \\[6pt]
@@ -715,12 +717,14 @@ p&amp;=10
 \end{align*}</span></p>
 <p>Bruce would need to be paid at least $10 to give up the mug. Giving up the mug is seen as a loss and given greater weight than the money gained.</p>
 <p>Now assume Bruce was not given a mug, but rather an opportunity to purchase a mug. How much would Bruce be willing to pay for the mug?</p>
-<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between gaining the mug and losing $p.&nbsp;We assume a reference point for money of his current wealth and are instructed that his reference point for mugs is no mug.</p>
+<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between gaining the mug and losing $p.&nbsp;That is the point where, after receiving the mug and making payment, Bruce’s change in value is equal to zero.</p>
+<p>We assume a reference point for money of his current wealth and are instructed that his reference point for mugs is no mug.</p>
 <p><span class="math display">\begin{align*}
+V(x)&amp;=0 \\[6pt]
 V(x)&amp;=v(m-r_m)+v(5c-5r_c) \\[6pt]
 &amp;=v(W-p-W)+v(5\times 1-5\times 0) \\[6pt]
 &amp;=v(-p)+v(5) \\[6pt]
-&amp;=2p-5 \\[6pt]
+&amp;=-2p+5 \\[6pt]
 p&amp;=2.5
 \end{align*}</span></p>
 <p>The most Bruce would be willing to pay for the mug is $2.50. He sees the foregone money as a loss, so it is given greater weight than the mug gained.</p>
@@ -912,7 +916,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 
