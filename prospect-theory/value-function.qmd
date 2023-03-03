@@ -70,3 +70,17 @@ ggplot(mapping = aes(x, y)) +
   geom_hline(yintercept = 0, linewidth=0.25)+
   labs(x = "", y = "v(X)")
 ```
+
+The following equation is an example of a value function incorporating both loss aversion and the reflection effect.
+
+\begin{equation*}
+v(x)= \Bigg\{
+\begin{matrix}
+x^\frac{1}{2} \space \text{where} \space x \geq 0\\
+-2(-x)^\frac{1}{2} \space \text{where} \space x<0
+\end{matrix}
+\end{equation*}
+
+Losses are multiplied by 2, giving losses twice the weight of an equivalent gain in the value function. This is loss aversion.
+
+The reflection effect is implemented through losses and gains being to the power of one-half. This leads to diminishing sensitivity to changes in both directions.

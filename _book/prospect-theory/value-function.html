@@ -146,6 +146,22 @@ div.csl-indent {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 16&nbsp; The value function">
@@ -670,6 +686,16 @@ div.csl-indent {
 </div>
 </div>
 </div>
+<p>The following equation is an example of a value function incorporating both loss aversion and the reflection effect.</p>
+<p><span class="math display">\begin{equation*}
+v(x)= \Bigg\{
+\begin{matrix}
+x^\frac{1}{2} \space \text{where} \space x \geq 0\\
+-2(-x)^\frac{1}{2} \space \text{where} \space x&lt;0
+\end{matrix}
+\end{equation*}</span></p>
+<p>Losses are multiplied by 2, giving losses twice the weight of an equivalent gain in the value function. This is loss aversion.</p>
+<p>The reflection effect is implemented through losses and gains being to the power of one-half. This leads to diminishing sensitivity to changes in both directions.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
@@ -856,7 +882,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 

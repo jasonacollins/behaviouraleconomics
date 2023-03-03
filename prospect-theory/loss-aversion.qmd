@@ -17,7 +17,9 @@ $$
 
 $x$ is the outcome relative to the reference point.
 
-For example, suppose someone is given \$100. If their initial reference point is their wealth before receiving the \$100, $x$ will be \$100. Therefore their utility is +100. If the same person instead loses \$100, their utility would be -200.
+In this value function, losses are experienced with twice the force of gains, with each loss multiplied by a factor of two.
+
+As an example example, suppose someone is given \$100. If their initial reference point is their wealth before receiving the \$100, $x$ will be \$100. Therefore their change in value is +100. If the same person instead loses \$100, their change in value would be -200.
 
 This plot shows the increased effect of the loss under this value function:
 
@@ -51,7 +53,7 @@ ggplot(mapping = aes(x, y)) +
   labs(x = "", y = "v(X)")
 ```
 
-The greater slope of the curve in the loss domain, leading to kink where the axes intercept, is indicative of the greater effect of losses.
+The greater slope of the curve in the loss domain, leading to a kink where the axes intercept, is indicative of the greater effect of losses.
 
 
 ## The endowment effect

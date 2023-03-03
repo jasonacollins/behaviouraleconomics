@@ -2,13 +2,15 @@
 
 The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.
 
-When people make a risky choice related to gains, they are risk averse. They prefer a certain option with lower expected utility than the expected utility of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.
+When people make a risky choice related to gains, they are risk averse. They prefer a certain option of lower value than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.
 
 The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory where the pain of losses increases as they grow in size.
 
+## The Asian Disease problem
+
 The reflection effect explains the framing effects in the following experiment by @kahneman1984.
 
-One group of experimental subjects were asked the following.
+One group of experimental subjects were asked the following hypothetical question that would be unlikely to be asked post-Covid-19.
 
 > Imagine that the U.S. is preparing for the outbreak of an unusual Asian disease, which is expected to kill 600 people. Two alternative programs to combat the disease have been proposed. Assume that the exact scientific estimates of the consequences of the programs are as follows:
 >
