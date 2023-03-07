@@ -43,7 +43,7 @@ $$
 U(E[X])>E[U(X)]
 $$
 
-If a person prefers a gamble over a sure amount of the same expected value, they are risk-seeking. That is, the expected utility of $X$ is greater than the utility of the expected value of $X$.
+If a person prefers a gamble to a sure amount of the same expected value, they are risk-seeking. That is, the expected utility of $X$ is greater than the utility of the expected value of $X$.
 
 $$
 U(E[X])<E[U(X)]

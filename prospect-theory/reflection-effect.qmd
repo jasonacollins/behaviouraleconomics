@@ -79,7 +79,10 @@ ggplot(mapping = aes(x, y)) +
   geom_line(data = gain) + 
   geom_vline(xintercept = 0, linewidth=0.25)+ 
   geom_hline(yintercept = 0, linewidth=0.25)+
-  labs(x = "", y = "v(X)")
+  labs(x = "", y = "v(X)")+
+
+  # Set the theme
+  theme_minimal()
 ```
 
 In the gain domain, the function is convex, indicating risk aversion. In the loss domain, the concave function indicates risk-seeking behaviour.

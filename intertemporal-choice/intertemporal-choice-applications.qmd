@@ -117,7 +117,10 @@ df2 <- df2 |>
 ggplot(df2, aes(group, percentage)) +
   geom_col(aes(group = Raise, fill=Raise), colour = "grey50", position = "dodge")+ 
   labs(x = "", y = "Percentage of income saved") +
-  scale_fill_brewer(palette="RdBu")
+  scale_fill_brewer(palette="RdBu")+
+
+  # Set the theme
+  theme_minimal()
 ```
 
 Note the savings rate is higher than the default rate in Australia. Could the default in Australia create a low anchor for some people?

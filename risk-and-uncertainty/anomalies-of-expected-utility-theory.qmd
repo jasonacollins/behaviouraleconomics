@@ -1,6 +1,12 @@
 # Anomalies of expected utility theory
 
+In this part, I show several anomalies in expected utility theory.
+
 ## The Allais Paradox {#sec-allais}
+
+The Allais paradox is one of the most famous anomalies of expected utility theory.
+
+The paradox emerges from the pattern of response to two pairs of bets.
 
 **Choice 1**: Choose one of the following bets:
 
@@ -48,7 +54,7 @@ $$
 0.33U(2500)+0.01U(0)> 0.34U(2400)
 $$
 
-This is a contradiction. Under expected utility theory, if an agent chooses A it should choose C. And if the agent chooses B it should choose D. This phenomena is called the Allais Paradox after Maurice @allais1953, who first identified it.
+This is a contradiction. Under expected utility theory, if an agent chooses A it should choose C. And if the agent chooses B it should choose D. This phenomenon is called the Allais Paradox after Maurice @allais1953, who first identified it.
 
 Why does this occur? What axiom is being breached?
 
@@ -75,7 +81,7 @@ $$pz+(1-p)x\succcurlyeq pz+(1-p)y$$
 
 For each of the choices in our lottery:
 
--   $p=66%$
+-   $p=0.66$
 
 -   $x$ is a 100% chance of \$2400
 
@@ -95,7 +101,7 @@ Would you accept this bet?
 
 @barberis2006 offered a real \$550:\$500 bet to experimental participants including those with substantial wealth (MBA students, hedge fund managers, etc.).
 
-70% of the sample turned down the bet, included professional investors with wealth above \$10 million.
+70% of the sample turned down the bet, including professional investors with wealth above \$10 million.
 
 Under the axiom of diminishing marginal utility, we would conclude people are risk averse to small bets.
 
@@ -133,14 +139,14 @@ Another group of experimental participants were shown the following:
 
 22% of participants chose option C.
 
-72% of participants chose A and 22% of participants chose option C. Yet these two are equivalent.
+72% of participants chose A and 22% of participants chose option C. Yet these two options are equivalent.
 
 ## Reference points
 
 Consider the following two scenarios:
 
--   You have not checked your share portfolio in a while. You expect it is worth around \$40,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
+-   You have not checked your share portfolio in a while. You expect that the portfolio is worth around \$40,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
 
--   You have not checked your share portfolio in a while. You expect it is worth around \$20,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
+-   You have not checked your share portfolio in a while. You expect that the portfolio is worth around \$20,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
 
 Under expected utility theory, those two scenarios should feel the same as you have $U$(\$30,000) in both cases.

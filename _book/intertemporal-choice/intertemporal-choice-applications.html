@@ -690,13 +690,16 @@ div.csl-indent {
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df2, <span class="fu">aes</span>(group, percentage)) <span class="sc">+</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">group =</span> Raise, <span class="at">fill=</span>Raise), <span class="at">colour =</span> <span class="st">"grey50"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>)<span class="sc">+</span> </span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"Percentage of income saved"</span>) <span class="sc">+</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette=</span><span class="st">"RdBu"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette=</span><span class="st">"RdBu"</span>)<span class="sc">+</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set the theme</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-smart" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;30.1: Savings rates for SMarT</figcaption><p></p>
-<p><a href="intertemporal-choice-applications_files/figure-html/fig-smart-1.png" class="lightbox" title="Savings rates for SMarT" data-gallery="quarto-lightbox-gallery-2"><img src="intertemporal-choice-applications_files/figure-html/fig-smart-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="intertemporal-choice-applications_files/figure-html/fig-smart-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Savings rates for SMarT"><img src="intertemporal-choice-applications_files/figure-html/fig-smart-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -901,7 +904,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 

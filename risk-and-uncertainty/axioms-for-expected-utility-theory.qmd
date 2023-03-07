@@ -86,11 +86,14 @@ ggplot()+
   # Add a dashed line segment between two points
   geom_segment(aes(x = 15, y = (7-15^0.5)^2), xend = 12, yend = (5-12^0.5)^2, linetype=2)+
 
-
+  # Remove the axes labels
   labs(x = "", y = "") +
 
   # Set the limits of the plot
-  coord_fixed(xlim = c(0,20), ylim = c(0,20))
+  coord_fixed(xlim = c(0,20), ylim = c(0,20))+
+
+  # Set the theme
+  theme_minimal()
 ```
 
 ### Example of discontinuous preferences
@@ -134,7 +137,10 @@ ggplot()+
   labs(x = "x", y = "y") +
 
   # Set the limits of the plot
-  coord_fixed(xlim = c(0,2.2), ylim = c(0,2.2))
+  coord_fixed(xlim = c(0,2.2), ylim = c(0,2.2))+
+
+  # Set the theme
+  theme_minimal()
 ```
 
 One interesting feature of lexicographic preferences is that you cannot draw indifference curves on this figure. If a bundle differs from another, it must be strictly preferred to the other as no amount of $y$ can make up for any amount of $x$.
@@ -238,7 +244,10 @@ df <- data.frame(
     labs(x = "", y = "")+
 
     # Set the limits of the plot
-    coord_fixed(xlim = c(0,20), ylim = c(0,20))
+    coord_fixed(xlim = c(0,20), ylim = c(0,20))+
+
+    # Set the theme
+    theme_minimal()
 ```
 
 ### Monotonicity
@@ -275,7 +284,10 @@ df <- data.frame(
     labs(x = "", y = "")+
 
     # Set the limits of the plot
-    coord_fixed(xlim = c(0,20), ylim = c(0,20))
+    coord_fixed(xlim = c(0,20), ylim = c(0,20))+
+
+    # Set the theme
+    theme_minimal()
 ```
 
 ### Convexity
@@ -323,7 +335,10 @@ ggplot()+
   labs(x = "", y = "") +
 
   # Set the limits of the plot
-  coord_fixed(xlim = c(0,20), ylim = c(0,20))
+  coord_fixed(xlim = c(0,20), ylim = c(0,20))+
+
+  # Set the theme
+  theme_minimal()
 ```
 
 One point to note from this diagram is that if the indifference curve were a straight line, any point on a line between $x$ and $y$ would also be on that line, and weakly preferred to $x$ and $y$. This would still be a convex curve.

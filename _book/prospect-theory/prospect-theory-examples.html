@@ -525,7 +525,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#accept-or-reject-1" id="toc-accept-or-reject-1" class="nav-link" data-scroll-target="#accept-or-reject-1"><span class="toc-section-number">19.4.1</span>  Accept or reject</a></li>
   <li><a href="#accept-or-reject-after-loss-1" id="toc-accept-or-reject-after-loss-1" class="nav-link" data-scroll-target="#accept-or-reject-after-loss-1"><span class="toc-section-number">19.4.2</span>  Accept or reject after loss</a></li>
-  <li><a href="#graphing-the-decision" id="toc-graphing-the-decision" class="nav-link" data-scroll-target="#graphing-the-decision"><span class="toc-section-number">19.4.3</span>  Graphing the decision</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -570,11 +569,11 @@ E[\text{don't}]&amp;=P_{\text{burn}}\times -value_{\text{house}} \\
 &amp;=-0.001\times 1000000 \\
 &amp;=-\$1000
 \end{align*}</span></p>
-<p>The expected value of purchasing insurance is $100 less than the expected value of risking the house burning down. A risk neutral agent (who maximises expected value) would not purchase this insurance.</p>
+<p>The expected value of purchasing insurance is $100 less than the expected value of risking the house burning down. A risk-neutral agent (who maximises expected value) would not purchase this insurance.</p>
 </section>
 <section id="expected-utility" class="level3" data-number="19.1.2">
 <h3 data-number="19.1.2" class="anchored" data-anchor-id="expected-utility"><span class="header-section-number">19.1.2</span> Expected utility</h3>
-<p>Would a risk averse agent purchase the insurance? Suppose they have a logarithmic utility function (<span class="math inline">U(x)=ln(x)</span>) and they have $10,000 in cash in addition to their house, giving them wealth (<span class="math inline">W</span>) of $1,010,000.</p>
+<p>Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function (<span class="math inline">U(x)=ln(x)</span>) and they have $10,000 in cash in addition to their house, giving them wealth (<span class="math inline">W</span>) of $1,010,000.</p>
 <p><span class="math display">\begin{align*}
 E[U(\text{purchase})]&amp;=ln(W-premium) \\
 &amp;=ln(1,008,900) \\
@@ -584,7 +583,7 @@ E[U(\text{don't})]&amp;=0.999\times ln(W)+0.001\times ln(W-value_{\text{house}})
 &amp;=0.999\times ln(1,010,000)+0.001\times ln(10,000) \\
 &amp;=13.8208
 \end{align*}</span></p>
-<p>The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.</p>
+<p>The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/expected-utility.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/expected-utility.jpg" class="img-fluid figure-img"></a></p>
@@ -679,7 +678,7 @@ V(don't)&amp;=\sum_{i=1}^n \pi(p_i)v(x_i) \\
 </section>
 <section id="a-5050-gamble" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="a-5050-gamble"><span class="header-section-number">19.2</span> A 50:50 gamble</h2>
-<p>Suppose an agent has the following reference-dependent utility function:</p>
+<p>Suppose an agent has the following reference-dependent value function:</p>
 <p><span class="math display">
 v(x)=\left\{\begin{matrix}
 x^{1/2} \qquad &amp;\textrm{where} \space x \geq 0\\
@@ -692,25 +691,26 @@ x^{1/2} \qquad &amp;\textrm{where} \space x \geq 0\\
 <section id="accept-or-reject" class="level3" data-number="19.2.1">
 <h3 data-number="19.2.1" class="anchored" data-anchor-id="accept-or-reject"><span class="header-section-number">19.2.1</span> Accept or reject</h3>
 <p>Will they want to play this gamble?</p>
-<p>The utility from the gamble is:</p>
+<p>The weighted value of the gamble is:</p>
 <p><span class="math display">\begin{align*}
-V(A)&amp;=0.5v(110)+0.5v(-100) \\
+V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\
+&amp;=0.5v(110)+0.5v(-100) \\
 &amp;=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\
 &amp;=-4.76
 \end{align*}</span></p>
-<p>They will not want to play this gamble as it has a negative value for the agent. They could receive value of 0 by simply not playing.</p>
+<p>They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.</p>
 <p>The reason for this negative value is that the agent is loss averse. The loss of $100 is given twice the weight of an equivalent gain.</p>
 </section>
 <section id="accept-or-reject-after-loss" class="level3" data-number="19.2.2">
 <h3 data-number="19.2.2" class="anchored" data-anchor-id="accept-or-reject-after-loss"><span class="header-section-number">19.2.2</span> Accept or reject after loss</h3>
-<p>Suppose the agent loses their wallet containing $100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have any after any outcome is $100 less than otherwise. Would they be willing to take gamble A now?</p>
+<p>Suppose the agent loses their wallet containing $100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is $100 less than otherwise. Would they be willing to take gamble A now?</p>
 <p>After losing $100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of $10 (winning $110 minus the lost money in the wallet) and a loss of $200 (losing $100 and also losing their wallet).</p>
 <p><span class="math display">\begin{align*}
 V(A)&amp;=0.5v(110-100)-0.5v(-100-100) \\
 &amp;=0.5\times (10)^{0.5}-0.5\times 2\times (200)^{0.5} \\
 &amp;=-12.56
 \end{align*}</span></p>
-<p>The utility of not playing the gamble involves remaining with a loss of $100:</p>
+<p>The value of not playing the gamble involves remaining with a loss of $100:</p>
 <p><span class="math display">\begin{align*}
 V(\neg A)&amp;=v(-100) \\
 &amp;=-2\times (100)^{0.5} \\
@@ -750,7 +750,8 @@ x^{\frac{1}{2}} \quad &amp;\textrm{where} \quad x \geq 0 \\
 -2(-x)^{\frac{1}{2}} \quad &amp;\textrm{where} \quad x &lt; 0
 \end{matrix}\right.
 </span></p>
-<p>Penny and Paddy are offered the following bet A:</p>
+<p>Assume Paddy weights probabilities linearly.</p>
+<p>Paddy is offered the following bet A:</p>
 <ul>
 <li>a 60% probability to win $150</li>
 <li>a 40% probability to lose $100.</li>
@@ -765,7 +766,13 @@ V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\
 &amp;=-0.652
 \end{align*}</span></p>
 <p>The value of not taking the bet is zero. Paddy would have no change from his reference point.</p>
-<p>As <span class="math inline">V(A)&lt;V(0)=0</span>, Paddy rejects the bet.</p>
+<p>Paddy rejects the bet as <span class="math inline">V(A)</span> is less than the <span class="math inline">V(0)=0</span> Paddy could get by simply rejecting the bet.</p>
+<p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure illustrates that Paddy’s rejection is caused by both Paddy’s loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/paddy-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/paddy-1.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
+</figure>
+</div>
 </section>
 <section id="accept-or-reject-after-loss-1" class="level3" data-number="19.4.2">
 <h3 data-number="19.4.2" class="anchored" data-anchor-id="accept-or-reject-after-loss-1"><span class="header-section-number">19.4.2</span> Accept or reject after loss</h3>
@@ -782,18 +789,8 @@ V(\text{L})&amp;=v(L) \\
 &amp;=-2\times (150)^{\frac{1}{2}} \\
 &amp;=-24.495
 \end{align*}</span></p>
-<p>As <span class="math inline">V(A)&gt;V(L)</span>, Paddy accepts the bet.</p>
-</section>
-<section id="graphing-the-decision" class="level3" data-number="19.4.3">
-<h3 data-number="19.4.3" class="anchored" data-anchor-id="graphing-the-decision"><span class="header-section-number">19.4.3</span> Graphing the decision</h3>
-<p>For the bet above, draw diagrams showing Paddy’s value function, the bets and the value of the bets. Explain how the diagram(s) show whether Paddy accepts or rejects the bet.</p>
-<p>First offer: Paddy rejects the bet as <span class="math inline">V(A)</span> is less than the <span class="math inline">V(0)=0</span> Paddy could get by simply rejecting the bet. This is caused by both Paddy’s loss aversion and his diminishing sensitivity in the gain domain, which has larger effect that the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/paddy-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/paddy-1.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
-</figure>
-</div>
-<p>Second offer: Paddy accepts the bet as <span class="math inline">V(A)</span> is greater than the value of the certain loss of $150. He is risk seeking in the loss domain, so finds the positive expected value bet attractive.</p>
+<p>Paddy accepts the bet as <span class="math inline">V(A)</span> is greater than the value of the certain loss of $150.</p>
+<p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/paddy-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/paddy-2.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
@@ -982,7 +979,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

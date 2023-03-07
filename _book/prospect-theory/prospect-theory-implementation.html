@@ -555,16 +555,16 @@ div.csl-indent {
 <p>Editing involves simplification of prospects for subsequent evaluation.</p>
 <p><span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> describes the editing phase as having four main operations:</p>
 <ul>
-<li><p>Coding: People perceive outcomes as gains or losses relative to some neutral reference position. The reference point may be the status quo or some other expectation of the agent.</p></li>
-<li><p>Combination: Prospects are simplified by combining probabilities for identical outcomes: (200, 0.25; 200, 0.25) will become (200, 0.50).</p></li>
-<li><p>Segregation: Riskless components are segregated from risky components. For example (300, 0.80; 200, 0.20) corresponds to a sure gain of 200 and the risky gamble (100, 0.80).</p></li>
+<li><p>Coding: Prospects are coded as gains or losses relative to a reference point.</p></li>
+<li><p>Combination: Prospects are simplified by combining probabilities for identical outcomes. For example, (200, 0.25; 200, 0.25; 0, 0.50) will become (200, 0.50; 0, 0.50).</p></li>
+<li><p>Segregation: Riskless components are segregated from risky components. For example (300, 0.80; 200, 0.20) corresponds to a sure gain of 200 and the risky gamble (100, 0.80; 0, 0.20).</p></li>
 <li><p>Cancellation: Components that are shared by two prospects are ignored.</p></li>
 </ul>
 </section>
 <section id="evaluation" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="evaluation"><span class="header-section-number">18.2</span> Evaluation</h2>
-<p>In the evaluation phase, the prospects are evaluated and the option with the highest value is chosen.</p>
-<p>The value of a prospect is made up of:</p>
+<p>In the evaluation phase, the prospects are evaluated and the option with the highest weighted value is chosen.</p>
+<p>The weighted value of a prospect is made up of:</p>
 <p>1. a decision weight applied to each probability <span class="math inline">\pi(p_i)</span></p>
 <p>2. the subjective value of each outcome <span class="math inline">v(x_i)</span></p>
 <p>These are applied through the following formula:</p>
@@ -572,7 +572,7 @@ div.csl-indent {
 V(X)&amp;=\sum_{i=1}^n\pi(p_i)v(x_i)\\[6pt]
 &amp;=\pi(p_1)v(x_1)+\pi(p_2)v(x_2)+...+\pi(p_n)v(x_n)
 \end{align*}</span>
-<p><span class="math inline">V(X)</span> is the expected value of the outcomes from gamble <span class="math inline">X</span>.</p>
+<p><span class="math inline">V(X)</span> is the weighted value of the outcomes from gamble <span class="math inline">X</span>.</p>
 </section>
 <section id="fourfold-pattern-of-risk-attitudes" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="fourfold-pattern-of-risk-attitudes"><span class="header-section-number">18.3</span> Fourfold pattern of risk attitudes</h2>
@@ -604,6 +604,7 @@ V(X)&amp;=\sum_{i=1}^n\pi(p_i)v(x_i)\\[6pt]
 </tr>
 </tbody>
 </table>
+<p>The top two quadrants can be illustrated by considering an offer to settle a court case.</p>
 <p>The bottom two quadrants can be related to the purchase of insurance and lotteries.</p>
 <p>Lotteries involve a small probability of gains. As people overweight that small probability of a win, people will be risk-seeking when considering whether to purchase a lottery.</p>
 <p>Insurance involves a small probability of loss. As people overweight the small probability of a loss, people will be risk-averse when considering whether to purchase insurance.</p>

@@ -29,11 +29,11 @@ E[\text{don't}]&=P_{\text{burn}}\times -value_{\text{house}} \\
 &=-\$1000
 \end{align*}
 
-The expected value of purchasing insurance is \$100 less than the expected value of risking the house burning down. A risk neutral agent (who maximises expected value) would not purchase this insurance.
+The expected value of purchasing insurance is \$100 less than the expected value of risking the house burning down. A risk-neutral agent (who maximises expected value) would not purchase this insurance.
 
 ### Expected utility
 
-Would a risk averse agent purchase the insurance? Suppose they have a logarithmic utility function ($U(x)=ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000.
+Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function ($U(x)=ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000.
 
 \begin{align*}
 E[U(\text{purchase})]&=ln(W-premium) \\
@@ -45,7 +45,7 @@ E[U(\text{don't})]&=0.999\times ln(W)+0.001\times ln(W-value_{\text{house}}) \\
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 
-The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
+The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
 
 ![](img/expected-utility.jpg)
 
@@ -108,7 +108,7 @@ Although the diminishing feeling of loss leads to them weigh the certain loss of
 
 ## A 50:50 gamble
 
-Suppose an agent has the following reference-dependent utility function:
+Suppose an agent has the following reference-dependent value function:
 
 $$
 v(x)=\left\{\begin{matrix}
@@ -127,21 +127,22 @@ $$(\$110, 0.5; −\$100, 0.5)$$
 
 Will they want to play this gamble?
 
-The utility from the gamble is:
+The weighted value of the gamble is:
 
 \begin{align*}
-V(A)&=0.5v(110)+0.5v(-100) \\
+V(A)&=p_1v(x_1)+p_2v(x_2) \\
+&=0.5v(110)+0.5v(-100) \\
 &=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\
 &=-4.76
 \end{align*}
 
-They will not want to play this gamble as it has a negative value for the agent. They could receive value of 0 by simply not playing.
+They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.
 
 The reason for this negative value is that the agent is loss averse. The loss of \$100 is given twice the weight of an equivalent gain.
 
 ### Accept or reject after loss
 
-Suppose the agent loses their wallet containing \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have any after any outcome is \$100 less than otherwise. Would they be willing to take gamble A now?
+Suppose the agent loses their wallet containing \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is \$100 less than otherwise. Would they be willing to take gamble A now?
 
 After losing \$100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of \$10 (winning \$110 minus the lost money in the wallet) and a loss of \$200 (losing \$100 and also losing their wallet).
 
@@ -151,7 +152,7 @@ V(A)&=0.5v(110-100)-0.5v(-100-100) \\
 &=-12.56
 \end{align*}
 
-The utility of not playing the gamble involves remaining with a loss of \$100:
+The value of not playing the gamble involves remaining with a loss of \$100:
 
 \begin{align*}
 V(\neg A)&=v(-100) \\
@@ -200,7 +201,9 @@ x^{\frac{1}{2}} \quad &\textrm{where} \quad x \geq 0 \\
 \end{matrix}\right.
 $$
 
-Penny and Paddy are offered the following bet A:
+Assume Paddy weights probabilities linearly.
+
+Paddy is offered the following bet A:
 
 - a 60% probability to win \$150
 - a 40% probability to lose \$100.
@@ -219,7 +222,11 @@ V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\
 
 The value of not taking the bet is zero. Paddy would have no change from his reference point.
 
-As $V(A)<V(0)=0$, Paddy rejects the bet.
+Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ Paddy could get by simply rejecting the bet.
+
+The following figure shows Paddy's value function, the bets and the value of the bets. The figure illustrates that Paddy's rejection is caused by both Paddy's loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.
+
+![](img/paddy-1.jpg){width=80%}
 
 ### Accept or reject after loss
 
@@ -241,16 +248,8 @@ V(\text{L})&=v(L) \\
 &=`r round(-2*150^0.5, 3)`
 \end{align*}
 
-As $V(A)>V(L)$, Paddy accepts the bet.
+Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of \$150.
 
-### Graphing the decision
-
-For the bet above, draw diagrams showing Paddy's value function, the bets and the value of the bets. Explain how the diagram(s) show whether Paddy accepts or rejects the bet.
-
-First offer: Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ Paddy could get by simply rejecting the bet. This is caused by both Paddy's loss aversion and his diminishing sensitivity in the gain domain, which has larger effect that the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.
-
-![](img/paddy-1.jpg){width=80%}
-
-Second offer: Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of \$150. He is risk seeking in the loss domain, so finds the positive expected value bet attractive.
+The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.
 
 ![](img/paddy-2.jpg){width=80%}

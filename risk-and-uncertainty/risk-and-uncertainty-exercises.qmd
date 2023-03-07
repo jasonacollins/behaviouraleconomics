@@ -22,12 +22,8 @@ An agent is considering insurance against bushfire for its \$1,000,000 house. Th
 
 a\) What is the expected value of purchasing insurance?
 
-b\) What is the expected value of not purchasing insurance?
-
 ::: {.callout-tip collapse="true"}
 ## Answer
-
-a\) What is the expected value of purchasing insurance?
 
 If you purchase insurance, you pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.
 
@@ -48,8 +44,12 @@ E[\text{purchase}]&=p\times(-value_{\text{house}}+payout-premium) \\[6pt]
 \end{align*}
 
 This gives the same answer as the first method.
+:::
 
 b\) What is the expected value of not purchasing insurance?
+
+::: {.callout-tip collapse="true"}
+## Answer
 
 \begin{align*}
 E[\text{don't}]&=p\times-value_{\text{house}} \\

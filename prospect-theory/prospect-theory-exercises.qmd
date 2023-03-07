@@ -444,7 +444,7 @@ Amber sued a tabloid newspaper for defamation. The trial has completed and the j
 
 Amber's lawyer tells her that she has a 95% chance of winning and receiving \$1,000,000 in damages, meaning she has a 5% chance of leaving with nothing. (Ignore any potential costs.) She then receives an offer of settlement from the newspaper for \$800,000. Amber accepts.
 
-Use the fourfold pattern of attitudes to risk under Prospect Theory to explore why Amber accepted the settlement offer.
+Use the fourfold pattern of attitudes to risk under prospect theory to explore why Amber accepted the settlement offer.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -457,7 +457,7 @@ E[\text{reject}]&=p_{win} x_{win} \\
 &=950000
 \end{align*}
 
-There are two forces under prospect theory that would lead Amber to take the option with the lower expected value:
+Two forces under prospect theory would lead Amber to take the option with the lower expected value:
 
 - People are risk averse in the gain domain. Amber would prefer certainty to a gamble with the same expected value, and depending on the level of risk aversion, would be willing to accept an amount for certain lower than the expected value of the bet. That is, the certainty equivalent of the gamble would be less than its expected value.
 - People overweight small probabilities. The 5% probability of losing is likely overweighted by Amber.
@@ -473,7 +473,7 @@ i) a payment of \$10 or
 
 ii) a lottery ticket with a 1 in a million chance of winning \$10 million.
 
-Use concepts from Prospect Theory to explain why either option might be more successful.
+Use concepts from prospect theory to explain why either option might be more successful.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -482,7 +482,7 @@ There are two opposing forces that could lead to either option being preferred.
 
 Both the lottery and payment of $10 are in the gain domain. Under prospect theory, people tend to be risk averse in the gain domain. This will make the payment, which has the same expected value as the lottery, more attractive.
 
-Conversely, under prospect theory people do not weight outcomes directly by their probability. They apply decision weights that tend to overweight small probabilities and underweight probabilities just short of certainty. This means that the small chance of $10 million will likely be overweighted. This could lead to the value of the lottery exceeding that of the certain payment.
+Conversely, under prospect theory, people do not weight outcomes directly by their probability. They apply decision weights that tend to overweight small probabilities and underweight probabilities just short of certainty. This means that the small chance of $10 million will likely be overweighted. This could lead to the value of the lottery exceeding that of a certain payment.
 
-Which effect dominates depends on how risk averse people are and how much they overweight the probability.
+Which effect dominates depends on how risk-averse people are and how much they overweight the probability.
 :::
