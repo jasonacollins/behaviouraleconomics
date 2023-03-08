@@ -2,15 +2,19 @@
 
 In expected utility theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.
 
-Experimental observation confirms that we approximate linear probabilities for intermediate probabilities. But, there is strong evidence that we overweight certain events, when the probability of the event is one, relative to near certain events, such as when the probability is, say, 99\%. This overweighting of certainty is effectively the same as overweighting very low-probability events.
+In contrast, prospect theory incorporates non-linear weighting of probabilities by applying decision weights to each potential outcome.
 
-Prospect theory incorporates this non-linear weighting of probabilities by applying decision weights to each potential outcome.
+## Empirical evidence
+
+Experimental observation confirms that when making decisions under risk we approximate linear probabilities for intermediate probabilities.
+
+But, there is strong evidence that we overweight certain events, when the probability of the event is one, relative to near certain events, such as when the probability is, say, 99\%. This overweighting of certainty is effectively the same as overweighting very low-probability events.
 
 The following diagram from @tversky1992 illustrates the relationship between objective probability and the decision weight applied to each outcome. On the x-axis is the probability of the outcome. On the y-axis is the weight applied to the value function for that probability. The straight line at 45 degrees represents linear weighting of probabilities. The curve represents the weighting function.
 
 ![](img/tversky_and_kahneman_1992_figure_1.jpg){width="60%"}
 
-Where the probability is very low, such as around $p=0.05$, the weight is around 0.15. Similarly, at high probability, such as $p=0.95$, the weight is around 0.8. For intermediate probabilities, the observed weight is close to the objective probability.
+For this particular curve, where the probability is very low, such as around $p=0.05$, the weight is around 0.15. Similarly, at high probability, such as $p=0.95$, the weight is around 0.8. For intermediate probabilities, the observed weight is relatively closer to the objective probability.
 
 @kahneman2011 calls the large psychological value of the change from 0 to 5% (or some other small probability) the possibility effect. Unlikely but possible outcomes are given more weight than similar increases in probability for events that are already possible. He calls the large psychological value of the change to 100% the certainty effect. We will pay a lot more for certainty than near certainty.
 
@@ -34,7 +38,7 @@ Bet B:
 
 -   \$2400 with probability: 100%
 
-Which would you prefer? People tend to prefer Bet B.
+People tend to prefer Bet B.
 
 **Choice 2**: Choose one of the following bets:
 
@@ -52,17 +56,13 @@ People tend to prefer Bet C.
 
 It can be shown that this pair of preferences, Bet B and Bet C, does not conform with expected utility theory.
 
-One explanation for this comes from probability weighting. If you look at Bet B, the outcome is certain. Certain events tend to be overweighted relative to near-certain events, such as the 99% chance of \$2400 or \$2500 in Bet A. An alternative way of thinking about this is that the 1% probability of nothing in Bet A is overweighted.
+One explanation for this pair of decisions comes from probability weighting. If you look at Bet B, the outcome is certain. Certain events tend to be overweighted relative to near-certain events, such as the 99% chance of \$2400 or \$2500 in Bet A. An alternative way of thinking about this is that the 1% probability of nothing in Bet A is overweighted.
 
 Conversely, for the intermediate probabilities in Bet C and Bet D, they are weighted closer to linearly, which can result in the slightly higher expected value Bet C being preferred.
 
 ## The decision weight
 
-The decision weights are applied to outcomes in the implementation of prospect theory.
-
-Under expected utility theory, the utility of a prospect is a linear expectation. Each possible outcome is weighted by its probability.
-
-In prospect theory, the decision maker does not weight outcomes linearly to probability but instead attaches a decision weight $\pi(p_i)$ to each outcome.
+The weighting of probabilities is applied in prospect theory through a decision weight $\pi(p_i)$. The decision weight is a function of the probability of the outcome.
 
 This decision-weighting function reflects the empirical regularity that people overweight certain events) relative to near-certain events and overweight very low probability events.
 
@@ -91,9 +91,21 @@ prob_df <- data.frame(prob = prob, weight = prob_weight(prob, 0.6))
 #Plot
 ggplot(prob_df, aes(x = prob, y = weight)) +
   geom_line() +
+
+  #Use geom_segment to add dashed light 45 degree line between 0 and 1
+  geom_segment(x = 0, y = 0, xend = 1, yend = 1, linetype = "dashed", color = "grey") +
+
+  #Add axes
   geom_vline(xintercept = 0, linewidth=0.25)+ 
   geom_hline(yintercept = 0, linewidth=0.25)+
+
+  #Add labels
   labs(x = "Probability", y = "Weight") +
+
+  #Make chart square
+  coord_fixed()+
+
+  #Set theme
   theme_minimal()
 
 ```

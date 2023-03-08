@@ -39,19 +39,17 @@ $V(X)$ is the weighted value of the outcomes from gamble $X$.
 
 ## Fourfold pattern of risk attitudes
 
-Prospect theory results in a four-fold pattern of risk attitudes, as shown in this table. For moderate to high probability gambles, the reflection effect dominates and people are risk averse in the domain of gains and risk seeking in the domain of losses.
+Prospect theory results in a four-fold pattern of risk attitudes, as shown in this table. For high-probability gambles, the reflection effect leads to people being people risk averse in the domain of gains and risk seeking in the domain of losses. The certainty effect then amplifies that tendency. 
 
 But for low-probability gambles, the probability weighting shifts the decision calculus. The possibility of a gain is overweighted, making the gamble attractive and inducing risk-seeking behaviour. A similar effect occurs for a low probability of loss, with the overweighted probability making the potential loss less attractive, inducing risk-averse behaviour.
 
 |                                          | Gains         | Losses        |
 |------------------------------------------|---------------|---------------|
-| **Medium to high probability**           | Risk aversion | Risk seeking  |
+| **High probability** (certainty effect   | Risk aversion | Risk seeking  |
 | **Low probability** (possibility effect) | Rick seeking  | Risk aversion |
 
 
 The top two quadrants can be illustrated by considering an offer to settle a court case.
-
-
 
 The bottom two quadrants can be related to the purchase of insurance and lotteries.
 
