@@ -1,6 +1,6 @@
 # Prospect theory implementation
 
-Under prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.
+Under prospect theory, people assess the weighted value of a prospect in two phases: editing and evaluation.
 
 ## Editing
 
@@ -12,7 +12,7 @@ Editing involves simplification of prospects for subsequent evaluation.
 
 -   In the combination phase, prospects are simplified by combining probabilities for identical outcomes. For example, (0.25, 200; 0.25, 200; 0.50, 0) will become (0.50, 200; 0.50, 0).
 
--   During segregation, riskless components are segregated from risky components. For example (0.80, 300; 0.20, 200) corresponds to a sure gain of 200 and the risky gamble (0.80, 100; 0.20, 0, 0).
+-   During segregation, riskless components are segregated from risky components. For example (0.80, 300; 0.20, 200) corresponds to a sure gain of 200 and the risky gamble (0.80, 100; 0.20, 0).
 
 -   Finally, in cancellation, components that are shared by two prospects are ignored.
 

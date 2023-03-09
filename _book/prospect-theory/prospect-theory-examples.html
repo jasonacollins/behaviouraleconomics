@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -83,10 +146,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 19&nbsp; Prospect theory examples">
-<meta property="og:description" content="The classical economic explanation for the purchase of insurance is based on the risk aversion of consumers.">
+<meta property="og:description" content="Suppose an agent has the following reference-dependent value function:">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 19&nbsp; Prospect theory examples">
-<meta name="twitter:description" content="The classical economic explanation for the purchase of insurance is based on the risk aversion of consumers.">
+<meta name="twitter:description" content="Suppose an agent has the following reference-dependent value function:">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -507,24 +570,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#insurance" id="toc-insurance" class="nav-link active" data-scroll-target="#insurance"><span class="toc-section-number">19.1</span>  Insurance</a>
+  <li><a href="#a-5050-gamble" id="toc-a-5050-gamble" class="nav-link active" data-scroll-target="#a-5050-gamble"><span class="toc-section-number">19.1</span>  A 50:50 gamble</a>
   <ul class="collapse">
-  <li><a href="#expected-value" id="toc-expected-value" class="nav-link" data-scroll-target="#expected-value"><span class="toc-section-number">19.1.1</span>  Expected value</a></li>
-  <li><a href="#expected-utility" id="toc-expected-utility" class="nav-link" data-scroll-target="#expected-utility"><span class="toc-section-number">19.1.2</span>  Expected utility</a></li>
-  <li><a href="#the-reflection-effect" id="toc-the-reflection-effect" class="nav-link" data-scroll-target="#the-reflection-effect"><span class="toc-section-number">19.1.3</span>  The reflection effect</a></li>
-  <li><a href="#probability-weighting" id="toc-probability-weighting" class="nav-link" data-scroll-target="#probability-weighting"><span class="toc-section-number">19.1.4</span>  Probability weighting</a></li>
+  <li><a href="#accept-or-reject" id="toc-accept-or-reject" class="nav-link" data-scroll-target="#accept-or-reject"><span class="toc-section-number">19.1.1</span>  Accept or reject</a></li>
+  <li><a href="#accept-or-reject-after-loss" id="toc-accept-or-reject-after-loss" class="nav-link" data-scroll-target="#accept-or-reject-after-loss"><span class="toc-section-number">19.1.2</span>  Accept or reject after loss</a></li>
+  <li><a href="#accept-or-reject-after-adaptation-to-loss" id="toc-accept-or-reject-after-adaptation-to-loss" class="nav-link" data-scroll-target="#accept-or-reject-after-adaptation-to-loss"><span class="toc-section-number">19.1.3</span>  Accept or reject after adaptation to loss</a></li>
   </ul></li>
-  <li><a href="#a-5050-gamble" id="toc-a-5050-gamble" class="nav-link" data-scroll-target="#a-5050-gamble"><span class="toc-section-number">19.2</span>  A 50:50 gamble</a>
+  <li><a href="#accept-or-reject-after-win" id="toc-accept-or-reject-after-win" class="nav-link" data-scroll-target="#accept-or-reject-after-win"><span class="toc-section-number">19.2</span>  Accept or reject after win</a></li>
+  <li><a href="#a-6040-gamble" id="toc-a-6040-gamble" class="nav-link" data-scroll-target="#a-6040-gamble"><span class="toc-section-number">19.3</span>  A 60:40 gamble</a>
   <ul class="collapse">
-  <li><a href="#accept-or-reject" id="toc-accept-or-reject" class="nav-link" data-scroll-target="#accept-or-reject"><span class="toc-section-number">19.2.1</span>  Accept or reject</a></li>
-  <li><a href="#accept-or-reject-after-loss" id="toc-accept-or-reject-after-loss" class="nav-link" data-scroll-target="#accept-or-reject-after-loss"><span class="toc-section-number">19.2.2</span>  Accept or reject after loss</a></li>
-  <li><a href="#accept-or-reject-after-adapt-to-loss" id="toc-accept-or-reject-after-adapt-to-loss" class="nav-link" data-scroll-target="#accept-or-reject-after-adapt-to-loss"><span class="toc-section-number">19.2.3</span>  Accept or reject after adapt to loss</a></li>
+  <li><a href="#accept-or-reject-1" id="toc-accept-or-reject-1" class="nav-link" data-scroll-target="#accept-or-reject-1"><span class="toc-section-number">19.3.1</span>  Accept or reject</a></li>
+  <li><a href="#accept-or-reject-after-loss-1" id="toc-accept-or-reject-after-loss-1" class="nav-link" data-scroll-target="#accept-or-reject-after-loss-1"><span class="toc-section-number">19.3.2</span>  Accept or reject after loss</a></li>
   </ul></li>
-  <li><a href="#accept-or-reject-after-win" id="toc-accept-or-reject-after-win" class="nav-link" data-scroll-target="#accept-or-reject-after-win"><span class="toc-section-number">19.3</span>  Accept or reject after win</a></li>
-  <li><a href="#a-6040-gamble" id="toc-a-6040-gamble" class="nav-link" data-scroll-target="#a-6040-gamble"><span class="toc-section-number">19.4</span>  A 60:40 gamble</a>
+  <li><a href="#insurance" id="toc-insurance" class="nav-link" data-scroll-target="#insurance"><span class="toc-section-number">19.4</span>  Insurance</a>
   <ul class="collapse">
-  <li><a href="#accept-or-reject-1" id="toc-accept-or-reject-1" class="nav-link" data-scroll-target="#accept-or-reject-1"><span class="toc-section-number">19.4.1</span>  Accept or reject</a></li>
-  <li><a href="#accept-or-reject-after-loss-1" id="toc-accept-or-reject-after-loss-1" class="nav-link" data-scroll-target="#accept-or-reject-after-loss-1"><span class="toc-section-number">19.4.2</span>  Accept or reject after loss</a></li>
+  <li><a href="#expected-value" id="toc-expected-value" class="nav-link" data-scroll-target="#expected-value"><span class="toc-section-number">19.4.1</span>  Expected value</a></li>
+  <li><a href="#expected-utility" id="toc-expected-utility" class="nav-link" data-scroll-target="#expected-utility"><span class="toc-section-number">19.4.2</span>  Expected utility</a></li>
+  <li><a href="#the-reflection-effect" id="toc-the-reflection-effect" class="nav-link" data-scroll-target="#the-reflection-effect"><span class="toc-section-number">19.4.3</span>  The reflection effect</a></li>
+  <li><a href="#probability-weighting" id="toc-probability-weighting" class="nav-link" data-scroll-target="#probability-weighting"><span class="toc-section-number">19.4.4</span>  Probability weighting</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -549,15 +612,144 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="insurance" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="insurance"><span class="header-section-number">19.1</span> Insurance</h2>
+<section id="a-5050-gamble" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="a-5050-gamble"><span class="header-section-number">19.1</span> A 50:50 gamble</h2>
+<p>Suppose an agent has the following reference-dependent value function:</p>
+<p><span class="math display">
+v(x)=\left\{\begin{matrix}
+x^{1/2} \qquad &amp;\textrm{where} \space x \geq 0\\
+-2(-x)^{1/2} \quad &amp;\textrm{where} \space x &lt; 0
+\end{matrix}\right.
+</span></p>
+<p>Where <span class="math inline">x</span> is the realised outcome relative to the reference point.</p>
+<p>Assume that the agent’s reference point is the status quo and that they weight outcomes linearly.</p>
+<p>The agent is offered the gamble A:</p>
+<p><span class="math display">
+(0.5, \$110; 0.5, −\$100)
+</span></p>
+<section id="accept-or-reject" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="accept-or-reject"><span class="header-section-number">19.1.1</span> Accept or reject</h3>
+<p>Will they want to play this gamble?</p>
+<p>The weighted value of the gamble is:</p>
+<p><span class="math display">\begin{align*}
+V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&amp;=0.5v(110)+0.5v(-100) \\[6pt]
+&amp;=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\[6pt]
+&amp;=-4.76
+\end{align*}</span></p>
+<p>They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.</p>
+<p>The reason for this negative value is that the agent is loss averse. The loss of $100 is given twice the weight of an equivalent gain.</p>
+</section>
+<section id="accept-or-reject-after-loss" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="accept-or-reject-after-loss"><span class="header-section-number">19.1.2</span> Accept or reject after loss</h3>
+<p>Suppose the agent loses their wallet containing $100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is $100 less than otherwise. Would they be willing to take gamble A now?</p>
+<p>After losing $100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of $10 (winning $110 minus the lost money in the wallet) and a loss of $200 (losing $100 and also losing their wallet).</p>
+<p>The weighted value of gamble A is now:</p>
+<p><span class="math display">\begin{align*}
+V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&amp;=0.5v(110-100)-0.5v(-100-100) \\[6pt]
+&amp;=0.5\times (10)^{0.5}-0.5\times 2\times (200)^{0.5} \\[6pt]
+&amp;=-12.56
+\end{align*}</span></p>
+<p>The value of not playing the gamble involves remaining with a loss of $100:</p>
+<p><span class="math display">\begin{align*}
+V(\neg A)&amp;=v(-100) \\
+&amp;=-2\times (100)^{0.5} \\
+&amp;=-20
+\end{align*}</span></p>
+<p>They will now want to play the gamble as it has a greater value than staying with their current loss. The gamble becomes attractive as it allows recovery the loss. The agent is risk seeking in the loss domain. (They would even accept a 50:50 gamble to win $100, lose $100 with an expected value of zero.)</p>
+</section>
+<section id="accept-or-reject-after-adaptation-to-loss" class="level3" data-number="19.1.3">
+<h3 data-number="19.1.3" class="anchored" data-anchor-id="accept-or-reject-after-adaptation-to-loss"><span class="header-section-number">19.1.3</span> Accept or reject after adaptation to loss</h3>
+<p>The agent has now adapted to their loss of $100. The new reference point is the new wealth level incorporating the loss wallet. Would they take gamble A now?</p>
+<p>We are now back to an identical situation as when they were first offered the gamble with their reference point as the status quo. They will not want to partake in the gamble.</p>
+</section>
+</section>
+<section id="accept-or-reject-after-win" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="accept-or-reject-after-win"><span class="header-section-number">19.2</span> Accept or reject after win</h2>
+<p>The agent wins $10,000 at the casino. They feel good about their win, so their reference point remains at their wealth excluding the win. Would they take gamble A now?</p>
+<p>With the additional $10,000, the value from the gamble is:</p>
+<p><span class="math display">\begin{align*}
+V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&amp;=0.5v(10000+110)+0.5v(10000-100) \\[6pt]
+&amp;=0.5\times (10110)^{0.5}+0.5\times (9900)^{0.5} \\[6pt]
+&amp;=100.02
+\end{align*}</span></p>
+<p>The value of not playing the gamble is:</p>
+<p><span class="math display">\begin{align*}
+V(\neg A)&amp;=v(10000) \\[6pt]
+&amp;=10000^{0.5} \\[6pt]
+&amp;=100
+\end{align*}</span></p>
+<p>The gamble is now attractive. The agent is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.</p>
+</section>
+<section id="a-6040-gamble" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="a-6040-gamble"><span class="header-section-number">19.3</span> A 60:40 gamble</h2>
+<p>Paddy makes decisions in accordance with prospect theory, has wealth $300 and value function:</p>
+<p><span class="math display">
+v(x)=\left\{\begin{matrix}
+x^{\frac{1}{2}} \quad &amp;\textrm{where} \quad x \geq 0 \\
+-2(-x)^{\frac{1}{2}} \quad &amp;\textrm{where} \quad x &lt; 0
+\end{matrix}\right.
+</span></p>
+<p>Assume Paddy weights probabilities linearly.</p>
+<p>Paddy is offered the following bet A:</p>
+<ul>
+<li>a 60% probability to win $150</li>
+<li>a 40% probability to lose $100.</li>
+</ul>
+<section id="accept-or-reject-1" class="level3" data-number="19.3.1">
+<h3 data-number="19.3.1" class="anchored" data-anchor-id="accept-or-reject-1"><span class="header-section-number">19.3.1</span> Accept or reject</h3>
+<p>Does Paddy accept bet A?</p>
+<p>Paddy compares the value of taking versus not taking the bet:</p>
+<p><span class="math display">\begin{align*}
+V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\
+&amp;=0.6\times (150)^{\frac{1}{2}}-0.4\times 2\times (100)^{\frac{1}{2}} \\
+&amp;=-0.652
+\end{align*}</span></p>
+<p>The value of not taking the bet is zero. Paddy would have no change from his reference point.</p>
+<p>Paddy rejects the bet as <span class="math inline">V(A)</span> is less than the <span class="math inline">V(0)=0</span> Paddy could get by simply rejecting the bet.</p>
+<p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure illustrates that Paddy’s rejection is caused by both Paddy’s loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/paddy-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/paddy-1.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="accept-or-reject-after-loss-1" class="level3" data-number="19.3.2">
+<h3 data-number="19.3.2" class="anchored" data-anchor-id="accept-or-reject-after-loss-1"><span class="header-section-number">19.3.2</span> Accept or reject after loss</h3>
+<p>Following some bad economic news, Paddy’s wealth declines to $150. Paddy cannot get over the loss, so his reference point remains his former wealth of $300.</p>
+<p>Paddy is offered bet A again. Does Paddy accept the bet?</p>
+<p>As Paddy is now in the loss domain, the two potential outcomes from the bet are a gain of $0 and a loss of $250. His alternative is remaining at a point $150 below his reference point (<span class="math inline">L</span>).</p>
+<p>Paddy compares the value of taking versus not taking the bet is:</p>
+<p><span class="math display">\begin{align*}
+V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\
+&amp;=0.6\times v(-150+150)+0.4\times v(-150-100) \\
+&amp;=0.6\times (-150+150)^{\frac{1}{2}}-0.4\times 2\times (150+100)^{\frac{1}{2}} \\
+&amp;=-12.649 \\
+\\
+V(\text{L})&amp;=v(L) \\
+&amp;=-2\times (150)^{\frac{1}{2}} \\
+&amp;=-24.495
+\end{align*}</span></p>
+<p>Paddy accepts the bet as <span class="math inline">V(A)</span> is greater than the value of the certain loss of $150.</p>
+<p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/paddy-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/paddy-2.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="insurance" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="insurance"><span class="header-section-number">19.4</span> Insurance</h2>
 <p>The classical economic explanation for the purchase of insurance is based on the risk aversion of consumers. Insurance has a negative expected value due to the insurer’s profit and administrative costs. However, consumers are willing to buy insurance as the consumer prefers the certainty of the premium payment to the risk of suffering an uninsured loss.</p>
 <p>Prospect theory provides an alternative explanation. The purchase of insurance involves a certain loss (the premium) or a gamble involving the possibility of either a large loss or the status quo. As prospect theory has people as risk seeking in the loss domain, we would not expect them to purchase insurance.</p>
 <p>However, under prospect theory people also overweight small probabilities. This overweighting of small probabilities can make the purchase of insurance attractive even though it is in the loss domain. This combination of the loss domain but small probabilities is the bottom-right quadrant of the fourfold pattern to risk attitudes generated by prospect theory.</p>
 <p>The following numerical example is an illustration.</p>
 <p>An agent is considering insurance against bushfire for its $1,000,000 house. The house has a 1 in 1000 ($p=0.0001) chance of burning down. An insurer is willing to offer full coverage for $1100. (Note: $1000 is the actuarially fair price, the additional $100 might represent profit or administrative costs.)</p>
-<section id="expected-value" class="level3" data-number="19.1.1">
-<h3 data-number="19.1.1" class="anchored" data-anchor-id="expected-value"><span class="header-section-number">19.1.1</span> Expected value</h3>
+<section id="expected-value" class="level3" data-number="19.4.1">
+<h3 data-number="19.4.1" class="anchored" data-anchor-id="expected-value"><span class="header-section-number">19.4.1</span> Expected value</h3>
 <p>The first question we will ask is whether an expected value maximiser or risk-neutral person would purchase the insurance.</p>
 <p>A risk-neutral agent will choose the option with the highest expected value.</p>
 <p>First, we calculate the expected value of purchasing the insurance.</p>
@@ -574,8 +766,8 @@ E[\text{don't}]&amp;=p\times -value_{\text{house}} \\
 \end{align*}</span></p>
 <p>The expected value of purchasing insurance is $100 less than the expected value of risking the house burning down. A risk-neutral agent (who maximises expected value) would not purchase this insurance.</p>
 </section>
-<section id="expected-utility" class="level3" data-number="19.1.2">
-<h3 data-number="19.1.2" class="anchored" data-anchor-id="expected-utility"><span class="header-section-number">19.1.2</span> Expected utility</h3>
+<section id="expected-utility" class="level3" data-number="19.4.2">
+<h3 data-number="19.4.2" class="anchored" data-anchor-id="expected-utility"><span class="header-section-number">19.4.2</span> Expected utility</h3>
 <p>Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function (<span class="math inline">U(x)=ln(x)</span>) and they have $10,000 in cash in addition to their house, giving them wealth (<span class="math inline">W</span>) of $1,010,000.</p>
 <p>First, we calculate the expected utility of purchasing the insurance, which is simply the utility of the wealth after the premium is paid.</p>
 <p><span class="math display">\begin{align*}
@@ -591,14 +783,59 @@ E[U(\text{don't})]&amp;=0.999\times ln(W)+0.001\times ln(W-value_{\text{house}})
 \end{align*}</span></p>
 <p>The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.</p>
 <p>The following diagram illustrates. On the horizontal axis is the outcome, <span class="math inline">x</span>. On the vertical axis is the utility, <span class="math inline">U(x)</span>.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">log</span>(x)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">100</span>,<span class="fl">0.1</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span><span class="cn">NA</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="fu">u</span>(df<span class="sc">$</span>x)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data =</span> df) <span class="sc">+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"U(x)"</span>)<span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set the theme</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">#remove numbers on each axis</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>())<span class="sc">+</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">#limit to y greater than zero</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>))<span class="sc">+</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add label W on x axis at x=90</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">90</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W"</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">hjust =</span> <span class="fl">0.4</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add vertical line from x=90 to the curve</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">90</span>, <span class="at">xend =</span> <span class="dv">90</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="fu">u</span>(<span class="dv">90</span>), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/expected-utility.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/expected-utility.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/expected-utility.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/expected-utility.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
-<section id="the-reflection-effect" class="level3" data-number="19.1.3">
-<h3 data-number="19.1.3" class="anchored" data-anchor-id="the-reflection-effect"><span class="header-section-number">19.1.3</span> The reflection effect</h3>
+<section id="the-reflection-effect" class="level3" data-number="19.4.3">
+<h3 data-number="19.4.3" class="anchored" data-anchor-id="the-reflection-effect"><span class="header-section-number">19.4.3</span> The reflection effect</h3>
 <p>Consider an agent who is risk seeking in the domain of losses but weights probability linearly. Their value function is:</p>
 <p><span class="math display">
 v(x)=\left\{\begin{matrix}
@@ -622,12 +859,12 @@ V(don't)&amp;=0.999\times (0)+0.001\times v(-1,000,000) \\
 <p>Including loss aversion in the value function does not change the decision as all possible outcomes are in the loss domain.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/reflection-effect.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/reflection-effect.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/reflection-effect.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/reflection-effect.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
-<section id="probability-weighting" class="level3" data-number="19.1.4">
-<h3 data-number="19.1.4" class="anchored" data-anchor-id="probability-weighting"><span class="header-section-number">19.1.4</span> Probability weighting</h3>
+<section id="probability-weighting" class="level3" data-number="19.4.4">
+<h3 data-number="19.4.4" class="anchored" data-anchor-id="probability-weighting"><span class="header-section-number">19.4.4</span> Probability weighting</h3>
 <p>Would a person who is risk seeking in the domain of losses (i.e.&nbsp;the value function with reflection effect above) and applies the decision weights described below purchase the insurance?</p>
 <p>They apply decision weights as per the following table:</p>
 <table class="table">
@@ -681,128 +918,6 @@ V(don't)&amp;=\sum_{i=1}^n \pi(p_i)v(x_i) \\
 &amp;=-631
 \end{align*}</span></p>
 <p>Although the diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house, the overweighting of the probability of fire leads them to purchase insurance. Again, if we had included loss aversion it would not have changed the decision as all possible outcomes are in the loss domain.</p>
-</section>
-</section>
-<section id="a-5050-gamble" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="a-5050-gamble"><span class="header-section-number">19.2</span> A 50:50 gamble</h2>
-<p>Suppose an agent has the following reference-dependent value function:</p>
-<p><span class="math display">
-v(x)=\left\{\begin{matrix}
-x^{1/2} \qquad &amp;\textrm{where} \space x \geq 0\\
--2(-x)^{1/2} \quad &amp;\textrm{where} \space x &lt; 0
-\end{matrix}\right.
-</span></p>
-<p>Where <span class="math inline">x</span> is the realised outcome relative to the reference point.</p>
-<p>Assume that the agent’s reference point is the status quo and the agent is offered the gamble A:</p>
-<p><span class="math display">(\$110, 0.5; −\$100, 0.5)</span></p>
-<section id="accept-or-reject" class="level3" data-number="19.2.1">
-<h3 data-number="19.2.1" class="anchored" data-anchor-id="accept-or-reject"><span class="header-section-number">19.2.1</span> Accept or reject</h3>
-<p>Will they want to play this gamble?</p>
-<p>The weighted value of the gamble is:</p>
-<p><span class="math display">\begin{align*}
-V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\
-&amp;=0.5v(110)+0.5v(-100) \\
-&amp;=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\
-&amp;=-4.76
-\end{align*}</span></p>
-<p>They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.</p>
-<p>The reason for this negative value is that the agent is loss averse. The loss of $100 is given twice the weight of an equivalent gain.</p>
-</section>
-<section id="accept-or-reject-after-loss" class="level3" data-number="19.2.2">
-<h3 data-number="19.2.2" class="anchored" data-anchor-id="accept-or-reject-after-loss"><span class="header-section-number">19.2.2</span> Accept or reject after loss</h3>
-<p>Suppose the agent loses their wallet containing $100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is $100 less than otherwise. Would they be willing to take gamble A now?</p>
-<p>After losing $100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of $10 (winning $110 minus the lost money in the wallet) and a loss of $200 (losing $100 and also losing their wallet).</p>
-<p><span class="math display">\begin{align*}
-V(A)&amp;=0.5v(110-100)-0.5v(-100-100) \\
-&amp;=0.5\times (10)^{0.5}-0.5\times 2\times (200)^{0.5} \\
-&amp;=-12.56
-\end{align*}</span></p>
-<p>The value of not playing the gamble involves remaining with a loss of $100:</p>
-<p><span class="math display">\begin{align*}
-V(\neg A)&amp;=v(-100) \\
-&amp;=-2\times (100)^{0.5} \\
-&amp;=-20
-\end{align*}</span></p>
-<p>They will now want to play the gamble as it has a greater value than staying with their current loss. The reason the gamble becomes attractive is because it gives an opportunity to recover the loss. The agent is risk seeking over the loss domain. (They would even accept a 50:50 gamble to win $100, lose $100 with an expected value of zero.)</p>
-</section>
-<section id="accept-or-reject-after-adapt-to-loss" class="level3" data-number="19.2.3">
-<h3 data-number="19.2.3" class="anchored" data-anchor-id="accept-or-reject-after-adapt-to-loss"><span class="header-section-number">19.2.3</span> Accept or reject after adapt to loss</h3>
-<p>The agent has now adapted to their loss of $100. The new reference point is the new wealth level incorporating the loss wallet. Would they take gamble A now?</p>
-<p>We are now back to an identical situation as in Question 1. They will not want to partake in the gamble.</p>
-</section>
-</section>
-<section id="accept-or-reject-after-win" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="accept-or-reject-after-win"><span class="header-section-number">19.3</span> Accept or reject after win</h2>
-<p>The agent wins $10,000 at the casino. They feel good about their win, so their reference point remains at their wealth excluding the win. Would they take gamble A now?</p>
-<p>With the additional $10,000, the value from the gamble is now:</p>
-<p><span class="math display">\begin{align*}
-V(A)&amp;=0.5v(10000+110)+0.5v(10000-100) \\[6pt]
-&amp;=0.5\times (10110)^{0.5}+0.5\times (9900)^{0.5} \\[6pt]
-&amp;=100.02
-\end{align*}</span></p>
-<p>The value of not playing the gamble is:</p>
-<p><span class="math display">\begin{align*}
-V(\neg A)&amp;=v(10000) \\[6pt]
-&amp;=(10000)^{0.5} \\[6pt]
-&amp;=100
-\end{align*}</span></p>
-<p>The gamble is now attractive. They are less risk averse at a higher wealth, and the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.</p>
-</section>
-<section id="a-6040-gamble" class="level2" data-number="19.4">
-<h2 data-number="19.4" class="anchored" data-anchor-id="a-6040-gamble"><span class="header-section-number">19.4</span> A 60:40 gamble</h2>
-<p>Paddy makes decisions in accordance with prospect theory, has wealth $300 and value function:</p>
-<p><span class="math display">
-v(x)=\left\{\begin{matrix}
-x^{\frac{1}{2}} \quad &amp;\textrm{where} \quad x \geq 0 \\
--2(-x)^{\frac{1}{2}} \quad &amp;\textrm{where} \quad x &lt; 0
-\end{matrix}\right.
-</span></p>
-<p>Assume Paddy weights probabilities linearly.</p>
-<p>Paddy is offered the following bet A:</p>
-<ul>
-<li>a 60% probability to win $150</li>
-<li>a 40% probability to lose $100.</li>
-</ul>
-<section id="accept-or-reject-1" class="level3" data-number="19.4.1">
-<h3 data-number="19.4.1" class="anchored" data-anchor-id="accept-or-reject-1"><span class="header-section-number">19.4.1</span> Accept or reject</h3>
-<p>Does Paddy accept bet A?</p>
-<p>Paddy compares the value of taking versus not taking the bet:</p>
-<p><span class="math display">\begin{align*}
-V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\
-&amp;=0.6\times (150)^{\frac{1}{2}}-0.4\times 2\times (100)^{\frac{1}{2}} \\
-&amp;=-0.652
-\end{align*}</span></p>
-<p>The value of not taking the bet is zero. Paddy would have no change from his reference point.</p>
-<p>Paddy rejects the bet as <span class="math inline">V(A)</span> is less than the <span class="math inline">V(0)=0</span> Paddy could get by simply rejecting the bet.</p>
-<p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure illustrates that Paddy’s rejection is caused by both Paddy’s loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/paddy-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/paddy-1.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
-</figure>
-</div>
-</section>
-<section id="accept-or-reject-after-loss-1" class="level3" data-number="19.4.2">
-<h3 data-number="19.4.2" class="anchored" data-anchor-id="accept-or-reject-after-loss-1"><span class="header-section-number">19.4.2</span> Accept or reject after loss</h3>
-<p>Following some bad economic news, Paddy’s wealth declines to $150. Paddy cannot get over the loss, so his reference point remains his former wealth of $300.</p>
-<p>Paddy is offered bet A again. Does Paddy accept the bet?</p>
-<p>As Paddy is now in the loss domain, the two potential outcomes from the bet are a gain of $0 and a loss of $250. His alternative is remaining at a point $150 below his reference point (<span class="math inline">L</span>).</p>
-<p>Paddy compares the value of taking versus not taking the bet:</p>
-<p><span class="math display">\begin{align*}
-V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\
-&amp;=0.6\times (-150+150)^{\frac{1}{2}}-0.4\times 2\times (150+100)^{\frac{1}{2}} \\
-&amp;=-12.649 \\
-\\
-V(\text{L})&amp;=v(L) \\
-&amp;=-2\times (150)^{\frac{1}{2}} \\
-&amp;=-24.495
-\end{align*}</span></p>
-<p>Paddy accepts the bet as <span class="math inline">V(A)</span> is greater than the value of the certain loss of $150.</p>
-<p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/paddy-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/paddy-2.jpg" class="img-fluid figure-img" style="width:80.0%"></a></p>
-</figure>
-</div>
 
 
 </section>
@@ -986,7 +1101,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 

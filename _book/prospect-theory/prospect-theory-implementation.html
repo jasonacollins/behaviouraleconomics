@@ -99,10 +99,10 @@ div.csl-indent {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 18&nbsp; Prospect theory implementation">
-<meta property="og:description" content="Under prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.">
+<meta property="og:description" content="Under prospect theory, people assess the weighted value of a prospect in two phases: editing and evaluation.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 18&nbsp; Prospect theory implementation">
-<meta name="twitter:description" content="Under prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.">
+<meta name="twitter:description" content="Under prospect theory, people assess the weighted value of a prospect in two phases: editing and evaluation.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -140,7 +140,7 @@ div.csl-indent {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -549,7 +549,7 @@ div.csl-indent {
 
 </header>
 
-<p>Under prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.</p>
+<p>Under prospect theory, people assess the weighted value of a prospect in two phases: editing and evaluation.</p>
 <section id="editing" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="editing"><span class="header-section-number">18.1</span> Editing</h2>
 <p>Editing involves simplification of prospects for subsequent evaluation.</p>
@@ -557,7 +557,7 @@ div.csl-indent {
 <ul>
 <li><p>In the coding phase, prospects are coded as gains or losses relative to a reference point.</p></li>
 <li><p>In the combination phase, prospects are simplified by combining probabilities for identical outcomes. For example, (0.25, 200; 0.25, 200; 0.50, 0) will become (0.50, 200; 0.50, 0).</p></li>
-<li><p>During segregation, riskless components are segregated from risky components. For example (0.80, 300; 0.20, 200) corresponds to a sure gain of 200 and the risky gamble (0.80, 100; 0.20, 0, 0).</p></li>
+<li><p>During segregation, riskless components are segregated from risky components. For example (0.80, 300; 0.20, 200) corresponds to a sure gain of 200 and the risky gamble (0.80, 100; 0.20, 0).</p></li>
 <li><p>Finally, in cancellation, components that are shared by two prospects are ignored.</p></li>
 </ul>
 </section>
