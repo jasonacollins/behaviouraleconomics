@@ -69,7 +69,7 @@ The agent has now adapted to their loss of \$100. The new reference point is the
 
 We are now back to an identical situation as when they were first offered the gamble with their reference point as the status quo. They will not want to partake in the gamble.
 
-## Accept or reject after win
+### Accept or reject after win
 
 The agent wins \$10,000 at the casino. They feel good about their win, so their reference point remains at their wealth excluding the win. Would they take gamble A now?
 
