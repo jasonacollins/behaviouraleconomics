@@ -1,5 +1,162 @@
 # Prospect theory examples
 
+## A 50:50 gamble
+
+Suppose an agent has the following reference-dependent value function:
+
+$$
+v(x)=\left\{\begin{matrix}
+x^{1/2} \qquad &\textrm{where} \space x \geq 0\\
+-2(-x)^{1/2} \quad &\textrm{where} \space x < 0 
+\end{matrix}\right.
+$$
+
+Where $x$ is the realised outcome relative to the reference point.
+
+Assume that the agent’s reference point is the status quo and that they weight outcomes linearly.
+
+The agent is offered the gamble A:
+
+$$
+(0.5, \$110; 0.5, −\$100)
+$$
+
+### Accept or reject
+
+Will they want to play this gamble?
+
+The weighted value of the gamble is:
+
+\begin{align*}
+V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&=0.5v(110)+0.5v(-100) \\[6pt]
+&=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\[6pt]
+&=`r round(0.5*110^0.5-0.5*2*100^0.5, 2)`
+\end{align*}
+
+They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.
+
+The reason for this negative value is that the agent is loss averse. The loss of \$100 is given twice the weight of an equivalent gain.
+
+### Accept or reject after loss
+
+Suppose the agent loses their wallet containing \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is \$100 less than otherwise. Would they be willing to take gamble A now?
+
+After losing \$100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of \$10 (winning \$110 minus the lost money in the wallet) and a loss of \$200 (losing \$100 and also losing their wallet).
+
+The weighted value of gamble A is now:
+
+\begin{align*}
+V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&=0.5v(110-100)-0.5v(-100-100) \\[6pt]
+&=0.5\times (10)^{0.5}-0.5\times 2\times (200)^{0.5} \\[6pt]
+&=`r round(0.5*10^0.5-0.5*2*200^0.5, 2)`
+\end{align*}
+
+The value of not playing the gamble involves remaining with a loss of \$100:
+
+\begin{align*}
+V(\neg A)&=v(-100) \\
+&=-2\times (100)^{0.5} \\
+&=-20
+\end{align*}
+
+They will now want to play the gamble as it has a greater value than staying with their current loss. The gamble becomes attractive as it allows recovery the loss. The agent is risk seeking in the loss domain. (They would even accept a 50:50 gamble to win \$100, lose \$100 with an expected value of zero.)
+
+### Accept or reject after adaptation to loss
+
+The agent has now adapted to their loss of \$100. The new reference point is the new wealth level incorporating the loss wallet. Would they take gamble A now?
+
+We are now back to an identical situation as when they were first offered the gamble with their reference point as the status quo. They will not want to partake in the gamble.
+
+## Accept or reject after win
+
+The agent wins \$10,000 at the casino. They feel good about their win, so their reference point remains at their wealth excluding the win. Would they take gamble A now?
+
+With the additional \$10,000, the value from the gamble is:
+
+\begin{align*}
+V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&=0.5v(10000+110)+0.5v(10000-100) \\[6pt]
+&=0.5\times (10110)^{0.5}+0.5\times (9900)^{0.5} \\[6pt]
+&=`r round(0.5*10110^0.5+0.5*9900^0.5, 2)`
+\end{align*}
+
+The value of not playing the gamble is:
+
+\begin{align*}
+V(\neg A)&=v(10000) \\[6pt]
+&=10000^{0.5} \\[6pt]
+&=100
+\end{align*}
+
+The gamble is now attractive. The agent is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.
+
+## A 60:40 gamble
+
+Paddy makes decisions in accordance with prospect theory, has wealth \$300 and value function:
+
+$$
+v(x)=\left\{\begin{matrix}
+x^{\frac{1}{2}} \quad &\textrm{where} \quad x \geq 0 \\
+-2(-x)^{\frac{1}{2}} \quad &\textrm{where} \quad x < 0 
+\end{matrix}\right.
+$$
+
+Assume Paddy weights probabilities linearly.
+
+Paddy is offered the following bet A:
+
+- a 60% probability to win \$150
+- a 40% probability to lose \$100.
+
+### Accept or reject
+
+Does Paddy accept bet A?
+
+Paddy compares the value of taking versus not taking the bet:
+
+\begin{align*}
+V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\
+&=0.6\times (150)^{\frac{1}{2}}-0.4\times 2\times (100)^{\frac{1}{2}} \\
+&=`r round(0.6*150^0.5-0.4*2*100^0.5, 3)`
+\end{align*}
+
+The value of not taking the bet is zero. Paddy would have no change from his reference point.
+
+Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ Paddy could get by simply rejecting the bet.
+
+The following figure shows Paddy's value function, the bets and the value of the bets. The figure illustrates that Paddy's rejection is caused by both Paddy's loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.
+
+![](img/paddy-1.jpg){width=80%}
+
+### Accept or reject after loss
+
+Following some bad economic news, Paddy's wealth declines to \$150. Paddy cannot get over the loss, so his reference point remains his former wealth of \$300.
+
+Paddy is offered bet A again. Does Paddy accept the bet?
+
+As Paddy is now in the loss domain, the two potential outcomes from the bet are a gain of \$0 and a loss of \$250. His alternative is remaining at a point \$150 below his reference point ($L$).
+
+Paddy compares the value of taking versus not taking the bet is:
+
+\begin{align*}
+V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\
+&=0.6\times v(-150+150)+0.4\times v(-150-100) \\
+&=0.6\times (-150+150)^{\frac{1}{2}}-0.4\times 2\times (150+100)^{\frac{1}{2}} \\
+&=`r round(0.6*0^0.5-0.4*2*250^0.5, 3)` \\
+\\
+V(\text{L})&=v(L) \\
+&=-2\times (150)^{\frac{1}{2}} \\
+&=`r round(-2*150^0.5, 3)`
+\end{align*}
+
+Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of \$150.
+
+The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.
+
+![](img/paddy-2.jpg){width=80%}
+
 ## Insurance
 
 The classical economic explanation for the purchase of insurance is based on the risk aversion of consumers. Insurance has a negative expected value due to the insurer's profit and administrative costs. However, consumers are willing to buy insurance as the consumer prefers the certainty of the premium payment to the risk of suffering an uninsured loss.
@@ -58,8 +215,6 @@ E[U(\text{don't})]&=0.999\times ln(W)+0.001\times ln(W-value_{\text{house}}) \\
 \end{align*}
 
 The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
-
-The following diagram illustrates. On the horizontal axis is the outcome, $x$. On the vertical axis is the utility, $U(x)$.
 
 ![](img/expected-utility.jpg)
 
@@ -120,150 +275,3 @@ V(don't)&=\sum_{i=1}^n \pi(p_i)v(x_i) \\
 
 Although the diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house, the overweighting of the probability of fire leads them to purchase insurance. Again, if we had included loss aversion it would not have changed the decision as all possible outcomes are in the loss domain.
 
-## A 50:50 gamble
-
-Suppose an agent has the following reference-dependent value function:
-
-$$
-v(x)=\left\{\begin{matrix}
-x^{1/2} \qquad &\textrm{where} \space x \geq 0\\
--2(-x)^{1/2} \quad &\textrm{where} \space x < 0 
-\end{matrix}\right.
-$$
-
-Where $x$ is the realised outcome relative to the reference point.
-
-Assume that the agent’s reference point is the status quo and the agent is offered the gamble A:
-
-$$(\$110, 0.5; −\$100, 0.5)$$
-
-### Accept or reject
-
-Will they want to play this gamble?
-
-The weighted value of the gamble is:
-
-\begin{align*}
-V(A)&=p_1v(x_1)+p_2v(x_2) \\
-&=0.5v(110)+0.5v(-100) \\
-&=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\
-&=-4.76
-\end{align*}
-
-They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.
-
-The reason for this negative value is that the agent is loss averse. The loss of \$100 is given twice the weight of an equivalent gain.
-
-### Accept or reject after loss
-
-Suppose the agent loses their wallet containing \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is \$100 less than otherwise. Would they be willing to take gamble A now?
-
-After losing \$100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of \$10 (winning \$110 minus the lost money in the wallet) and a loss of \$200 (losing \$100 and also losing their wallet).
-
-\begin{align*}
-V(A)&=0.5v(110-100)-0.5v(-100-100) \\
-&=0.5\times (10)^{0.5}-0.5\times 2\times (200)^{0.5} \\
-&=-12.56
-\end{align*}
-
-The value of not playing the gamble involves remaining with a loss of \$100:
-
-\begin{align*}
-V(\neg A)&=v(-100) \\
-&=-2\times (100)^{0.5} \\
-&=-20
-\end{align*}
-
-They will now want to play the gamble as it has a greater value than staying with their current loss. The reason the gamble becomes attractive is because it gives an opportunity to recover the loss. The agent is risk seeking over the loss domain. (They would even accept a 50:50 gamble to win \$100, lose \$100 with an expected value of zero.)
-
-### Accept or reject after adapt to loss
-
-The agent has now adapted to their loss of \$100. The new reference point is the new wealth level incorporating the loss wallet. Would they take gamble A now?
-
-We are now back to an identical situation as in Question 1. They will not want to partake in the gamble.
-
-## Accept or reject after win
-
-The agent wins \$10,000 at the casino. They feel good about their win, so their reference point remains at their wealth excluding the win. Would they take gamble A now?
-
-With the additional \$10,000, the value from the gamble is now:
-
-\begin{align*}
-V(A)&=0.5v(10000+110)+0.5v(10000-100) \\[6pt]
-&=0.5\times (10110)^{0.5}+0.5\times (9900)^{0.5} \\[6pt]
-&=100.02
-\end{align*}
-
-The value of not playing the gamble is:
-
-\begin{align*}
-V(\neg A)&=v(10000) \\[6pt]
-&=(10000)^{0.5} \\[6pt]
-&=100
-\end{align*}
-
-The gamble is now attractive. They are less risk averse at a higher wealth, and the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.
-
-## A 60:40 gamble
-
-Paddy makes decisions in accordance with prospect theory, has wealth \$300 and value function:
-
-$$
-v(x)=\left\{\begin{matrix}
-x^{\frac{1}{2}} \quad &\textrm{where} \quad x \geq 0 \\
--2(-x)^{\frac{1}{2}} \quad &\textrm{where} \quad x < 0 
-\end{matrix}\right.
-$$
-
-Assume Paddy weights probabilities linearly.
-
-Paddy is offered the following bet A:
-
-- a 60% probability to win \$150
-- a 40% probability to lose \$100.
-
-### Accept or reject
-
-Does Paddy accept bet A?
-
-Paddy compares the value of taking versus not taking the bet:
-
-\begin{align*}
-V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\
-&=0.6\times (150)^{\frac{1}{2}}-0.4\times 2\times (100)^{\frac{1}{2}} \\
-&=`r round(0.6*150^0.5-0.4*2*100^0.5, 3)`
-\end{align*}
-
-The value of not taking the bet is zero. Paddy would have no change from his reference point.
-
-Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ Paddy could get by simply rejecting the bet.
-
-The following figure shows Paddy's value function, the bets and the value of the bets. The figure illustrates that Paddy's rejection is caused by both Paddy's loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.
-
-![](img/paddy-1.jpg){width=80%}
-
-### Accept or reject after loss
-
-Following some bad economic news, Paddy's wealth declines to \$150. Paddy cannot get over the loss, so his reference point remains his former wealth of \$300.
-
-Paddy is offered bet A again. Does Paddy accept the bet?
-
-As Paddy is now in the loss domain, the two potential outcomes from the bet are a gain of \$0 and a loss of \$250. His alternative is remaining at a point \$150 below his reference point ($L$).
-
-Paddy compares the value of taking versus not taking the bet:
-
-\begin{align*}
-V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\
-&=0.6\times (-150+150)^{\frac{1}{2}}-0.4\times 2\times (150+100)^{\frac{1}{2}} \\
-&=`r round(0.6*0^0.5-0.4*2*250^0.5, 3)` \\
-\\
-V(\text{L})&=v(L) \\
-&=-2\times (150)^{\frac{1}{2}} \\
-&=`r round(-2*150^0.5, 3)`
-\end{align*}
-
-Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of \$150.
-
-The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.
-
-![](img/paddy-2.jpg){width=80%}
