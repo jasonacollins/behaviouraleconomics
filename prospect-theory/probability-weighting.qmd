@@ -6,7 +6,7 @@ In contrast, prospect theory incorporates non-linear weighting of probabilities 
 
 ## Empirical evidence
 
-Experimental observation confirms that when making decisions under risk we approximate linear probabilities for intermediate probabilities.
+Experimental observation confirms that when making decisions under risk we approximate linear weights for intermediate probabilities.
 
 But, there is strong evidence that we overweight certain events, when the probability of the event is one, relative to near certain events, such as when the probability is, say, 99\%. This overweighting of certainty is effectively the same as overweighting very low-probability events.
 
@@ -64,7 +64,7 @@ Conversely, for the intermediate probabilities in Bet C and Bet D, they are weig
 
 The weighting of probabilities is applied in prospect theory through a decision weight $\pi(p_i)$. The decision weight is a function of the probability of the outcome.
 
-This decision-weighting function reflects the empirical regularity that people overweight certain events) relative to near-certain events and overweight very low probability events.
+This decision-weighting function reflects the empirical regularity that people overweight certain events relative to near-certain events and overweight very low probability events.
 
 An example probability weighting function, of a type proposed by @prelec1998, is as follows:
 

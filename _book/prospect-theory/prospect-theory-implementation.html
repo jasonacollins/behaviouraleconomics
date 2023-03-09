@@ -99,10 +99,10 @@ div.csl-indent {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 18&nbsp; Prospect theory implementation">
-<meta property="og:description" content="Under Prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.">
+<meta property="og:description" content="Under prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 18&nbsp; Prospect theory implementation">
-<meta name="twitter:description" content="Under Prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.">
+<meta name="twitter:description" content="Under prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -549,16 +549,16 @@ div.csl-indent {
 
 </header>
 
-<p>Under Prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.</p>
+<p>Under prospect theory, people evaluate the utility of a prospect in two phases: editing and evaluation.</p>
 <section id="editing" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="editing"><span class="header-section-number">18.1</span> Editing</h2>
 <p>Editing involves simplification of prospects for subsequent evaluation.</p>
-<p><span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> describes the editing phase as having four main operations:</p>
+<p><span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> describes the editing phase as having four main operations: coding, combination, segregation and cancellation.</p>
 <ul>
-<li><p>Coding: Prospects are coded as gains or losses relative to a reference point.</p></li>
-<li><p>Combination: Prospects are simplified by combining probabilities for identical outcomes. For example, (200, 0.25; 200, 0.25; 0, 0.50) will become (200, 0.50; 0, 0.50).</p></li>
-<li><p>Segregation: Riskless components are segregated from risky components. For example (300, 0.80; 200, 0.20) corresponds to a sure gain of 200 and the risky gamble (100, 0.80; 0, 0.20).</p></li>
-<li><p>Cancellation: Components that are shared by two prospects are ignored.</p></li>
+<li><p>In the coding phase, prospects are coded as gains or losses relative to a reference point.</p></li>
+<li><p>In the combination phase, prospects are simplified by combining probabilities for identical outcomes. For example, (0.25, 200; 0.25, 200; 0.50, 0) will become (0.50, 200; 0.50, 0).</p></li>
+<li><p>During segregation, riskless components are segregated from risky components. For example (0.80, 300; 0.20, 200) corresponds to a sure gain of 200 and the risky gamble (0.80, 100; 0.20, 0, 0).</p></li>
+<li><p>Finally, in cancellation, components that are shared by two prospects are ignored.</p></li>
 </ul>
 </section>
 <section id="evaluation" class="level2" data-number="18.2">
@@ -567,23 +567,16 @@ div.csl-indent {
 <p>The weighted value of a prospect is made up of:</p>
 <p>1. a decision weight applied to each probability <span class="math inline">\pi(p_i)</span></p>
 <p>2. the subjective value of each outcome <span class="math inline">v(x_i)</span></p>
-<p>These are applied through the following formula:</p>
+<p>These are applied through the following formula to calculate <span class="math inline">V(X)</span>, the weighted value of the outcomes from gamble <span class="math inline">X</span>.</p>
 <span class="math display">\begin{align*}
 V(X)&amp;=\sum_{i=1}^n\pi(p_i)v(x_i)\\[6pt]
 &amp;=\pi(p_1)v(x_1)+\pi(p_2)v(x_2)+...+\pi(p_n)v(x_n)
 \end{align*}</span>
-<p><span class="math inline">V(X)</span> is the weighted value of the outcomes from gamble <span class="math inline">X</span>.</p>
 </section>
 <section id="fourfold-pattern-of-risk-attitudes" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="fourfold-pattern-of-risk-attitudes"><span class="header-section-number">18.3</span> Fourfold pattern of risk attitudes</h2>
-<p>Prospect theory results in a four-fold pattern of risk attitudes, as shown in this table. For moderate to high probability gambles, the reflection effect dominates and people are risk averse in the domain of gains and risk seeking in the domain of losses.</p>
-<p>But for low-probability gambles, the probability weighting shifts the decision calculus. The possibility of a gain is overweighted, making the gamble attractive and inducing risk-seeking behaviour. A similar effect occurs for a low probability of loss, with the overweighted probability making the potential loss less attractive, inducing risk-averse behaviour.</p>
+<p>Prospect theory results in a four-fold pattern of risk attitudes, as shown in this table.</p>
 <table class="table">
-<colgroup>
-<col style="width: 58%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -593,21 +586,24 @@ V(X)&amp;=\sum_{i=1}^n\pi(p_i)v(x_i)\\[6pt]
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Medium to high probability</strong></td>
+<td><strong>High probability</strong></td>
 <td>Risk aversion</td>
 <td>Risk seeking</td>
 </tr>
 <tr class="even">
-<td><strong>Low probability</strong> (possibility effect)</td>
+<td><strong>Low probability</strong></td>
 <td>Rick seeking</td>
 <td>Risk aversion</td>
 </tr>
 </tbody>
 </table>
-<p>The top two quadrants can be illustrated by considering an offer to settle a court case.</p>
+<p>For high-probability gambles, the reflection effect leads to people being people risk averse in the domain of gains and risk seeking in the domain of losses. For the top left quadrant, the low possibility of missing out on the gain is overweighted, making the gamble less attractive and amplifying the risk-averse behaviour. For the top right quadrant, the low probability of avoiding the loss is also overweighted, amplifying the risk-seeking behaviour we see in the domain of losses.</p>
+<p>These top two quadrants can be illustrated by considering an offer to settle a court case.</p>
+<p>Imagine one party has a 95% chance of winning a large settlement. The shape of the value function in the gain domain and the certainty effect make a settlement offer attractive. Conversely, the other party overweights their 5% chance of victory and is risk-seeking in the loss domain, making them unlikely to seek settlement unless it is very favourable.</p>
+<p>But for low-probability gambles, as in the bottom two quadrants, the probability weighting pushes decisions in the opposite direction to the value function. The possibility of a gain is overweighted, making gambles attractive and inducing risk-seeking behaviour. A similar effect occurs for a low probability of loss, with the overweighted probability making the gamble less attractive, inducing risk-averse behaviour.</p>
 <p>The bottom two quadrants can be related to the purchase of insurance and lotteries.</p>
-<p>Lotteries involve a small probability of gains. As people overweight that small probability of a win, people will be risk-seeking when considering whether to purchase a lottery.</p>
-<p>Insurance involves a small probability of loss. As people overweight the small probability of a loss, people will be risk-averse when considering whether to purchase insurance.</p>
+<p>Lotteries involve a small probability of gains. As people overweight that small probability of a win, people will be risk-seeking when considering whether to purchase a lottery despite the gamble being in the gain domain where they are typically risk averse.</p>
+<p>Insurance involves a small probability of loss. As people overweight the small probability of a loss, people will be risk-averse when considering whether to purchase insurance despite normally being risk seeking in the loss domain.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
