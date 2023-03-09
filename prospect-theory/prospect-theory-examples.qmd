@@ -2,7 +2,7 @@
 
 ## Insurance
 
-The classical economic explanation for the purchase of insurance is based on the risk aversion of consumers. Consumers are willing to buy insurance with a negative expected value as the consumer prefers the certainty of the premium payment to the risk of suffering an uninsured loss. (The negative expected value is due to the insurer's profit and administrative costs.)
+The classical economic explanation for the purchase of insurance is based on the risk aversion of consumers. Insurance has a negative expected value due to the insurer's profit and administrative costs. However, consumers are willing to buy insurance as the consumer prefers the certainty of the premium payment to the risk of suffering an uninsured loss.
 
 Prospect theory provides an alternative explanation. The purchase of insurance involves a certain loss (the premium) or a gamble involving the possibility of either a large loss or the status quo. As prospect theory has people as risk seeking in the loss domain, we would not expect them to purchase insurance.
 
@@ -10,11 +10,15 @@ However, under prospect theory people also overweight small probabilities. This 
 
 The following numerical example is an illustration.
 
-An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for \$1100. (Note: \$1000 is the actuarially fair price, the additional \$100 might represent profit or administrative costs.)
+An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 ($p=0.0001) chance of burning down. An insurer is willing to offer full coverage for \$1100. (Note: \$1000 is the actuarially fair price, the additional \$100 might represent profit or administrative costs.)
 
 ### Expected value
 
-Would an expected value maximiser or risk neutral person purchase the insurance?
+The first question we will ask is whether an expected value maximiser or risk-neutral person would purchase the insurance.
+
+A risk-neutral agent will choose the option with the highest expected value.
+
+First, we calculate the expected value of purchasing the insurance.
 
 \begin{align*}
 E[\text{purchase}]&=-\text{premium} \\
@@ -23,8 +27,10 @@ E[\text{purchase}]&=-\text{premium} \\
 
 The expected value of purchasing insurance is the guaranteed loss of the premium.
 
+Then we calculate the expected value of not purchasing the insurance.
+
 \begin{align*}
-E[\text{don't}]&=P_{\text{burn}}\times -value_{\text{house}} \\
+E[\text{don't}]&=p\times -value_{\text{house}} \\
 &=-0.001\times 1000000 \\
 &=-\$1000
 \end{align*}
@@ -35,17 +41,25 @@ The expected value of purchasing insurance is \$100 less than the expected value
 
 Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function ($U(x)=ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000.
 
+First, we calculate the expected utility of purchasing the insurance, which is simply the utility of the wealth after the premium is paid.
+
 \begin{align*}
 E[U(\text{purchase})]&=ln(W-premium) \\
 &=ln(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
-&=`r round(log(1000000+10000-1100), 4)` \\
-\\
+&=`r round(log(1000000+10000-1100), 4)`
+\end{align*}
+
+Then we calculate the expected utility of not purchasing the insurance.
+
+\begin{align*}
 E[U(\text{don't})]&=0.999\times ln(W)+0.001\times ln(W-value_{\text{house}}) \\
 &=0.999\times ln(1,010,000)+0.001\times ln(10,000) \\
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 
 The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
+
+The following diagram illustrates. On the horizontal axis is the outcome, $x$. On the vertical axis is the utility, $U(x)$.
 
 ![](img/expected-utility.jpg)
 
