@@ -6,8 +6,8 @@ Suppose an agent has the following reference-dependent value function:
 
 $$
 v(x)=\left\{\begin{matrix}
-x^{1/2} \qquad &\textrm{where} \space x \geq 0\\
--2(-x)^{1/2} \quad &\textrm{where} \space x < 0 
+x^\frac{1}{2} \qquad &\textrm{where} \space x \geq 0\\[6pt]
+-2(-x)^\frac{1}{2} \quad &\textrm{where} \space x < 0 
 \end{matrix}\right.
 $$
 
@@ -29,8 +29,8 @@ The weighted value of the gamble is:
 
 \begin{align*}
 V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
-&=0.5v(110)+0.5v(-100) \\[6pt]
-&=0.5\times (110)^{0.5}-0.5\times 2\times (100)^{0.5} \\[6pt]
+&=0.5\times v(110)+0.5\times v(-100) \\[6pt]
+&=0.5\times (110)^\frac{1}{2}-0.5\times 2\times (100)^\frac{1}{2} \\[6pt]
 &=`r round(0.5*110^0.5-0.5*2*100^0.5, 2)`
 \end{align*}
 
@@ -48,16 +48,16 @@ The weighted value of gamble A is now:
 
 \begin{align*}
 V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
-&=0.5v(110-100)-0.5v(-100-100) \\[6pt]
-&=0.5\times (10)^{0.5}-0.5\times 2\times (200)^{0.5} \\[6pt]
+&=0.5\times v(110-100)-0.5\times v(-100-100) \\[6pt]
+&=0.5\times (10)^\frac{1}{2}-0.5\times 2\times (200)^\frac{1}{2} \\[6pt]
 &=`r round(0.5*10^0.5-0.5*2*200^0.5, 2)`
 \end{align*}
 
 The value of not playing the gamble involves remaining with a loss of \$100:
 
 \begin{align*}
-V(\neg A)&=v(-100) \\
-&=-2\times (100)^{0.5} \\
+V(\neg A)&=v(-100) \\[6pt]
+&=-2\times (100)^\frac{1}{2} \\[6pt]
 &=-20
 \end{align*}
 
@@ -77,8 +77,8 @@ With the additional \$10,000, the value from the gamble is:
 
 \begin{align*}
 V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
-&=0.5v(10000+110)+0.5v(10000-100) \\[6pt]
-&=0.5\times (10110)^{0.5}+0.5\times (9900)^{0.5} \\[6pt]
+&=0.5\times v(10000+110)+0.5\times v(10000-100) \\[6pt]
+&=0.5\times (10110)^\frac{1}{2}+0.5\times (9900)^\frac{1}{2} \\[6pt]
 &=`r round(0.5*10110^0.5+0.5*9900^0.5, 2)`
 \end{align*}
 
@@ -86,7 +86,7 @@ The value of not playing the gamble is:
 
 \begin{align*}
 V(\neg A)&=v(10000) \\[6pt]
-&=10000^{0.5} \\[6pt]
+&=10000^\frac{1}{2} \\[6pt]
 &=100
 \end{align*}
 
@@ -98,7 +98,7 @@ Paddy makes decisions in accordance with prospect theory, has wealth \$300 and v
 
 $$
 v(x)=\left\{\begin{matrix}
-x^{\frac{1}{2}} \quad &\textrm{where} \quad x \geq 0 \\
+x^{\frac{1}{2}} \quad &\textrm{where} \quad x \geq 0 \\[6pt]
 -2(-x)^{\frac{1}{2}} \quad &\textrm{where} \quad x < 0 
 \end{matrix}\right.
 $$
@@ -117,8 +117,9 @@ Does Paddy accept bet A?
 Paddy compares the value of taking versus not taking the bet:
 
 \begin{align*}
-V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\
-&=0.6\times (150)^{\frac{1}{2}}-0.4\times 2\times (100)^{\frac{1}{2}} \\
+V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&=0.6\times v(150)-0.4\times v(100) \\[6pt]
+&=0.6\times (150)^{\frac{1}{2}}-0.4\times 2\times (100)^{\frac{1}{2}} \\[6pt]
 &=`r round(0.6*150^0.5-0.4*2*100^0.5, 3)`
 \end{align*}
 
@@ -141,13 +142,13 @@ As Paddy is now in the loss domain, the two potential outcomes from the bet are 
 Paddy compares the value of taking versus not taking the bet is:
 
 \begin{align*}
-V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\
-&=0.6\times v(-150+150)+0.4\times v(-150-100) \\
-&=0.6\times (-150+150)^{\frac{1}{2}}-0.4\times 2\times (150+100)^{\frac{1}{2}} \\
+V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&=0.6\times v(-150+150)+0.4\times v(-150-100) \\[6pt]
+&=0.6\times (-150+150)^{\frac{1}{2}}-0.4\times 2\times (150+100)^{\frac{1}{2}} \\[6pt]
 &=`r round(0.6*0^0.5-0.4*2*250^0.5, 3)` \\
 \\
-V(\text{L})&=v(L) \\
-&=-2\times (150)^{\frac{1}{2}} \\
+V(\text{L})&=v(L) \\[6pt]
+&=-2\times (150)^{\frac{1}{2}} \\[6pt]
 &=`r round(-2*150^0.5, 3)`
 \end{align*}
 
@@ -167,7 +168,7 @@ However, under prospect theory people also overweight small probabilities. This 
 
 The following numerical example is an illustration.
 
-An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 ($p=0.0001) chance of burning down. An insurer is willing to offer full coverage for \$1100. (Note: \$1000 is the actuarially fair price, the additional \$100 might represent profit or administrative costs.)
+An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 ($p=0.0001$) chance of burning down. An insurer is willing to offer full coverage for \$1100. (Note: \$1000 is the actuarially fair price, the additional \$100 might represent profit or administrative costs.)
 
 ### Expected value
 
@@ -175,19 +176,19 @@ The first question we will ask is whether an expected value maximiser or risk-ne
 
 A risk-neutral agent will choose the option with the highest expected value.
 
-First, we calculate the expected value of purchasing the insurance.
+First, we calculate the expected value of purchasing insurance policy $I$. $R$ is the premium paid.
 
 \begin{align*}
-E[\text{purchase}]&=-\text{premium} \\
+E[I]&=-R \\
 &=-\$1,100
 \end{align*}
 
 The expected value of purchasing insurance is the guaranteed loss of the premium.
 
-Then we calculate the expected value of not purchasing the insurance.
+Then we calculate the expected value of not purchasing the insurance. $H$ is the value of the house.
 
 \begin{align*}
-E[\text{don't}]&=p\times -value_{\text{house}} \\
+E[\neg I]&=p\times -H \\
 &=-0.001\times 1000000 \\
 &=-\$1000
 \end{align*}
@@ -198,25 +199,91 @@ The expected value of purchasing insurance is \$100 less than the expected value
 
 Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function ($U(x)=ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000.
 
-First, we calculate the expected utility of purchasing the insurance, which is simply the utility of the wealth after the premium is paid.
+First, we calculate the expected utility of purchasing insurance policy $I$, which is simply the utility of the wealth after the premium is paid.
 
 \begin{align*}
-E[U(\text{purchase})]&=ln(W-premium) \\
-&=ln(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
+E[U(I)]&=\text{ln}(W-R) \\
+&=\text{ln}(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
 &=`r round(log(1000000+10000-1100), 4)`
 \end{align*}
 
 Then we calculate the expected utility of not purchasing the insurance.
 
 \begin{align*}
-E[U(\text{don't})]&=0.999\times ln(W)+0.001\times ln(W-value_{\text{house}}) \\
-&=0.999\times ln(1,010,000)+0.001\times ln(10,000) \\
+E[U(\neg I)]&=0.999\times \text{ln}(W)+0.001\times \text{ln}(W-H) \\
+&=0.999\times \text{ln}(1,010,000)+0.001\times \text{ln}(10,000) \\
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 
 The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
 
-![](img/expected-utility.jpg)
+The following diagram illustrates. The agent's utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked - wealth after losing the house when uninsured $(W-H)$, wealth after paying the insurance premium $(W-R)$, and wealth if uninsured but the house does not burn down $(W)$.
+
+The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The precise point is $p$ along this line from $U(W)$ (or $1-p$ along the line from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $E[X]$.
+
+The utility of purchasing insurance ($U(W-R)$) is greater than the expected utility of not purchasing insurance $(E[U(X)])$. The agent will purchase insurance.
+
+```{r}
+
+library(ggplot2)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,100,0.1),
+  y=NA
+  )
+df$y <- u(df$x)
+
+ggplot(mapping = aes(x, y)) +
+    geom_line(data = df) +
+    geom_vline(xintercept = 0, linewidth=0.25)+ 
+    geom_hline(yintercept = 0, linewidth=0.25)+
+    labs(x = "x", y = "U(x)")+
+
+    # Set the theme
+    theme_minimal()+
+
+    #remove numbers on each axis
+    theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+    #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+    coord_cartesian(xlim = c(-8, 100), ylim = c(0, 5))+
+
+    #Add labels W, U(W) and line to curve indicating each
+    annotate("text", x = 90, y = 0, label = "W", size = 4, hjust = 0.4, vjust = 1.5)+
+    annotate("segment", x = 90, y = 0, xend = 90, yend = u(90), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(90), xend = 90, yend = u(90), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(90), label = "U(W)", size = 4, hjust = 1.1, vjust = 0.4)+
+
+    #Add labels W-R, U(W_R) and line to curve indicating each
+    annotate("text", x = 70, y = 0, label = "W-R", size = 4, hjust = 0.5, vjust = 1.5)+
+    annotate("segment", x = 70, y = 0, xend = 70, yend = u(70), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(70), xend = 70, yend = u(70), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(70), label = "U(W-R)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+    #Add expected utility line
+    annotate("segment", x = 90, xend = 3, y = u(90), yend = u(3), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+    #Add labels W-H, U(W_H) and line to curve indicating each
+    annotate("text", x = 3, y = 0, label = "W-H", size = 4, hjust = 0.4, vjust = 1.5)+
+    annotate("segment", x = 3, y = 0, xend = 3, yend = u(3), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(3), xend = 3, yend = u(3), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(3), label = "U(W-H)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+    #Add labels E[not I], E[U(X)] and curve indicating each
+    annotate("text", x = 77, y = 0, label = "E[X]", size = 4, hjust = 0.4, vjust = 1.5)+
+    annotate("segment", x = 77, y = 0, xend = 77, yend = u(3)+((u(90)-u(3))/(90-3))*74, linewidth = 0.5, colour = "black", linetype="dashed")+
+    annotate("segment", x = 0, y = u(3)+((u(90)-u(3))/(90-3))*74, xend = 77, yend = u(3)+((u(90)-u(3))/(90-3))*74, linewidth = 0.5, colour = "black", linetype="dashed")+
+    annotate("text", x = 0, y = u(3)+((u(90)-u(3))/(90-3))*74, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)
+
+
+```
 
 ### The reflection effect
 

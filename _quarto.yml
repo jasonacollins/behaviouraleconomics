@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "9 March 2023"
+  date: "10 March 2023"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -120,6 +120,8 @@ format:
     documentclass: report
     echo: false
     toc-depth: 1
+    fig-width: 6
+    fig-height: 4
 
 filters:
   - lightbox

@@ -434,7 +434,7 @@ ln(W)&=0.6ln(W+100)+0.4ln(W-100)
 
 There isn't a simple closed form solution to this equation, but we know from questions b) and c) that $W$ is somewhere between \$200 and \$1000.
 
-If we wanted to calculate exact solution, you could use tool such as Mathematica or Matlab to solve, write a short code to solve in R or even iterate toward a solution using Excel. Below is example code in R.
+If we wanted to calculate exact solution, you could use tool such as Mathematica or Matlab to solve, write a short code to solve in R or even iterate toward a solution using Excel.
 ```{r}
 equation <- function(W){
   log(W) - 0.6 * log(W + 100) - 0.4 * log(W - 100)
