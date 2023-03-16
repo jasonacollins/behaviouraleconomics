@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -607,19 +607,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\delta=\frac{1}{1+r}</span></p>
 <p>A larger discount factor implies less discounting. A larger discount rate implies more discounting.</p>
 <p>Under the standard model of exponential discounting, an agent with a choice between alternative streams of payoffs will seek to maximize the discounted utility of the future path of consumption.</p>
-<p>The following equation is an example of exponential discounting, with a stream of costs or benefits <span class="math inline">x_0</span> through to <span class="math inline">x_T</span> incurred at periods 0 through to <span class="math inline">T</span>.</p>
+<p>The following equation is an example of exponential discounting, with a stream of costs or benefits <span class="math inline">x_0</span> through to <span class="math inline">x_T</span> incurred at periods 0 through to <span class="math inline">T</span>. <span class="math inline">U_0</span> is utility of the stream of payoffs at time <span class="math inline">t=0</span>. <span class="math inline">x_t</span> is the payoff in period <span class="math inline">t</span>.</p>
 <p><span class="math display">\begin{align*}
 U_0&amp;=u(x_0)+\delta u(x_1)+\delta^2u(x_2)+\delta^3u(x_3)+...+\delta^Tu(x_T) \\[6pt]
 &amp;=\sum_{t=0}^{t=T}\delta^tu(x_t) \\[12pt]
 0&amp;\leq \delta\leq1
 \end{align*}</span></p>
-<p><span class="math inline">U_0</span> is utility of the stream of payoffs at time <span class="math inline">t=0</span>. <span class="math inline">x_t</span> is the payoff in period <span class="math inline">t</span>.</p>
 <p>Each period of delay results in a discount of the future cost or benefit by a factor of <span class="math inline">\delta</span>. One period of delay results in a discount of <span class="math inline">\delta</span>. Two periods of delay results in a discount of <span class="math inline">\delta^2</span>. Three periods of delay results in a discount of <span class="math inline">\delta^3</span> and so on.</p>
 <p>The degree of discounting in this equation evolves each period as 1, <span class="math inline">\delta</span>, <span class="math inline">\delta^2</span>, <span class="math inline">\delta^3</span>, <span class="math inline">\delta^4</span> and so on. This results in a smooth decline in present value of a future payoff over time.</p>
 <section id="visualising-exponential-discounting" class="level2" data-number="22.1">
 <h2 data-number="22.1" class="anchored" data-anchor-id="visualising-exponential-discounting"><span class="header-section-number">22.1</span> Visualising exponential discounting</h2>
-<p>The following figures illustrate the effect of exponential discounting.</p>
-<p><a href="#fig-exponential">Figure&nbsp;<span>22.1</span></a> plots the size of the discount as a function of <span class="math inline">t</span> for an exponential discounter with <span class="math inline">\delta=0.9</span> and <span class="math inline">\delta=0.75</span>.</p>
+<p><a href="#fig-exponential">Figure&nbsp;<span>22.1</span></a> illustrates the effect of exponential discounting. The figure plots the size of the discount as a function of <span class="math inline">t</span> for an exponential discounter with <span class="math inline">\delta=0.9</span> and <span class="math inline">\delta=0.75</span>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -881,7 +879,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":true,"selector":".lightbox"});</script>
 
 
 

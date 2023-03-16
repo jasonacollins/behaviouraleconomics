@@ -12,7 +12,7 @@ A larger discount factor implies less discounting. A larger discount rate implie
 
 Under the standard model of exponential discounting, an agent with a choice between alternative streams of payoffs will seek to maximize the discounted utility of the future path of consumption.
 
-The following equation is an example of exponential discounting, with a stream of costs or benefits $x_0$ through to $x_T$ incurred at periods 0 through to $T$.
+The following equation is an example of exponential discounting, with a stream of costs or benefits $x_0$ through to $x_T$ incurred at periods 0 through to $T$. $U_0$ is utility of the stream of payoffs at time $t=0$. $x_t$ is the payoff in period $t$.
 
 \begin{align*}
 U_0&=u(x_0)+\delta u(x_1)+\delta^2u(x_2)+\delta^3u(x_3)+...+\delta^Tu(x_T) \\[6pt]
@@ -20,17 +20,13 @@ U_0&=u(x_0)+\delta u(x_1)+\delta^2u(x_2)+\delta^3u(x_3)+...+\delta^Tu(x_T) \\[6p
 0&\leq \delta\leq1
 \end{align*}
 
-$U_0$ is utility of the stream of payoffs at time $t=0$. $x_t$ is the payoff in period $t$.
-
 Each period of delay results in a discount of the future cost or benefit by a factor of $\delta$. One period of delay results in a discount of $\delta$. Two periods of delay results in a discount of $\delta^2$. Three periods of delay results in a discount of $\delta^3$ and so on.
 
 The degree of discounting in this equation evolves each period as 1, $\delta$, $\delta^2$, $\delta^3$, $\delta^4$ and so on. This results in a smooth decline in present value of a future payoff over time.
 
 ## Visualising exponential discounting
 
-The following figures illustrate the effect of exponential discounting.
-
-@fig-exponential plots the size of the discount as a function of $t$ for an exponential discounter with $\delta=0.9$ and $\delta=0.75$.
+@fig-exponential illustrates the effect of exponential discounting. The figure plots the size of the discount as a function of $t$ for an exponential discounter with $\delta=0.9$ and $\delta=0.75$.
 
 ```{r}
 #| label: fig-exponential

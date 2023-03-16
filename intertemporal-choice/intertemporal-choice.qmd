@@ -22,7 +22,7 @@ $t_i$ is the period in which the payoff is received. $x_i$ is the payoff receive
 
 Consider these two simple streams of payoffs.
 
-For both streams, period $t_1=0$, which is now. Period $t_2=1$ is one year from today.
+For both streams, period $t_1=0$, which is now. Period $t_2=1$, which is one year from today.
 
 The first stream is \$100 now and nothing in a year.
 $$
