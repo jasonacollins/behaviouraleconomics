@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -83,10 +146,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 22&nbsp; Exponential discounting">
-<meta property="og:description" content="Exponential discounting occurs where future costs and benefits are discounted at a consistent rate through time. The following equation is an example of exponential discounting.">
+<meta property="og:description" content="Exponential discounting occurs when an agent discounts future costs and benefits at a consistent rate through time.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 22&nbsp; Exponential discounting">
-<meta name="twitter:description" content="Exponential discounting occurs where future costs and benefits are discounted at a consistent rate through time. The following equation is an example of exponential discounting.">
+<meta name="twitter:description" content="Exponential discounting occurs when an agent discounts future costs and benefits at a consistent rate through time.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -507,14 +570,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exponential-discounted-utility-model-assumptions" id="toc-exponential-discounted-utility-model-assumptions" class="nav-link active" data-scroll-target="#exponential-discounted-utility-model-assumptions"><span class="toc-section-number">22.1</span>  Exponential discounted utility model assumptions</a>
+  <li><a href="#visualising-exponential-discounting" id="toc-visualising-exponential-discounting" class="nav-link active" data-scroll-target="#visualising-exponential-discounting"><span class="toc-section-number">22.1</span>  Visualising exponential discounting</a></li>
+  <li><a href="#exponential-discounted-utility-model-assumptions" id="toc-exponential-discounted-utility-model-assumptions" class="nav-link" data-scroll-target="#exponential-discounted-utility-model-assumptions"><span class="toc-section-number">22.2</span>  Exponential discounted utility model assumptions</a>
   <ul class="collapse">
-  <li><a href="#time-consistency" id="toc-time-consistency" class="nav-link" data-scroll-target="#time-consistency"><span class="toc-section-number">22.1.1</span>  Time-consistency</a></li>
-  <li><a href="#consumption-independence" id="toc-consumption-independence" class="nav-link" data-scroll-target="#consumption-independence"><span class="toc-section-number">22.1.2</span>  Consumption independence</a></li>
-  <li><a href="#stationary-preferences" id="toc-stationary-preferences" class="nav-link" data-scroll-target="#stationary-preferences"><span class="toc-section-number">22.1.3</span>  Stationary preferences</a></li>
-  <li><a href="#utility-independence" id="toc-utility-independence" class="nav-link" data-scroll-target="#utility-independence"><span class="toc-section-number">22.1.4</span>  Utility independence</a></li>
+  <li><a href="#time-consistency" id="toc-time-consistency" class="nav-link" data-scroll-target="#time-consistency"><span class="toc-section-number">22.2.1</span>  Time-consistency</a></li>
+  <li><a href="#consumption-independence" id="toc-consumption-independence" class="nav-link" data-scroll-target="#consumption-independence"><span class="toc-section-number">22.2.2</span>  Consumption independence</a></li>
+  <li><a href="#stationary-preferences" id="toc-stationary-preferences" class="nav-link" data-scroll-target="#stationary-preferences"><span class="toc-section-number">22.2.3</span>  Stationary preferences</a></li>
+  <li><a href="#utility-independence" id="toc-utility-independence" class="nav-link" data-scroll-target="#utility-independence"><span class="toc-section-number">22.2.4</span>  Utility independence</a></li>
   </ul></li>
-  <li><a href="#visualising-exponential-discounting" id="toc-visualising-exponential-discounting" class="nav-link" data-scroll-target="#visualising-exponential-discounting"><span class="toc-section-number">22.2</span>  Visualising exponential discounting</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -538,55 +601,106 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Exponential discounting occurs where future costs and benefits are discounted at a consistent rate through time. The following equation is an example of exponential discounting.</p>
-<p><span class="math display">\begin{align*}
-U_0&amp;=u(x_0)+\delta u(x_1)+\delta^2u(x_2)+\delta^3u(x_3)+...+\delta^Tu(x_T) \\[6pt]
-&amp;=\sum_{t=0}^{t=T}\delta^tu(x_t)
-\end{align*}</span></p>
-<p><span class="math display">0\leq \delta\leq1</span></p>
-<p>where <span class="math inline">U_0</span> is utility at time <span class="math inline">t=0</span>, and <span class="math inline">x_t</span> is the payoff in period <span class="math inline">t</span>. <span class="math inline">\delta</span> is a discount factor reflecting how much the decision maker weights the future relative to today.</p>
-<p>The degree of discounting in this equation evolves over time as 1, <span class="math inline">\delta</span>, <span class="math inline">\delta^2</span>, <span class="math inline">\delta^3</span>, <span class="math inline">\delta^4</span> and so on. This results in a smooth decline in present value over time.</p>
-<p><span class="math inline">\delta</span> is the discount factor. The higher the discount factor, the less the agent discounts future costs and benefits. You will often see discussion of the ”discount rate”, <span class="math inline">r</span>. In discrete time, the relationship between <span class="math inline">\delta</span> and <span class="math inline">r</span> is as follows:</p>
+<p>Exponential discounting occurs when an agent discounts future costs and benefits at a consistent rate through time.</p>
+<p>Under exponential discounting, each additional period of delay results in a discount of a future cost or benefit by a factor of <span class="math inline">\delta</span>. The discount factor <span class="math inline">\delta</span> is a number between 0 and 1. The higher the discount factor, the less the agent discounts future costs and benefits.</p>
+<p>You will often see discussion of the ”discount rate”, <span class="math inline">r</span>. In discrete time, the relationship between <span class="math inline">\delta</span> and <span class="math inline">r</span> is as follows:</p>
 <p><span class="math display">\delta=\frac{1}{1+r}</span></p>
 <p>A larger discount factor implies less discounting. A larger discount rate implies more discounting.</p>
-<section id="exponential-discounted-utility-model-assumptions" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="exponential-discounted-utility-model-assumptions"><span class="header-section-number">22.1</span> Exponential discounted utility model assumptions</h2>
-<p>Under the standard model of exponential discounting, at 𝑡=0 the agent seeks to maximize the utility of the future path of consumption. It is underpinned by the following assumptions:</p>
-<section id="time-consistency" class="level3" data-number="22.1.1">
-<h3 data-number="22.1.1" class="anchored" data-anchor-id="time-consistency"><span class="header-section-number">22.1.1</span> Time-consistency</h3>
-<p>Once the agent starts moving along the consumption path, they are time-consistent with their own initial plan. For example, consider an agent facing the following two choices:</p>
+<p>Under the standard model of exponential discounting, an agent with a choice between alternative streams of payoffs will seek to maximize the discounted utility of the future path of consumption.</p>
+<p>The following equation is an example of exponential discounting, with a stream of costs or benefits <span class="math inline">x_0</span> through to <span class="math inline">x_T</span> incurred at periods 0 through to <span class="math inline">T</span>.</p>
+<p><span class="math display">\begin{align*}
+U_0&amp;=u(x_0)+\delta u(x_1)+\delta^2u(x_2)+\delta^3u(x_3)+...+\delta^Tu(x_T) \\[6pt]
+&amp;=\sum_{t=0}^{t=T}\delta^tu(x_t) \\[12pt]
+0&amp;\leq \delta\leq1
+\end{align*}</span></p>
+<p><span class="math inline">U_0</span> is utility of the stream of payoffs at time <span class="math inline">t=0</span>. <span class="math inline">x_t</span> is the payoff in period <span class="math inline">t</span>.</p>
+<p>Each period of delay results in a discount of the future cost or benefit by a factor of <span class="math inline">\delta</span>. One period of delay results in a discount of <span class="math inline">\delta</span>. Two periods of delay results in a discount of <span class="math inline">\delta^2</span>. Three periods of delay results in a discount of <span class="math inline">\delta^3</span> and so on.</p>
+<p>The degree of discounting in this equation evolves each period as 1, <span class="math inline">\delta</span>, <span class="math inline">\delta^2</span>, <span class="math inline">\delta^3</span>, <span class="math inline">\delta^4</span> and so on. This results in a smooth decline in present value of a future payoff over time.</p>
+<section id="visualising-exponential-discounting" class="level2" data-number="22.1">
+<h2 data-number="22.1" class="anchored" data-anchor-id="visualising-exponential-discounting"><span class="header-section-number">22.1</span> Visualising exponential discounting</h2>
+<p>The following figures illustrate the effect of exponential discounting.</p>
+<p><a href="#fig-exponential">Figure&nbsp;<span>22.1</span></a> plots the size of the discount as a function of <span class="math inline">t</span> for an exponential discounter with <span class="math inline">\delta=0.9</span> and <span class="math inline">\delta=0.75</span>.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot of exponential discounting with two curves, one with delta=0.9 and one with delta=0.75</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">##Load the ggplot2 package</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Define the discount factor</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>delta <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.75</span>, <span class="fl">0.9</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Define the number of periods</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Define the discount function</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>discount <span class="ot">&lt;-</span> <span class="cf">function</span>(delta, t) {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  delta<span class="sc">^</span>t</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#data frame with three rows: t, discount(0.75, t) and discount(0.9, t)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>discounted <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(t, <span class="fu">discount</span>(delta[<span class="dv">1</span>], t), <span class="fu">discount</span>(delta[<span class="dv">2</span>], t))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(discounted) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"t"</span>,<span class="st">"0.75"</span>,<span class="st">"0.9"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>discounted <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(discounted, <span class="at">cols =</span> <span class="sc">-</span>t, <span class="at">names_to =</span> <span class="st">"delta"</span>, <span class="at">values_to =</span> <span class="st">"discount"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot the discount function with curves for each of the two values of delta using ggplot2</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(discounted, <span class="fu">aes</span>(<span class="at">x=</span>t, <span class="at">y=</span>discount, <span class="at">group=</span>delta, <span class="at">linetype=</span>delta)) <span class="sc">+</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"t"</span>, <span class="at">y=</span><span class="st">"Discount"</span>) <span class="sc">+</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.1</span>)) <span class="sc">+</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-exponential" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Figure&nbsp;22.1: Exponential discount curves</figcaption><p></p>
+<p><a href="exponential-discounting_files/figure-html/fig-exponential-1.png" class="lightbox" title="Exponential discount curves" data-gallery="quarto-lightbox-gallery-1"><img src="exponential-discounting_files/figure-html/fig-exponential-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exponential-discounted-utility-model-assumptions" class="level2" data-number="22.2">
+<h2 data-number="22.2" class="anchored" data-anchor-id="exponential-discounted-utility-model-assumptions"><span class="header-section-number">22.2</span> Exponential discounted utility model assumptions</h2>
+<p>The standard model of exponential discounting is underpinned by several assumptions.</p>
+<section id="time-consistency" class="level3" data-number="22.2.1">
+<h3 data-number="22.2.1" class="anchored" data-anchor-id="time-consistency"><span class="header-section-number">22.2.1</span> Time-consistency</h3>
+<p>The first is time consistency.</p>
+<p>Once the agent starts moving along the consumption path, they are time-consistent with their initial plan. For example, consider an agent facing the following two choices:</p>
 <p>Would you like $100 today or $110 next week?</p>
 <p>Would you like $100 next week or $110 in two weeks?</p>
 <p>An exponential discounter will choose $100 in both choices or $110 in both choices. The reason is that after one week the second choice effectively becomes the same as the first choice. Time consistency implies that they will continue to want to make the same choice regardless of when they are making it.</p>
 </section>
-<section id="consumption-independence" class="level3" data-number="22.1.2">
-<h3 data-number="22.1.2" class="anchored" data-anchor-id="consumption-independence"><span class="header-section-number">22.1.2</span> Consumption independence</h3>
+<section id="consumption-independence" class="level3" data-number="22.2.2">
+<h3 data-number="22.2.2" class="anchored" data-anchor-id="consumption-independence"><span class="header-section-number">22.2.2</span> Consumption independence</h3>
+<p>A second assumption is consumption independence.</p>
 <p>Consumption independence means that utility in period <span class="math inline">t+k</span> is independent of consumption in any other period. An outcome’s utility is unaffected by outcomes in prior or future periods.</p>
-<p>Imagine a world with the consumption good <span class="math inline">x</span> = a behavioural economics subject.</p>
-<p>An exponential discounted utility maximiser wants to consume Lecture 1 at <span class="math inline">t+3</span> and Lecture 2 at <span class="math inline">t+4</span>. Under consumption independence, if the agent does not attend Lecture 1, they still expect to benefit from Lecture 2 at <span class="math inline">t+4</span> consistent with the plan they decided at t.</p>
-<p>This assumption allows us to write <span class="math inline">x=x_1+x_2+x_3+...+x_n</span>. That is, good <span class="math inline">x</span> can be split and allocated across periods.</p>
+<p>Imagine a world where an exponential discounter intends to consume a behavioural economics subject.</p>
+<p>Suppose that exponential discounter wants to consume lecture 1 at <span class="math inline">t+3</span> and lecture 2 at <span class="math inline">t+4</span>. Under consumption independence, if the agent does not attend lecture 1, they still expect to benefit from lecture 2 at <span class="math inline">t+4</span> consistent with the plan they decided at <span class="math inline">t</span>.</p>
+<p>This assumption allows us to write <span class="math inline">x=x_1+x_2+x_3+...+x_n</span>. That is, good <span class="math inline">x</span> can be split, allocated and moved across periods without changing the value of that good beyond the effect of the discount.</p>
 </section>
-<section id="stationary-preferences" class="level3" data-number="22.1.3">
-<h3 data-number="22.1.3" class="anchored" data-anchor-id="stationary-preferences"><span class="header-section-number">22.1.3</span> Stationary preferences</h3>
-<p><span class="math inline">U_t=U_{t=K}</span>. The utility function is stationary across periods. The functional form of <span class="math inline">U_t</span> is the same as the functional form of <span class="math inline">U_{t+k}</span>.</p>
+<section id="stationary-preferences" class="level3" data-number="22.2.3">
+<h3 data-number="22.2.3" class="anchored" data-anchor-id="stationary-preferences"><span class="header-section-number">22.2.3</span> Stationary preferences</h3>
+<p>A third assumption is stationary preferences.</p>
+<p>That is, <span class="math inline">U_t=U_{t=K}</span>.</p>
+<p>The utility function is stationary across periods. The functional form of <span class="math inline">U_t</span> is the same as the functional form of <span class="math inline">U_{t+k}</span>.</p>
+<p>That means that if someone likes ice cream today, they will get the same utility from ice cream at a future time of consumption. Any preference for ice cream today versus tomorrow comes from the discounting of future consumption, not from changes in taste.</p>
+<p>Similarly, with stationary preferences, you would not learn to appreciate the taste of wine over time.</p>
 </section>
-<section id="utility-independence" class="level3" data-number="22.1.4">
-<h3 data-number="22.1.4" class="anchored" data-anchor-id="utility-independence"><span class="header-section-number">22.1.4</span> Utility independence</h3>
-<p>Under utility independence, all that matters is maximizing the sum of discounted utilities. Decision makers have no preference for the distribution of utilities.</p>
-</section>
-</section>
-<section id="visualising-exponential-discounting" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="visualising-exponential-discounting"><span class="header-section-number">22.2</span> Visualising exponential discounting</h2>
-<p>The following figures illustrate the effect of exponential discounting.</p>
-<p><a href="#fig-exponential">Figure&nbsp;<span>22.1</span></a> plots the size of the discount as a function of <span class="math inline">t</span> for an exponential discounter with <span class="math inline">\delta=0.9</span> and <span class="math inline">\delta=0.75</span>.</p>
-<div id="fig-exponential" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p></p><figcaption class="figure-caption">Figure&nbsp;22.1: Exponential discount curves</figcaption><p></p>
-<p><a href="img/exponential-discounting.jpg" class="lightbox" title="Exponential discount curves" data-gallery="quarto-lightbox-gallery-1"><img src="img/exponential-discounting.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<section id="utility-independence" class="level3" data-number="22.2.4">
+<h3 data-number="22.2.4" class="anchored" data-anchor-id="utility-independence"><span class="header-section-number">22.2.4</span> Utility independence</h3>
+<p>A fourth assumption is utility independence.</p>
+<p>Under utility independence, all that matters is maximizing the sum of discounted utilities. Decision makers have no preference for the distribution of utilities. They don’t seek to delay gratification or get unpleasant things out of the way.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -767,7 +881,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true,"openEffect":"zoom"});</script>
 
 
 

@@ -1,107 +1,150 @@
 # Exponential discounting examples
 
+In this part I will work through several numerical examples of decisions by an exponential discounter.
+
 ## Example 1
 
-Suppose we have an exponential discounter with $\delta=0.95$ and utility each period of $u(x_n)=x_n$.
+Suppose we have an exponential discounter with discount factor $\delta=0.95$ and utility each period of $u(x_n)=x_n$. They are offered two choices.
 
-Choice 1: Would this agent prefer \$100 today ($t=0$) or \$110 next week ($t=1$)? 
+Choice 1: Would this agent prefer \$100 today ($t=0$) or \$110 next week ($t=1$)?
+
+To determine this, we calculate the discounted utility of each option. The agent will prefer the option with the highest discounted utility.
+
+The discounted utility of the \$100 today is:
 
 \begin{align*}
 U_0(0,\$100)&=u(\$100) \\
-&=100 \\
-\\
-U_0(1,\$110)&=\delta u(\$110) \\
-&=0.95*110 \\
-&=104.50
+&=100
 \end{align*}
 
-The exponential discounter will prefer to receive \$110 next week.
+The discounted utility of the \$110 next week is:
+
+\begin{align*}
+U_0(1,\$110)&=\delta u(\$110) \\
+&=0.95\times 110 \\
+&=`r 0.95*110`
+\end{align*}
+
+The exponential discounter will prefer to receive \$110 next week as it leads to higher discounted utility.
 
 Choice 2: Would this agent prefer \$100 next week ($t=1$) or \$110 in two weeks ($t=2$)? 
 
+The discounted utility of the \$100 next week is:
+
 \begin{align*}
 U_1(1,\$100)&=\delta u(\$110) \\
-&=0.95*100 \\
-&=95 \\
-\\
+&=0.95\times 100 \\
+&=`r 0.95*100`
+\end{align*}
+
+The discounted utility of the \$110 in two weeks is:
+
+\begin{align*}
 U_1(2,\$110)&=\delta^2 u(\$110) \\
-&=0.95^2*110 \\
+&=0.95^2\times 110 \\
 &=`r 0.95^2*110`
 \end{align*}
 
-The exponential discounter will prefer to receive \$110 in two weeks. The set of decisions across Choice 1 and Choice 2 are time consistent. If the agent selected \$110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively Choice 1), they would not change.
+The exponential discounter will prefer to receive \$110 in two weeks.
+
+The set of decisions across Choice 1 and Choice 2 are time consistent. If the agent selected \$110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively Choice 1), they would not change their decision.
 
 @fig-example_1 visualises the effect of discounting in Choice 2.
 
-The two bars represent the options: \$100 at $t=1$ and \$110 at $t=2$. The line from each represents the discounted value of that option at each time. For example, at $t=1$ the discounted utility of the \$100 received at $t=1$ is \$100 and of the \$110 received at $t=2$ is \$104.50. We can read those values from the line. For any time $t$ we can determine which option would be preferred by seeing which line is higher.
+The two bars represent the options: \$100 at $t=1$ and \$110 at $t=2$. The line from each represents the discounted value of that option at each time. For example, at $t=1$ the discounted utility of the \$100 received at $t=1$ is \$100 and the discounted utility of the \$110 received at $t=2$ is \$104.50. We can read those values from the line. For any time $t$ we can determine which option would be preferred by seeing which line is higher.
 
 ![Choice 2](img/example_1.jpg){width=60% #fig-example_1}
 
 You will note that the two lines do not cross. For an exponential discounter, if one line is higher at any particular time $t$, it is higher at all times.
 
-@fig-example_1a visualises Choice 1.
+@fig-example_1a visualises Choice 1. The discounted value of the \$100 received immediately is less than the discounted utility of \$110 in one week.
 
 ![Choice 1](img/example_1a.jpg){width=60% #fig-example_1a}
 
 ## Example 2
 
-Suppose we have an exponential discounter with $\delta=0.95$ per week and utility each period of $u(x_n)=x_n$
+Suppose we have an exponential discounter with discount factor $\delta=0.95$ per week and utility each period of $u(x_n)=x_n$
 
 They are offered \$100 today. What sum would they need to be offered in one year (52 weeks) to prefer that later payment to the \$100 today?
 
+The discounted utility of the \$100 today is:
+
 \begin{align*}
 U_0(0,\$100)&=u(\$100) \\
-&=100 \\
-\\
-U_0(52,\$x)&=\delta^{52} u(\$x) \\
-&=0.95^{52}*x
+&=100
 \end{align*}
 
-They will prefer \$$x$ in 52 weeks if $U(\$x \text{ at } t=52)$ is greater than 100.
+The discounted utility of the sum $y$ received in 52 weeks is:
 
 \begin{align*}
-0.95^{52}*x&>100 \\[6pt]
-x&>\frac{100}{0.95^{52}} \\[6pt]
-x&>\$`r round(100/(0.95^52), 2)`
+U_0(52,\$y)&=\delta^{52} u(\$x) \\
+&=0.95^{52}\times y
+\end{align*}
+
+They will prefer \$$y$ in 52 weeks if $U(52,\$y)$ is greater than 100.
+
+\begin{align*}
+U_0(52,\$y)&>100 \\[6pt]
+0.95^{52}\times y&>100 \\[6pt]
+y&>\frac{100}{0.95^{52}} \\[6pt]
+y&>\$`r round(100/(0.95^52), 2)`
 \end{align*}
 
 The agent would be willing to wait a year for payment if they were paid more than $1440.03.
 
-@fig-example_2 visualises this problem.
+@fig-example_2 visualises this problem. The bar at $t=52$ represents the \$1440.03 that the agent would need to be paid to prefer that payment to \$100 today. The line extended from that bar back to $t=0$ indicates the discounted value of that payment at any time $t$. At $t=0$ the discounted value of the \$1440.03 is \$100.
 
 ![Example 2](img/example_2.jpg){width=60% #fig-example_2}
 
 ## Example 3
 
-Suppose we have an exponential discounter with $\delta=0.75$ and utility each period of $u(x_n)=x_n$.
+Suppose we have an exponential discounter with discount factor $\delta=0.75$ and utility each period of $u(x_n)=x_n$.
 
 Would this agent prefer \$10 in five days ($t=5$) or \$20 in 10 days ($t=10$)? 
+
+The discounted utility of the \$10 in five days is:
 
 \begin{align*}
 U_0(5,\$10)&=\delta^5u(\$10) \\
 &=0.75^5\times 10 \\
-&=`r round(0.75^5*10, 3)` \\
-\\
-U_0(10,\$20)&=\delta^{10} u(\$20) \\
-&=0.75^{10}\times 20 \\
-&=`r round(0.75^10*20, 3)`
+&=`r round(0.75^5*10, 2)`
 \end{align*}
 
-This exponential discounter will prefer to receive \$10 in five days.
+The discounted utility of the \$20 in 10 days is:
+
+\begin{align*}
+U_0(10,\$20)&=\delta^{10} u(\$20) \\
+&=0.75^{10}\times 20 \\
+&=`r round(0.75^10*20, 2)`
+\end{align*}
+
+Discounted utility is higher for the \$10 in five days. The agent will prefer to receive \$10 in five days.
 
 What if their discount rate was $\delta=0.95$?
+
+The discounted utility of the \$10 in five days is:
 
 \begin{align*}
 U_0(5,\$10)&=\delta^5u(\$10) \\
 &=0.95^5\times 10 \\
-&=`r round(0.95^5*10, 3)` \\
-\\
-U_0(10,\$20)&=\delta^{10} u(\$20) \\
-&=0.95^{10}\times 20 \\
-&=`r round(0.95^10*20, 3)`
+&=`r round(0.95^5*10, 2)` \\
 \end{align*}
 
-This exponential discounter will prefer to receive \$20 in 10 days.
+The discounted utility of the \$20 in 10 days is:
+
+\begin{align*}
+U_0(10,\$20)&=\delta^{10} u(\$20) \\
+&=0.95^{10}\times 20 \\
+&=`r round(0.95^10*20, 2)`
+\end{align*}
+
+Discounted utility is higher for the \$20 in 10 days. This agent will prefer to receive \$20 in 10 days.
+
+@fig-example3 visualises the choices and the agents' discounting of the payoffs.
+
+In both charts, vertical bars represent the \$10 in five days and \$20 in 10 days. The lines projecting back to $t=0$ represent the discounted value of those payoffs at each time.
+
+When $\delta=0.75$, the heavy discount to the more distant payoff means that it has a lower discounted utility than the smaller, sooner payment of \$10. When $\delta=0.95$, the discount is less severe and the \$20 in 10 days has a higher discounted utility than the \$10 in five days.
 
 ::: {#fig-example3 layout-ncol=2}
 

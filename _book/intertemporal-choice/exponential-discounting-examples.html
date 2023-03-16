@@ -83,10 +83,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 23&nbsp; Exponential discounting examples">
-<meta property="og:description" content="Suppose we have an exponential discounter with \delta=0.95 and utility each period of u(x_n)=x_n.">
+<meta property="og:description" content="In this part I will work through several numerical examples of decisions by an exponential discounter.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 23&nbsp; Exponential discounting examples">
-<meta name="twitter:description" content="Suppose we have an exponential discounter with \delta=0.95 and utility each period of u(x_n)=x_n.">
+<meta name="twitter:description" content="In this part I will work through several numerical examples of decisions by an exponential discounter.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -533,98 +533,120 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>In this part I will work through several numerical examples of decisions by an exponential discounter.</p>
 <section id="example-1" class="level2" data-number="23.1">
 <h2 data-number="23.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">23.1</span> Example 1</h2>
-<p>Suppose we have an exponential discounter with <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>.</p>
+<p>Suppose we have an exponential discounter with discount factor <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>. They are offered two choices.</p>
 <p>Choice 1: Would this agent prefer $100 today (<span class="math inline">t=0</span>) or $110 next week (<span class="math inline">t=1</span>)?</p>
+<p>To determine this, we calculate the discounted utility of each option. The agent will prefer the option with the highest discounted utility.</p>
+<p>The discounted utility of the $100 today is:</p>
 <p><span class="math display">\begin{align*}
 U_0(0,\$100)&amp;=u(\$100) \\
-&amp;=100 \\
-\\
-U_0(1,\$110)&amp;=\delta u(\$110) \\
-&amp;=0.95*110 \\
-&amp;=104.50
+&amp;=100
 \end{align*}</span></p>
-<p>The exponential discounter will prefer to receive $110 next week.</p>
+<p>The discounted utility of the $110 next week is:</p>
+<p><span class="math display">\begin{align*}
+U_0(1,\$110)&amp;=\delta u(\$110) \\
+&amp;=0.95\times 110 \\
+&amp;=104.5
+\end{align*}</span></p>
+<p>The exponential discounter will prefer to receive $110 next week as it leads to higher discounted utility.</p>
 <p>Choice 2: Would this agent prefer $100 next week (<span class="math inline">t=1</span>) or $110 in two weeks (<span class="math inline">t=2</span>)?</p>
+<p>The discounted utility of the $100 next week is:</p>
 <p><span class="math display">\begin{align*}
 U_1(1,\$100)&amp;=\delta u(\$110) \\
-&amp;=0.95*100 \\
-&amp;=95 \\
-\\
+&amp;=0.95\times 100 \\
+&amp;=95
+\end{align*}</span></p>
+<p>The discounted utility of the $110 in two weeks is:</p>
+<p><span class="math display">\begin{align*}
 U_1(2,\$110)&amp;=\delta^2 u(\$110) \\
-&amp;=0.95^2*110 \\
+&amp;=0.95^2\times 110 \\
 &amp;=99.275
 \end{align*}</span></p>
-<p>The exponential discounter will prefer to receive $110 in two weeks. The set of decisions across Choice 1 and Choice 2 are time consistent. If the agent selected $110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively Choice 1), they would not change.</p>
+<p>The exponential discounter will prefer to receive $110 in two weeks.</p>
+<p>The set of decisions across Choice 1 and Choice 2 are time consistent. If the agent selected $110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively Choice 1), they would not change their decision.</p>
 <p><a href="#fig-example_1">Figure&nbsp;<span>23.1</span></a> visualises the effect of discounting in Choice 2.</p>
-<p>The two bars represent the options: $100 at <span class="math inline">t=1</span> and $110 at <span class="math inline">t=2</span>. The line from each represents the discounted value of that option at each time. For example, at <span class="math inline">t=1</span> the discounted utility of the $100 received at <span class="math inline">t=1</span> is $100 and of the $110 received at <span class="math inline">t=2</span> is $104.50. We can read those values from the line. For any time <span class="math inline">t</span> we can determine which option would be preferred by seeing which line is higher.</p>
+<p>The two bars represent the options: $100 at <span class="math inline">t=1</span> and $110 at <span class="math inline">t=2</span>. The line from each represents the discounted value of that option at each time. For example, at <span class="math inline">t=1</span> the discounted utility of the $100 received at <span class="math inline">t=1</span> is $100 and the discounted utility of the $110 received at <span class="math inline">t=2</span> is $104.50. We can read those values from the line. For any time <span class="math inline">t</span> we can determine which option would be preferred by seeing which line is higher.</p>
 <div id="fig-example_1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;23.1: Choice 2</figcaption><p></p>
-<p><a href="img/example_1.jpg" class="lightbox" title="Choice 2" data-gallery="quarto-lightbox-gallery-1"><img src="img/example_1.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="img/example_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Choice 2"><img src="img/example_1.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 <p>You will note that the two lines do not cross. For an exponential discounter, if one line is higher at any particular time <span class="math inline">t</span>, it is higher at all times.</p>
-<p><a href="#fig-example_1a">Figure&nbsp;<span>23.2</span></a> visualises Choice 1.</p>
+<p><a href="#fig-example_1a">Figure&nbsp;<span>23.2</span></a> visualises Choice 1. The discounted value of the $100 received immediately is less than the discounted utility of $110 in one week.</p>
 <div id="fig-example_1a" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;23.2: Choice 1</figcaption><p></p>
-<p><a href="img/example_1a.jpg" class="lightbox" title="Choice 1" data-gallery="quarto-lightbox-gallery-2"><img src="img/example_1a.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="img/example_1a.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Choice 1"><img src="img/example_1a.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 </section>
 <section id="example-2" class="level2" data-number="23.2">
 <h2 data-number="23.2" class="anchored" data-anchor-id="example-2"><span class="header-section-number">23.2</span> Example 2</h2>
-<p>Suppose we have an exponential discounter with <span class="math inline">\delta=0.95</span> per week and utility each period of <span class="math inline">u(x_n)=x_n</span></p>
+<p>Suppose we have an exponential discounter with discount factor <span class="math inline">\delta=0.95</span> per week and utility each period of <span class="math inline">u(x_n)=x_n</span></p>
 <p>They are offered $100 today. What sum would they need to be offered in one year (52 weeks) to prefer that later payment to the $100 today?</p>
+<p>The discounted utility of the $100 today is:</p>
 <p><span class="math display">\begin{align*}
 U_0(0,\$100)&amp;=u(\$100) \\
-&amp;=100 \\
-\\
-U_0(52,\$x)&amp;=\delta^{52} u(\$x) \\
-&amp;=0.95^{52}*x
+&amp;=100
 \end{align*}</span></p>
-<p>They will prefer $<span class="math inline">x</span> in 52 weeks if <span class="math inline">U(\$x \text{ at } t=52)</span> is greater than 100.</p>
+<p>The discounted utility of the sum <span class="math inline">y</span> received in 52 weeks is:</p>
 <p><span class="math display">\begin{align*}
-0.95^{52}*x&amp;&gt;100 \\[6pt]
-x&amp;&gt;\frac{100}{0.95^{52}} \\[6pt]
-x&amp;&gt;\$1440.03
+U_0(52,\$y)&amp;=\delta^{52} u(\$x) \\
+&amp;=0.95^{52}\times y
+\end{align*}</span></p>
+<p>They will prefer $<span class="math inline">y</span> in 52 weeks if <span class="math inline">U(52,\$y)</span> is greater than 100.</p>
+<p><span class="math display">\begin{align*}
+U_0(52,\$y)&amp;&gt;100 \\[6pt]
+0.95^{52}\times y&amp;&gt;100 \\[6pt]
+y&amp;&gt;\frac{100}{0.95^{52}} \\[6pt]
+y&amp;&gt;\$1440.03
 \end{align*}</span></p>
 <p>The agent would be willing to wait a year for payment if they were paid more than $1440.03.</p>
-<p><a href="#fig-example_2">Figure&nbsp;<span>23.3</span></a> visualises this problem.</p>
+<p><a href="#fig-example_2">Figure&nbsp;<span>23.3</span></a> visualises this problem. The bar at <span class="math inline">t=52</span> represents the $1440.03 that the agent would need to be paid to prefer that payment to $100 today. The line extended from that bar back to <span class="math inline">t=0</span> indicates the discounted value of that payment at any time <span class="math inline">t</span>. At <span class="math inline">t=0</span> the discounted value of the $1440.03 is $100.</p>
 <div id="fig-example_2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;23.3: Example 2</figcaption><p></p>
-<p><a href="img/example_2.jpg" class="lightbox" title="Example 2" data-gallery="quarto-lightbox-gallery-3"><img src="img/example_2.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="img/example_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Example 2"><img src="img/example_2.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 </section>
 <section id="example-3" class="level2" data-number="23.3">
 <h2 data-number="23.3" class="anchored" data-anchor-id="example-3"><span class="header-section-number">23.3</span> Example 3</h2>
-<p>Suppose we have an exponential discounter with <span class="math inline">\delta=0.75</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>.</p>
+<p>Suppose we have an exponential discounter with discount factor <span class="math inline">\delta=0.75</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>.</p>
 <p>Would this agent prefer $10 in five days (<span class="math inline">t=5</span>) or $20 in 10 days (<span class="math inline">t=10</span>)?</p>
+<p>The discounted utility of the $10 in five days is:</p>
 <p><span class="math display">\begin{align*}
 U_0(5,\$10)&amp;=\delta^5u(\$10) \\
 &amp;=0.75^5\times 10 \\
-&amp;=2.373 \\
-\\
+&amp;=2.37
+\end{align*}</span></p>
+<p>The discounted utility of the $20 in 10 days is:</p>
+<p><span class="math display">\begin{align*}
 U_0(10,\$20)&amp;=\delta^{10} u(\$20) \\
 &amp;=0.75^{10}\times 20 \\
-&amp;=1.126
+&amp;=1.13
 \end{align*}</span></p>
-<p>This exponential discounter will prefer to receive $10 in five days.</p>
+<p>Discounted utility is higher for the $10 in five days. The agent will prefer to receive $10 in five days.</p>
 <p>What if their discount rate was <span class="math inline">\delta=0.95</span>?</p>
+<p>The discounted utility of the $10 in five days is:</p>
 <p><span class="math display">\begin{align*}
 U_0(5,\$10)&amp;=\delta^5u(\$10) \\
 &amp;=0.95^5\times 10 \\
-&amp;=7.738 \\
-\\
+&amp;=7.74 \\
+\end{align*}</span></p>
+<p>The discounted utility of the $20 in 10 days is:</p>
+<p><span class="math display">\begin{align*}
 U_0(10,\$20)&amp;=\delta^{10} u(\$20) \\
 &amp;=0.95^{10}\times 20 \\
-&amp;=11.975
+&amp;=11.97
 \end{align*}</span></p>
-<p>This exponential discounter will prefer to receive $20 in 10 days.</p>
+<p>Discounted utility is higher for the $20 in 10 days. This agent will prefer to receive $20 in 10 days.</p>
+<p><a href="#fig-example3">Figure&nbsp;<span>23.4</span></a> visualises the choices and the agents’ discounting of the payoffs.</p>
+<p>In both charts, vertical bars represent the $10 in five days and $20 in 10 days. The lines projecting back to <span class="math inline">t=0</span> represent the discounted value of those payoffs at each time.</p>
+<p>When <span class="math inline">\delta=0.75</span>, the heavy discount to the more distant payoff means that it has a lower discounted utility than the smaller, sooner payment of $10. When <span class="math inline">\delta=0.95</span>, the discount is less severe and the $20 in 10 days has a higher discounted utility than the $10 in five days.</p>
 <div id="fig-example3" class="quarto-layout-panel">
 <p></p><figcaption>Figure&nbsp;23.4: Exponential discounting</figcaption><p></p>
 <figure class="figure">
@@ -632,13 +654,13 @@ U_0(10,\$20)&amp;=\delta^{10} u(\$20) \\
 <div id="fig-example_3" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">(a) <span class="math inline">\delta=0.75</span></figcaption><p></p>
-<p><a href="img/example_3.jpg" class="lightbox" title="\delta=0.75" data-gallery="quarto-lightbox-gallery-4"><img src="img/example_3.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/example_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="\delta=0.75"><img src="img/example_3.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div id="fig-example_3a" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">(b) <span class="math inline">\delta=0.95</span></figcaption><p></p>
-<p><a href="img/example_3a.jpg" class="lightbox" title="\delta=0.95" data-gallery="quarto-lightbox-gallery-5"><img src="img/example_3a.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/example_3a.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="\delta=0.95"><img src="img/example_3a.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -826,7 +848,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

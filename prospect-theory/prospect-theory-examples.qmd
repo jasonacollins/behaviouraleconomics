@@ -168,7 +168,7 @@ However, under prospect theory people also overweight small probabilities. This 
 
 The following numerical example is an illustration.
 
-An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 ($p=0.0001$) chance of burning down. An insurer is willing to offer full coverage for \$1100. (Note: \$1000 is the actuarially fair price, the additional \$100 might represent profit or administrative costs.)
+An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for \$1100. (Note: \$1000 is the actuarially fair price, the additional \$100 might represent profit or administrative costs.)
 
 ### Expected value
 
@@ -224,6 +224,8 @@ The expected utility of not purchasing insurance is on the dash-dot line between
 The utility of purchasing insurance ($U(W-R)$) is greater than the expected utility of not purchasing insurance $(E[U(X)])$. The agent will purchase insurance.
 
 ```{r}
+#| label: fig-euinsurance
+#| fig-cap: Insurance choice by a risk averse expected utility maximiser
 
 library(ggplot2)
 
@@ -281,7 +283,6 @@ ggplot(mapping = aes(x, y)) +
     annotate("segment", x = 77, y = 0, xend = 77, yend = u(3)+((u(90)-u(3))/(90-3))*74, linewidth = 0.5, colour = "black", linetype="dashed")+
     annotate("segment", x = 0, y = u(3)+((u(90)-u(3))/(90-3))*74, xend = 77, yend = u(3)+((u(90)-u(3))/(90-3))*74, linewidth = 0.5, colour = "black", linetype="dashed")+
     annotate("text", x = 0, y = u(3)+((u(90)-u(3))/(90-3))*74, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)
-
 
 ```
 

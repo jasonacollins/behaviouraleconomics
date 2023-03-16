@@ -4,32 +4,33 @@ Intertemporal choice refers to decisions involving costs and benefits occurring 
 
 Almost every decision is an intertemporal choice. Intertemporal choices can be important because:
 
-- feedback may not be immediate (when will you realise your retirement savings are inadequate?)
-- they may be irreversible (what can you do if you reach retirement age with little savings?)
-- stakes can be large (health, wealth, career).
+- First, feedback may not be immediate. For example, when will you realise that your retirement savings are inadequate?)
+- Second, your choices may be irreversible. What can you do if you reach retirement age with little savings?
+- And finally, stakes can be large, affecting your health, wealth, family or career.
+
+One of the core principles of intertemporal choice is that people tend to discount future costs and benefits. They prefer to receive benefits earlier, rather than later, and prefer to incur costs later rather than earlier. 
 
 ## Notation
 
-We have seen preferences over lotteries of the form:
+One way of representing a stream of payoffs over time is the following form:
 
-$$L=(x_1,p_1;x_2,p_2;...;x_n,p_n)$$
+$$
+S=(t_1,x_1;t_2,x_2;...;t_n,x_n)
+$$
 
-We are now going to see preferences over stream of payoffs of the form:
+$t_i$ is the period in which the payoff is received. $x_i$ is the payoff received in period $t_i$.
 
-$$S=(t_1,x_1;t_2,x_2;...;t_n,x_n)$$
+Consider these two simple streams of payoffs. Period $t_1=0$, which is now. Period $t_2=1$ is one year from today.
 
-An example of a stream of income is a salary: \$50,000 this year, \$50,000 next year, and so on.
+The first stream is \$100 now and nothing in a year. The second stream is nothing today and \$107 in one year.
 
-Let’s consider a two simple streams of payoffs. The first stream is \$100 now and the second stream is \$107 in one year. We can write these two streams as:
+$$
+S_1=(0,\$100;1,0)
+$$
 
-$$S_1=(0,\$100;1,0)$$
+$$
+S_2=(0,0;1,\$107)
+$$
 
-$$S_2=(0,0;1,\$107)$$
-
-Period $t_1=0$ is now. Period $t_2=1$ is one year from today.
-
-## Time preference
 
 Would you prefer $S_1$ or $S_2$?
-
-People tend to discount future costs and benefits. They prefer to receive benefits earlier, rather than later, and prefer to incur costs later rather than earlier. 
