@@ -20,14 +20,16 @@ $$
 
 $t_i$ is the period in which the payoff is received. $x_i$ is the payoff received in period $t_i$.
 
-Consider these two simple streams of payoffs. Period $t_1=0$, which is now. Period $t_2=1$ is one year from today.
+Consider these two simple streams of payoffs.
 
-The first stream is \$100 now and nothing in a year. The second stream is nothing today and \$107 in one year.
+For both streams, period $t_1=0$, which is now. Period $t_2=1$ is one year from today.
 
+The first stream is \$100 now and nothing in a year.
 $$
 S_1=(0,\$100;1,0)
 $$
 
+The second stream is nothing today and \$107 in one year.
 $$
 S_2=(0,0;1,\$107)
 $$

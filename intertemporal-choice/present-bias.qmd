@@ -41,15 +41,15 @@ The following figures illustrate the effect of present bias.
 
 We can read off the total discount factor at any time $t$ from this chart. For example, the total discount factor for the exponential discounter is $0.9$ at $t=1$, $0.81$ at $t=2$ and $0.43$ at $t=8$. The total discount factor for the present-biased agent is $0.675$ at $t=1$, $0.61$ at $t=2$ and $0.32$ at $t=8$.
 
-![Discount curves](img/discount-curves.png){#fig-present_bias_1}
+![Discount curves 1](img/discount-curves.png){#fig-present_bias_1}
 
 @fig-present_bias_2 shows the discount curve for present-biased and exponential discounting agents with different parameters. The present-biased agent and exponential discounter have the same discount factor $\delta=0.75$. The present-biased agent also has the short-term discount factor $\beta=0.75$. Again, the present-biased agent discounts the first period of delay more than the exponential discounter.
 
-![](img/discount-curves-1.png){#fig-present_bias_2}
+![Discount curves 2](img/discount-curves-1.png){#fig-present_bias_2}
 
 @fig-present_bias_3 shows a scenario where the present-biased agent has a higher discount factor $\delta=0.9$ than the exponential discounter with $\delta=0.75$. The present-biased agent also has the short-term discount factor $\beta=0.75$. The present-biased agent discounts the first period of delay more than the exponential discounter. However, due to their higher $\delta$, the present-biased agent discounts additional periods of delay less than the exponential discounter and ultimately has a lower total discount for periods further in the future.
 
-![](img/discount-curves-2.png){#fig-present_bias_3}
+![Discount curves 3](img/discount-curves-2.png){#fig-present_bias_3}
 
 ## Assumptions
 
