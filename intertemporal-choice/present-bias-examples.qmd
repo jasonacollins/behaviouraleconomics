@@ -46,13 +46,13 @@ The discounted utility of the \$100 today is:
 
 \begin{align*}
 U_0(0,\$100)&=u(\$100)\\[6pt]
-&-100
+&=100
 \end{align*}
 
 The discounted utility of the \$110 next week is:
 
 \begin{align*}
-U_0(1,\$110)&=u(x_0)+\beta \sum_{t=1}^{t=T}\delta^t u(x_t) \\[6pt]
+U_0(1,\$110)&=u(x_0)+\beta u(x_1) \\[6pt]
 &=\beta\delta u(\$110) \\[6pt]
 &=0.95\times 0.95\times 110 \\[6pt]
 &=`r 0.95*0.95*110`
@@ -65,7 +65,7 @@ Choice 2: Would this present-biased agent prefer \$100 next week ($t=1$) or \$11
 The discounted utility of the \$100 next week is:
 
 \begin{align*}
-U_0(1,\$100)&=u(x_0)+\beta \sum_{t=1}^{t=T}\delta^t u(x_t) \\[6pt] 
+U_0(1,\$100)&=u(x_0)+\beta u(x_1)+\beta\delta^2 u(x_2) \\[6pt] 
 &=\beta\delta u(\$100) \\[6pt]
 &=0.95\times 0.95\times 100 \\[6pt]
 &=`r e1pb3<-0.95*0.95*100; e1pb3`
@@ -74,7 +74,7 @@ U_0(1,\$100)&=u(x_0)+\beta \sum_{t=1}^{t=T}\delta^t u(x_t) \\[6pt]
 The discounted utility of the \$110 in two weeks is:
 
 \begin{align*}
-U_0(2,\$110)&=u(x_0)+\beta \sum_{t=1}^{t=T}\delta^t u(x_t) \\[6pt]
+U_0(2,\$110)&=u(x_0)+\beta u(x_1)+\beta\delta^2 u(x_2) \\[6pt]
 &=\beta\delta^2 u(\$110) \\[6pt]
 &=0.95\times 0.95^2\times 110 \\[6pt]
 &=`r e1pb4<-round(0.95*0.95^2*110, 2); e1pb4`
@@ -91,6 +91,14 @@ For choice 2, the present-biased agent will prefer \$110 in two weeks to \$100 i
 Consider what would happen if this present-biased agent selected the \$110 in two weeks in Choice 2, but after one week we asked if they would like to reconsider their choice. They are effectively being offered Choice 1. This would then lead them to change their mind and take the immediate \$100.
 
 This combination of decisions is time inconsistent. The present-biased agent’s actions are not consistent with their initial plan.
+
+We can see this change in preference in the following diagram.
+
+The vertical bars represent the payments of \$100 and \$110. The lines projecting back from the bars to the y-axis represent the discounted utility of each payment at each time. There is a kink in the line projecting from the \$110 in two weeks, representing the effect of the short-term discount factor $\beta$.
+
+At $t=0$ the discounted utility of the \$110 at $t=2$ is higher and that payment is therefore preferred. At $t=1$ when the \$100 is no longer discounted by the short-term discount factor $\beta$, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the \$110 due in another week.
+
+![](img/present-bias-example-1.png){width=75%}
 
 ## Example 2
 
@@ -109,7 +117,7 @@ U_0(5,\$10)&=\beta\delta^5u(\$10) \\[6pt]
 The discounted utility of the \$20 in 10 days is:
 
 \begin{align*}
-U_0(10,\$20)&=\beta\delta^10 u(\$20) \\[6pt]
+U_0(10,\$20)&=\beta\delta^{10} u(\$20) \\[6pt]
 &=0.75\times 0.9^{10}\times 20 \\[6pt]
 &=`r round(0.75*0.9^10*20, 2)`
 \end{align*}
