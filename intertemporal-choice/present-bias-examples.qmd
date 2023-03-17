@@ -12,7 +12,7 @@ Choice 2: Would you like \$100 next week or \$110 in two weeks?
 
 ### The exponential discounter
 
-The exponential discounter has $\delta=0.95$ and utility each period of $U(x_n)=x_n$.
+The exponential discounter has $\delta=0.95$ and utility each period of $u(x_n)=x_n$.
 
 Would the exponential discounter prefer \$100 today ($t=0$) or \$110 next week ($t=1$)?
 
@@ -38,7 +38,7 @@ The set of decisions across Choice 1 and Choice 2 are time consistent. If the ex
 
 ### The present-biased agent
 
-The present biased agent has $\delta=0.95$, $\beta=0.95$ and utility each period of $U(x_n)=x_n$.
+The present biased agent has $\delta=0.95$, $\beta=0.95$ and utility each period of $u(x_n)=x_n$.
 
 Choice 1: Would this agent prefer \$100 today ($t=0$) or \$110 next week ($t=1$)? 
 
@@ -94,7 +94,9 @@ This combination of decisions is time inconsistent. The present-biased agent’s
 
 We can see this change in preference in the following diagram.
 
-The vertical bars represent the payments of \$100 and \$110. The lines projecting back from the bars to the y-axis represent the discounted utility of each payment at each time. There is a kink in the line projecting from the \$110 in two weeks, representing the effect of the short-term discount factor $\beta$.
+The vertical bars represent the payments of \$100 and \$110. The lines projecting back from the bars to the y-axis represent the discounted utility of each payment at each time.
+
+There is a kink in the line projecting from the \$110 in two weeks, representing the effect of the short-term discount factor $\beta$. Between $t=1$ and $t=2$ both the short-term and usual discount factors are applied. This leads to that part of the curve having a steeper slope than between $t=0$ and $t=1$ where only the usual discount factor is applied.
 
 At $t=0$ the discounted utility of the \$110 at $t=2$ is higher and that payment is therefore preferred. At $t=1$ when the \$100 is no longer discounted by the short-term discount factor $\beta$, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the \$110 due in another week.
 
@@ -111,7 +113,7 @@ The discounted utility of the \$10 in five days is:
 \begin{align*}
 U_0(5,\$10)&=\beta\delta^5u(\$10) \\[6pt]
 &=0.75\times 0.9^5\times 10 \\[6pt]
-&=`r round(0.75*0.9^5*10, 2)` \\[6pt]
+&=`r pbe2a <- round(0.75*0.9^5*10, 2); pbe2a` \\[6pt]
 \end{align*}
 
 The discounted utility of the \$20 in 10 days is:
@@ -119,12 +121,12 @@ The discounted utility of the \$20 in 10 days is:
 \begin{align*}
 U_0(10,\$20)&=\beta\delta^{10} u(\$20) \\[6pt]
 &=0.75\times 0.9^{10}\times 20 \\[6pt]
-&=`r round(0.75*0.9^10*20, 2)`
+&=`r pbe2b <- round(0.75*0.9^10*20, 2); pbe2b`
 \end{align*}
 
-As $U_0(10,\$20)=5.23>4.43=U_0(5,\$10)$, this present-biased agent will prefer to receive \$20 in 10 days.
+As $U_0(5,\$10)=`r pbe2a`>`r pbe2b`=U_0(10,\$0)$, this present-biased agent will prefer to receive \$20 in 10 days.
 
-Five days pass so that we are now at $t=5$. We ask the agent if they would like to change their mind.
+Five days pass so we are now at $t=5$. We ask the agent if they would like to change their mind.
 
 The discounted utility of the \$10 today is:
 

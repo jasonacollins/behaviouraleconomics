@@ -544,7 +544,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Choice 2: Would you like $100 next week or $110 in two weeks?</p>
 <section id="the-exponential-discounter" class="level3" data-number="26.1.1">
 <h3 data-number="26.1.1" class="anchored" data-anchor-id="the-exponential-discounter"><span class="header-section-number">26.1.1</span> The exponential discounter</h3>
-<p>The exponential discounter has <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">U(x_n)=x_n</span>.</p>
+<p>The exponential discounter has <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>.</p>
 <p>Would the exponential discounter prefer $100 today (<span class="math inline">t=0</span>) or $110 next week (<span class="math inline">t=1</span>)?</p>
 <p>When we worked through this problem in <a href="exponential-discounting-examples.html#sec-exponential_example_1"><span>Section&nbsp;23.1</span></a>, we calculated that:</p>
 <p><span class="math display">
@@ -561,7 +561,7 @@ U_0(1,\$100)=95&lt;99.275=U_0(2,\$110)
 </section>
 <section id="the-present-biased-agent" class="level3" data-number="26.1.2">
 <h3 data-number="26.1.2" class="anchored" data-anchor-id="the-present-biased-agent"><span class="header-section-number">26.1.2</span> The present-biased agent</h3>
-<p>The present biased agent has <span class="math inline">\delta=0.95</span>, <span class="math inline">\beta=0.95</span> and utility each period of <span class="math inline">U(x_n)=x_n</span>.</p>
+<p>The present biased agent has <span class="math inline">\delta=0.95</span>, <span class="math inline">\beta=0.95</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>.</p>
 <p>Choice 1: Would this agent prefer $100 today (<span class="math inline">t=0</span>) or $110 next week (<span class="math inline">t=1</span>)?</p>
 <p>The discounted utility of the $100 today is:</p>
 <p><span class="math display">\begin{align*}
@@ -598,7 +598,8 @@ U_0(2,\$110)&amp;=u(x_0)+\beta u(x_1)+\beta\delta^2 u(x_2) \\[6pt]
 <p>Consider what would happen if this present-biased agent selected the $110 in two weeks in Choice 2, but after one week we asked if they would like to reconsider their choice. They are effectively being offered Choice 1. This would then lead them to change their mind and take the immediate $100.</p>
 <p>This combination of decisions is time inconsistent. The present-biased agent’s actions are not consistent with their initial plan.</p>
 <p>We can see this change in preference in the following diagram.</p>
-<p>The vertical bars represent the payments of $100 and $110. The lines projecting back from the bars to the y-axis represent the discounted utility of each payment at each time. There is a kink in the line projecting from the $110 in two weeks, representing the effect of the short-term discount factor <span class="math inline">\beta</span>.</p>
+<p>The vertical bars represent the payments of $100 and $110. The lines projecting back from the bars to the y-axis represent the discounted utility of each payment at each time.</p>
+<p>There is a kink in the line projecting from the $110 in two weeks, representing the effect of the short-term discount factor <span class="math inline">\beta</span>. Between <span class="math inline">t=1</span> and <span class="math inline">t=2</span> both the short-term and usual discount factors are applied. This leads to that part of the curve having a steeper slope than between <span class="math inline">t=0</span> and <span class="math inline">t=1</span> where only the usual discount factor is applied.</p>
 <p>At <span class="math inline">t=0</span> the discounted utility of the $110 at <span class="math inline">t=2</span> is higher and that payment is therefore preferred. At <span class="math inline">t=1</span> when the $100 is no longer discounted by the short-term discount factor <span class="math inline">\beta</span>, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the $110 due in another week.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -623,8 +624,8 @@ U_0(10,\$20)&amp;=\beta\delta^{10} u(\$20) \\[6pt]
 &amp;=0.75\times 0.9^{10}\times 20 \\[6pt]
 &amp;=5.23
 \end{align*}</span></p>
-<p>As <span class="math inline">U_0(10,\$20)=5.23&gt;4.43=U_0(5,\$10)</span>, this present-biased agent will prefer to receive $20 in 10 days.</p>
-<p>Five days pass so that we are now at <span class="math inline">t=5</span>. We ask the agent if they would like to change their mind.</p>
+<p>As <span class="math inline">U_0(5,\$10)=4.43&gt;5.23=U_0(10,\$0)</span>, this present-biased agent will prefer to receive $20 in 10 days.</p>
+<p>Five days pass so we are now at <span class="math inline">t=5</span>. We ask the agent if they would like to change their mind.</p>
 <p>The discounted utility of the $10 today is:</p>
 <p><span class="math display">\begin{align*}
 U_5(5,\$10)&amp;=u(\$10) \\[6pt]
@@ -827,7 +828,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 
