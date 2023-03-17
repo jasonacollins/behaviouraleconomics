@@ -16,42 +16,21 @@ The exponential discounter has $\delta=0.95$ and utility each period of $U(x_n)=
 
 Would the exponential discounter prefer \$100 today ($t=0$) or \$110 next week ($t=1$)?
 
-To determine this, we calculate the discounted utility of each option. The agent will prefer the option with the highest discounted utility.
+When we worked through this problem in @sec-exponential_example_1, we calculated that:
 
-The discounted utility of the \$100 today is:
-
-\begin{align*}
-U_0(0,\$100)&=u(\$100) \\[6pt]
-&=100
-\end{align*}
-
-The discounted utility of the \$110 next week is:
-
-\begin{align*}
-U_0(1,\$110)&=\delta u(\$110) \\[6pt]
-&=0.95\times 110 \\[6pt]
-&=`r 0.95*110`
-\end{align*}
+$$
+U_0(0,\$100)=100<`r 0.95*110`=U_0(1,\$110)
+$$
 
 The exponential discounter will prefer to receive \$110 next week as it leads to higher discounted utility.
 
 Choice 2: Would the exponential discounter prefer \$100 next week ($t=1$) or \$110 in two weeks ($t=2$)? 
 
-The discounted utility of the \$100 next week is:
+When we worked through this problem in @sec-exponential_example_1, we calculated that:
 
-\begin{align*}
-U_0(1,\$100)&=\delta u(\$110) \\[6pt]
-&=0.95\times 100 \\[6pt]
-&=`r 0.95*100`
-\end{align*}
-
-The discounted utility of the \$110 in two weeks is:
-
-\begin{align*}
-U_0(2,\$110)&=\delta^2 u(\$110) \\[6pt]
-&=0.95^2\times 110 \\[6pt]
-&=`r 0.95^2*110`
-\end{align*}
+$$
+U_0(1,\$100)=`r 0.95*100`<`r 0.95^2*110`=U_0(2,\$110)
+$$
 
 The exponential discounter will prefer to receive \$110 in two weeks.
 

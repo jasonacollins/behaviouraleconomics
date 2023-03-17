@@ -1,10 +1,10 @@
 # Exponential discounting examples
 
-In this part I will work through several numerical examples of decisions by an exponential discounter.
+In this part, I will work through several numerical examples of decisions by an exponential discounter.
 
-## Example 1
+## Example 1{#sec-exponential_example_1}
 
-Suppose we have an exponential discounter with discount factor $\delta=0.95$ and utility each period of $u(x_n)=x_n$. They are offered two choices.
+Suppose we have an exponential-discounting agent with discount factor $\delta=0.95$ and utility each period of $u(x_n)=x_n$. They are offered two choices.
 
 Choice 1: Would this agent prefer \$100 today ($t=0$) or \$110 next week ($t=1$)?
 
@@ -32,7 +32,7 @@ Choice 2: Would this agent prefer \$100 next week ($t=1$) or \$110 in two weeks 
 The discounted utility of the \$100 next week is:
 
 \begin{align*}
-U_1(1,\$100)&=\delta u(\$110) \\
+U_0(1,\$100)&=\delta u(\$110) \\
 &=0.95\times 100 \\
 &=`r 0.95*100`
 \end{align*}
@@ -40,7 +40,7 @@ U_1(1,\$100)&=\delta u(\$110) \\
 The discounted utility of the \$110 in two weeks is:
 
 \begin{align*}
-U_1(2,\$110)&=\delta^2 u(\$110) \\
+U_0(2,\$110)&=\delta^2 u(\$110) \\
 &=0.95^2\times 110 \\
 &=`r 0.95^2*110`
 \end{align*}
@@ -57,7 +57,7 @@ The two bars represent the options: \$100 at $t=1$ and \$110 at $t=2$. The line 
 
 You will note that the two lines do not cross. For an exponential discounter, if one line is higher at any particular time $t$, it is higher at all times.
 
-@fig-example_1a visualises Choice 1. The discounted value of the \$100 received immediately is less than the discounted utility of \$110 in one week.
+@fig-example_1a visualises Choice 2 reconsidered at $t=1$. The discounted value of the \$100 received immediately is less than the discounted utility of \$110 in one week.
 
 ![Choice 1](img/example_1a.jpg){width=60% #fig-example_1a}
 

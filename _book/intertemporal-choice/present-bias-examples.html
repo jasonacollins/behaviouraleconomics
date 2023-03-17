@@ -546,32 +546,16 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="26.1.1" class="anchored" data-anchor-id="the-exponential-discounter"><span class="header-section-number">26.1.1</span> The exponential discounter</h3>
 <p>The exponential discounter has <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">U(x_n)=x_n</span>.</p>
 <p>Would the exponential discounter prefer $100 today (<span class="math inline">t=0</span>) or $110 next week (<span class="math inline">t=1</span>)?</p>
-<p>To determine this, we calculate the discounted utility of each option. The agent will prefer the option with the highest discounted utility.</p>
-<p>The discounted utility of the $100 today is:</p>
-<p><span class="math display">\begin{align*}
-U_0(0,\$100)&amp;=u(\$100) \\[6pt]
-&amp;=100
-\end{align*}</span></p>
-<p>The discounted utility of the $110 next week is:</p>
-<p><span class="math display">\begin{align*}
-U_0(1,\$110)&amp;=\delta u(\$110) \\[6pt]
-&amp;=0.95\times 110 \\[6pt]
-&amp;=104.5
-\end{align*}</span></p>
+<p>When we worked through this problem in <a href="exponential-discounting-examples.html#sec-exponential_example_1"><span>Section&nbsp;23.1</span></a>, we calculated that:</p>
+<p><span class="math display">
+U_0(0,\$100)=100&lt;104.5=U_0(1,\$110)
+</span></p>
 <p>The exponential discounter will prefer to receive $110 next week as it leads to higher discounted utility.</p>
 <p>Choice 2: Would the exponential discounter prefer $100 next week (<span class="math inline">t=1</span>) or $110 in two weeks (<span class="math inline">t=2</span>)?</p>
-<p>The discounted utility of the $100 next week is:</p>
-<p><span class="math display">\begin{align*}
-U_0(1,\$100)&amp;=\delta u(\$110) \\[6pt]
-&amp;=0.95\times 100 \\[6pt]
-&amp;=95
-\end{align*}</span></p>
-<p>The discounted utility of the $110 in two weeks is:</p>
-<p><span class="math display">\begin{align*}
-U_0(2,\$110)&amp;=\delta^2 u(\$110) \\[6pt]
-&amp;=0.95^2\times 110 \\[6pt]
-&amp;=99.275
-\end{align*}</span></p>
+<p>When we worked through this problem in <a href="exponential-discounting-examples.html#sec-exponential_example_1"><span>Section&nbsp;23.1</span></a>, we calculated that:</p>
+<p><span class="math display">
+U_0(1,\$100)=95&lt;99.275=U_0(2,\$110)
+</span></p>
 <p>The exponential discounter will prefer to receive $110 in two weeks.</p>
 <p>The set of decisions across Choice 1 and Choice 2 are time consistent. If the exponential-discounting agent selected $110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively an offer of Choice 1), they would not change their decision.</p>
 </section>
@@ -835,7 +819,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":true});</script>
 
 
 
