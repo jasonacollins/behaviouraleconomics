@@ -1,32 +1,32 @@
 # Sophisticated present bias
 
-In our analysis of present bias, I have made an implicit assumption that the agent is unaware that their present bias will lead them to make inconsistent decisions over time.
+Suppose a present-biased agent decides that they will wait for a larger, later payoff in preference to a smaller, sooner payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff. Why did the agent initially choose the larger payoff when they would take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and choose accordingly.
 
-Suppose a present-biased agent decides that they will wait for a larger, later payoff in preference to a smaller, sooner payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff. Why did the agent initially choose the larger payoff when they would actually take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and choose accordingly.
-
-For many of us, we are aware that we make time-inconsistent decisions. We know that we often cave when faced with immediate temptation. And more than that, because of our self-awareness we often plan around it. We hide the jar of cookies or do not keep them in the house. We place our money in a savings account with no special features beyond an inability to access the money.
+For many of us, we are aware that we make time-inconsistent decisions. We know that we often cave when faced with immediate temptation. We know that if there is a jar of cookies in the house we will eat them.
 
 ## Naïve and sophisticated present-biased agents
 
-To bring this idea into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated present-biased agents.
+To bring this idea of awareness about our present bias into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated.
 
-A naive present-biased agent discounts all future periods by the short-term discount factor $\beta$, with the only difference in discount between two future periods arising from the usual discount factor $\delta$. They believe that relative difference in discount will persist as time passes. However, when the first of the future periods arrives, the latter period will be discounted by the the short-term discount factor $\beta$ and the usual discount factor $\delta$, compared to no discount for the present period, increasing the relative discount of that latter period.
+Consider how a present-biased agent discounts a payoff for each successive period of delay under the $\beta\delta$ model. The first period of delay results in the application of a total discount factor of $\beta\delta$. Each additional period of delay results in the application of an additional discount factor of $\delta$. The discount factor applied for the first period of delay is relatively smaller - or the magnitude of the discount relatively greater - than the additional discount applied for any additional period of delay.
 
-A sophisticated present-biased agent correctly believes that they will apply both the short-term and usual discount factors in the future. As a result, they understand that the relative discount of different payoffs will change when one of those payoffs becomes due. They understand that if faced with the temptation to take benefits today or delay costs, they will do so.
+A naive present-biased agent believes that the relative difference in discount between periods that they can see today will persist as time passes. That is, they believe that the discount factor of $\delta$ applied between, say, periods $t=2$ and $t=3$, will still be the relative discount when they reach $t=2$. However, when $t=2$ does arrive, $t=3$ will be discounted by both the short-term discount factor $\beta$ and the usual discount factor $\delta$, compared to no discount for the present period $t=2$. As a result, the relative discount of different payoffs will change when one of those payoffs becomes due today.
 
-A sophisticated and naive person can make different decisions despite having the same level of impatience, $\delta$, and the same level of present bias, $\beta$. This difference emerges in the way that they reason through an intertemporal choice.
+A sophisticated present-biased agent correctly believes that they will apply both the short-term and usual discount factors in the future. As a result, they understand that the relative discount of different payoffs will change when one of those payoffs becomes due today. They understand that if faced with the temptation to take benefits or to delay costs, they will do so.
+
+A sophisticated and naive person can make different decisions despite having the same level of impatience, $\delta$, and the same level of present bias, $\beta$. Any difference emerges in the way that they reason through an intertemporal choice.
 
 The naive agent makes its plans by forward reasoning, starting from today ($t=0$).
 
 1.  First they decide their preferred option for $t=0$, believing that they will stick to their plan once they move to next period.
 
-2.  When they move to next period ($t+1$) they recompute their preferred plan, again believing they will stick to the plan once they move to next period.
+2.  When they move to the next period ($t+1$) they recompute their preferred plan, again believing they will stick to the plan once they move to next period.
 
 3.  They repeat this process as they move through time.
 
-In contrast, the sophisticated present-biased agent makes its plans by backward reasoning, starting from the final time period ($t=T$).
+In contrast, the sophisticated present-biased agent makes its plans by backward reasoning, starting from the final period ($t=T$).
 
-1.  For that final time period, they solve for the preferred action.
+1.  For that final period, they solve for the preferred action.
 
 2.  They then consider one period earlier ($t=T-1$) and solve for the preferred action, accounting for the decision in (1)
 
