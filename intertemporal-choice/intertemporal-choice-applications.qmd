@@ -1,6 +1,18 @@
 # Intertemporal choice applications
 
-## Savings
+## Savings 1
+
+@beshears2020 found that when people can invest in two accounts, one liquid and the other with liquidity constraints such as withdrawal penalties, the experimental participants put nearly half of their money in the illiquid account even though it paid the same interest rate. This contrasts with the standard economic prediction that all money should go to the liquid account, which enables all actions plus more than can be done from the illiquid account. Even when the interest rate on the illiquid account was lower, it still attracted around a quarter of the money.
+
+This extract from Table 3 in the paper shows the proportion of funds allocated to each type of "commitment account" when experimental participants were given a choice between an account with no liquidity constraints paying 22% interest and the commitment account.
+
+![](img/Table-3-Beshears-et-al-2020.png)
+
+You can see that where the interest rates between the liquid and illiquid accounts were equal, the accounts with harsher constraints attracted more money. The account with a higher withdrawal penalty (20% compared to 10%) attracted more money, and the account that barred withdrawals attracted even more.
+
+This result suggests a demand among sophisticated, present-based agents for products that will enable them to control their future behaviours.
+
+## Savings 2
 
 In the 1960s, the domestic savings rate in the Philippines was over 20% of GDP (one of the highest in Asia). By 2006, the savings rate ranges between 12 and 15 percent, far below the level of savings for most East Asian countries.
 

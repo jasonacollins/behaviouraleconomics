@@ -219,15 +219,16 @@ The expected utility of purchasing insurance is greater than the expected utilit
 
 The following diagram illustrates. The agent's utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked - wealth after losing the house when uninsured $(W-H)$, wealth after paying the insurance premium $(W-R)$, and wealth if uninsured but the house does not burn down $(W)$.
 
-The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The precise point is $p$ along this line from $U(W)$ (or $1-p$ along the line from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $E[X]$.
+The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The precise point is $p$ along this line from $U(W)$ (or $1-p$ along the line from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $E[\neg I]$.
 
-The utility of purchasing insurance ($U(W-R)$) is greater than the expected utility of not purchasing insurance $(E[U(X)])$. The agent will purchase insurance.
+The utility of purchasing insurance ($U(W-R)$) is greater than the expected utility of not purchasing insurance $(E[U(\neg I)])$. The agent will purchase insurance.
 
 ```{r}
 #| label: fig-euinsurance
 #| fig-cap: Insurance choice by a risk averse expected utility maximiser
 
 library(ggplot2)
+library(latex2exp)
 
 u <- function(x){
   log(x)
@@ -236,8 +237,17 @@ u <- function(x){
 df <- data.frame(
   x=seq(1,100,0.1),
   y=NA
-  )
+)
+
 df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-3 #loss
+x2<-90 #win
+ev<-77 #expected value of gamble
+xc<-70 #certain outcome
+px2<-(ev-x1)/(x2-x1)
 
 ggplot(mapping = aes(x, y)) +
     geom_line(data = df) +
@@ -258,31 +268,31 @@ ggplot(mapping = aes(x, y)) +
     coord_cartesian(xlim = c(-8, 100), ylim = c(0, 5))+
 
     #Add labels W, U(W) and line to curve indicating each
-    annotate("text", x = 90, y = 0, label = "W", size = 4, hjust = 0.4, vjust = 1.5)+
-    annotate("segment", x = 90, y = 0, xend = 90, yend = u(90), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("segment", x = 0, y = u(90), xend = 90, yend = u(90), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("text", x = 0, y = u(90), label = "U(W)", size = 4, hjust = 1.1, vjust = 0.4)+
+    annotate("text", x = x2, y = 0, label = "W", size = 4, hjust = 0.4, vjust = 1.5)+
+    annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(x2), label = "U(W)", size = 4, hjust = 1.1, vjust = 0.4)+
 
     #Add labels W-R, U(W_R) and line to curve indicating each
-    annotate("text", x = 70, y = 0, label = "W-R", size = 4, hjust = 0.5, vjust = 1.5)+
-    annotate("segment", x = 70, y = 0, xend = 70, yend = u(70), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("segment", x = 0, y = u(70), xend = 70, yend = u(70), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("text", x = 0, y = u(70), label = "U(W-R)", size = 4, hjust = 1.05, vjust = 0.45)+
+    annotate("text", x = xc, y = 0, label = "W-R", size = 4, hjust = 0.5, vjust = 1.5)+
+    annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(xc), label = "U(W-R)", size = 4, hjust = 1.05, vjust = 0.45)+
 
     #Add expected utility line
-    annotate("segment", x = 90, xend = 3, y = u(90), yend = u(3), linewidth = 0.5, colour = "black", linetype="dotdash")+
+    annotate("segment", x = x2, xend = x1, y = u(x2), yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotdash")+
 
     #Add labels W-H, U(W_H) and line to curve indicating each
-    annotate("text", x = 3, y = 0, label = "W-H", size = 4, hjust = 0.4, vjust = 1.5)+
-    annotate("segment", x = 3, y = 0, xend = 3, yend = u(3), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("segment", x = 0, y = u(3), xend = 3, yend = u(3), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("text", x = 0, y = u(3), label = "U(W-H)", size = 4, hjust = 1.05, vjust = 0.45)+
+    annotate("text", x = x1, y = 0, label = "W-H", size = 4, hjust = 0.4, vjust = 1.5)+
+    annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(x1), label = "U(W-H)", size = 4, hjust = 1.05, vjust = 0.45)+
 
-    #Add labels E[not I], E[U(X)] and curve indicating each
-    annotate("text", x = 77, y = 0, label = "E[X]", size = 4, hjust = 0.4, vjust = 1.5)+
-    annotate("segment", x = 77, y = 0, xend = 77, yend = u(3)+((u(90)-u(3))/(90-3))*74, linewidth = 0.5, colour = "black", linetype="dashed")+
-    annotate("segment", x = 0, y = u(3)+((u(90)-u(3))/(90-3))*74, xend = 77, yend = u(3)+((u(90)-u(3))/(90-3))*74, linewidth = 0.5, colour = "black", linetype="dashed")+
-    annotate("text", x = 0, y = u(3)+((u(90)-u(3))/(90-3))*74, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)
+    #Add labels E[not I], E[U(not I)] and curve indicating each
+    annotate("text", x = ev, y = 0, label = TeX("E[$\\neg$ I]", output='character'), parse=TRUE, size = 4, hjust = 0.4, vjust = 1.4)+
+    annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+    annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+    annotate("text", x = 0, y = u(3)+(u(x2)-u(x1))*px2, label = TeX("E[U($\\neg$ I)]", output='character'), parse=TRUE, size = 4, hjust = 1.05, vjust = 0.45)
 
 ```
 

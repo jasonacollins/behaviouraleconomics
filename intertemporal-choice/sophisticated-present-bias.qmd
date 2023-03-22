@@ -1,80 +1,130 @@
 # Sophisticated present bias
 
-In our analysis of present bias, I have made an implicit assumption that the agent is unaware that their present-bias will lead them to make inconsistent decisions over time. This present-biased agent decides that they will wait for a larger, later pay-off despite the possibility that they will change their mind when a smaller pay-off becomes immediately available. The larger pay-off is never truly available to them.
+In our analysis of present bias, I have made an implicit assumption that the agent is unaware that their present bias will lead them to make inconsistent decisions over time.
 
-For many of us, this does not match our experience. We know that we often cave when faced with immediate temptation. And more than that, because of our self-awareness we often plan around it. We hide the jar of cookies or do not keep them in the house. We place our money in savings account with no special features beyond an inability to access the money.
+Suppose a present-biased agent decides that they will wait for a larger, later payoff in preference to a smaller, sooner payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff. Why did the agent initially choose the larger payoff when they would actually take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and choose accordingly.
 
-To bring this idea into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated present-biased agents.
+For many of us, we are aware that we make time-inconsistent decisions. We know that we often cave when faced with immediate temptation. And more than that, because of our self-awareness we often plan around it. We hide the jar of cookies or do not keep them in the house. We place our money in a savings account with no special features beyond an inability to access the money.
 
 ## Naïve and sophisticated present-biased agents
 
-A naive present-biased agent discounts all future periods but incorrectly believes that they do not have this problem in the future.
+To bring this idea into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated present-biased agents.
 
-A sophisticated present-biased agent discounts all future periods and correctly believes that they will also have this problem in the future. They understand that if faced with the temptation to take benefits today or delay costs, they will do so.
+A naive present-biased agent discounts all future periods by the short-term discount factor $\beta$, with the only difference in discount between two future periods arising from the usual discount factor $\delta$. They believe that relative difference in discount will persist as time passes. However, when the first of the future periods arrives, the latter period will be discounted by the the short-term discount factor $\beta$ and the usual discount factor $\delta$, compared to no discount for the present period, increasing the relative discount of that latter period.
 
-A sophisticated and naive person can make different decisions despite having the same level of impatience, $\delta$, and the same level of present bias, $\beta$.
+A sophisticated present-biased agent correctly believes that they will apply both the short-term and usual discount factors in the future. As a result, they understand that the relative discount of different payoffs will change when one of those payoffs becomes due. They understand that if faced with the temptation to take benefits today or delay costs, they will do so.
+
+A sophisticated and naive person can make different decisions despite having the same level of impatience, $\delta$, and the same level of present bias, $\beta$. This difference emerges in the way that they reason through an intertemporal choice.
 
 The naive agent makes its plans by forward reasoning, starting from today ($t=0$).
 
-1. First they decide their preferred option, believing they will stick to the plan once they move to next period.
+1.  First they decide their preferred option for $t=0$, believing that they will stick to their plan once they move to next period.
 
-2. When they move to next time period ($t+1$) they recompute their optimal plan, again believing they will stick to the plan once they move to next period.
+2.  When they move to next period ($t+1$) they recompute their preferred plan, again believing they will stick to the plan once they move to next period.
 
-3. They repeat this process as they move through time.
+3.  They repeat this process as they move through time.
 
-The sophisticated agent makes its plans by backward reasoning, starting from the final time period ($t=T$).
+In contrast, the sophisticated present-biased agent makes its plans by backward reasoning, starting from the final time period ($t=T$).
 
-1. For that final time period, they solve for the optimal action
+1.  For that final time period, they solve for the preferred action.
 
-2. Go back one time period ($t=T-1$) and solve for preferred action, accounting for the decision in (1)
+2.  They then consider one period earlier ($t=T-1$) and solve for the preferred action, accounting for the decision in (1)
 
-3. Iterate
+3.  They repeat this process as they move back to today ($t=0$).
 
 ## Examples
 
+The difference between naive and sophisticated present-biased agents is best illustrated through examples.
+
 ### Example 1
 
-Suppose we have a naive and a sophisticated present-biased agent, each with $\delta=0.95$, $\beta=0.95$ and utility each period of $U(x_n)=x_n$.
+For the first example, suppose we have a naive and a sophisticated present-biased agent, each with $\delta=0.95$, $\beta=0.95$ and utility each period of $U(x_n)=x_n$.
 
-We offer them the following choice.
+We offer them both the following choice.
 
-> Would you like \$100 next week or \$110 in two weeks? 
+> Would you like \$100 next week or \$110 in two weeks?
 
 We also tell them that we will give them the opportunity to reconsider their decision next week.
 
-The present-based agent that we examined in the earlier example was naïve. They did not realise that they would change their mind if offered that opportunity after a week. They would be surprised by that change.
+When the naive present-biased agent considers this problem, they simply compare the discounted utility of each payoff from the perspective of today.
 
-When making their initial decision, the comparison they are making from the perspective of today is simply between the discounted utilities from the perspective of today:
+The discounted utility of the \$100 next week is:
 
+```{=tex}
 \begin{align*}
-U_0(1,\$100)&=90.25 \\
-\\
-U_0(2,\$110)&=94.32
+U_0(1,\$100)&=u(x_0)+\beta u(x_1)+\beta\delta^2 u(x_2) \\[6pt] 
+&=\beta\delta u(\$100) \\[6pt]
+&=0.95\times 0.95\times 100 \\[6pt]
+&=`r e1pb3<-0.95*0.95*100; e1pb3`
 \end{align*}
+```
+The discounted utility of the \$110 in two weeks is:
 
-But this is an incorrect view as to their preferences next week. Next week they will calculate utility as:
-
+```{=tex}
 \begin{align*}
-U_1(1,\$100)&=100 \\
-\\
-U_1(2,\$100)&=99.275
+U_0(2,\$110)&=u(x_0)+\beta u(x_1)+\beta\delta^2 u(x_2) \\[6pt]
+&=\beta\delta^2 u(\$110) \\[6pt]
+&=0.95\times 0.95^2\times 110 \\[6pt]
+&=`r e1pb4<-round(0.95*0.95^2*110, 2); e1pb4`
 \end{align*}
+```
+As $U_0(1,\$100)=`r e1pb3`<`r e1pb4`=U_0(2,\$110)$, at $t=0$ the present-biased agent will prefer to receive \$110 in two weeks.
 
-Today they hold an incorrect belief as to what their preference will be next week .
+But this choice does accord with the naive agent's preferences next week. Next week (at $t=1$) they will calculate utility of the \$100 as:
 
-The sophisticated agent will first consider how they will look at the choice next week:
-
+```{=tex}
 \begin{align*}
-U_1(1,\$1001)&=100 \\
-\\
-U_1(2,\$110)&=99.275
+U_1(1,\$100)&=u(\$100)\\[6pt]
+&=100
 \end{align*}
+```
+The discounted utility of the \$110 a week later is:
 
+```{=tex}
+\begin{align*}
+U_1(2,\$110)&=u(x_0)+\beta u(x_1) \\[6pt]
+&=\beta\delta u(\$110) \\[6pt]
+&=0.95\times 0.95\times 110 \\[6pt]
+&=`r 0.95*0.95*110`
+\end{align*}
+```
+As $U_1(1,\$100) > U_1(2,\$110)$, the present-biased agent will prefer to receive \$100 immediately.
+
+At $t=0$ their preference is inconsistent with what it will be next week at $t=1$.
+
+The sophisticated present-biased agent will approach this decision differently. They consider it by backward induction.
+
+First they will look at the choice they will face next week and calculate the discounted utility of each option as they will calculate it at that time.
+
+That is, they calculate the discounted utility of the \$100 at $t=1$ from the perspective of $t=1$.
+
+```{=tex}
+\begin{align*}
+U_1(1,\$100)&=u(\$100)\\[6pt]
+&=100
+\end{align*}
+```
+They then calculate the discounted utility of the \$110 at $t=2$ from the perspective of $t=1$.
+
+```{=tex}
+\begin{align*}
+U_1(2,\$110)&=\beta\delta u(\$110) \\[6pt]
+&=0.95\times 0.95\times 110 \\[6pt]
+&=`r 0.95*0.95*110`
+\end{align*}
+```
 The sophisticated agent sees that next week they will take the \$100.
 
-As a result, today the sophisticated agent will choose \$100 in one week. They see their future decision and know that \$110 in two weeks is not available to them. They effectively accept their future present bias now.
+This is the same pair of calculations that the naive agent made at $t=1$. The difference is that the sophisticated agent makes this calculation at $t=0$ from the perspective of $t=1$. The naive agent does not consider this perspective until $t=1$.
 
-In this example, being naive or sophisticated does not change their final decision. It only changes their beliefs about their final decision before they reach it.
+After considering their preference at $t=1$, the sophisticated agent then considers their choice at $t=0$. They see their future decision at $t=1$ and know that \$110 in two weeks is not available to them. The only option that have is to choose \$100 in one week. They effectively accept their future present bias now and choose the \$100 in two weeks.
+
+In this example, being naive or sophisticated does not change their final choice. It only changes their beliefs about their final decision over time. The sophisticated agent knows at $t=0$ what they will do at $t=1$. The naive agent is unaware that at $t=1$ they will make a decision inconsistent with their choice at $t=0$. We can summarise their decisions at each time as follows:
+
+|  | Naive agent            | Sophisticated agent    |
+|-----|------------------------|------------------------|
+| $t=0$   |  \$110 at $t=2$ |  \$100 at $t=1$ |
+| $t=1$   |  \$100 at $t=1$ |  \$100 at $t=1$ |
 
 ### Example 2
 
@@ -82,18 +132,19 @@ Suppose we have a naive and a sophisticated present-biased agent, each with $\de
 
 We offer them the following choice.
 
-- \$6 today ($t=0$)
+-   \$6 today ($t=0$)
 
-- \$10 in one week ($t=1$)
+-   \$10 in one week ($t=1$)
 
-- \$16 in two weeks ($t=2$)
+-   \$16 in two weeks ($t=2$)
 
 They are also told that next week they will be offered an opportunity to change their mind.
 
-[Note: I am using $ for many of these examples, but these could equally be many other things: e.g. three movies that each provide 6, 10 or 16 utility and you can only afford to attend one.]
+\[Note: I am using \$ for many of these examples, but these could equally be many other things: e.g. three movies that each provide 6, 10 or 16 utility and you can only afford to attend one.\]
 
-First, we consider the naive agent. They calculate utility from the perspective of today. 
+First, we consider the naive agent. They calculate utility from the perspective of today.
 
+```{=tex}
 \begin{align*}
 U_0(0,\$6)&=u(\$6) \\
 &=6 \\
@@ -106,11 +157,12 @@ U_0(2,\$16)&=\beta\delta^2 u(\$16) \\
 &=0.5*1^2*16 \\
 &=8
 \end{align*}
-
+```
 The naive agent will choose the \$16 in two weeks.
 
-But what then happens when the naive agent is given the chance to change their mind after one week. 
+But what then happens when the naive agent is given the chance to change their mind after one week.
 
+```{=tex}
 \begin{align*}
 U_1(\$10 \text{ at }t=1)&=u(\$10) \\
 &=10 \\
@@ -119,11 +171,12 @@ U_1(\$16 \text{ at }t=2)&=\beta\delta u(\$16) \\
 &=0.5*1*16 \\
 &=8
 \end{align*}
-
+```
 The naive agent will change their mind and take the \$10.
 
 What of our sophisticated agent? They will make their decision today based on their correct beliefs about their future preferences. To do this, they solve by backward induction. First, what will their decision be next week?
 
+```{=tex}
 \begin{align*}
 U_1(1,\$10)&=u(\$10) \\
 &=10 \\
@@ -132,11 +185,12 @@ U_1(2,\$16)&=\beta\delta u(\$16) \\
 &=0.5*1*16 \\
 &=8
 \end{align*}
-
+```
 The sophisticated agent can see that they will choose to receive \$10 immediately when asked next week.
 
-Knowing this is the case, the sophisticated agent now decides whether they prefer the \$6 today or the \$10 next week. 
+Knowing this is the case, the sophisticated agent now decides whether they prefer the \$6 today or the \$10 next week.
 
+```{=tex}
 \begin{align*}
 U_0(0,\$6)&=u(\$6) \\
 &=6 \\
@@ -145,10 +199,10 @@ U_0(1,\$10)&=\beta\delta u(\$10) \\
 &=0.5*1*10 \\
 &=5
 \end{align*}
+```
+They prefer the \$6 today.
 
-They prefer the $6 today.
-
-The result is that the sophisticated agent will choose the \$6 today. From today’s perspective, they would prefer the \$16 in two weeks, but as they know they will cave in to their present bias next week and take the \$10, they make today’s decision on that basis.
+The result is that the sophisticated agent will choose the \$6 today. From today's perspective, they would prefer the \$16 in two weeks, but as they know they will cave in to their present bias next week and take the \$10, they make today's decision on that basis.
 
 ### Example 3
 
@@ -160,10 +214,11 @@ That is, they can pay \$10 today, \$15 at $t=1$ or \$25 at $t=2$.
 
 They are free to change the scheme over time as they see fit.
 
-The agent’s utility is linear in money $U(x_n)=x_n$, with discount factors $\delta=1$ and $\beta=0.5$.
+The agent's utility is linear in money $U(x_n)=x_n$, with discount factors $\delta=1$ and $\beta=0.5$.
 
 We start calculating utility from today:
 
+```{=tex}
 \begin{align*}
 U_0(0,-\$10)&=u(-\$10) \\
 &=-10 \\
@@ -176,11 +231,12 @@ U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
 &=0.5*1^2*(-25) \\
 &=-12.5
 \end{align*}
-
+```
 The naive agent will choose to pay \$15 at $t=1$.
 
 Now we move to $t=1$, when the naive agent reconsiders their decision:
 
+```{=tex}
 \begin{align*}
 U_1(1,-\$15)&=u(-\$15) \\
 &=-15 \\
@@ -189,7 +245,7 @@ U_1(2,-\$25)&=\beta\delta u(-\$25) \\
 &=0.5*1*(-25) \\
 &=-12.5
 \end{align*}
-
+```
 The naive agent will choose to change their decision and further delay their payment. They will now choose to pay \$25 at $t=2$.
 
 When they reach $t=2$, they have no choice but to pay the \$25.
@@ -202,14 +258,15 @@ That is, they can pay \$10 today, \$15 at $t=1$ or \$25 at $t=2$.
 
 They are free to change the scheme over time as they see fit.
 
-The agent’s utility is linear in money $U(x_n)=x_n$, with discount factors $\delta=1$ and $\beta=0.5$.
+The agent's utility is linear in money $U(x_n)=x_n$, with discount factors $\delta=1$ and $\beta=0.5$.
 
 For the sophisticated agent, we start calculating utility from the final period.
 
-At $t=2$, they have no choice but to pay the $25.
+At $t=2$, they have no choice but to pay the \$25.
 
 What of $t=1$?
 
+```{=tex}
 \begin{align*}
 U_1(1,-\$15)&=u(-\$15) \\
 &=-15 \\
@@ -218,11 +275,12 @@ U_1(2,-\$25)&=\beta\delta u(-\$25) \\
 &=0.5*1*(-25) \\
 &=-12.5
 \end{align*}
-
-The sophisticated agent can see that if they make a choice at $t=1$, they will choose to pay $25 at t = 2.
+```
+The sophisticated agent can see that if they make a choice at $t=1$, they will choose to pay \$25 at t = 2.
 
 Now we iterate at t = 0. The sophisticated agent only compares \$10 at $t=0$ with \$25 at $t=2$ because they know that at $t=1$ they will select \$25 at $t=2$. They know that if they delay once they will delay again and end up paying the largest fine. Hence they limit their comparison to those outcomes that might occur:
 
+```{=tex}
 \begin{align*}
 U_0(0,-\$10)&=u(-\$10) \\
 &=-10 \\
@@ -231,19 +289,19 @@ U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
 &=0.5*1^2*(-25) \\
 &=-12.5
 \end{align*}
-
+```
 As $U_0(0,-\$10)>U_0(2,-\$25)$, the sophisticated agent will choose to pay \$10 at $t=0$.
 
 In our examples we have seen two contrasting outcomes for the sophisticated agent.
 
-In one example they took \$6 today (rather than \$10 in one week or \$16 in two) because they knew that they would take the $10 in one week. They took the lowest possible outcome.
+In one example they took \$6 today (rather than \$10 in one week or \$16 in two) because they knew that they would take the \$10 in one week. They took the lowest possible outcome.
 
 In the latest example, they paid the lowest possible fine as they saw they would further delay paying the fine in the future, leading it to increase even more.
 
 Suboptimality of sophisticated behaviour arises from two tensions:
 
-1. They understand that they will not be able to wait for the optimal time.
+1.  They understand that they will not be able to wait for the optimal time.
 
-2. They are present-biased so prefer benefit today and costs delayed to the future.
+2.  They are present-biased so prefer benefit today and costs delayed to the future.
 
-In combination, these imply a sophisticated agent will generally take action earlier than the naive agent. They can “prepoperate”, which is doing something now when it would be better to wait.
+In combination, these imply a sophisticated agent will generally take action earlier than the naive agent. They can "prepoperate", which is doing something now when it would be better to wait.
