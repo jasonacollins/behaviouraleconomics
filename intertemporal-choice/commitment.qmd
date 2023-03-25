@@ -24,15 +24,15 @@ I will now illustrate those channels with examples.
 
 ### Forcing the optimal course of action
 
-Consider a sophisticated present-biased agent with $\beta=0.5$ and $\delta=1$ choosing between three movies:
+A sophisticated present-biased agent with $\beta=0.5$ and $\delta=1$ is choosing between three movies, an OK movie, a good movie, and a great movie. The OK movie would give utility of 6, the good movie would give utility of 10, and the great movie would give utility of 16.
 
-- An OK movie today ($t=0$) that gives utility of 6
+The problem is that only the OK movie is showing today ($t=0$). The good movie is showing next week ($t=1$), and the great movie is showing in two weeks ($t=2$).
 
-- A good movie next week ($t=1$) that gives utility of 10
+The agent has enough money and time to watch only one movie. Should they watch the OK movie today or wait for the good or great movie?
 
-- A great movie in two weeks ($t=2$) that gives utility of 16
+To determine their action, they solve by backward induction. 
 
-To determine their action, they solve by backward induction. First, what will their decision be next week?
+First, what will their decision be next week?
 
 ```{=tex}
 \begin{align*}

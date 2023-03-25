@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -557,13 +557,11 @@ ul.task-list li input[type="checkbox"] {
 <p>I will now illustrate those channels with examples.</p>
 <section id="forcing-the-optimal-course-of-action" class="level3" data-number="28.2.1">
 <h3 data-number="28.2.1" class="anchored" data-anchor-id="forcing-the-optimal-course-of-action"><span class="header-section-number">28.2.1</span> Forcing the optimal course of action</h3>
-<p>Consider a sophisticated present-biased agent with <span class="math inline">\beta=0.5</span> and <span class="math inline">\delta=1</span> choosing between three movies:</p>
-<ul>
-<li><p>An OK movie today (<span class="math inline">t=0</span>) that gives utility of 6</p></li>
-<li><p>A good movie next week (<span class="math inline">t=1</span>) that gives utility of 10</p></li>
-<li><p>A great movie in two weeks (<span class="math inline">t=2</span>) that gives utility of 16</p></li>
-</ul>
-<p>To determine their action, they solve by backward induction. First, what will their decision be next week?</p>
+<p>A sophisticated present-biased agent with <span class="math inline">\beta=0.5</span> and <span class="math inline">\delta=1</span> is choosing between three movies, an OK movie, a good movie, and a great movie. The OK movie would give utility of 6, the good movie would give utility of 10, and the great movie would give utility of 16.</p>
+<p>The problem is that only the OK movie is showing today (<span class="math inline">t=0</span>). The good movie is showing next week (<span class="math inline">t=1</span>), and the great movie is showing in two weeks (<span class="math inline">t=2</span>).</p>
+<p>The agent has enough money and time to watch only one movie. Should they watch the OK movie today or wait for the good or great movie?</p>
+<p>To determine their action, they solve by backward induction.</p>
+<p>First, what will their decision be next week?</p>
 <span class="math display">\begin{align*}
 U_1(1,\text{good})&amp;=u(\text{good}) \\[6pt]
 &amp;=10 \\[6pt]
@@ -1060,7 +1058,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 
