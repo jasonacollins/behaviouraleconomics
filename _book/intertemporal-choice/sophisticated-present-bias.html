@@ -545,8 +545,8 @@ ul.task-list li input[type="checkbox"] {
 <p>A sophisticated and naive person can make different decisions despite having the same level of impatience, <span class="math inline">\delta</span>, and the same level of present bias, <span class="math inline">\beta</span>. Any difference emerges in the way that they reason through an intertemporal choice.</p>
 <p>The naive agent makes its plans by forward reasoning, starting from today (<span class="math inline">t=0</span>).</p>
 <ol type="1">
-<li><p>First they decide their preferred option for <span class="math inline">t=0</span>, believing that they will stick to their plan once they move to next period.</p></li>
-<li><p>When they move to the next period (<span class="math inline">t=1</span>) they recompute their preferred plan, again believing they will stick to the plan once they move to next period.</p></li>
+<li><p>First they decide their preferred option for <span class="math inline">t=0</span>, believing that they will stick to their plan once they move to the next period.</p></li>
+<li><p>When they move to the next period (<span class="math inline">t=1</span>) they recompute their preferred plan, again believing they will stick to the plan once they move to the next period.</p></li>
 <li><p>They repeat this process as they move through time.</p></li>
 </ol>
 <p>In contrast, the sophisticated present-biased agent makes its plans by backward reasoning, starting from the final period (<span class="math inline">t=T</span>).</p>
@@ -566,7 +566,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>Would you like $100 next week or $110 in two weeks?</p>
 </blockquote>
-<p>We also tell them that we will give them the opportunity to reconsider their decision next week.</p>
+<p>We also tell them that we will allow them to reconsider their decision next week.</p>
 <p>When the naive present-biased agent considers this problem, they simply compare the discounted utility of each payoff from the perspective of today.</p>
 <p>The discounted utility of the $100 next week is:</p>
 <span class="math display">\begin{align*}
@@ -598,8 +598,8 @@ U_1(2,\$110)&amp;=\beta\delta u(x_2) \\[6pt]
 \end{align*}</span>
 <p>As <span class="math inline">U_1(1,\$100) &gt; U_1(2,\$110)</span>, the present-biased agent will prefer to receive $100 immediately.</p>
 <p>At <span class="math inline">t=0</span> their preference is inconsistent with what it will be next week at <span class="math inline">t=1</span>.</p>
-<p>The sophisticated present-biased agent will approach this decision differently. They consider it by backward induction.</p>
-<p>First they will look at the choice they will face next week and calculate the discounted utility of each option as they will calculate it at that time.</p>
+<p>The sophisticated present-biased agent will approach this decision differently. They consider it using backward induction.</p>
+<p>First, they will look at the choice they will face next week and calculate the discounted utility of each option as they will calculate it at that time.</p>
 <p>That is, they calculate the discounted utility of the $100 at <span class="math inline">t=1</span> from the perspective of <span class="math inline">t=1</span>.</p>
 <span class="math display">\begin{align*}
 U_1(1,\$100)&amp;=u(x_1) \\[6pt]
@@ -615,7 +615,7 @@ U_1(2,\$110)&amp;=\beta\delta u(x_2) \\[6pt]
 \end{align*}</span>
 <p>As <span class="math inline">U_1(1,\$100) &gt; U_1(2,\$110)</span>, the sophisticated agent sees that next week, at <span class="math inline">t=1</span> they will take the $100.</p>
 <p>This is the same pair of calculations that the naive agent made at <span class="math inline">t=1</span>. The difference is that the sophisticated agent makes this calculation at <span class="math inline">t=0</span> from the perspective of <span class="math inline">t=1</span>. The naive agent does not consider this perspective until <span class="math inline">t=1</span>.</p>
-<p>After considering their preference at <span class="math inline">t=1</span>, the sophisticated agent then considers their choice at <span class="math inline">t=0</span>. They see their future decision at <span class="math inline">t=1</span> and know that $110 in two weeks is not available to them. The only option that have is to choose $100 in one week. They effectively accept their future present bias now and choose the $100 in two weeks.</p>
+<p>After considering their preference at <span class="math inline">t=1</span>, the sophisticated agent then considers their choice at <span class="math inline">t=0</span>. They see their future decision at <span class="math inline">t=1</span> and know that $110 in two weeks is not available to them. The only option they have is to choose $100 in one week. They effectively accept their future present bias now and choose the $100 in two weeks.</p>
 <p>In this example, being naive or sophisticated does not change their final choice. It only changes their beliefs about their final decision over time. The sophisticated agent knows at <span class="math inline">t=0</span> what they will do at <span class="math inline">t=1</span>. The naive agent is unaware that at <span class="math inline">t=1</span> they will make a decision inconsistent with their choice at <span class="math inline">t=0</span>. We can summarise their decisions at each time as follows:</p>
 <table class="table">
 <thead>
@@ -648,7 +648,7 @@ U_1(2,\$110)&amp;=\beta\delta u(x_2) \\[6pt]
 <li><p>A good movie next week (<span class="math inline">t=1</span>) that gives utility of 10</p></li>
 <li><p>A great movie in two weeks (<span class="math inline">t=2</span>) that gives utility of 16</p></li>
 </ul>
-<p>We also tell the agents that next week they will be offered an opportunity to change their mind.</p>
+<p>We also tell the agents that next week they will be offered an opportunity to change their minds.</p>
 <p>First, we consider the naive agent. They calculate utility from the perspective of today.</p>
 <span class="math display">\begin{align*}
 U_0(0,\text{OK})&amp;=u(\text{OK}) \\
@@ -663,7 +663,7 @@ U_0(2,\text{great})&amp;=\beta\delta^2 u(\text{great}) \\
 &amp;=8
 \end{align*}</span>
 <p>As <span class="math inline">U_0(2,\text{great})&gt;U_0(0,\text{OK})&gt;U_0(1,\text{good})</span>, the naive agent will choose the great movie in two weeks.</p>
-<p>But what then happens when the naive agent is given the chance to change their mind after one week.</p>
+<p>But what then happens when the naive agent is given the chance to change their mind after one week?</p>
 <span class="math display">\begin{align*}
 U_1(1,\text{good})&amp;=u(\text{good}) \\
 &amp;=10 \\
@@ -755,7 +755,7 @@ U_0(2,-\$25)&amp;=\beta\delta^2 u(-\$25) \\
 \end{align*}</span>
 <p>As <span class="math inline">U_0(0,-\$10)&gt;U_0(2,-\$25)</span>, the sophisticated agent will choose to pay $10 at <span class="math inline">t=0</span>.</p>
 <p>In the examples, we have seen two contrasting outcomes for the sophisticated agent.</p>
-<p>In the movie example, they watch an OK movie today (rather than a good movie in one week or a great movie in two) because they knew that they would watch the good movie in one week if they delayed to watch the great movie. As a result, they watched an earlier, worse movie than the naive agent.</p>
+<p>In the movie example, they watch an OK movie today, rather than a good movie in one week or a great movie in two, because they knew that they would watch the good movie in one week if they delayed to watch the great movie. As a result, they watched an earlier, worse movie than the naive agent.</p>
 <p>In the library fine example, they paid the lowest possible fine as they saw they would further delay paying the fine in the future, leading it to increase even more.</p>
 <p>The sophisticated agent’s behaviour arises from two tensions:</p>
 <ol type="1">

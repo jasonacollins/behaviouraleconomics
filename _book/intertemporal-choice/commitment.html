@@ -83,10 +83,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 28&nbsp; Commitment">
-<meta property="og:description" content="A commitment device is a mechanism which locks yourself into a course of action that you might not otherwise choose but that produces the desired result.">
+<meta property="og:description" content="A sophisticated present-biased agent can foresee their future actions and adjust their decisions today based on their foresight.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 28&nbsp; Commitment">
-<meta name="twitter:description" content="A commitment device is a mechanism which locks yourself into a course of action that you might not otherwise choose but that produces the desired result.">
+<meta name="twitter:description" content="A sophisticated present-biased agent can foresee their future actions and adjust their decisions today based on their foresight.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -507,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition"><span class="toc-section-number">28.1</span>  Definition</a></li>
+  <li><a href="#commitment-device" id="toc-commitment-device" class="nav-link active" data-scroll-target="#commitment-device"><span class="toc-section-number">28.1</span>  Commitment device</a></li>
   <li><a href="#commitment-examples" id="toc-commitment-examples" class="nav-link" data-scroll-target="#commitment-examples"><span class="toc-section-number">28.2</span>  Commitment examples</a>
   <ul class="collapse">
   <li><a href="#forcing-the-optimal-course-of-action" id="toc-forcing-the-optimal-course-of-action" class="nav-link" data-scroll-target="#forcing-the-optimal-course-of-action"><span class="toc-section-number">28.2.1</span>  Forcing the optimal course of action</a></li>
@@ -539,82 +539,71 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="definition" class="level2" data-number="28.1">
-<h2 data-number="28.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">28.1</span> Definition</h2>
-<p>A commitment device is a mechanism which locks yourself into a course of action that you might not otherwise choose but that produces the desired result.</p>
+<p>A sophisticated present-biased agent can foresee their future actions and adjust their decisions today based on their foresight.</p>
+<p>This foresight provides an opportunity. By seeing their future selves fail, they can commit themselves to a course of action today that they would not otherwise be able to choose.</p>
+<section id="commitment-device" class="level2" data-number="28.1">
+<h2 data-number="28.1" class="anchored" data-anchor-id="commitment-device"><span class="header-section-number">28.1</span> Commitment device</h2>
+<p>People often implement the opportunity to commit themselves to a course of action by using a commitment device.</p>
+<p>A commitment device is a mechanism that locks you into a course of action by changing the value or availability of future options.</p>
 <p>Commitment devices may work through the following channels:</p>
 <ul>
-<li><p>Artificially depressing the value of the bad course of action</p></li>
-<li><p>Artificially increasing the value of the optimal course of action</p></li>
-<li><p>Forcing the agent to maintain the optimal course of action.</p></li>
+<li><p>They may depress the value of the bad course of action.</p></li>
+<li><p>They may increase the value of the optimal course of action</p></li>
+<li><p>They may force the agent to maintain the optimal course of action.</p></li>
 </ul>
 </section>
 <section id="commitment-examples" class="level2" data-number="28.2">
 <h2 data-number="28.2" class="anchored" data-anchor-id="commitment-examples"><span class="header-section-number">28.2</span> Commitment examples</h2>
+<p>I will now illustrate those channels with examples.</p>
 <section id="forcing-the-optimal-course-of-action" class="level3" data-number="28.2.1">
 <h3 data-number="28.2.1" class="anchored" data-anchor-id="forcing-the-optimal-course-of-action"><span class="header-section-number">28.2.1</span> Forcing the optimal course of action</h3>
-<p>Recall what the sophisticated present-biased agent with <span class="math inline">\beta=0.5</span> and <span class="math inline">\delta=1</span> did when faced with a choice of (0, $6; 1, $10; 2, $16). First they realised that next week they would take the $10 straight away.</p>
+<p>Consider a sophisticated present-biased agent with <span class="math inline">\beta=0.5</span> and <span class="math inline">\delta=1</span> choosing between three movies:</p>
+<ul>
+<li><p>An OK movie today (<span class="math inline">t=0</span>) that gives utility of 6</p></li>
+<li><p>A good movie next week (<span class="math inline">t=1</span>) that gives utility of 10</p></li>
+<li><p>A great movie in two weeks (<span class="math inline">t=2</span>) that gives utility of 16</p></li>
+</ul>
+<p>To determine their action, they solve by backward induction. First, what will their decision be next week?</p>
 <span class="math display">\begin{align*}
-U_1(1,\$10)&amp;=u(\$10) \\
-&amp;=10 \\
-\\
-U_1(2,\$16)&amp;=\beta\delta u(\$16) \\
-&amp;=0.5\times 1\times 16 \\
+U_1(1,\text{good})&amp;=u(\text{good}) \\[6pt]
+&amp;=10 \\[6pt]
+\\[6pt]
+U_1(2,\text{great})&amp;=\beta\delta u(\text{great}) \\[6pt]
+&amp;=0.5\times 1\times 16 \\[6pt]
 &amp;=8
 \end{align*}</span>
-<p>Knowing this is the case, they then chose to take the $6 today.</p>
+<p>As <span class="math inline">U_1(1,\text{good})&gt;U_1(2,\text{great})</span>, the sophisticated agent can see that they will choose to watch the good movie immediately.</p>
+<p>Knowing this is the case, the sophisticated agent now decides whether they prefer the OK movie today or the good movie next week.</p>
 <span class="math display">\begin{align*}
-U_0(0,\$6)&amp;=u(\$6) \\
-&amp;=6 \\
-\\
-U_0(1,\$10)&amp;=\beta\delta u(\$10) \\
-&amp;=0.5\times 1\times 10 \\
+U_0(0,\text{OK})&amp;=u(\text{OK}) \\[6pt]
+&amp;=6 \\[6pt]
+\\[6pt]
+U_0(1,\text{good})&amp;=\beta\delta u(\text{good}) \\[6pt]
+&amp;=0.5\times 1\times 10 \\[6pt]
 &amp;=5
 \end{align*}</span>
-<p>But when they compare all three, they would prefer the $16 in two weeks. It is only because they can foresee their future failing after one week that they don’t wait.</p>
+<p>As <span class="math inline">U_0(0,\text{OK})&gt;U_0(1,\text{good})</span>, the sophisticated agent prefers the OK movie today.</p>
+<p>But when they compare all three options at <span class="math inline">t=0</span>, they would prefer the great movie in two weeks.</p>
 <span class="math display">\begin{align*}
-U_0(0,\$6)&amp;=u(\$6) \\
-&amp;=6 \\
-\\
-U_0(1,\$10)&amp;=\beta\delta u(\$10) \\
-&amp;=0.5\times 1\times 10 \\
-&amp;=5 \\
-\\
-U_0(2,\$16)&amp;=\beta\delta^2 u(\$16) \\
-&amp;=0.5\times 1^2\times 16 \\
-&amp;=8
+U_0(2,\text{great})&amp;=\beta\delta^2 u(\text{great}) \\[6pt]
+&amp;=0.5\times 1^2\times 16 \\[6pt]
+&amp;=8 \\[6pt]
+&amp;\geq 6=U_0(0,\text{OK})
 \end{align*}</span>
-<p>But what if they could commit themselves today?</p>
-<p>Suppose that not only could they select an option today, but they could also choose to bind themselves to that decision such that they could not change it in the future. The result of that: a sophisticated present-biased agent would choose the $16 in two weeks, and bind their future self from changing their mind.</p>
-<p><span class="math display">
-U_0(0,\$6)=6
-</span></p>
-<p><span class="math display">
-U_0(0,\$10)=5
-</span></p>
-<p><span class="math display">
-U_0(0,\$16)=6
-</span></p>
+<p>It is only because they can foresee their future failing after one week that they don’t wait for the great movie.</p>
+<p>But what if they could commit themselves today? For example, suppose they could purchase a non-refundable, non-resalable ticket to the great movie in two weeks. The result is that a sophisticated present-biased agent would buy a ticket to the great movie in two weeks and prevent their future self from changing their action.</p>
 </section>
 <section id="forcing-the-optimal-course-of-action-odysseus" class="level3" data-number="28.2.2">
 <h3 data-number="28.2.2" class="anchored" data-anchor-id="forcing-the-optimal-course-of-action-odysseus"><span class="header-section-number">28.2.2</span> Forcing the optimal course of action: Odysseus</h3>
 <p>Another example of forcing the agent to maintain the optimal course of action is the story of Odysseus.</p>
-<p>Odysseus was required to sail past the sirens at <span class="math inline">t=1</span>. At that time he can either jump off his ship to join the sirens (and die) or sail on past and live.</p>
-<p>As Odysseus is a sophisticated present-biased agent, he considers what he is likely to do at that time. He realises that he will jump of the ship for the immediate benefit of joining the sirens at the loss of the longer-term benefit of living.</p>
-<p>But from the perspective of Odysseus today, with both the benefits of the siren and living in the future discounted, Odysseus would prefer to live. As a result, he decides to commit himself to that course of action by instructing his crew to tie him to the mast (plus leaving his ears unplugged so that he also gets some benefits from the siren song).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p></p><figcaption class="figure-caption"><a href="https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Ulysses_and_the_Sirens_(1891).jpg">John William Waterhouse, Ulysses and the Sirens (1891)</a></figcaption><p></p>
-<p><a href="img/John_William_Waterhouse_-_Ulysses_and_the_Sirens_(1891).jpg" class="lightbox" title="John William Waterhouse, Ulysses and the Sirens (1891)" data-gallery="quarto-lightbox-gallery-1"><img src="img/John_William_Waterhouse_-_Ulysses_and_the_Sirens_(1891).jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p>Odysseus was required to sail past the sirens at <span class="math inline">t=1</span>. At that time he can either jump off his ship to join the sirens (and die) or sail on past and live, having a great life at <span class="math inline">t=2</span>.</p>
+<p>As Odysseus is a sophisticated present-biased agent, he considers what he is likely to do at <span class="math inline">t=1</span>. He realises that he will jump off the ship for the immediate benefit of joining the sirens at the loss of the longer-term discounted benefit of living.</p>
+<p>But from the perspective of Odysseus today, at <span class="math inline">t=0</span>, with both the benefits of the sirens and living in the future and therefore discounted, Odysseus would prefer to live. As a result, he decides to commit himself to that course of action by instructing his crew to tie him to the mast (plus leaving his ears unplugged so that he also gets some benefits from the siren song).</p>
 </section>
 <section id="forcing-the-optimal-course-of-action-lay-by" class="level3" data-number="28.2.3">
 <h3 data-number="28.2.3" class="anchored" data-anchor-id="forcing-the-optimal-course-of-action-lay-by"><span class="header-section-number">28.2.3</span> Forcing the optimal course of action: lay-by</h3>
-<p>Lay-by involves paying a deposit and administrative fee toward the purchase of a product. You receive your purchase when you make payment in full some time later.</p>
-<p>Let us see how that could help a quasi-hyperbolic discounter with discount factors <span class="math inline">\delta=1</span> and <span class="math inline">\beta=1/2</span>.</p>
-<p>Suppose you want a new jacket for work. You need to save for three months to purchase the jacket. But each month you save you forgo consumption that would boost your utility. Today you decide whether you will save for the jacket or not.</p>
-<p>You receive the following payoffs for each course of action:</p>
+<p>Suppose a quasi-hyperbolic discounting agent with discount factors <span class="math inline">\beta=1/2</span> and <span class="math inline">\delta=1</span> wants a new jacket for work. They need to save for three months to purchase the jacket. But each month they save they forgo consumption that would boost their utility.</p>
+<p>They receive the following payoffs for each action:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -639,18 +628,19 @@ U_0(0,\$16)=6
 </tr>
 </tbody>
 </table>
-<p>First, consider what a naive quasi-hyperbolic discounter chooses.</p>
-<p>At <span class="math inline">t=0</span> the highest discounted utility is for Save. You plan to save for the jacket.</p>
+<p>First, consider what a naive quasi-hyperbolic discounting agent chooses.</p>
+<p>At <span class="math inline">t=0</span>, they calculate the discounted utility of each option.</p>
 <span class="math display">\begin{align*}
-U_0(\text{Save})&amp;=0+\beta\delta \times 0+\beta\delta^2\times 45 \\
-&amp;=0.5\times 45 \\
-&amp;=22.5 \\
-\\
-U_0(\text{Spend})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
-&amp;=10+0.5\times 10+0.5\times 10 \\
+U_0(\text{Save})&amp;=0+\beta\delta \times 0+\beta\delta^2\times 45 \\[6pt]
+&amp;=0.5\times 45 \\[6pt]
+&amp;=22.5 \\[6pt]
+\\[6pt]
+U_0(\text{Spend})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\[6pt]
+&amp;=10+0.5\times 10+0.5\times 10 \\[6pt]
 &amp;=20
 \end{align*}</span>
-<p>One month now passes. You have saved for a month. You could now spend both your savings from last month and this month, giving a short term boost, or keep saving for your jacket.</p>
+<p>At <span class="math inline">t=0</span>, <span class="math inline">U_0(\text{Save})&gt;U_0(\text{Spend})</span>. The agent plans to save for the jacket.</p>
+<p>One month now passes. The agent has saved for a month. They could now spend their savings from last month and this month, giving a short-term boost, or keep saving for their jacket. The payoffs for each action are:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -672,16 +662,17 @@ U_0(\text{Spend})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
 </tr>
 </tbody>
 </table>
-<p>At <span class="math inline">t=1</span> spending now has the highest discounted utility. After saving for the first period, you spend despite initially wanting to save.</p>
+<p>Again, the naive agent calculates the discounted utility of each option.</p>
 <span class="math display">\begin{align*}
-U_1(\text{Save})&amp;=0+\beta\delta\times 45 \\
-&amp;=0.5\times 45 \\
-&amp;=22.5 \\
-\\
-U_1(\text{Start spending at t=1})&amp;=20+\beta\delta \times 10 \\
-&amp;=20+0.5\times 10 \\
+U_1(\text{Save})&amp;=0+\beta\delta\times 45 \\[6pt]
+&amp;=0.5\times 45 \\[6pt]
+&amp;=22.5 \\[6pt]
+\\[6pt]
+U_1(\text{Start spending at t=1})&amp;=20+\beta\delta \times 10 \\[6pt]
+&amp;=20+0.5\times 10 \\[6pt]
 &amp;=25
 \end{align*}</span>
+<p>At <span class="math inline">t=1</span> spending now has the highest discounted utility. After saving for the first period, the agent spends despite initially wanting to save.</p>
 <p>Now let’s consider this problem from the point of view of a sophisticated present-biased agent. They see their full choice set as:</p>
 <table class="table">
 <thead>
@@ -713,31 +704,32 @@ U_1(\text{Start spending at t=1})&amp;=20+\beta\delta \times 10 \\
 </tr>
 </tbody>
 </table>
-<p>You work backward through time. At <span class="math inline">t=2</span>, you will buy the jacket.</p>
-<p>The utility of each option at <span class="math inline">t=1</span> is as follows:</p>
+<p>The sophisticated agent works backward through time. At <span class="math inline">t=2</span>, if they have saved, the agent will buy the jacket. Otherwise, the agent will spend.</p>
+<p>The discounted utility of the options at <span class="math inline">t=1</span> is as follows:</p>
 <span class="math display">\begin{align*}
-U_1(\text{Save})&amp;=0+\beta\delta\times 45 \\
-&amp;=0.5\times 45 \\
-&amp;=22.5 \\
-\\
-U_1(\text{Start spending at }t=1)&amp;=20+\beta\delta \times 10 \\
-&amp;=20+0.5\times 10 \\
+U_1(\text{Save})&amp;=0+\beta\delta\times 45 \\[6pt]
+&amp;=0.5\times 45 \\[6pt]
+&amp;=22.5 \\[6pt]
+\\[6pt]
+U_1(\text{Start spending at }t=1)&amp;=20+\beta\delta \times 10 \\[6pt]
+&amp;=20+0.5\times 10 \\[6pt]
 &amp;=25
 \end{align*}</span>
-<p>If the agent had spent at <span class="math inline">t=0</span>, you have no choice but to spend at <span class="math inline">t=1</span>.</p>
-<p>The sophisticated quasi-hyperbolic discounter now knows that saving for the jacket is not available to them as they will spend at <span class="math inline">t=1</span> regardless of their initial actions. As a result, at <span class="math inline">t=0</span> they choose between the two feasible options:</p>
+<p>As <span class="math inline">U_1(\text{Start spending at }t=1)&gt;U_1(\text{Save})</span>, the sophisticated agent would spend.</p>
+<p>The sophisticated agent now knows that saving for the jacket is not available to them as they will spend at <span class="math inline">t=1</span> regardless of their initial action. There was no need to consider the option to start spending at <span class="math inline">t=0</span> as if they had spent then there is no other choice at <span class="math inline">t=1</span>.</p>
+<p>The sophisticated agent now chooses between the two feasible options at <span class="math inline">t=0</span>:</p>
 <span class="math display">\begin{align*}
-U_0(\text{Start spending at }t=1)&amp;=0+\beta\delta \times 20+\beta\delta^2\times 10 \\
-&amp;=0.5\times 20+0.5\times 10 \\
-&amp;=15 \\
-\\
-U_0(\text{Save})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
-&amp;=10+0.5\times 10+0.5\times 10 \\
+U_0(\text{Start spending at }t=1)&amp;=0+\beta\delta \times 20+\beta\delta^2\times 10 \\[6pt]
+&amp;=0.5\times 20+0.5\times 10 \\[6pt]
+&amp;=15 \\[6pt]
+\\[6pt]
+U_0(\text{Spend})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\[6pt]
+&amp;=10+0.5\times 10+0.5\times 10 \\[6pt]
 &amp;=20
 \end{align*}</span>
-<p>They start to spend at <span class="math inline">t=0</span>. Contrast this with the naïve agent who chooses Save at <span class="math inline">t=0</span>. The sophisticated agent would also prefer Save at <span class="math inline">t=0</span>, but knows that Save is not available to them as they will spend at <span class="math inline">t=1</span>.</p>
-<p>Now consider what the sophisticated agent may do in the presence of lay-by.</p>
-<p>For payment of an administrative fee equivalent to 1 unit of utility and an initial deposit (the agent’s savings in <span class="math inline">t=0</span>), you reserve the jacket, preventing you from spending that money in period 2. The new set of options is:</p>
+<p>As <span class="math inline">U_0(\text{Spend})&lt;U_0(\text{Start spending at }t=1)</span>, they start to spend at <span class="math inline">t=0</span>. Contrast this with the naïve agent who chooses Save at <span class="math inline">t=0</span>.</p>
+<p>Now consider what the sophisticated agent may do in the presence of lay-by. Lay-by involves paying a deposit and administrative fee toward the purchase of a product. You receive your purchase when you make payment in full later.</p>
+<p>For payment of an administrative fee equivalent to 1 unit of utility and an initial deposit (the agent’s savings in <span class="math inline">t=0</span>), the agent can reserve the jacket, preventing them from spending that money at <span class="math inline">t=2</span>. The new set of options is:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -775,41 +767,40 @@ U_0(\text{Save})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
 </tbody>
 </table>
 <p>The lay-by option is strictly worse than Save. But what happens if lay-by is available to the sophisticated present-biased agent?</p>
-<p>Again, working backward, at <span class="math inline">t=2</span>, the agent buys the jacket.</p>
-<p>At <span class="math inline">t=1</span>, by the same logic we looked at previously, they spend if they are able to do so. That eliminates Save from their choice set. At <span class="math inline">t=0</span>, they now compare the feasible options:</p>
+<p>Again, working backward, at <span class="math inline">t=2</span>, the agent buys the jacket if they have saved and otherwise spends.</p>
+<p>At <span class="math inline">t=1</span>, by the same logic we looked at previously, they spend if they can do so. That eliminates Save from their choice set.</p>
+<p>At <span class="math inline">t=0</span>, they now compare the feasible options:</p>
 <span class="math display">\begin{align*}
-U_0(\text{Start spending at }t=1)&amp;=0+\beta\delta \times 20+\beta\delta^2\times 10 \\
-&amp;=0.5\times 20+0.5\times 10 \\
-&amp;=15 \\
-\\
-U_0(\text{Spend})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\
-&amp;=10+0.5\times 10+0.5\times 10 \\
-&amp;=20 \\
-\\
-U_0(\text{Lay-by})&amp;=-1+\beta\delta \times 0+\beta\delta^2\times 45 \\
-&amp;=-1+0.5\times 0+0.5\times 45 \\
+U_0(\text{Start spending at }t=1)&amp;=0+\beta\delta \times 20+\beta\delta^2\times 10 \\[6pt]
+&amp;=0.5\times 20+0.5\times 10 \\[6pt]
+&amp;=15 \\[6pt]
+\\[6pt]
+U_0(\text{Spend})&amp;=10+\beta\delta \times 10+\beta\delta^2\times 10 \\[6pt]
+&amp;=10+0.5\times 10+0.5\times 10 \\[6pt]
+&amp;=20 \\[6pt]
+\\[6pt]
+U_0(\text{Lay-by})&amp;=-1+\beta\delta \times 0+\beta\delta^2\times 45 \\[6pt]
+&amp;=-1+0.5\times 0+0.5\times 45 \\[6pt]
 &amp;=21.5
 \end{align*}</span>
-<p>Lay-by is the preferred option at <span class="math inline">t=0</span>. As it binds the agent in the future, they are able to stick to this plan.</p>
-<p>Note that Lay-by is strictly worse than Save as the agent must pay the administrative fee. But the sophisticated quasi-hyperbolic discounter chooses it as the only feasible way to get their jacket. Without Lay-by they know they will Start spending at <span class="math inline">t=1</span> and end up with lower utility from the perspective of their <span class="math inline">t=0</span> self.</p>
+<p>As <span class="math inline">U_0(\text{Lay-by})&gt;U_0(\text{Spend})&lt;U_0(\text{Start spending at }t=1)</span>, lay-by is the preferred option at <span class="math inline">t=0</span>. As it binds the agent in the future, they can stick to this plan.</p>
+<p>Note that lay-by is strictly worse than Save as the agent must pay the administrative fee. But the sophisticated quasi-hyperbolic discounting agent chooses it as the only feasible way to get their jacket. Without lay-by they know they will start spending at <span class="math inline">t=1</span> and end up with lower utility from the perspective of their <span class="math inline">t=0</span> self.</p>
 </section>
 <section id="depressing-the-value-of-the-bad-course-of-action" class="level3" data-number="28.2.4">
 <h3 data-number="28.2.4" class="anchored" data-anchor-id="depressing-the-value-of-the-bad-course-of-action"><span class="header-section-number">28.2.4</span> Depressing the value of the bad course of action</h3>
 <p><a href="https://www.stickk.com">stickK</a> is a online platform that enables people to commit to future courses of action. stickK works as follows:</p>
-<ol type="1">
-<li><p>You state a time-based goal, such as not smoking during the next month, losing 5kg over the next 90 days, or writing the next chapter of your PhD thesis by Christmas.</p></li>
-<li><p>You commit a stake that will be paid to a charity (or an anti-charity) if you fail to meet your goal.</p></li>
-<li><p>At the stated time you report (or a referee appointed by you reports) whether you have met your goal.</p></li>
-<li><p>If you fail to report or report that you failed to meet your goal, your credit card is debited by the staked amount.</p></li>
-</ol>
+<p>First, you state a time-based goal, such as not smoking during the next month, losing 5kg over the next 90 days, or writing the next chapter of your PhD thesis by Christmas.</p>
+<p>Second, you commit a stake that will be paid to a charity (or an anti-charity) if you fail to meet your goal.</p>
+<p>At the stated time, you then report (or a referee appointed by you reports) whether you have met your goal. If you fail to report or report that you failed to meet your goal, your credit card is debited by the staked amount.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/stickk.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/stickk.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/stickk.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/stickk.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>The following is an illustration of how it works mathematically.</p>
-<p>A sophisticated present-biased agent with <span class="math inline">\delta=1</span> and <span class="math inline">\beta=1/2</span> enjoys smoking. Smoking gives utility of 5. However, the agent also likes being healthy. Higher health gives utility of 8.</p>
-<p>At <span class="math inline">t=0</span> the agent is deciding whether to smoke over the next month (<span class="math inline">t=1</span>). If the agent doesn’t smoke, it will have better health at <span class="math inline">t=2</span>.</p>
+<p>I used stickK during my PhD. I regularly set deadlines for tasks and staked, say, a payment of $500 to the National Rifle Association. If I didn’t complete the task, I lost the money. Throughout the PhD, I met my benchmarks every time except for one.</p>
+<p>To understand how stickK works in the context of the <span class="math inline">\beta\delta</span> model, consider a sophisticated present-biased agent who is weighing the enjoyment they get from smoking versus the long-term health effects.</p>
+<p>This sophisticated present-biased agent has <span class="math inline">\beta=1/2</span> and <span class="math inline">\delta=1</span>. They enjoy smoking, which gives them utility of 5. However, the agent also likes being healthy. Higher health gives utility of 8.</p>
+<p>At <span class="math inline">t=0</span> the agent is deciding whether to smoke over the next month (<span class="math inline">t=1</span>). If the agent doesn’t smoke, they will have better health at <span class="math inline">t=2</span>.</p>
 <p>The sophisticated agent works backward through time. At <span class="math inline">t=1</span> its payoffs are:</p>
 <span class="math display">\begin{align*}
 U_1(\text{smoking})&amp;=5 \\
@@ -820,66 +811,71 @@ U_1(\text{healthy})&amp;=\beta\delta\times 8 \\
 <p>The agent decides to smoke.</p>
 <p>As a result, at <span class="math inline">t=0</span>, knowing that it will cave at <span class="math inline">t=1</span>, the agent doesn’t bother committing to not smoking, even though from the perspective of <span class="math inline">t=0</span> refraining from smoking is the better option:</p>
 <span class="math display">\begin{align*}
-U_0(\text{smoking})&amp;=\beta\delta\times 5 \\
-&amp;=2.5
-\\
-U_0(\text{healthy})&amp;=\beta\delta^2\times 8 \\
+U_0(\text{smoking})&amp;=\beta\delta\times 5 \\[6pt]
+&amp;=2.5 \\[6pt]
+\\[6pt]
+U_0(\text{healthy})&amp;=\beta\delta^2\times 8 \\[6pt]
 &amp;=4
 \end{align*}</span>
-<p>But now suppose the agent learns about stickK. The agent now has the option of staking a sum at <span class="math inline">t=0</span> to prevent it from smoking. The agent decides to stake an amount equivalent to utility 5 that would be incurred at <span class="math inline">t=2</span>.</p>
+<p>But now suppose the agent learns about stickK. The agent has the option of staking a sum at <span class="math inline">t=0</span> to prevent it from smoking. The agent decides to stake an amount equivalent to utility 5 that would be incurred at <span class="math inline">t=2</span>.</p>
 <p>Working backward through time, the agent knows that at <span class="math inline">t=1</span> if it has not staked any money with stickK, it will smoke. But what if it has?</p>
 <span class="math display">\begin{align*}
-U_1(\text{stickK+smoking})&amp;=5-\beta\delta\times 5 \\
-&amp;=2.5
-\\
-U_1(\text{stickK+healthy})&amp;=\beta\delta\times 8 \\
+U_1(\text{stickK+smoking})&amp;=u(\text{smoking})+\beta\delta\times u(\text{lost stake}) \\[6pt]
+&amp;=5+\beta\delta\times (-5) \\[6pt]
+&amp;=2.5 \\[6pt]
+\\[6pt]
+U_1(\text{stickK+healthy})&amp;=\beta\delta\times u(\text{healthy}) \\[6pt]
+&amp;=\beta\delta\times 8 \\[6pt]
 &amp;=4
 \end{align*}</span>
-<p>The agent would refrain from smoking at <span class="math inline">t=1</span> due to the penalty it would have to pay.</p>
-<p>This means the agent’s options at <span class="math inline">t=0</span> are effectively:</p>
+<p>The agent would refrain from smoking at <span class="math inline">t=1</span> due to the penalty they would have to pay.</p>
+<p>This means the agent’s options at <span class="math inline">t=0</span> are effectively a comparison between smoking and using stickK to commit to not smoking. The discounted utility of each option is as follows.</p>
 <span class="math display">\begin{align*}
-U_0(\text{smoking})&amp;=\beta\delta\times 5 \\
-&amp;=2.5
-\\
-U_0(\text{stickK+healthy})&amp;=\beta\delta^2\times 8 \\
+U_0(\text{smoking})&amp;=\beta\delta\times u(\text{smoking}) \\[6pt]
+&amp;=\beta\delta\times 5 \\[6pt]
+&amp;=2.5 \\[6pt]
+\\[6pt]
+U_0(\text{stickK+healthy})&amp;=\beta\delta^2\times u(\text{healthy}) \\[6pt]
+&amp;=\beta\delta^2\times 8 \\[6pt]
 &amp;=4
 \end{align*}</span>
-<p>The agent chooses to commit using stickK.</p>
-<p>For a problem of this form the agent could always successfully use stickK to commit to any action. The agent just needs to make the stake high enough.</p>
+<p>As <span class="math inline">U_0(\text{stickK+healthy})&gt;U_0(\text{smoking})</span>, the agent chooses to commit using stickK.</p>
+<p>For any problem of this form, the agent could always successfully use stickK to commit to any action. The agent just needs to make the stake high enough.</p>
 </section>
 <section id="increasing-the-value-of-the-optimal-action-temptation-bundling" class="level3" data-number="28.2.5">
 <h3 data-number="28.2.5" class="anchored" data-anchor-id="increasing-the-value-of-the-optimal-action-temptation-bundling"><span class="header-section-number">28.2.5</span> Increasing the value of the optimal action: temptation bundling</h3>
 <p>“Temptation bundling” involves increasing the value of the optimal course of action by adding a temptation to that course.</p>
 <p>Consider the following example.</p>
-<p>Beth has the choice between the following options:</p>
+<p>Beth has the choice between exercising and watching television today at <span class="math inline">t=0</span>.</p>
 <ul>
-<li><p>Exercising at <span class="math inline">t=0</span> (utility = 0) which leads her to being healthy and happy at time 1 (utility = 12)</p></li>
-<li><p>Watching television at time 0 (utility = 6) and being unhealthy and unhappy at time 1 (utility = 0)</p></li>
+<li><p>Beth does not enjoy exercise, which gives utility of 0. However, exercise leads her to be healthy, giving utility of 12 in the future at <span class="math inline">t=1</span>.</p></li>
+<li><p>Beth enjoys watching television, which gives utility of 6. However, watching television leads her to be unhealthy with utility of 0 in the future at <span class="math inline">t=1</span>.</p></li>
 </ul>
-<p>Beth discounts the future quasi-hyperbolically. Beth’s <span class="math inline">\beta=1/2</span> and her <span class="math inline">\delta=2/3</span>. Does Beth exercise?</p>
-<p>We solve as follows:</p>
+<p>Beth is sophisticated and discounts the future quasi-hyperbolically. Beth’s <span class="math inline">\beta=1/2</span> and her <span class="math inline">\delta=2/3</span>. Does Beth exercise?</p>
+<p>Beth works through the options by backward induction. At <span class="math inline">t=1</span> there is no choice to be made, as Beth simply enjoys the utility of the action she chose at <span class="math inline">t=0</span>.</p>
+<p>For <span class="math inline">t=0</span> she calculates the discounted utility of each option as follows:</p>
 <span class="math display">\begin{align*}
-U_0(\text{exercise})&amp;=u(x_0)+\beta\delta u(x_1) \\
-&amp;=0+\frac{1}{2}\times {2}{3}\times 12 \\
-&amp;=4
-\\
-U_0(\text{television})&amp;=u(x_0)+\beta\delta u(x_1) \\
-&amp;=6+\frac{1}{2}\times {2}{3}\times 0 \\
+U_0(\text{exercise})&amp;=u(x_0)+\beta\delta u(x_1) \\[6pt]
+&amp;=u(\text{exercise})+\beta\delta u(\text{healthy}) \\[6pt]
+&amp;=0+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
+&amp;=4 \\[6pt]
+\\[6pt]
+U_0(\text{television})&amp;=u(x_0)+\beta\delta u(x_1) \\[6pt]
+&amp;=u(\text{television})+\beta\delta u(\text{unhealthy}) \\[6pt]
+&amp;=6+\frac{1}{2}\times \frac{2}{3}\times 0 \\[6pt]
 &amp;=6
 \end{align*}</span>
 <p>Beth chooses to watch television.</p>
 <p>But what if Beth loved massages and remembers she has a massage voucher she has been saving? What if she decides that if she exercises today, she will go for a massage straight after? Let us assume that the utility of a massage is 3.</p>
-<p>We solve as follows:</p>
+<p>The discounted utility of exercising is now:</p>
 <span class="math display">\begin{align*}
-U_0(\text{exercise+massage})&amp;=u(x_0)+\beta\delta u(x_1) \\
-&amp;=3+\frac{1}{2}\times {2}{3}\times 12 \\
+U_0(\text{exercise+massage})&amp;=u(x_0)+\beta\delta u(x_1) \\[6pt]
+&amp;=u(\text{exercise})+u(\text{massage})\\[6pt]
+&amp;\qquad+\beta\delta u(\text{healthy}) \\[6pt]
+&amp;=3+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
 &amp;=7
-\\
-U_0(\text{television})&amp;=u(x_0)+\beta\delta u(x_1) \\
-&amp;=6+\frac{1}{2}\times {2}{3}\times 0 \\
-&amp;=6
 \end{align*}</span>
-<p>Beth now chooses to exercise.</p>
+<p><span class="math inline">U_0(\text{exercise+massage})&gt;U_0(\text{television})</span>, so Beth now chooses to exercise.</p>
 <p>This example is not strictly a commitment device as Beth could cheat. Beth could watch television and get the massage. But people are often good at creating “mental accounts” by which they make certain money or activities out-of-bounds unless certain conditions are met.</p>
 
 
@@ -1064,7 +1060,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
