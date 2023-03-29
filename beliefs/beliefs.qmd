@@ -12,5 +12,6 @@ Consider the following judgments:
 
 All of these judgments involve risk (the probabilities are known) or uncertainty (the probabilities are not known). We do not know all elements of the current state of the world and the probability that we are in any particular state. We do not know what is going to happen in the future and the probability with which each state occurs.
 
-To analyse decision under risk and uncertainty we need to consider how people form beliefs and how they compute and weight probabilities.
+To analyse decision-making under risk and uncertainty, we need to consider how people form beliefs and how they compute probabilities in any decision.
 
+I will do this first by examining the foundations of probability theory. I will then discuss several heuristics that are proposed to be used in probability judgment. This sets a basis to examine biases in probability judgment and the heuristics and models that have been proposed as explanations for these biases. As a contrast, we will also examine how heuristics can function as effective decision-making tools. Finally, I will consider several dimensions of overconfidence.

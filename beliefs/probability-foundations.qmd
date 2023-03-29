@@ -1,74 +1,96 @@
 # Probability foundations
 
-## Definitions and axioms
+In this part, I introduce some basic concepts in probability theory.
+
+## The probability function
 
 The probability of an outcome is the chance with which it occurs. We denote the probability of outcome $A$ as $P(A)$, where $P(\cdot)$ represents a probability function that assigns a real number to each event.
 
 The probability function has the following features.
 
-### Rule 1
+First, the probability of outcome $A$ lies between 0 and 1. That is:
 
-$0 \leq P(A) \leq 1$.
+$$
+0 \leq P(A) \leq 1
+$$
 
-That is, the probability of outcome $A$ lies between 0 and 1.
-
-For example, the probability of drawing the Ace of Spades from a full deck of 52 cards is 1⁄52 or ~0.02.
+For example, the probability of drawing the Ace of Spades from a full deck of 52 cards is 1⁄52 or \~0.02.
 
 The probability of flipping a head with a fair coin is 1⁄2 or 0.5.
 
-### Rule 2
+Second, the probability of the entire outcome space equals 1.
 
-The sum of the probabilities of all outcomes in the outcome space equals 1.
+For example, suppose we have 52 possible cards we can draw from the deck, each with 1⁄52 probability. If we draw a single card, the probability that we draw one of those cards is:
 
-For example, if we have 52 possible cards we can draw from the deck, each with 1⁄52 probability, the sum of all probabilities is:
-
-$$
-\sum_{n=1}^{n=52}\frac{1}{52}=1
-$$
-
-### Rule 3
-
-If outcomes $A$ and $B$ are mutually exclusive:
-
-$P(A \text{ or } B)=P(A \cup B)=P(A)+P(B)$.
-
-For example, if we have a deck with 52 cards, the probability of pulling out an Ace with a single draw is:
-
+```{=tex}
 \begin{align*}
-P(A\spadesuit \cup A\heartsuit \cup A\diamondsuit \cup A\clubsuit)&=P(A\spadesuit)+P(A\heartsuit)+P(A\diamondsuit)+P(A\clubsuit) \\
-&=\frac{1}{52}+\frac{1}{52}+\frac{1}{52}+\frac{1}{52} \\
+\frac{1}{52}+\frac{1}{52}+\frac{1}{52}+...+\frac{1}{52}&=\sum_{n=1}^{n=52}\frac{1}{52} \\[12pt]
+&=1
+\end{align*}
+```
+
+Third, if outcomes $A$ and $B$ are mutually exclusive, the probability of $A$ or $B$ is the sum of the probability of $A$ and the probability of $B$. That is:
+
+```{=tex}
+\begin{align*}
+P(A \text{ or } B)&=P(A \cup B) \\[6pt]
+&=P(A)+P(B)
+\end{align*}
+```
+For example, if we have a deck with 52 cards, the probability of pulling out an Ace with a single draw is as follows.
+
+```{=tex}
+\begin{align*}
+P(A\spadesuit \cup A\heartsuit \cup A\diamondsuit \cup A\clubsuit)&=P(A\spadesuit)+P(A\heartsuit)+P(A\diamondsuit)+P(A\clubsuit) \\[6pt]
+&=\frac{1}{52}+\frac{1}{52}+\frac{1}{52}+\frac{1}{52} \\[6pt]
 &=\frac{4}{52}
 \end{align*}
+```
+If outcomes $A$ and $B$ are not mutually exclusive, the probability of one or the other is the sum of the probability of $A$ and the probability of $B$ minus the probability of both occurring. That is:
 
-If outcomes $A$ and $B$  are not mutually exclusive:
+$$
+P(A \cup B)=P(A)+P(B)-P(A\cap B)
+$$
 
-$P(A \cup B)=P(A)+P(B)-P(A\cap B)$
+where $P(A \cap B)$ is the probability of both outcome $A$ and $B$.
 
-### Rule 4
+For example, if we have a deck with 52 cards, the probability of pulling out an Ace or a Diamond with a single draw is as follows.
 
-If outcomes $A$ and $B$ are independent:
-
-$P(A \text{ and } B)=P(A \cap B)=P(A)+P(B)$.
-
-where $P(A \cap B)$ is the probability of both outcome $A$ and $B$. That is, the conjunction of two independent outcomes is the product of their probabilities.
-
-For example, suppose we draw a single card from a decks of cards, place that card back in the deck, and then make another draw. The probability of drawing the Ace of Spades in either draw is 1⁄52. The probability of drawing the Ace of Spades twice is:
-
+```{=tex}
 \begin{align*}
-P(A\spadesuit \cap A\spadesuit)&=P(A\spadesuit)P(A\spadesuit) \\
-&=\frac{1}{52}+\frac{1}{52} \\
+P(A \cup \diamondsuit)&=P(A)+P(\diamondsuit)-P(A \cap \diamondsuit) \\[6pt]
+&=\frac{4}{52}+\frac{1}{4}-\frac{1}{52} \\[6pt]
+&=\frac{16}{52}
+\end{align*}
+```
+
+Finally, if outcomes $A$ and $B$ are independent, the conjunction of the two independent outcomes is the product of their probabilities. That is
+
+$$
+P(A \cap B)=P(A)\cdot P(B)
+$$
+
+For example, suppose we draw a single card from a deck of cards, place that card back in the deck, and then make another draw. The probability of drawing the Ace of Spades in either draw is 1⁄52. The probability of drawing the Ace of Spades twice is:
+
+```{=tex}
+\begin{align*}
+P(A\spadesuit \cap A\spadesuit)&=P(A\spadesuit)\cdot P(A\spadesuit) \\
+&=\frac{1}{52}\times \frac{1}{52} \\
 &=\frac{1}{2704}
 \end{align*}
-
-Note: if $A$ and $B$ are mutually exclusive, they are not independent and $P(A \cap B)=0$.
+```
+Note that if $A$ and $B$ are mutually exclusive, they are not independent and $P(A \cap B)=0$.
 
 ## Conditional probability
 
-Drawing a card from a deck of cards with replacement means that whatever card was drawn in the first draw does not affect the probability of the outcome from the second draw. Each draw is independent of the other.
+Conditional probability concerns the probability of an outcome given another outcome.
 
-What if you draw two cards from the same deck without replacement?
+For example, drawing a card from a deck of cards with replacement - that is, putting back each card after it is drawn - means that whatever card was drawn in the first draw does not affect the probability of the outcome of the second draw. Each draw is independent of the other.
+
+But what if you draw two cards from the same deck without replacement?
 
 In that case, the two draws are not independent of each other. For instance, if the Ace of Spades is pulled out first, the second card cannot be the Ace of Spades.
+
 We say here that the probability of drawing an Ace of Spades on the second draw is conditional on the result of the first draw.
 
 When one outcome is conditional on another, such as the probability of outcome $A$ conditional on outcome $B$ occurring, we write this conditional probability as $P(A|B)$.
@@ -77,15 +99,17 @@ Suppose we draw two cards from a deck without replacement. What is the probabili
 
 We know that the probability of drawing an Ace on the second draw is affected by the first draw. If the first card is an Ace, there is one less Ace in the deck that could be pulled on the second draw.
 
-The probability of drawing an Ace on the first draw is 4⁄52. If an Ace is drawn in the first draw, the probability of drawing an Ace on the second is 3⁄51. There is one less Ace and one less card than for the first draw. By multiplying the probability of these two events together we can get the probability of an Ace on both draws:
+The probability of drawing an Ace on the first draw is 4 in 52. If an Ace is drawn in the first draw, the probability of drawing an Ace on the second is 3 in 51. There is one less Ace and one less card than for the first draw. By multiplying the probability of these two events together we can get the probability of an Ace on both draws:
 
+```{=tex}
 \begin{align*}
-P(\text{Ace on first}\cap\text{Ace on sceond})&=P(\text{Ace on first})P(\text{Ace on second}|\text{Ace on first}) \\
+P(\text{Ace 1st}\cap\text{Ace 2nd})&=P(\text{Ace 1st})\cdot P(\text{Ace 2nd}|\text{Ace 1st}) \\
 &=\frac{4}{52}\times \frac{3}{51} \\
 &=\frac{1}{221}
 \end{align*}
+```
 
-### Formula
+### Formula for conditional probability
 
 We can see that the solution to this problem has taken the form:
 
@@ -93,7 +117,7 @@ $$
 P(A\cap B)=P(A|B)P(B)
 $$
 
-The joint probability of the two outcomes is equal to the probability of $A$ conditional on $B$ multiplied by the probability of $B$.
+The joint probability of two outcomes is equal to the probability of $A$ conditional on $B$ multiplied by the probability of $B$.
 
 We can rearrange this formula to determine what is the probability of $A$ given outcome $B$.
 
@@ -111,92 +135,105 @@ $$
 
 ### Example
 
-As a test of this formula, let’s take our previous example of drawing two Aces from the same deck. What is the probability of drawing an Ace on the second draw if you drew an Ace on the first?
+As a test of this formula, let's take our previous example of drawing two Aces from the same deck. What is the probability of drawing an Ace on the second draw if you drew an Ace on the first?
 
+```{=tex}
 \begin{align*}
-P(\text{Ace on second}|\text{Ace on first})&=\frac{P(\text{Ace on first}\cap\text{Ace on second})}{P(\text{Ace on first})} \\
-&=\frac{1}{221}\times \frac{4}{52} \\
+P(\text{Ace 2nd}|\text{Ace 1st})&=\frac{P(\text{Ace 1st}\cap\text{Ace 2nd})}{P(\text{Ace 1st})} \\[12pt]
+&=\frac{1}{221}\times \frac{4}{52} \\[12pt]
 &=\frac{3}{51}
 \end{align*}
-
+```
 ### The Monty Hall problem
 
-Consider the following problem:
+Consider the following problem as answered by Maryln vos Savant in her column Ask Marilyn in Parade magazine [@vossavant1990]:
 
->Suppose you’re on a game show and you’re given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what’s behind the doors, opens another door, say No. 3, which has a goat. He then says to you, “Do you want to pick door No. 2?” Is it to your advantage to switch your choice?
+> Suppose you're on a game show and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
+
+This problem is known as the Monty Hall problem as it is loosely based on the American game show Let's Make a Deal. Monty Hall was the original host of the show.
 
 Assume that the rules of this game show are that:
 
-- The host must always open a door that you did not choose.
+-   The host must always open a door that you did not choose.
 
-- The host must always open a door to reveal a goat and never the car.
+-   The host must always open a door to reveal a goat and never the car.
 
-- The host must always offer you the choice to switch between the chosen door and the remaining closed door.
+-   The host must always offer you the choice to switch between the chosen door and the remaining closed door.
 
-For this question, you are effectively being asked: what is the probability that the car is behind door 2 conditional on the host opening door 3.
-To help us think about this problem, consider the following tree: 
+For this question, you are effectively being asked: what is the probability that the car is behind Door 2 conditional on the host opening door 3.
 
-![](img/monty-hall.jpg)
+To help us think about this problem, consider the following tree that maps the possible outcomes after you select Door 1. The first split of the tree represents the 1/3 probability that the car is behind each of the three doors. The next split represents the probability that each of the doors are opened given the location of the car. The final column indicates the probability of each combination of car location and door opened.
 
-Given the host opened Door 3:
+![](img/monty-hall.png)
 
+If the car is behind the Door 1, which you have selected, the host could open either Door 2 or Door 3 with equal probability. If the car is behind Door 2, the host must open Door 3. If the car is behind Door 3, the host must open Door 2.
+
+Given the host opened Door 3, we can calculate the conditional probability that the car us behind door 2 as follows:
+
+```{=tex}
 \begin{align*}
 P(C2|D3)&=\frac{P(C2\cap D3)}{P(D3)} \\[12pt]
 &=\frac{\frac{1}{3}}{\frac{1}{3}+\frac{1}{6}} \\[12pt]
 &=\frac{2}{3}
 \end{align*}
+```
+
+You should switch to door 2.
 
 ## Bayes' rule
 
-Bayes’ Rule enables estimation of the conditional probability of outcome $A$ given outcome $B$ when you have the following information:
+Bayes' Rule enables estimation of the conditional probability of outcome $A$ given outcome $B$ when you have the following information:
 
-- The unconditional probability of outcome $A$
-- The probability of observing outcome $B$ given outcome $A$
-- The total probability of outcome $B$.
+-   The unconditional probability of outcome $A$
+-   The probability of observing outcome $B$ given outcome $A$
+-   The total probability of outcome $B$.
 
-Bayes’ rule is calculated as follows:
+Bayes' rule is calculated as follows:
 
+```{=tex}
 \begin{align*}
 P(A|B)&=\frac{P(A\cap B)}{P(B)} \\[12pt]
 &=\frac{P(B|A)P(A)}{P(B)}
 \end{align*}
-
+```
 The denominator is the total probability of event $B$. If we do not have it directly available, we are often able to construct it with available information concerning the conditional probabilities of $B$ given the occurrence (or not) of $A$.
 
 $$
 P(B)=P(B|A)P(A)+P(B|\neg A)P(\neg A)
 $$
 
-The symbol $\neg$ represents “not”.
+The symbol $\neg$ represents "not".
 
-We can therefore write Bayes’ rule as follows:
+We can therefore write Bayes' rule as follows:
 
+```{=tex}
 \begin{align*}
 P(A|B)&=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
 &=\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|\neg A)P(\neg A)}
 \end{align*}
+```
+We can also think of Bayes' rule as how we should update our belief $H$ ("hypothesis") in the light of a new event $E$.
 
-We can also think of Bayes’ rule as how we should update our belief $H$ (“hypothesis”) in the light of a new event $E$.
-
-Rational agents should update their belief $H$ using Bayes’ rule.
+Rational agents should update their belief $H$ using Bayes' rule.
 
 In this case we have the following elements:
 
-- A belief $H$ (often called the posterior belief)
+-   A belief $H$ (often called the posterior belief)
 
-- The prior probability $P(H)$ of $H$𝐻 being true
+-   The prior probability $P(H)$ of $H$𝐻 being true
 
-- The probability $P(E|H)$ of observing event $E$ given a belief
+-   The probability $P(E|H)$ of observing event $E$ given a belief
 
-- The posterior probability $P(H|E)$  of the belief given the event $E$
+-   The posterior probability $P(H|E)$ of the belief given the event $E$
 
-Under this framing, Bayes’ rule is formulated as follows:
+Under this framing, Bayes' rule is formulated as follows:
 
+```{=tex}
 \begin{align*}
 \underbrace{P(H|E)}_\text{Posterior belief}&=\frac{P(E|H)\overbrace{P(H)}^\text{Prior belief}}{P(E)} \\[12pt]
 &=\frac{P(E|H)P(H)}{P(E|H)P(H)+P(E|\neg H)P(\neg H)}
 \end{align*}
-
+```
 ### Bayes' rule example 1
 
 Suppose your friend has two coins. One is a fair coin with a head on one face and a tail on the other. The second coin is a rigged coin with heads on both faces.
@@ -219,43 +256,48 @@ To use Bayes' rule we need the total probability that a head comes up, $P(\text{
 
 Here we will use the formula for total probability that we looked at previously.
 
+```{=tex}
 \begin{align*}
 P(\text{head})&=P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair}) \\
 &=1\times 0.5+0.5\times 0.5 \\
 &=0.75
 \end{align*}
-
+```
 Putting this into Bayes rule:
 
+```{=tex}
 \begin{align*}
 P(\text{rigged}|\text{head})&=\frac{P(\text{head}|\text{rigged})P(\text{rigged})}{P(\text{head})} \\[12pt]
 &=\frac{1\times 0.5}{0.75} \\
 &=\frac{2}{3}
 \end{align*}
-
+```
 Your friend flips the coin again and gets another head. What is the updated probability that the coin is rigged?
 
+```{=tex}
 \begin{align*}
 P(\text{rigged}|\text{head})&=\frac{P(\text{head}|\text{rigged})P(\text{rigged})}{P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair})} \\[12pt]
 &=\frac{1\times \frac{2}{3}}{1\times\frac{2}{3}+\frac{1}{2}\times\frac{1}{3}} \\
 &=\frac{4}{5}
 \end{align*}
-
+```
 Your friend flips the coin 10 more times and gets 10 more heads. What is the updated probability that the coin is rigged?
 
+```{=tex}
 \begin{align*}
 P(\text{rigged}|\text{10 heads})&=\frac{P(\text{10 heads}|\text{rigged})P(\text{rigged})}{P(\text{10 heads}|\text{rigged})P(\text{rigged})+P(\text{10 heads}|\text{fair})P(\text{fair})} \\[12pt]
 &=\frac{1\times \frac{4}{5}}{1\times\frac{4}{5}+(\frac{1}{2})^{10}\times\frac{1}{5}} \\[6pt]
 &=\frac{1\times \frac{4}{5}}{1\times\frac{4}{5}+\frac{1}{`r 2^10`}\times\frac{1}{5}} \\[6pt]
 &=`r (1*4/5)/(1*4/5+0.5^10*1/5)`
 \end{align*}
-
+```
 ### Bayes' rule example 2
 
 You have two urns. Urn one has 30% black balls and 70% yellow balls. Urn two has 70% black balls and 30% yellow balls. The labels have fallen off the urns so you do not know which urn is which.
 
 You reach into one of the urns and pull out a yellow ball. What is the probability that you have drawn the ball from urn one?
 
+```{=tex}
 \begin{align*}
 P(\text{urn one}|\text{yellow ball})&=\frac{P(\text{yellow ball}|\text{urn one})P(\text{urn one})}{P(\text{yellow ball})} \\[6pt]
 &=\frac{P(\text{yellow ball}|\text{urn one})P(\text{urn one})}{P(\text{yellow ball}|\text{urn one})P(\text{urn one})+P(\text{yellow ball}|\text{urn two})P(\text{urn two})} \\[6pt]
@@ -263,9 +305,10 @@ P(\text{urn one}|\text{yellow ball})&=\frac{P(\text{yellow ball}|\text{urn one})
 &=\frac{0.35}{0.5} \\
 &=0.7
 \end{align*}
-
+```
 You put the first ball back in the urn, reach in again and pull out a black ball. What is the probability that you have drawn the ball from urn one?
 
+```{=tex}
 \begin{align*}
 P(\text{urn one}|\text{black ball})&=\frac{P(\text{black ball}|\text{urn one})P(\text{urn one})}{P(\text{black ball})} \\[6pt]
 &=\frac{P(\text{black ball}|\text{urn one})P(\text{urn one})}{P(\text{black ball}|\text{urn one})P(\text{urn one})+P(\text{black ball}|\text{urn two})P(\text{urn two})} \\[6pt]
@@ -273,25 +316,26 @@ P(\text{urn one}|\text{black ball})&=\frac{P(\text{black ball}|\text{urn one})P(
 &=\frac{0.21}{0.42} \\
 &=0.5
 \end{align*}
-
+```
 ### Bayes' rule example 3
 
 Recall the Monty Hall problem:
 
-> Suppose you’re on a game show and you’re given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what’s behind the doors, opens another door, say No. 3, which has a goat. He then says to you, “Do you want to pick door No. 2?” Is it to your advantage to switch your choice?
+> Suppose you're on a game show and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
 
 Assume that the rules of this game show are that:
 
-- The host must always open a door that you did not choose.
+-   The host must always open a door that you did not choose.
 
-- The host must always open a door to reveal a goat and never the car.
+-   The host must always open a door to reveal a goat and never the car.
 
-- The host must always offer you the choice to switch between the chosen door and the remaining closed door.
+-   The host must always offer you the choice to switch between the chosen door and the remaining closed door.
 
-We want to know the probability that the car is behind door 2 given the host opened door 3. That is, we want to know $P(C2|D3)$. [Technically we want $P(C2|D3\cap X1)$ where X1 is our selection of door 1. However, adding this complication to the calculation does not change the answer.]
+We want to know the probability that the car is behind door 2 given the host opened door 3. That is, we want to know $P(C2|D3)$. \[Technically we want $P(C2|D3\cap X1)$ where X1 is our selection of door 1. However, adding this complication to the calculation does not change the answer.\]
 
 To determine this using Bayes rule, we would use the following formula:
 
+```{=tex}
 \begin{align*}
 P(A|B)&=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
 P(C2|D3)&=\frac{P(D3|C2)P(C2)}{P(D3)} \\[12pt]
@@ -300,3 +344,4 @@ P(C2|D3)&=\frac{P(D3|C2)P(C2)}{P(D3)} \\[12pt]
 &=\frac{\frac{1}{3}}{\frac{1}{2}} \\[12pt]
 &=\frac{2}{3}
 \end{align*}
+```

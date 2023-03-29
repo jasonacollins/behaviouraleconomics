@@ -218,7 +218,7 @@ U_0(\text{Lay-by})&=-1+\beta\delta \times 0+\beta\delta^2\times 45 \\[6pt]
 \end{align*}
 ```
 
-As $U_0(\text{Lay-by})>U_0(\text{Spend})<U_0(\text{Start spending at }t=1)$, lay-by is the preferred option at $t=0$. As it binds the agent in the future, they can stick to this plan.
+As $U_0(\text{Lay-by})>U_0(\text{Spend})>U_0(\text{Start spending at }t=1)$, lay-by is the preferred option at $t=0$. As it binds the agent in the future, they can stick to this plan.
 
 Note that lay-by is strictly worse than Save as the agent must pay the administrative fee. But the sophisticated quasi-hyperbolic discounting agent chooses it as the only feasible way to get their jacket. Without lay-by they know they will start spending at $t=1$ and end up with lower utility from the perspective of their $t=0$ self.
 
@@ -300,6 +300,8 @@ U_0(\text{stickK+healthy})&=\beta\delta^2\times u(\text{healthy}) \\[6pt]
 
 As $U_0(\text{stickK+healthy})>U_0(\text{smoking})$, the agent chooses to commit using stickK.
 
+One interesting feature of these two options at $t=0$ is that the penalty does not appear in either calculation of the discounted utility. We have already calculated that if the penalty is present at $t=1$, the agent will not smoke. So when they consider their options at $t=1$, there is no cost to committing.
+
 For any problem of this form, the agent could always successfully use stickK to commit to any action. The agent just needs to make the stake high enough.
 
 ### Increasing the value of the optimal action: temptation bundling
@@ -322,13 +324,11 @@ For $t=0$ she calculates the discounted utility of each option as follows:
 
 ```{=tex}
 \begin{align*}
-U_0(\text{exercise})&=u(x_0)+\beta\delta u(x_1) \\[6pt]
-&=u(\text{exercise})+\beta\delta u(\text{healthy}) \\[6pt]
+U_0(\text{exercise})&=u(\text{exercise})+\beta\delta u(\text{healthy}) \\[6pt]
 &=0+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
 &=4 \\[6pt]
 \\[6pt]
-U_0(\text{television})&=u(x_0)+\beta\delta u(x_1) \\[6pt]
-&=u(\text{television})+\beta\delta u(\text{unhealthy}) \\[6pt]
+U_0(\text{television})&=u(\text{television})+\beta\delta u(\text{unhealthy}) \\[6pt]
 &=6+\frac{1}{2}\times \frac{2}{3}\times 0 \\[6pt]
 &=6
 \end{align*}
@@ -342,8 +342,7 @@ The discounted utility of exercising is now:
 
 ```{=tex}
 \begin{align*}
-U_0(\text{exercise+massage})&=u(x_0)+\beta\delta u(x_1) \\[6pt]
-&=u(\text{exercise})+u(\text{massage})\\[6pt]
+U_0(\text{exercise+massage})&=u(\text{exercise})+u(\text{massage})\\[6pt]
 &\qquad+\beta\delta u(\text{healthy}) \\[6pt]
 &=3+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
 &=7

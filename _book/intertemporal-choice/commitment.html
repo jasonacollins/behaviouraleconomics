@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -781,7 +781,7 @@ U_0(\text{Lay-by})&amp;=-1+\beta\delta \times 0+\beta\delta^2\times 45 \\[6pt]
 &amp;=-1+0.5\times 0+0.5\times 45 \\[6pt]
 &amp;=21.5
 \end{align*}</span>
-<p>As <span class="math inline">U_0(\text{Lay-by})&gt;U_0(\text{Spend})&lt;U_0(\text{Start spending at }t=1)</span>, lay-by is the preferred option at <span class="math inline">t=0</span>. As it binds the agent in the future, they can stick to this plan.</p>
+<p>As <span class="math inline">U_0(\text{Lay-by})&gt;U_0(\text{Spend})&gt;U_0(\text{Start spending at }t=1)</span>, lay-by is the preferred option at <span class="math inline">t=0</span>. As it binds the agent in the future, they can stick to this plan.</p>
 <p>Note that lay-by is strictly worse than Save as the agent must pay the administrative fee. But the sophisticated quasi-hyperbolic discounting agent chooses it as the only feasible way to get their jacket. Without lay-by they know they will start spending at <span class="math inline">t=1</span> and end up with lower utility from the perspective of their <span class="math inline">t=0</span> self.</p>
 </section>
 <section id="depressing-the-value-of-the-bad-course-of-action" class="level3" data-number="28.2.4">
@@ -838,6 +838,7 @@ U_0(\text{stickK+healthy})&amp;=\beta\delta^2\times u(\text{healthy}) \\[6pt]
 &amp;=4
 \end{align*}</span>
 <p>As <span class="math inline">U_0(\text{stickK+healthy})&gt;U_0(\text{smoking})</span>, the agent chooses to commit using stickK.</p>
+<p>One interesting feature of these two options at <span class="math inline">t=0</span> is that the penalty does not appear in either calculation of the discounted utility. We have already calculated that if the penalty is present at <span class="math inline">t=1</span>, the agent will not smoke. So when they consider their options at <span class="math inline">t=1</span>, there is no cost to committing.</p>
 <p>For any problem of this form, the agent could always successfully use stickK to commit to any action. The agent just needs to make the stake high enough.</p>
 </section>
 <section id="increasing-the-value-of-the-optimal-action-temptation-bundling" class="level3" data-number="28.2.5">
@@ -853,13 +854,11 @@ U_0(\text{stickK+healthy})&amp;=\beta\delta^2\times u(\text{healthy}) \\[6pt]
 <p>Beth works through the options by backward induction. At <span class="math inline">t=1</span> there is no choice to be made, as Beth simply enjoys the utility of the action she chose at <span class="math inline">t=0</span>.</p>
 <p>For <span class="math inline">t=0</span> she calculates the discounted utility of each option as follows:</p>
 <span class="math display">\begin{align*}
-U_0(\text{exercise})&amp;=u(x_0)+\beta\delta u(x_1) \\[6pt]
-&amp;=u(\text{exercise})+\beta\delta u(\text{healthy}) \\[6pt]
+U_0(\text{exercise})&amp;=u(\text{exercise})+\beta\delta u(\text{healthy}) \\[6pt]
 &amp;=0+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
 &amp;=4 \\[6pt]
 \\[6pt]
-U_0(\text{television})&amp;=u(x_0)+\beta\delta u(x_1) \\[6pt]
-&amp;=u(\text{television})+\beta\delta u(\text{unhealthy}) \\[6pt]
+U_0(\text{television})&amp;=u(\text{television})+\beta\delta u(\text{unhealthy}) \\[6pt]
 &amp;=6+\frac{1}{2}\times \frac{2}{3}\times 0 \\[6pt]
 &amp;=6
 \end{align*}</span>
@@ -867,8 +866,7 @@ U_0(\text{television})&amp;=u(x_0)+\beta\delta u(x_1) \\[6pt]
 <p>But what if Beth loved massages and remembers she has a massage voucher she has been saving? What if she decides that if she exercises today, she will go for a massage straight after? Let us assume that the utility of a massage is 3.</p>
 <p>The discounted utility of exercising is now:</p>
 <span class="math display">\begin{align*}
-U_0(\text{exercise+massage})&amp;=u(x_0)+\beta\delta u(x_1) \\[6pt]
-&amp;=u(\text{exercise})+u(\text{massage})\\[6pt]
+U_0(\text{exercise+massage})&amp;=u(\text{exercise})+u(\text{massage})\\[6pt]
 &amp;\qquad+\beta\delta u(\text{healthy}) \\[6pt]
 &amp;=3+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
 &amp;=7
@@ -1058,7 +1056,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 
