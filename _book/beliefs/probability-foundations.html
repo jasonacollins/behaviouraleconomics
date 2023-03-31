@@ -535,9 +535,10 @@ div.csl-indent {
   </ul></li>
   <li><a href="#bayes-rule" id="toc-bayes-rule" class="nav-link" data-scroll-target="#bayes-rule"><span class="toc-section-number">32.3</span>  Bayes’ rule</a>
   <ul class="collapse">
-  <li><a href="#bayes-rule-example-1" id="toc-bayes-rule-example-1" class="nav-link" data-scroll-target="#bayes-rule-example-1"><span class="toc-section-number">32.3.1</span>  Bayes’ rule example 1</a></li>
-  <li><a href="#bayes-rule-example-2" id="toc-bayes-rule-example-2" class="nav-link" data-scroll-target="#bayes-rule-example-2"><span class="toc-section-number">32.3.2</span>  Bayes’ rule example 2</a></li>
-  <li><a href="#bayes-rule-example-3" id="toc-bayes-rule-example-3" class="nav-link" data-scroll-target="#bayes-rule-example-3"><span class="toc-section-number">32.3.3</span>  Bayes’ rule example 3</a></li>
+  <li><a href="#updating-beliefs" id="toc-updating-beliefs" class="nav-link" data-scroll-target="#updating-beliefs"><span class="toc-section-number">32.3.1</span>  Updating beliefs</a></li>
+  <li><a href="#bayes-rule-example-1" id="toc-bayes-rule-example-1" class="nav-link" data-scroll-target="#bayes-rule-example-1"><span class="toc-section-number">32.3.2</span>  Bayes’ rule example 1</a></li>
+  <li><a href="#bayes-rule-example-2" id="toc-bayes-rule-example-2" class="nav-link" data-scroll-target="#bayes-rule-example-2"><span class="toc-section-number">32.3.3</span>  Bayes’ rule example 2</a></li>
+  <li><a href="#bayes-rule-example-3" id="toc-bayes-rule-example-3" class="nav-link" data-scroll-target="#bayes-rule-example-3"><span class="toc-section-number">32.3.4</span>  Bayes’ rule example 3</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -571,15 +572,15 @@ div.csl-indent {
 <p><span class="math display">
 0 \leq P(A) \leq 1
 </span></p>
-<p>For example, the probability of drawing the Ace of Spades from a full deck of 52 cards is 1⁄52 or ~0.02.</p>
-<p>The probability of flipping a head with a fair coin is 1⁄2 or 0.5.</p>
+<p>For example, the probability of drawing the Ace of Spades from a full deck of 52 cards is 1 in 52 or ~0.02.</p>
+<p>The probability of flipping a head with a fair coin is 1 in 2 or 0.5.</p>
 <p>Second, the probability of the entire outcome space equals 1.</p>
-<p>For example, suppose we have 52 possible cards we can draw from the deck, each with 1⁄52 probability. If we draw a single card, the probability that we draw one of those cards is:</p>
+<p>For example, suppose we have 52 possible cards we can draw from the deck, each with 1 in 52 probability. If we draw a single card, the probability that we draw one of those cards is:</p>
 <span class="math display">\begin{align*}
 \frac{1}{52}+\frac{1}{52}+\frac{1}{52}+...+\frac{1}{52}&amp;=\sum_{n=1}^{n=52}\frac{1}{52} \\[12pt]
 &amp;=1
 \end{align*}</span>
-<p>Third, if outcomes <span class="math inline">A</span> and <span class="math inline">B</span> are mutually exclusive, the probability of <span class="math inline">A</span> or <span class="math inline">B</span> is the sum of the probability of <span class="math inline">A</span> and the probability of <span class="math inline">B</span>. That is:</p>
+<p>Third, suppose outcomes <span class="math inline">A</span> and <span class="math inline">B</span> are mutually exclusive. In that case, the probability of <span class="math inline">A</span> or <span class="math inline">B</span> is the sum of the probability of <span class="math inline">A</span> and the probability of <span class="math inline">B</span>. That is:</p>
 <span class="math display">\begin{align*}
 P(A \text{ or } B)&amp;=P(A \cup B) \\[6pt]
 &amp;=P(A)+P(B)
@@ -590,7 +591,7 @@ P(A\spadesuit \cup A\heartsuit \cup A\diamondsuit \cup A\clubsuit)&amp;=P(A\spad
 &amp;=\frac{1}{52}+\frac{1}{52}+\frac{1}{52}+\frac{1}{52} \\[6pt]
 &amp;=\frac{4}{52}
 \end{align*}</span>
-<p>If outcomes <span class="math inline">A</span> and <span class="math inline">B</span> are not mutually exclusive, the probability of one or the other is the sum of the probability of <span class="math inline">A</span> and the probability of <span class="math inline">B</span> minus the probability of both occurring. That is:</p>
+<p>Alternatively, suppose outcomes <span class="math inline">A</span> and <span class="math inline">B</span> are not mutually exclusive. In that case, the probability of one or the other is the sum of the probability of <span class="math inline">A</span> and the probability of <span class="math inline">B</span> minus the probability of both occurring. That is:</p>
 <p><span class="math display">
 P(A \cup B)=P(A)+P(B)-P(A\cap B)
 </span></p>
@@ -618,12 +619,12 @@ P(A\spadesuit \cap A\spadesuit)&amp;=P(A\spadesuit)\cdot P(A\spadesuit) \\
 <p>Conditional probability concerns the probability of an outcome given another outcome.</p>
 <p>For example, drawing a card from a deck of cards with replacement - that is, putting back each card after it is drawn - means that whatever card was drawn in the first draw does not affect the probability of the outcome of the second draw. Each draw is independent of the other.</p>
 <p>But what if you draw two cards from the same deck without replacement?</p>
-<p>In that case, the two draws are not independent of each other. For instance, if the Ace of Spades is pulled out first, the second card cannot be the Ace of Spades.</p>
+<p>In that case, the two draws are not independent of each other. For instance, if you pull out the Ace of Spades first, the second card cannot be the Ace of Spades.</p>
 <p>We say here that the probability of drawing an Ace of Spades on the second draw is conditional on the result of the first draw.</p>
 <p>When one outcome is conditional on another, such as the probability of outcome <span class="math inline">A</span> conditional on outcome <span class="math inline">B</span> occurring, we write this conditional probability as <span class="math inline">P(A|B)</span>.</p>
-<p>Suppose we draw two cards from a deck without replacement. What is the probability of drawing an Ace for both draws?</p>
-<p>We know that the probability of drawing an Ace on the second draw is affected by the first draw. If the first card is an Ace, there is one less Ace in the deck that could be pulled on the second draw.</p>
-<p>The probability of drawing an Ace on the first draw is 4 in 52. If an Ace is drawn in the first draw, the probability of drawing an Ace on the second is 3 in 51. There is one less Ace and one less card than for the first draw. By multiplying the probability of these two events together we can get the probability of an Ace on both draws:</p>
+<p>Suppose I draw two cards from a deck without replacement. What is the probability of drawing an Ace for both draws?</p>
+<p>We know that the first draw affects the probability of drawing an Ace on the second draw. If the first card is an Ace, one less Ace is in the deck for the second draw.</p>
+<p>The probability of drawing an Ace on the first draw is 4 in 52. If I draw an Ace in the first draw, the probability of drawing an Ace on the second is 3 in 51. There is one less Ace and one less card than for the first draw. By multiplying the probability of these two events together, we can get the probability of an Ace on both draws.</p>
 <span class="math display">\begin{align*}
 P(\text{Ace 1st}\cap\text{Ace 2nd})&amp;=P(\text{Ace 1st})\cdot P(\text{Ace 2nd}|\text{Ace 1st}) \\
 &amp;=\frac{4}{52}\times \frac{3}{51} \\
@@ -635,12 +636,12 @@ P(\text{Ace 1st}\cap\text{Ace 2nd})&amp;=P(\text{Ace 1st})\cdot P(\text{Ace 2nd}
 <p><span class="math display">
 P(A\cap B)=P(A|B)P(B)
 </span></p>
-<p>The joint probability of two outcomes is equal to the probability of <span class="math inline">A</span> conditional on <span class="math inline">B</span> multiplied by the probability of <span class="math inline">B</span>.</p>
-<p>We can rearrange this formula to determine what is the probability of <span class="math inline">A</span> given outcome <span class="math inline">B</span>.</p>
+<p>The joint probability of two outcomes equals the probability of <span class="math inline">A</span> conditional on <span class="math inline">B</span> multiplied by the probability of <span class="math inline">B</span>.</p>
+<p>We can rearrange this formula to determine the probability of <span class="math inline">A</span> given outcome <span class="math inline">B</span>.</p>
 <p><span class="math display">
 P(A|B)=\frac{P(A\cap B)}{P(B)}
 </span></p>
-<p>If <span class="math inline">A</span> and <span class="math inline">B</span> are independent, <span class="math inline">P(A|B)=P(A)</span> and this simplifies to the formula for calculating the probability of the conjunction of independent outcomes we saw earlier. The equation <span class="math inline">P(A\cap B)=P(A|B)P(B)</span> is a more general version of how to calculate the conjunction of two events.</p>
+<p>If <span class="math inline">A</span> and <span class="math inline">B</span> are independent, <span class="math inline">P(A|B)=P(A)</span>. In that case, the formula simplifies to that for calculating the probability of the conjunction of independent outcomes we saw earlier, <span class="math inline">P(A \cap B)=P(A)\cdot P(B)</span>. The equation <span class="math inline">P(A\cap B)=P(A|B)P(B)</span> is a more general version of how to calculate the conjunction of two events.</p>
 <p>Due to symmetry, we can also write the conditional probability as:</p>
 <p><span class="math display">
 P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
@@ -651,7 +652,7 @@ P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
 <p>As a test of this formula, let’s take our previous example of drawing two Aces from the same deck. What is the probability of drawing an Ace on the second draw if you drew an Ace on the first?</p>
 <span class="math display">\begin{align*}
 P(\text{Ace 2nd}|\text{Ace 1st})&amp;=\frac{P(\text{Ace 1st}\cap\text{Ace 2nd})}{P(\text{Ace 1st})} \\[12pt]
-&amp;=\frac{1}{221}\times \frac{4}{52} \\[12pt]
+&amp;=\cfrac{\cfrac{1}{221}}{\cfrac{4}{52}} \\[24pt]
 &amp;=\frac{3}{51}
 \end{align*}</span>
 </section>
@@ -669,14 +670,14 @@ P(\text{Ace 2nd}|\text{Ace 1st})&amp;=\frac{P(\text{Ace 1st}\cap\text{Ace 2nd})}
 <li><p>The host must always offer you the choice to switch between the chosen door and the remaining closed door.</p></li>
 </ul>
 <p>For this question, you are effectively being asked: what is the probability that the car is behind Door 2 conditional on the host opening door 3.</p>
-<p>To help us think about this problem, consider the following tree that maps the possible outcomes after you select Door 1. The first split of the tree represents the 1/3 probability that the car is behind each of the three doors. The next split represents the probability that each of the doors are opened given the location of the car. The final column indicates the probability of each combination of car location and door opened.</p>
+<p>To help us think about this problem, consider the following tree that maps the possible outcomes after you select Door 1. The first split of the tree represents the 1/3 probability that the car is behind each of the three doors. Given the car’s location, the next split represents the probability that the host opens each door. The final column indicates the probability of each combination of car location and door opened.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/monty-hall.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/monty-hall.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>If the car is behind the Door 1, which you have selected, the host could open either Door 2 or Door 3 with equal probability. If the car is behind Door 2, the host must open Door 3. If the car is behind Door 3, the host must open Door 2.</p>
-<p>Given the host opened Door 3, we can calculate the conditional probability that the car us behind door 2 as follows:</p>
+<p>If the car is behind Door 1, which you have selected, the host could open either Door 2 or Door 3 with equal probability. If the car is behind Door 2, the host must open Door 3. If the car is behind Door 3, the host must open Door 2.</p>
+<p>Given the host opened Door 3, we can calculate the conditional probability that the car is behind door 2 as follows:</p>
 <span class="math display">\begin{align*}
 P(C2|D3)&amp;=\frac{P(C2\cap D3)}{P(D3)} \\[12pt]
 &amp;=\frac{\frac{1}{3}}{\frac{1}{3}+\frac{1}{6}} \\[12pt]
@@ -687,18 +688,19 @@ P(C2|D3)&amp;=\frac{P(C2\cap D3)}{P(D3)} \\[12pt]
 </section>
 <section id="bayes-rule" class="level2" data-number="32.3">
 <h2 data-number="32.3" class="anchored" data-anchor-id="bayes-rule"><span class="header-section-number">32.3</span> Bayes’ rule</h2>
-<p>Bayes’ Rule enables estimation of the conditional probability of outcome <span class="math inline">A</span> given outcome <span class="math inline">B</span> when you have the following information:</p>
+<p>Bayes’ rule is a method for estimating the conditional probability of an event.</p>
+<p>Specifically, Bayes’ rule allows us to use the following information to estimate the conditional probability of outcome <span class="math inline">A</span> given outcome <span class="math inline">B</span>:</p>
 <ul>
 <li>The unconditional probability of outcome <span class="math inline">A</span></li>
 <li>The probability of observing outcome <span class="math inline">B</span> given outcome <span class="math inline">A</span></li>
 <li>The total probability of outcome <span class="math inline">B</span>.</li>
 </ul>
-<p>Bayes’ rule is calculated as follows:</p>
+<p>The formula for Bayes’ rule is:</p>
 <span class="math display">\begin{align*}
 P(A|B)&amp;=\frac{P(A\cap B)}{P(B)} \\[12pt]
 &amp;=\frac{P(B|A)P(A)}{P(B)}
 \end{align*}</span>
-<p>The denominator is the total probability of event <span class="math inline">B</span>. If we do not have it directly available, we are often able to construct it with available information concerning the conditional probabilities of <span class="math inline">B</span> given the occurrence (or not) of <span class="math inline">A</span>.</p>
+<p>The denominator <span class="math inline">P(B)</span> is the total probability of event <span class="math inline">B</span>. If the total probability of event <span class="math inline">B</span> is not directly available, we can often calculate it with information concerning the conditional probabilities of <span class="math inline">B</span> given the occurrence (or not) of <span class="math inline">A</span>.</p>
 <p><span class="math display">
 P(B)=P(B|A)P(A)+P(B|\neg A)P(\neg A)
 </span></p>
@@ -708,25 +710,28 @@ P(B)=P(B|A)P(A)+P(B|\neg A)P(\neg A)
 P(A|B)&amp;=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
 &amp;=\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|\neg A)P(\neg A)}
 \end{align*}</span>
-<p>We can also think of Bayes’ rule as how we should update our belief <span class="math inline">H</span> (“hypothesis”) in the light of a new event <span class="math inline">E</span>.</p>
-<p>Rational agents should update their belief <span class="math inline">H</span> using Bayes’ rule.</p>
-<p>In this case we have the following elements:</p>
+<section id="updating-beliefs" class="level3" data-number="32.3.1">
+<h3 data-number="32.3.1" class="anchored" data-anchor-id="updating-beliefs"><span class="header-section-number">32.3.1</span> Updating beliefs</h3>
+<p>We can think of Bayes’ rule as how we should update our beliefs in light of a new event.</p>
+<p>Rational agents should update their beliefs using Bayes’ rule.</p>
+<p>In this case, the following elements are involved:</p>
 <ul>
-<li><p>A belief <span class="math inline">H</span> (often called the posterior belief)</p></li>
-<li><p>The prior probability <span class="math inline">P(H)</span> of <span class="math inline">H</span>𝐻 being true</p></li>
-<li><p>The probability <span class="math inline">P(E|H)</span> of observing event <span class="math inline">E</span> given a belief</p></li>
-<li><p>The posterior probability <span class="math inline">P(H|E)</span> of the belief given the event <span class="math inline">E</span></p></li>
+<li><p>A hypothesis, <span class="math inline">H</span>. For example, “the coin is fair” or “the coin is rigged”.</p></li>
+<li><p>The prior probability of the hypothesis <span class="math inline">H</span> being true, <span class="math inline">P(H)</span>. For example, “the coin is fair” has a prior probability of 0.5.</p></li>
+<li><p>The probability of observing event <span class="math inline">E</span> given a hypothesis <span class="math inline">H</span>, <span class="math inline">P(E|H)</span>. For example, “the coin shows a head” has a probability of 0.5 given that the coin is fair.</p></li>
+<li><p>The posterior probability of the belief <span class="math inline">H</span> given the event <span class="math inline">E</span>, <span class="math inline">P(H|E)</span>. For example, we would have an updated probability in our hypothesis that “the coin is fair” based on the coin showing a head.</p></li>
 </ul>
 <p>Under this framing, Bayes’ rule is formulated as follows:</p>
 <span class="math display">\begin{align*}
 \underbrace{P(H|E)}_\text{Posterior belief}&amp;=\frac{P(E|H)\overbrace{P(H)}^\text{Prior belief}}{P(E)} \\[12pt]
 &amp;=\frac{P(E|H)P(H)}{P(E|H)P(H)+P(E|\neg H)P(\neg H)}
 \end{align*}</span>
-<section id="bayes-rule-example-1" class="level3" data-number="32.3.1">
-<h3 data-number="32.3.1" class="anchored" data-anchor-id="bayes-rule-example-1"><span class="header-section-number">32.3.1</span> Bayes’ rule example 1</h3>
-<p>Suppose your friend has two coins. One is a fair coin with a head on one face and a tail on the other. The second coin is a rigged coin with heads on both faces.</p>
-<p>Your friend then takes one of the coins and flips it. It shows a head. What is the probability that it is the rigged coin?</p>
-<p>We will assume that he randomly selected either coin with probability 50%. We take that as our prior belief:</p>
+</section>
+<section id="bayes-rule-example-1" class="level3" data-number="32.3.2">
+<h3 data-number="32.3.2" class="anchored" data-anchor-id="bayes-rule-example-1"><span class="header-section-number">32.3.2</span> Bayes’ rule example 1</h3>
+<p>Suppose your friend has two coins. One is a fair coin with a head on one side and a tail on the other. The second coin is a rigged coin with a head on both sides.</p>
+<p>Your friend takes one of the coins and flips it. The coin shows a head. What is the probability that this coin is the rigged coin?</p>
+<p>We will assume that he randomly selected either coin with a probability of 50%. We take that as our prior belief:</p>
 <p><span class="math display">
 P(\text{rigged})=0.5
 </span></p>
@@ -734,55 +739,90 @@ P(\text{rigged})=0.5
 <p><span class="math display">
 P(\text{head}|\text{rigged})=1
 </span></p>
-<p>To use Bayes’ rule we need the total probability that a head comes up, <span class="math inline">P(\text{head})</span>.</p>
-<p>Here we will use the formula for total probability that we looked at previously.</p>
+<p>To use Bayes’ rule, we need the total probability that a head comes up, <span class="math inline">P(\text{head})</span>.</p>
+<p>Here we will use the formula for total probability.</p>
 <span class="math display">\begin{align*}
-P(\text{head})&amp;=P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair}) \\
-&amp;=1\times 0.5+0.5\times 0.5 \\
+P(\text{head})&amp;=P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair}) \\[6pt]
+&amp;=1\times 0.5+0.5\times 0.5 \\[6pt]
 &amp;=0.75
 \end{align*}</span>
 <p>Putting this into Bayes rule:</p>
 <span class="math display">\begin{align*}
 P(\text{rigged}|\text{head})&amp;=\frac{P(\text{head}|\text{rigged})P(\text{rigged})}{P(\text{head})} \\[12pt]
-&amp;=\frac{1\times 0.5}{0.75} \\
+&amp;=\frac{1\times 0.5}{0.75} \\[6pt]
 &amp;=\frac{2}{3}
 \end{align*}</span>
 <p>Your friend flips the coin again and gets another head. What is the updated probability that the coin is rigged?</p>
+<p>The prior belief is now <span class="math inline">P(\text{rigged})=\frac{2}{3}</span>.</p>
+<p>The total probability of flipping a head is:</p>
 <span class="math display">\begin{align*}
-P(\text{rigged}|\text{head})&amp;=\frac{P(\text{head}|\text{rigged})P(\text{rigged})}{P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair})} \\[12pt]
-&amp;=\frac{1\times \frac{2}{3}}{1\times\frac{2}{3}+\frac{1}{2}\times\frac{1}{3}} \\
+P(\text{head})&amp;=P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text{fair})P(\text{fair}) \\[6pt]
+&amp;=1\times \frac{2}{3}+0.5\times \frac{1}{3} \\[6pt]
+&amp;=\frac{5}{6}
+\end{align*}</span>
+<p>Putting this into Bayes rule:</p>
+<span class="math display">\begin{align*}
+P(\text{rigged}|\text{head})&amp;=\frac{P(\text{head}|\text{rigged})P(\text{rigged})}{P(\text{head})} \\[12pt]
+&amp;=\frac{1\times \frac{2}{3}}{\frac{5}{6}} \\[6pt]
 &amp;=\frac{4}{5}
 \end{align*}</span>
+<p>Your belief that the coin is rigged has now increased to 80%.</p>
 <p>Your friend flips the coin 10 more times and gets 10 more heads. What is the updated probability that the coin is rigged?</p>
+<p>We use our prior belief of <span class="math inline">P(\text{rigged})=\frac{4}{5}</span>.</p>
+<p>The total probability of flipping 10 heads is:</p>
 <span class="math display">\begin{align*}
-P(\text{rigged}|\text{10 heads})&amp;=\frac{P(\text{10 heads}|\text{rigged})P(\text{rigged})}{P(\text{10 heads}|\text{rigged})P(\text{rigged})+P(\text{10 heads}|\text{fair})P(\text{fair})} \\[12pt]
-&amp;=\frac{1\times \frac{4}{5}}{1\times\frac{4}{5}+(\frac{1}{2})^{10}\times\frac{1}{5}} \\[6pt]
-&amp;=\frac{1\times \frac{4}{5}}{1\times\frac{4}{5}+\frac{1}{1024}\times\frac{1}{5}} \\[6pt]
+P(\text{10 heads})&amp;=P(\text{10 heads}|\text{rigged})P(\text{rigged})+P(\text{10 heads}|\text{fair})P(\text{fair}) \\[6pt]
+&amp;=1\times \frac{4}{5}+\bigg(\frac{1}{2}\bigg)^{10}\times \frac{1}{5} \\[6pt]
+&amp;=0.8001953
+\end{align*}</span>
+<p>Putting this into Bayes rule:</p>
+<span class="math display">\begin{align*}
+P(\text{rigged}|\text{10 heads})&amp;=\frac{P(\text{10 heads}|\text{rigged})P(\text{rigged})}{P(\text{10 heads})} \\[12pt]
+&amp;=\frac{1\times \frac{4}{5}}{0.8001953} \\[12pt]
 &amp;=0.9997559
 \end{align*}</span>
+<p>We now believe the coin is rigged with greater than 99.9% probability.</p>
 </section>
-<section id="bayes-rule-example-2" class="level3" data-number="32.3.2">
-<h3 data-number="32.3.2" class="anchored" data-anchor-id="bayes-rule-example-2"><span class="header-section-number">32.3.2</span> Bayes’ rule example 2</h3>
-<p>You have two urns. Urn one has 30% black balls and 70% yellow balls. Urn two has 70% black balls and 30% yellow balls. The labels have fallen off the urns so you do not know which urn is which.</p>
-<p>You reach into one of the urns and pull out a yellow ball. What is the probability that you have drawn the ball from urn one?</p>
+<section id="bayes-rule-example-2" class="level3" data-number="32.3.3">
+<h3 data-number="32.3.3" class="anchored" data-anchor-id="bayes-rule-example-2"><span class="header-section-number">32.3.3</span> Bayes’ rule example 2</h3>
+<p>You have two urns filled with balls. Urn 1 has 30% black balls and 70% yellow balls. Urn 2 has 70% black balls and 30% yellow balls. The labels have fallen off the urns, so you do not know which urn is which.</p>
+<p>You reach into one of the urns and pull out a yellow ball. What is the probability that you have drawn the ball from urn 1?</p>
+<p>The Bayes’ rule formula to solve this problem is:</p>
 <span class="math display">\begin{align*}
-P(\text{urn one}|\text{yellow ball})&amp;=\frac{P(\text{yellow ball}|\text{urn one})P(\text{urn one})}{P(\text{yellow ball})} \\[6pt]
-&amp;=\frac{P(\text{yellow ball}|\text{urn one})P(\text{urn one})}{P(\text{yellow ball}|\text{urn one})P(\text{urn one})+P(\text{yellow ball}|\text{urn two})P(\text{urn two})} \\[6pt]
-&amp;=\frac{0.7\times 0.5}{0.7\times 0.5+0.3\times 0.5} \\[6pt]
-&amp;=\frac{0.35}{0.5} \\
-&amp;=0.7
+P(\text{urn 1}|\text{yellow})=\frac{P(\text{yellow}|\text{urn 1})P(\text{urn 1})}{P(\text{yellow})}
 \end{align*}</span>
-<p>You put the first ball back in the urn, reach in again and pull out a black ball. What is the probability that you have drawn the ball from urn one?</p>
+<p>We take the prior probability of the ball coming from urn 1 to be 50%. The probability of drawing a yellow ball from urn 1 is 70%.</p>
+<p>The total probability of drawing a yellow ball is:</p>
 <span class="math display">\begin{align*}
-P(\text{urn one}|\text{black ball})&amp;=\frac{P(\text{black ball}|\text{urn one})P(\text{urn one})}{P(\text{black ball})} \\[6pt]
-&amp;=\frac{P(\text{black ball}|\text{urn one})P(\text{urn one})}{P(\text{black ball}|\text{urn one})P(\text{urn one})+P(\text{black ball}|\text{urn two})P(\text{urn two})} \\[6pt]
-&amp;=\frac{0.3\times 0.7}{0.3\times 0.7+0.7\times 0.3} \\[6pt]
-&amp;=\frac{0.21}{0.42} \\
+P(\text{yellow})&amp;=P(\text{yellow}|\text{urn 1})P(\text{urn 1})+P(\text{yellow}|\text{urn 2})P(\text{urn 2}) \\[6pt]
+&amp;=0.3\times 0.5+0.7\times 0.5 \\[6pt]
 &amp;=0.5
 \end{align*}</span>
+<p>Putting this into Bayes rule:</p>
+<span class="math display">\begin{align*}
+P(\text{urn 1}|\text{yellow})&amp;=\frac{P(\text{yellow}|\text{urn 1})P(\text{urn 1})}{P(\text{yellow})} \\[12pt]
+&amp;=\frac{P(\text{yellow}|\text{urn 1})P(\text{urn 1})}{P(\text{yellow}|\text{urn 1})P(\text{urn 1})+P(\text{yellow}|\text{urn 2})P(\text{urn 2})} \\[12pt]
+&amp;=\frac{0.7\times 0.5}{0.7\times 0.5+0.3\times 0.5} \\[12pt]
+&amp;=0.7
+\end{align*}</span>
+<p>You put the first ball back in the urn, reach in again and pull out a black ball. What is the probability that you have drawn the ball from urn 1?</p>
+<p>Given we have already drawn one ball and updated our probability, we will use the prior probability of <span class="math inline">P(\text{urn 1})=0.7</span>.</p>
+<p>The total probability of drawing a black ball is:</p>
+<span class="math display">\begin{align*}
+P(\text{black})&amp;=P(\text{black}|\text{urn 1})P(\text{urn 1})+P(\text{black}|\text{urn 2})P(\text{urn 2}) \\[6pt]
+&amp;=0.3\times 0.7+0.7\times 0.3 \\[6pt]
+&amp;=0.42
+\end{align*}</span>
+<p>Putting this into Bayes rule:</p>
+<span class="math display">\begin{align*}
+P(\text{urn 1}|\text{black})&amp;=\frac{P(\text{black}|\text{urn 1})P(\text{urn 1})}{P(\text{black})} \\[12pt]
+&amp;=\frac{0.3\times 0.7}{0.42} \\[12pt]
+&amp;=0.5
+\end{align*}</span>
+<p>The answer of 0.5 should seem intuitive. We have now drawn one black and one yellow ball. In combination, this is uninformative and we are back at our initial prior of 0.5.</p>
 </section>
-<section id="bayes-rule-example-3" class="level3" data-number="32.3.3">
-<h3 data-number="32.3.3" class="anchored" data-anchor-id="bayes-rule-example-3"><span class="header-section-number">32.3.3</span> Bayes’ rule example 3</h3>
+<section id="bayes-rule-example-3" class="level3" data-number="32.3.4">
+<h3 data-number="32.3.4" class="anchored" data-anchor-id="bayes-rule-example-3"><span class="header-section-number">32.3.4</span> Bayes’ rule example 3</h3>
 <p>Recall the Monty Hall problem:</p>
 <blockquote class="blockquote">
 <p>Suppose you’re on a game show and you’re given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No.&nbsp;1, and the host, who knows what’s behind the doors, opens another door, say No.&nbsp;3, which has a goat. He then says to you, “Do you want to pick door No.&nbsp;2?” Is it to your advantage to switch your choice?</p>
@@ -793,16 +833,33 @@ P(\text{urn one}|\text{black ball})&amp;=\frac{P(\text{black ball}|\text{urn one
 <li><p>The host must always open a door to reveal a goat and never the car.</p></li>
 <li><p>The host must always offer you the choice to switch between the chosen door and the remaining closed door.</p></li>
 </ul>
-<p>We want to know the probability that the car is behind door 2 given the host opened door 3. That is, we want to know <span class="math inline">P(C2|D3)</span>. [Technically we want <span class="math inline">P(C2|D3\cap X1)</span> where X1 is our selection of door 1. However, adding this complication to the calculation does not change the answer.]</p>
+<p>We want to know the probability that the car is behind Door 2 given the host opened Door 3. We want to know <span class="math inline">P(C2|D3)</span>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>To determine this using Bayes rule, we would use the following formula:</p>
 <span class="math display">\begin{align*}
-P(A|B)&amp;=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
+P(C2|D3)&amp;=\frac{P(D3|C2)P(C2)}{P(D3)}
+\end{align*}</span>
+<p><span class="math inline">P(D3)</span> is the probability that the host opens Door 3. It is calculated using the formula for total probability:</p>
+<span class="math display">\begin{align*}
+P(D3)&amp;=P(D3|C1)P(C1)+P(D3|C2)P(C2)+P(D3|C3)P(C3)
+\end{align*}</span>
+<p>Each of those elements are as follows.</p>
+<p><span class="math inline">P(C1)</span>, <span class="math inline">P(C2)</span> and <span class="math inline">P(C3)</span> are our prior probability of the car being behind each door, which is <span class="math inline">\frac{1}{3}</span>.</p>
+<p><span class="math inline">P(D3|C1)</span> is the probability that the host opens door 3, given the car is behind door 1. The host could open either of Door 2 or Door 3 as neither has the car behind it, so the probability of Door 3 is <span class="math inline">\frac{1}{2}</span>.</p>
+<p><span class="math inline">P(D3|C2)</span> is the probability that the host opens Door 3, given the car is behind Door 2. The host must open that door, so the probability is one. They cannot open the door you have chosen or the door that the car is behind.</p>
+<p><span class="math inline">P(D3|C3)</span> is the probability that the host opens door 3, given the car is behind door 3. The host cannot open a door to show the car, so the probability is zero.</p>
+<p>Returning to our equations, the total probability of the host opening Door 3 is:</p>
+<span class="math display">\begin{align*}
+P(D3)&amp;=P(D3|C1)P(C1)+P(D3|C2)P(C2)+P(D3|C3)P(C3) \\[6pt]
+&amp;=\frac{1}{2}\times\frac{1}{3}+1\times\frac{1}{3}+0\times\frac{1}{3} \\[6pt]
+&amp;=\frac{1}{2}
+\end{align*}</span>
+<p>Now we can calculate the probability that the car is behind Door 2, given the host opened Door 3:</p>
+<span class="math display">\begin{align*}
 P(C2|D3)&amp;=\frac{P(D3|C2)P(C2)}{P(D3)} \\[12pt]
-&amp;=\frac{P(D3|C2)P(C2)}{P(D3|C2)P(C2)+P(D3|C1)P(C1)+P(D3|C3)P(C3)} \\[12pt]
-&amp;=\frac{1\times\frac{1}{3}}{1\times\frac{1}{3}+\frac{1}{2}\times\frac{1}{3}+0\times\frac{1}{3}} \\[12pt]
-&amp;=\frac{\frac{1}{3}}{\frac{1}{2}} \\[12pt]
+&amp;=\frac{1\times\frac{1}{3}}{\frac{1}{2}} \\[12pt]
 &amp;=\frac{2}{3}
 \end{align*}</span>
+<p>The contestant should switch doors.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
@@ -811,6 +868,12 @@ Savant, M. vos. (1990). Game show problem. <em>PARADE Magazine</em>, <em>16</em>
 </div>
 </div>
 </section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Technically we want <span class="math inline">P(C2|D3\cap X1)</span> where X1 is our selection of Door 1. However, adding this complication to the calculation does not change the answer.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -991,7 +1054,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
 
 
 
