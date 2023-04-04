@@ -1,10 +1,12 @@
 # Heuristics
 
-Heuristics are mental shortcuts or rules of thumb that people use to make decisions. They differ from optimisation in that they often use a limited set of information and a more computationally tractable method for making a satisfactory decision.
+Heuristics are mental shortcuts or rules of thumb that people use to make decisions. They differ from optimisation in that they typically involve a limited information set and a more computationally tractable decision method.
 
-There is substantial evidence that people use heuristics. They don't normally calculate conditional probabilities using Bayes rule. Rather, the heuristics approximate Bayes rule under certain conditions.
+An example of a heuristic is the recognition heuristic. Under this heuristic, if one of two objects is recognised, infer that the recognised object is more likely to be the target object. For example, if you want to predict which of two players will win a tennis match, and you know of only one of the two players, infer that the player you know will win. Similarly, if judging the relative size of two cities, of which you have heard of only one, infer that the city you have heard of is larger.
 
-Heuristics are often accurate, are tractable, but in certain environments can lead to error.
+There is substantial evidence that people use heuristics. People don't normally calculate conditional probabilities using Bayes' rule. Instead, the heuristics might approximate Bayes rule under certain conditions.
+
+Heuristics are often accurate and tractable, but in some environments can lead to error.
 
 Tversky and Kahneman [-@tversky1974] defined three now classic heuristics: representativeness, availability and anchoring.
 
@@ -14,15 +16,15 @@ I will illustrate these three and then discuss a series of biases in probability
 
 Suppose you wish to estimate the probability that an event or person belongs to a certain class.
 
--   "What is the probability that the event $A$ belongs to the class $B$?"
+-   "What is the probability that event $A$ belongs to class $B$?"
 
--   "What is the probability that the process $B$ will generate the event $A$?"
+-   "What is the probability that process $B$ will generate event $A$?"
 
-Under the representativeness heuristic, probabilities are evaluated by the degree to which $A$ is representative of (similar to) $B$.
+Under the representativeness heuristic, people evaluate probabilities by the degree to which $A$ is representative of (similar to) $B$.
 
 Tversky and Kahneman [-@tversky1974] provide the following example:
 
-> For an illustration of judgment by representativeness, consider an individual who has been described by a former neighbor as follows:
+> [C]onsider an individual who has been described by a former neighbor as follows:
 >
 > "Steve is very shy and withdrawn, invariably helpful, but with little interest in people, or in the world of reality. A meek and tidy soul, he has a need for order and structure, and a passion for detail."
 >
@@ -30,29 +32,30 @@ Tversky and Kahneman [-@tversky1974] provide the following example:
 
 ## Availability heuristic
 
-Under the availability heuristic, people assess the frequency of a class or the probability of an event by the ease with which instances or occurrences can be recalled. If an event is more “available” it is judged to have a higher frequency or probability.
+Under the availability heuristic, people assess the frequency of a class or the probability of an event by the ease with which they can recall instances or occurrences. If an event is more “available”, it is judged to have a higher frequency or probability.
 
-For example, if trying to assess the probability of heart attack, you might recall occurrences among people you know. If trying to assess the probability of shark attack, you might recall how often you hear of attacks on the news.
+For example, if assessing the probability of a heart attack, you might recall occurrences among people you know. If you are assessing the probability of shark attack, you might recall how often you hear of attacks on the news.
 
-In one experiment [@tversky1974], experimental subjects were given lists of names. In some lists the men were more famous than the women, and in other lists vice versa. After viewing the list they were then asked whether the list had more men or women.
+In one experiment, @tversky1974 gave experimental subjects lists of names. In some lists, the men were more famous than the women, and in other lists, vice versa. After viewing the list, they were asked whether the list had more men or women.
 
-For each list, the subjects judged that the sex that had more famous names was more common. Those names were more available in their minds.
+For each list, the subjects judged that the sex with more famous names was more common. Those names were more available in their minds.
 
 ## Anchoring and adjustment
 
-When using the anchoring and adjustment, people estimate by starting from an initial value and adjusting from that value to obtain the final estimate.
-Suppose you know the odds of a phenomenon $A$ and you want to estimate the odds of phenomenon $B$.  Anchoring and adjustment implies that:
+When using anchoring and adjustment, people estimate by starting from an initial value and adjusting from that value to obtain the final estimate.
 
-The accuracy of anchoring and adjustment is dependent on:
+Suppose you know the odds of outcome $A$, and want to estimate the odds of outcome $B$.  Anchoring and adjustment implies that you will start with the odds of outcome $A$ and adjust to obtain the odds of outcome $B$.
 
-1. The quality of the anchor: Is the anchor correlated with the quantity being estimated? How strongly? Empirically, people tend to use weak or irrelevant anchors.
+The accuracy of anchoring and adjustment depends on the anchor's quality and the size of the adjustment from the anchor.
 
-2. The size of the adjustment from the anchor. Empirically, observed adjustments from the anchor are too small.
+The quality of the anchor relates to the strength of the correlation between the anchor and the quantity being estimated. Empirically, people tend to use weak or irrelevant anchors.
 
-Tversky and Kahneman [-@tversky1974] asked subjects to estimate the percentage of African countries in the United Nations.
+The size of the adjustment then needs to account for the relationship between the anchor and the quantity being estimated. Empirically, observed adjustments from the anchor are too small.
+
+As an example, Tversky and Kahneman [-@tversky1974] asked subjects to estimate the percentage of African countries in the United Nations.
 
 A number between 0 and 100 was determined by spinning a wheel in the subjects' presence. The subjects were instructed to indicate first whether that number was higher or lower than the estimated percentage, and then to estimate the value of the quantity by moving upward or downward from the given number.
 
-Different groups were given different numbers from the wheel, and these arbitrary numbers had a marked effect on estimates. The median estimates of the percentage of African countries in the United Nations were 25 and 45 for groups that received 10 and 65, respectively.
+Different groups were given different numbers from the wheel. These arbitrary numbers had a marked effect on estimates. The median estimates of the percentage of African countries in the United Nations were 25 and 45 for groups that received numbers 10 and 65 from the wheel, respectively.
 
 Payoffs for accuracy did not reduce the effect of the anchor.
