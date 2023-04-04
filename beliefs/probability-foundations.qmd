@@ -273,7 +273,7 @@ P(\text{head})&=P(\text{head}|\text{rigged})P(\text{rigged})+P(\text{head}|\text
 \end{align*}
 ```
 
-Putting this into Bayes rule:
+Putting this into Bayes' rule:
 
 ```{=tex}
 \begin{align*}
@@ -323,7 +323,7 @@ P(\text{10 heads})&=P(\text{10 heads}|\text{rigged})P(\text{rigged})+P(\text{10 
 \end{align*}
 ```
 
-Putting this into Bayes rule:
+Putting this into Bayes' rule:
 
 ```{=tex}
 \begin{align*}
@@ -361,7 +361,7 @@ P(\text{yellow})&=P(\text{yellow}|\text{urn 1})P(\text{urn 1})+P(\text{yellow}|\
 \end{align*}
 ```
 
-Putting this into Bayes rule:
+Putting this into Bayes' rule:
 
 ```{=tex}
 \begin{align*}
@@ -414,7 +414,7 @@ Assume that the rules of this game show are that:
 
 We want to know the probability that the car is behind Door 2 given the host opened Door 3. We want to know $P(C2|D3)$. ^[Technically we want $P(C2|D3\cap X1)$ where X1 is our selection of Door 1. However, adding this complication to the calculation does not change the answer.]
 
-To determine this using Bayes rule, we would use the following formula:
+To determine this using Bayes' rule, we would use the following formula:
 
 ```{=tex}
 \begin{align*}

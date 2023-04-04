@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -102,10 +165,10 @@ div.csl-indent {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 34&nbsp; Biases in probability judgment">
-<meta property="og:description" content="Tversky and Kahneman (1983) asked students to read the following statement:">
+<meta property="og:description" content="In this part, I introduce several biases in probability judgment.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 34&nbsp; Biases in probability judgment">
-<meta name="twitter:description" content="Tversky and Kahneman (1983) asked students to read the following statement:">
+<meta name="twitter:description" content="In this part, I introduce several biases in probability judgment.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -527,7 +590,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#the-conjunction-fallacy" id="toc-the-conjunction-fallacy" class="nav-link active" data-scroll-target="#the-conjunction-fallacy"><span class="toc-section-number">34.1</span>  The conjunction fallacy</a></li>
-  <li><a href="#base-rate-neglect" id="toc-base-rate-neglect" class="nav-link" data-scroll-target="#base-rate-neglect"><span class="toc-section-number">34.2</span>  Base rate neglect</a>
+  <li><a href="#base-rate-neglect" id="toc-base-rate-neglect" class="nav-link" data-scroll-target="#base-rate-neglect"><span class="toc-section-number">34.2</span>  Base-rate neglect</a>
   <ul class="collapse">
   <li><a href="#the-cab-problem" id="toc-the-cab-problem" class="nav-link" data-scroll-target="#the-cab-problem"><span class="toc-section-number">34.2.1</span>  The cab problem</a></li>
   <li><a href="#medical-diagnosis" id="toc-medical-diagnosis" class="nav-link" data-scroll-target="#medical-diagnosis"><span class="toc-section-number">34.2.2</span>  Medical diagnosis</a></li>
@@ -567,13 +630,44 @@ div.csl-indent {
 
 </header>
 
+<p>In this part, I introduce several biases in probability judgment.</p>
 <section id="the-conjunction-fallacy" class="level2" data-number="34.1">
 <h2 data-number="34.1" class="anchored" data-anchor-id="the-conjunction-fallacy"><span class="header-section-number">34.1</span> The conjunction fallacy</h2>
-<p>Tversky and Kahneman <span class="citation" data-cites="tversky1983">(<a href="../references.html#ref-tversky1983" role="doc-biblioref">1983</a>)</span> asked students to read the following statement:</p>
+<p>The first involves the conjunction fallacy. The conjunction fallacy occurs when someone judges the probability of the conjunction of two events to be greater than the probability of one or both events.</p>
+<p>For example, if we have two outcomes, <span class="math inline">A</span> and <span class="math inline">B</span>, the probability of both <span class="math inline">A</span> and <span class="math inline">B</span> occurring - that is, the conjunction of <span class="math inline">A</span> and <span class="math inline">B</span> - should be less than or equal to each of the individual probabilities.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a Venn diagram using ggvenn showing P(A), P(B) and P(A and B)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Import required package</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggvenn"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Data</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>venn <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">A =</span> <span class="fu">sort</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">500</span>, <span class="dv">50</span>)),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                  <span class="at">B =</span> <span class="fu">sort</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">500</span>, <span class="dv">50</span>)))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create venn diagram Pairwise</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggvenn</span>(venn, <span class="at">show_percentage =</span> <span class="cn">FALSE</span>, <span class="at">show_elements=</span><span class="cn">FALSE</span>, <span class="at">fill_color=</span><span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"white"</span>), <span class="at">set_name_color=</span><span class="st">"white"</span>,<span class="at">text_color=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">x =</span>  <span class="fu">c</span>(<span class="sc">-</span>.<span class="dv">75</span>, <span class="fl">0.75</span>, <span class="dv">0</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span>   <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span>  <span class="fu">c</span>(<span class="st">'P(A)'</span>, <span class="st">'P(B)'</span>, <span class="st">'P(A and B)'</span>),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="biases-in-probability-judgment_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="biases-in-probability-judgment_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The most famous example of the conjunction fallacy comes from Tversky and Kahneman <span class="citation" data-cites="tversky1983">(<a href="../references.html#ref-tversky1983" role="doc-biblioref">1983</a>)</span>. They asked students to read the following statement:</p>
 <blockquote class="blockquote">
 <p>Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations.</p>
 </blockquote>
-<p>The students were asked to rank the following statements from most (1) to least (8) probable:</p>
+<p>Tversky and Kahneman asked the students to rank the following statements from most to least probable:</p>
 <ol type="1">
 <li>Linda is a teacher in elementary school.</li>
 <li>Linda works in a bookstore and takes Yoga classes.</li>
@@ -585,19 +679,18 @@ div.csl-indent {
 <li>Linda is a bank teller and is active in the feminist movement.</li>
 </ol>
 <p>Note that “8. Linda is a bank teller and is active in the feminist movement” is a conjunction of “3. Linda is active in the feminist movement” and “6. Linda is a bank teller”.</p>
-<p>Tversky and Kahneman found in a sample of students that 88% had 3 before 8 before 6. “6. Linda is a bank teller” was rated less probable than “8. Linda is a bank teller and is active in the feminist movement”.</p>
-<p>To understand why this is an error, recall that the probability of the conjunction of two outcomes equals:</p>
+<p>Tversky and Kahneman found in a sample of students that 88% ranked 3 before 8 before 6. “6. Linda is a bank teller” was rated less probable than “8. Linda is a bank teller and is active in the feminist movement”.</p>
+<p>To understand why this is an error, recall that the probability of the conjunction of two outcomes is as follows:</p>
 <p><span class="math display">
 P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
 </span></p>
-<p>As <span class="math inline">P(A|B)\leq 1</span> and <span class="math inline">P(B|A)\leq 1</span>, <span class="math inline">P(A\cap B)</span> must be less than or equal to <span class="math inline">P(A)</span> or <span class="math inline">P(B)</span>. If <span class="math inline">P(A|B)&lt;1</span> and <span class="math inline">P(B|A)&lt;1</span>, <span class="math inline">P(A\cap B)</span> must be less than <span class="math inline">P(A)</span> or <span class="math inline">P(B)</span>.</p>
-<p>Why do people make this error?</p>
-<p>The description of Linda was constructed to be representative of a feminist and unrepresentative of a bank teller.</p>
-<p>If people used the representativeness heuristic to order the statements, they would likely rank 8 above 6.</p>
+<p>If <span class="math inline">P(A|B)&lt;1</span> and <span class="math inline">P(B|A)&lt;1</span>, <span class="math inline">P(A\cap B)</span> must be less than <span class="math inline">P(A)</span> or <span class="math inline">P(B)</span>.</p>
+<p>One explanation for why people make this error relates to the representativeness heuristic.</p>
+<p>Tversky and Kahneman constructed the description of Linda to be representative of a feminist and unrepresentative of a bank teller. If people use the representativeness heuristic to order the statements, they will likely rank 8 above 6.</p>
 <p>The Linda Problem is one of the most heavily debated experiments in the social sciences.</p>
-<p>For example, Hertwig and Gigerenzer <span class="citation" data-cites="hertwig1999">(<a href="../references.html#ref-hertwig1999" role="doc-biblioref">1999</a>)</span> argue that people infer nonmathematical meaning to the word “probability”, taking it to mean “plausible” or “credible”.</p>
-<p>While possibly a fair critique of the Linda problem, other illustrations of the conjunction fallacy appear more robust.</p>
-<p>From Tversky and Kahneman <span class="citation" data-cites="tversky1983">(<a href="../references.html#ref-tversky1983" role="doc-biblioref">1983</a>)</span>:</p>
+<p>For example, Hertwig and Gigerenzer <span class="citation" data-cites="hertwig1999">(<a href="../references.html#ref-hertwig1999" role="doc-biblioref">1999</a>)</span> argue that people infer non-mathematical meaning to the word “probability”, taking it to mean “plausible” or “credible”.</p>
+<p>While this is possibly a fair critique of the Linda problem, other illustrations of the conjunction fallacy appear more robust.</p>
+<p>For example, Tversky and Kahneman <span class="citation" data-cites="tversky1983">(<a href="../references.html#ref-tversky1983" role="doc-biblioref">1983</a>)</span> created this example involving rolls of a die:</p>
 <blockquote class="blockquote">
 <p>Consider a regular six-sided die with four green faces and two red faces. The die will be rolled 20 times and the sequence of greens (G) and reds (R) will be recorded. You are asked to select one sequence, from a set of three, and you will win $25 if the sequence you chose appears on successive rolls of the die. Please check the sequence of greens and reds on which you prefer to bet.</p>
 <ol type="1">
@@ -606,13 +699,15 @@ P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
 <li><p>GRRRRR</p></li>
 </ol>
 </blockquote>
-<p>65% of experimental subjects chose sequence 2. It appears more “representative” of a die with four green faces and two red faces. But note that 1 is contained within 2 and strictly more likely. The fact subjects are betting on the outcome should remove questions about interpretation.</p>
+<p>65% of experimental subjects chose sequence 2. It appears more “representative” of a die with four green faces and two red faces. But note that 1 is contained within 2 and is strictly more likely. The fact subjects are betting on the outcome should remove doubt about interpretation.</p>
 </section>
 <section id="base-rate-neglect" class="level2" data-number="34.2">
-<h2 data-number="34.2" class="anchored" data-anchor-id="base-rate-neglect"><span class="header-section-number">34.2</span> Base rate neglect</h2>
+<h2 data-number="34.2" class="anchored" data-anchor-id="base-rate-neglect"><span class="header-section-number">34.2</span> Base-rate neglect</h2>
+<p>The base rate is the probability of an outcome unconditional on any evidence. For example, if 1% of the population has COVID-19 and the remainder doesn’t, the base rate of COVID-19 is 1%. If you were to obtain evidence that someone has COVID-19, such as a positive COVID-19 test, you would use that base rate in determining the conditional probability that they have the disease.</p>
+<p>Base rate neglect is the failure to consider an event’s base rate when making a judgment.</p>
 <section id="the-cab-problem" class="level3" data-number="34.2.1">
 <h3 data-number="34.2.1" class="anchored" data-anchor-id="the-cab-problem"><span class="header-section-number">34.2.1</span> The cab problem</h3>
-<p>The cab problem from Tversky and Kahneman <span class="citation" data-cites="tversky1982">(<a href="../references.html#ref-tversky1982" role="doc-biblioref">1982</a>)</span> involves the following story:</p>
+<p>One illustration of base-rate neglect comes from the cab problem from Tversky and Kahneman <span class="citation" data-cites="tversky1982">(<a href="../references.html#ref-tversky1982" role="doc-biblioref">1982</a>)</span>. It involves the following story:</p>
 <blockquote class="blockquote">
 <p>A cab was involved in a hit and run accident at night. Two cab companies, the Green and the Blue, operate in the city. Participants are given the following data:</p>
 <ol type="1">
@@ -623,11 +718,11 @@ P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
 </blockquote>
 <p>In the experiment, the median and modal answer was 80%.</p>
 <p>The correct answer is 41%.</p>
-<p>The experimental result indicates a confusion between conditional probabilities.</p>
+<p>The experimental result indicates confusion between conditional probabilities. They are confusing the probability of the witness identifying a blue cab given that the cab was blue with the probability of the cab being blue given that the witness identified it as blue. However, we need to use Bayes’ rule to calculate the probability of the cab being blue, given that the witness identified it as blue.</p>
 <p><span class="math display">
 \underbrace{P(\text{claim blue}|\text{blue})}_{80\%}\neq \underbrace{P(\text{blue}|\text{claim blue})}_{\text{Requires Bayes' rule}}
 </span></p>
-<p>The experimental subjects were effectively neglecting the base rate (the relative rarity) of blue cabs. A witness seeing a blue cab is representative of what would occur if the cab were blue.</p>
+<p>The experimental subjects effectively neglected the rarity of blue cabs. A witness seeing a blue cab is representative of what would occur if the cab were blue.</p>
 <p>The correct answer is as follows:</p>
 <span class="math display">\begin{align*}
 P(\text{blue}|\text{claim blue})&amp;=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{P(\text{claim blue}|\text{blue})P(\text{blue})+P(\text{claim blue}|\neg\text{blue})P(\neg\text{blue})} \\[12pt]
@@ -637,6 +732,7 @@ P(\text{blue}|\text{claim blue})&amp;=\frac{P(\text{claim blue}|\text{blue})P(\t
 </section>
 <section id="medical-diagnosis" class="level3" data-number="34.2.2">
 <h3 data-number="34.2.2" class="anchored" data-anchor-id="medical-diagnosis"><span class="header-section-number">34.2.2</span> Medical diagnosis</h3>
+<p>We can also see base rate neglect in the context of diagnosing a rare disease.</p>
 <p>Consider the following problem:</p>
 <blockquote class="blockquote">
 <p>You test yourself for COVID-19. The following information is known:</p>
@@ -647,23 +743,22 @@ P(\text{blue}|\text{claim blue})&amp;=\frac{P(\text{claim blue}|\text{blue})P(\t
 </ul>
 <p>You test positive. What is the chance that you have COVID-19?</p>
 </blockquote>
-<p>When problems of this nature are given to physicians, only around 10 to 20% reason according to Bayes’ rule (for example, see <span class="citation" data-cites="hoffrage2015">Hoffrage et al. (<a href="../references.html#ref-hoffrage2015" role="doc-biblioref">2015</a>)</span>).</p>
-<p>The most common answers approximate the sensitivity (~90% for this example).</p>
-<p>As for the cab problem, there is a confusion about sensitivity.</p>
+<p>When problems of this nature are given to physicians, around 10 to 20% reason using Bayes’ rule (for example, see <span class="citation" data-cites="hoffrage2015">Hoffrage et al. (<a href="../references.html#ref-hoffrage2015" role="doc-biblioref">2015</a>)</span>). The most common answers approximate the sensitivity (~90% for this example).</p>
+<p>As for the cab problem, there is confusion between the conditional probabilities.</p>
 <p><span class="math display">
-P(\text{COVID}|\text{positive})\neq P(\text{positive}|\text{COVID})
+P(\text{COVID}|\text{+ve})\neq P(\text{+ve}|\text{COVID})
 </span></p>
-<p>A positive test is “representative” of someone with COVID-19, so is given greater weight than the more general information about the base rate.</p>
+<p>One hypothesis for this error is that a positive test is “representative” of someone with COVID-19. As a result, the test is given greater weight than the more general information about the base rate.</p>
 <p>The correct answer is:</p>
 <span class="math display">\begin{align*}
-P(\text{COVID}|\text{positive})&amp;=\frac{P(\text{positive}|\text{COVID})P(\text{COVID})}{P(\text{positive})} \\[12pt]
-&amp;=\frac{P(\text{positive}|\text{COVID})P(\text{COVID})}{P(\text{positive}|\text{COVID})P(\text{COVID})+P(\text{positive}|\neg\text{COVID})P(\neg\text{COVID})} \\[12pt]
+P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
+&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve}|\text{COVID})P(\text{COVID})+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})} \\[12pt]
 &amp;=\frac{0.9\times 0.01}{0.9\times 0.01 + 0.09\times 0.99} \\[12pt]
 &amp;=0.092
 \end{align*}</span>
-<p>The correct answer becomes more apparent if I show an alternative representation, such as the following:</p>
+<p>The correct answer becomes more apparent if I show an alternative representation using natural frequencies:</p>
 <blockquote class="blockquote">
-<p>You test yourself with a rapid antigen test for COVID-19. The following information is known:</p>
+<p>You test yourself for COVID-19. The following information is known:</p>
 <ul>
 <li>Ten in every 1000 people have COVID-19&nbsp;(the prevalence)</li>
 <li>Of these 10 people with COVID-19, nine will test positive (the sensitivity)</li>
@@ -671,26 +766,25 @@ P(\text{COVID}|\text{positive})&amp;=\frac{P(\text{positive}|\text{COVID})P(\tex
 </ul>
 <p>You test positive. What is the chance that you have COVID-19?</p>
 </blockquote>
-<p>Use of natural frequencies in this way was first proposed by Cosmides and Tooby <span class="citation" data-cites="cosmides1996">(<a href="../references.html#ref-cosmides1996" role="doc-biblioref">1996</a>)</span>. Natural frequencies are derived from observing cases that have been representatively sampled from a population.</p>
-<p><span class="citation" data-cites="hoffrage1998">Hoffrage and Gigerenzer (<a href="../references.html#ref-hoffrage1998" role="doc-biblioref">1998</a>)</span> report that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.</p>
-<p>There is some evidence that you can get further gains through a frequency tree representation (e.g. <span class="citation" data-cites="spiegelhalter2015">Spiegelhalter and Gage (<a href="../references.html#ref-spiegelhalter2015" role="doc-biblioref">2015</a>)</span>). Below is one such tree from <span class="citation" data-cites="gigerenzer2011">Gigerenzer (<a href="../references.html#ref-gigerenzer2011" role="doc-biblioref">2011</a>)</span>.</p>
+<p>Cosmides and Tooby <span class="citation" data-cites="cosmides1996">(<a href="../references.html#ref-cosmides1996" role="doc-biblioref">1996</a>)</span> first proposed using natural frequencies in this way. We derive natural frequencies by observing cases representatively sampled from a population.</p>
+<p><span class="citation" data-cites="hoffrage1998">Hoffrage and Gigerenzer (<a href="../references.html#ref-hoffrage1998" role="doc-biblioref">1998</a>)</span> reported that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.</p>
+<p>There is evidence that you can get further gains through a frequency tree representation (e.g. <span class="citation" data-cites="spiegelhalter2015">Spiegelhalter and Gage (<a href="../references.html#ref-spiegelhalter2015" role="doc-biblioref">2015</a>)</span>). Below is one such tree from <span class="citation" data-cites="gigerenzer2011">Gigerenzer (<a href="../references.html#ref-gigerenzer2011" role="doc-biblioref">2011</a>)</span>, which is contrasted with a tree using conditional probabilities.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/gigerenzer_2011.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/gigerenzer_2011.png" class="img-fluid figure-img"></a></p>
+<p><a href="img/gigerenzer_2011.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/gigerenzer_2011.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>The numbers at the bottom of the conditional probability tree do not contain the base rate information. You can’t simply compare across them in calculating conditional probabilities. You also need to refer back to the middle layer. Conversely, the natural frequency tree contains all you need in the bottom row.</p>
-<p>Note that we could convert the numbers in the bottom of the conditional probability tree into frequencies: 900 in 1000, 10 in 1000, 90 in 1000 and 910 in 1000. Gigerenzer calls these simple frequencies.</p>
-<p>There are many scenarios where simple frequencies can make a problem more tractable, but they do not solve the computational complexity here. Simple frequencies are just a restatement of the probabilities. In contrast, natural frequencies are joint frequencies, such as the number of people who test positive and who have COVID-19.</p>
+<p>The numbers at the bottom of the conditional probability tree do not contain the base rate information. You can’t simply compare them to calculate conditional probabilities. You need to refer to the middle layer. Conversely, the natural frequency tree contains all you need to calculate the conditional probability in the bottom row.</p>
+<p>We can convert the numbers at the bottom of the conditional probability tree into frequencies: 900 in 1000, 10 in 1000, 90 in 1000 and 910 in 1000. Gigerenzer calls these simple frequencies. While simple frequencies can make a problem more tractable, they do not allow us to calculate conditional probabilities. Simple frequencies are just a restatement of the probabilities. In contrast, natural frequencies are joint frequencies, such as the number of people who test positive and who have COVID-19.</p>
 </section>
 <section id="the-quasi-bayesian-approach" class="level3" data-number="34.2.3">
 <h3 data-number="34.2.3" class="anchored" data-anchor-id="the-quasi-bayesian-approach"><span class="header-section-number">34.2.3</span> The Quasi-Bayesian approach</h3>
-<p>We can introduce base-rate neglect into Bayes’ formula by assuming people put the same probability on all possible hypotheses (uniform priors).</p>
-<p>For example, base-rate neglect implies we assume the COVID-19 and non-COVID-19 population have the same size. The two possible states of the world (COVID-19+, COVID-19−) are assumed to have the same probability (<span class="math inline">p=0.5</span>, <span class="math inline">1−p=0.5</span>).</p>
-<p>By introducing the base-rate neglect in Bayes’ rule we match the empirical result:</p>
+<p>An alternative explanation for base rate neglect is that people put the same probability on all possible hypotheses (uniform priors).</p>
+<p>For example, base-rate neglect implies that an agent assumes the COVID-19 and non-COVID-19 populations have the same size. Assume the two possible states of the world (COVID-19+, COVID-19−) have the same probability (<span class="math inline">p=0.5</span>, <span class="math inline">1−p=0.5</span>).</p>
+<p>By introducing the base-rate neglect in Bayes’ rule, we match the empirical result:</p>
 <span class="math display">\begin{align*}
-P(\text{COVID}|\text{positive})&amp;=\frac{P(\text{positive}|\text{COVID})P(\text{COVID})}{P(\text{positive})} \\[12pt]
-&amp;=\frac{P(\text{positive}|\text{COVID})P(\text{COVID})}{P(\text{positive}|\text{COVID})P(\text{COVID})+P(\text{positive}|\neg\text{COVID})P(\neg\text{COVID})} \\[12pt]
+P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
+&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve}|\text{COVID})P(\text{COVID})+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})} \\[12pt]
 &amp;=\frac{0.9\times 0.5}{0.9\times 0.5 + 0.09\times 0.5} \\[12pt]
 &amp;=0.909
 \end{align*}</span>
@@ -698,47 +792,44 @@ P(\text{COVID}|\text{positive})&amp;=\frac{P(\text{positive}|\text{COVID})P(\tex
 </section>
 <section id="probability-matching" class="level2" data-number="34.3">
 <h2 data-number="34.3" class="anchored" data-anchor-id="probability-matching"><span class="header-section-number">34.3</span> Probability matching</h2>
+<p>Another bias in probability judgment is our tendency to “probability match”. Probability matching is the tendency of people to mirror the probability distributions of stimuli in their response probabilities. The strategy of probability matching is not optimal for minimising prediction error.</p>
 <p>Consider the following experimental setup:</p>
 <ul>
 <li>A red lamp that turns on with probability <span class="math inline">p=0.70</span></li>
 <li>A green lamp that turns on with probability <span class="math inline">p=0.30</span></li>
 </ul>
-<p>Participants are required top predict which light will turn on after observing a series of flashes.</p>
+<p>Participants predict which light will turn on after observing a series of flashes.</p>
 <p>What do participants do?</p>
-<p>The proportions of predictions reflect the actual probabilities of the two light bulbs being turned on (i.e.&nbsp;<span class="math inline">p=0.30</span> for green lamps, <span class="math inline">p=0.70</span> for red lamps)</p>
-<p>Probability matching is the tendency of humans and animals to mirror the probability distributions of presented stimuli in their response probabilities. The strategy of probability matching is not optimal for minimizing prediction error.</p>
+<p>The proportions of predictions reflect the actual probabilities of the two light bulbs being turned on. People tend to predict 70% of the time that the red lamp will come on and 30% of the time that the green lamp will come on.</p>
 <p>With probability matching, the probability of a successful guess is:</p>
 <span class="math display">\begin{align*}
 P(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
 &amp;=0.58
 \end{align*}</span>
-<p>A better strategy is to always select the event with the highest probability. In this example, participants should always predict that the red light will be turned on, giving them a 70% probability of a successful guess.</p>
+<p>A better strategy is always to select the event with the highest probability. In this example, participants should always predict that the red light will be turned on, giving them a 70% probability of a successful guess.</p>
 </section>
 <section id="the-gamblers-fallacy" class="level2" data-number="34.4">
 <h2 data-number="34.4" class="anchored" data-anchor-id="the-gamblers-fallacy"><span class="header-section-number">34.4</span> The gambler’s fallacy</h2>
-<p>The gambler’s fallacy is the false belief that in a sequence of independent draws from a distribution an outcome that has not realized for a while is more likely to occur on the next draw.</p>
+<p>The gambler’s fallacy is the false belief that an outcome not recently realised is more likely to occur on the next draw in a sequence of independent draws from a distribution.</p>
 <p>For example, following three flips of a coin that all come up heads, a person experiencing the gambler’s fallacy would believe that a tail is more likely on the next flip.</p>
 <p>Using data from <span class="citation" data-cites="rapoport1997">Rapoport and Budescu (<a href="../references.html#ref-rapoport1997" role="doc-biblioref">1997</a>)</span>, <span class="citation" data-cites="rabin2010">Rabin and Vayanos (<a href="../references.html#ref-rabin2010" role="doc-biblioref">2010</a>)</span> derived the probability with which the next flip of a coin will be heads given the last three flips being heads or tails.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/gamblers-fallacy.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/gamblers-fallacy.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/gamblers-fallacy.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/gamblers-fallacy.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>One explanation for the gambler’s fallacy is representativeness. For example, the sequence of coin flips HHHHHH is not seen as representative of flipping a fair coin six times. HHTTHH is seen as more representative.</p>
-<p>An alternative explanation is that people believe in the “law of small numbers”. They overestimate the degree to which a small sample will resemble the population from which it is drawn. For example, if a fair coin is flipped six times, they will overestimate the likelihood the result will be three heads and three tails.</p>
+<p>One explanation for the gambler’s fallacy is representativeness. For example, people do not see the sequence of coin flips HHHHHH as representative of flipping a fair coin six times. They see HHTTHH as more representative.</p>
 <section id="the-law-of-small-numbers" class="level3" data-number="34.4.1">
 <h3 data-number="34.4.1" class="anchored" data-anchor-id="the-law-of-small-numbers"><span class="header-section-number">34.4.1</span> The law of small numbers</h3>
-<p>The following model of the law of small numbers comes from <span class="citation" data-cites="rabin2002">Rabin (<a href="../references.html#ref-rabin2002" role="doc-biblioref">2002</a>)</span>.</p>
+<p>An alternative explanation is that people believe in the “law of small numbers” <span class="citation" data-cites="rabin2002">(<a href="../references.html#ref-rabin2002" role="doc-biblioref">Rabin, 2002</a>)</span>. They overestimate the degree to which a small sample will resemble the population from which it is drawn. For example, if a fair coin is flipped six times, they will overestimate the likelihood the result will be three heads and three tails.</p>
 <p>Imagine an urn filled with red balls and black balls. You draw balls from the urn with replacement. The red balls are drawn with probability <span class="math inline">p</span> and the black balls are drawn with probability <span class="math inline">1−p</span>.</p>
-<p>Assume Freddy knows the probabilities <span class="math inline">p</span> and <span class="math inline">1−p</span> but (wrongly) assumes balls are drawn from the urn without replacement. That is, the outcomes are subject to the law of small numbers. If he assumes there are <span class="math inline">N</span> balls in the urn, he expects a sample of <span class="math inline">N</span> balls to match <span class="math inline">p</span> and <span class="math inline">1−p</span>.</p>
+<p>Assume Freddy knows the probabilities <span class="math inline">p</span> and <span class="math inline">1−p</span> but (wrongly) assumes balls are drawn from the urn without replacement. That is, the outcomes are subject to the law of small numbers. If he believes there are <span class="math inline">N</span> balls in the urn, he expects a sample of <span class="math inline">N</span> balls to match <span class="math inline">p</span> and <span class="math inline">1−p</span>.</p>
 <p>For small <span class="math inline">N</span>, each draw from the urn without replacement is informative about future draws. For large <span class="math inline">N</span>, a single draw without replacement does not materially affect the probability of the next ball.</p>
-<p>Under Freddy’s beliefs, outcomes must be correlated, rather than the true process where balls are replaced and the outcomes are uncorrelated.</p>
-<p>Imagine Freddy plays roulette. The roulette wheel contains 36 slots, 18 black and 18 red.</p>
-<p>Freddy observes 4 spins of the wheel before betting. He observes the sequence RRRR.</p>
-<p>We assume a bias of <span class="math inline">N=36</span>. Given <span class="math inline">p=0.5</span>, this implies 18 red, 18 black balls in the urn.</p>
-<p>An unbiased belief would be that the sequence of reds tells them nothing about future draws because the outcomes are uncorrelated.</p>
-<p>Freddy’s belief is that, after four reds, black is more likely on next spin.</p>
-<p>Freddy is suffering from the Gambler’s Fallacy. He’s wrongly computing:</p>
+<p>Under Freddy’s beliefs, outcomes are correlated. Under the actual process, where balls are replaced, the outcomes are uncorrelated.</p>
+<p>Imagine Freddy plays roulette. The roulette wheel contains 36 slots, 18 black and 18 red. Assume that Freddy believes there are 18 red and 18 black “balls in the urn”.</p>
+<p>Freddy observes four spins of the wheel before betting. He observes the sequence RRRR.</p>
+<p>An unbiased belief would be that the sequence of reds tells him nothing about future draws because the outcomes are uncorrelated.</p>
+<p>However, Freddy believes that, after four reds, black is more likely on the next spin. He is wrongly computing:</p>
 <p><span class="math display">\begin{align*}
 \hat P(R)&amp;=\frac{\text{total reds}}{\text{total reds}+\text{total blacks}} \\
 &amp;=\frac{18}{18+18} \\
@@ -750,40 +841,33 @@ P(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
 \hat P(RRRR|RRR)&amp;=\frac{18-3}{(18-3)+18} \\
 &amp;=0.455
 \end{align*}</span></p>
-<p>In reality <span class="math inline">P(RR|R)=P(RRR|RR)=P(RRRR|RRR)=0.5</span>.</p>
+<p>Freddy is suffering from the gambler’s fallacy. In reality, <span class="math inline">P(RR|R)=P(RRR|RR)=P(RRRR|RRR)=0.5</span>.</p>
 </section>
 </section>
 <section id="hot-hand-fallacy" class="level2" data-number="34.5">
 <h2 data-number="34.5" class="anchored" data-anchor-id="hot-hand-fallacy"><span class="header-section-number">34.5</span> Hot hand fallacy</h2>
-<p>A person subject to the hot hand fallacy believes a streak will persist despite the process being random and each outcome being independent of the last.</p>
-<p>For example:</p>
-<ol type="1">
-<li>Commentators observe player performing a series of shots during a game.</li>
-<li>The commentators compound the series of shots into a single judgment (the streak).</li>
-<li>The commentators make predictions based upon the observed streak: “The player has a hot hand”.</li>
-<li>Good shots are considered more likely conditional on observing the streak.</li>
-</ol>
-<p>An example comes from <span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span>.</p>
-<p>Imagine a person who took ten shots in a basketball game. A ball is a hit, an X is a miss.</p>
-<p>What would count as evidence of a hot hand? What we can do is look at shots following a previous hit. For instance, in this sequence of shots there are 6 occasions where we have a shot following a previous hit. Five of those shots, such as the seventh here, are followed by another hit.</p>
+<p>A person subject to the hot hand fallacy believes a streak will persist despite the random process and each outcome being independent of the last.</p>
+<p>For example, suppose a commentator observes a player taking a series of shots during a game. The commentator compounds the shots into a single judgment (the streak). The commentator then makes predictions based on the observed streak, with good shots more likely following a streak of successful shots. “The player has a hot hand”.</p>
+<p>To illustrate, imagine a person who took ten shots in a basketball game. A ball is a hit; an X is a miss.</p>
+<p>To assess whether someone has a hot hand, we can look at their shots following a previous hit. For instance, in this sequence of shots, there are six occasions where we have a shot following a hit. Five successful shots, such as the seventh as highlighted, are followed by another hit.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/hot-hand.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/hot-hand.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/hot-hand.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/hot-hand.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>We can then compare their normal shooting percentage with the proportion of shots they hit if the shot immediately before was a hit. If their hit rate after a hit is higher than their normal shot probability, then we might say they get a hot hand.</p>
-<p>Using this methodology, Gilovich et al TO ADD took shot data from a variety of sources, including the Philadelphia 76ers and Boston Celtics, and examined it for evidence of a hot hand. They also looked at whether there was a hit or miss after longer streaks of hits or misses.</p>
-<p>From this data, they argued that the hot hand was an illusion.</p>
-<p>The existence of the hot hand is disputed (e.g. <span class="citation" data-cites="bar-eli2006">Bar-Eli et al. (<a href="../references.html#ref-bar-eli2006" role="doc-biblioref">2006</a>)</span>).</p>
+<p>We can then compare their average shooting percentage with the proportion of shots they hit if the shot immediately before was a hit. If their hit rate after a hit is higher than their normal shot probability, then we might say they get a hot hand.</p>
+<p>Using this methodology, Gilovich et al <span class="citation" data-cites="gilovich1985">(<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span> took shot data from various sources, including the Philadelphia 76ers and Boston Celtics, and examined it for evidence of a hot hand. They also looked at whether there was a hit or miss after longer streaks of hits or misses.</p>
+<p>From this data, they argued that the hot hand was an illusion. There was no evidence that a player was more likely to make a shot following a series of successful shots.</p>
 <section id="a-bias-in-sequences" class="level3" data-number="34.5.1">
 <h3 data-number="34.5.1" class="anchored" data-anchor-id="a-bias-in-sequences"><span class="header-section-number">34.5.1</span> A bias in sequences</h3>
-<p><span class="citation" data-cites="miller2018">Miller and Sanjurjo (<a href="../references.html#ref-miller2018" role="doc-biblioref">2018</a>)</span> provide the most compelling critique. They found a statistical bias in the analysis by Gilovich et al.&nbsp;Correcting for the bias they found that the probability of hitting a shot following a sequence of three previous hits is 13 percentage points higher than after a sequence of three misses.</p>
+<p>The existence of the hot hand is disputed for a number of reasons (e.g. <span class="citation" data-cites="bar-eli2006">Bar-Eli et al. (<a href="../references.html#ref-bar-eli2006" role="doc-biblioref">2006</a>)</span>).</p>
+<p><span class="citation" data-cites="miller2018">Miller and Sanjurjo (<a href="../references.html#ref-miller2018" role="doc-biblioref">2018</a>)</span> provide the most compelling critique. They found a statistical bias in the analysis by Gilovich et al.&nbsp;Correcting for the bias, they found that the probability of hitting a shot following a sequence of three previous hits is 13 percentage points higher than after a sequence of three misses.</p>
 <p>The intuition behind <span class="citation" data-cites="miller2018">Miller and Sanjurjo (<a href="../references.html#ref-miller2018" role="doc-biblioref">2018</a>)</span> is as follows.</p>
 <p>Suppose you flip a coin three times. There are eight possible sequences of heads and tails. Each sequence has an equal probability of occurring.</p>
-<p>What if I asked you: if you were to flip a coin three times, and there is a heads followed by another flip in that sequence, what is the expected probability that another heads will follow that heads?</p>
-<p>In <a href="#tbl-hothand">Table&nbsp;<span>34.1</span></a> below is the proportion of heads following a previous flip of heads for each sequence. In the first row of the table, the first flip is a head. That first flip is followed by another head. After the second flip, a head, we also have a head. There is no flip after the third head. 100% of the heads in that sequence followed by another flip are followed by a head.</p>
-<p>In the second row of the table, 50% of the heads are followed by a head. In the last two rows, there are no heads followed by another flip.</p>
-<p>Now, back to our question: if you were to flip a coin three times, and there is a heads followed by another flip in that sequence, what is the expected probability that another heads will follow that heads? It turns out it is 42%, which I can get by averaging those proportions.</p>
+<p>Considering these sequences, if you were to flip a coin three times, and there is a heads followed by another flip in that sequence, what is the expected probability that another heads will follow that heads?</p>
+<p><a href="#tbl-hothand">Table&nbsp;<span>34.1</span></a> shows the proportion of heads following a previous flip of heads for each sequence. In the table’s first row, the first flip is a head. Another head follows that first flip. After the second flip, a head, we also have a head. There is no flip after the third head. 100% of the heads in that sequence followed by another flip are followed by a head.</p>
+<p>In the second row of the table, a head follows 50% of the heads. In the last two rows, there are no heads followed by another flip.</p>
+<p>Now, back to our question. If you were to flip a coin three times, and there is a heads followed by another flip in that sequence, what is the expected probability that another heads will follow that heads? It turns out it is 42%, which I can get by averaging those proportions.</p>
 <div id="tbl-hothand" class="anchored">
 <table class="table">
 <caption>Table&nbsp;34.1: Eight possible combinations of heads and tales across three flips</caption>
@@ -833,20 +917,20 @@ P(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
 </tbody>
 </table>
 </div>
-<p>That contrasts with what we get we count across all the sequences, where we see that there are 8 flips of heads that are followed by another flip. Of the subsequent flips, 4 are heads and 4 are tails, which is the 50% you expect.</p>
-<p>Why that difference? By looking at these short sequences, we are introducing a bias. The cases of heads following heads tend to cluster together, such as in the first sequence which has two cases of a heads following a heads. Yet the sequence THT, which has only one shot occurring after a heads, is equally likely to occur as HHH. The reason a tails appears more likely to follow a heads is because of this bias whereby the streaks tend to cluster together. The expected value I get when taking a series of three flips is 42%, when in fact the actual probability of a heads following a heads is 50%. As the sequence of flips gets longer, the size of the bias is reduced, although it is increased if we examine longer streaks, such as the probability of a heads after three previous heads.</p>
-<p>This bias is relevant to the analysis of the hot hand as it is present in the methodology of the papers that purportedly demonstrated that there was no hot hand in basketball. Because of this bias, the proportion of hits following a hit or sequence of hits is biased downwards. Like our calculation using coins, the expected proportion of hits following a hit in a sequence is lower than the actual probability of hitting a shot.</p>
-<p>Conversely the hot hand pushes the probability of hitting a shot after a previous hit up. Together, the downward bias and the hot hand roughly cancelled each other out, leading to the conclusion by researchers that each shot is independent of the last.</p>
-<p>The result is, that when you correct for the bias, there actually is a hot hand in basketball.</p>
+<p>That contrasts with what we get we count across all the sequences, where we see eight flips of heads followed by another flip. Of the subsequent flips, four are heads and four are tails, which is the 50% you expect.</p>
+<p>Why that difference? By looking at these short sequences, we are introducing a bias. The cases of heads following heads tend to cluster together, such as in the first sequence, which has two cases of a heads following a heads. Yet the sequence THT, which has only one shot occurring after a heads, is equally likely to occur as HHH. A tails appears more likely to follow a heads because of this bias, whereby the streaks tend to cluster together. The expected value I get when taking a series of three flips is 42%, when in fact the actual probability of a heads following a heads is 50%. As the sequence of flips gets longer, the bias size is reduced, although it increases if we examine longer streaks, such as the probability of a heads after three previous heads.</p>
+<p>This bias is relevant to the analysis of the hot hand as it is present in the methodology of the papers that purportedly demonstrated that there was no hot hand in basketball, such as that by <span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span>. Because of this bias, the proportion of hits following a hit or sequence of hits is biased downwards. Like our calculation using coins, the expected proportion of hits following a hit in a sequence is lower than the actual probability of hitting a shot.</p>
+<p>Conversely, the hot hand pushes the probability of hitting a shot after a previous hit up. Together, the downward bias and the hot hand roughly cancelled each other out, leading to the conclusion by researchers that each shot is independent of the last.</p>
+<p>The result is that when you correct for the bias, there is a hot hand in basketball.</p>
 </section>
 <section id="alternative-intuition" class="level3" data-number="34.5.2">
 <h3 data-number="34.5.2" class="anchored" data-anchor-id="alternative-intuition"><span class="header-section-number">34.5.2</span> Alternative intuition</h3>
 <p>Here is another intuition for why there is a bias in this sequence.</p>
 <p>We flip three coins and select at random one of the flips that follows a heads. This means that if we select a flip that follows a head we will select either flip 2 or flip 3.</p>
 <p>If we select flip 2, we know that flip 1 was a head. The first two flips in the sequence are either HT or HH.</p>
-<p>However, we can also say that if we select flip 2, HT is twice as likely as HH. Why? Because if the first two coins were HH we could also have selected flip 3.</p>
+<p>However, we can also say that if we select flip 2, HT is twice as likely as HH. Why? Because if the first two coins were HH we could also have chosen flip 3.</p>
 <p>That is, if the first two flips are HT, we can only select flip 2. We select flip 2 with 100% probability. If the first two flips are HH, we select flip 2 with 50% probability and flip 3 with 50% probability.</p>
-<p>The result is that we are twice as likely to observe HT as HH given we selected flip 2.</p>
+<p>We are twice as likely to observe HT as HH, given we selected flip 2.</p>
 <p>Using Bayes’ rule:</p>
 <p><span class="math display">\begin{align*}
 P(HT|\text{flip 2})&amp;=\frac{P(\text{flip 2}|HT)P(HT)}{P(\text{flip 2})} \\[6pt]
@@ -862,7 +946,7 @@ P(HH|\text{flip 2})&amp;=\frac{P(\text{flip 2}|HH)P(HH)}{P(\text{flip 2})} \\[6p
 </section>
 <section id="the-hot-hand-fallacy-for-truly-random-sequences" class="level3" data-number="34.5.3">
 <h3 data-number="34.5.3" class="anchored" data-anchor-id="the-hot-hand-fallacy-for-truly-random-sequences"><span class="header-section-number">34.5.3</span> The hot hand fallacy for truly random sequences</h3>
-<p>However, there is strong evidence that people see streaks in processes that are truly random, with each outcome independent of the last. For example, Ayton and Fisher (2004) find that when people are predicting the results of the spins of a roulette wheel, they increase the confidence of their predictions after a series of successes. This occurs despite the outcome being random. (Note: they also exhibit the gambler’s fallacy in what they predict.)</p>
+<p>However, there is strong evidence that people see streaks in truly random processes, with each outcome independent of the last. For example, Ayton and Fisher (2004) find that when people predict the results of a roulette wheel’s spins, they increase their confidence in their predictions after a series of successes. Their confidence increases despite the outcome being random. (Note: they also exhibit the gambler’s fallacy in what they predict.)</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
@@ -1090,7 +1174,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true});</script>
 
 
 
