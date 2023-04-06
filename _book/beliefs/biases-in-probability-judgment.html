@@ -738,7 +738,7 @@ P(\text{blue}|\text{claim blue})&amp;=\frac{P(\text{claim blue}|\text{blue})P(\t
 <p>You test yourself for COVID-19. The following information is known:</p>
 <ul>
 <li><p>The probability that a person has COVID-19 is 1% (the prevalence)</p></li>
-<li><p>If a person has COVID-19, the probability that they test&nbsp;positive is 90% (the sensitivity)</p></li>
+<li><p>If a person has COVID-19, the probability that they test&nbsp;positive (+ve) is 90% (the sensitivity)</p></li>
 <li><p>If a person does not have COVID-19, the probability that they&nbsp;nevertheless test&nbsp;positive is 9% (the false positive rate).</p></li>
 </ul>
 <p>You test positive. What is the chance that you have COVID-19?</p>
@@ -792,56 +792,51 @@ P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}
 </section>
 <section id="probability-matching" class="level2" data-number="34.3">
 <h2 data-number="34.3" class="anchored" data-anchor-id="probability-matching"><span class="header-section-number">34.3</span> Probability matching</h2>
-<p>Another bias in probability judgment is our tendency to “probability match”. Probability matching is the tendency of people to mirror the probability distributions of stimuli in their response probabilities. The strategy of probability matching is not optimal for minimising prediction error.</p>
+<p>Probability matching is the tendency of people to mirror the probability distributions they observe in their predictions of events. For example, if asked to predict whether a die will show a six or not, they will predict six around one in six rolls.</p>
+<p>The strategy of probability matching is not optimal for minimising prediction error.</p>
 <p>Consider the following experimental setup:</p>
 <ul>
 <li>A red lamp that turns on with probability <span class="math inline">p=0.70</span></li>
-<li>A green lamp that turns on with probability <span class="math inline">p=0.30</span></li>
+<li>A green lamp that turns on with probability <span class="math inline">q=0.30</span></li>
 </ul>
 <p>Participants predict which light will turn on after observing a series of flashes.</p>
 <p>What do participants do?</p>
-<p>The proportions of predictions reflect the actual probabilities of the two light bulbs being turned on. People tend to predict 70% of the time that the red lamp will come on and 30% of the time that the green lamp will come on.</p>
+<p>The predictions tend to reflect the actual probabilities of the two light bulbs being turned on. People tend to predict 70% of the time that the red lamp will come on and 30% of the time that the green lamp will come on.</p>
 <p>With probability matching, the probability of a successful guess is:</p>
 <span class="math display">\begin{align*}
-P(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
+p(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
 &amp;=0.58
 \end{align*}</span>
 <p>A better strategy is always to select the event with the highest probability. In this example, participants should always predict that the red light will be turned on, giving them a 70% probability of a successful guess.</p>
+<p>Similarly, for my earlier example of a die roll, the option with lowest error is to always predict that the die will not show a six.</p>
 </section>
 <section id="the-gamblers-fallacy" class="level2" data-number="34.4">
 <h2 data-number="34.4" class="anchored" data-anchor-id="the-gamblers-fallacy"><span class="header-section-number">34.4</span> The gambler’s fallacy</h2>
-<p>The gambler’s fallacy is the false belief that an outcome not recently realised is more likely to occur on the next draw in a sequence of independent draws from a distribution.</p>
+<p>The gambler’s fallacy is the false belief that an outcome not recently realised in a sequence of independent draws is more likely to occur on the next draw.</p>
 <p>For example, following three flips of a coin that all come up heads, a person experiencing the gambler’s fallacy would believe that a tail is more likely on the next flip.</p>
-<p>Using data from <span class="citation" data-cites="rapoport1997">Rapoport and Budescu (<a href="../references.html#ref-rapoport1997" role="doc-biblioref">1997</a>)</span>, <span class="citation" data-cites="rabin2010">Rabin and Vayanos (<a href="../references.html#ref-rabin2010" role="doc-biblioref">2010</a>)</span> derived the probability with which the next flip of a coin will be heads given the last three flips being heads or tails.</p>
+<p>Using data from <span class="citation" data-cites="rapoport1997">Rapoport and Budescu (<a href="../references.html#ref-rapoport1997" role="doc-biblioref">1997</a>)</span>, <span class="citation" data-cites="rabin2010">Rabin and Vayanos (<a href="../references.html#ref-rabin2010" role="doc-biblioref">2010</a>)</span> derived the probability of heads predicted by experimental subjects, given the last three flips being heads or tails. Following a sequence of three heads, they predict heads on the next flip with only 30% probability. But after three tails, they predict heads on the next flip with 70% probability.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/gamblers-fallacy.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/gamblers-fallacy.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>One explanation for the gambler’s fallacy is representativeness. For example, people do not see the sequence of coin flips HHHHHH as representative of flipping a fair coin six times. They see HHTTHH as more representative.</p>
+<p>One explanation for the gambler’s fallacy is representativeness. For example, people do not see the sequence of coin flips HHHHHH as representative of flipping a fair coin six times. They see HHTTHH as more representative, even though both sequences have the same probability of occurring.</p>
 <section id="the-law-of-small-numbers" class="level3" data-number="34.4.1">
 <h3 data-number="34.4.1" class="anchored" data-anchor-id="the-law-of-small-numbers"><span class="header-section-number">34.4.1</span> The law of small numbers</h3>
 <p>An alternative explanation is that people believe in the “law of small numbers” <span class="citation" data-cites="rabin2002">(<a href="../references.html#ref-rabin2002" role="doc-biblioref">Rabin, 2002</a>)</span>. They overestimate the degree to which a small sample will resemble the population from which it is drawn. For example, if a fair coin is flipped six times, they will overestimate the likelihood the result will be three heads and three tails.</p>
 <p>Imagine an urn filled with red balls and black balls. You draw balls from the urn with replacement. The red balls are drawn with probability <span class="math inline">p</span> and the black balls are drawn with probability <span class="math inline">1−p</span>.</p>
-<p>Assume Freddy knows the probabilities <span class="math inline">p</span> and <span class="math inline">1−p</span> but (wrongly) assumes balls are drawn from the urn without replacement. That is, the outcomes are subject to the law of small numbers. If he believes there are <span class="math inline">N</span> balls in the urn, he expects a sample of <span class="math inline">N</span> balls to match <span class="math inline">p</span> and <span class="math inline">1−p</span>.</p>
-<p>For small <span class="math inline">N</span>, each draw from the urn without replacement is informative about future draws. For large <span class="math inline">N</span>, a single draw without replacement does not materially affect the probability of the next ball.</p>
+<p>Assume Freddy knows the probabilities <span class="math inline">p</span> and <span class="math inline">1−p</span> but (wrongly) assumes balls are drawn from the urn without replacement. If he believes there are <span class="math inline">N</span> balls in the urn, he expects a sample of <span class="math inline">N</span> balls to match <span class="math inline">p</span> and <span class="math inline">1−p</span> exactly.</p>
 <p>Under Freddy’s beliefs, outcomes are correlated. Under the actual process, where balls are replaced, the outcomes are uncorrelated.</p>
 <p>Imagine Freddy plays roulette. The roulette wheel contains 36 slots, 18 black and 18 red. Assume that Freddy believes there are 18 red and 18 black “balls in the urn”.</p>
-<p>Freddy observes four spins of the wheel before betting. He observes the sequence RRRR.</p>
+<p>Freddy observes four spins of the wheel before betting. He observes a sequence of four reds.</p>
 <p>An unbiased belief would be that the sequence of reds tells him nothing about future draws because the outcomes are uncorrelated.</p>
-<p>However, Freddy believes that, after four reds, black is more likely on the next spin. He is wrongly computing:</p>
+<p>However, Freddy believes that, after four reds, black is more likely on the next spin. He is wrongly computing the probability based on a belief that only 14 reds remain along with 18 blacks.</p>
 <p><span class="math display">\begin{align*}
-\hat P(R)&amp;=\frac{\text{total reds}}{\text{total reds}+\text{total blacks}} \\
-&amp;=\frac{18}{18+18} \\
-&amp;=0.5 \\
-\hat P(RR|R)&amp;=\frac{18-1}{(18-1)+18} \\
-&amp;=0.486 \\
-\hat P(RRR|RR)&amp;=\frac{18-2}{(18-2)+18} \\
-&amp;=0.471 \\
-\hat P(RRRR|RRR)&amp;=\frac{18-3}{(18-3)+18} \\
-&amp;=0.455
+\hat P(RRRRR|RRRR)&amp;=\frac{\text{reds}}{\text{reds}+\text{blacks}} \\
+&amp;=\frac{18-4}{18-4+18} \\
+&amp;=0.438
 \end{align*}</span></p>
-<p>Freddy is suffering from the gambler’s fallacy. In reality, <span class="math inline">P(RR|R)=P(RRR|RR)=P(RRRR|RRR)=0.5</span>.</p>
+<p>In reality, <span class="math inline">P(RRRRR|RRRR)=0.5</span>. Freddy is suffering from the gambler’s fallacy.</p>
 </section>
 </section>
 <section id="hot-hand-fallacy" class="level2" data-number="34.5">
@@ -1174,7 +1169,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 
