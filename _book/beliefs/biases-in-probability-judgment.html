@@ -470,7 +470,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../beliefs/beliefs-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Probability judgment exercises</span></a>
+  <a href="../beliefs/beliefs-exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Beliefs exercises</span></a>
   </div>
 </li>
       </ul>
@@ -725,7 +725,7 @@ P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
 <p>The experimental subjects effectively neglected the rarity of blue cabs. A witness seeing a blue cab is representative of what would occur if the cab were blue.</p>
 <p>The correct answer is as follows:</p>
 <span class="math display">\begin{align*}
-P(\text{blue}|\text{claim blue})&amp;=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{P(\text{claim blue}|\text{blue})P(\text{blue})+P(\text{claim blue}|\neg\text{blue})P(\neg\text{blue})} \\[12pt]
+P(\text{blue}|\text{claim blue})&amp;=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{\Bigg(\begin{aligned}P(&amp;\text{claim blue}|\text{blue})P(\text{blue})\\&amp;+P(\text{claim blue}|\neg\text{blue})P(\neg\text{blue})\end{aligned}\Bigg)} \\[30pt]
 &amp;=\frac{0.8\times 0.15}{0.8\times 0.1+0.2\times 0.85} \\[12pt]
 &amp;=0.41
 \end{align*}</span>
@@ -752,7 +752,7 @@ P(\text{COVID}|\text{+ve})\neq P(\text{+ve}|\text{COVID})
 <p>The correct answer is:</p>
 <span class="math display">\begin{align*}
 P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
-&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve}|\text{COVID})P(\text{COVID})+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})} \\[12pt]
+&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&amp;\text{+ve}|\text{COVID})P(\text{COVID})\\&amp;+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[30pt]
 &amp;=\frac{0.9\times 0.01}{0.9\times 0.01 + 0.09\times 0.99} \\[12pt]
 &amp;=0.092
 \end{align*}</span>
@@ -832,8 +832,8 @@ p(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
 <p>An unbiased belief would be that the sequence of reds tells him nothing about future draws because the outcomes are uncorrelated.</p>
 <p>However, Freddy believes that, after four reds, black is more likely on the next spin. He is wrongly computing the probability based on a belief that only 14 reds remain along with 18 blacks.</p>
 <p><span class="math display">\begin{align*}
-\hat P(RRRRR|RRRR)&amp;=\frac{\text{reds}}{\text{reds}+\text{blacks}} \\
-&amp;=\frac{18-4}{18-4+18} \\
+\hat P(RRRRR|RRRR)&amp;=\frac{\text{reds}}{\text{reds}+\text{blacks}} \\[12pt]
+&amp;=\frac{18-4}{18-4+18} \\[12pt]
 &amp;=0.438
 \end{align*}</span></p>
 <p>In reality, <span class="math inline">P(RRRRR|RRRR)=0.5</span>. Freddy is suffering from the gambler’s fallacy.</p>
@@ -1169,7 +1169,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 

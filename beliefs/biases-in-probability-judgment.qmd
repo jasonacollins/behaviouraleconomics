@@ -111,7 +111,7 @@ The correct answer is as follows:
 
 ```{=tex}
 \begin{align*}
-P(\text{blue}|\text{claim blue})&=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{P(\text{claim blue}|\text{blue})P(\text{blue})+P(\text{claim blue}|\neg\text{blue})P(\neg\text{blue})} \\[12pt]
+P(\text{blue}|\text{claim blue})&=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{\Bigg(\begin{aligned}P(&\text{claim blue}|\text{blue})P(\text{blue})\\&+P(\text{claim blue}|\neg\text{blue})P(\neg\text{blue})\end{aligned}\Bigg)} \\[30pt]
 &=\frac{0.8\times 0.15}{0.8\times 0.1+0.2\times 0.85} \\[12pt]
 &=0.41
 \end{align*}
@@ -148,7 +148,7 @@ The correct answer is:
 ```{=tex}
 \begin{align*}
 P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
-&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve}|\text{COVID})P(\text{COVID})+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})} \\[12pt]
+&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&\text{+ve}|\text{COVID})P(\text{COVID})\\&+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[30pt]
 &=\frac{0.9\times 0.01}{0.9\times 0.01 + 0.09\times 0.99} \\[12pt]
 &=`r round((0.9*0.01)/(0.9*0.01 + 0.09*0.99), 3)`
 \end{align*}
@@ -253,8 +253,8 @@ An unbiased belief would be that the sequence of reds tells him nothing about fu
 However, Freddy believes that, after four reds, black is more likely on the next spin. He is wrongly computing the probability based on a belief that only 14 reds remain along with 18 blacks.
 
 \begin{align*}
-\hat P(RRRRR|RRRR)&=\frac{\text{reds}}{\text{reds}+\text{blacks}} \\
-&=\frac{18-4}{18-4+18} \\
+\hat P(RRRRR|RRRR)&=\frac{\text{reds}}{\text{reds}+\text{blacks}} \\[12pt]
+&=\frac{18-4}{18-4+18} \\[12pt]
 &=`r round((18-4)/(18-4+18), 3)`
 \end{align*}
 
