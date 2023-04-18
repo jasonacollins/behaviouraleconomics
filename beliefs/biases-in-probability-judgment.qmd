@@ -61,11 +61,11 @@ Tversky and Kahneman constructed the description of Linda to be representative o
 
 The Linda Problem is one of the most heavily debated experiments in the social sciences.
 
-For example, Hertwig and Gigerenzer [-@hertwig1999] argue that people infer non-mathematical meaning to the word "probability", taking it to mean "plausible" or "credible".
+For example, @hertwig1999 argue that people infer non-mathematical meaning to the word "probability", taking it to mean "plausible" or "credible".
 
 While this is possibly a fair critique of the Linda problem, other illustrations of the conjunction fallacy appear more robust.
 
-For example, Tversky and Kahneman [-@tversky1983] created this example involving rolls of a die:
+For example, @tversky1983 created this example involving rolls of a die:
 
 > Consider a regular six-sided die with four green faces and two red faces. The die will be rolled 20 times and the sequence of greens (G) and reds (R) will be recorded. You are asked to select one sequence, from a set of three, and you will win \$25 if the sequence you chose appears on successive rolls of the die. Please check the sequence of greens and reds on which you prefer to bet.
 >
@@ -85,7 +85,7 @@ Base rate neglect is the failure to consider an event's base rate when making a 
 
 ### The cab problem
 
-One illustration of base-rate neglect comes from the cab problem from Tversky and Kahneman [-@tversky1982]. It involves the following story:
+One illustration of base-rate neglect comes from the cab problem from @tversky1982. It involves the following story:
 
 > A cab was involved in a hit and run accident at night. Two cab companies, the Green and the Blue, operate in the city. Participants are given the following data:
 >
@@ -116,7 +116,6 @@ P(\text{blue}|\text{claim blue})&=\frac{P(\text{claim blue}|\text{blue})P(\text{
 &=0.41
 \end{align*}
 ```
-
 ### Medical diagnosis
 
 We can also see base rate neglect in the context of diagnosing a rare disease.
@@ -163,7 +162,7 @@ The correct answer becomes more apparent if I show an alternative representation
 >
 > You test positive. What is the chance that you have COVID-19?
 
-Cosmides and Tooby [-@cosmides1996] first proposed using natural frequencies in this way. We derive natural frequencies by observing cases representatively sampled from a population.
+@cosmides1996 first proposed using natural frequencies in this way. We derive natural frequencies by observing cases representatively sampled from a population.
 
 @hoffrage1998 reported that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.
 
@@ -191,7 +190,6 @@ P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\
 &=`r round((0.9*0.5)/(0.9*0.5 + 0.09*0.5), 3)`
 \end{align*}
 ```
-
 ## Probability matching
 
 Probability matching is the tendency of people to mirror the probability distributions they observe in their predictions of events. For example, if asked to predict whether a die will show a six or not, they will predict six around one in six rolls.
@@ -217,7 +215,6 @@ p(\text{success})&=0.7\times 0.7+0.3\times0.3 \\
 &=`r 0.7*0.7+0.3*0.3`
 \end{align*}
 ```
-
 A better strategy is always to select the event with the highest probability. In this example, participants should always predict that the red light will be turned on, giving them a 70% probability of a successful guess.
 
 Similarly, for my earlier example of a die roll, the option with lowest error is to always predict that the die will not show a six.
@@ -252,79 +249,108 @@ An unbiased belief would be that the sequence of reds tells him nothing about fu
 
 However, Freddy believes that, after four reds, black is more likely on the next spin. He is wrongly computing the probability based on a belief that only 14 reds remain along with 18 blacks.
 
+```{=tex}
 \begin{align*}
 \hat P(RRRRR|RRRR)&=\frac{\text{reds}}{\text{reds}+\text{blacks}} \\[12pt]
 &=\frac{18-4}{18-4+18} \\[12pt]
 &=`r round((18-4)/(18-4+18), 3)`
 \end{align*}
-
-In reality, $P(RRRRR|RRRR)=0.5$. Freddy is suffering from the gambler’s fallacy.
+```
+In reality, $P(RRRRR|RRRR)=0.5$. Freddy is suffering from the gambler's fallacy.
 
 ## Hot hand fallacy
 
-A person subject to the hot hand fallacy believes a streak will persist despite the random process and each outcome being independent of the last.
+A person subject to the hot hand fallacy believes a streak will persist despite each outcome being independent of the last.
 
-For example, suppose a commentator observes a player taking a series of shots during a game. The commentator compounds the shots into a single judgment (the streak). The commentator then makes predictions based on the observed streak, with good shots more likely following a streak of successful shots. "The player has a hot hand".
+For example, suppose a spectator observes a basketball player taking a series of shots during a game. The spectator then makes predictions based on the observed shots, with good shots predicted to be more likely following a streak of successful shots. After a series of good shots they believe that the player has a "hot hand".
 
-To illustrate, imagine a person who took ten shots in a basketball game. A ball is a hit; an X is a miss.
+Let's look at this example in more detail.
 
-To assess whether someone has a hot hand, we can look at their shots following a previous hit. For instance, in this sequence of shots, there are six occasions where we have a shot following a hit. Five successful shots, such as the seventh as highlighted, are followed by another hit.
+Suppose a person takes ten shots in a basketball game. In this image, a ball is a hit, an X is a miss.
+
+To assess whether this person has a hot hand, we can look at their shots following a previous hit. For instance, in this sequence of shots, there are six occasions where we have a shot following a hit. Five successful shots, such as the seventh shot that is highlighted, are followed by another hit.
 
 ![](img/hot-hand.jpg)
 
-We can then compare their average shooting percentage with the proportion of shots they hit if the shot immediately before was a hit. If their hit rate after a hit is higher than their normal shot probability, then we might say they get a hot hand.
+We can then compare the player's average shooting percentage with the proportion of shots they hit if the shot immediately before was a hit. If their hit rate after a hit is higher than their normal shot probability, we might say they get a hot hand.
 
-Using this methodology, Gilovich et al [-@gilovich1985] took shot data from various sources, including the Philadelphia 76ers and Boston Celtics, and examined it for evidence of a hot hand. They also looked at whether there was a hit or miss after longer streaks of hits or misses.
+Using this methodology, @gilovich1985 took shot data from various sources, including the Philadelphia 76ers and Boston Celtics, and examined the data for evidence of a hot hand. They also looked at whether there was a hit or miss after streaks of hits or misses.
 
 From this data, they argued that the hot hand was an illusion. There was no evidence that a player was more likely to make a shot following a series of successful shots.
 
 ### A bias in sequences
 
-The existence of the hot hand is disputed for a number of reasons (e.g. @bar-eli2006).
+@gilovich1985 was the first of many examinations of whether there is a hot hand in sports (see @bar-eli2006). Through this research there has been many methodological debates and arguments about whether there might be bias in the data, such as teams adjusting their defence in response to a player with a hot hand. However, the general trend in the literature was a finding of no evidence of a hot hand.
 
-@miller2018 provide the most compelling critique. They found a statistical bias in the analysis by Gilovich et al. Correcting for the bias, they found that the probability of hitting a shot following a sequence of three previous hits is 13 percentage points higher than after a sequence of three misses.
-
-The intuition behind @miller2018 is as follows.
+@miller2018 provided a compelling critique of this position. They found a statistical bias in the analysis by @gilovich1985 and many others. The intuition behind the statistical bias is as follows.
 
 Suppose you flip a coin three times. There are eight possible sequences of heads and tails. Each sequence has an equal probability of occurring.
 
-Considering these sequences, if you were to flip a coin three times, and there is a heads followed by another flip in that sequence, what is the expected probability that another heads will follow that heads?
+Considering these sequences, if you were to flip a coin three times, and there is a head followed by another flip in that sequence, what is the expected probability that another head will follow that head?
 
-@tbl-hothand shows the proportion of heads following a previous flip of heads for each sequence. In the table's first row, the first flip is a head. Another head follows that first flip. After the second flip, a head, we also have a head. There is no flip after the third head. 100% of the heads in that sequence followed by another flip are followed by a head.
+@tbl-hothand shows the proportion of heads following a previous flip of heads for each sequence. In the table's first row, HHH, the first flip is a head. Another head follows that first flip. After the second flip, a head, we also have a head. There is no flip after the third head. 100% of the heads in that sequence followed by another flip are followed by a head.
 
-In the second row of the table, a head follows 50% of the heads. In the last two rows, there are no heads followed by another flip.
+In the second row of the table, HHT, a head follows 50% of the heads.
 
-Now, back to our question. If you were to flip a coin three times, and there is a heads followed by another flip in that sequence, what is the expected probability that another heads will follow that heads? It turns out it is 42%, which I can get by averaging those proportions.
+In the third row, there is one head followed by another flip, which is a tail. None of the heads in that sequence are followed by a head.
 
-| Flips              | $p(H_{t+1}|H_t)$ |
-|:-------------------|:-----------------|
-| HHH                | 100%             |
-| HHT                | 50%              |
-| HTH                | 0%               |
-| HTT                | 0%               |
-| THH                | 100%             |
-| THT                | 0%               |
-| TTH                | \-               |
-| TTT                | \-               |
-| **Expected value** | **42%**          |
+And so on until the last two rows, where there are no heads followed by another flip.
+
+Now, back to our question. If you were to flip a coin three times, and there is a head followed by another flip in that sequence, what is the expected probability that another head will follow that head? It turns out the answer to this question is 42%. I get this number by calculating the expected probability of a head given any particular sequence. This is equal to the average of the probabilities in each sequence.
+
+| Flips                    | $p(H_{t+1}|H_t)$                   |
+|:-------------------------|:-----------------------------------|
+| HHH                      | 100%                               |
+| HHT                      | 50%                                |
+| HTH                      | 0%                                 |
+| HTT                      | 0%                                 |
+| THH                      | 100%                               |
+| THT                      | 0%                                 |
+| TTH                      | \-                                 |
+| TTT                      | \-                                 |
+| **Expected probability** | **`r round((1+0.5+1)/6*100, 1)`%** |
 
 : Eight possible combinations of heads and tales across three flips {#tbl-hothand}
 
-That contrasts with what we get we count across all the sequences, where we see eight flips of heads followed by another flip. Of the subsequent flips, four are heads and four are tails, which is the 50% you expect.
+That calculation contrasts with what we get we count across all of the sequences, where we see eight flips of head followed by another flip. Of the subsequent flips, four are heads and four are tails, which is the 50% you expect.
 
-Why that difference? By looking at these short sequences, we are introducing a bias. The cases of heads following heads tend to cluster together, such as in the first sequence, which has two cases of a heads following a heads. Yet the sequence THT, which has only one shot occurring after a heads, is equally likely to occur as HHH. A tails appears more likely to follow a heads because of this bias, whereby the streaks tend to cluster together. The expected value I get when taking a series of three flips is 42%, when in fact the actual probability of a heads following a heads is 50%. As the sequence of flips gets longer, the bias size is reduced, although it increases if we examine longer streaks, such as the probability of a heads after three previous heads.
+Why do we find that difference? By looking at these short sequences, we are introducing a bias. The cases of heads following heads tend to cluster together, such as in the first sequence, which has two cases of a head following a head. Yet the sequence THT, which has only one flip occurring after a head, is equally likely to occur as HHH. A tail appears more likely to follow a heads because of this bias, whereby the streaks tend to cluster together. The expected probability I get when taking a series of three flips is 42%, when in fact the actual probability of a head following a head is 50%. As the sequence of flips gets longer, the bias reduces in size, although it increases if we examine longer streaks, such as the probability of a head after three previous heads.
 
-This bias is relevant to the analysis of the hot hand as it is present in the methodology of the papers that purportedly demonstrated that there was no hot hand in basketball, such as that by @gilovich1985. Because of this bias, the proportion of hits following a hit or sequence of hits is biased downwards. Like our calculation using coins, the expected proportion of hits following a hit in a sequence is lower than the actual probability of hitting a shot.
+The net effect of this bias is that the measure of the proportion of heads following another head is biased downwards.
 
-Conversely, the hot hand pushes the probability of hitting a shot after a previous hit up. Together, the downward bias and the hot hand roughly cancelled each other out, leading to the conclusion by researchers that each shot is independent of the last.
+This bias is relevant to the analysis of the hot hand as it is present in the methodology of the papers that purportedly demonstrated that there was no hot hand in basketball, such as that by @gilovich1985. They were effectively taking short streaks of shots and calculating what proportion of hits were followed by another hit. Their measure of the proportion of hits following a hit or sequence of hits is biased downwards. Like our calculation using coins, a calculation using that method results in a number lower than the actual probability of hitting a shot.
 
-The result is that when you correct for the bias, there is a hot hand in basketball.
+Conversely, the hot hand pushes the probability of hitting a shot after a previous hit up. If there is a hot hand, we should see more hits following a previous hit.
 
-### Alternative intuition
+Now consider the net effect of these two forces. If there is a hot hand, the probability of hitting a shot after a previous hit should be higher than the average hit rate. The biased methodology pushes the measure the other direction. Together, the downward bias and the hot hand counteract each other. In the case of @gilovich1985, these two countervailing forces led to the conclusion by researchers that each shot is independent of the last.
 
-Here is another intuition for why there is a bias in this sequence.
+However, if you use a methodology not subject to this bias, you get a true measure of the hot hand. And in the case of the @gilovich1985 data, removing the bias reveals a hot hand. @miller2018 found that in the @gilovich1985 data the probability of hitting a shot following a sequence of three previous hits is 13 percentage points higher than after a sequence of three misses.
 
-We flip three coins and select at random one of the flips that follows a heads. This means that if we select a flip that follows a head we will select either flip 2 or flip 3.
+### Alternative intuition \[Extension\]
+
+Here is another way of showing that there is a bias in this sequence.
+
+To do this we will use Bayes' rule with more than two variables. This operates in a similar manner to our previous use of Bayes' rule.
+
+To understand this, suppose we have three possible outcomes, $A$, $B$ and $C$. For these outcomes we can write the following probabilities:
+
+```{=tex}
+\begin{align*}
+P(A\cap B\cap C)&=P(A\cap B|C)P(C)=P(A|B\cap C)P(B\cap C) \\[6pt]
+&=P(B|A\cap C)P(A\cap C)=P(C|A\cap B)P(A\cap B)
+\end{align*}
+```
+And so on. We can write the joint probability of these events as varying combinations of the conditional probabilities.
+
+Typically we derive Bayes' rule by equating any two of these equations. For instance, as $P(A|B\cap C)P(B\cap C)=P(B|A\cap C)P(A\cap C)$ we can rearrange this to write:
+
+$$
+P(A|B\cap C)=\frac{P(B|A\cap C)P(A\cap C)}{P(B\cap C)}
+$$
+
+We will use this equation in our example.
+
+Now, suppose we flip three coins and select at random one of the flips that follows a heads. This means that if we select a flip that follows a head we will select either flip 2 or flip 3.
 
 If we select flip 2, we know that flip 1 was a head. The first two flips in the sequence are either HT or HH.
 
@@ -334,20 +360,55 @@ That is, if the first two flips are HT, we can only select flip 2. We select fli
 
 We are twice as likely to observe HT as HH, given we selected flip 2.
 
-Using Bayes' rule:
+Using $H_i$ or $T_i$ to represent a head or tail on the $i$-th flip and X_i to represent selection of flip $i$, we can show the probability of a tail given we have selected flip 2 using Bayes' rule. Using the equation we derived earlier involving three potential outcomes:
 
+```{=tex}
 \begin{align*}
-P(HT|\text{flip 2})&=\frac{P(\text{flip 2}|HT)P(HT)}{P(\text{flip 2})} \\[6pt]
-&=\frac{P(\text{flip 2}|HT)P(HT)}{P(\text{flip 2}|HT)P(HT)+P(\text{flip 2}|HH)P(HH)} \\[6pt]
-&=\frac{1\times 0.5}{1\times 0.5+0.5\times 0.5} \\[6pt]
-=\frac{2}{3} \\[6pt]
+P(T_2|H_1\cap X_2)&=\frac{P(X_2|H_1\cap T_2)P(H_1\cap T_2)}{P(H_1\cap X_2)} \\[12pt]
+&=\underbrace{\frac{P(X_2|H_1\cap T_2)P(H_1\cap T_2)}{P(X_2|H_1\cap T_2)P(H_1\cap T_2)+P(X_2|H_1\cap H_2)P(H_1\cap H_2)}}_{\text{Expanding the denominator using the formula for total probability}} \\[30pt]
+&=\frac{1\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
+&=\frac{2}{3} \\[6pt]
 \\
-P(HH|\text{flip 2})&=\frac{P(\text{flip 2}|HH)P(HH)}{P(\text{flip 2})} \\[6pt]
-&=\frac{P(\text{flip 2}|HH)P(HH)}{P(\text{flip 2}|HH)P(HH)+P(\text{flip 2}|HT)P(HT)} \\[6pt]
-&=\frac{0.5\times 0.5}{0.5\times 0.5+1\times 0.5} \\[6pt]
-=\frac{1}{3} \\[6pt]
+P(H_2|H_1\cap X_2 )&=\frac{P(X_2|H_1\cap H_2)P(H_1\cap H_2)}{P(H_1\cap X_2)} \\[12pt]
+&=\underbrace{\frac{P(X_2|H_1\cap H_2)P(H_1\cap H_2)}{P(X_2|H_1\cap T_2)P(H_1\cap T_2)+P(X_2|H_1\cap H_2)P(H_1\cap H_2)}}_{\text{Expanding the denominator using the formula for total probability}} \\[30pt]
+&=\frac{0.5\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
+&=\frac{1}{3}
 \end{align*}
+```
+As you can only select flip 2 if flip 1 is a head, we can also say that $P(T_2|H_1\cap X_2)=P(T_2|X_2)=\frac{2}{3}$ and $P(H_2|H_1\cap X_2 )=P(H_2|X_2)=\frac{1}{3}$. That is, the probability of a tail given we have selected flip 2 is $2/3$. The probability of a head given we have selected flip 2 is $1/3$. We are twice as likely to observe $T_2$ as $H_2$, given we have selected flip 2.
+
+We don't see the same bias if we select flip 3.
+
+If we select flip 3, we know that flip 2 was a head. But the fact we select flip 3 does not tell us anything about what flip 3 is, as flip 3 itself does not influence the choice of flip. Whether flip 3 is a head or tail is independent of the choice of flip 3 or the outcome of flip 2.
+
+Accordingly:
+
+```{=tex}
+\begin{align*}
+P(T_3|H_2\cap X_3)&=P(T_3)=0.5 \\
+\\
+P(H_3|H_2\cap X_3)&=P(H_3)=0.5
+\end{align*}
+```
+We now combine the results of our examination of the second and third flip.
+
+We are equally likely to select flip 2 or flip 3 as flips 1 and 2 will each be heads with 50% probability. If both are heads, we select one randomly. Given we have selected a flip, what is the probability that the following flip is a head?
+
+```{=tex}
+\begin{align*}
+P(H)&=P(X_2)\times P(H_2|X_2)+P(X_3)\times P(H_3|X_3) \\[6pt]
+&=0.5\times 0.33+0.5\times 0.5 \\[6pt]
+&=`r round(0.5*1/3+0.5*0.5, 3)`
+\end{align*}
+```
+What does this mean for measurement of the hot hand?
+
+As for before, if I take a sequence of three flips and I look at a flip after a head, if there is at least one head, the probability that flip is a head is 0.42. This is despite the coin flips being independent. It appears I have a cold hand.
+
+Use that same methodology in a scenario where there is a hot hand, the bias will counteract the hot hand and make it harder to detect, if it can be detected at all.
 
 ### The hot hand fallacy for truly random sequences
 
-However, there is strong evidence that people see streaks in truly random processes, with each outcome independent of the last. For example, Ayton and Fisher (2004) find that when people predict the results of a roulette wheel's spins, they increase their confidence in their predictions after a series of successes. Their confidence increases despite the outcome being random. (Note: they also exhibit the gambler’s fallacy in what they predict.)
+Despite the evidence that there is a hot hand in some sports, there is strong evidence that there still exists a "hot hand fallacy". People see streaks in truly random processes, with each outcome independent of the last.
+
+For example, @ayton2004 found that when people predict the results of a roulette wheel's spins, they increase their confidence in their predictions after a series of successes. Their confidence increases despite the outcome being random. Interestingly, they also exhibit the gambler's fallacy in what they predict.

@@ -76,7 +76,7 @@ $$
 This function, with $\alpha=0.6$, is plotted below.
 
 ```{r}
-#Plot of probabiltiy weighting function using ggplot2
+#Plot of probability weighting function using ggplot2
 library(ggplot2)
 
 #Define probability weighting function
