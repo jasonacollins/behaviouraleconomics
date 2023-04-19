@@ -61,29 +61,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - Game theory">
-<meta property="og:description" content="In many situations, your outcome depends on others’ behaviour. Their outcomes depends on your behaviour.">
+<meta property="og:description" content="In many situations, your outcome depends on others’ behaviour. Their outcome depends on your behaviour.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - Game theory">
-<meta name="twitter:description" content="In many situations, your outcome depends on others’ behaviour. Their outcomes depends on your behaviour.">
+<meta name="twitter:description" content="In many situations, your outcome depends on others’ behaviour. Their outcome depends on your behaviour.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -504,8 +488,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-players" id="toc-the-players" class="nav-link active" data-scroll-target="#the-players">The players</a></li>
-  <li><a href="#components-of-a-game" id="toc-components-of-a-game" class="nav-link" data-scroll-target="#components-of-a-game">Components of a game</a></li>
+  <li><a href="#components-of-a-game" id="toc-components-of-a-game" class="nav-link active" data-scroll-target="#components-of-a-game">Components of a game</a></li>
+  <li><a href="#the-players" id="toc-the-players" class="nav-link" data-scroll-target="#the-players">The players</a></li>
+  <li><a href="#types-of-games" id="toc-types-of-games" class="nav-link" data-scroll-target="#types-of-games">Types of games</a>
+  <ul class="collapse">
+  <li><a href="#cooperative-versus-non-cooperative-games" id="toc-cooperative-versus-non-cooperative-games" class="nav-link" data-scroll-target="#cooperative-versus-non-cooperative-games">Cooperative versus non-cooperative games</a></li>
+  <li><a href="#simultaneous-or-sequential-games" id="toc-simultaneous-or-sequential-games" class="nav-link" data-scroll-target="#simultaneous-or-sequential-games">Simultaneous or sequential games</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -529,33 +518,44 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In many situations, your outcome depends on others’ behaviour. Their outcomes depends on your behaviour.</p>
-<p>Your strategy will depend on your belief about others’ strategy. Their strategy depend on their beliefs about your strategy.</p>
+<p>In many situations, your outcome depends on others’ behaviour. Their outcome depends on your behaviour.</p>
+<p>Similarly, your strategy will depend on your belief about others’ strategy. Their strategy depends on their beliefs about your strategy.</p>
 <p>Game theory studies this strategic interaction between players. We can solve strategic problems using the tools of game theory.</p>
-<p>In this book I will focus on non-cooperative games where negotiation and enforcement of a binding contract is not possible.</p>
-<p>Cooperative game theory enables players to negotiate binding contracts that allow them to implement joint strategies.</p>
-<section id="the-players" class="level2">
-<h2 class="anchored" data-anchor-id="the-players">The players</h2>
-<p>In game theoretical analysis, players typically:</p>
-<ul>
-<li><p>Are rational optimisers</p></li>
-<li><p>Understand the game they are playing</p></li>
-<li><p>Assume that other players are also rational optimisers who understand the game</p></li>
-</ul>
-</section>
 <section id="components-of-a-game" class="level2">
 <h2 class="anchored" data-anchor-id="components-of-a-game">Components of a game</h2>
 <p>A game has the following components:</p>
 <ul>
-<li><p>Players: <span class="math inline">i=1,2,...,n</span></p></li>
-<li><p>Actions (e.g.&nbsp;to contribute or defect)</p></li>
-<li><p>Strategies comprising a complete contingent plan of action</p></li>
-<li><p>Information available to players (we generally assume perfect information)</p></li>
-<li><p>Rules of the game</p></li>
-<li><p>Payoffs, comprising a complete summary of the value to each player</p></li>
+<li><p>First, the <strong>players</strong> of the game. Most of the games we examine in these notes involve two players.</p></li>
+<li><p>Second, the <strong>actions</strong> that each player can take; for example to contribute to a common pool or to defect.</p></li>
+<li><p>Third, the <strong>strategies</strong> that comprise a complete contingent plan of action. That is, for any given scenario or action by another player, a strategy specifies the action to be taken by the player.</p></li>
+<li><p>Fourth, the <strong>information</strong> available to players. In these notes, we generally assume perfect information.</p></li>
+<li><p>And finally, the <strong>payoffs</strong>, which comprise a complete summary of the value to each player of each set of actions.</p></li>
 </ul>
+</section>
+<section id="the-players" class="level2">
+<h2 class="anchored" data-anchor-id="the-players">The players</h2>
+<p>In game theoretical analysis, we typically assume that the players are rational optimisers who understand the game that they are playing. By rational, we mean that the player is aware of their alternatives, forms expectations about any unknowns, has preferences that conform to the axioms of completeness and transitivity and they choose the best option using some optimisation algorithm.</p>
+<p>We also assume that the players assume other players are also rational optimisers who understand the game.</p>
+<p>We weaken this assumption when we analyse behavioural game theory.</p>
+</section>
+<section id="types-of-games" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-games">Types of games</h2>
+<p>There are many different types of games analysed in game theory. Some of the delineations between these games are as follows.</p>
+<section id="cooperative-versus-non-cooperative-games" class="level3">
+<h3 class="anchored" data-anchor-id="cooperative-versus-non-cooperative-games">Cooperative versus non-cooperative games</h3>
+<p>First, games are often divided into cooperative and non-cooperative games.</p>
+<p>In non-cooperative games, players are not allowed to negotiate binding contracts. In cooperative games, players are allowed to negotiate binding contracts that allow them to implement joint strategies.</p>
+<p>In these notes, I will focus on non-cooperative games.</p>
+</section>
+<section id="simultaneous-or-sequential-games" class="level3">
+<h3 class="anchored" data-anchor-id="simultaneous-or-sequential-games">Simultaneous or sequential games</h3>
+<p>Second, games can involve simultaneous or sequential moves.</p>
+<p>In a simultaneous move game, you make decisions without knowing the action of your rival.</p>
+<p>In sequential games, players make sequential decisions knowing the action of the other player.</p>
+<p>We will examine both of these types of game in these notes.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

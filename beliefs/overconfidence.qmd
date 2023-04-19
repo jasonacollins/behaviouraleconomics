@@ -6,23 +6,23 @@ Take the following examples:
 
 -   A person is asked to estimate the length of the Nile by providing a range that the respondent is 90% sure contains the correct answer. For example, they might answer that there is a 90% probability that the Nile is between 2500km and 5000km long. However, when people answer this question, the estimate typically contains the correct answer only 50% of the time.
 
--   PGA golfers typically believe they sink around 75% of 6 foot putts -- some even believe they sink as many as 85% -- when the average is closer to 55%.
+-   PGA golfers typically believe they sink around 75% of 6-foot putts -- some even believe they sink as many as 85% -- when the average is closer to 55%.
 
--   93% of American drivers rate themselves as better than average. 25% of high school seniors believe they are in the top 1% in ability to get along with others.
+-   93% of American drivers rate themselves as better than average. 25% of high school seniors believe they are in the top 1% in their ability to get along with others.
 
 There are many similar examples, all making the case that people are generally overconfident.
 
-But despite each being labelled as overconfidence, note that these examples are actually three different phenomena.
+But despite each being labelled as overconfidence, note that these examples are three different phenomena.
 
-**Overprecision** is the tendency to believe that our predictions or estimates are more accurate than they actually are. The typical study seeking to show overprecision asks for someone to give confidence ranges for their estimates, such as estimating the length of the Nile.
+**Overprecision** is the tendency to believe that our predictions or estimates are more accurate than they are. The typical study seeking to show overprecision asks for someone to give confidence ranges for their estimates, such as estimating the length of the Nile.
 
-**Overestimation** is the belief that we can perform at a level beyond that which we realistically can. The evidence here is mixed. When attempting a difficult task such as a six foot putt, we typically overestimate. But on easy tasks, the opposite is often the case -- we tend underestimate our performance. Whether over or underestimation occurs depends upon the domain.
+**Overestimation** is the belief that we can perform at a level beyond that which we realistically can. The evidence here is mixed. When attempting a difficult task such as a six-foot putt, we typically overestimate. But on easy tasks, the opposite is often the case -- we tend to underestimate our performance. Whether over or underestimation occurs depends upon the domain.
 
-**Overplacement** is the erroneous relative judgement that we are better than others. Obviously, we cannot all be better than average. But this relative judgement, like overestimation, tends to vary with task difficulty. For easy tasks, such as driving a car, we overplace and consider ourselves better than most. But ask people will rate themselves as below average for a skill such as drawing or identifying plants from the Amazon. People don't suffer from pervasive overplacement. Whether they overplace depends on what the situation is.
+**Overplacement** is the erroneous relative judgement that we are better than others. Obviously, we cannot all be better than average. But this relative judgement, like overestimation, tends to vary with task difficulty. For easy tasks, such as driving a car, we overplace and consider ourselves better than most. But people will rate themselves as below average for a skill such as drawing or identifying plants from the Amazon. People don't suffer from pervasive overplacement. Whether they overplace depends on what the situation is.
 
 You might note that we tend to both underestimate and overplace our performance on easy tasks. We can also overestimate but underplace our performance on difficult tasks.
 
-So are we both underconfident and overconfident at the same time? The blanket term of overconfidence does little justice to what is actually occurring.
+So are we both underconfident and overconfident at the same time? The blanket term of overconfidence does little justice to what is occurring.
 
 The conflation of these different effects under the umbrella of overconfidence often plays out in stories of how overconfidence (rarely assessed before the fact) led to someone's fall. For instance, evidence that people tend to believe they are better drivers than average (overplacement) is not evidence that overconfidence led someone to pursue a disastrous corporate merger (overestimation).
 

@@ -1,38 +1,51 @@
 # Game theory
 
-In many situations, your outcome depends on others’ behaviour. Their outcomes depends on your behaviour.
+In many situations, your outcome depends on others’ behaviour. Their outcome depends on your behaviour.
 
-Your strategy will depend on your belief about others’ strategy. Their strategy  depend on their beliefs about your strategy.
+Similarly, your strategy will depend on your belief about others’ strategy. Their strategy depends on their beliefs about your strategy.
 
 Game theory studies this strategic interaction between players. We can solve strategic problems using the tools of game theory.
-
-In this book I will focus on non-cooperative games where negotiation and enforcement of a binding contract is not possible.
-
-Cooperative game theory enables players to negotiate binding contracts that allow them to implement joint strategies.
-
-## The players
-
-In game theoretical analysis, players typically:
-
-- Are rational optimisers
-
-- Understand the game they are playing 
-
-- Assume that other players are also rational optimisers who understand the game 
 
 ## Components of a game
 
 A game has the following components:
 
-- Players: $i=1,2,...,n$
+- First, the **players** of the game. Most of the games we examine in these notes involve two players.
 
-- Actions (e.g. to contribute or defect)
+- Second, the **actions** that each player can take; for example to contribute to a common pool or to defect.
 
-- Strategies comprising a complete contingent plan of action
+- Third, the **strategies** that comprise a complete contingent plan of action. That is, for any given scenario or action by another player, a strategy specifies the action to be taken by the player.
 
-- Information available to players (we generally assume perfect information)
+- Fourth, the **information** available to players. In these notes, we generally assume perfect information.
 
-- Rules of the game
+- And finally, the **payoffs**, which comprise a complete summary of the value to each player of each set of actions.
 
-- Payoffs, comprising a complete summary of the value to each player
+## The players
 
+In game theoretical analysis, we typically assume that the players are rational optimisers who understand the game that they are playing. By rational, we mean that the player is aware of their alternatives, forms expectations about any unknowns, has preferences that conform to the axioms of completeness and transitivity and they choose the best option using some optimisation algorithm.
+
+We also assume that the players assume other players are also rational optimisers who understand the game.
+
+We weaken this assumption when we analyse behavioural game theory.
+
+## Types of games
+
+There are many different types of games analysed in game theory. Some of the delineations between these games are as follows.
+
+### Cooperative versus non-cooperative games
+
+First, games are often divided into cooperative and non-cooperative games.
+
+In non-cooperative games, players are not allowed to negotiate binding contracts. In cooperative games, players are allowed to negotiate binding contracts that allow them to implement joint strategies.
+
+In these notes, I will focus on non-cooperative games.
+
+### Simultaneous or sequential games
+
+Second, games can involve simultaneous or sequential moves.
+
+In a simultaneous move game, you make decisions without knowing the action of your rival.
+
+In sequential games, players make sequential decisions knowing the action of the other player.
+
+We will examine both of these types of game in these notes.
