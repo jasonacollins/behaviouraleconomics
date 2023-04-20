@@ -18,7 +18,7 @@ A game has the following components:
 
 - Fourth, the **information** available to players. In these notes, we generally assume perfect information.
 
-- And finally, the **payoffs**, which comprise a complete summary of the value to each player of each set of actions.
+- And finally, the **payoffs**. This comprises a complete summary of the value to each player of each set of actions.
 
 ## The players
 

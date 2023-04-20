@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on behavioural economics - 38&nbsp; Simultaneous move one-shot games</title>
+<title>Notes on behavioural economics - 38&nbsp; Simultaneous-move one-shot games</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,30 +63,17 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Notes on behavioural economics - 38&nbsp; Simultaneous move one-shot games">
-<meta property="og:description" content="In a simultaneous move one-shot game, you make decisions without knowing the action of your rival. This can be interpreted as:">
+<meta property="og:title" content="Notes on behavioural economics - 38&nbsp; Simultaneous-move one-shot games">
+<meta property="og:description" content="In a simultaneous-move one-shot game, you make decisions without knowing the action of your rival.">
 <meta property="og:site-name" content="Notes on behavioural economics">
-<meta name="twitter:title" content="Notes on behavioural economics - 38&nbsp; Simultaneous move one-shot games">
-<meta name="twitter:description" content="In a simultaneous move one-shot game, you make decisions without knowing the action of your rival. This can be interpreted as:">
+<meta name="twitter:title" content="Notes on behavioural economics - 38&nbsp; Simultaneous-move one-shot games">
+<meta name="twitter:description" content="In a simultaneous-move one-shot game, you make decisions without knowing the action of your rival.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -124,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -135,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Simultaneous-move one-shot games</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -403,7 +390,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></a>
+  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Simultaneous-move one-shot games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -513,7 +500,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#dominant-strategies" id="toc-dominant-strategies" class="nav-link" data-scroll-target="#dominant-strategies"><span class="toc-section-number">38.2</span>  Dominant strategies</a></li>
   <li><a href="#nash-equilibrium" id="toc-nash-equilibrium" class="nav-link" data-scroll-target="#nash-equilibrium"><span class="toc-section-number">38.3</span>  Nash equilibrium</a></li>
-  <li><a href="#simultaneous-move-one-shot-game-examples" id="toc-simultaneous-move-one-shot-game-examples" class="nav-link" data-scroll-target="#simultaneous-move-one-shot-game-examples"><span class="toc-section-number">38.4</span>  Simultaneous move one-shot game examples</a>
+  <li><a href="#simultaneous-move-one-shot-game-examples" id="toc-simultaneous-move-one-shot-game-examples" class="nav-link" data-scroll-target="#simultaneous-move-one-shot-game-examples"><span class="toc-section-number">38.4</span>  Simultaneous-move one-shot game examples</a>
   <ul class="collapse">
   <li><a href="#the-driving-game" id="toc-the-driving-game" class="nav-link" data-scroll-target="#the-driving-game"><span class="toc-section-number">38.4.1</span>  The driving game</a></li>
   <li><a href="#matching-pennies" id="toc-matching-pennies" class="nav-link" data-scroll-target="#matching-pennies"><span class="toc-section-number">38.4.2</span>  Matching pennies</a></li>
@@ -528,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Simultaneous move one-shot games</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Simultaneous-move one-shot games</span></h1>
 </div>
 
 
@@ -543,22 +530,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In a simultaneous move one-shot game, you make decisions without knowing the action of your rival. This can be interpreted as:</p>
-<ul>
-<li><p>Players making decisions at the same time</p></li>
-<li><p>Players making decisions before knowing the decisions of their rivals.</p></li>
-</ul>
+<p>In a simultaneous-move one-shot game, you make decisions without knowing the action of your rival. This can be interpreted as either players making decisions at the same time or players making decisions before knowing the decisions of their rivals.</p>
 <section id="the-normal-form" class="level2" data-number="38.1">
 <h2 data-number="38.1" class="anchored" data-anchor-id="the-normal-form"><span class="header-section-number">38.1</span> The normal form</h2>
-<p>We usually write simultaneous move one-shot games in what is called the “strategic” or “normal” form:</p>
-<ul>
-<li><p>Payoffs are represented in a matrix</p></li>
-<li><p>Payoffs include all the outcomes for a player (monetary or non-monetary)</p></li>
-</ul>
+<p>We usually write simultaneous move one-shot games in what is called the “strategic” or “normal” form. In this form, all of the monetary or non-monetary outcomes are represented in a matrix.</p>
 <p>I will now illustrate the normal form of the game with a game called the prisoner’s dilemma.</p>
 <section id="the-prisoners-dilemma" class="level3" data-number="38.1.1">
 <h3 data-number="38.1.1" class="anchored" data-anchor-id="the-prisoners-dilemma"><span class="header-section-number">38.1.1</span> The prisoner’s dilemma</h3>
-<p>The prisoner’s dilemma is a classic simultaneous move one-shot game. A pair of criminals have been captured following a crime. The police have sufficient evidence to convict them of a minor crime (e.g.&nbsp;trespass), but insufficient evidence to convict them of the major crime that has occurred (e.g.&nbsp;theft of the crown jewels).</p>
+<p>The prisoner’s dilemma is a classic simultaneous-move one-shot game. A pair of criminals have been captured following a crime. The police have sufficient evidence to convict them of a minor crime (e.g.&nbsp;trespass), but insufficient evidence to convict them of the major crime that has occurred (e.g.&nbsp;theft of the crown jewels).</p>
 <p>The police place each prisoner in a separate cell where they cannot communicate with each other. The police then offer both prisoners a deal: confess and they will let them go free despite the minor crime, but they will then have the evidence required to give their criminal partner a massive sentence for the serious crime.</p>
 <p>If neither confesses, the police will have insufficient evidence to get a conviction for the major crime, so they will both receive a short sentence for the minor crime. If both confess, they will both get a longer sentence, but with some reduction in sentence relative to if they didn’t confess.</p>
 <p>The normal form of the game is as follows:</p>
@@ -567,7 +546,7 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="img/prisoners-dilemma-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/prisoners-dilemma-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>Prisoners A and B have two actions available: confess and silent. The numbers in the matrix represent the payoffs from each combination of actions, in this case the number of years they will serve in prison (a higher number is a worse outcome). The number in the left of each payoff cell represents the payoff to the row player, Prisoner A. The number on the right of each payoff cell is the payoff to the column player, Prisoner B.</p>
+<p>Prisoners A and B have two actions available: to confess and to stay silent. The numbers in the matrix represent the payoffs from each combination of actions, in this case, the number of years they will serve in prison. A higher number is therefore a worse outcome. The left number in each cell of the matrix represents the payoff to the row player, Prisoner A. The number on the right of each matrix cell is the payoff to the column player, Prisoner B.</p>
 <p>For example, if both Prisoner A and Prisoner B choose to confess, they each receive a prison sentence of five years. If Prisoner A confesses and Prisoner B remains silent, Prisoner A gets off without a prison sentence, whereas Prisoner B gets twenty years.</p>
 <p>Equipped with the normal form of the game, we can determine what each player wants to do in response to each action of the other player.</p>
 <p>For example, we can see that if Prisoner B confesses, Prisoner A can either confess and receive five years in prison, or remain silent and receive 20 years in prison. They would choose to confess.</p>
@@ -580,8 +559,8 @@ ul.task-list li input[type="checkbox"] {
 <p>If Prisoner B remains silent, Prisoner A could either confess and escape without a sentence, or remain silent and receive a sentence of one year in prison. They would prefer to confess.</p>
 <p>We can then work through the same process for Prisoner B’s actions.</p>
 <p>If Prisoner A confesses, Prisoner B can either confess and receive five years in prison, or remain silent and receive 20 years in prison. They would choose to confess.</p>
-<p>If Prisoner A remains silent, Prisoner B could either confess and escape without a sentence, or remain silent and receive a sentence of one year in prison. They would prefer to confess.</p>
-<p>Indicating this set of preferred actions in response to that of the other player gives us the following:</p>
+<p>If Prisoner A remains silent, Prisoner B could either confess, and escape without a sentence, or remain silent, and receive a sentence of one year in prison. They would prefer to confess.</p>
+<p>Indicating this set of preferred actions in response to that of the other player gives us this completed matrix.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/prisoners-dilemma-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/prisoners-dilemma-3.jpg" class="img-fluid figure-img"></a></p>
@@ -591,29 +570,35 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dominant-strategies" class="level2" data-number="38.2">
 <h2 data-number="38.2" class="anchored" data-anchor-id="dominant-strategies"><span class="header-section-number">38.2</span> Dominant strategies</h2>
-<p>A strategy is (strictly) dominant if it gives a (strictly) higher payoff than every other strategy, for every strategy that your rivals play.</p>
+<p>Before examining this matrix further, I will now introduce the concept of the dominant strategy.</p>
+<p>A strategy is dominant if it gives a higher payoff than every other strategy, for every strategy that your rivals play.</p>
+<p>A strategy is strictly dominant if it gives a strictly higher payoff than every other strategy, for every strategy that your rivals play.</p>
 <p>If you have a strictly dominant strategy, you should play it for sure.</p>
 <p>In a dominant strategy equilibrium, all players choose a dominant strategy.</p>
-<p>In the prisoner’s dilemma both players have a dominant strategy to confess.</p>
+<p>In the prisoner’s dilemma, both players have a dominant strategy to confess. No matter what the other player does, confessing is better than remaining silent.</p>
 </section>
 <section id="nash-equilibrium" class="level2" data-number="38.3">
 <h2 data-number="38.3" class="anchored" data-anchor-id="nash-equilibrium"><span class="header-section-number">38.3</span> Nash equilibrium</h2>
+<p>Another important concept is the Nash equilibrium.</p>
 <p>A set of strategies is a Nash equilibrium if every player is playing a best response to their rivals’ strategies. No one has an incentive to change strategy.</p>
-<p>A Nash equilibrium is self-enforcing and stable.</p>
-<p>An agreement that is a Nash equilibrium is self-fulfilling. If the players agree to play a certain way, they’ll both go through with it. Unilateral deviations are not worthwhile.</p>
+<p>A Nash equilibrium is self-enforcing and stable. If the players agree to play a certain way, they’ll both go through with it. Unilateral deviations are not worthwhile.</p>
 <p>The prisoner’s dilemma has a single Nash equilibrium: (Confess, Confess). Visually, where the preferred response of both players to the other player’s action falls within the same cell, this indicates a Nash equilibrium.</p>
 </section>
 <section id="simultaneous-move-one-shot-game-examples" class="level2" data-number="38.4">
-<h2 data-number="38.4" class="anchored" data-anchor-id="simultaneous-move-one-shot-game-examples"><span class="header-section-number">38.4</span> Simultaneous move one-shot game examples</h2>
+<h2 data-number="38.4" class="anchored" data-anchor-id="simultaneous-move-one-shot-game-examples"><span class="header-section-number">38.4</span> Simultaneous-move one-shot game examples</h2>
+<p>In this part, I will show some examples of simultaneous-move one-shot games.</p>
 <section id="the-driving-game" class="level3" data-number="38.4.1">
 <h3 data-number="38.4.1" class="anchored" data-anchor-id="the-driving-game"><span class="header-section-number">38.4.1</span> The driving game</h3>
-<p>Consider the following game between two players deciding what side of the road to drive on. If they don’t drive on the same side of the road they crash.</p>
+<p>Consider the following game between two players deciding what side of the road to drive on. They can drive on the left or the right. If they both drive on the left or right when they approach each other, they will successfully pass. If one drives on the left and the other on the right, they will crash.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/driving-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/driving-game-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>What are the Nash equilibria? The Nash equilibria are (Left, Left) and (Right, Right).</p>
+<p>What are the Nash equilibria?</p>
+<p>If Driver 2 drives on the left, Driver 1 can either successfully drive on the left, or drive on the right and crash. They would choose to drive on the left. If Driver 2 drives on the right, Driver 1 can either successfully drive on the right, or drive on the left and crash. They would choose to drive on the right.</p>
+<p>Similarly, if Driver 1 drives on the left, Driver 2 can either successfully drive on the left, or drive on the right and crash. They would choose to drive on the left. If Driver 1 drives on the right, Driver 2 can either successfully drive on the right, or drive on the left and crash. They would choose to drive on the right.</p>
+<p>We can see from the matrix that there are two Nash equilibria. The Nash equilibria are (Left, Left) and (Right, Right). If both drivers are driving on the left, neither has an incentive to change their strategy. If both drivers are driving on the right, again, neither has an incentive to change.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/driving-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/driving-game-2.jpg" class="img-fluid figure-img"></a></p>
@@ -622,44 +607,136 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="matching-pennies" class="level3" data-number="38.4.2">
 <h3 data-number="38.4.2" class="anchored" data-anchor-id="matching-pennies"><span class="header-section-number">38.4.2</span> Matching pennies</h3>
-<p>Consider the following game between two players, Even and Odd. If both pennies match, Even wins. If they don’t match, Odd wins.</p>
+<p>The next game, called matching pennies, involves two players, Even and Odd, who each have a penny. Each player must select one side of the penny and simultaneously show the penny to the other player. If the pennies match, Even wins. If they don’t match, Odd wins.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/matching-pennies-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/matching-pennies-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>What are the Nash equilibria?</p>
+<p>To determine this, we work through the matrix as we did in the previous example.</p>
+<p>If Odd shows heads, Even can either show heads and win, or show tails and lose. They would choose to show heads. If Odd shows tails, Even can either show tails and win, or show heads and lose. They would choose to show tails.</p>
+<p>Similarly, if Even shows heads, Odd can either show tails and win, or show heads and lose. They would choose to show tails. If Even shows tails, Odd can either show heads and win, or show tails and lose. They would choose to show tails.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/matching-pennies-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/matching-pennies-2.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>There are no pure-strategy Nash equilibria for this game. (There are mixed-strategy equilibria, but mixed-strategy equilibria are beyond the scope of this subject.)</p>
+<p>There are no pure-strategy Nash equilibria for this game. For any combination of heads and tails, one of the players would want to change their choice.</p>
+<p>There are what are called “mixed-strategy Nash equilibria” in this game, but mixed-strategy equilibria are beyond the scope of this subject.</p>
 </section>
 <section id="the-stag-hunt" class="level3" data-number="38.4.3">
 <h3 data-number="38.4.3" class="anchored" data-anchor-id="the-stag-hunt"><span class="header-section-number">38.4.3</span> The stag hunt</h3>
-<p>Consider the following game between two players deciding what animal they will hunt. Both hunters need to cooperate to catch the stag. They can catch a hare by themselves, but it provides less meat.</p>
+<p>Consider the “stag hunt game” between two players deciding what animal they will hunt. Both hunters need to cooperate to catch the stag. They can catch a hare by themselves, but it provides less meat.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/stag-hunt-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/stag-hunt-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>What are the Nash equilibria?</p>
+<p>If Hunter 2 hunts the stag, Hunter 1 can either hunt the stag and catch it, or hunt the hare and catch it. They would choose to hunt the stag as it gives a payoff of 3 compared to 1. If Hunter 2 hunts the hare, Hunter 1 can either hunt the stag and not catch it, or hunt the hare and catch it. They would choose to hunt the hare as it gives a payoff of 1 compared to 0.</p>
+<p>Similarly, if Hunter 1 hunts the stag, Hunter 2 can either hunt the stag and catch it, or hunt the hare and catch it. They would choose to hunt the stag as it gives a payoff of 3 compared to 1. If Hunter 1 hunts the hare, Hunter 2 can either hunt the stag and not catch it, or hunt the hare and catch it. They would choose to hunt the hare as it gives a payoff of 1 compared to 0.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/stag-hunt-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/stag-hunt-2.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>The Nash equilibria are (Stag, Stag) and (Hare, Hare).</p>
+<p>The Nash equilibria are (Stag, Stag) and (Hare, Hare). On either pair of strategies, neither player has incentive to change. It is an open question, however, as to which Nash equilibrium might emerge if they were to play the game.</p>
 </section>
 <section id="the-public-goods-game" class="level3" data-number="38.4.4">
 <h3 data-number="38.4.4" class="anchored" data-anchor-id="the-public-goods-game"><span class="header-section-number">38.4.4</span> The public goods game</h3>
-<p>Participants are given an initial endowment.</p>
-<p>Each secretly and simultaneously chooses how much of their endowment they wish to contribute to a public pot.</p>
-<p>The money in the public pot is multiplied by some amount <span class="math inline">m</span> and split evenly between the players.</p>
-<p>For example, players might each be given $10, with the pot doubled.</p>
-<p>In Nash equilibrium in the public goods game, nobody transfers anything to the pot. Any contributions are split between all players, so if there are more players than <span class="math inline">m</span> (which is normally the case by design), contributions result in a loss.</p>
-<p>The Pareto optimal result, however, is for all players to contribute their full endowment and each receive back their contribution multiplied by <span class="math inline">m</span>.</p>
+<p>The final game I will consider in this part is the public goods game.</p>
+<p>In this game, each participant is given an initial endowment.</p>
+<p>Each participant secretly and simultaneously chooses how much of their endowment they wish to contribute to a public pot.</p>
+<p>The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than 1, but less than the number of players.</p>
+<p>For example, five players might each be given $10, with the pot doubled. Suppose they each contribute $5 of their $10 endowment to the pot. The $25 contributed to the pot is multiplied by 2 to a total of $50. Each player then receives $10 from the pot, giving them $15 in total.</p>
+<div class="cell" data-fig-width="5">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">graph TD
+
+A[Player A: $10] --&gt;|$5| F[Pot $25]
+B[Player B: $10] --&gt;|$5| F[Pot $25]
+C[Player C: $10] --&gt;|$5| F[Pot $25]
+D[Player D: $10] --&gt;|$5| F[Pot $25]
+E[Player E: $10] --&gt;|$5| F[Pot $25]
+
+F --&gt;|2x| G[Multiplied Pot $50]
+
+G --&gt;|$10| H[Player A: $15]
+G --&gt;|$10| I[Player B: $15]
+G --&gt;|$10| J[Player C: $15]
+G --&gt;|$10| K[Player D: $15]
+G --&gt;|$10| L[Player E: $15]
+
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>In Nash equilibrium in the public goods game, nobody transfers anything to the pot. Any contributions are split between all players, so if there are more players than the multiple, which is normally the case by design, contributions result in a loss to that individual player.</p>
+<p>Consider the previous game, but this time Player E contributes nothing. There is then $20 in the pot, which is doubled to $40. The pot is then split equally between the players, with each player receiving $8 from the pot. The result is that Player E is better off having not contributed, ending with $18, compared to the $15 they would have received had they contributed $5 like the other players.</p>
+<div class="cell" data-fig-width="5">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">graph TD
+
+A[Player A: $10] --&gt;|$5| F[Pot $20]
+B[Player B: $10] --&gt;|$5| F
+C[Player C: $10] --&gt;|$5| F
+D[Player D: $10] --&gt;|$5| F
+E[Player E: $10] --&gt;|$0| F
+
+F --&gt;|2x| G[Multiplied Pot $40]
+
+G --&gt;|$8| H[Player A: $13]
+G --&gt;|$8| I[Player B: $13]
+G --&gt;|$8| J[Player C: $13]
+G --&gt;|$8| K[Player D: $13]
+G --&gt;|$8| L[Player E: $18]
+
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>The Pareto optimal result, however, is for all players to contribute their full endowment and each receives back their multiplied contribution. The Pareto optimal result is not stable, however, as each player has an incentive to defect and contribute nothing.</p>
+<div class="cell" data-fig-width="5">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-3">graph TD
+
+A[Player A: $10] --&gt;|$10| F[Pot $50]
+B[Player B: $10] --&gt;|$10| F
+C[Player C: $10] --&gt;|$10| F
+D[Player D: $10] --&gt;|$10| F
+E[Player E: $10] --&gt;|$10| F
+
+F --&gt;|2x| G[Multiplied Pot $100]
+
+G --&gt;|$20| H[Player A: $20]
+G --&gt;|$20| I[Player B: $20]
+G --&gt;|$20| J[Player C: $20]
+G --&gt;|$20| K[Player D: $20]
+G --&gt;|$20| L[Player E: $20]
+
+</pre>
+<div id="mermaid-tooltip-3" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -843,7 +920,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
