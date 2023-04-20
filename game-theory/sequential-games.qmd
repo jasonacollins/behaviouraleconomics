@@ -4,45 +4,61 @@ In sequential games, players make sequential decisions knowing the action of the
 
 ## The extensive form
 
-The extensive form representation explicitly shows the timing of play.
+Sequential games can be shown in what is called the "extensive form" representation. The extensive form representation explicitly shows the timing of play.
 
 Payoffs are represented in a game tree.
 
-I will now illustrate the extensive form of the game with a game called the centipede game.
+I will now illustrate the extensive form with a game called the centipede game.
 
 ### The centipede game
 
-This centipede game has six stages. At each stage, a player can “take” and end the game or they can “pass”, increasing the total payoff. The other player then has a move.
+This centipede game has six decision nodes. At each node, a player can “take”, and end the game, or they can “pass”, increasing the total payoff. The other player then has a move.
+
+The numbers 1 and 2 along the top of the centipede represent the decision nodes for two players. At the first node, player 1 has the choice to take or pass. If player 1 passes, player 2 has the choice to take or pass, and so on. At the final node, the game ends regardless of what Player 2 chooses.
 
 ![](img/centipede-game-1.jpg)
 
+The payoff when a player takes and ends the game is represented by the numbers in the brackets. The first number is the payoff for player 1 and the second number is the payoff for player 2. For example, if Player 1 takes at the first node, they receive a payoff of 1 and Player 2 receives a payoff of 0. At the final node, if Player 2 passes they receive a payoff of 5 and Player 1 receives a payoff of 6. If Player 2 takes at that final node, they receive a payoff of 6 and Player 1 receives a payoff of 4.
+
 ## Subgame perfect Nash equilibrium
+
+Before examining this game, I will introduce the concept of a subgame perfect Nash equilibrium.
 
 A subgame is a part of a game that can be played as a game itself. It begins at a single node and contains every successor node.
 
+For example, this final stage of the game is a subgame.
+
+![](img/centipede-subgame-1.png){width=30%}
+
+As is this subset of the game.
+
+![](img/centipede-subgame-2.png){width=80%}
+
 A Nash Equilibrium is subgame perfect if every player plays the Nash Equilibrium in every subgame
 
-We can solve for the subgame perfect Nash equilibrium of sequential games by backward induction: 
+We can solve for the subgame perfect Nash equilibrium of sequential games by backward induction. To do that we solve for the decision nodes at the end of the game first and then work our work our way back to the beginning of the game.
 
-- solve for the decision nodes at the end of the game first
+In our centipede game, using backward induction, player 2 at the final node will "take" for a payoff of 6 instead of passing for a payoff of 5. When marking choices in a sequential game, it is often useful to mark the option taken by the player, or that not taken, in addition to indicating the payoff they would receive.
 
-- work your way to the beginning of the game.
+![](img/centipede-game-2.png)
 
-In our centipede game, using backward induction, player 2 at the final stage will take for a payoff of 6 (relative to 5 for passing).
+At the node immediately before, player 1 will "take" for a payoff of 5 instead of passing, given player 2 will then take, giving player 1 a payoff of 4.
 
-![](img/centipede-game-2.jpg)
+![](img/centipede-game-3.png)
 
-Therefore, player 1 at the stage before will take for a payoff of 5 (relative to the payoff of 4 they would receive for passing, given player 2 will then take).
+Therefore, at the node before, player 2 will take for a payoff of 4 instead of passing for a payoff of 3.
 
-Therefore, player 2 at the stage before will take for a payoff of 4.
+Therefore, at the node before, player 1 will take for a payoff of 3 instead of passing for a payoff of 2.
 
-And so on.
+Therefore, player 2 at the node before will take for a payoff of 2 instead of passing for a payoff of 1.
 
-![](img/centipede-game-3.jpg)
+And therefore, player 1 at the first node will take for a payoff of 1 instead of passing for a payoff of 0.
+
+![](img/centipede-game-4.png)
 
 There is a unique subgame perfect equilibrium: $S_1=(\text{take, take, take})$ and $S_2=(\text{take, take, take})$, where $S_1$ and $S_2$ are the set of strategies for player 1 and player 2 respectively.
 
-In the subgame perfect Nash equilibrium, player 1 takes at the first stage.
+In the subgame perfect Nash equilibrium, player 1 takes at the first node.
 
 ## Sequential game examples
 
