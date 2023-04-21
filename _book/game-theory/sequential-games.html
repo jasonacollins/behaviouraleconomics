@@ -63,6 +63,9 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -550,20 +553,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-centipede-game" class="level3" data-number="39.1.1">
 <h3 data-number="39.1.1" class="anchored" data-anchor-id="the-centipede-game"><span class="header-section-number">39.1.1</span> The centipede game</h3>
 <p>This centipede game has six decision nodes. At each node, a player can “take”, and end the game, or they can “pass”, increasing the total payoff. The other player then has a move.</p>
-<p>The numbers 1 and 2 along the top of the centipede represent the decision nodes for two players. At the first node, player 1 has the choice to take or pass. If player 1 passes, player 2 has the choice to take or pass, and so on. At the final node, the game ends regardless of what Player 2 chooses.</p>
+<p>The numbers 1 and 2 along the top of the centipede represent the decision nodes for two players. At the first node, player 1 has the choice to take or pass. If player 1 passes, player 2 has the choice to take or pass, and so on. At the final node, the game ends regardless of what player 2 chooses.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/centipede-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/centipede-game-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>The payoff when a player takes and ends the game is represented by the numbers in the brackets. The first number is the payoff for player 1 and the second number is the payoff for player 2. For example, if Player 1 takes at the first node, they receive a payoff of 1 and Player 2 receives a payoff of 0. At the final node, if Player 2 passes they receive a payoff of 5 and Player 1 receives a payoff of 6. If Player 2 takes at that final node, they receive a payoff of 6 and Player 1 receives a payoff of 4.</p>
+<p>The payoff when a player takes and ends the game is represented by the numbers in the brackets. The first number is the payoff for player 1 and the second number is the payoff for player 2. For example, if player 1 takes at the first node, they receive a payoff of 1 and player 2 receives a payoff of 0. At the final node, if player 2 passes they receive a payoff of 5 and Player 1 receives a payoff of 6. If player 2 takes at that final node, they receive a payoff of 6 and Player 1 receives a payoff of 4.</p>
 </section>
 </section>
 <section id="subgame-perfect-nash-equilibrium" class="level2" data-number="39.2">
 <h2 data-number="39.2" class="anchored" data-anchor-id="subgame-perfect-nash-equilibrium"><span class="header-section-number">39.2</span> Subgame perfect Nash equilibrium</h2>
 <p>Before examining this game, I will introduce the concept of a subgame perfect Nash equilibrium.</p>
 <p>A subgame is a part of a game that can be played as a game itself. It begins at a single node and contains every successor node.</p>
-<p>For example, this final stage of the game is a subgame.</p>
+<p>For example, this final stage of the centipede game is a subgame.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/centipede-subgame-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/centipede-subgame-1.png" class="img-fluid figure-img" style="width:30.0%"></a></p>
@@ -576,7 +579,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>A Nash Equilibrium is subgame perfect if every player plays the Nash Equilibrium in every subgame</p>
-<p>We can solve for the subgame perfect Nash equilibrium of sequential games by backward induction. To do that we solve for the decision nodes at the end of the game first and then work our work our way back to the beginning of the game.</p>
+<p>We can solve for the subgame perfect Nash equilibrium of sequential games by backward induction. To do that we solve for the decision nodes at the end of the game first and then work our way back to the beginning of the game.</p>
 <p>In our centipede game, using backward induction, player 2 at the final node will “take” for a payoff of 6 instead of passing for a payoff of 5. When marking choices in a sequential game, it is often useful to mark the option taken by the player, or that not taken, in addition to indicating the payoff they would receive.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -598,86 +601,225 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="img/centipede-game-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/centipede-game-4.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>There is a unique subgame perfect equilibrium: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player 1 and player 2 respectively.</p>
-<p>In the subgame perfect Nash equilibrium, player 1 takes at the first node.</p>
+<p>There is a unique subgame perfect equilibrium for the centipede game: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player 1 and player 2 respectively.</p>
+<p>In the subgame perfect Nash equilibrium of the centipede game, player 1 takes at the first node.</p>
 </section>
 <section id="sequential-game-examples" class="level2" data-number="39.3">
 <h2 data-number="39.3" class="anchored" data-anchor-id="sequential-game-examples"><span class="header-section-number">39.3</span> Sequential game examples</h2>
+<p>In this part, I will discuss some sequential games and their subgame perfect Nash equilibria.</p>
 <section id="the-ultimatum-game" class="level3" data-number="39.3.1">
 <h3 data-number="39.3.1" class="anchored" data-anchor-id="the-ultimatum-game"><span class="header-section-number">39.3.1</span> The ultimatum game</h3>
+<p>The first example is the ultimatum game.</p>
 <p>The ultimatum game involves two players: the proposer and the responder.</p>
 <p>The proposer is given a fixed amount of money <span class="math inline">m</span>. They then offer a portion <span class="math inline">x</span> of the sum <span class="math inline">m</span> to the responder.</p>
-<p>The responder can either accept of reject the offer. They make this decision knowing <span class="math inline">m</span> and <span class="math inline">x</span>.</p>
-<p>If the responder accepts, the responder receives <span class="math inline">x</span> and the proposer gets <span class="math inline">m-x</span>. If the responder rejects, both players receive nothing.</p>
-<p>Below is the extensive form of the ultimatum game with <span class="math inline">m=\$10</span> and an assumption that the offer must be a whole dollar amount.</p>
+<p>The responder can either accept or reject the offer. They make this decision knowing the fixed amount <span class="math inline">m</span> held by the proposer and the offer <span class="math inline">x</span>.</p>
+<p>If the responder accepts, the responder receives the offer <span class="math inline">x</span> and the proposer gets the remainder <span class="math inline">m-x</span>. If the responder rejects, both players receive nothing.</p>
+<div class="cell" data-fig-width="5">
+<div class="cell-output-display">
+<div id="fig-ultimatum-game" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Figure&nbsp;39.1: The ultimatum game</figcaption><p></p>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">graph LR
+    A(Proposer) ---B[Offer x] --&gt; C(Responder)
+    A(Proposer) ---D[Offer 0] --&gt; E(Responder)
+    C ---F[Accept] --&gt; H["(m-x, &lt;b&gt;x&lt;/b&gt;)"]
+    C ---G[Reject] --&gt; I["(0, 0)"]
+    E ---J[Accept] --&gt; L["(10, &lt;b&gt;0&lt;/b&gt;)"]
+    E ---K[Reject] --&gt; M["(0, &lt;b&gt;0&lt;/b&gt;)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,E node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,F,G,J,K edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class H,I,L,M payoff;
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Below is the extensive form of the ultimatum game with <span class="math inline">m=\$10</span> and an assumption that the offer must be a whole dollar amount. At the first node is the proposer. They can choose to offer any dollar sum between $0 and $10. Whatever the choice, the responder is at the next node. They can choose to accept or reject the offer. The payoffs of each set of actions is indicated in the brackets at the bottom of the game tree, with the first number being the proposer’s payoff and the second number being the responder’s payoff.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/ultimatum-game-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is there the offer is <span class="math inline">0</span>.</p>
-<p>Given this, the proposer will offer <span class="math inline">\$1</span> only.</p>
+<p>If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is where the offer is <span class="math inline">0</span>, but they still might.</p>
+<p>Given this, the proposer will offer <span class="math inline">\$0</span> or <span class="math inline">\$1</span> only.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/ultimatum-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/ultimatum-game-2.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/ultimatum-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/ultimatum-game-2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If the players have monotonic preferences and the offer strategy set is discrete:</p>
-<ul>
-<li><p>The responder accepts any <span class="math inline">x&gt;0</span>.</p></li>
-<li><p>The proposer offers <span class="math inline">x=\epsilon</span>, where <span class="math inline">\epsilon</span> is the smallest non-zero amount the proposer can offer.</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/ultimatum-game-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/ultimatum-game-3.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<p>The other (weak) subgame perfect Nash equilibrium is an offer of $0 and acceptance.</p>
-<p>Where the strategy space is continuous (i.e <span class="math inline">\epsilon</span> could always be made smaller) the only subgame perfect Nash equilibrium is for the proposer to offer $0 and the receiver to accept.</p>
+<p>We can say that there are two subgame perfect Nash equilibria. The first is for the proposer to offer <span class="math inline">\$1</span> and the responder to accept if offered $1 and reject if offered $0. The other (weak) subgame perfect Nash equilibrium is an offer of $0 and acceptance.</p>
+<p>More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If the players have monotonic preferences - that is, more is better - the responder accepts any <span class="math inline">x&gt;0</span> (and possibly even if <span class="math inline">x=0</span>) and the the proposer offers the smallest amount the proposer can offer.</p>
+<p>Where the strategy space is continuous (that is the offer could always be made smaller) the only subgame perfect Nash equilibrium is for the proposer to offer $0 and the receiver to accept.</p>
 </section>
 <section id="the-dictator-game" class="level3" data-number="39.3.2">
 <h3 data-number="39.3.2" class="anchored" data-anchor-id="the-dictator-game"><span class="header-section-number">39.3.2</span> The dictator game</h3>
-<p>In the dictator game, the dictator is given a fixed amount of money 𝑚. They then offer a portion 𝑥 of the sum 𝑚 to the receiver. The game then ends.</p>
+<p>The next example is the dictator game.</p>
+<p>In the dictator game, the dictator is given a fixed amount of money <span class="math inline">m</span>. They then offer a portion <span class="math inline">x</span> of the sum <span class="math inline">m</span> to the receiver. The game then ends.</p>
 <p>Exchange is unilateral. Receivers have an empty strategy set.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="cell" data-fig-width="4">
+<div class="cell-output-display">
+<div id="fig-dictator-game" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="img/dictator-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/dictator-game-1.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;39.2: The dictator game</figcaption><p></p>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">graph LR
+    classDef default fill:#FFF
+    A(Dictator) ---B[Send x] --&gt; D["(m-x, x)"]
+    A ---C[Send 0] --&gt; E["(m,0)"]
+    style A stroke:#000
+    style B stroke:#FFF
+    style C stroke:#FFF
+    style D stroke:#FFF
+    style E stroke:#FFF
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
 </figure>
 </div>
-<p>The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves.</p>
-<div class="quarto-figure quarto-figure-center">
+</div>
+</div>
+<p>The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff <span class="math inline">m</span> (which is bolded).</p>
+<div class="cell" data-fig-width="4">
+<div class="cell-output-display">
+<div id="fig-dictator-game-solved" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="img/dictator-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/dictator-game-2.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;39.3: The dictator game solved</figcaption><p></p>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-3">graph LR
+    classDef default fill:#FFF
+    A(Dictator) ---B[Send x] --&gt; D["(m-x, x)"]
+    A ---C((Send 0)) --&gt; E["(&lt;b&gt;m&lt;/b&gt;,0)"]
+    style A stroke:#000
+    style B stroke:#FFF
+    style C stroke:#F00, stroke-width:4px
+    style D stroke:#FFF
+    style E stroke:#FFF
+
+</pre>
+<div id="mermaid-tooltip-3" class="mermaidTooltip">
+
+</div>
+<p></p>
 </figure>
+</div>
+</div>
 </div>
 </section>
 <section id="the-trust-game" class="level3" data-number="39.3.3">
 <h3 data-number="39.3.3" class="anchored" data-anchor-id="the-trust-game"><span class="header-section-number">39.3.3</span> The trust game</h3>
+<p>The final example is the trust game.</p>
 <p>The trust game involves two players: a sender and a receiver</p>
 <p>Both the sender and receiver are given an initial sum <span class="math inline">m</span>.</p>
-<p>The sender sends a share <span class="math inline">x</span> of their <span class="math inline">m</span> to the receiver (the investment).</p>
+<p>The sender sends a share <span class="math inline">x</span> of their <span class="math inline">m</span> to the receiver. This amount <span class="math inline">x</span> is often called the investment.</p>
 <p>Before the investment is received by the receiver, it is multiplied by some factor <span class="math inline">k</span>.</p>
-<p>The receiver receives <span class="math inline">kx</span>.</p>
+<p>Therefore, the receiver receives <span class="math inline">kx</span>.</p>
 <p>The receiver then returns to the sender some share <span class="math inline">y</span> of their total allocation <span class="math inline">m+kx</span>.</p>
-<p>The final outcome is (<span class="math inline">m-x+y</span>, <span class="math inline">m+kx-y</span>).</p>
-<p>Here is a numerical example.</p>
-<p>Suppose the sender and receiver are given an initial sum of $10.</p>
-<p>The sender decides to send $5 of their $10 to the receiver (the investment).</p>
-<p>This is multiplied by a factor of 3. Therefore, the receiver receives $15 and now has $25.</p>
-<p>The receiver then returns to the sender $7.50 of their $25.</p>
-<p>The final outcome is ($10−5+7.50, $10+15−7.50)=($12.50, $17.50).</p>
+<p>The final outcome is the sender has <span class="math inline">m-x+y</span> and the receiver has <span class="math inline">m+kx-y</span>. We can represent these payoffs as:</p>
+<p><span class="math display">
+(m-x+y, m+kx-y)
+</span></p>
 <p>The extensive form of the game is as follows.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-trust-game" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="img/trust-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="img/trust-game-1.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;39.4: The trust game</figcaption><p></p>
+<p>
+</p><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sequential-games_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="sequential-games_files/figure-html/mermaid-figure-1.png" style="width:5in;height:1.54in" class="figure-img"></a></p>
 </figure>
 </div>
-<p>If both receivers have utility function <span class="math inline">u(x)=x</span> the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.</p>
-<p>One way to think about this problem is that the receiver is effectively playing a dictator game.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/trust-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="img/trust-game-2.jpg" class="img-fluid figure-img"></a></p>
+<p></p>
 </figure>
+</div>
+</div>
+</div>
+<p>Here is a numerical example.</p>
+<p>Suppose the sender and receiver are given an initial sum of $10.</p>
+<p>The sender decides to send $5 of their $10 to the receiver.</p>
+<p>This is multiplied by a factor of 3. Therefore, the receiver receives $15 and now has $25.</p>
+<p>The receiver then returns to the sender $7.50 of their $25.</p>
+<p>The final outcome is <span class="math inline">(10−5+7.50, 10+15−7.50)=(12.50, 17.50)</span>.</p>
+<div class="cell" data-fig-width="5">
+<div class="cell-output-display">
+<div id="fig-trust-game" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Figure&nbsp;39.5: The trust game</figcaption><p></p>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-4">graph LR
+    classDef default fill:#FFF
+    A(Sender) ---B[Send 5] --&gt; C{5 x 3 = 15} --&gt; D(Receiver)
+    D ---G[Return 7.50] --&gt; H["(12.50, 17.50)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,D node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,G edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class H payoff;
+
+</pre>
+<div id="mermaid-tooltip-4" class="mermaidTooltip">
+
+</div>
+<p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>If both receivers have utility function <span class="math inline">u(x)=x</span> the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.</p>
+<p>We can see this by backward induction. The receiver can either return <span class="math inline">y</span> for a payoff of <span class="math inline">10+3x-y</span> or return <span class="math inline">0</span> for a payoff of <span class="math inline">10+3x</span>. The receiver will return <span class="math inline">0</span>.</p>
+<p>One way to think about this problem is that the receiver is effectively playing a dictator game.</p>
+<p>Working backwards, the sender therefore has a choice between sending <span class="math inline">x</span> for a payoff of <span class="math inline">10-x</span> or sending <span class="math inline">0</span> for a payoff of <span class="math inline">10</span>. The sender will send <span class="math inline">0</span>.</p>
+<div class="cell" data-fig-width="5">
+<div class="cell-output-display">
+<div id="fig-trust-game" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Figure&nbsp;39.6: The trust game</figcaption><p></p>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-5">graph LR
+    classDef default fill:#FFF
+    A(Sender) ---B[Send x] --&gt; C{Multplied by k} --&gt; D(Receiver)
+    A ---E((Send 0)) --&gt; F["(10,10)"]
+    D ---G[Return y] --&gt; H["(10-x+y, 10+3x-y)"]
+    D ---I((Return 0)) --&gt; J["(10-x, 10+3x)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,D node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,G edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class F,H,J payoff;
+
+    classDef action stroke:#F00, stroke-width:4px;
+    class E,I action;
+
+</pre>
+<div id="mermaid-tooltip-5" class="mermaidTooltip">
+
+</div>
+<p></p>
+</figure>
+</div>
+</div>
 </div>
 <p>Relative to the Pareto optimal outcome whereby the sender’s full endowment is tripled and they receive a positive return on their investment, both players are worse off under the equilibrium outcome.</p>
 
@@ -863,7 +1005,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
