@@ -1,6 +1,6 @@
 # Asymmetric information
 
-To date we have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.
+To date, we have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.
 
 I will now explore two examples where we relax this assumption and allow the parties to have different information. However, we will retain the assumption of rational behaviour.
 
@@ -70,7 +70,7 @@ Generalising:
 
 3.  Prices decline.
 
-4.  Sellers lower quality further to make profits at the lower prices. Sellers cannot sell high quality cars at high prices even though buyers would be willing to pay the high prices for the high quality cars.
+4.  Sellers lower quality further to make profits at the lower prices. Sellers cannot sell high-quality cars at high prices even though buyers would be willing to pay high prices for high-quality cars.
 
 5.  Quality declines until nothing but lemons are left.
 

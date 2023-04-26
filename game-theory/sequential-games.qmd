@@ -80,6 +80,7 @@ If the responder accepts, the responder receives the offer $x$ and the proposer 
 %%| fig-width: 5
 %%| label: fig-ultimatum-game
 %%| fig-cap: The ultimatum game
+%%| mermaid-format: png
 
 graph LR
     A(Proposer) ---B[Offer x] --> C(Responder)
@@ -223,6 +224,7 @@ The final outcome is $(10−5+7.50,  10+15−7.50)=(12.50, 17.50)$.
 %%| fig-width: 5
 %%| label: fig-trust-game
 %%| fig-cap: The trust game
+%%| mermaid-format: png
 
 graph LR
     classDef default fill:#FFF
@@ -252,6 +254,7 @@ Working backwards, the sender therefore has a choice between sending $x$ for a p
 %%| fig-width: 5
 %%| label: fig-trust-game
 %%| fig-cap: The trust game
+%%| mermaid-format: png
 
 graph LR
     classDef default fill:#FFF

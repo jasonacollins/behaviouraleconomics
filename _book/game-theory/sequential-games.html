@@ -614,31 +614,16 @@ ul.task-list li input[type="checkbox"] {
 <p>The proposer is given a fixed amount of money <span class="math inline">m</span>. They then offer a portion <span class="math inline">x</span> of the sum <span class="math inline">m</span> to the responder.</p>
 <p>The responder can either accept or reject the offer. They make this decision knowing the fixed amount <span class="math inline">m</span> held by the proposer and the offer <span class="math inline">x</span>.</p>
 <p>If the responder accepts, the responder receives the offer <span class="math inline">x</span> and the proposer gets the remainder <span class="math inline">m-x</span>. If the responder rejects, both players receive nothing.</p>
-<div class="cell" data-fig-width="5">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-ultimatum-game" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;39.1: The ultimatum game</figcaption><p></p>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">graph LR
-    A(Proposer) ---B[Offer x] --&gt; C(Responder)
-    A(Proposer) ---D[Offer 0] --&gt; E(Responder)
-    C ---F[Accept] --&gt; H["(m-x, &lt;b&gt;x&lt;/b&gt;)"]
-    C ---G[Reject] --&gt; I["(0, 0)"]
-    E ---J[Accept] --&gt; L["(10, &lt;b&gt;0&lt;/b&gt;)"]
-    E ---K[Reject] --&gt; M["(0, &lt;b&gt;0&lt;/b&gt;)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,G,J,K edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class H,I,L,M payoff;
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
+</p><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sequential-games_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="sequential-games_files/figure-html/mermaid-figure-1.png" style="width:5in;height:2.63in" class="figure-img"></a></p>
+</figure>
 </div>
 <p></p>
 </figure>
@@ -648,14 +633,14 @@ ul.task-list li input[type="checkbox"] {
 <p>Below is the extensive form of the ultimatum game with <span class="math inline">m=\$10</span> and an assumption that the offer must be a whole dollar amount. At the first node is the proposer. They can choose to offer any dollar sum between $0 and $10. Whatever the choice, the responder is at the next node. They can choose to accept or reject the offer. The payoffs of each set of actions is indicated in the brackets at the bottom of the game tree, with the first number being the proposer’s payoff and the second number being the responder’s payoff.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/ultimatum-game-1.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/ultimatum-game-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is where the offer is <span class="math inline">0</span>, but they still might.</p>
 <p>Given this, the proposer will offer <span class="math inline">\$0</span> or <span class="math inline">\$1</span> only.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/ultimatum-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/ultimatum-game-2.png" class="img-fluid figure-img"></a></p>
+<p><a href="img/ultimatum-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/ultimatum-game-2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>We can say that there are two subgame perfect Nash equilibria. The first is for the proposer to offer <span class="math inline">\$1</span> and the responder to accept if offered $1 and reject if offered $0. The other (weak) subgame perfect Nash equilibrium is an offer of $0 and acceptance.</p>
@@ -673,7 +658,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;39.2: The dictator game</figcaption><p></p>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">graph LR
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">graph LR
     classDef default fill:#FFF
     A(Dictator) ---B[Send x] --&gt; D["(m-x, x)"]
     A ---C[Send 0] --&gt; E["(m,0)"]
@@ -683,7 +668,7 @@ ul.task-list li input[type="checkbox"] {
     style D stroke:#FFF
     style E stroke:#FFF
 </pre>
-<div id="mermaid-tooltip-2" class="mermaidTooltip">
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
 
 </div>
 <p></p>
@@ -698,7 +683,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;39.3: The dictator game solved</figcaption><p></p>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-3">graph LR
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">graph LR
     classDef default fill:#FFF
     A(Dictator) ---B[Send x] --&gt; D["(m-x, x)"]
     A ---C((Send 0)) --&gt; E["(&lt;b&gt;m&lt;/b&gt;,0)"]
@@ -709,7 +694,7 @@ ul.task-list li input[type="checkbox"] {
     style E stroke:#FFF
 
 </pre>
-<div id="mermaid-tooltip-3" class="mermaidTooltip">
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
 
 </div>
 <p></p>
@@ -740,7 +725,7 @@ ul.task-list li input[type="checkbox"] {
 <p>
 </p><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="sequential-games_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="sequential-games_files/figure-html/mermaid-figure-1.png" style="width:5in;height:1.54in" class="figure-img"></a></p>
+<p><a href="sequential-games_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="sequential-games_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.54in" class="figure-img"></a></p>
 </figure>
 </div>
 <p></p>
@@ -754,29 +739,16 @@ ul.task-list li input[type="checkbox"] {
 <p>This is multiplied by a factor of 3. Therefore, the receiver receives $15 and now has $25.</p>
 <p>The receiver then returns to the sender $7.50 of their $25.</p>
 <p>The final outcome is <span class="math inline">(10−5+7.50, 10+15−7.50)=(12.50, 17.50)</span>.</p>
-<div class="cell" data-fig-width="5">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-trust-game" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;39.5: The trust game</figcaption><p></p>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-4">graph LR
-    classDef default fill:#FFF
-    A(Sender) ---B[Send 5] --&gt; C{5 x 3 = 15} --&gt; D(Receiver)
-    D ---G[Return 7.50] --&gt; H["(12.50, 17.50)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,G edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class H payoff;
-
-</pre>
-<div id="mermaid-tooltip-4" class="mermaidTooltip">
-
+</p><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sequential-games_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="sequential-games_files/figure-html/mermaid-figure-3.png" style="width:5in;height:0.8in" class="figure-img"></a></p>
+</figure>
 </div>
 <p></p>
 </figure>
@@ -787,34 +759,16 @@ ul.task-list li input[type="checkbox"] {
 <p>We can see this by backward induction. The receiver can either return <span class="math inline">y</span> for a payoff of <span class="math inline">10+3x-y</span> or return <span class="math inline">0</span> for a payoff of <span class="math inline">10+3x</span>. The receiver will return <span class="math inline">0</span>.</p>
 <p>One way to think about this problem is that the receiver is effectively playing a dictator game.</p>
 <p>Working backwards, the sender therefore has a choice between sending <span class="math inline">x</span> for a payoff of <span class="math inline">10-x</span> or sending <span class="math inline">0</span> for a payoff of <span class="math inline">10</span>. The sender will send <span class="math inline">0</span>.</p>
-<div class="cell" data-fig-width="5">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-trust-game" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Figure&nbsp;39.6: The trust game</figcaption><p></p>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-5">graph LR
-    classDef default fill:#FFF
-    A(Sender) ---B[Send x] --&gt; C{Multplied by k} --&gt; D(Receiver)
-    A ---E((Send 0)) --&gt; F["(10,10)"]
-    D ---G[Return y] --&gt; H["(10-x+y, 10+3x-y)"]
-    D ---I((Return 0)) --&gt; J["(10-x, 10+3x)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,G edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class F,H,J payoff;
-
-    classDef action stroke:#F00, stroke-width:4px;
-    class E,I action;
-
-</pre>
-<div id="mermaid-tooltip-5" class="mermaidTooltip">
-
+</p><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sequential-games_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="sequential-games_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.56in" class="figure-img"></a></p>
+</figure>
 </div>
 <p></p>
 </figure>
@@ -1005,7 +959,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox"});</script>
 
 
 
