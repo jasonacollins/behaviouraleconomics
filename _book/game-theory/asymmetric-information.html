@@ -99,10 +99,10 @@ div.csl-indent {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 40&nbsp; Asymmetric information">
-<meta property="og:description" content="To date, we have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.">
+<meta property="og:description" content="To date in this section on game theory, I have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 40&nbsp; Asymmetric information">
-<meta name="twitter:description" content="To date, we have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.">
+<meta name="twitter:description" content="To date in this section on game theory, I have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -551,7 +551,7 @@ div.csl-indent {
 
 </header>
 
-<p>To date, we have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.</p>
+<p>To date in this section on game theory, I have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.</p>
 <p>I will now explore two examples where we relax this assumption and allow the parties to have different information. However, we will retain the assumption of rational behaviour.</p>
 <section id="the-market-for-lemons" class="level2" data-number="40.1">
 <h2 data-number="40.1" class="anchored" data-anchor-id="the-market-for-lemons"><span class="header-section-number">40.1</span> The market for lemons</h2>
@@ -560,25 +560,25 @@ div.csl-indent {
 <p>Suppose there are two types of cars: good cars and lemons. A car is good with probability <span class="math inline">q</span> and a lemon with probability <span class="math inline">1−q</span>.</p>
 <p>The seller knows the type. To the seller, good cars are worth $10,000 and lemons $5,000.</p>
 <p>To potential buyers, good cars are worth $15,000 and lemons $7,500.</p>
-<p>Before the purchase, the buyer knows the types of cars in the market and the frequency of each. After the purchase, the buyer discovers the true type.</p>
-<p>Selling is the efficient solution as both car types worth more to buyers than sellers. But what happens?</p>
-<p>How much is a buyer willing to pay will depend on the proportion of good cars and lemons offered for sale.</p>
-<p>Let 𝜇 be the probability that a car that is sold is good. If sellers are willing to sell their good cars, <span class="math inline">\mu=q</span>. If not, <span class="math inline">\mu=0</span>.</p>
-<p>The expected value of a car to a buyer is:</p>
-<p><span class="math inline">E=\mu 15000+(1−\mu)7500=7500+\mu 7500</span></p>
-<p>Hence, the buyer will be willing to pay up to <span class="math inline">p=7500+\mu 7500</span>.</p>
-<p>Sellers will sell a lemon if 𝑝≥5000 and a good car if <span class="math inline">p\leq 10000</span>.</p>
-<p>They will be able to sell the lemon if:</p>
+<p>Before the purchase, the buyer knows the types of cars in the market and the frequency of each. They only discover the type of car, however, after the purchase.</p>
+<p>Given both car types are worth more to buyers than sellers, there should exist advantageous trades for both parties for both types of car. Selling is an efficient solution.</p>
+<p>But what happens?</p>
+<p>Let <span class="math inline">\mu</span> be the probability that a car that is sold is good. If sellers are willing to sell their good cars, <span class="math inline">\mu=q</span>. If not, <span class="math inline">\mu=0</span>.</p>
+<p>Therefore, the expected value of a car to a buyer is:</p>
+<p><span class="math inline">E=\mu 15000+(1−\mu)7500=7500+7500\mu</span></p>
+<p>Hence, the buyer will be willing to pay up to <span class="math inline">p=7500+7500\mu</span>.</p>
+<p>Given the value of each type of cars to sellers, they will sell a lemon if <span class="math inline">p\geq 5000</span> and a good car if <span class="math inline">p\leq 10000</span>.</p>
+<p>Combining the conditions for the buyer and seller, a lemon will be sold if the price lies between the minimum required by the seller for the lemon and the maximum the buyer is willing to pay for the lemon. That is:</p>
 <p><span class="math display">
-5000\leq p\leq 7500+\mu7500
+5000\leq p\leq 7500+7500\mu
 </span></p>
-<p>This always holds, so the seller will always be willing and able to sell the lemon.</p>
+<p>This relationship holds regardless of the value of <span class="math inline">\mu</span>, so the seller will always be willing and able to sell the lemon.</p>
 <p>They will be able to sell the good car if:</p>
 <p><span class="math display">
 10000\leq p\leq 7500+\mu7500
 </span></p>
-<p>This can only hold if <span class="math inline">\mu≥1/3</span>.</p>
-<p>Assuming risk neutral buyers, there are two equilibria.</p>
+<p>This relation can only hold if <span class="math inline">\mu\geq 1/3</span>.</p>
+<p>Assuming risk neutral buyers, we are left with two possible equilibria.</p>
 <p>If <span class="math inline">q\geq 1/3</span>, sellers sell both types of cars:</p>
 <p><span class="math display">
 \mu=q\leq 1/3→10000\leq p^∗\leq 7500+\mu7500
@@ -587,81 +587,74 @@ div.csl-indent {
 <p><span class="math display">
 \mu=0→5000\leq p^∗\leq 7500
 </span></p>
-<p>Generalising:</p>
+<p>Generalising what is happening here:</p>
 <ol type="1">
-<li><p>When buyers cannot observe product quality, given <span class="math inline">p</span>, sellers have an incentive to lower product quality. That is, sellers try to pass off lemons.</p></li>
+<li><p>When buyers cannot observe product quality, given <span class="math inline">p</span>, sellers have an incentive to pass off lemons.</p></li>
 <li><p>Rational buyers expect this seller behaviour and they lower their willingness to pay.</p></li>
-<li><p>Prices decline.</p></li>
+<li><p>Prices then decline.</p></li>
 <li><p>Sellers lower quality further to make profits at the lower prices. Sellers cannot sell high-quality cars at high prices even though buyers would be willing to pay high prices for high-quality cars.</p></li>
 <li><p>Quality declines until nothing but lemons are left.</p></li>
 </ol>
-<p>Information asymmetry is sufficient to result in a market failure even if agents are rational.</p>
+<p>Information asymmetry is sufficient to result in a market failure even if the agents are rational.</p>
 </section>
 <section id="the-winners-curse" class="level2" data-number="40.2">
 <h2 data-number="40.2" class="anchored" data-anchor-id="the-winners-curse"><span class="header-section-number">40.2</span> The winner’s curse</h2>
+<p>The second example involves a phenomenon called the winner’s curse.</p>
+<p>The winner’s curse occurs in the context of common-value auctions.</p>
 <p>A common-value auction is an auction in which the item for sale has the same value to all the bidders.</p>
-<p>Examples include:</p>
-<ul>
-<li><p>Stocks, which all have one value, whatever traders’ expectations</p></li>
-<li><p>Oil, where the amount of oil in a tract is the same for all oil companies.</p></li>
-</ul>
-<p>This contrasts with a private-value auction in which bidders have different valuations for the item for sale. This typically occurs where the item’s valuation reflects bidder tastes, such as art.</p>
+<p>Examples include stocks, which all have one value, and oil, where the amount of oil in a tract is the same for all oil companies.</p>
+<p>Common-value auctions contrast with private-value auctions in which bidders have different valuations for the item for sale. This typically occurs where the item’s valuation reflects bidder tastes, such as art.</p>
 <p>The winner’s curse is a phenomenon in common value auctions whereby the winner tends to experience a loss.</p>
-<p>The term was invented by petroleum engineers in discussing why oil companies in the Gulf of Mexico had mediocre results in the 1950−1970s.</p>
-<p>Oil companies in the Gulf of Mexico acquired drilling rights through auctions.</p>
-<p>Their rights yielded losses or less in profits than expected. In hindsight, the winning bids were unreasonably high.</p>
+<p>The term was invented by petroleum engineers in discussing why oil companies in the Gulf of Mexico had poor results in the 1950s through 1970s. Oil companies in the Gulf acquired drilling rights through auctions. Their rights tended to lead to losses or less in profits than expected. In hindsight, the winning bids were unreasonably high.</p>
 <p>The winner’s curse is widely documented in experimental settings and has been observed in corporate environments.</p>
 <section id="winners-curse-example" class="level3" data-number="40.2.1">
 <h3 data-number="40.2.1" class="anchored" data-anchor-id="winners-curse-example"><span class="header-section-number">40.2.1</span> Winner’s curse example</h3>
-<p>Company 1 and company 2 hire a geologist to estimate the value of an oil field. The (truthful) geologist of company <span class="math inline">i</span> privately reports their estimated valuation <span class="math inline">v_i</span> to company <span class="math inline">i</span>. Company 1 learns <span class="math inline">v_1</span> and company 2 learns <span class="math inline">v_2</span>.</p>
-<p><span class="math inline">v_1</span> and <span class="math inline">v_2</span> are uniformly distributed between $0 and $100 and independent. Assume the true value of the oil field is the mean of <span class="math inline">v_1</span> and <span class="math inline">v_2</span>: <span class="math inline">\frac{v_1+v_2}{2}</span></p>
-<p>The two companies simultaneously bid for the field. The highest bid wins and pays their bid (first-price auction).</p>
+<p>I will now walk through a numerical example of the winner’s curse.</p>
+<p>Company 1 and company 2 hire a geologist to estimate the value of an oil field. The honest geologist of each company privately reports their estimated valuation to the company. Company 1 learns <span class="math inline">v_1</span> and company 2 learns <span class="math inline">v_2</span>.</p>
+<p><span class="math inline">v_1</span> and <span class="math inline">v_2</span> are uniformly distributed between $0 and $100 and independent.</p>
+<p>Assume the true value of the oil field is the mean of <span class="math inline">v_1</span> and <span class="math inline">v_2</span>:</p>
+<p><span class="math display">
+V=\frac{v_1+v_2}{2}
+</span></p>
+<p>The two companies simultaneously bid for the field in a first-price auction. The highest bid wins and pays their bid.</p>
 <p>What should a company bid in this auction?</p>
 <p>Suppose both companies bid the private valuation they receive. Company 1 receives <span class="math inline">v_1=50</span>, bids $50 and wins.</p>
-<ul>
-<li><p>If they win, <span class="math inline">v_1=\$50&gt;v_2</span>.</p></li>
-<li><p>On average, in this state of the world company 2’s signal is $25 (due to uniform distribution). The average value of the tract is <span class="math inline">(50+25)/2=\$37.50</span>.</p></li>
-<li><p>Company 1 loses $50 − $37.50 = $12.50 on average.</p></li>
-</ul>
-<p>What if <span class="math inline">v_1=50</span> and company 1 bids $37.50 instead, company 2 continues to bid <span class="math inline">v_2</span> and company 1 wins?</p>
-<ul>
-<li><p>If company 1 wins, <span class="math inline">\$37.50&gt;v_2</span>.</p></li>
-<li><p>On average, in this state of the world company 2’s signal is $18.75 (due to uniform distribution). The average value of the tract is <span class="math inline">(50 + 18.75)/2=\$34.37</span>.</p></li>
-<li><p>Company 1’s loses $37.50− $34.37=$3.13 on average.</p></li>
-</ul>
-<p>What if <span class="math inline">v_1=50</span> and company 1 bids $25 instead, company 2 continues to bid <span class="math inline">v_2</span> and company 1 wins?</p>
-<ul>
-<li><p>If company 1 wins, <span class="math inline">25&gt;v_2</span>.</p></li>
-<li><p>On average, in this state of the world company 2’s signal is $12.50 (due to uniform distribution), so the average value of the tract is <span class="math inline">(50 +12.50)/2=\$31.25</span>.</p></li>
-<li><p>Company 1’s profit is $31.25 − $25 = $6.25 on average. However, they will win only 25% of the time.</p></li>
-</ul>
-<p>What if company 1 bids <span class="math inline">\delta v_1</span>, company 2 continues to bid <span class="math inline">v_2</span> and company 1 wins?</p>
-<ul>
-<li><p>If they win, <span class="math inline">\delta v_1&gt;v_2</span>.</p></li>
-<li><p>On average, in this state of the world company 2’s signal is <span class="math inline">0.5\delta v_1</span> (due to uniform distribution). The average value of the tract is therefore <span class="math inline">(v_1+0.5\delta v_1 )∕2=(0.5+0.25\delta)v_1</span>.</p></li>
-<li><p>Company 1’s net profit on average is <span class="math inline">\pi=(0.5+0.25\delta)v_1−\delta v_1=(0.5−0.75\delta)v_1</span>. They make a profit where <span class="math inline">0.5−0.75\delta&gt;0</span>, i.e.&nbsp;where <span class="math inline">\delta&lt;2/3</span>.</p></li>
-<li><p>The lower <span class="math inline">\delta</span> the higher their profit, but that is conditional on company 1 having the winning bid, which decreases in probability as they decrease <span class="math inline">\delta</span>.</p></li>
-</ul>
-<p>This analysis has a complication in that it does not account for the fact that company 2 is also a strategic player. We assumed company bids <span class="math inline">v_2</span>, but as for company 1, this would strategy lead to an expected loss for company 2.</p>
-<p>For example, what if company 1 bids <span class="math inline">x=\delta v_1=2/3v_1</span>, company 2 bids <span class="math inline">v_2</span> and company 2 wins?</p>
-<ul>
-<li><p>If they win, <span class="math inline">x=\delta v_1&lt;v_2</span>.</p></li>
-<li><p>On average, in this state of the world company 1’s bid is <span class="math inline">0.5v_2</span> (due to uniform distribution) and company 1’s signal <span class="math inline">\frac{0.5v_2}{2/3}=3/4v_2</span>. The average value of the tract is therefore <span class="math inline">(\frac{3}{4}v_2+v_2 )/2=0.875v_2</span>.</p></li>
-<li><p>Company 2’s net profit on average is <span class="math inline">\pi=0.875v_2−v_2=−0.125v_2</span>.</p></li>
-</ul>
-<p>What does each firm do at equilibrium?</p>
-<p>As each firm will have the same strategy at equilibrium, we can solve for company 1 assuming company 2 does the same strategy in response. At equilibrium we can also assume that each company will have an expected profit of zero as each company would otherwise have an incentive to change their bid to gain a share of that profit.</p>
-<p>Company 1 will win if <span class="math inline">\delta v_1&gt;\delta v_2</span>; i.e.&nbsp;if <span class="math inline">v_1&gt;v_2</span>. On average, in this state of the world company 2’s signal is <span class="math inline">0.5v_1</span> (due to uniform distribution), so that the average value of the tract is <span class="math inline">(v_1+0.5v_1)/2=0.75v_1</span>.</p>
+<p>If they win, <span class="math inline">v_1=\$50&gt;v_2</span>.</p>
+<p>On average, in this state of the world company 2’s signal is $25 (due to the uniform distribution). The average value of the tract is therefore:</p>
+<p><span class="math display">
+\bar V=(50+25)/2=\$37.50
+</span></p>
+<p>The result is that company 1 has, on average, profit of <span class="math inline">\$37.50 - \$50 − = \$12.50</span>. That is, a loss of $12.50.</p>
+<p>Company 1 now decides to change strategy and bid less than the valuation they receive. What if <span class="math inline">v_1=50</span> and company 1 bids $37.50 instead. We will assume that company 2 continues to bid <span class="math inline">v_2</span> and company 1 wins.</p>
+<p>If company 1 wins, <span class="math inline">\$37.50&gt;v_2</span>.</p>
+<p>On average, in this state of the world, company 2’s signal is $18.75 (due to the uniform distribution). The average value of the tract is therefore:</p>
+<p><span class="math display">
+(50 + 18.75)/2=\$34.37
+</span></p>
+<p>Company 1’s profit is, on average, <span class="math inline">\$34.37-\$37.50=-\$3.13</span>.</p>
+<p>Company 1 now decides to bid only half the valuation. What if <span class="math inline">v_1=\$50</span> and company 1 bids $25. We again assume company 2 bids <span class="math inline">v_2</span> and company 1 wins.</p>
+<p>If company 1 wins, <span class="math inline">25&gt;v_2</span>.</p>
+<p>On average, in this state of the world company 2’s signal is $12.50 (due to the uniform distribution), so the average value of the tract is <span class="math inline">(50 +12.50)/2=\$31.25</span>.</p>
+<p>Company 1’s profit is <span class="math inline">\$31.25 − \$25 = \$6.25</span> on average. However, they will win only 25% of the time.</p>
+<p>Let’s now work out the profit-maximising bid in cases where company 1 wins and company 2 continues to bid <span class="math inline">v_2</span>.</p>
+<p>Suppose company 1 bids <span class="math inline">\delta v_1</span>, company 2 continues to bid <span class="math inline">v_2</span> and company 1 wins?</p>
+<p>If company 1 wins, <span class="math inline">\delta v_1&gt;v_2</span>.</p>
+<p>On average, in this state of the world, company 2’s signal is <span class="math inline">0.5\delta v_1</span> (due to the uniform distribution). The average value of the tract is therefore <span class="math inline">(v_1+0.5\delta v_1 )∕2=(0.5+0.25\delta)v_1</span>.</p>
+<p>Company 1’s net profit on average is <span class="math inline">\pi=(0.5+0.25\delta)v_1−\delta v_1=(0.5−0.75\delta)v_1</span>. They make a profit where <span class="math inline">0.5−0.75\delta&gt;0</span>, that is where <span class="math inline">\delta&lt;2/3</span>.</p>
+<p>The lower <span class="math inline">\delta</span> the higher their profit, but that is conditional on company 1 having the winning bid, which decreases in probability as they decrease <span class="math inline">\delta</span>.</p>
+<p>This analysis has a complication in that it does not account for the fact that company 2 is also a strategic player. We assumed company 2 bids <span class="math inline">v_2</span>, but as for company 1, this strategy would lead to an expected loss for company 2.</p>
+<p>So what does each firm do at equilibrium?</p>
+<p>As each firm will have the same strategy at equilibrium, we can solve for company 1 assuming company 2 does the same strategy in response. At equilibrium, we can also assume that each company will have an expected profit of zero as each company would otherwise have an incentive to change their bid to gain a share of that profit.</p>
+<p>Company 1 will win if <span class="math inline">\delta v_1&gt;\delta v_2</span>; in other words, if <span class="math inline">v_1&gt;v_2</span>. On average, in this state of the world company 2’s signal is <span class="math inline">0.5v_1</span> (due to the uniform distribution), so that the average value of the tract is <span class="math inline">(v_1+0.5v_1)/2=0.75v_1</span>.</p>
 <p>Company 1’s profit is:</p>
 <p><span class="math display">
-\pi_1=(v_1+v_2)/2−\delta𝑣_1=(0.75−\delta)v_1
+\pi_1=0.75v_1-\delta v_1=(0.75-\delta)v_1
 </span></p>
 <p>Profit is zero when <span class="math inline">\delta=0.75</span>. The Nash equilibrium is that both parties bid 75% of their private valuation.</p>
-<p>In summary, bidding based purely on your own valuation fails to take into account that you only win if player 2’s signal is low.</p>
+<p>In summary, bidding based purely on your own valuation fails to take into account that you only win if the other player’s signal is low.</p>
 <p>Alternatively, we may say that winning the auction is bad news regarding the value of the field. This is the winner’s curse.</p>
 <p>Because of the winner’s curse, the Nash equilibrium is to bid more conservatively.</p>
-<p>The mistake oil companies is to ignore or underestimate the winner’s curse.</p>
-<p>If an oil company wins an auction, it’s likely in part because its geologists have the highest estimates of the field’s value. But if all other geologists have lower estimates of the value, the company’s geologists have probably overestimated it.</p>
+<p>The mistake oil companies is to ignore or underestimate the winner’s curse. If an oil company wins an auction, it’s likely in part because its geologists have the highest estimates of the field’s value. But if all other geologists have lower estimates of the value, the company’s geologists have probably overestimated it.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
