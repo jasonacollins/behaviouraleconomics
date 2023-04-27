@@ -108,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/jasonacollins/behaviouraleconomics"><i class="bi bi-github" role="img" aria-label="Source Code">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -536,6 +536,7 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="img/chicken-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/chicken-2.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
+<p>Now consider a new scenario.</p>
 <p>As they are driving toward each other, Player A rips the steering wheel out of their car and throws it out the window. They will now drive straight no matter what Player B does.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -553,44 +554,43 @@ ul.task-list li input[type="checkbox"] {
 <section id="strategic-moves" class="level2" data-number="41.2">
 <h2 data-number="41.2" class="anchored" data-anchor-id="strategic-moves"><span class="header-section-number">41.2</span> Strategic moves</h2>
 <p>The option to commit to a course of action as in this game of chicken is an example of a strategic move.</p>
-<p>A strategic move changes the game you are playing from a single-stage game to a two-stage game. In the first stage you make your strategic move. In the second you play the original game.</p>
+<p>A strategic move changes the game you are playing from a single-stage game to a two-stage game. In the first stage, you make your strategic move. In the second you play the original game.</p>
 <p>Strategic moves come in two forms:</p>
 <ul>
-<li><p>Unconditional: commitments</p></li>
-<li><p>Conditional: threats and promises</p></li>
+<li><p>Unconditional strategic moves, which we call commitments</p></li>
+<li><p>And conditional strategic moves, which we call threats and promises</p></li>
 </ul>
 </section>
 <section id="unconditional-strategic-moves" class="level2" data-number="41.3">
 <h2 data-number="41.3" class="anchored" data-anchor-id="unconditional-strategic-moves"><span class="header-section-number">41.3</span> Unconditional strategic moves</h2>
 <p>An unconditional strategic move is a commitment. For example, removing your steering wheel in chicken is a commitment.</p>
-<p>The commitment needs to be:</p>
-<ul>
-<li><p>Observable: your opponent should be able to observe your commitment. Otherwise you can claim to have made the commitment when you have not.</p></li>
-<li><p>Irreversible: you cannot undo your commitment. Otherwise, the game remains as if you had never made it.</p></li>
-</ul>
+<p>The commitment needs to be observable and irreversible:</p>
+<p>If your opponent cannot observe your commitment, you can claim to have made the commitment when you have not.</p>
+<p>If your commitment is reversible, the game remains as if you had never made it.</p>
 </section>
 <section id="conditional-strategic-moves" class="level2" data-number="41.4">
 <h2 data-number="41.4" class="anchored" data-anchor-id="conditional-strategic-moves"><span class="header-section-number">41.4</span> Conditional strategic moves</h2>
 <p>A conditional strategic move involves specifying to your opponent how you will respond to each move.</p>
-<ul>
-<li><p>Threats: ”If you don’t clean your room, you won’t get dessert.”</p></li>
-<li><p>Promises: “If you clean you room, you can have dessert.”</p></li>
-</ul>
+<p>A threat involves specifying negative consequences to the other player if they do not play as you wish. ”If you don’t clean your room, you won’t get dessert.”</p>
+<p>A promise involves specifying positive consequences to the other player if they do play as you wish. “If you clean your room, you can have dessert.”</p>
 </section>
 <section id="credibility-of-strategic-moves" class="level2" data-number="41.5">
 <h2 data-number="41.5" class="anchored" data-anchor-id="credibility-of-strategic-moves"><span class="header-section-number">41.5</span> Credibility of strategic moves</h2>
 <p>Commitments, threats and promises only achieve their objective if they are credible. That is, they only work if the other player believes they will be carried out as stated.</p>
-<p>Sticking to a commitment and carrying out a threat or a promise typically reduces the possible actions of the player.</p>
-<p>If the proposer loses too much from carrying out a threat or promise, they will not carry it out.</p>
+<p>Sticking to a commitment and carrying out a threat or a promise typically reduces the possible actions of the player. If the proposer loses too much from carrying out a threat or promise, they will not carry it out.</p>
 <section id="example" class="level3" data-number="41.5.1">
 <h3 data-number="41.5.1" class="anchored" data-anchor-id="example"><span class="header-section-number">41.5.1</span> Example</h3>
+<p>Here is an example.</p>
 <p>You threaten to complain about a poor service by a company. Complaining is costly.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/complain-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/complain-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>There are two sub-game perfect Nash equilibria: (Threatens to complain, Bad service, Does not complain) and (No threat, Bad service). The threat to complain is not credible.</p>
+<p>We work through this problem by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.</p>
+<p>The company therefore has a choice between providing good service for a payoff of 1 or bad service for a payoff of 2. They will provide bad service. The company has the same payoff for bad service regardless of the presence of the threat to complain as the threat is not credible.</p>
+<p>For the customer’s initial choice of whether to threaten to complain, it does not matter either way. Regardless of their threat, they receive bad service.</p>
+<p>The result is two sub-game perfect Nash equilibria: (Threatens to complain, Bad service, Does not complain) and (No threat, Bad service).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/complain-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/complain-2.jpg" class="img-fluid figure-img"></a></p>
@@ -779,7 +779,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
 
 
 
