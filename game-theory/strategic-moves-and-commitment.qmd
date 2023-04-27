@@ -24,7 +24,7 @@ The Nash equilibrium is (Straight, Swerve). Player A wins the game of chicken.
 
 ## Strategic moves
 
-The option to commit to a course of action as in this game of chicken is an example of a strategic move.
+The option to commit to a course of action, as in this game of chicken, is an example of a strategic move.
 
 A strategic move changes the game you are playing from a single-stage game to a two-stage game. In the first stage, you make your strategic move. In the second you play the original game.
 
@@ -62,13 +62,13 @@ Sticking to a commitment and carrying out a threat or a promise typically reduce
 
 Here is an example.
 
-You threaten to complain about a poor service by a company. Complaining is costly.
+You threaten to complain about poor service by a company. Complaining is costly.
 
 ![](img/complain-1.jpg)
 
 We work through this problem by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.
 
-The company therefore has a choice between providing good service for a payoff of 1 or bad service for a payoff of 2. They will provide bad service. The company has the same payoff for bad service regardless of the presence of the threat to complain as the threat is not credible.
+The company, therefore, has a choice between providing good service for a payoff of 1 or bad service for a payoff of 2. They will provide bad service. The company has the same payoff for bad service regardless of the presence of the threat to complain as the threat is not credible.
 
 For the customer's initial choice of whether to threaten to complain, it does not matter either way. Regardless of their threat, they receive bad service.
 
