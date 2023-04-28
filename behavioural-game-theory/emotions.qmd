@@ -32,7 +32,7 @@ But what if the customer gets a strong sense of satisfaction from complaining wo
 
 ![](img/complain-3.jpg)
 
-The threat to complain is now credible. If they receive bad service, they complain for a payoff of 2 rather than not complain for a payoff of 1.image.png
+The threat to complain is now credible. If they receive bad service, they complain for a payoff of 2 rather than not complain for a payoff of 1.
 
 The company now provides good service following a threat to complain. Absent that threat, they would provide bad service.
 
@@ -50,7 +50,7 @@ There are two pure-strategy Nash equilibria: (Straight, Swerve) and (Swerve, Str
 
 Now suppose player A is crazy. They are afraid of nothing and will never swerve. Player B knows this.
 
-Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If player A will not swerve, Player B will.
+Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If player A will not swerve, player B will.
 
 ![](img/chicken-3.jpg)
 

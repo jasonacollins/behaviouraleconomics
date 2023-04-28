@@ -391,12 +391,13 @@ a\) Your alarm goes off. What is the probability that your house is on fire?
 
 ```{=tex}
 \begin{align*}
-P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[6pt]
-&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm}|\text{fire})P(\text{fire})+P(\text{alarm}|\neg\text{fire})P(\neg\text{fire})} \\[6pt]
-&=\frac{0.95\times 0.0001}{0.95\times 0.0001+0.01\times 0.9999} \\[6pt]
+P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[12pt]
+&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm}|\text{fire})P(\text{fire})+P(\text{alarm}|\neg\text{fire})P(\neg\text{fire})} \\[12pt]
+&=\frac{0.95\times 0.0001}{0.95\times 0.0001+0.01\times 0.9999} \\[12pt]
 &=`r PFA<-(0.95*0.0001)/(0.95*0.0001+0.01*0.9999); round(PFA, 4)`
 \end{align*}
 ```
+
 The probability of a fire if the alarm goes off is `r round(PFA*100, 2)`%.
 :::
 
@@ -412,9 +413,9 @@ In that case:
 
 ```{=tex}
 \begin{align*}
-P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[6pt]
-&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm}|\text{fire})P(\text{fire})+P(\text{alarm}|\neg\text{fire})P(\neg\text{fire})} \\[6pt]
-&=\frac{0.95\times 0.5}{0.95\times 0.5+0.01\times 0.5} \\[6pt]
+P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[12pt]
+&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm}|\text{fire})P(\text{fire})+P(\text{alarm}|\neg\text{fire})P(\neg\text{fire})} \\[12pt]
+&=\frac{0.95\times 0.5}{0.95\times 0.5+0.01\times 0.5} \\[12pt]
 &=`r PFA2<-(0.95*0.5)/(0.95*0.5+0.01*0.5); round(PFA2, 4)`
 \end{align*}
 ```
@@ -432,7 +433,7 @@ c\) Express and solve this problem using natural frequencies.
 
 ```{=tex}
 \begin{align*}
-P(\text{fire}|\text{alarm})&=\frac{95}{95+10000} \\[6pt]
+P(\text{fire}|\text{alarm})&=\frac{95}{95+10000} \\[12pt]
 &=`r round(95/(95+9999), 4)`
 \end{align*}
 ```
