@@ -584,7 +584,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Emotions are mental states that signal positive or negative outcomes.</p>
-<p>It is possible that one function of emotions is to act as a commitment device:</p>
+<p>One function of emotions may be to act as a commitment device:</p>
 <ul>
 <li><p>The emotion of guilt can constrain a desire to “cheat” where cheating delivers a higher pay-off. This in turn may allow people to trust you.</p></li>
 <li><p>The emotion of anger may lead you to punish someone even where delivering the punishment also harms you. This in turn may lead people to be less likely to cheat you.</p></li>
@@ -592,19 +592,28 @@ ul.task-list li input[type="checkbox"] {
 <p>While this behaviour may appear “irrational”, it allows people to make credible commitments that in turn allow them to enter beneficial trades and cooperative arrangements, while being less likely to being cheated.</p>
 <section id="commitment" class="level2" data-number="45.1">
 <h2 data-number="45.1" class="anchored" data-anchor-id="commitment"><span class="header-section-number">45.1</span> Commitment</h2>
-<p>Recall our earlier example of a customer threatening to complain if they receive bad service.</p>
+<p>Consider the following quote from Richard Nixon:</p>
+<blockquote class="blockquote">
+<p>I call it the Madman Theory, Bob. I want the&nbsp;North Vietnamese&nbsp;to believe I’ve reached the point where I might do anything to stop the war. We’ll just slip the word to them that, “for God’s sake, you know Nixon is obsessed about communism. We can’t restrain him when he’s angry—and he has his hand on the&nbsp;nuclear button” and&nbsp;Ho Chi Minh&nbsp;himself will be in&nbsp;Paris&nbsp;in two days begging for peace.</p>
+</blockquote>
+<p>Pushing the nuclear button is not in Nixon’s interest, and from a purely rational perspective may not be a credible threat. But if a madman has his finger on the button, the calculation changes.</p>
+<p>Recall our earlier example of a customer threatening to complain if they receive bad service. Complaining is costly.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/complain-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/complain-2.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>What if the customer gets a strong sense of satisfaction from complaining worth +3? Then their payoffs become as follows:</p>
+<p>We work through this problem by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.</p>
+<p>The company, therefore, has a choice between providing good service for a payoff of 1 or bad service for a payoff of 2. They will provide bad service. The company has the same payoff for bad service regardless of the presence of the threat to complain as the threat is not credible.</p>
+<p>For the customer’s initial choice of whether to threaten to complain, it does not matter either way. Regardless of their threat, they receive bad service.</p>
+<p>But what if the customer gets a strong sense of satisfaction from complaining worth +3? Then their payoffs become as follows:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/complain-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/complain-3.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>The threat to complain is now credible. The company now provides good service.</p>
+<p>The threat to complain is now credible. If they receive bad service, they complain for a payoff of 2 rather than not complain for a payoff of 1.image.png</p>
+<p>The company now provides good service following a threat to complain. Absent that threat, they would provide bad service.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/complain-4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/complain-4.jpg" class="img-fluid figure-img"></a></p>
@@ -613,17 +622,29 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="chicken" class="level2" data-number="45.2">
 <h2 data-number="45.2" class="anchored" data-anchor-id="chicken"><span class="header-section-number">45.2</span> Chicken</h2>
-<p>Recall the game of chicken.</p>
+<p>As another example, recall the game of chicken. Two players are driving toward each other. Whoever swerves first loses. If neither swerves, they crash and die.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/chicken-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/chicken-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>Player A is crazy. They are afraid of nothing and will never swerve. Player B knows this.</p>
-<p>Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If Player A will not swerve, Player B will.</p>
+<p>There are two pure-strategy Nash equilibria: (Straight, Swerve) and (Swerve, Straight). If the other player swerves, they want to go straight. If the other player goes straight, they want to swerve.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/chicken-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/chicken-3.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/chicken-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/chicken-2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Now suppose player A is crazy. They are afraid of nothing and will never swerve. Player B knows this.</p>
+<p>Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If player A will not swerve, Player B will.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chicken-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/chicken-3.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The Nash equilibrium is (Straight, Swerve). The crazy player A wins the game of chicken.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chicken-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/chicken-4.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 
@@ -914,7 +935,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 
