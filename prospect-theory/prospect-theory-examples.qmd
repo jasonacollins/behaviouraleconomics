@@ -202,16 +202,16 @@ Would a risk-averse agent purchase the insurance? Suppose they have a logarithmi
 First, we calculate the expected utility of purchasing insurance policy $I$, which is simply the utility of the wealth after the premium is paid.
 
 \begin{align*}
-E[U(I)]&=\text{ln}(W-R) \\
-&=\text{ln}(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
+E[U(I)]&=\text{ln}(W-R) \\[6pt]
+&=\text{ln}(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\[6pt]
 &=`r round(log(1000000+10000-1100), 4)`
 \end{align*}
 
 Then we calculate the expected utility of not purchasing the insurance.
 
 \begin{align*}
-E[U(\neg I)]&=0.999\times \text{ln}(W)+0.001\times \text{ln}(W-H) \\
-&=0.999\times \text{ln}(1,010,000)+0.001\times \text{ln}(10,000) \\
+E[U(\neg I)]&=0.999\times \text{ln}(W)+0.001\times \text{ln}(W-H) \\[6pt]
+&=0.999\times \text{ln}(1,010,000)+0.001\times \text{ln}(10,000) \\[6pt]
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 

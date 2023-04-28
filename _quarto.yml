@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "21 April 2023"
+  date: "28 April 2023"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -66,7 +66,7 @@ book:
     - part: behavioural-game-theory/behavioural-game-theory.qmd
       chapters:
         - behavioural-game-theory/level-k-thinking.qmd
-        - behavioural-game-theory/asymmetric-information.qmd
+        - behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.qmd
         - behavioural-game-theory/emotions.qmd
         - behavioural-game-theory/behavioural-game-theory-exercises.qmd
     - part: social-preferences/social-preferences.qmd

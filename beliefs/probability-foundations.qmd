@@ -76,8 +76,8 @@ For example, suppose we draw a single card from a deck of cards, place that card
 
 ```{=tex}
 \begin{align*}
-P(A\spadesuit \cap A\spadesuit)&=P(A\spadesuit)\cdot P(A\spadesuit) \\
-&=\frac{1}{52}\times \frac{1}{52} \\
+P(A\spadesuit \cap A\spadesuit)&=P(A\spadesuit)\cdot P(A\spadesuit) \\[6pt]
+&=\frac{1}{52}\times \frac{1}{52} \\[12pt]
 &=\frac{1}{2704}
 \end{align*}
 ```
@@ -105,11 +105,13 @@ The probability of drawing an Ace on the first draw is 4 in 52. If I draw an Ace
 
 ```{=tex}
 \begin{align*}
-P(\text{Ace 1st}\cap\text{Ace 2nd})&=P(\text{Ace 1st})\cdot P(\text{Ace 2nd}|\text{Ace 1st}) \\
-&=\frac{4}{52}\times \frac{3}{51} \\
+P(\text{Ace 1st}\cap\text{Ace 2nd})&=P(\text{Ace 1st})\cdot P(\text{Ace 2nd}|\text{Ace 1st}) \\[6pt]
+&=\frac{4}{52}\times \frac{3}{51} \\[12pt] % <1>
 &=\frac{1}{221}
 \end{align*}
 ```
+
+1. Testing annotation
 
 ### Formula for conditional probability
 

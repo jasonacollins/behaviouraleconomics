@@ -1,243 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/asymmetric-information.html</loc>
-    <lastmod>2023-04-27T00:14:57.989Z</lastmod>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/index.html</loc>
+    <lastmod>2023-04-28T01:45:26.938Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/economic-foundations.html</loc>
-    <lastmod>2023-04-26T03:53:07.121Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.944Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/preferences.html</loc>
-    <lastmod>2023-04-26T03:53:07.121Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.951Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/rationality.html</loc>
-    <lastmod>2023-04-26T03:53:07.122Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.957Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/utility.html</loc>
-    <lastmod>2023-04-26T03:53:07.122Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.963Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/foundations/economic-foundation-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.123Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.971Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html</loc>
-    <lastmod>2023-04-26T03:53:07.123Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.977Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/notation.html</loc>
-    <lastmod>2023-04-26T03:53:07.124Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.982Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-value.html</loc>
-    <lastmod>2023-04-26T03:53:07.124Z</lastmod>
+    <lastmod>2023-04-28T01:45:26.991Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/axioms-for-expected-utility-theory.html</loc>
-    <lastmod>2023-04-26T03:53:07.126Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.013Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-utility-theory.html</loc>
-    <lastmod>2023-04-26T03:53:07.127Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.020Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/subjective-expected-utility.html</loc>
-    <lastmod>2023-04-26T03:53:07.127Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.025Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-utility-examples.html</loc>
-    <lastmod>2023-04-26T03:53:07.128Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.037Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/anomalies-of-expected-utility-theory.html</loc>
-    <lastmod>2023-04-26T03:53:07.129Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.044Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/risk-and-uncertainty-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.130Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.057Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory.html</loc>
-    <lastmod>2023-04-26T03:53:07.131Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.063Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reference-dependence.html</loc>
-    <lastmod>2023-04-26T03:53:07.132Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.070Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/loss-aversion.html</loc>
-    <lastmod>2023-04-26T03:53:07.132Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.081Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reflection-effect.html</loc>
-    <lastmod>2023-04-26T03:53:07.133Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.089Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/value-function.html</loc>
-    <lastmod>2023-04-26T03:53:07.134Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.098Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/probability-weighting.html</loc>
-    <lastmod>2023-04-26T03:53:07.135Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.107Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-implementation.html</loc>
-    <lastmod>2023-04-26T03:53:07.135Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.113Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples.html</loc>
-    <lastmod>2023-04-26T03:53:07.136Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.131Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-applications.html</loc>
-    <lastmod>2023-04-26T03:53:07.137Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.137Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.138Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.150Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/intertemporal-choice.html</loc>
-    <lastmod>2023-04-26T03:53:07.138Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.155Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/exponential-discounting.html</loc>
-    <lastmod>2023-04-26T03:53:07.139Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.165Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/exponential-discounting-examples.html</loc>
-    <lastmod>2023-04-26T03:53:07.140Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.172Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/exponential-discounting-anomalies.html</loc>
-    <lastmod>2023-04-26T03:53:07.140Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.179Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/present-bias.html</loc>
-    <lastmod>2023-04-26T03:53:07.141Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.192Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/present-bias-examples.html</loc>
-    <lastmod>2023-04-26T03:53:07.141Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.210Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/sophisticated-present-bias.html</loc>
-    <lastmod>2023-04-26T03:53:07.142Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.218Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/commitment.html</loc>
-    <lastmod>2023-04-26T03:53:07.143Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.226Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/preference-over-profiles.html</loc>
-    <lastmod>2023-04-26T03:53:07.143Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.233Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/intertemporal-choice-applications.html</loc>
-    <lastmod>2023-04-26T03:53:07.144Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.242Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/intertemporal-choice-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.145Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.260Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/beliefs.html</loc>
-    <lastmod>2023-04-26T03:53:07.146Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.266Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/probability-foundations.html</loc>
-    <lastmod>2023-04-26T03:53:07.147Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.277Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/heuristics.html</loc>
-    <lastmod>2023-04-26T03:53:07.148Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.283Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/biases-in-probability-judgment.html</loc>
-    <lastmod>2023-04-26T03:53:07.149Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.296Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/heuristics-and-the-bias-variance-trade-off.html</loc>
-    <lastmod>2023-04-26T03:53:07.149Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.302Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/overconfidence.html</loc>
-    <lastmod>2023-04-26T03:53:07.150Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.308Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/beliefs-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.151Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.322Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/game-theory.html</loc>
-    <lastmod>2023-04-26T03:53:07.151Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.328Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/simultaneous-move-one-shot-games.html</loc>
-    <lastmod>2023-04-26T03:53:07.152Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.337Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/sequential-games.html</loc>
-    <lastmod>2023-04-26T03:53:07.153Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.345Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/asymmetric-information.html</loc>
+    <lastmod>2023-04-28T01:45:27.352Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/strategic-moves-and-commitment.html</loc>
-    <lastmod>2023-04-27T01:32:56.596Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.360Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/game-theory-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.154Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.368Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/behavioural-game-theory.html</loc>
-    <lastmod>2023-04-27T01:53:05.239Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.374Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/level-k-thinking.html</loc>
-    <lastmod>2023-04-26T03:53:07.155Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.383Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/asymmetric-information.html</loc>
-    <lastmod>2023-04-26T03:53:07.156Z</lastmod>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html</loc>
+    <lastmod>2023-04-28T01:45:27.389Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/emotions.html</loc>
-    <lastmod>2023-04-26T03:53:07.156Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.397Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/behavioural-game-theory-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.157Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.406Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/social-preferences.html</loc>
-    <lastmod>2023-04-26T03:53:07.157Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.412Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/distribution.html</loc>
-    <lastmod>2023-04-26T03:53:07.158Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.422Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/reputation.html</loc>
-    <lastmod>2023-04-26T03:53:07.159Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.428Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/reciprocity.html</loc>
-    <lastmod>2023-04-26T03:53:07.159Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.434Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/social-preferences-examples.html</loc>
-    <lastmod>2023-04-26T03:53:07.160Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.442Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/social-preferences-exercises.html</loc>
-    <lastmod>2023-04-26T03:53:07.160Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.449Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/references.html</loc>
-    <lastmod>2023-04-26T03:53:07.161Z</lastmod>
+    <lastmod>2023-04-28T01:45:27.458Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf</loc>
+    <lastmod>2023-04-28T01:45:25.762Z</lastmod>
   </url>
 </urlset>

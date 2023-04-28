@@ -10,7 +10,7 @@ Payoffs are represented in a game tree.
 
 I will now illustrate the extensive form with a game called the centipede game.
 
-### The centipede game
+### The centipede game {#sec-centipede-game}
 
 This centipede game has six decision nodes. At each node, a player can “take”, and end the game, or they can “pass”, increasing the total payoff. The other player then has a move.
 
@@ -25,6 +25,8 @@ The payoff when a player takes and ends the game is represented by the numbers i
 Before examining this game, I will introduce the concept of a subgame perfect Nash equilibrium.
 
 A subgame is a part of a game that can be played as a game itself. It begins at a single node and contains every successor node.
+
+### Solving the centipede game {#sec-solving-the-centipede-game}
 
 For example, this final stage of the centipede game is a subgame.
 

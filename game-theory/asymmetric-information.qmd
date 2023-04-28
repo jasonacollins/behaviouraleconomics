@@ -4,7 +4,7 @@ To date in this section on game theory, I have assumed perfect information. That
 
 I will now explore two examples where we relax this assumption and allow the parties to have different information. However, we will retain the assumption of rational behaviour.
 
-## The market for lemons
+## The market for lemons {#sec-market-for-lemons}
 
 This example draws on the work of @akerlof1970
 
@@ -76,7 +76,7 @@ Generalising what is happening here:
 
 Information asymmetry is sufficient to result in a market failure even if the agents are rational.
 
-## The winner's curse
+## The winner's curse {#sec-winners-curse}
 
 The second example involves a phenomenon called the winner's curse.
 
