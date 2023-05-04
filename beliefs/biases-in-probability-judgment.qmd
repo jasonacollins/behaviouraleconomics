@@ -185,7 +185,7 @@ By introducing the base-rate neglect in Bayes' rule, we match the empirical resu
 ```{=tex}
 \begin{align*}
 P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
-&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve}|\text{COVID})P(\text{COVID})+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})} \\[12pt]
+&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&\text{+ve}|\text{COVID})P(\text{COVID})\\&+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[12pt]
 &=\frac{0.9\times 0.5}{0.9\times 0.5 + 0.09\times 0.5} \\[12pt]
 &=`r round((0.9*0.5)/(0.9*0.5 + 0.09*0.5), 3)`
 \end{align*}

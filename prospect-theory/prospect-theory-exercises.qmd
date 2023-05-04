@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Prospect theory exercises
 
 ## Changes in probability

@@ -1,44 +1,44 @@
 # Distribution
 
-Distributional preferences are preferences that relate to the amount of money or resources each person gets or has.
+Distributional preferences are preferences that relate to the relative amount of money or resources each person gets or has.
 
-It is often easy to incorporate distributional preferences into economic analysis as they are a natural extension of how economists think about individuals' preferences. We can extend the typical assumption that a person only cares about their own material outcomes to other people.
+It is often easy to incorporate distributional preferences into economic analysis as they are a natural extension of how economists think about individuals' preferences. We can extend to other people the typical assumption that a person cares about their own material outcomes.
+
+We will examine two types of distributional preferences, altruism and inequality aversion.
 
 ## Altruism
 
 Altruism is concern for the outcomes of others.
 
-To incorporate altruism, we simply need to provide a positive weight to the utility of others in the utility function $U_i(x_i,x_j)$, where $U_i$ is the utility of agent $i$, $x_i$ the outcome for agent $i$ and $x_i$ the outcome for agent $j$.
-
-An example utility function might be:
+To incorporate altruism, we simply need to provide a positive weight to the utility of others in the utility function. An example utility function might be:
 
 $$
 U_i(x_i,x_j)=x_i+\alpha x_j
 $$
 
-where $\alpha>0$.
+where $U_i$ is the utility of agent $i$, $x_i$ the outcome for agent $i$ and $x_j$ the outcome for agent $j$. $\alpha$ is some number greater than zero.
 
-Altruism might have different drivers:
+Altruism might have different drivers.
 
--   Pure altruism: genuine concern for others' wellbeing.
+For example, the agent might exhibit pure altruism, where the agent has a genuine concern for others' wellbeing.
 
--   Impure altruism: A "warm glow" where people feel good about doing good without actually caring about the others' wellbeing.
+Alternatively, the agent might exhibit impure altruism. They experience a "warm glow" about doing good without actually caring about the other's wellbeing.
 
-Altruism, however, is insufficient to explain the experimental results, such as those in the ultimatum game. While it could predict non-zero offers by the proposer, it does not predict rejection of any offers by the responder. Rejection harms both the responder and the proposer.
+Altruism, however, is insufficient to explain some experimental results, such as those in the ultimatum game. While it could predict non-zero offers by the proposer, it does not predict the rejection of any offers by the responder. Rejection harms both the responder and the proposer.
 
 The proposer could only reject if a negative weight was applied to either their own or the proposer's outcome.
 
 ## Inequality aversion
 
-The idea behind inequality aversion is that people may have:
+An alternative distributional preference model that may explain some of these results is inequality aversion.
 
--   A dislike of having less than other people
-
--   A dislike of having more than other people.
+The idea behind inequality aversion is that people may have a dislike of having less than other people and a dislike of having more than other people.
 
 ### The Fehr-Schmidt model
 
-Consider the following version of the utility function in @fehr1999:
+One basic mode of inquality aversion comes from the utility function in @fehr1999:
+
+It is of the following form:
 
 $$
 U_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
@@ -48,37 +48,49 @@ The three terms in this function represent:
 
 -   The utility of their own outcome $x_i$
 
--   Their dislike of having less than the other agent (with $\alpha>0$)
+-   Their dislike of having less than the other agent (where $\alpha>0$)
 
 -   Their dislike of having more than the other agent (where $\beta>0$)
 
 Typically $\alpha>\beta$ as people dislike having less than others than they dislike having more than others. We could also set $\beta<0$ for an agent that likes to be better off than others.
 
-This utility function has a kink at $x_j$ where the agent $i$ moves from having less to more than agent $j$. If $0<\beta<1$ as in this diagram, $U(x_i)$ continues to increase in $x_i$ above $x_j$, but at a decreasing rate as inequality degrades the benefits of having more.
+This utility function has a kink at $x_j$ where agent $i$ moves from having less to more than agent $j$. If $0<\beta<1$ as in this diagram, the utility of agent $i$, $U(x_i)$ continues to increase in $x_i$ above $x_j$, but at a decreasing rate as inequality degrades the benefits of having more.
 
 ![](img/inequality-aversion-1.jpg)
 
 ### The ultimatum game
 
-Suppose two players of the ultimatum game have preferences of this form.
+We can examine the Fehr-Schmidt model in the context of the ultimatum game.
+
+Suppose two players of the ultimatum game have Fehr-Schmidt preferences.
 
 What offers $x$ would the responder reject where the proposer has \$10 to split between them?
 
-If the responder rejects, $x_P=x_R=0$.
+If the responder rejects, the payoff to the proposer and responder is zero. That is:
 
-If the responder accepts, $x_P=10−x$ and $x_R=x$.
+$$
+x_P=x_R=0
+$$
 
-The responder will accept if:
+If the responder accepts, the responder receives $x$ and the proposer keeps the remainder. That is:
+
+\begin{align*}
+x_P&=10−x \\[6pt]
+x_R&=x
+\end{align*}
+
+The responder will accept if the utility of accepting is greater than the utility of rejecting. That is:
 
 ```{=tex}
 \begin{align*}
 U_R(\text{accept})&>U_R(\text{reject}) \\[6pt]
-x_R−\alpha\text{max}\{x_P−x_R,0\}−\beta\text{max}\{x_R−x_P,0\}&>0 \\[6pt]
-x−\alpha\text{max}\{10−x−x,0\}−\beta\text{max}\{x−(10−x),0\}&>0 \\[6pt]
+\underbrace{x_R−\alpha\text{max}\{x_P−x_R,0\}−\beta\text{max}\{x_R−x_P,0\}}_{\text{Substituting in the Fehr-Schmidt utility function}}&>0 \\[24pt]
+\underbrace{x−\alpha\text{max}\{10−x−x,0\}−\beta\text{max}\{x−(10−x),0\}}_{\text{Substituting in the payoffs when accepted}}&>0 \\[24pt]
 x−\alpha\text{max}\{10−2x,0\}−\beta\text{max}\{2x−10, 0\}&>0 \\
 \end{align*}
 ```
-If the offer is more than \$5:
+
+If the offer is more than \$5, the $\alpha$ term is multiplied by zero and the inequality becomes:
 
 ```{=tex}
 \begin{align*}
@@ -87,36 +99,41 @@ x−\beta(2x−10)>0 \\[6pt]
 (1−\beta)x+\beta(10−x)>0
 \end{align*}
 ```
-This will always hold for any $\beta<1$, so the responder will always accept offers greater than \$5.
 
-If the offer is less than \$5:
+This will always hold for any $\beta<1$. Recall that if $\beta<1$ the responder has higher utility from a higher payoff but at a decreasing rate when they have more than the proposer. In this case, if $\beta<1$ the responder will always accept offers greater than \$5.
+
+If the offer is less than \$5, the $\beta$ term is multiplied by zero and the inequality becomes:
 
 ```{=tex}
 \begin{align*}
-x−\alpha\text{max}\{10−2x,0\}>0 \\
-x−\alpha(10−2x)>0 \\
+x−\alpha\text{max}\{10−2x,0\}>0 \\[6pt]
+x−\alpha(10−2x)>0 \\[6pt]
 (1+\alpha)x−\alpha(10−𝑥)>0
 \end{align*}
 ```
-Whether this holds depends on the value of $\alpha$ and the precise size of $x$. If $\alpha=1/2$, then:
+
+Whether this holds depends on the value of $\alpha$ and the size of the offer $x$. If $\alpha=1/2$, then:
 
 ```{=tex}
 \begin{align*}
-(1+1/2)x−1/2 (10−x)&>0 \\
-2x−5&>0 \\
+\bigg(1+\frac{1}{2}\bigg)x−\frac{1}{2} (10−x)&>0 \\
+2x−5&>0 \\[6pt]
 x&>2.5
 \end{align*}
 ```
 A responder with $\alpha=1/2$ will reject any offer under \$2.50.
 
-We can plot the utility function for this game as the size of the offer increases. As the offer is not independent of the proposer's payoff, we will first derive the shape of the utility curve as a function of $x_R$.
+We can plot the utility function for this game as the size of the offer increases. As the offer is not independent of the proposer's payoff, I will derive the shape of the utility curve as a function of $x_R$.
 
 ```{=tex}
 \begin{align*}
-U_R(x_P,x_R)&=x_R-\alpha\text{max}\{x_P-x_R,0\}-\beta\text{max}\{x_R-x_P,0\} \\
+U_R(x_P,x_R)&=x_R-\alpha\text{max}\{x_P-x_R,0\}-\beta\text{max}\{x_R-x_P,0\} \\[6pt]
 &=x-\alpha\text{max}\{10-2x,0\}-\beta\text{max}\{2x-10,0\}
 \end{align*}
 ```
+
+We can also write this as:
+
 $$
 U_R(x_P,x_R)=\left\{\begin{matrix}
 (1+2\alpha)x−10\alpha \quad &\textrm{if} \quad x \geq 0 \\[6pt]
@@ -128,11 +145,11 @@ The slope of each of these curves is twice that we saw earlier as any increase i
 
 This diagram shows the responder's utility curve as a function of the offer $x$.
 
-![](img/inequality-aversion-2.jpg)
+![](img/inequality-aversion-2.png)
 
 ## A general model of distributional preferences
 
-@charness2002 offer a more general utility function that captures the possible forms of distributional preference:
+@charness2002 developed a more general utility function that captures the possible forms of distributional preference. An agent's attitude toward others depends on their relative position. The utility function is:
 
 $$
 u_i(x_i,x_j)=\left\{\begin{matrix}
@@ -141,41 +158,48 @@ u_i(x_i,x_j)=\left\{\begin{matrix}
 \end{matrix}\right.
 $$
 
-An agent's attitudes toward others depends on their relative position: When the agent is ahead of other, the other player's welfare enters their utility via $\rho$ When the agent is behind the other, the other player's welfare enters dictator's utility via σ For most of people $\rho>\sigma$. They are more willing to give weight to others' utility when they are better off. It can also be that $\sigma<0$. If they are behind the other they place negative weight on further gains by that other.
+Where $x_i$ is the payoff to player $i$ and $x_j$ is the payoff to the other player.
+
+$\rho$ and $\sigma$ capture the agent's attitudes toward others. When the agent is ahead the other player's welfare enters their utility via $\rho$. When the agent is behind the other player's welfare enters agent's utility via $\sigma$. For most people $\rho>\sigma$. They give more weight to others' utility when they are better off. $\sigma$ can also be less than zero. If they are behind someone they place negative weight on further gains by that person.
 
 Consider the following example.
 
-Suppose a dictator has $\sigma=−1/2$ (they have less than the other player, so $\sigma$ is the relevant parameter) and must decide between the two discrete allocations (1, 0) and (5, 1):
+A dictator has less than the other player. Their $\sigma=−1/2$ (they have less than the other player, so $\sigma$ is the relevant parameter). They must decide between the allocations (1, 0) and (5, 1).
+
+They calculate the utility of each allocation.
 
 ```{=tex}
 \begin{align*}
-U(1,0)&=\sigma\times 1+(1−\sigma)\times 0 \\
-&=−1/2×1+(1+1/2)\times 0 \\
-&=−1/2 \\[6pt]
-U(5,1)&=\sigma\times 5+(1−\sigma)\times 1 \\
-&=−1/2×5+(1+1/2)\times 1 \\
+U(1,0)&=\sigma\times 1+(1−\sigma)\times 0 \\[6pt]
+&=−1/2×1+(1+1/2)\times 0 \\[6pt]
+&=−1/2 \\[12pt]
+U(5,1)&=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
+&=−1/2×5+(1+1/2)\times 1 \\[6pt]
 &=−1
 \end{align*}
 ```
+
+They prefer to allocate (1,0), even though it is worse for them, because it is also worse for the other player.
+
 $\sigma<0$ can also account for the rejection of low offers in the ultimatum game.
 
-This model can capture distributional preferences as follows.
+The @charness2002 model can capture many forms of distributional preferences. Some are as follows.
 
-$1≥\rho≥\sigma≥0$: altruism
+If $1\geq\sigma\geq0$, the agent is altruistic. A higher payoff to the other player increases the agent's utility
 
-$1≥\rho≥0≥\sigma$: inequality aversion
+If $1\geq\rho\geq0\geq\sigma$, the agent is inequality averse. If the other player has more, the agent's utility decreases with further gains for the other player. If the other player has less, the agent's utility increases with further gains for either agent.
 
-$0≥\rho≥\sigma$: status-seeking
+If $0\geq\rho\geq\sigma$, the agent is status-seeking. They gain more utility by having more than the other player. Their utility goes up when either they get more or the other player gets less.
 
-$\rho=\sigma=0$: the classical self-interested utility function
+If $\rho=\sigma=0$ we are left with the classical self-interested utility function. The agent only cares about their own payoff.
 
-$\rho=1$, $\sigma=0$: $u_i(x_i,x_j)=\text{min}\{x_i,x_j\}$, which equates to Rawlsian preferences whereby the agent seeks greatest benefit for the least advantaged
+If $\rho=1$ and $\sigma=0$: $u_i(x_i,x_j)=\text{min}\{x_i,x_j\}$, the agent has Rawlsian preferences whereby the agent seeks the greatest benefit for the least advantaged.
 
-$\rho=\sigma=1/2$: $u_i(x_i,x_j)=x_i+x_j$, which equates to utilitarian preferences whereby the agent seeks to maximise total utility
+If $\rho=\sigma=1/2$: $u_i(x_i,x_j)=x_i+x_j$, the agent has utilitarian preferences whereby the agent seeks to maximise total utility.
 
 ### Example: the trust game
 
-In Tutorial 9 we considered whether Linda should invest in Marco's startup:
+In the exercises in @sec-investment, I considered whether Linda should invest in Marco's startup:
 
 > Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by an Marco. Marco is looking for seed funding.
 >
@@ -185,40 +209,70 @@ In Tutorial 9 we considered whether Linda should invest in Marco's startup:
 >
 > If Linda does not invest, Linda keeps the \$10. The start-up gets \$0.
 
-We determined that Linda would not invest.
+```{mermaid}
+%%| fig-width: 5
+%%| label: fig-trust-game-example-1
+%%| fig-cap: The trust game
+%%| mermaid-format: png
 
-Suppose now that Linda and Marco have preferences as follows:
+graph LR
+    classDef default fill:#FFF
+    A(Linda) ---B[Invest $10] --> C{Multplied by 3} --> D(Marco)
+    A ---E((Invest 0)) --> F["(10,0)"]
+    D ---G[Dividend] --> H["(15, 15)"]
+    D ---I[Shut down] --> J["(0, 30)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,D node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,E,G,I edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class F,H,J payoff;
+
+```
+
+
+Macro, who is effectively playing a dictator game, would shut down and keep the \$30. As a result, Linda would not invest.
+
+Suppose now that Linda and Marco have @charness2002 preferences as follows:
 
 $$
 U_L(x_L,x_M)=\left\{\begin{matrix}
 \frac{1}{3}x_L+\frac{2}{3}x_M \quad &\textrm{if} \quad x_L \geq x_M\\[6pt]
 \frac{2}{3}x_L+\frac{1}{3}x_M \quad &\textrm{if} \quad x_L < x_M 
-\end{matrix}\right. \\
-\\[12pt]
+\end{matrix}\right.
+$$
+
+$$
 U_M(x_L,x_M)=\left\{\begin{matrix}
 \frac{3}{4}x_L+\frac{1}{4   }x_M \quad &\textrm{if} \quad x_M \geq x_L\\[6pt]
 x_M \quad &\textrm{if} \quad x_M < x_L 
 \end{matrix}\right.
 $$
 
-Where $x_L$ and $x_M$ are the outcomes for Linda and Marco respectively.
+Where $U_L$ and $U_M$ are Linda and Marco's utility functions. $x_L$ and $x_M$ are the outcomes for Linda and Marco.
 
-Marco and Linda know each others utility functions.
+Both Marco and Linda give positive weight to the payoff of the other in most circumstances, except for Marco, who only cares about himself when he is behind Linda.
 
-What is the equilibrium with these distributional preferences? Explain the intuition.
+Marco and Linda know each other's utility functions.
 
-If Linda chooses trust, Marco has a choice between \$15 each and \$30 for himself.
+What is the equilibrium with these distributional preferences?
+
+If Linda chooses trust, Marco has a choice between \$15 each and \$30 for himself. Marco calculates the utility of each option.
 
 $$
 U_M(x_L,x_M)=\left\{\begin{matrix}
 \frac{3}{4}x_L+\frac{1}{4}x_M \quad &\textrm{if} \quad x_M \geq x_L\\[6pt]
 x_M \quad &\textrm{if} \quad x_M < x_L 
-\end{matrix}\right. \\
-\\[12pt]
-U_M(15,15)=\frac{3}{4}(15)+\frac{1}{4}(15)=15 \\
-\\[12pt]
-U_M(0,30)=\frac{3}{4}(0)+\frac{1}{4}(30)=7.5
+\end{matrix}\right.
 $$
+
+\begin{align*}
+U_M(15,15)&=\frac{3}{4}(15)+\frac{1}{4}(15)=15 \\[12pt]
+U_M(0,30)&=\frac{3}{4}(0)+\frac{1}{4}(30)=7.5
+\end{align*}
 
 Marco receives higher utility by paying the dividend to Linda.
 
@@ -228,12 +282,15 @@ $$
 U_L(x_L,x_M)=\left\{\begin{matrix}
 \frac{1}{3}x_L+\frac{2}{3}x_M \quad &\textrm{if} \quad x_L \geq x_M\\[6pt]
 \frac{2}{3}x_L+\frac{1}{3}x_M \quad &\textrm{if} \quad x_L < x_M 
-\end{matrix}\right. \\
-\\[12pt]
-U_L(15,15)=\frac{1}{3}(15)+\frac{2}{3}(15)=15 \\
-\\[12pt]
-U_L(0,30)=\frac{2}{3}(0)+\frac{1}{3}(30)=10
+\end{matrix}\right.
 $$
+
+\begin{align*}
+U_L(15,15)&=\frac{1}{3}(15)+\frac{2}{3}(15)=15 \\[12pt]
+U_L(0,30)&=\frac{2}{3}(0)+\frac{1}{3}(30)=10
+\end{align*}
+
+Linda would prefer that Marco pay a dividend.
 
 For the other node, if Linda does not invest, she will keep \$10. Marco will have nothing.
 
@@ -244,10 +301,58 @@ U_M(10,0)=0 \\
 U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 \end{align*}
 ```
+
 Putting those payoffs into the extensive form of the game, we get the following:
 
-![](img/trust-distributional-1.jpg)
+```{mermaid}
+%%| fig-width: 5
+%%| label: fig-trust-game-example-2
+%%| fig-cap: The trust game
+%%| mermaid-format: png
 
-The new equilibrium is that Macro will return a dividend, so Linda invests.
+graph LR
+    classDef default fill:#FFF
+    A(Linda) ---B[Invest $10] --> C{Multplied by 3} --> D(Marco)
+    A ---E((Invest 0)) --> F["(3.33,0)"]
+    D ---G[Dividend] --> H["(15, 15)"]
+    D ---I[Shut down] --> J["(10, 7.5)"]
 
-![](img/trust-distributional-2.jpg)
+    classDef node fill:#FFF, stroke:#000;
+    class A,D node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,E,G,I edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class F,H,J payoff;
+
+```
+
+In this game, Marco can return a dividend for utility 15 or shut down for utility 7.5. He chooses to return the dividend. As a result, Linda will invest for utility 15, rather than not invest for utility 3.33.
+
+```{mermaid}
+%%| fig-width: 5
+%%| label: fig-trust-game-example-3
+%%| fig-cap: The trust game
+%%| mermaid-format: png
+
+graph LR
+    classDef default fill:#FFF
+    A(Linda) ---B[Invest $10] --> C{Multplied by 3} --> D(Marco)
+    A ---E((Invest 0)) --> F["(3.33,0)"]
+    D ---G[Dividend] --> H["(<b>15</b>, <b>15</b>)"]
+    D ---I[Shut down] --> J["(10, 7.5)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,D node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,E,I edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class F,H,J payoff;
+
+    classDef action stroke:#F00, stroke-width:4px;
+    class B,G action;
+
+```

@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Present bias examples
 
 In the section, I provide some simple examples of the $\beta\delta$ model.

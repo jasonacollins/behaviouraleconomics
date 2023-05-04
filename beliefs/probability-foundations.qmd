@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Probability foundations
 
 In this part, I introduce some basic concepts in probability theory.

@@ -24,7 +24,6 @@ Agent A now has a choice of a payoff of 0 for not purchasing insurance, and 2 fo
 
 ![](img/adviser-2.jpg){width=60%}
 
-
 d) Suppose now that Agent A can complain to the regulator if they are sold bad insurance. If Agent A is successful, they can cancel the insurance but would suffer a cost of -3 due to the effort involved. Would this change the outcome of the game?
 
 ![](img/adviser-3.jpg){width=60%}
@@ -33,7 +32,7 @@ Working by backward induction: Agent A has a choice between complaining for a pa
 
 The rest of the game plays out as per questions a) and b). There is no change to the outcome as they cannot commit to complain in advance (at least in this version of the game). The threat to complain is not credible.
 
-e) Suppose Agent A has a reputation for seeking revenge and would experience satisfaction of +4 from complaining to the regulator (in addition to the effort cost of -3). How would this change the outcome of the game?
+e) Suppose Agent A has a reputation for seeking revenge and would experience satisfaction of +4 from complaining to the regulator (in addition to the effort cost of -3) as reciprocation for the action of the adviser. How would this change the outcome of the game?
 
 ![](img/adviser-4.jpg){width=60%}
 

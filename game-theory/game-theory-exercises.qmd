@@ -86,7 +86,7 @@ One option is to sign a binding contract with penalties if he leaves early. Any 
 A contract is both observable and irreversible (at least without mutual agreement).
 :::
 
-## Investment
+## Investment {#sec-investment}
 
 Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by an Marco. Marco is looking for seed funding.
 

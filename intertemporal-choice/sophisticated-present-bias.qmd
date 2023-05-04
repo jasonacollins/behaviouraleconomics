@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Sophisticated present bias
 
 Suppose a present-biased agent decides that they will wait for a larger, later payoff in preference to a smaller, sooner payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff. Why did the agent initially choose the larger payoff when they would take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and choose accordingly.

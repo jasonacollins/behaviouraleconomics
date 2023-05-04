@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # The reflection effect
 
 The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.

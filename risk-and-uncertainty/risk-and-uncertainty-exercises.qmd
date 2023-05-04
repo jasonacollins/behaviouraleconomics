@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Risk and uncertainty exercises
 
 ## Expected value of roulette

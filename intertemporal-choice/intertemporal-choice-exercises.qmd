@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Intertemporal choice exercises
 
 ## Exercise or television?

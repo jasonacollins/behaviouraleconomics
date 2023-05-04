@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Exponential discounting examples
 
 In this part, I will work through several numerical examples of decisions by an exponential discounter.

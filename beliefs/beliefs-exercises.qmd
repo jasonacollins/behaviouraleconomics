@@ -1,3 +1,6 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
 # Beliefs exercises
 
 ## Judging a fund manager
@@ -152,7 +155,7 @@ P(\text{D1 loaded}|6)&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[
 &=`r PL<-(0.5*0.5)/(0.5*0.5+1/6*0.5); PL`
 \end{align*}
 ```
-The first die is the loaded die with `r PL*100`% probability.
+The first die is the loaded die with `r PL*100`\% probability.
 :::
 
 b\) You pull the other die out of your pocket and roll it. It shows a 5. What is the updated probability that the first die is the loaded die?
@@ -168,7 +171,7 @@ P(\text{D2 fair}|5)&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6pt]
 &=`r (1/6*0.75)/(1/6*0.75+0.5*0.25)`
 \end{align*}
 ```
-Each die is the loaded die with 50% probability.
+Each die is the loaded die with 50\% probability.
 :::
 
 ## Male or female
@@ -258,7 +261,7 @@ Note: questions such are these are typically sensitive to unstated assumptions, 
 
 ## Luggage
 
-You have taken a flight  and are worried that your luggage will not be on the flight. You know that 20% of bags have not been arriving with the passenger.
+You have taken a flight  and are worried that your luggage will not be on the flight. You know that 20\% of bags have not been arriving with the passenger.
 
 The following table of conditional probabilities (from Pearl & Mackenzie (2018)) gives the probability that your bag will be on the luggage carousel conditional on the bag being on the flight and how long you have been waiting at the carousel.
 
@@ -299,7 +302,7 @@ P(\text{false}|\text{not arrived after 5})&=\frac{P(\text{not arrived after 5}|\
 &=`r false5<-(1*0.2)/(1*0.2+0.5*0.8); round(false5, 3)`
 \end{align*}
 
-The probability that the bag was not on the flight is `r round(false5*100, 0)`%.
+The probability that the bag was not on the flight is `r round(false5*100, 0)`\%.
 :::
 
 b\) You have been waiting 9 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
@@ -314,7 +317,7 @@ P(\text{false}|\text{not arrived after 9})&=\frac{P(\text{not arrived after 9}|\
 &=`r false9<-(1*0.2)/(1*0.2+0.1*0.8); round(false9, 3)`
 \end{align*}
 
-The probability that the bag was not on the flight is `r round(false9*100, 0)`%.
+The probability that the bag was not on the flight is `r round(false9*100, 0)`\%.
 :::
 
 c\)  You have been waiting 10 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
@@ -329,7 +332,7 @@ P(\text{false}|\text{not arrived after 10})&=\frac{P(\text{not arrived after 10}
 &=`r false9<-(1*0.2)/(1*0.2+0*0.8); round(false9, 3)`
 \end{align*}
 
-The probability that the bag was not on the flight is `r round(false9*100, 0)`%.
+The probability that the bag was not on the flight is `r round(false9*100, 0)`\%.
 :::
 
 ## Murder?
@@ -380,7 +383,7 @@ You know the following statistics about fire:
 
 -   The probability of your house catching fire on any particular day is 1 in 10,000
 
--   Your fire alarm correctly detects a house fire 95% of the time
+-   Your fire alarm correctly detects a house fire 95\% of the time
 
 -   The probability that your fire alarm sounds on a day when there is no fire (a false alarm) is 1 in 100.
 
@@ -401,13 +404,13 @@ P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(
 The probability of a fire if the alarm goes off is `r round(PFA*100, 2)`%.
 :::
 
-b\) Many people given this problem estimate the probability of the house being on fire as close to 95%. Provide one possible explanation for this error.
+b\) Many people given this problem estimate the probability of the house being on fire as close to 95\%. Provide one possible explanation for this error.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
-People often confuse P(A\|B) with P(B\|A). In this case, such confusion would lead them to conclude that P(fire\|alarm)=P(alarm\|fire)=95%. You might also think of this as anchoring on the 95% and insufficiently adjusting from there.
+People often confuse P(A\|B) with P(B\|A). In this case, such confusion would lead them to conclude that P(fire\|alarm)=P(alarm\|fire)=95%. You might also think of this as anchoring on the 95\% and insufficiently adjusting from there.
 
-Alternatively, people sometimes act as they through have assumed uniform priors: e.g. 50:50 as to whether a fire or not.
+Alternatively, people sometimes act as though they have assumed uniform priors: e.g. 50:50 as to whether a fire or not.
 
 In that case:
 
