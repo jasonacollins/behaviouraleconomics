@@ -87,7 +87,7 @@ graph LR
     style C stroke:#FFF
 ```
 
-The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff $m$.
+The standard game theory prediction is that the dictator offers nothing. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff $m$.
 
 However, in experiments, dictators tend to give a positive sum of money. The following shows distributions reported by @engel2011. Most players offer more than zero, suggesting preferences beyond simply maximising their own payoff.
 

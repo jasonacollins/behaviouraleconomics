@@ -130,6 +130,7 @@ Exchange is unilateral. Receivers have an empty strategy set.
 %%| fig-width: 4
 %%| label: fig-dictator-game
 %%| fig-cap: The dictator game
+%%| mermaid-format: png
 
 graph LR
     classDef default fill:#FFF
@@ -149,6 +150,7 @@ The standard game theory prediction is no interaction whatsoever. The dictator m
 %%| fig-width: 4
 %%| label: fig-dictator-game-solved
 %%| fig-cap: The dictator game solved
+%%| mermaid-format: png
 
 graph LR
     classDef default fill:#FFF
@@ -224,7 +226,7 @@ The final outcome is $(10−5+7.50,  10+15−7.50)=(12.50, 17.50)$.
 
 ```{mermaid}
 %%| fig-width: 5
-%%| label: fig-trust-game
+%%| label: fig-trust-game-1
 %%| fig-cap: The trust game
 %%| mermaid-format: png
 
@@ -254,7 +256,7 @@ Working backwards, the sender therefore has a choice between sending $x$ for a p
 
 ```{mermaid}
 %%| fig-width: 5
-%%| label: fig-trust-game
+%%| label: fig-trust-game-2
 %%| fig-cap: The trust game
 %%| mermaid-format: png
 

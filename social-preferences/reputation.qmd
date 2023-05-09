@@ -6,28 +6,52 @@ Partly this is for strategic reasons. For example, to attract reciprocal behavio
 
 However, there is also evidence that people simply care about what other people think.
 
-## Saving face
+## Example
 
-@andreoni2009 ran a non-anonymous dictator game.
+One example of this comes from @andreoni2009, who ran a non-anonymous dictator game.
 
 Each dictator was endowed with \$20.
 
 A computer then chose a distribution between the dictator and the receiver, selecting either (\$0, \$20) or (\$20, \$0) with equal probability. The dictator observes the allocation chosen by the computer, but the receiver does not.
 
-The computer's allocation is then implemented with a probability $p$. This probability is known to both the dictator and receiver.
+The computer's allocation is then implemented with a probability $p$. Otherwise, the dictator's allocation is made. This probability is known to both the dictator and receiver.
 
-If the dictators choice is to be implemented, the dictator makes a split of the \$20. The receiver learns only the allocation. They do not learn the dictator's choice.
+If the dictators choice is to be implemented, the dictator makes a split of the \$20, offering $x$ to the receiver. The receiver learns only the allocation. They do not learn the dictator's choice.
+
+```{mermaid}
+%%| fig-width: 5
+%%| label: fig-dictator-game-reputation
+%%| fig-cap: The dictator game with reputational concerns
+%%| mermaid-format: png
+
+graph TD
+    classDef default fill:#FFF
+    A[Computer] ---B["($0, $20) or ($20, $0)"] --> C[Random draw]
+    C ---D[p] --> E["($0, $20) or ($20, $0)" <br> as chosen by computer]
+    C ---F[1-p] --> G[Dictator choice] --> H["($20-x, x)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,G node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,F edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class E,H payoff;
+```
 
 Distributional preferences predict that $p$ should not affect the dictator's choice. The dictator should just think about the situation in which their choice matters.
 
 However, the experimental results did not conform with this prediction. Dictators condition their decision on the common knowledge of $p$.
 
-This chart shows how offers change with $p$ where the computer will offer 0 if selected.
+This chart shows how offers change with $p$ in circumstances the computer will offer 0 if selected. The x-axis shows $p$ equal to 0, 0.25, 0.5 and 0,.75. Each line represents a different bucket of offers. The red line is the proportion of dictators offering 0. The blue line represents the proportion of participants offering \$10, a 50:50 split.
 
 ![](img/andreoni-and-bernheim-2009-fig-3.jpg)
 
-For high $p$ and a computer allocation of 0 to the receiver, most dictators will offer 0.
+For $p$ of 0.5 or 0.75 and a computer allocation of 0 to the receiver, most dictators will offer 0. If the receiver receives a low allocation, the receiver will likely infer it is due to the computer's decision. They will not blame the dictator.
 
-For $p$ close to 0 and a computer allocation of 0 to the receiver, the majority of dictators will offer \$10 to the receiver.
+For $p$ of 0 and a computer allocation of 0 to the receiver, the majority of dictators will offer \$10 to the receiver. In this case, if the receiver receives a low allocation, the receiver will infer it is due to the dictator's decision, not that of the computer.
 
-For low $p$, if the receiver receives a low allocation, they will likely infer it is due to the dictator's decision. The dictator appears to care about their reputation in the eyes of the receiver.
+For a $p$ of 0.25, a slim majority of participants offer zero, with some plausible deniability due to the 25% probability of the offer coming from the computer.
+
+These results suggest the dictator cares about their reputation in the eyes of the receiver.

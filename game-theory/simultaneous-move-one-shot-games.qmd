@@ -138,22 +138,32 @@ For example, five players might each be given $10, with the pot doubled. Suppose
 
 ```{mermaid}
 %%| fig-width: 5
+%%| label: public-goods-game
+%%| fig-cap: The public goods game
+%%| mermaid-format: png
 
 graph TD
+    classDef default fill:#FFF
 
-A[Player A: $10] -->|$5| F[Pot $25]
-B[Player B: $10] -->|$5| F[Pot $25]
-C[Player C: $10] -->|$5| F[Pot $25]
-D[Player D: $10] -->|$5| F[Pot $25]
-E[Player E: $10] -->|$5| F[Pot $25]
+    A[Player A: $10] ---F[$5] --> K[Pot $25]
+    B[Player B: $10] ---G[$5] --> K
+    C[Player C: $10] ---H[$5] --> K
+    D[Player D: $10] ---I[$5] --> K
+    E[Player E: $10] ---J[$5] --> K
 
-F -->|2x| G[Multiplied Pot $50]
+    K  ---L{Multiplied by k} --> M[Multiplied Pot $50]
 
-G -->|$10| H[Player A: $15]
-G -->|$10| I[Player B: $15]
-G -->|$10| J[Player C: $15]
-G -->|$10| K[Player D: $15]
-G -->|$10| L[Player E: $15]
+    M --- N[$10] -->S[Player A: $15]
+    M --- O[$10] -->T[Player B: $15]
+    M --- P[$10] -->U[Player C: $15]
+    M --- Q[$10] -->V[Player D: $15]
+    M --- R[$10] -->W[Player E: $15]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,B,C,D,E,S,T,U,V,W node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class F,G,H,I,J,N,O,P,Q,R edge;
 
 ```
 
@@ -163,22 +173,31 @@ Consider the previous game, but this time Player E contributes nothing. There is
 
 ```{mermaid}
 %%| fig-width: 5
+%%| label: public-goods-game-2
+%%| fig-cap: The public goods game
+%%| mermaid-format: png
 
 graph TD
+    classDef default fill:#FFF
+    A[Player A: $10] ---F[$5] --> K[Pot $20]
+    B[Player B: $10] ---G[$5] --> K
+    C[Player C: $10] ---H[$5] --> K
+    D[Player D: $10] ---I[$5] --> K
+    E[Player E: $10] ---J[0] --> K
 
-A[Player A: $10] -->|$5| F[Pot $20]
-B[Player B: $10] -->|$5| F
-C[Player C: $10] -->|$5| F
-D[Player D: $10] -->|$5| F
-E[Player E: $10] -->|$0| F
+    K  ---L{Multiplied by k} --> M[Multiplied Pot $40]
 
-F -->|2x| G[Multiplied Pot $40]
+    M --- N[$8] -->S[Player A: $13]
+    M --- O[$8] -->T[Player B: $13]
+    M --- P[$8] -->U[Player C: $13]
+    M --- Q[$8] -->V[Player D: $13]
+    M --- R[$8] -->W[Player E: $18]
 
-G -->|$8| H[Player A: $13]
-G -->|$8| I[Player B: $13]
-G -->|$8| J[Player C: $13]
-G -->|$8| K[Player D: $13]
-G -->|$8| L[Player E: $18]
+    classDef node fill:#FFF, stroke:#000;
+    class A,B,C,D,E,S,T,U,V,W node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class F,G,H,I,J,N,O,P,Q,R edge;
 
 ```
 
@@ -186,21 +205,31 @@ The Pareto optimal result, however, is for all players to contribute their full 
 
 ```{mermaid}
 %%| fig-width: 5
+%%| label: public-goods-game-3
+%%| fig-cap: The public goods game
+%%| mermaid-format: png
 
 graph TD
+    classDef default fill:#FFF
 
-A[Player A: $10] -->|$10| F[Pot $50]
-B[Player B: $10] -->|$10| F
-C[Player C: $10] -->|$10| F
-D[Player D: $10] -->|$10| F
-E[Player E: $10] -->|$10| F
+    A[Player A: $10] ---F[$10] --> K[Pot $50]
+    B[Player B: $10] ---G[$10] --> K
+    C[Player C: $10] ---H[$10] --> K
+    D[Player D: $10] ---I[$10] --> K
+    E[Player E: $10] ---J[$10] --> K
 
-F -->|2x| G[Multiplied Pot $100]
+    K  ---L{Multiplied by k} --> M[Multiplied Pot $100]
 
-G -->|$20| H[Player A: $20]
-G -->|$20| I[Player B: $20]
-G -->|$20| J[Player C: $20]
-G -->|$20| K[Player D: $20]
-G -->|$20| L[Player E: $20]
+    M --- N[$20] -->S[Player A: $20]
+    M --- O[$20] -->T[Player B: $20]
+    M --- P[$20] -->U[Player C: $20]
+    M --- Q[$20] -->V[Player D: $20]
+    M --- R[$20] -->W[Player E: $20]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,B,C,D,E,S,T,U,V,W node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class F,G,H,I,J,N,O,P,Q,R edge;
 
 ```

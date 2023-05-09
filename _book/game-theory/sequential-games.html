@@ -63,9 +63,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -725,45 +722,34 @@ ul.task-list li input[type="checkbox"] {
 <p>The next example is the dictator game.</p>
 <p>In the dictator game, the dictator is given a fixed amount of money <span class="math inline">m</span>. They then offer a portion <span class="math inline">x</span> of the sum <span class="math inline">m</span> to the receiver. The game then ends.</p>
 <p>Exchange is unilateral. Receivers have an empty strategy set.</p>
-<div class="cell" data-fig-width="4">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-dictator-game" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;39.2: The dictator game</figcaption>
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-dictator-game">graph LR
-    classDef default fill:#FFF
-    A(Dictator) ---B[Send x] --&gt; D["(m-x, x)"]
-    A ---C[Send 0] --&gt; E["(m,0)"]
-    style A stroke:#000
-    style B stroke:#FFF
-    style C stroke:#FFF
-    style D stroke:#FFF
-    style E stroke:#FFF
-</pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sequential-games_files/figure-html/mermaid-figure-6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="sequential-games_files/figure-html/mermaid-figure-6.png" style="width:4in;height:1.7in" class="figure-img"></a></p>
+</figure>
+</div>
 </div>
 </figure>
 </div>
 </div>
 </div>
 <p>The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff <span class="math inline">m</span> (which is bolded).</p>
-<div class="cell" data-fig-width="4">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-dictator-game-solved" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;39.3: The dictator game solved</figcaption>
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-dictator-game-solved">graph LR
-    classDef default fill:#FFF
-    A(Dictator) ---B[Send x] --&gt; D["(m-x, x)"]
-    A ---C((Send 0)) --&gt; E["(&lt;b&gt;m&lt;/b&gt;,0)"]
-    style A stroke:#000
-    style B stroke:#FFF
-    style C stroke:#F00, stroke-width:4px
-    style D stroke:#FFF
-    style E stroke:#FFF
-
-</pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sequential-games_files/figure-html/mermaid-figure-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="sequential-games_files/figure-html/mermaid-figure-5.png" style="width:4in;height:2.03in" class="figure-img"></a></p>
+</figure>
+</div>
 </div>
 </figure>
 </div>
@@ -792,7 +778,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="sequential-games_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="sequential-games_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.55in" class="figure-img"></a></p>
+<p><a href="sequential-games_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="sequential-games_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.55in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -808,13 +794,13 @@ ul.task-list li input[type="checkbox"] {
 <p>The final outcome is <span class="math inline">(10−5+7.50, 10+15−7.50)=(12.50, 17.50)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-trust-game" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-trust-game-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;39.5: The trust game</figcaption>
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="sequential-games_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="sequential-games_files/figure-html/mermaid-figure-3.png" style="width:5in;height:0.8in" class="figure-img"></a></p>
+<p><a href="sequential-games_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="sequential-games_files/figure-html/mermaid-figure-3.png" style="width:5in;height:0.8in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -828,13 +814,13 @@ ul.task-list li input[type="checkbox"] {
 <p>Working backwards, the sender therefore has a choice between sending <span class="math inline">x</span> for a payoff of <span class="math inline">10-x</span> or sending <span class="math inline">0</span> for a payoff of <span class="math inline">10</span>. The sender will send <span class="math inline">0</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-trust-game" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-trust-game-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;39.6: The trust game</figcaption>
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="sequential-games_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="sequential-games_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.56in" class="figure-img"></a></p>
+<p><a href="sequential-games_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="sequential-games_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.56in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -1132,7 +1118,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 

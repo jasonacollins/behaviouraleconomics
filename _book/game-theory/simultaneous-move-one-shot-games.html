@@ -63,9 +63,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -717,81 +714,48 @@ ul.task-list li input[type="checkbox"] {
 <p>Each participant secretly and simultaneously chooses how much of their endowment they wish to contribute to a public pot.</p>
 <p>The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than 1, but less than the number of players.</p>
 <p>For example, five players might each be given $10, with the pot doubled. Suppose they each contribute $5 of their $10 endowment to the pot. The $25 contributed to the pot is multiplied by 2 to a total of $50. Each player then receives $10 from the pot, giving them $15 in total.</p>
-<div class="cell" data-fig-width="5">
+<div class="cell">
 <div class="cell-output-display">
+<div id="public-goods-game">
 <div>
-<div>
-<pre class="mermaid mermaid-js">graph TD
-
-A[Player A: $10] --&gt;|$5| F[Pot $25]
-B[Player B: $10] --&gt;|$5| F[Pot $25]
-C[Player C: $10] --&gt;|$5| F[Pot $25]
-D[Player D: $10] --&gt;|$5| F[Pot $25]
-E[Player E: $10] --&gt;|$5| F[Pot $25]
-
-F --&gt;|2x| G[Multiplied Pot $50]
-
-G --&gt;|$10| H[Player A: $15]
-G --&gt;|$10| I[Player B: $15]
-G --&gt;|$10| J[Player C: $15]
-G --&gt;|$10| K[Player D: $15]
-G --&gt;|$10| L[Player E: $15]
-
-</pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-1.png" style="width:5in;height:4.42in" class="figure-img"></a></p>
+</figure>
 </div>
+</div>
+<p>The public goods game</p>
 </div>
 </div>
 </div>
 <p>In Nash equilibrium in the public goods game, nobody transfers anything to the pot. Any contributions are split between all players, so if there are more players than the multiple, which is normally the case by design, contributions result in a loss to that individual player.</p>
 <p>Consider the previous game, but this time Player E contributes nothing. There is then $20 in the pot, which is doubled to $40. The pot is then split equally between the players, with each player receiving $8 from the pot. The result is that Player E is better off having not contributed, ending with $18, compared to the $15 they would have received had they contributed $5 like the other players.</p>
-<div class="cell" data-fig-width="5">
+<div class="cell">
 <div class="cell-output-display">
+<div id="public-goods-game-2">
 <div>
-<div>
-<pre class="mermaid mermaid-js">graph TD
-
-A[Player A: $10] --&gt;|$5| F[Pot $20]
-B[Player B: $10] --&gt;|$5| F
-C[Player C: $10] --&gt;|$5| F
-D[Player D: $10] --&gt;|$5| F
-E[Player E: $10] --&gt;|$0| F
-
-F --&gt;|2x| G[Multiplied Pot $40]
-
-G --&gt;|$8| H[Player A: $13]
-G --&gt;|$8| I[Player B: $13]
-G --&gt;|$8| J[Player C: $13]
-G --&gt;|$8| K[Player D: $13]
-G --&gt;|$8| L[Player E: $18]
-
-</pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-3.png" style="width:5in;height:4.42in" class="figure-img"></a></p>
+</figure>
 </div>
+</div>
+<p>The public goods game</p>
 </div>
 </div>
 </div>
 <p>The Pareto optimal result, however, is for all players to contribute their full endowment and each receives back their multiplied contribution. The Pareto optimal result is not stable, however, as each player has an incentive to defect and contribute nothing.</p>
-<div class="cell" data-fig-width="5">
+<div class="cell">
 <div class="cell-output-display">
+<div id="public-goods-game-3">
 <div>
-<div>
-<pre class="mermaid mermaid-js">graph TD
-
-A[Player A: $10] --&gt;|$10| F[Pot $50]
-B[Player B: $10] --&gt;|$10| F
-C[Player C: $10] --&gt;|$10| F
-D[Player D: $10] --&gt;|$10| F
-E[Player E: $10] --&gt;|$10| F
-
-F --&gt;|2x| G[Multiplied Pot $100]
-
-G --&gt;|$20| H[Player A: $20]
-G --&gt;|$20| I[Player B: $20]
-G --&gt;|$20| J[Player C: $20]
-G --&gt;|$20| K[Player D: $20]
-G --&gt;|$20| L[Player E: $20]
-
-</pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-2.png" style="width:5in;height:4.42in" class="figure-img"></a></p>
+</figure>
 </div>
+</div>
+<p>The public goods game</p>
 </div>
 </div>
 </div>
@@ -1084,7 +1048,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true});</script>
 
 
 

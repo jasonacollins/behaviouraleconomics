@@ -42,7 +42,7 @@ For each list, the subjects judged that the sex with more famous names was more 
 
 ## Anchoring and adjustment
 
-When using anchoring and adjustment, people estimate by starting from an initial value and adjusting from that value to obtain the final estimate.
+When using anchoring and adjustment, people estimate by starting from an initial value and adjust from that value to obtain the final estimate.
 
 Suppose you know the odds of outcome $A$, and want to estimate the odds of outcome $B$.  Anchoring and adjustment implies that you will start with the odds of outcome $A$ and adjust to obtain the odds of outcome $B$.
 
