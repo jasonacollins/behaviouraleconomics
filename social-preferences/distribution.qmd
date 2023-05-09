@@ -32,7 +32,7 @@ The proposer could only reject if a negative weight was applied to either their 
 
 An alternative distributional preference model that may explain some of these results is inequality aversion.
 
-The idea behind inequality aversion is that people may have a dislike of having less than other people and a dislike of having more than other people.
+The idea behind inequality aversion is that people may dislike having less than other people and dislike having more than other people.
 
 ### The Fehr-Schmidt model
 
@@ -196,6 +196,26 @@ If $\rho=\sigma=0$ we are left with the classical self-interested utility functi
 If $\rho=1$ and $\sigma=0$: $u_i(x_i,x_j)=\text{min}\{x_i,x_j\}$, the agent has Rawlsian preferences whereby the agent seeks the greatest benefit for the least advantaged.
 
 If $\rho=\sigma=1/2$: $u_i(x_i,x_j)=x_i+x_j$, the agent has utilitarian preferences whereby the agent seeks to maximise total utility.
+
+### Example: advice
+
+Agent A is going to their financial adviser to buy some life insurance. The adviser can sell them insurance that does not cover heart attacks but for which the adviser receives a huge sales commission (bad insurance). Or the adviser can sell Agent A comprehensive insurance for which their sales commission is lower (good insurance).
+
+The payoffs $(x,y)$ for each decision are indicated in the game tree below, with $x$ being the satisfaction of Agent A and $y$ being the satisfaction of the adviser.
+
+![](img/adviser-1.jpg){width=60%}
+
+Earlier we determined that if the adviser only cares about the payoffs, the adviser will choose to sell bad insurance.
+
+Agent A will therefore compare a payoff of 0 for no purchase and a payoff of -2 for purchase (knowing that they will be sold bad insurance). They will choose not to buy insurance.
+
+But uppose the adviser has social preferences, with a distaste for inequality. If the payoffs $x$ for Agent A and $y$ for the adviser are unequal, the adviser experiences dissatisfaction and their payoff becomes $y-3$. What would happen to the outcome in this case?
+
+The adviser's payoff for selling the bad insurance is now $4-3=1$. This is less than the payoff of 2 they receive for selling good insurance. They will now sell good insurance.
+
+Agent A now has a choice of a payoff of 0 for not purchasing insurance, and 2 for purchasing. They make the purchase.
+
+![](img/adviser-2.jpg){width=60%}
 
 ### Example: the trust game
 

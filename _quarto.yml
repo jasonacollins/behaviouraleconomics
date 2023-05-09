@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "4 May 2023"
+  date: "12 May 2023"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -23,7 +23,7 @@ book:
         - risk-and-uncertainty/expected-utility-theory.qmd
         - risk-and-uncertainty/subjective-expected-utility.qmd
         - risk-and-uncertainty/expected-utility-examples.qmd
-        - risk-and-uncertainty/anomalies-of-expected-utility-theory.qmd
+        - risk-and-uncertainty/anomalies-in-expected-utility-theory.qmd
         - risk-and-uncertainty/risk-and-uncertainty-exercises.qmd
     - part: prospect-theory/prospect-theory.qmd
       chapters:
@@ -74,7 +74,6 @@ book:
         - social-preferences/distribution.qmd
         - social-preferences/reputation.qmd
         - social-preferences/reciprocity.qmd
-        - social-preferences/social-preferences-examples.qmd
         - social-preferences/social-preferences-exercises.qmd
     - references.qmd
   navbar:

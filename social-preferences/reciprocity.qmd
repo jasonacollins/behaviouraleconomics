@@ -10,21 +10,50 @@ The second is intrinsic reciprocity. Agents reciprocate behaviour despite the ab
 
 ## Intentions
 
-We can see evidence for reciprocity in how people respond to the intentions of others.
+We can see evidence for reciprocity in how people respond to the intentions of others in the ultimatum game.
+
+The ultimatum game involves two players: the proposer and the responder.
+
+The proposer is given a fixed amount of money $m$. They then offer a portion $x$ of the sum $m$ to the responder.
+
+The responder can either accept or reject the offer. They make this decision knowing the fixed amount $m$ held by the proposer and the offer $x$.
+
+If the responder accepts, the responder receives the offer $x$ and the proposer gets the remainder $m-x$. If the responder rejects, both players receive nothing.
+
+```{mermaid}
+%%| fig-width: 5
+%%| label: fig-ultimatum-game-2
+%%| fig-cap: The ultimatum game
+%%| mermaid-format: png
+
+graph LR
+    A(Proposer) ---B[Offer x] --> C(Responder)
+    C ---D[Accept] --> E["(m-x, <b>x</b>)"]
+    C ---F[Reject] --> G["(0, 0)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class D,F edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class E,G payoff;
+```
 
 Consider this variation of the ultimatum game. In each of two scenarios, the proposer has a constrained choice of offers.
 
 In scenario 1, the proposer has a choice between offering a split of \$8 for the proposer and \$2 for the responder or \$5 for the proposer and \$5 for the responder. Responders tend to reject offers of \$2.
 
 ```{mermaid}
-%%| fig-width: 4
+%%| fig-width: 5
 %%| label: fig-ultimatum-game-scenario-1
 %%| fig-cap: Scenario 1 of the ultimatum game
 %%| mermaid-format: png
 
 graph LR
-    A(Proposer) ---B[Offer 2] --> C(Responder)
-    A(Proposer) ---D[Offer 5] --> E(Responder)
+    A(Proposer) ---B[Offer $2] --> C(Responder)
+    A(Proposer) ---D[Offer $5] --> E(Responder)
     C ---F[Accept] --> H["(8, 2)"]
     C ---G[Reject] --> I["(0, 0)"]
     E ---J[Accept] --> L["(5, 5)"]
@@ -44,14 +73,14 @@ graph LR
 In scenario 2, the proposer has a choice between offering a split of \$8 for the proposer and \$2 for the responder or keeping the full \$10 for themselves. Responders tend to accept offers of \$2.
 
 ```{mermaid}
-%%| fig-width: 4
-%%| label: fig-dictator-game-scenario-2
+%%| fig-width: 5
+%%| label: fig-ultimatum-game-scenario-2
 %%| fig-cap: Scenario 2 of the ultimatum game
 %%| mermaid-format: png
 
 graph LR
-    A(Proposer) ---B[Offer 2] --> C(Responder)
-    A(Proposer) ---D[Offer 0] --> E(Responder)
+    A(Proposer) ---B[Offer $2] --> C(Responder)
+    A(Proposer) ---D[Offer $0] --> E(Responder)
     C ---F[Accept] --> H["(8, 2)"]
     C ---G[Reject] --> I["(0, 0)"]
     E ---J[Accept] --> L["(10, 0)"]
@@ -99,8 +128,8 @@ The final outcome is the sender has $m-x+y$ and the receiver has $m+kx-y$.
 
 graph LR
     classDef default fill:#FFF
-    A(Sender) ---B[Send x] --> C{Multplied by k} --> D(Receiver)
-    D ---G[Return y] --> H["(10-x+y, 10+3x-y)"]
+    A(Sender) ---B[Send x] --> C{Multplied <br> by k} --> D(Receiver)
+    D ---G[Return y] --> H["(m-x+y, m+kx-y)"]
 
     classDef node fill:#FFF, stroke:#000;
     class A,D node;
@@ -143,9 +172,7 @@ In this game, each of N participants is given an initial endowment.
 
 Each participant secretly and simultaneously chooses how much of their endowment they wish to contribute to a public pot.
 
-The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than 1, but less than the number of players.
-
-For example, five players might each be given $10, with the pot doubled. Suppose they each contribute \$5 of their \$10 endowment to the pot. The \$25 contributed to the pot is multiplied by 2 to a total of \$50. Each player then receives $10 from the pot, giving them \$15 in total.
+The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than one, but less than the number of players.
 
 ```{mermaid}
 %%| fig-width: 5
@@ -181,7 +208,7 @@ In Nash equilibrium in the public goods game, nobody transfers anything to the p
 
 This is not what we see when people play the public goods game in the lab.
 
-In a meta-analysis, @zelmer2003 found an average contribution of 38% of the endowment. The amnount contributed increased with the marginal per capita return; that is the higher $k/N$.
+In a meta-analysis, @zelmer2003 found an average contribution of 38% of the endowment. The amount contributed increased with the marginal per capita return; that is the higher $k/N$.
 
 One possible explanation is that players trust that the other players will contribute, so they desire to reciprocate the expected contributions from others.
 

@@ -1,0 +1,170 @@
+# Anomalies in expected utility theory
+
+In this part, I show several anomalies in expected utility theory.
+
+## The Allais Paradox {#sec-allais}
+
+The first is one of the most famous anomalies in expected utility theory, the Allais paradox.
+
+First identified by @allais1953, the paradox emerges from the pattern of response to two pairs of bets. The following example comes from @kahneman1979.
+
+For choice 1, the player is asked to choose one of the following bets:
+
+> Bet A:
+>
+> -   \$2500 with probability: 33%
+> -   \$2400 with probability: 66%
+> -   \$0 with probability: 1%
+>
+> Bet B:
+>
+> -   \$2400 with probability: 100%
+
+When @kahneman1979 ran this experiment, 82% of participants chose option B.
+
+For choice 2, the player is again asked to choose one of two bets:
+
+> Bet C:
+>
+> -   \$2500 with probability: 33%\
+> -   \$0 with probability: 67%
+> 
+> Bet D:
+>
+> -   \$2400 with probability: 34%
+> -   \$0 with probability: 66%
+
+When @kahneman1979 ran this experiment, 83% of participants chose option C.
+
+According to expected utility theory, if an agent selects B, the expected utility of B must be greater than the expected utility of A. That is:
+
+$$
+U(2400)>0.33U(2500)+0.66U(2400)+0.01U(0)
+$$
+
+$$
+0.34U(2400)>0.33U(2500)+0.01U(0)
+$$
+
+According to expected utility theory, if an agent selects C, the expected utility of C must be greater than the expected utility of D. That is:
+
+$$
+0.33U(2500)+0.67U(0)> 0.34U(2400)+ 0.66U(0)
+$$
+
+$$
+0.33U(2500)+0.01U(0)> 0.34U(2400)
+$$
+
+This is a contradiction. Under expected utility theory, if an agent chooses A it should choose C. And if the agent chooses B it should choose D.
+
+Why does this occur? What axiom is being breached?
+
+To understand this, I will show you another representation of the choices in the form of this table. The left half of the table shows the bets for choice 1, and the right half shows the bets for choice 2. Within each choice, the bets are represented as a payoff-chance pair. For example, I can read from the table that bet A involves a 66% chance of \$2400, a 1% chance of \$0, and a 33% chance of \$2500. Bet B involves a 100% chance of \$2400.
+
+![](img/allais-paradox-1.jpg)
+
+I can then break each of these payoff-chance pairs to create an alternative equivalent representation as in this table. I have split the outcomes in bets B and C. For example, I have written the 100% chance of \$2400 in option B as a 66% chance of \$2400 and a 34% chance of \$2400. I have written the 67% chance of \$0 in bet C as a 66% chance of \$0 and a 1% chance of \$0.
+
+![](img/allais-paradox-2.jpg)
+
+With this split, you can see that the bets contained in the bottom two rows are the same. Both choice 1 and choice 2 involve a choice between a 1% chance of nothing and 33% chance of \$2,500 and a 24% chance of \$2,400.
+
+That common bet in Choice 1 and choice 2 is paired with a 66% chance of a common payoff. For choice 1 that common payoff across bet A and bet B is \$2400. For choice 2, that common payoff across bet C and bet D is \$0.
+
+![](img/allais-paradox-3.jpg)
+
+Preferring bet B to bet A and bet C to bet D is a violation of the axiom of the [independence of irrelevant alternatives](@sec-independence). Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble.
+
+Here's one intuitive way to think about it.
+
+Suppose the gamble was framed as follows. We are going to randomly generate a number between 0 and 100.
+
+Imagine there are 100 tickets numbered 1 to 100. One ticket will be drawn. If a ticket between 1 and 66 is drawn, you win the prize in the first row. If ticket 67 is drawn, you win the amount in the second. If a 68 to 100 is drawn, you win the sum in the third.
+
+Suppose that you know the ticket that is drawn is between 1 and 66. Would you prefer A or B? As you would win \$2400 with either choice, you will be indifferent. You will similarly be indifferent between C and D, winning \$0 no matter what.
+
+Suppose instead that a ticket between 67 and 100 is drawn, but you don't know which. You can see that if you prefer A to B, you should also prefer C to D. In each choice you are effectively facing the same bet. Let's assume for the moment that you prefer A and C.
+
+Finally, suppose you don't know what ticket will be drawn. We have just determined that if you know the ticket is between 1 and 66 you are indifferent between the options, but if between 67 and 100 is drawn you prefer A and C. You do not prefer B or D when the ticket range is 1 to 66 or 67 to 100, so you should not prefer B or D when the ticket number is unknown.
+
+We can also express this in terms of the formal definition of the independence of irrelevant alternatives axiom. The formal definition states that if:
+
+-   $x$ and $y$ are lotteries with $x\succcurlyeq y$ and
+-   $p$ is the probability that a third option $z$ is present, then:
+
+$$
+pz+(1-p)x\succcurlyeq pz+(1-p)y
+$$
+
+For each of the choices in our lottery:
+
+-   $x$ is a 100% chance of \$2400
+
+-   $y$ is a 0.01/0.34 chance of \$0 and 0.33/0.34 chance of \$2500
+
+-   $z$ is \$2400 in choice 1 and \$0 in choice 2, although $z$'s value should not matter due to its assumed irrelevance.
+
+If $p=0$, we simply have $x\succcurlyeq y$. For any non-zero value of p, 
+
+## Absurd rates of risk aversion {#sec-absurd}
+
+I offer you the following one-off bet by flipping a coin:
+
+> Head: You win \$550
+>
+> Tail: You lose \$500
+
+Would you accept this bet?
+
+@barberis2006 offered a real \$550:\$500 bet to experimental participants including those with substantial wealth (MBA students, hedge fund managers, etc.).
+
+70% of the sample turned down the bet, including professional investors with wealth above \$10 million.
+
+Under the axiom of diminishing marginal utility, we would conclude people are risk averse to small bets.
+
+But, for sufficiently high levels of wealth, $U(x)$ is approximately linear and people always take favourable bets.
+
+The minimum $U(x)$ curvature required to reconcile an investor with \$10 million investor downing a 50:50 bet as small as +\$550 or -\$500 would imply that agents reject immensely favourable bets, which is not realistic.
+
+@rabin2000 showed that rejection of bets over moderate stakes can require absurd rates of risk aversion. For instance, if a person who acts consistent with expected utility theory always turns down a 50:50 bet to win \$110 or lose \$100 whatever their initial level of wealth, they will also turn down a 50:50 bet to win \$1 billion, lose \$1,000.
+
+## Framing
+
+@kahneman1984 reported the following experiment.
+
+> A group of experimental participants were shown the following:
+>
+> Imagine that the U.S. is preparing for the outbreak of an unusual Asian disease, which is expected to kill 600 people. Two alternative programs to combat the disease have been proposed. Assume that the exact scientific estimates of the consequences of the programs are as follows:
+>
+> If Program A is adopted, 200 people will be saved.
+>
+> If Program B is adopted, there is a one-third probability that 600 people will be saved and a two-thirds probability that no people will be saved.
+>
+> Which of the two programs would you favour?
+
+72% of participants chose option A.
+
+Another group of experimental participants were shown the following:
+
+> Imagine that the U.S. is preparing for the outbreak of an unusual Asian disease, which is expected to kill 600 people. Two alternative programs to combat the disease have been proposed. Assume that the exact scientific estimates of the consequences of the programs are as follows:
+>
+> If Program C is adopted, 400 people will die.
+>
+> If Program D is adopted, there is a one-third probability that nobody will die and a two-thirds probability that 600 people will die.
+>
+> Which of the two programs would you favour?
+
+22% of participants chose option C.
+
+72% of participants chose A and 22% of participants chose option C. Yet these two options are equivalent.
+
+## Reference points
+
+Consider the following two scenarios:
+
+-   You have not checked your share portfolio in a while. You expect that the portfolio is worth around \$40,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
+
+-   You have not checked your share portfolio in a while. You expect that the portfolio is worth around \$20,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
+
+Under expected utility theory, those two scenarios should feel the same as you have $U$(\$30,000) in both cases.
