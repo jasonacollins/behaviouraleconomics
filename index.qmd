@@ -2,7 +2,7 @@
 
 Welcome to these notes on behavioural economics.
 
-These notes are based on an undergraduate subject I teach in as part of UTS’s Bachelor of Economics program, [23005 Behavioural Economics](https://handbook.uts.edu.au/subjects/23005.html).
+These are the notes for the UTS undergraduate subject [23005 Behavioural Economics](https://handbook.uts.edu.au/subjects/23005.html).
 
 I take a traditional approach. I start with the basic economic and game theory foundations. I then examine what happens when we introduce a richer view of human behaviour. I look at how we make decisions under risk and uncertainty, and over time, how we judge probability and how we interact with others.
 
@@ -12,7 +12,7 @@ There are no mathematical prerequisites for this subject. Hence, the mathematics
 
 I have created videos to accompany these notes. You can find links to them and other teaching materials on my website at [www.jasoncollins.blog/teaching/](https://www.jasoncollins.blog/teaching/).
 
-These course notes cover the following areas:
+These notes cover the following areas:
 
 - **Economic foundations**: The core economic concepts that we will use and modify in exploring behavioural economics.
 - **Decision making under risk and uncertainty**: The traditional economic approach to decision making under risk and uncertainty, and some empirical anomalies that arise when using this approach.

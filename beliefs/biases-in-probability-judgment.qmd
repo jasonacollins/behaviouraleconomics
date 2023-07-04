@@ -116,6 +116,7 @@ P(\text{blue}|\text{claim blue})&=\frac{P(\text{claim blue}|\text{blue})P(\text{
 &=0.41
 \end{align*}
 ```
+
 ### Medical diagnosis
 
 We can also see base rate neglect in the context of diagnosing a rare disease.
@@ -152,6 +153,7 @@ P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\
 &=`r round((0.9*0.01)/(0.9*0.01 + 0.09*0.99), 3)`
 \end{align*}
 ```
+
 The correct answer becomes more apparent if I show an alternative representation using natural frequencies:
 
 > You test yourself for COVID-19. The following information is known:
@@ -185,11 +187,12 @@ By introducing the base-rate neglect in Bayes' rule, we match the empirical resu
 ```{=tex}
 \begin{align*}
 P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
-&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&\text{+ve}|\text{COVID})P(\text{COVID})\\&+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[12pt]
+&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&\text{+ve}|\text{COVID})P(\text{COVID})\\&+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[30pt]
 &=\frac{0.9\times 0.5}{0.9\times 0.5 + 0.09\times 0.5} \\[12pt]
 &=`r round((0.9*0.5)/(0.9*0.5 + 0.09*0.5), 3)`
 \end{align*}
 ```
+
 ## Probability matching
 
 Probability matching is the tendency of people to mirror the probability distributions they observe in their predictions of events. For example, if asked to predict whether a die will show a six or not, they will predict six around one in six rolls.
@@ -211,7 +214,7 @@ With probability matching, the probability of a successful guess is:
 
 ```{=tex}
 \begin{align*}
-p(\text{success})&=0.7\times 0.7+0.3\times0.3 \\
+p(\text{success})&=0.7\times 0.7+0.3\times0.3 \\[6pt]
 &=`r 0.7*0.7+0.3*0.3`
 \end{align*}
 ```
@@ -365,12 +368,24 @@ Using $H_i$ or $T_i$ to represent a head or tail on the $i$-th flip and X_i to r
 ```{=tex}
 \begin{align*}
 P(T_2|H_1\cap X_2)&=\frac{P(X_2|H_1\cap T_2)P(H_1\cap T_2)}{P(H_1\cap X_2)} \\[12pt]
-&=\underbrace{\frac{P(X_2|H_1\cap T_2)P(H_1\cap T_2)}{P(X_2|H_1\cap T_2)P(H_1\cap T_2)+P(X_2|H_1\cap H_2)P(H_1\cap H_2)}}_{\text{Expanding the denominator using the formula for total probability}} \\[30pt]
+&=\underbrace{
+  \frac{
+    P(X_2|H_1\cap T_2)P(H_1\cap T_2)
+    }{
+      \Bigg(\begin{aligned}P(&X_2|H_1\cap T_2)P(H_1\cap T_2)\\&+P(X_2|H_1\cap H_2)P(H_1\cap H_2)\end{aligned}\Bigg)
+      }
+  }_{\text{Expand denominator using formula for total probability}} \\[48pt]
 &=\frac{1\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
 &=\frac{2}{3} \\[6pt]
 \\
 P(H_2|H_1\cap X_2 )&=\frac{P(X_2|H_1\cap H_2)P(H_1\cap H_2)}{P(H_1\cap X_2)} \\[12pt]
-&=\underbrace{\frac{P(X_2|H_1\cap H_2)P(H_1\cap H_2)}{P(X_2|H_1\cap T_2)P(H_1\cap T_2)+P(X_2|H_1\cap H_2)P(H_1\cap H_2)}}_{\text{Expanding the denominator using the formula for total probability}} \\[30pt]
+&=\underbrace{
+  \frac{
+    P(X_2|H_1\cap H_2)P(H_1\cap H_2)
+    }{
+      \Bigg(\begin{aligned}P(&X_2|H_1\cap T_2)P(H_1\cap T_2)\\&+P(X_2|H_1\cap H_2)P(H_1\cap H_2)\end{aligned}\Bigg)
+      }
+  }_{\text{Expand denominator using formula for total probability}} \\[48pt]
 &=\frac{0.5\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
 &=\frac{1}{3}
 \end{align*}

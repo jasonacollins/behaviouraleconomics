@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,7 +79,8 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -151,7 +152,7 @@ div.csl-indent {
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
-    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -164,7 +165,7 @@ div.csl-indent {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../beliefs/beliefs.html">Beliefs</a></li><li class="breadcrumb-item"><a href="../beliefs/probability-foundations.html"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Probability foundations</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -692,12 +693,9 @@ P(A\spadesuit \cap A\spadesuit)&amp;=P(A\spadesuit)\cdot P(A\spadesuit) \\[6pt]
 <p>The probability of drawing an Ace on the first draw is 4 in 52. If I draw an Ace in the first draw, the probability of drawing an Ace on the second is 3 in 51. There is one less Ace and one less card than for the first draw. By multiplying the probability of these two events together, we can get the probability of an Ace on both draws.</p>
 <span class="math display">\begin{align*}
 P(\text{Ace 1st}\cap\text{Ace 2nd})&amp;=P(\text{Ace 1st})\cdot P(\text{Ace 2nd}|\text{Ace 1st}) \\[6pt]
-&amp;=\frac{4}{52}\times \frac{3}{51} \\[12pt] % &lt;1&gt;
+&amp;=\frac{4}{52}\times \frac{3}{51} \\[12pt]
 &amp;=\frac{1}{221}
 \end{align*}</span>
-<ol type="1">
-<li>Testing annotation</li>
-</ol>
 <section id="formula-for-conditional-probability" class="level3" data-number="32.2.1">
 <h3 data-number="32.2.1" class="anchored" data-anchor-id="formula-for-conditional-probability"><span class="header-section-number">32.2.1</span> Formula for conditional probability</h3>
 <p>We can see that the solution to this problem has taken the form:</p>
@@ -1228,7 +1226,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 

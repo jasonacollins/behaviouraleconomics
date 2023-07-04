@@ -1,8 +1,6 @@
 # Expected Utility Theory
 
-## Maximising expected utility
-
-Under expected utility theory, people do not seek to maximize expected value but instead maximize expected utility.
+Under expected utility theory, people do not seek to maximize expected value but instead, maximize expected utility.
 
 Under expected utility theory, people choose between risky prospects (prospect being another word for lottery or gamble common in the literature) by comparing expected utility values. An agent would pick the option that maximises their expected utility.
 
@@ -95,7 +93,7 @@ Finally, the horizontal dashed line identifying E[U(X)] allows us to identify th
 
 A risk-neutral person is an expected value maximiser. They are indifferent between $10 for certain and a gamble with an expected value of $10. The certainty equivalent of the prospect for this person would also be $10.
 
-The following chart illustrates. Again we have two possible outcomes, $x_1$ and $x_2$ with resulting utility $U(x_1)$. and $U(x_2)$.
+The following chart illustrates. Again we have two possible outcomes, $x_1$ and $x_2$ with resulting utility $U(x_1)$ and $U(x_2)$.
 
 A line between the points on the utility curve for each of those outcomes lies on the utility curve itself. For any probability, the utility of the expected value and the expected utility are the same.
 

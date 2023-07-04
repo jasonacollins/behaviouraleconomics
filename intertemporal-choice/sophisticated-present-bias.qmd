@@ -21,7 +21,7 @@ A sophisticated and naive person can make different decisions despite having the
 
 The naive agent makes its plans by forward reasoning, starting from today ($t=0$).
 
-1.  First they decide their preferred option for $t=0$, believing that they will stick to their plan once they move to the next period.
+1.  First, they decide their preferred option for $t=0$, believing that they will stick to their plan once they move to the next period.
 
 2.  When they move to the next period ($t=1$) they recompute their preferred plan, again believing they will stick to the plan once they move to the next period.
 

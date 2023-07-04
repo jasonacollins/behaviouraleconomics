@@ -109,12 +109,10 @@ The probability of drawing an Ace on the first draw is 4 in 52. If I draw an Ace
 ```{=tex}
 \begin{align*}
 P(\text{Ace 1st}\cap\text{Ace 2nd})&=P(\text{Ace 1st})\cdot P(\text{Ace 2nd}|\text{Ace 1st}) \\[6pt]
-&=\frac{4}{52}\times \frac{3}{51} \\[12pt] % <1>
+&=\frac{4}{52}\times \frac{3}{51} \\[12pt]
 &=\frac{1}{221}
 \end{align*}
 ```
-
-1. Testing annotation
 
 ### Formula for conditional probability
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,7 +79,8 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -147,7 +148,7 @@ div.csl-indent {
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
-    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -160,7 +161,7 @@ div.csl-indent {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../social-preferences/social-preferences.html">Social preferences</a></li><li class="breadcrumb-item"><a href="../social-preferences/distribution.html"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Distribution</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -593,7 +594,7 @@ div.csl-indent {
   <li><a href="#the-fehr-schmidt-model" id="toc-the-fehr-schmidt-model" class="nav-link" data-scroll-target="#the-fehr-schmidt-model"><span class="header-section-number">47.2.1</span> The Fehr-Schmidt model</a></li>
   <li><a href="#the-ultimatum-game" id="toc-the-ultimatum-game" class="nav-link" data-scroll-target="#the-ultimatum-game"><span class="header-section-number">47.2.2</span> The ultimatum game</a></li>
   </ul></li>
-  <li><a href="#a-general-model-of-distributional-preferences" id="toc-a-general-model-of-distributional-preferences" class="nav-link" data-scroll-target="#a-general-model-of-distributional-preferences"><span class="header-section-number">47.3</span> A general model of distributional preferences</a>
+  <li><a href="#the-charness-rabin-model" id="toc-the-charness-rabin-model" class="nav-link" data-scroll-target="#the-charness-rabin-model"><span class="header-section-number">47.3</span> The Charness-Rabin model</a>
   <ul class="collapse">
   <li><a href="#example-advice" id="toc-example-advice" class="nav-link" data-scroll-target="#example-advice"><span class="header-section-number">47.3.1</span> Example: advice</a></li>
   <li><a href="#example-the-trust-game" id="toc-example-the-trust-game" class="nav-link" data-scroll-target="#example-the-trust-game"><span class="header-section-number">47.3.2</span> Example: the trust game</a></li>
@@ -647,7 +648,7 @@ U_i(x_i,x_j)=x_i+\alpha x_j
 <p>One basic mode of inquality aversion comes from the utility function in <span class="citation" data-cites="fehr1999">Fehr and Schmidt (<a href="../references.html#ref-fehr1999" role="doc-biblioref">1999</a>)</span>:</p>
 <p>It is of the following form:</p>
 <p><span class="math display">
-U_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
+u_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
 </span></p>
 <p>The three terms in this function represent:</p>
 <ul>
@@ -655,6 +656,13 @@ U_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
 <li><p>Their dislike of having less than the other agent (where <span class="math inline">\alpha&gt;0</span>)</p></li>
 <li><p>Their dislike of having more than the other agent (where <span class="math inline">\beta&gt;0</span>)</p></li>
 </ul>
+<p>We can also write this utility function as:</p>
+<p><span class="math display">
+u_i(x_i,x_j)=x_i-\left\{\begin{matrix}
+\beta(x_i-x_j) \quad &amp;\textrm{if} \quad x_i \geq x_j \\[6pt]
+\alpha(x_j-x_i) \quad &amp;\textrm{if} \quad x_i &lt; x_j
+\end{matrix}\right.
+</span></p>
 <p>Typically <span class="math inline">\alpha&gt;\beta</span> as people dislike having less than others than they dislike having more than others. We could also set <span class="math inline">\beta&lt;0</span> for an agent that likes to be better off than others.</p>
 <p>This utility function has a kink at <span class="math inline">x_j</span> where agent <span class="math inline">i</span> moves from having less to more than agent <span class="math inline">j</span>. If <span class="math inline">0&lt;\beta&lt;1</span> as in this diagram, the utility of agent <span class="math inline">i</span>, <span class="math inline">U(x_i)</span> continues to increase in <span class="math inline">x_i</span> above <span class="math inline">x_j</span>, but at a decreasing rate as inequality degrades the benefits of having more.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -725,9 +733,9 @@ U_R(x_P,x_R)=\left\{\begin{matrix}
 </div>
 </section>
 </section>
-<section id="a-general-model-of-distributional-preferences" class="level2" data-number="47.3">
-<h2 data-number="47.3" class="anchored" data-anchor-id="a-general-model-of-distributional-preferences"><span class="header-section-number">47.3</span> A general model of distributional preferences</h2>
-<p><span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> developed a more general utility function that captures the possible forms of distributional preference. An agent’s attitude toward others depends on their relative position. The utility function is:</p>
+<section id="the-charness-rabin-model" class="level2" data-number="47.3">
+<h2 data-number="47.3" class="anchored" data-anchor-id="the-charness-rabin-model"><span class="header-section-number">47.3</span> The Charness-Rabin model</h2>
+<p><span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> developed a utility function that captures the possible forms of distributional preference. An agent’s attitude toward others depends on their relative position. The utility function is:</p>
 <p><span class="math display">
 u_i(x_i,x_j)=\left\{\begin{matrix}
 \rho x_j+(1-\rho)x_i \quad &amp;\textrm{if} \quad x_i \geq x_j \\[6pt]
@@ -736,23 +744,40 @@ u_i(x_i,x_j)=\left\{\begin{matrix}
 </span></p>
 <p>Where <span class="math inline">x_i</span> is the payoff to player <span class="math inline">i</span> and <span class="math inline">x_j</span> is the payoff to the other player.</p>
 <p><span class="math inline">\rho</span> and <span class="math inline">\sigma</span> capture the agent’s attitudes toward others. When the agent is ahead the other player’s welfare enters their utility via <span class="math inline">\rho</span>. When the agent is behind the other player’s welfare enters agent’s utility via <span class="math inline">\sigma</span>. For most people <span class="math inline">\rho&gt;\sigma</span>. They give more weight to others’ utility when they are better off. <span class="math inline">\sigma</span> can also be less than zero. If they are behind someone they place negative weight on further gains by that person.</p>
-<p>Consider the following example.</p>
-<p>A dictator has less than the other player. Their <span class="math inline">\sigma=−1/2</span> (they have less than the other player, so <span class="math inline">\sigma</span> is the relevant parameter). They must decide between the allocations (1, 0) and (5, 1).</p>
-<p>They calculate the utility of each allocation.</p>
+<p>This utility function is equivalent to that of <span class="citation" data-cites="fehr1999">Fehr and Schmidt (<a href="../references.html#ref-fehr1999" role="doc-biblioref">1999</a>)</span>. You can rearrange the terms to show that <span class="math inline">\beta=\rho</span> and <span class="math inline">\alpha=-\sigma</span>. However, <span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> argued that there was evidence for distributional preferences beyond inequality aversion and that a broader range of parameters for <span class="math inline">\rho</span> and <span class="math inline">\sigma</span> were needed.</p>
+<p>Consider the following example of the dictator game. In the dictator game, the dictator makes a unilateral offer to the receiver. The game then ends. The receiver has an empty strategy set.</p>
+<p>In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where $(x_D,x_R) represent the payoffs for the dictator and receiver respectively. Under each distribution they have less than the other player. Their <span class="math inline">\sigma=−1/2</span>. As they have less than the other player, <span class="math inline">\sigma</span> is the relevant parameter.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-dictator-game-distribution" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<figcaption class="figure-caption">Figure&nbsp;47.1: A constrained dictator game</figcaption>
+<div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="distribution_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="distribution_files/figure-html/mermaid-figure-1.png" style="width:4in;height:1.55in" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>The dictator calculates the utility of each allocation.</p>
 <span class="math display">\begin{align*}
-U(1,0)&amp;=\sigma\times 1+(1−\sigma)\times 0 \\[6pt]
+U(0,1)&amp;=\sigma\times 1+(1−\sigma)\times 0 \\[6pt]
 &amp;=−1/2×1+(1+1/2)\times 0 \\[6pt]
 &amp;=−1/2 \\[12pt]
-U(5,1)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
+U(1,5)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 &amp;=−1/2×5+(1+1/2)\times 1 \\[6pt]
 &amp;=−1
 \end{align*}</span>
-<p>They prefer to allocate (1,0), even though it is worse for them, because it is also worse for the other player.</p>
+<p>The dictator prefers to allocate (0,1), even though it is worse for them, because it is also worse for the other player.</p>
 <p><span class="math inline">\sigma&lt;0</span> can also account for the rejection of low offers in the ultimatum game.</p>
 <p>The <span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> model can capture many forms of distributional preferences. Some are as follows.</p>
-<p>If <span class="math inline">1\geq\sigma\geq0</span>, the agent is altruistic. A higher payoff to the other player increases the agent’s utility</p>
-<p>If <span class="math inline">1\geq\rho\geq0\geq\sigma</span>, the agent is inequality averse. If the other player has more, the agent’s utility decreases with further gains for the other player. If the other player has less, the agent’s utility increases with further gains for either agent.</p>
-<p>If <span class="math inline">0\geq\rho\geq\sigma</span>, the agent is status-seeking. They gain more utility by having more than the other player. Their utility goes up when either they get more or the other player gets less.</p>
+<p>If <span class="math inline">\sigma&gt;0</span> and <span class="math inline">\rho&gt;0</span>, the agent is altruistic. A higher payoff to the other player increases the agent’s utility</p>
+<p>If <span class="math inline">1\geq\rho\geq 0&gt;\sigma</span>, the agent is inequality averse. If the other player has more, the agent’s utility decreases with further gains for the other player. If the other player has less, the agent’s utility increases with further gains for either agent.</p>
+<p>If <span class="math inline">0&gt;\rho\geq\sigma</span>, the agent is status-seeking. They gain more utility by having more than the other player. Their utility goes up when either they get more or the other player gets less.</p>
 <p>If <span class="math inline">\rho=\sigma=0</span> we are left with the classical self-interested utility function. The agent only cares about their own payoff.</p>
 <p>If <span class="math inline">\rho=1</span> and <span class="math inline">\sigma=0</span>: <span class="math inline">u_i(x_i,x_j)=\text{min}\{x_i,x_j\}</span>, the agent has Rawlsian preferences whereby the agent seeks the greatest benefit for the least advantaged.</p>
 <p>If <span class="math inline">\rho=\sigma=1/2</span>: <span class="math inline">u_i(x_i,x_j)=x_i+x_j</span>, the agent has utilitarian preferences whereby the agent seeks to maximise total utility.</p>
@@ -762,7 +787,7 @@ U(5,1)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 <p>The payoffs <span class="math inline">(x,y)</span> for each decision are indicated in the game tree below, with <span class="math inline">x</span> being the satisfaction of Agent A and <span class="math inline">y</span> being the satisfaction of the adviser.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/adviser-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/adviser-1.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="img/adviser-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/adviser-1.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 <p>Earlier we determined that if the adviser only cares about the payoffs, the adviser will choose to sell bad insurance.</p>
@@ -772,7 +797,7 @@ U(5,1)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 <p>Agent A now has a choice of a payoff of 0 for not purchasing insurance, and 2 for purchasing. They make the purchase.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/adviser-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/adviser-2.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="img/adviser-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/adviser-2.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 </section>
@@ -789,11 +814,11 @@ U(5,1)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 <div class="cell-output-display">
 <div id="fig-trust-game-example-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;47.1: The trust game</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;47.2: The trust game</figcaption>
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="distribution_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="distribution_files/figure-html/mermaid-figure-1.png" style="width:5in;height:1.69in" class="figure-img"></a></p>
+<p><a href="distribution_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="distribution_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.68in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -854,11 +879,11 @@ U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 <div class="cell-output-display">
 <div id="fig-trust-game-example-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;47.2: The trust game</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;47.3: The trust game</figcaption>
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="distribution_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="distribution_files/figure-html/mermaid-figure-3.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
+<p><a href="distribution_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="distribution_files/figure-html/mermaid-figure-3.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -871,11 +896,11 @@ U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 <div class="cell-output-display">
 <div id="fig-trust-game-example-3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;47.3: The trust game</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;47.4: The trust game</figcaption>
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="distribution_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="distribution_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
+<p><a href="distribution_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="distribution_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -1180,7 +1205,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 

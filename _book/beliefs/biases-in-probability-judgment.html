@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -113,7 +113,8 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -185,7 +186,7 @@ div.csl-indent {
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
-    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -198,7 +199,7 @@ div.csl-indent {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../beliefs/beliefs.html">Beliefs</a></li><li class="breadcrumb-item"><a href="../beliefs/biases-in-probability-judgment.html"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -820,7 +821,7 @@ P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}
 <p>By introducing the base-rate neglect in Bayes’ rule, we match the empirical result:</p>
 <span class="math display">\begin{align*}
 P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
-&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&amp;\text{+ve}|\text{COVID})P(\text{COVID})\\&amp;+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[12pt]
+&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&amp;\text{+ve}|\text{COVID})P(\text{COVID})\\&amp;+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[30pt]
 &amp;=\frac{0.9\times 0.5}{0.9\times 0.5 + 0.09\times 0.5} \\[12pt]
 &amp;=0.909
 \end{align*}</span>
@@ -840,7 +841,7 @@ P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}
 <p>The predictions tend to reflect the actual probabilities of the two light bulbs being turned on. People tend to predict 70% of the time that the red lamp will come on and 30% of the time that the green lamp will come on.</p>
 <p>With probability matching, the probability of a successful guess is:</p>
 <span class="math display">\begin{align*}
-p(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\
+p(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\[6pt]
 &amp;=0.58
 \end{align*}</span>
 <p>A better strategy is always to select the event with the highest probability. In this example, participants should always predict that the red light will be turned on, giving them a 70% probability of a successful guess.</p>
@@ -981,12 +982,24 @@ P(A|B\cap C)=\frac{P(B|A\cap C)P(A\cap C)}{P(B\cap C)}
 <p>Using <span class="math inline">H_i</span> or <span class="math inline">T_i</span> to represent a head or tail on the <span class="math inline">i</span>-th flip and X_i to represent selection of flip <span class="math inline">i</span>, we can show the probability of a tail given we have selected flip 2 using Bayes’ rule. Using the equation we derived earlier involving three potential outcomes:</p>
 <span class="math display">\begin{align*}
 P(T_2|H_1\cap X_2)&amp;=\frac{P(X_2|H_1\cap T_2)P(H_1\cap T_2)}{P(H_1\cap X_2)} \\[12pt]
-&amp;=\underbrace{\frac{P(X_2|H_1\cap T_2)P(H_1\cap T_2)}{P(X_2|H_1\cap T_2)P(H_1\cap T_2)+P(X_2|H_1\cap H_2)P(H_1\cap H_2)}}_{\text{Expanding the denominator using the formula for total probability}} \\[30pt]
+&amp;=\underbrace{
+  \frac{
+    P(X_2|H_1\cap T_2)P(H_1\cap T_2)
+    }{
+      \Bigg(\begin{aligned}P(&amp;X_2|H_1\cap T_2)P(H_1\cap T_2)\\&amp;+P(X_2|H_1\cap H_2)P(H_1\cap H_2)\end{aligned}\Bigg)
+      }
+  }_{\text{Expand denominator using formula for total probability}} \\[48pt]
 &amp;=\frac{1\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
 &amp;=\frac{2}{3} \\[6pt]
 \\
 P(H_2|H_1\cap X_2 )&amp;=\frac{P(X_2|H_1\cap H_2)P(H_1\cap H_2)}{P(H_1\cap X_2)} \\[12pt]
-&amp;=\underbrace{\frac{P(X_2|H_1\cap H_2)P(H_1\cap H_2)}{P(X_2|H_1\cap T_2)P(H_1\cap T_2)+P(X_2|H_1\cap H_2)P(H_1\cap H_2)}}_{\text{Expanding the denominator using the formula for total probability}} \\[30pt]
+&amp;=\underbrace{
+  \frac{
+    P(X_2|H_1\cap H_2)P(H_1\cap H_2)
+    }{
+      \Bigg(\begin{aligned}P(&amp;X_2|H_1\cap T_2)P(H_1\cap T_2)\\&amp;+P(X_2|H_1\cap H_2)P(H_1\cap H_2)\end{aligned}\Bigg)
+      }
+  }_{\text{Expand denominator using formula for total probability}} \\[48pt]
 &amp;=\frac{0.5\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
 &amp;=\frac{1}{3}
 \end{align*}</span>
@@ -1350,7 +1363,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":true});</script>
 
 
 

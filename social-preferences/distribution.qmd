@@ -41,7 +41,7 @@ One basic mode of inquality aversion comes from the utility function in @fehr199
 It is of the following form:
 
 $$
-U_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
+u_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
 $$
 
 The three terms in this function represent:
@@ -51,6 +51,15 @@ The three terms in this function represent:
 -   Their dislike of having less than the other agent (where $\alpha>0$)
 
 -   Their dislike of having more than the other agent (where $\beta>0$)
+
+We can also write this utility function as:
+
+$$
+u_i(x_i,x_j)=x_i-\left\{\begin{matrix}
+\beta(x_i-x_j) \quad &\textrm{if} \quad x_i \geq x_j \\[6pt]
+\alpha(x_j-x_i) \quad &\textrm{if} \quad x_i < x_j 
+\end{matrix}\right.
+$$
 
 Typically $\alpha>\beta$ as people dislike having less than others than they dislike having more than others. We could also set $\beta<0$ for an agent that likes to be better off than others.
 
@@ -147,9 +156,9 @@ This diagram shows the responder's utility curve as a function of the offer $x$.
 
 ![](img/inequality-aversion-2.png)
 
-## A general model of distributional preferences
+## The Charness-Rabin model
 
-@charness2002 developed a more general utility function that captures the possible forms of distributional preference. An agent's attitude toward others depends on their relative position. The utility function is:
+@charness2002 developed a utility function that captures the possible forms of distributional preference. An agent's attitude toward others depends on their relative position. The utility function is:
 
 $$
 u_i(x_i,x_j)=\left\{\begin{matrix}
@@ -162,34 +171,53 @@ Where $x_i$ is the payoff to player $i$ and $x_j$ is the payoff to the other pla
 
 $\rho$ and $\sigma$ capture the agent's attitudes toward others. When the agent is ahead the other player's welfare enters their utility via $\rho$. When the agent is behind the other player's welfare enters agent's utility via $\sigma$. For most people $\rho>\sigma$. They give more weight to others' utility when they are better off. $\sigma$ can also be less than zero. If they are behind someone they place negative weight on further gains by that person.
 
-Consider the following example.
+This utility function is equivalent to that of @fehr1999. You can rearrange the terms to show that $\beta=\rho$ and $\alpha=-\sigma$. However, @charness2002 argued that there was evidence for distributional preferences beyond inequality aversion and that a broader range of parameters for $\rho$ and $\sigma$ were needed.
 
-A dictator has less than the other player. Their $\sigma=−1/2$ (they have less than the other player, so $\sigma$ is the relevant parameter). They must decide between the allocations (1, 0) and (5, 1).
+Consider the following example of the dictator game. In the dictator game, the dictator makes a unilateral offer to the receiver. The game then ends. The receiver has an empty strategy set.
 
-They calculate the utility of each allocation.
+In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where $(x_D,x_R) represent the payoffs for the dictator and receiver respectively. Under each distribution they have less than the other player. Their $\sigma=−1/2$. As they have less than the other player, $\sigma$ is the relevant parameter.
+
+```{mermaid}
+%%| fig-width: 4
+%%| label: fig-dictator-game-distribution
+%%| fig-cap: A constrained dictator game
+%%| mermaid-format: png
+
+graph LR
+    classDef default fill:#FFF
+    A(Dictator) ---B["Choose (0, 1)"] --> D["(0, 1)"]
+    A ---C["Choose (1, 5)"] --> E["(1, 5)"]
+    style A stroke:#000
+    style B stroke:#FFF
+    style C stroke:#FFF
+    style D stroke:#FFF
+    style E stroke:#FFF
+```
+
+The dictator calculates the utility of each allocation.
 
 ```{=tex}
 \begin{align*}
-U(1,0)&=\sigma\times 1+(1−\sigma)\times 0 \\[6pt]
+U(0,1)&=\sigma\times 1+(1−\sigma)\times 0 \\[6pt]
 &=−1/2×1+(1+1/2)\times 0 \\[6pt]
 &=−1/2 \\[12pt]
-U(5,1)&=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
+U(1,5)&=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 &=−1/2×5+(1+1/2)\times 1 \\[6pt]
 &=−1
 \end{align*}
 ```
 
-They prefer to allocate (1,0), even though it is worse for them, because it is also worse for the other player.
+The dictator prefers to allocate (0,1), even though it is worse for them, because it is also worse for the other player.
 
 $\sigma<0$ can also account for the rejection of low offers in the ultimatum game.
 
 The @charness2002 model can capture many forms of distributional preferences. Some are as follows.
 
-If $1\geq\sigma\geq0$, the agent is altruistic. A higher payoff to the other player increases the agent's utility
+If $\sigma>0$ and $\rho>0$, the agent is altruistic. A higher payoff to the other player increases the agent's utility
 
-If $1\geq\rho\geq0\geq\sigma$, the agent is inequality averse. If the other player has more, the agent's utility decreases with further gains for the other player. If the other player has less, the agent's utility increases with further gains for either agent.
+If $1\geq\rho\geq 0>\sigma$, the agent is inequality averse. If the other player has more, the agent's utility decreases with further gains for the other player. If the other player has less, the agent's utility increases with further gains for either agent.
 
-If $0\geq\rho\geq\sigma$, the agent is status-seeking. They gain more utility by having more than the other player. Their utility goes up when either they get more or the other player gets less.
+If $0>\rho\geq\sigma$, the agent is status-seeking. They gain more utility by having more than the other player. Their utility goes up when either they get more or the other player gets less.
 
 If $\rho=\sigma=0$ we are left with the classical self-interested utility function. The agent only cares about their own payoff.
 

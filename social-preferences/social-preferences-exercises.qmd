@@ -5,7 +5,7 @@
 Alby has the following distributional preferences:
 
 $$
-U_A(x_A,x_j)=\underbrace{x_A}_{(1)}\underbrace{-\alpha\text{max}\{x_j-x_A,0\}}_{(2)}\underbrace{-\beta\text{max}\{x_A-x_j,0\}}_{(3)}
+u_A(x_A,x_j)=\underbrace{x_A}_{(1)}\underbrace{-\alpha\text{max}\{x_j-x_A,0\}}_{(2)}\underbrace{-\beta\text{max}\{x_A-x_j,0\}}_{(3)}
 $$
 
 where:
@@ -83,7 +83,7 @@ c\) Explain the intuition why we normally set $\rho>\sigma$ for the utility func
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-People tend to be more willing to see others have better outcomes when those others are worse off than them.
+People tend to be more willing to see others have better outcomes when those others are worse off than them. Therefore, $\rho$ should be greater than $\sigma$ so that the agent cares more about the other agent when they are the one receiving more. 
 :::
 
 d\) What values of $\rho$ and $\sigma$ would result in a utility function where Bob is purely self-interested?
@@ -99,7 +99,7 @@ e\) What value must $\sigma$ have to explain Bob's rejection of low offers in th
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-Sigma must be negative such that the decrease in utility from agent $j$'s payoff is larger than that through the payoff Bob receives himself.
+Sigma must be negative such that, if agent $i$ accepts, the decrease in utility from agent $j$'s payoff would be larger than the utility gain agent $i$ would receive from its own payoff.
 :::
 
 f\) Consider the following two scenarios involving the Ultimatum game.
@@ -115,5 +115,5 @@ A utility function of the type that Bob has cannot result in this behaviour. Exp
 
 In both cases, the outcome is (\$8, \$2). This would result in the same level of utility regardless of the other option that the proposer had. If compared with the outcome (\$0, \$0) from rejecting the offer, the action should therefore be the same.
 
-An explanation for the difference between scenarios is that people care not just about outcomes, but also the intentions of those with whom they interact. In that circumstance the good (or otherwise) intentions of the proposer in offering either less than they could or as much as they could would shape the responder's action. However, intentions do not enter into Bob's utility function.
+An explanation for the difference between scenarios is that people care not just about outcomes, but also the intentions of those with whom they interact. In that circumstance, the good (or otherwise) intentions of the proposer in offering either less than they could or as much as they could would shape the responder's action. However, intentions do not enter into Bob's utility function.
 :::

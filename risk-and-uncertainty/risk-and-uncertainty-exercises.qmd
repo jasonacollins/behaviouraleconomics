@@ -143,7 +143,78 @@ d\) Draw a graph showing Anika's utility curve, the expected value of option A, 
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-![](img/expected-utility-exercises-question-1.jpg)
+```{r}
+#| label: fig-anika
+#| fig-cap: "A bet or a certain payment?"
+
+library(ggplot2)
+
+u <- function(x){
+  x^(1/2)
+}
+
+df <- data.frame(
+  x=seq(0,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-0 #loss
+x2<-200 #win
+ev<-100 #expected value of gamble
+xc<-80 #certain outcome
+ce<-50 #certainty equivalent
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-25, 220), ylim = c(0, 16))+
+
+  #Add labels 4, U(4) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "4", size = 4, hjust = 0.6, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U(4)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 10, U(10) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "10", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(10)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A]=5, E[U(A)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]=5", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(A)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
 :::
 
 ## A 50:50 gamble
