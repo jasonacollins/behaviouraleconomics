@@ -64,7 +64,34 @@ Here is an example.
 
 You threaten to complain about poor service by a company. Complaining is costly.
 
-![](img/complain-1.jpg)
+```{mermaid}
+%%| fig-width: 6
+%%| label: fig-complaint-1
+%%| fig-cap: Complaining is costly
+%%| mermaid-format: png
+
+graph LR
+    classDef default fill:#FFF
+    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
+    C ---D[Bad <br>service] --> E(Customer)
+    E ---F[Complain] ---> G["(-1, -1)"]
+    E ---H[Do not <br>complain] ---> I["(1, 2)"]
+    C ---J[Good <br>service] --> K["(2,1)"]
+    A ---L[No threat] --> M(Company)
+    M ---N[Bad <br>service] --> O["(1, 2)"]
+    M ---P[Good <br>service] --> Q["(2,1)"]
+
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,E,M node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,F,H,J,L,N,P edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class G,I,K,O,Q payoff;
+
+```
 
 We work through this problem by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.
 
@@ -74,4 +101,34 @@ For the customer's initial choice of whether to threaten to complain, it does no
 
 The result is two sub-game perfect Nash equilibria: (Threatens to complain, Bad service, Does not complain) and (No threat, Bad service).
 
-![](img/complain-2.jpg)
+```{mermaid}
+%%| fig-width: 6
+%%| label: fig-complaint-2
+%%| fig-cap: Complaining is costly
+%%| mermaid-format: png
+
+graph LR
+    classDef default fill:#FFF
+    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
+    C ---D((Bad <br>service)) --> E(Customer)
+    E ---F[Complain] ---> G["(-1, -1)"]
+    E ---H((Do not <br>complain)) ---> I["(<b>1</b>, <b>2</b>)"]
+    C ---J[Good <br>service] --> K["(2,1)"]
+    A ---L[No threat] --> M(Company)
+    M ---N((Bad <br>service)) --> O["(1, <b>2</b>)"]
+    M ---P[Good <br>service] --> Q["(2,1)"]
+
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,E,M node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,F,J,L,P edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class G,I,K,O,Q payoff;
+
+    classDef action stroke:#F00, stroke-width:4px;
+    class D,H,N action;
+
+```

@@ -41,6 +41,73 @@ They will not want to play this gamble as it has a negative value for the agent.
 
 The reason for this negative value is that the agent is loss averse. The loss of \$100 is given twice the weight of an equivalent gain.
 
+The following chart illustrates. Note that $V(A)$ is a probability weighted average of the two possible outcomes from the bet, and is projected from the straight line between those two outcomes.
+
+```{r}
+#| fig-cap: A 50:50 gamble
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 220, 0.1),
+  y = u(seq(-220, 220, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1 <- -200 #loss
+x2 <- 220 #win
+ev <- 10 #expected value of gamble
+xc <- 0 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 220), ylim = c(-30, 15))+
+
+  #Add labels -100, v(-100) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "-100", size = 4, hjust = 0.5, vjust = -0.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(-100)", size = 4, hjust = -0.1, vjust = 0.45)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 110, v(110) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "110", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "v(110)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A], V(A) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]", size = 4, hjust = 0.3, vjust = -0.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(A)", size = 4, hjust = 1.05, vjust = 0.45)
+
+```
+
 ### Accept or reject after loss
 
 Suppose the agent loses their wallet containing \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is \$100 less than otherwise. Would they be willing to take gamble A now?
@@ -65,6 +132,79 @@ V(\neg A)&=v(-100) \\[6pt]
 \end{align*}
 
 They will now want to play the gamble as it has a greater value than staying with their current loss. The gamble becomes attractive as it allows recovery the loss. The agent is risk seeking in the loss domain. (They would even accept a 50:50 gamble to win \$100, lose \$100 with an expected value of zero.)
+
+The choice is illustrated in the following chart.
+
+```{r}
+#| fig-cap: A 50:50 gamble after a loss
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 220, 0.1),
+  y = u(seq(-220, 220, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1 <- -200 #loss
+x2 <- 10 #win
+ev <- -95 #expected value of gamble
+xc <- -100 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 220), ylim = c(-30, 15))+
+
+  #Add labels -200, v(-200) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "-200", size = 4, hjust = 0.5, vjust = -0.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(-200)", size = 4, hjust = -0.2, vjust = 0.6)+
+
+  #Add labels -100, v(-100) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "-100", size = 4, hjust = 0.9, vjust = -0.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "v(-100)", size = 4, hjust = -0.2, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 10, v(10) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "10", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "v(10)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A], V(A) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]", size = 4, hjust = 0, vjust = -0.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(A)", size = 4, hjust = -0.2, vjust = 0.45)
+
+```
 
 ### Accept or reject after adaptation to loss
 
@@ -94,6 +234,79 @@ V(\neg A)&=v(10000) \\[6pt]
 \end{align*}
 
 The gamble is now attractive. The agent is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.
+
+The following chart illustrates. As we move further into the gain domain, the agent becomes increasingly risk neutral. You can see this through the line becoming approximately straight. As a result, at a high enough wealth the positive value bet becomes attractive
+
+```{r}
+#| fig-cap: A 50:50 gamble after a win (not to scale)
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 1000, 0.1),
+  y = u(seq(-220, 1000, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1 <- 560 #loss
+x2 <- 1000 #win
+ev <- 800 #expected value of gamble
+xc <- 780 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 1000), ylim = c(-30, 30))+
+
+  #Add labels 9,900, v(9,900) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "9,900", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(9,900)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add labels 10,000, v(10,000) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "10,000", size = 4, hjust = 0.9, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "v(10,000)", size = 4, hjust = 1.05, vjust = 1.2)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 10,110, v(10,110) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "10,110", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "v(10,110)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A], V(A) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]", size = 4, hjust = 0, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(A)", size = 4, hjust = 1.05, vjust = 0)
+
+```
 
 ## A 60:40 gamble
 
@@ -132,7 +345,70 @@ Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ Paddy could get by sim
 
 The following figure shows Paddy's value function, the bets and the value of the bets. The figure illustrates that Paddy's rejection is caused by both Paddy's loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.
 
-![](img/paddy-1.jpg){width=80%}
+```{r}
+#| fig-cap: A 60:40 gamble
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-110, 160, 0.1),
+  y = u(seq(-110, 160, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1 <- -100 #loss
+x2 <- 150 #win
+ev <- 0.6*150-0.4*100 #expected value of gamble
+xc <- 0 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-110, 160), ylim = c(-25, 15))+
+
+  #Add labels -100, v(-100) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "-100", size = 4, hjust = 0.5, vjust = -0.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(-100)", size = 4, hjust = -0.1, vjust = 0.45)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 150, v(150) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "150", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "v(150)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A], V(A) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]", size = 4, hjust = 0.4, vjust = -0.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(A)", size = 4, hjust = 1.05, vjust = 0.45)
+
+```
 
 ### Accept or reject after loss
 
@@ -160,6 +436,203 @@ Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of
 The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.
 
 ![](img/paddy-2.jpg){width=80%}
+
+## A gamble in the gain domain
+
+Suppose Bill has the following reference-dependent value function:
+
+$$
+v(x)=\left\{\begin{matrix}
+x^{1/2} \qquad &\textrm{where} &\space x \geq 0\\
+-2(-x)^{1/2} \quad &\textrm{where} &\space x < 0 
+\end{matrix}\right.
+$$
+
+$x$ is the change in Bill's position relative to his reference point.
+
+\(a) What feature of Bill's value function leads to the reflection effect?
+
+The power of $\frac{1}{2}$ applied in both the gain and loss domain leads to diminishing sensitivity to gains and losses. The value function is concave in the gain domain and convex in the loss domain. This curvature leads to risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. This change in risk preference between the gain and loss domains is the reflection effect.
+
+\(b) Bill considers a choice between \$100 for certain and gamble A: (0.5, \$250; 0.5, 0).
+
+\(i) Will Bill prefer the \$100 or gamble A?
+
+The weighted value of gamble A is:
+
+\begin{align*}
+V(A)&=0.5 \times 250^{0.5} + 0.5 \times 0^{0.5} \\
+&=`r round(0.5*250^0.5 + 0.5*0^0.5, 2)`
+\end{align*}
+
+The value of the \$100 for certain is:
+
+\begin{align*}
+V(\$100)&=100^{0.5} \\
+&=`r round(100^0.5, 2)`
+\end{align*}
+
+As $V(A) > V(\$100)$, Bill will prefer gamble the \$100 for certain.
+
+\(ii) What features of the value function leads Bill to accept or reject the gamble?
+
+Bill rejects the gamble because of the diminishing sensitivity to gains. This leads him to be risk averse and reject the higher expected value option of the gamble.
+
+Loss aversion does not affect his decision as all possible outcomes (at least under our assumed reference point) are in the gain domain. Note that we do not use the value function for $x<0$ in determining Bill's choice.
+
+\(c) Suppose Bill were to experience a large negative shock to his wealth that does not immediately change his reference point. Could this shock cause him to change his decision concerning the \$100 and gamble A?
+
+A large negative shock to Bill's wealth would cause him to change his decision concerning the \$100 and gamble A. The shock would move the two possible outcomes into the loss domain, where Bill is risk seeking. (For this answer, I am assuming a shock of greater than \$250. A smaller shock would change the analysis.)
+
+The diagrams below show the possible payoffs, Bill's value function and the value of each option.
+
+The first diagram shows Bill's choices before the shock, whereby all possible outcomes are in the gain domain. The possible outcomes from the gamble are zero and \$250. The certain outcome on offer is \$100. The expected value of the gamble is \$125.
+
+As he is risk averse, the value of the \$100 for certain exceeds the weighted value of the gamble. This can be seen through $v(A)$ being less than $v(\$100)$. Bill will therefore choose the \$100 for certain.
+
+```{r}
+#| fig-cap: Bill's consideration of gamble A and the \$100
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 220, 0.1),
+  y = u(seq(-220, 220, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-0 #loss
+x2<-200 #win
+ev<-100 #expected value of gamble
+xc<-80 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 220), ylim = c(-30, 15))+
+
+  #Add labels W+20, U(W+20) and line to curve indicating each
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+
+  #Add labels 100, U(100) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "100", size = 4, hjust = 0.6, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "v(100)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 250, v(250) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "250", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "v(250)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A], V(A) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]=125", size = 4, hjust = 0.12, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(A)", size = 4, hjust = 1.05, vjust = 0.45)
+
+```
+
+The second diagram illustrates Bill's decision after the shock. After the loss of wealth but no change in reference point, the outcomes would now be in the loss domain. Let $L$ be a large negative number, the loss. The potential outcomes from the gamble are now $L$ and $L+250$. The certain outcome of accepting the \$100 is $L+100$. The expected value of the gamble is $L+125$. The weighted value of the gamble is $v(L+125)$. The value of the certain outcome is $v(L+100)$.
+
+Due to the convex curvature of the curve in the loss domain, Bill is risk seeking. As a result, the utility of the gamble is greater than the utility of the certain outcome. This can be seen in $v(L+A)$ being greater than $v(L+100)$.
+
+```{r}
+#| fig-cap: Bill's consideration of gamble A and the \$100 after the shock
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 220, 0.1),
+  y = u(seq(-220, 220, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<- -200 #loss
+x2<- -20 #win
+ev<- -100 #expected value of gamble
+xc<- -120 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 220), ylim = c(-30, 15))+
+
+  #Add labels L, v(L) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "L", size = 4, hjust = 0.5, vjust = -0.3)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(L)", size = 4, hjust = -0.1, vjust = 0.6)+
+
+  #Add labels L+100, v(L+100) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "L+100", size = 4, hjust = 0.8, vjust = -0.3)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "v(L+100)", size = 4, hjust = -0.1, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 250+L, U(250+L) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "L+250", size = 4, hjust = 0.5, vjust = -0.3)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "v(L+250)", size = 4, hjust = -0.1, vjust = 0.45)+
+
+  #Add labels L+E[A], v(A+L) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "L+E[A]", size = 4, hjust = 0.1, vjust = -0.3)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "v(L+A)", size = 4, hjust = -0.1, vjust = 0.45)
+
+```
 
 ## Insurance
 
@@ -330,7 +803,70 @@ As $V(purchase)<V(don't)$, the agent does not purchase insurance. The diminishin
 
 Including loss aversion in the value function does not change the decision as all possible outcomes are in the loss domain.
 
-![](img/reflection-effect.jpg)
+```{r}
+#| fig-cap: The reflection effect and insurance
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 220, 0.1),
+  y = u(seq(-220, 220, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<- -200 #loss
+x2<- 0 #win
+ev<- -30 #expected value of gamble
+xc<- -60 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 220), ylim = c(-30, 15))+
+
+  #Add labels -V, v(L) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "-V", size = 4, hjust = 0.5, vjust = -0.3)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(-V)=v(-$1m)", size = 4, hjust = -0.1, vjust = 0.6)+
+
+  #Add labels -P, v(-P) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "-P", size = 4, hjust = 0.8, vjust = -0.3)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "v(-P)", size = 4, hjust = -0.1, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels E[don't], v(don't) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[don't]", size = 4, hjust = 0.5, vjust = -0.3)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "v(don't)", size = 4, hjust = -0.1, vjust = 0.45)
+
+```
 
 ### Probability weighting
 
@@ -356,3 +892,36 @@ V(don't)&=\sum_{i=1}^n \pi(p_i)v(x_i) \\
 
 Although the diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house, the overweighting of the probability of fire leads them to purchase insurance. Again, if we had included loss aversion it would not have changed the decision as all possible outcomes are in the loss domain.
 
+## A multi-bet
+
+A multi-bet allows a gambler to combine a series of individual bets into a single wager, with the odds of all the single bets multiplied to achieve the final payoff. The gambler only wins the wager if all of the single bets are successful. Or in other words, if a single bet is lost, the entire multi-bet is lost. A multi-bet is also known as an "accumulator" bet or "parlay".
+
+For example, a multi-bet might combine the following bets:
+
+- GWS Giants to defeat Adelaide Crows: \$1.65 (that is, \$1.65 is paid out for each $1 bet)
+- Fremantle Dockers to defeat Sydney Swans: \$2.10
+- Essendon Bombers to defeat Geelong Cats: \$3.50
+- North Melbourne Kangaroos to defeat Melbourne Demons: \$4.00
+- West Coast Eagles to defeat Brisbane Lions: \$6.00
+
+If all five bets are successful, the gambler would win \$291 for every $1 they have bet. (That is 1.65 x 2.10 x 3.50 x 4 x 6 = 291.06). If any of GWS, Fremantle, Essendon, North Melbourne, or the West Coast Eagles lose, the bet is lost.
+
+Many bookmakers also offer a "cash out" option for multi-bets. If the bet has been successful up to the date of the "cash out", a gambler can "cash out" their bet before the remaining games are complete at a price offered by the bookmaker. The "cash out" offers are typically unattractive relative to the expected value of seeing out the rest of the multi-bet.
+
+For example, Betty places a \$20 multi-bet involving all nine games of Australian Rules Football one weekend. After eight games, she has picked all eight winners. If Geelong defeats North Melbourne in the ninth game she will win $10,000. Geelong is a heavy favourite, with a 95% probability of winning.
+
+Betty checks the cash out price for the multi-bet and sees that she can cash out the bet now for \$7,000, a great return on her initial \$20. That return, however, is much below the expected value of seeing the multi-bet through to the end (\$9,500).
+
+Betty makes decisions according to prospect theory. That is, she judges gains and losses relative to a reference point, is loss averse, and has diminishing sensitivity to gains and losses in both directions. She also overweights certainty (which is equivalent to overweighting small probabilities).
+
+What elements of prospect theory might lead Betty to cash out the bet before the final game?
+
+We can consider multiple potential reference points Betty might use to make her decision.
+
+One potential reference point is Betty's position before making the bet. In that case, Betty is comparing a certain gain of \$6980 to a gamble with a loss of \$20 and a gain of \$9,980. This gamble is largely in the gain domain in which Betty is risk averse. Her risk aversion may lead her to cash out rather than take the gamble. The potential \$20 loss may be overweighted due to loss aversion, but is a relatively insignificant sum.
+
+Another potential reference point is Betty's position immediately after making the bet. She has adapted to the payment of \$20. Here the analysis is similar. Betty is comparing a certain gain of \$7000 to a gamble with a gain of \$10,000 or a payment of zero. The gamble is completely in the gain domain, where Betty is risk averse. Her risk aversion may lead her to cash out rather than gamble. Loss aversion is irrelevant in this instance.
+
+Another potential reference point is that Betty is taking the \$7000 to be locked in. This means she is comparing staying at the status quo with certainty to a gamble involving a potential loss of \$7000 and a gain of \$3,000. In this case, the combination of risk aversion reducing the value of the gain and loss aversion increasing the relative magnitude of the pain of loss could lead her to cash out. This would be counteracted by the convex curvature in the loss domain, but the loss aversion effect would likely dominate.
+
+Finally, Betty's weighting of probabilities will also affect her decision. Overweighting certainty means overweighting small probabilities, such as the small probability of Geelong losing. This overweighting would push her towards cashing out as the loss would have greater weight in her calculation of the weighted value of each option.

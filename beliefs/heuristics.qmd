@@ -59,3 +59,48 @@ A number between 0 and 100 was determined by spinning a wheel in the subjects' p
 Different groups were given different numbers from the wheel. These arbitrary numbers had a marked effect on estimates. The median estimates of the percentage of African countries in the United Nations were 25 and 45 for groups that received numbers 10 and 65 from the wheel, respectively.
 
 Payoffs for accuracy did not reduce the effect of the anchor.
+
+## Heuristics examples
+
+### A used car
+
+You are shopping for a used car. You see a car you like and ask the salesperson how much it costs.
+
+She says "one hundred thousand dollars". You know this number is too high and after some negotiation purchase the car for $20,000. You feel pleased with your negotiation skills.
+
+You later see a similar car for sale for $15,000.
+
+What heuristic could lead to your pattern of behaviour?
+
+This pattern of behaviour could be caused by anchoring and adjustment. 
+
+When using anchoring and adjustment, people estimate by starting from an initial value and adjust from that value to obtain the final estimate. Empirically, people tend to use weak or irrelevant anchors and make insufficient adjustments from the anchor.
+
+When the car dealer stated the high price, this acted as an anchor, even though you knew it was too high. You used a weak anchor.
+
+That you ultimately purchased the car for too much suggests you insufficiently adjusted for that weak anchor.
+
+### A wealthy person
+
+You see a person who drives a luxury car and wears designer clothes. You decide they must be wealthy, even though you have no other information about this person.  
+
+a\) What heuristic could lead to this belief?
+
+This belief could be caused by the representativeness heuristic.
+
+Under the representativeness heuristic, people evaluate probabilities by the degree to which $A$ is representative of (similar to) $B$.
+
+In this case, a person driving a luxury car and wearing designer clothes is highly representative of a wealthy person. You place a high probability on them being wealthy.
+
+b\) Explain how the use of this heuristic would differ from the use of Bayes' rule in this situation.
+
+Under Bayes' rule, the probability that someone is wealthy is a function of:
+
+-  the probability that any particular person in the population is wealthy (the base rate that forms your prior probability)
+-  the probability that a wealthy person will drive a luxury car and wear designer clothes
+-  the probability that a non-wealthy person will drive a luxury car and wear designer clothes.
+
+They take that prior probability and update it based on the evidence they have observed.
+
+Bayes' rule differs from that under the representativeness heuristic in that it takes into account the base rate of the population. What proportion of people are wealthy? The representativeness heuristic does not. The representativeness heuristic is largely based on the probability that a wealthy person will drive a luxury car and wear designer clothes relative to a non-wealthy person - that is, how representative clothing and cars are of wealth.
+

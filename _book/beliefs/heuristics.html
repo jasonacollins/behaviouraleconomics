@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on behavioural economics - 33&nbsp; Heuristics</title>
+<title>Notes on behavioural economics - 34&nbsp; Heuristics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../beliefs/biases-in-probability-judgment.html" rel="next">
-<link href="../beliefs/probability-foundations.html" rel="prev">
+<link href="../beliefs/bayes-rule.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,10 +99,10 @@ div.csl-indent {
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Notes on behavioural economics - 33&nbsp; Heuristics">
+<meta property="og:title" content="Notes on behavioural economics - 34&nbsp; Heuristics">
 <meta property="og:description" content="">
 <meta property="og:site-name" content="Notes on behavioural economics">
-<meta name="twitter:title" content="Notes on behavioural economics - 33&nbsp; Heuristics">
+<meta name="twitter:title" content="Notes on behavioural economics - 34&nbsp; Heuristics">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -153,7 +153,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../beliefs/beliefs.html">Beliefs</a></li><li class="breadcrumb-item"><a href="../beliefs/heuristics.html"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Heuristics</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../beliefs/beliefs.html">Beliefs</a></li><li class="breadcrumb-item"><a href="../beliefs/heuristics.html"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -426,32 +426,38 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../beliefs/bayes-rule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Bayes’ rule</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../beliefs/heuristics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Heuristics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../beliefs/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../beliefs/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../beliefs/overconfidence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Overconfidence</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Overconfidence</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../beliefs/beliefs-exercises.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Beliefs exercises</span></span></a>
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Beliefs exercises</span></span></a>
   </div>
 </li>
       </ul>
@@ -468,31 +474,31 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Simultaneous-move one-shot games</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Simultaneous-move one-shot games</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../game-theory/sequential-games.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Sequential games</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Sequential games</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../game-theory/asymmetric-information.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Asymmetric information</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Asymmetric information</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../game-theory/strategic-moves-and-commitment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Strategic moves and commitment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Strategic moves and commitment</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../game-theory/game-theory-exercises.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Game theory exercises</span></span></a>
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Game theory exercises</span></span></a>
   </div>
 </li>
       </ul>
@@ -509,25 +515,25 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../behavioural-game-theory/level-k-thinking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Level-k thinking</span></span></a>
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Level-k thinking</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Asymmetric information and the curse of knowledge</span></span></a>
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Asymmetric information and the curse of knowledge</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../behavioural-game-theory/emotions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Emotions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Emotions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../behavioural-game-theory/behavioural-game-theory-exercises.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Behavioural game theory exercises</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Behavioural game theory exercises</span></span></a>
   </div>
 </li>
       </ul>
@@ -544,25 +550,25 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../social-preferences/distribution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Distribution</span></span></a>
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../social-preferences/reputation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Reputation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Reputation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../social-preferences/reciprocity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Reciprocity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Reciprocity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../social-preferences/social-preferences-exercises.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Social preferences exercises</span></span></a>
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Social preferences exercises</span></span></a>
   </div>
 </li>
       </ul>
@@ -583,9 +589,14 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#representativeness-heuristic" id="toc-representativeness-heuristic" class="nav-link active" data-scroll-target="#representativeness-heuristic"><span class="header-section-number">33.1</span> Representativeness heuristic</a></li>
-  <li><a href="#availability-heuristic" id="toc-availability-heuristic" class="nav-link" data-scroll-target="#availability-heuristic"><span class="header-section-number">33.2</span> Availability heuristic</a></li>
-  <li><a href="#anchoring-and-adjustment" id="toc-anchoring-and-adjustment" class="nav-link" data-scroll-target="#anchoring-and-adjustment"><span class="header-section-number">33.3</span> Anchoring and adjustment</a></li>
+  <li><a href="#representativeness-heuristic" id="toc-representativeness-heuristic" class="nav-link active" data-scroll-target="#representativeness-heuristic"><span class="header-section-number">34.1</span> Representativeness heuristic</a></li>
+  <li><a href="#availability-heuristic" id="toc-availability-heuristic" class="nav-link" data-scroll-target="#availability-heuristic"><span class="header-section-number">34.2</span> Availability heuristic</a></li>
+  <li><a href="#anchoring-and-adjustment" id="toc-anchoring-and-adjustment" class="nav-link" data-scroll-target="#anchoring-and-adjustment"><span class="header-section-number">34.3</span> Anchoring and adjustment</a></li>
+  <li><a href="#heuristics-examples" id="toc-heuristics-examples" class="nav-link" data-scroll-target="#heuristics-examples"><span class="header-section-number">34.4</span> Heuristics examples</a>
+  <ul class="collapse">
+  <li><a href="#a-used-car" id="toc-a-used-car" class="nav-link" data-scroll-target="#a-used-car"><span class="header-section-number">34.4.1</span> A used car</a></li>
+  <li><a href="#a-wealthy-person" id="toc-a-wealthy-person" class="nav-link" data-scroll-target="#a-wealthy-person"><span class="header-section-number">34.4.2</span> A wealthy person</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -594,7 +605,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Heuristics</span></h1>
+<h1 class="title"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Heuristics</span></h1>
 </div>
 
 
@@ -615,8 +626,8 @@ div.csl-indent {
 <p>Heuristics are often accurate and tractable, but in some environments can lead to error.</p>
 <p>Tversky and Kahneman <span class="citation" data-cites="tversky1974">(<a href="../references.html#ref-tversky1974" role="doc-biblioref">1974</a>)</span> defined three now classic heuristics: representativeness, availability and anchoring.</p>
 <p>I will illustrate these three and then discuss a series of biases in probability judgment for which these heuristics may provide an explanation.</p>
-<section id="representativeness-heuristic" class="level2" data-number="33.1">
-<h2 data-number="33.1" class="anchored" data-anchor-id="representativeness-heuristic"><span class="header-section-number">33.1</span> Representativeness heuristic</h2>
+<section id="representativeness-heuristic" class="level2" data-number="34.1">
+<h2 data-number="34.1" class="anchored" data-anchor-id="representativeness-heuristic"><span class="header-section-number">34.1</span> Representativeness heuristic</h2>
 <p>Suppose you wish to estimate the probability that an event or person belongs to a certain class.</p>
 <ul>
 <li><p>“What is the probability that event <span class="math inline">A</span> belongs to class <span class="math inline">B</span>?”</p></li>
@@ -630,15 +641,15 @@ div.csl-indent {
 <p>How do people assess the probability that Steve is engaged in a particular occupation from a list of possibilities (for example, farmer, salesman, airline pilot, librarian, or physician)? How do people order these occupations from most to least likely? In the representativeness heuristic, the probability that Steve is a Iibrarian, for example, is assessed by the degree to which he is representative of, or similar to, the stereotype of a librarian. Indeed, research with problems of this type has shown that people order the occupations by probability and by similarity in exactly the same way.</p>
 </blockquote>
 </section>
-<section id="availability-heuristic" class="level2" data-number="33.2">
-<h2 data-number="33.2" class="anchored" data-anchor-id="availability-heuristic"><span class="header-section-number">33.2</span> Availability heuristic</h2>
+<section id="availability-heuristic" class="level2" data-number="34.2">
+<h2 data-number="34.2" class="anchored" data-anchor-id="availability-heuristic"><span class="header-section-number">34.2</span> Availability heuristic</h2>
 <p>Under the availability heuristic, people assess the frequency of a class or the probability of an event by the ease with which they can recall instances or occurrences. If an event is more “available”, it is judged to have a higher frequency or probability.</p>
 <p>For example, if assessing the probability of a heart attack, you might recall occurrences among people you know. If you are assessing the probability of shark attack, you might recall how often you hear of attacks on the news.</p>
 <p>In one experiment, <span class="citation" data-cites="tversky1974">Tversky and Kahneman (<a href="../references.html#ref-tversky1974" role="doc-biblioref">1974</a>)</span> gave experimental subjects lists of names. In some lists, the men were more famous than the women, and in other lists, vice versa. After viewing the list, they were asked whether the list had more men or women.</p>
 <p>For each list, the subjects judged that the sex with more famous names was more common. Those names were more available in their minds.</p>
 </section>
-<section id="anchoring-and-adjustment" class="level2" data-number="33.3">
-<h2 data-number="33.3" class="anchored" data-anchor-id="anchoring-and-adjustment"><span class="header-section-number">33.3</span> Anchoring and adjustment</h2>
+<section id="anchoring-and-adjustment" class="level2" data-number="34.3">
+<h2 data-number="34.3" class="anchored" data-anchor-id="anchoring-and-adjustment"><span class="header-section-number">34.3</span> Anchoring and adjustment</h2>
 <p>When using anchoring and adjustment, people estimate by starting from an initial value and adjust from that value to obtain the final estimate.</p>
 <p>Suppose you know the odds of outcome <span class="math inline">A</span>, and want to estimate the odds of outcome <span class="math inline">B</span>. Anchoring and adjustment implies that you will start with the odds of outcome <span class="math inline">A</span> and adjust to obtain the odds of outcome <span class="math inline">B</span>.</p>
 <p>The accuracy of anchoring and adjustment depends on the anchor’s quality and the size of the adjustment from the anchor.</p>
@@ -648,6 +659,36 @@ div.csl-indent {
 <p>A number between 0 and 100 was determined by spinning a wheel in the subjects’ presence. The subjects were instructed to indicate first whether that number was higher or lower than the estimated percentage, and then to estimate the value of the quantity by moving upward or downward from the given number.</p>
 <p>Different groups were given different numbers from the wheel. These arbitrary numbers had a marked effect on estimates. The median estimates of the percentage of African countries in the United Nations were 25 and 45 for groups that received numbers 10 and 65 from the wheel, respectively.</p>
 <p>Payoffs for accuracy did not reduce the effect of the anchor.</p>
+</section>
+<section id="heuristics-examples" class="level2" data-number="34.4">
+<h2 data-number="34.4" class="anchored" data-anchor-id="heuristics-examples"><span class="header-section-number">34.4</span> Heuristics examples</h2>
+<section id="a-used-car" class="level3" data-number="34.4.1">
+<h3 data-number="34.4.1" class="anchored" data-anchor-id="a-used-car"><span class="header-section-number">34.4.1</span> A used car</h3>
+<p>You are shopping for a used car. You see a car you like and ask the salesperson how much it costs.</p>
+<p>She says “one hundred thousand dollars”. You know this number is too high and after some negotiation purchase the car for $20,000. You feel pleased with your negotiation skills.</p>
+<p>You later see a similar car for sale for $15,000.</p>
+<p>What heuristic could lead to your pattern of behaviour?</p>
+<p>This pattern of behaviour could be caused by anchoring and adjustment.</p>
+<p>When using anchoring and adjustment, people estimate by starting from an initial value and adjust from that value to obtain the final estimate. Empirically, people tend to use weak or irrelevant anchors and make insufficient adjustments from the anchor.</p>
+<p>When the car dealer stated the high price, this acted as an anchor, even though you knew it was too high. You used a weak anchor.</p>
+<p>That you ultimately purchased the car for too much suggests you insufficiently adjusted for that weak anchor.</p>
+</section>
+<section id="a-wealthy-person" class="level3" data-number="34.4.2">
+<h3 data-number="34.4.2" class="anchored" data-anchor-id="a-wealthy-person"><span class="header-section-number">34.4.2</span> A wealthy person</h3>
+<p>You see a person who drives a luxury car and wears designer clothes. You decide they must be wealthy, even though you have no other information about this person.&nbsp;</p>
+<p>a) What heuristic could lead to this belief?</p>
+<p>This belief could be caused by the representativeness heuristic.</p>
+<p>Under the representativeness heuristic, people evaluate probabilities by the degree to which <span class="math inline">A</span> is representative of (similar to) <span class="math inline">B</span>.</p>
+<p>In this case, a person driving a luxury car and wearing designer clothes is highly representative of a wealthy person. You place a high probability on them being wealthy.</p>
+<p>b) Explain how the use of this heuristic would differ from the use of Bayes’ rule in this situation.</p>
+<p>Under Bayes’ rule, the probability that someone is wealthy is a function of:</p>
+<ul>
+<li>the probability that any particular person in the population is wealthy (the base rate that forms your prior probability)</li>
+<li>the probability that a wealthy person will drive a luxury car and wear designer clothes</li>
+<li>the probability that a non-wealthy person will drive a luxury car and wear designer clothes.</li>
+</ul>
+<p>They take that prior probability and update it based on the evidence they have observed.</p>
+<p>Bayes’ rule differs from that under the representativeness heuristic in that it takes into account the base rate of the population. What proportion of people are wealthy? The representativeness heuristic does not. The representativeness heuristic is largely based on the probability that a wealthy person will drive a luxury car and wear designer clothes relative to a non-wealthy person - that is, how representative clothing and cars are of wealth.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
@@ -655,6 +696,7 @@ div.csl-indent {
 Tversky, A., and Kahneman, D. (1974). Judgment under Uncertainty: Heuristics and Biases. <em>Science</em>, <em>185</em>(4157), 1124–1131. <a href="https://doi.org/10.1126/science.185.4157.1124">https://doi.org/10.1126/science.185.4157.1124</a>
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -907,13 +949,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../beliefs/probability-foundations.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Probability foundations</span></span>
+      <a href="../beliefs/bayes-rule.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Bayes’ rule</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../beliefs/biases-in-probability-judgment.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

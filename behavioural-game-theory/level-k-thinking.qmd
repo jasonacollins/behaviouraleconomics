@@ -12,7 +12,9 @@ Level-2 players assume other players are level-1 and act optimally conditional o
 
 And so on.
 
-## The beauty contest
+## Examples
+
+### The beauty contest
 
 To understand level-k thinking, consider the following thought experiment from @keynes1936.
 
@@ -68,7 +70,7 @@ The lab evidence doesn't necessarily imply that level-k is the "right model". Da
 
 Finally, it is worth noting that in the Nash equilibrium, each player picks 0. This is because the best response to all other players picking 0 is to pick 0. For any higher number, everyone has an incentive to lower their choice. However, if playing against level-k players, selecting 0 is not the best approach.
 
-## The assignment game with level-k thinking
+### The assignment game with level-k thinking
 
 Let's consider another example of level-k thinking involving a game called the assignment game.
 
@@ -136,7 +138,7 @@ At a certain level of thinking, the players will discover the Nash equilibrium. 
 | $k=3$   | Work     | Shirk    |
 | $k=4$   | Work     | Shirk    |
 
-## Centipede game
+### Centipede game
 
 Another example of level-k thinking is the centipede game.
 
@@ -165,3 +167,75 @@ A level-2 player 2 would plan to take at the final stage (4,6) as they believe t
 A level-3 player 2 would plan to take at (2,4) as they believe the level-1 player 1 will take at (5,3). A level-3 player 1 would plan to take at (5,3) as they believe a level-2 player 2 would take at (4,6).
 
 And so on.
+
+### A military attack
+
+An army from the North is about to attack the South.
+
+The North can attack one of two cities: Hobart or Launceston. Launceston is easier to attack as it is closer.
+
+The South needs to decide which city it will plan to defend.
+
+If the North attacks an undefended city, it will win. The South can repel any attack on a city it has chosen to defend.
+
+The expected payoffs for each combination of actions are as follows, with the payoff ($x,y$) being the payoffs for the North and South respectively.
+
+![](img/army.png){width=80%}
+
+a\) Are there any pure-strategy Nash equilibria? If so, what are they?
+
+We determine the pure-strategy Nash equilibria by considering the best response of each player to each of the other player's strategies.
+
+If the South defends Hobart, North can choose Hobart for a payoff of -1 or Launceston for a payoff of 4. Launceston is the best response.
+
+If the South defends Launceston, North can choose Hobart for a payoff of 4 or Launceston for a payoff of 0. Hobart is the best response.
+
+If the North attacks Hobart, South can defend Hobart for a payoff of 4 or Launceston for a payoff of 0. Hobart is the best response.
+
+If the North attacks Launceston, South can defend Hobart for a payoff of 0 or Launceston for a payoff of 4. Launceston is the best response.
+
+There is no pure-strategy Nash equilibrium. For any combination of choices, one of the armies has an incentive to change their choice.
+
+![](img/army-2.png){width=80%}
+
+b\) Suppose the commanders of the North and South are level-k thinkers.
+
+If they were level-0, both would choose Hobart or Launceston with equal probability.
+
+What would each player do if they were a level-1 thinker?
+
+A level-1 thinker assumes that the other player is a level-0 thinker. Each level-1 thinker plays the optimal strategy on this assumption.
+
+A level-1 North plays the optimal strategy against a level-0 South. A level-0 South plays Hobart or Launceston with equal probability. The payoffs to North from each option are:
+
+\begin{align*}
+U_N(\text{Hobart})=0.5\times -1+0.5\times 4=1.5 \\
+\\
+U_N(\text{Launceston})=0.5\times 4+0.5\times 0=2
+\end{align*}
+
+North attacks Launceston.
+
+\begin{align*}
+U_S(\text{Hobart})=0.5\times 4+0.5\times 0=2 \\
+\\
+U_S(\text{Launceston})=0.5\times 4+0.5\times 0=2
+\end{align*}
+
+South is indifferent between defending Hobart and Launceston. They can choose either.
+
+c\) What would each player do if they were a level-2 thinker?
+
+A level-2 thinker assumes that the other player is a level-1 thinker. Each level-2 thinker plays the optimal strategy on this assumption.
+
+A level-2 North knows that the level-1 South is indifferent between defending Hobart and Launceston. If North assumes that South will defend each with equal probability, the payoffs to North from each option are:
+
+\begin{align*}
+U_N(\text{Hobart})=0.5\times -1+0.5\times 4=1.5 \\
+\\
+U_N(\text{Launceston})=0.5\times 4+0.5\times 0=2
+\end{align*}
+
+North attacks Launceston.
+
+A level-2 South knows that the level-1 North attacks Launceston. The South defends Launceston for payoff of 4 (rather than Hobart for payoff of 0).

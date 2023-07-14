@@ -5,7 +5,7 @@ engine: knitr #added as otherwise inline r code does not execute
 
 In the section, I provide some simple examples of the $\beta\delta$ model.
 
-## Example 1
+## Exponential discounting versus present bias
 
 For the first example, we will consider the following pair of choices presented to an exponential discounting agent and a present-biased agent and contrast their decisions.
 
@@ -105,7 +105,7 @@ At $t=0$ the discounted utility of the \$110 at $t=2$ is higher and that payment
 
 ![](img/present-bias-example-1.png){width=75%}
 
-## Example 2
+## A longer delay
 
 Assume there is a present-biased agent with $\beta=0.75$, $\delta=0.9$ and utility each period of $u(x_n)=x_n$.
 
@@ -155,3 +155,57 @@ The vertical bars represent the payments of \$10 and \$20. The lines projecting 
 At $t=0$ (and through to $t=4$) the discounted utility of the \$20 at $t=10$ is higher and that payment is therefore preferred. At $t=5$ when the \$10 is no longer discounted by the short-term discount factor $\beta$, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the \$20 due in another five days.
 
 ![](img/present-bias-example-2.jpg){width=75%}
+
+## Paying a loan
+
+Charlie is a naive present-biased agent with $\beta=0.5$, $\delta=0.95$ and $u(x)=x$.
+
+Charlie loaned \$100 to Carol. Carol is due to pay Charlie back in 7 days (at t=7). Carol tells Charlie that she would prefer to pay him back later, and offers \$200 in 14 days (at $t=14$) if he is willing to wait. Charlie is considering whether to accept Carol's offer.
+
+\(a) What does Charlie choose at $t=0$?
+
+To determine what Charlie chooses at $t=0$, we need to compare the discounted utility of the two options.
+
+The discounted utility of \$100 at $t=7$ is:
+
+\begin{align*}
+U_0(7,100)&=0.5\times 0.95^7 \times 100 \\
+&=`r round(0.5*0.95^7 * 100, 2)`
+\end{align*}
+
+The discounted utility of \$200 at $t=14$ is:
+
+\begin{align*}
+U_0(14,200)&=0.5\times 0.95^{14} \times 200 \\
+&=`r round(0.5*0.95^14 * 200, 2)`
+\end{align*}
+
+Charlie chooses the option with the highest discounted utility, which is \$200 at $t=14$.
+
+\(b) At $t=7$ Charlie considers whether he should now demand payment of \$100 at $t=7$ rather than wait for payment of \$200 at $t=14$. What does Charlie choose at $t=7$?
+
+To determine what Charlie chooses at $t=7$, we need to compare the discounted utility of the two options.
+
+The discounted utility of \$100 at $t=7$ is:
+
+\begin{align*}
+U_7(7,100)&=0.95^0 \times 100 \\
+&=`r round(0.95^0 * 100, 2)`
+\end{align*}
+
+The discounted utility of \$200 at $t=14$ is:
+
+\begin{align*}
+U_7(14,200)&=0.5\times 0.95^7 \times 200 \\
+&=`r round(0.5*0.95^7 * 200, 2)`
+\end{align*}
+
+Charlie chooses the option with the highest discounted utility, which is \$100 at $t=7$. He has changed his mind. This is because the sum at $t=7$ is no longer subject to the short-term discount factor $\beta$.
+
+\(c) Draw a graph illustrating Charlie's choices.
+
+The following chart shows each of the two options presented to Charlie, \$100 at $t=7$ and \$200 at $t=14$. The line extended from each back to $t=0$ represents the the discounted utility of each option at time $t$.
+
+It can be seen that from $t=0$ to $t=6$, the discounted utility of \$200 at $t=14$ is higher than the discounted utility of \$100 at $t=7$. However, at $t=7$, the discounted utility of \$100 at $t=7$ is higher than the discounted utility of \$200 at $t=14$. Hence Charlie changes his mind.
+
+![](img/problem-set-3.png){width=80%}

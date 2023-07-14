@@ -10,7 +10,7 @@ One function of emotions may be to act as a commitment device:
 
 While this behaviour may appear “irrational”, it allows people to make credible commitments that in turn allow them to enter beneficial trades and cooperative arrangements, while being less likely to being cheated.
 
-## Commitment
+## Punishment
 
 Consider the following quote from Richard Nixon:
 
@@ -18,27 +18,116 @@ Consider the following quote from Richard Nixon:
 
 Pushing the nuclear button is not in Nixon's interest, and from a purely rational perspective may not be a credible threat. But if a madman has his finger on the button, the calculation changes.
 
+### Complaining for bad service
+
 Recall our earlier example of a customer threatening to complain if they receive bad service. Complaining is costly.
 
-![](img/complain-2.jpg)
-
-We work through this problem by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.
+We determined this by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.
 
 The company, therefore, has a choice between providing good service for a payoff of 1 or bad service for a payoff of 2. They will provide bad service. The company has the same payoff for bad service regardless of the presence of the threat to complain as the threat is not credible.
 
 For the customer's initial choice of whether to threaten to complain, it does not matter either way. Regardless of their threat, they receive bad service.
 
+```{mermaid}
+%%| fig-width: 6
+%%| label: fig-complaint-3
+%%| fig-cap: Complaining is costly
+%%| mermaid-format: png
+
+graph LR
+    classDef default fill:#FFF
+    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
+    C ---D((Bad <br>service)) --> E(Customer)
+    E ---F[Complain] ---> G["(-1, -1)"]
+    E ---H((Do not <br>complain)) ---> I["(<b>1</b>, <b>2</b>)"]
+    C ---J[Good <br>service] --> K["(2,1)"]
+    A ---L[No threat] --> M(Company)
+    M ---N((Bad <br>service)) --> O["(1, <b>2</b>)"]
+    M ---P[Good <br>service] --> Q["(2,1)"]
+
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,E,M node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,F,J,L,P edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class G,I,K,O,Q payoff;
+
+    classDef action stroke:#F00, stroke-width:4px;
+    class D,H,N action;
+
+```
+
 But what if the customer gets a strong sense of satisfaction from complaining worth +3? Then their payoffs become as follows:
 
-![](img/complain-3.jpg)
+```{mermaid}
+%%| fig-width: 6
+%%| label: fig-complaint-4
+%%| fig-cap: When the threat is credible
+%%| mermaid-format: png
+
+graph LR
+    classDef default fill:#FFF
+    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
+    C ---D((Bad <br>service)) --> E(Customer)
+    E ---F[Complain] ---> G["(-1+3=2, -1)"]
+    E ---H((Do not <br>complain)) ---> I["(1, 2)"]
+    C ---J[Good <br>service] --> K["(2,1)"]
+    A ---L[No threat] --> M(Company)
+    M ---N((Bad <br>service)) --> O["(1, 2)"]
+    M ---P[Good <br>service] --> Q["(2,1)"]
+
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,E,M node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,F,H,J,L,N,P edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class G,I,K,O,Q payoff;
+
+```
 
 The threat to complain is now credible. If they receive bad service, they complain for a payoff of 2 rather than not complain for a payoff of 1.
 
 The company now provides good service following a threat to complain. Absent that threat, they would provide bad service.
 
-![](img/complain-4.jpg)
+```{mermaid}
+%%| fig-width: 6
+%%| label: fig-complaint-5
+%%| fig-cap: When the threat is credible
+%%| mermaid-format: png
 
-## Chicken
+graph LR
+    classDef default fill:#FFF
+    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
+    C ---D((Bad <br>service)) --> E(Customer)
+    E ---F((Complain)) ---> G["(<b>-1+3=2</b>, -1)"]
+    E ---H((Do not <br>complain)) ---> I["(1, 2)"]
+    C ---J((Good <br>service)) --> K["(<b>2</b>,<b>1</b>)"]
+    A ---L[No threat] --> M(Company)
+    M ---N((Bad <br>service)) --> O["(1, <b>2</b>)"]
+    M ---P[Good <br>service] --> Q["(2,1)"]
+
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,E,M node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,H,J,L,P edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class G,I,K,O,Q payoff;
+
+    classDef action stroke:#F00, stroke-width:4px;
+    class F,J,N action;
+
+```
+
+### Chicken
 
 As another example, recall the game of chicken. Two players are driving toward each other. Whoever swerves first loses. If neither swerves, they crash and die.
 
@@ -57,3 +146,47 @@ Player A’s craziness acts as a commitment device similar to that of removing t
 The Nash equilibrium is (Straight, Swerve). The crazy player A wins the game of chicken.
 
 ![](img/chicken-4.png)
+
+### Receiving a faulty product
+
+A customer received a faulty product from a firm and requested a refund as per consumer law. The customer also threatened to complain to the Department of Fair Trading if they did not receive the refund. A customer complaint would be costly to the firm as they would be required to provide a refund in addition to incurring the cost of dealing with the complaint.
+
+The firm offered a store credit instead, believing that the customer would not complain as the time and effort involved would not be worth the potential refund.
+
+However, the customer still complained to the Department of Fair Trading.
+
+a\) Use concepts from game theory to explain why the firm might have held that belief.
+
+We can draw the extensive form of the game as follows:
+
+```{mermaid}
+%%| fig-width: 6
+%%| label: fig-punishment
+%%| fig-cap: Extensive form of the game
+%%| mermaid-format: png
+
+graph LR
+    classDef default fill:#FFF
+    C(Firm) ---D[Store credit] --> E(Customer)
+    C ---F[Refund] --> G["(refund, -refund)"]
+    E ---H[Complain] --> I["(refund-complaint, -complaint)"]
+    E ---J[Do not complain] --> K["(store credit, 0)"]
+
+    classDef node fill:#FFF, stroke:#000;
+    class A,C,E node;
+
+    classDef edge fill:#FFF, stroke:#FFF;
+    class B,D,F,H,J edge;
+
+    classDef payoff fill:#FFF, stroke:#FFF;
+    class G,I,K payoff;
+
+```
+
+We work through this game by backward induction. If the cost to to the customer of complaining is greater than the benefit of obtaining the refund, the customer will not complain. In that case, the firm will offer the store credit.
+
+As the firm believed that the cost to to the customer of complaining is greater than the benefit of obtaining the refund, the customer's threat to complain would not normally be considered credible.
+
+b\) Use concepts from behavioural game theory to explain why the firm’s belief was ultimately incorrect.
+
+The customer's emotional response may lead them to complain. They might be angry or obtain satisfaction from seeing the firm punished. In that case, the customer will complain even though it is not in their material best interest to do so. Emotionally, it is worthwhile. They incur the cost of complaining but get the benefit of both the refund and the satisfaction from punishing the firm.

@@ -154,28 +154,6 @@ P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\
 \end{align*}
 ```
 
-The correct answer becomes more apparent if I show an alternative representation using natural frequencies:
-
-> You test yourself for COVID-19. The following information is known:
->
-> -   Ten in every 1000 people have COVID-19 (the prevalence)
-> -   Of these 10 people with COVID-19, nine will test positive (the sensitivity)
-> -   Of the 990 people without COVID-19, about 89 nevertheless test positive (the false positive rate).
->
-> You test positive. What is the chance that you have COVID-19?
-
-@cosmides1996 first proposed using natural frequencies in this way. We derive natural frequencies by observing cases representatively sampled from a population.
-
-@hoffrage1998 reported that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.
-
-There is evidence that you can get further gains through a frequency tree representation (e.g. @spiegelhalter2015). Below is one such tree from @gigerenzer2011, which is contrasted with a tree using conditional probabilities.
-
-![](img/gigerenzer_2011.png)
-
-The numbers at the bottom of the conditional probability tree do not contain the base rate information. You can't simply compare them to calculate conditional probabilities. You need to refer to the middle layer. Conversely, the natural frequency tree contains all you need to calculate the conditional probability in the bottom row.
-
-We can convert the numbers at the bottom of the conditional probability tree into frequencies: 900 in 1000, 10 in 1000, 90 in 1000 and 910 in 1000. Gigerenzer calls these simple frequencies. While simple frequencies can make a problem more tractable, they do not allow us to calculate conditional probabilities. Simple frequencies are just a restatement of the probabilities. In contrast, natural frequencies are joint frequencies, such as the number of people who test positive and who have COVID-19.
-
 ### The Quasi-Bayesian approach
 
 An alternative explanation for base rate neglect is that people put the same probability on all possible hypotheses (uniform priors).
@@ -192,6 +170,74 @@ P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\
 &=`r round((0.9*0.5)/(0.9*0.5 + 0.09*0.5), 3)`
 \end{align*}
 ```
+
+## Natural frequencies
+
+Let us reconsider this medical problem with an alternative representation. This representation uses "natural frequencies".
+
+> You test yourself for COVID-19. The following information is known:
+>
+> -   Ten in every 1000 people have COVID-19 (the prevalence)
+> -   Of these 10 people with COVID-19, nine will test positive (the sensitivity)
+> -   Of the 990 people without COVID-19, about 89 nevertheless test positive (the false positive rate).
+>
+> You test positive. What is the chance that you have COVID-19?
+
+Seeing a representation in this manner makes the base rate (and the rate of false positives) much more salient, and leads to more accurate estimates of the conditional probabilities.
+
+@cosmides1996 first proposed using natural frequencies in this way. We derive natural frequencies by observing cases representatively sampled from a population.
+
+@hoffrage1998 reported that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.
+
+There is evidence that you can get further gains through a frequency tree representation (e.g. @spiegelhalter2015). Below is one such tree from @gigerenzer2011, which is contrasted with a tree using conditional probabilities.
+
+![](img/gigerenzer_2011.png)
+
+The numbers at the bottom of the conditional probability tree do not contain the base rate information. You can't simply compare them to calculate conditional probabilities. You need to refer to the middle layer. Conversely, the natural frequency tree contains all you need to calculate the conditional probability in the bottom row.
+
+We can convert the numbers at the bottom of the conditional probability tree into frequencies: 900 in 1000, 10 in 1000, 90 in 1000 and 910 in 1000. Gigerenzer calls these simple frequencies. While simple frequencies can make a problem more tractable, they do not allow us to calculate conditional probabilities. Simple frequencies are just a restatement of the probabilities. In contrast, natural frequencies are joint frequencies, such as the number of people who test positive and who have COVID-19.
+
+### Identifying a finch
+
+You are trying to spot a rare type of bird, the Darwin finch. It looks very similar to the Wallace finch except for a slight difference in the shape of its beak. You know the following about the finches in your area:
+
+- 99% of the finches are Wallace finches. The remaining 1% are Darwin finches.
+- If you spot a Darwin finch, you will correctly identify that it is a Darwin finch 95% of the time. The other 5% of the time you identify it as a Wallace finch.
+- If you spot a Wallace finch, you will correctly identify that it is a Wallace finch 95% of the time. The other 5% of the time you identify it as a Darwin finch.
+
+You spot a finch and identify it as a Darwin finch.
+
+a\) Use Bayes' rule to calculate the probability that the finch is a Darwin finch?
+
+\begin{align*}
+P(D|I)&=\frac{P(I|D)P(D)}{P(I)} \\[6pt]
+&=\frac{P(I|D)P(D)}{P(I|D)P(D)+P(I|\neg D)P(\neg D)} \\[6pt]
+&=\frac{0.95\times 0.01}{0.95\times 0.01 + 0.05\times 0.99} \\[6pt]
+&=`r round((0.95*0.01)/(0.95*0.01+0.05*0.99), 2)`
+\end{align*}
+
+The probability that it is a Darwin finch is 16%.
+
+b\) Use natural frequencies to calculate the probability that the finch is a Darwin finch?
+
+Suppose there are 10,000 finches.
+
+That would mean there are 100 Darwin finches and 9,900 Wallace finches.
+
+If I spotted a Darwin finch I would identify 95 of them as Darwin finches.
+
+If I spotted a Wallace Finch, I would identify $0.05\times 9900=495$ as Darwin Finches.
+
+That means 95 of the 95+495=590 birds I identify as Darwin finches would be Darwin finches.
+
+Therefore:
+
+\begin{align*}
+P(D|I)&=\frac{95}{540} \\[6pt]
+&=`r round(95/590, 2)` \\
+\end{align*}
+
+Note that in this example I have started with a number of finches that allows me to avoid fractions and small decimals. If I started with only 100 finches, I would later be talking about an unintuitive 4.95 finches. If you are using natural frequencies to solve a problem of conditional probability, you should choose a large enough number to avoid complicated fractions and decimals.
 
 ## Probability matching
 

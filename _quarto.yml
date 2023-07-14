@@ -51,6 +51,7 @@ book:
     - part: beliefs/beliefs.qmd
       chapters: 
         - beliefs/probability-foundations.qmd
+        - beliefs/bayes-rule.qmd
         - beliefs/heuristics.qmd
         - beliefs/biases-in-probability-judgment.qmd
         - beliefs/heuristics-and-the-bias-variance-trade-off.qmd

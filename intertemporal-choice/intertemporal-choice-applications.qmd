@@ -136,3 +136,23 @@ ggplot(df2, aes(group, percentage)) +
 ```
 
 Note the savings rate is higher than the default rate in Australia. Could the default in Australia create a low anchor for some people?
+
+## The Progress Saver Account
+
+[ANZ bank's progress saver account](https://www.anz.com.au/personal/bank-accounts/savings-accounts/progress-saver/) pays bonus monthly bonus interest on the condition that a customer deposits at least \$10 into the account and makes no withdrawals. The bonus interest was 3.74% per year at the time of writing this question. If you fail to make the minimum deposit or withdraw from the account, you are paid a nominal interest rate of 0.01% per year on your savings for the month. (The link to the ANZ website is only provided for context. You do not need to follow the link to answer this question.)
+
+The head of retail banking has noted that most account holders do not receive bonus interest each month. Most notably, while they often make deposits, they later withdraw funds, leading to the loss of the bonus interest.
+
+\(a) Use concepts relating to intertemporal choice to explain why a customer might deposit funds into the progress saver account only to withdraw them at a penalty later.
+
+This behaviour may be evidence of a preference reversal due to present bias. Today, the customer may have a preference for saving money for a long-term goal rather than short-term spending at a closer date. But when that opportunity for spending arrives, they prefer withdrawing from the account and spending the money now as that spending is no longer subject to the short-term discount factor $\beta$, whereas the long-term savings goal and any interest toward achieving it are.
+
+For example, suppose a customer is deciding whether to save money for their house deposit far in the future or spend the money on a new pair of shoes when they go shopping next week. Both are in the future and subject to a short-term discount factor. In that circumstance, saving for the deposit might be preferred. However, when the shopping day comes the shoes could be bought **now**. The shoes are not subject to the short-term disount factor and may give higher discounted utility than the long-term savings goal. The customer then withdraws the funds for the shoes, having changed their mind.
+
+The behavioural could also note could be for rational reasons (not required to be given for this question), such as a change in circumstances.
+
+\(b) The bank has another product, a term deposit savings account, that pays 0.15% interest if you commit your money for 12 months. Many customers still use the term deposit despite paying much lower interest than the progress saver account (if the bonus criteria are met) and constraining access to funds. Use concepts relating to intertemporal choice to explain why a customer might deposit money in the term deposit account despite the low interest rate.
+
+Some customers are what we call "sophisticated" present-biased agents. They are present biased but they know they are present biased. They can see their future failings as they think through problems using backward induction. As a result, they can implement strategies to restrain their future self such as the use of a commitment device. A commitment device is a mechanism that locks you into a course of action by changing the value or availability of future options. 
+
+If they foresaw spending their money on shoes, they would know that depositing in the bonus saver account would not lead to them saving for their house deposit long term. As a result, that person may decide to forgo the possibility of higher interest (that they won't actually receive) for the benefit of constraining their future self from buying shoes when shopping. The term deposit provides that constraint, acting as a commitment device.
