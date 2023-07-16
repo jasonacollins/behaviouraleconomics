@@ -341,7 +341,7 @@ V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\[6pt]
 
 The value of not taking the bet is zero. Paddy would have no change from his reference point.
 
-Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ Paddy could get by simply rejecting the bet.
+Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ that Paddy could get by simply rejecting the bet. He rejects the bet due to his loss aversion and the diminishing sensitivity to gains. The loss is weighted double that of an equivalent gain, outweighing both the larger potential gain and 60% probability.
 
 The following figure shows Paddy's value function, the bets and the value of the bets. The figure illustrates that Paddy's rejection is caused by both Paddy's loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.
 
@@ -433,9 +433,72 @@ V(\text{L})&=v(L) \\[6pt]
 
 Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of \$150.
 
-The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain.
+The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain. The potential loss of another $100 results in a smaller incremental loss of value than an equivalent win of $100.
 
-![](img/paddy-2.jpg){width=80%}
+```{r}
+#| fig-cap: A 60:40 gamble after a loss
+
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-260, 100, 0.1),
+  y = u(seq(-260, 100, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1 <- -250 #loss
+x2 <- 0 #win
+ev <- -100 #expected value of gamble
+xc <- -150 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-260, 100), ylim = c(-35, 5))+
+
+  #Add labels -250, v(-250) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "-250", size = 4, hjust = 0.5, vjust = -0.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(-250)", size = 4, hjust = -0.2, vjust = 0.6)+
+
+  #Add labels -150, v(-150) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "-150", size = 4, hjust = 0.5, vjust = -0.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "v(-150)", size = 4, hjust = -0.2, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels E[A]=-100, V(A) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]=-100", size = 4, hjust = 0.5, vjust = -0.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(A)", size = 4, hjust = -0.2, vjust = 0.45)
+
+```
 
 ## A gamble in the gain domain
 
@@ -480,13 +543,7 @@ Bill rejects the gamble because of the diminishing sensitivity to gains. This le
 
 Loss aversion does not affect his decision as all possible outcomes (at least under our assumed reference point) are in the gain domain. Note that we do not use the value function for $x<0$ in determining Bill's choice.
 
-\(c) Suppose Bill were to experience a large negative shock to his wealth that does not immediately change his reference point. Could this shock cause him to change his decision concerning the \$100 and gamble A?
-
-A large negative shock to Bill's wealth would cause him to change his decision concerning the \$100 and gamble A. The shock would move the two possible outcomes into the loss domain, where Bill is risk seeking. (For this answer, I am assuming a shock of greater than \$250. A smaller shock would change the analysis.)
-
-The diagrams below show the possible payoffs, Bill's value function and the value of each option.
-
-The first diagram shows Bill's choices before the shock, whereby all possible outcomes are in the gain domain. The possible outcomes from the gamble are zero and \$250. The certain outcome on offer is \$100. The expected value of the gamble is \$125.
+The following chart shows Bill's choices before the shock, whereby all possible outcomes are in the gain domain. The possible outcomes from the gamble are zero and \$250. The certain outcome on offer is \$100. The expected value of the gamble is \$125.
 
 As he is risk averse, the value of the \$100 for certain exceeds the weighted value of the gamble. This can be seen through $v(A)$ being less than $v(\$100)$. Bill will therefore choose the \$100 for certain.
 
@@ -559,7 +616,11 @@ ggplot(mapping = aes(x, y)) +
 
 ```
 
-The second diagram illustrates Bill's decision after the shock. After the loss of wealth but no change in reference point, the outcomes would now be in the loss domain. Let $L$ be a large negative number, the loss. The potential outcomes from the gamble are now $L$ and $L+250$. The certain outcome of accepting the \$100 is $L+100$. The expected value of the gamble is $L+125$. The weighted value of the gamble is $v(L+125)$. The value of the certain outcome is $v(L+100)$.
+\(c) Suppose Bill were to experience a large negative shock to his wealth that does not immediately change his reference point. Could this shock cause him to change his decision concerning the \$100 and gamble A?
+
+A large negative shock to Bill's wealth would cause him to change his decision concerning the \$100 and gamble A. The shock would move the two possible outcomes into the loss domain, where Bill is risk seeking. (For this answer, I am assuming a shock of greater than \$250. A smaller shock would change the analysis.)
+
+The following diagram illustrates Bill's decision after the shock. After the loss of wealth but no change in reference point, the outcomes would now be in the loss domain. Let $L$ be a large negative number, the loss. The potential outcomes from the gamble are now $L$ and $L+250$. The certain outcome of accepting the \$100 is $L+100$. The expected value of the gamble is $L+125$. The weighted value of the gamble is $v(L+125)$. The value of the certain outcome is $v(L+100)$.
 
 Due to the convex curvature of the curve in the loss domain, Bill is risk seeking. As a result, the utility of the gamble is greater than the utility of the certain outcome. This can be seen in $v(L+A)$ being greater than $v(L+100)$.
 
@@ -918,10 +979,25 @@ What elements of prospect theory might lead Betty to cash out the bet before the
 
 We can consider multiple potential reference points Betty might use to make her decision.
 
-One potential reference point is Betty's position before making the bet. In that case, Betty is comparing a certain gain of \$6980 to a gamble with a loss of \$20 and a gain of \$9,980. This gamble is largely in the gain domain in which Betty is risk averse. Her risk aversion may lead her to cash out rather than take the gamble. The potential \$20 loss may be overweighted due to loss aversion, but is a relatively insignificant sum.
+One potential reference point is Betty's position before making the bet. In that case, Betty is comparing:
 
-Another potential reference point is Betty's position immediately after making the bet. She has adapted to the payment of \$20. Here the analysis is similar. Betty is comparing a certain gain of \$7000 to a gamble with a gain of \$10,000 or a payment of zero. The gamble is completely in the gain domain, where Betty is risk averse. Her risk aversion may lead her to cash out rather than gamble. Loss aversion is irrelevant in this instance.
+- a certain gain of \$6980 and
+- a gamble with a loss of \$20 and a gain of \$9,980.
 
-Another potential reference point is that Betty is taking the \$7000 to be locked in. This means she is comparing staying at the status quo with certainty to a gamble involving a potential loss of \$7000 and a gain of \$3,000. In this case, the combination of risk aversion reducing the value of the gain and loss aversion increasing the relative magnitude of the pain of loss could lead her to cash out. This would be counteracted by the convex curvature in the loss domain, but the loss aversion effect would likely dominate.
+The gamble is largely in the gain domain in which Betty is risk averse. Her risk aversion may lead her to cash out rather than take the gamble. The potential \$20 loss may be overweighted due to loss aversion, but is a relatively insignificant sum.
+
+Another potential reference point is Betty's position immediately after making the bet. She has adapted to the payment of \$20. Here the analysis is similar. Betty is comparing:
+
+- a certain gain of \$7000 and
+- a gamble with a gain of \$10,000 or a payment of zero
+
+The gamble is completely in the gain domain, where Betty is risk averse. Her risk aversion may lead her to cash out rather than gamble. Loss aversion is irrelevant in this instance.
+
+Another potential reference point is that Betty is taking the \$7000 to be locked in. This means she is comparing:
+
+- staying at the status quo with certainty and
+- a gamble involving a potential loss of \$7000 and a gain of \$3,000.
+ 
+In this case, the combination of risk aversion reducing the value of the gain and loss aversion increasing the relative magnitude of the pain of loss could lead her to cash out. This would be counteracted by the convex curvature in the loss domain, but the loss aversion effect would likely dominate.
 
 Finally, Betty's weighting of probabilities will also affect her decision. Overweighting certainty means overweighting small probabilities, such as the small probability of Geelong losing. This overweighting would push her towards cashing out as the loss would have greater weight in her calculation of the weighted value of each option.

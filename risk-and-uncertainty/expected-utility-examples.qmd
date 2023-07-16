@@ -82,8 +82,8 @@ ggplot(mapping = aes(x, y)) +
             axis.title=element_text(size=14,face="bold"),
             axis.title.y = element_text(angle=0, vjust=0.5))+
 
-  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
-  coord_cartesian(xlim = c(-25, 220), ylim = c(0, 6))+
+  #set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
 
   #Add labels W-10, W-10 and line to curve indicating each
   annotate("text", x = x1, y = 0, label = "W-10", size = 4, hjust = 0.5, vjust = 1.5)+
@@ -204,8 +204,8 @@ ggplot(mapping = aes(x, y)) +
             axis.title=element_text(size=14,face="bold"),
             axis.title.y = element_text(angle=0, vjust=0.5))+
 
-  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
-  coord_cartesian(xlim = c(-25, 220), ylim = c(0, 6))+
+#set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
 
   #Add labels W-10, U(W+10) and line to curve indicating each
   annotate("text", x = x1, y = 0, label = "W-10", size = 4, hjust = 0.5, vjust = 1.5)+
@@ -316,8 +316,8 @@ ggplot(mapping = aes(x, y)) +
             axis.title=element_text(size=14,face="bold"),
             axis.title.y = element_text(angle=0, vjust=0.5))+
 
-  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
-  coord_cartesian(xlim = c(-25, 220), ylim = c(0, 6))+
+  #set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
 
   #Add labels 0.6W, U(0.6W) and line to curve indicating each
   annotate("text", x = x1, y = 0, label = "0.6W", size = 4, hjust = 0.5, vjust = 1.5)+
@@ -590,8 +590,8 @@ ggplot(mapping = aes(x, y)) +
             axis.title=element_text(size=14,face="bold"),
             axis.title.y = element_text(angle=0, vjust=0.5))+
 
-  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
-  coord_cartesian(xlim = c(-25, 220), ylim = c(0, 6))+
+#set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
 
   #Add labels W+20, U(W+20) and line to curve indicating each
   annotate("text", x = x1, y = 0, label = "W+20", size = 4, hjust = 0.5, vjust = 1.5)+
@@ -692,8 +692,8 @@ ggplot(mapping = aes(x, y)) +
             axis.title=element_text(size=14,face="bold"),
             axis.title.y = element_text(angle=0, vjust=0.5))+
 
-  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
-  coord_cartesian(xlim = c(-25, 220), ylim = c(0, 40000))+
+#set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-1000, 40000))+
 
   #Add labels W-T, U(W-T) and line to curve indicating each
   annotate("text", x = x1, y = 0, label = "W-T", size = 4, hjust = 0.5, vjust = 1.5)+
