@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on behavioural economics - 5&nbsp; Notation and mathematical preliminaries</title>
+<title>Notes on behavioural economics - 5&nbsp; Notation and mathematical background</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -41,6 +75,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,12 +117,18 @@ ul.task-list li input[type="checkbox"] {
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Notes on behavioural economics - 5&nbsp; Notation and mathematical preliminaries">
+<meta property="og:title" content="Notes on behavioural economics - 5&nbsp; Notation and mathematical background">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/notation-and-mathematical-background_files/figure-html/unnamed-chunk-1-1.png">
 <meta property="og:site-name" content="Notes on behavioural economics">
-<meta name="twitter:title" content="Notes on behavioural economics - 5&nbsp; Notation and mathematical preliminaries">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
+<meta name="twitter:title" content="Notes on behavioural economics - 5&nbsp; Notation and mathematical background">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/notation-and-mathematical-background_files/figure-html/unnamed-chunk-1-1.png">
+<meta name="twitter:image-height" content="960">
+<meta name="twitter:image-width" content="1344">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -134,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html">Decision making under risk and uncertainty</a></li><li class="breadcrumb-item"><a href="../risk-and-uncertainty/notation.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical preliminaries</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html">Decision making under risk and uncertainty</a></li><li class="breadcrumb-item"><a href="../risk-and-uncertainty/notation-and-mathematical-background.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -206,8 +249,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/notation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical preliminaries</span></span></a>
+  <a href="../risk-and-uncertainty/notation-and-mathematical-background.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -571,7 +614,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#notation" id="toc-notation" class="nav-link active" data-scroll-target="#notation"><span class="header-section-number">5.1</span> Notation</a></li>
-  <li><a href="#mathematics" id="toc-mathematics" class="nav-link" data-scroll-target="#mathematics"><span class="header-section-number">5.2</span> Mathematics</a>
+  <li><a href="#mathematical-background" id="toc-mathematical-background" class="nav-link" data-scroll-target="#mathematical-background"><span class="header-section-number">5.2</span> Mathematical background</a>
   <ul class="collapse">
   <li><a href="#exponentiation" id="toc-exponentiation" class="nav-link" data-scroll-target="#exponentiation"><span class="header-section-number">5.2.1</span> Exponentiation</a></li>
   <li><a href="#the-exponential-function" id="toc-the-exponential-function" class="nav-link" data-scroll-target="#the-exponential-function"><span class="header-section-number">5.2.2</span> The exponential function</a></li>
@@ -586,7 +629,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical preliminaries</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></h1>
 </div>
 
 
@@ -626,18 +669,44 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 </span></p>
 <p>It is typically not difficult to determine which is which.</p>
 </section>
-<section id="mathematics" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="mathematics"><span class="header-section-number">5.2</span> Mathematics</h2>
+<section id="mathematical-background" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="mathematical-background"><span class="header-section-number">5.2</span> Mathematical background</h2>
 <p>In the analysis of expected utility, we will use some basic mathematical concepts. I will briefly review these concepts here.</p>
 <section id="exponentiation" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="exponentiation"><span class="header-section-number">5.2.1</span> Exponentiation</h3>
 <p>Exponentiation is a mathematical operation where a number is multiplied by itself a certain number of times.</p>
-<p>Exponentiation is written as <span class="math inline">f(x)=x^y</span>. That is, <span class="math inline">x</span> is multiplied by itself <span class="math inline">y</span> times. For example, <span class="math inline">2^3=2\times2\times2=8</span>.</p>
-<p>The exponent <span class="math inline">y</span> can be any real number, including fractions and negative numbers. For example, <span class="math inline">2^{1/2}=\sqrt{2}=1.4142</span> and <span class="math inline">2^{-1}=1/2=0.5</span>.</p>
+<p>Exponentiation is written as <span class="math inline">f(x)=x^a</span>. That is, <span class="math inline">x</span> is multiplied by itself <span class="math inline">a</span> times. For example, <span class="math inline">2^3=2\times2\times2=8</span>.</p>
+<p>The exponent <span class="math inline">a</span> can be any real number, including fractions and negative numbers. For example, <span class="math inline">2^{1/2}=\sqrt{2}=1.4142</span> and <span class="math inline">2^{-1}=1/2=0.5</span>.</p>
 </section>
 <section id="the-exponential-function" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="the-exponential-function"><span class="header-section-number">5.2.2</span> The exponential function</h3>
-<p>The exponential function is written as <span class="math inline">f(x)=e^x</span>. The letter <span class="math inline">e</span> is a constant, approximately equal to 2.71828. It is a special case of exponentiation where the base is <span class="math inline">e</span>.</p>
+<p>The exponential function is written as <span class="math inline">f(x)=e^x</span>. The letter <span class="math inline">e</span> is a constant, approximately equal to 2.71828. It is a special case of exponentiation where the base is <span class="math inline">e</span>, which is multiplied by itself <span class="math inline">x</span> times.</p>
+<p>A plot of the exponential function is shown below.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.1</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">exp</span>(x)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(x, y)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"f(x)=e^x"</span>) <span class="sc">+</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="notation-and-mathematical-background_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="notation-and-mathematical-background_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="the-logarithmic-function" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="the-logarithmic-function"><span class="header-section-number">5.2.3</span> The logarithmic function</h3>
@@ -648,18 +717,55 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <h3 data-number="5.2.4" class="anchored" data-anchor-id="differentiation"><span class="header-section-number">5.2.4</span> Differentiation</h3>
 <p>Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as <span class="math inline">\frac{df(x)}{dx}</span> or <span class="math inline">\frac{dy}{dx}</span> or <span class="math inline">f'(x)</span>.</p>
 <p>For example, if <span class="math inline">f(x)=x^2</span>, then <span class="math inline">\frac{df(x)}{dx}=2x</span>.</p>
-<p>There are a number of simple rules to differentiate a function. The rules relevant to these notes are:</p>
+<p>There are a number of simple rules to differentiate a function. The rules relevant to these notes are as follows.</p>
+<p>The derivative of a constant is zero.</p>
+<p>The derivative of an exponentiation is:</p>
 <p><span class="math display">
 \frac{d}{dx}x^a=ax^{a-1}
 </span></p>
+<p>For example:</p>
+<p><span class="math display">
+\frac{d}{dx}x^2=2x
+</span></p>
+<p>You can see from this that for any value of <span class="math inline">x</span> greater than zero, the derivative is greater than zero, signifying that the function <span class="math inline">f(x)=x^2</span> is increasing and has positive slope. For any value of <span class="math inline">x</span> less than zero, the derivative is less than zero, signifying that the function is decreasing and has negative slope.</p>
+<p>The derivative of the exponential function is:</p>
 <p><span class="math display">
 \frac{d}{dx}e^x=e^x
 </span></p>
+<p>This derivative is positive for all values of <span class="math inline">x</span>, signifying that the function <span class="math inline">f(x)=e^x</span> is increasing and has positive slope.</p>
+<p>The derivative of the logarithmic function is:</p>
 <p><span class="math display">
 \frac{d}{dx}\ln(x)=\frac{1}{x}
 </span></p>
+<p>The derivative of a fraction is:</p>
+<p><span class="math display">
+\frac{d}{dx}\frac{1}{f(x)}=-\frac{f'(x)}{f(x)^2}
+</span></p>
+<p>For example:</p>
+<p><span class="math display">
+\frac{d}{dx}\frac{1}{x}=-\frac{1}{x^2}
+</span></p>
+<p>Where you have a function <span class="math inline">\frac{1}{x^a}</span>, it is often easier to write it as <span class="math inline">x^{-a}</span> and use the rule for exponentiation. For example:</p>
+<p><span class="math display">
+\frac{d}{dx}\frac{1}{x}=\frac{d}{dx}x^{-1}=-1x^{-2}=-\frac{1}{x^2}
+</span></p>
+<section id="the-second-derivative" class="level4" data-number="5.2.4.1">
+<h4 data-number="5.2.4.1" class="anchored" data-anchor-id="the-second-derivative"><span class="header-section-number">5.2.4.1</span> The second derivative</h4>
+<p>The second derivative of the function is a measure of the curvature of the function or the rate of change of the slope.</p>
+<p>We can use the second derivative to determine whether a function is concave or convex. A function is concave if the second derivative is negative and convex if the second derivative is positive.</p>
+<p>The second derivative of a function is the derivative of the derivative. It is written as <span class="math inline">\frac{d^2f(x)}{dx^2}</span> or <span class="math inline">\frac{d^2 y}{dx^2}</span> or <span class="math inline">f''(x)</span>.</p>
+<p>For example, if <span class="math inline">f(x)=x^2</span>, then:</p>
+<p><span class="math display">
+\frac{d^2f(x)}{dx^2}=2
+</span></p>
+<p>The second derivative of the logarithmic function is:</p>
+<p><span class="math display">
+\frac{d^2}{dx^2}\ln(x)=\frac{d}{dx}\frac{1}{x}=-\frac{1}{x^2}
+</span></p>
+<p>You will not be asked to differentiate any functions when working through these notes. However, understanding what differentiation is and what it is showing will help you understand the intuition behind the concepts that I discuss.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -947,6 +1053,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true});</script>
 
 
 

@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "16 July 2023"
+  date: "17 July 2023"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -17,7 +17,7 @@ book:
         - foundations/economic-foundation-exercises.qmd
     - part: risk-and-uncertainty/decision-making-under-risk-and-uncertainty.qmd
       chapters:
-        - risk-and-uncertainty/notation.qmd
+        - risk-and-uncertainty/notation-and-mathematical-background.qmd
         - risk-and-uncertainty/expected-value.qmd
         - risk-and-uncertainty/axioms-for-expected-utility-theory.qmd
         - risk-and-uncertainty/expected-utility-theory.qmd

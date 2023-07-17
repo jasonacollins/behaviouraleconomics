@@ -1,0 +1,157 @@
+# Notation and mathematical background
+
+## Notation
+
+Before we get into our analysis of decision-making under risk and uncertainty, I will introduce some notation.
+
+Suppose we have a lottery $L$ with $n$ possible outcomes $x_1, x_2, ..., x_n$ each with probabilities $p_1, p_2, ..., p_n$. A shorthand way to write this is:
+
+$$
+L=(p_1,x_1; p_2,x_2; ...; p_n,x_n)
+$$
+
+For example, suppose you are offered a gamble with a 50% probability of winning \$200 and a 50% probability of losing \$100. We can write this as:
+
+$$
+L=(0.5, −100; 0.5, 200)
+$$
+
+The order of each outcome-probability pair does not matter. I could also write:
+
+$$
+L=(0.5, 200; 0.5, -100)
+$$
+
+You may also see gambles represented with the outcome and probability in a different order, such as:
+
+$$
+L=(x_1,p_1; x_2,p_2; ...; x_n,p_n)
+$$
+
+Or:
+
+$$
+L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
+$$
+
+It is typically not difficult to determine which is which.
+
+## Mathematical background
+
+In the analysis of expected utility, we will use some basic mathematical concepts. I will briefly review these concepts here.
+
+### Exponentiation
+
+Exponentiation is a mathematical operation where a number is multiplied by itself a certain number of times.
+
+Exponentiation is written as $f(x)=x^a$. That is, $x$ is multiplied by itself $a$ times. For example, $2^3=2\times2\times2=8$.
+
+The exponent $a$ can be any real number, including fractions and negative numbers. For example, $2^{1/2}=\sqrt{2}=1.4142$ and $2^{-1}=1/2=0.5$.
+
+### The exponential function
+
+The exponential function is written as $f(x)=e^x$. The letter $e$ is a constant, approximately equal to 2.71828. It is a special case of exponentiation where the base is $e$, which is multiplied by itself $x$ times.
+
+A plot of the exponential function is shown below.
+
+```{r}
+library(ggplot2)
+
+x <- seq(-5, 5, 0.1)
+y <- exp(x)
+
+df <- data.frame(x, y)
+
+ggplot(df, aes(x, y)) +
+  geom_line() +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "f(x)=e^x") +
+  theme_minimal()
+
+```
+
+
+### The logarithmic function
+
+The logarithmic function is written as $f(x)=\ln(x)$ or $\log_e(x)$.
+
+The logarithmic function is the inverse of the exponential function. That is, if $f(x)=e^x$, then $x=\ln(f(x))$.
+
+### Differentiation
+
+Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as $\frac{df(x)}{dx}$ or $\frac{dy}{dx}$ or $f'(x)$.
+
+For example, if $f(x)=x^2$, then $\frac{df(x)}{dx}=2x$.
+
+There are a number of simple rules to differentiate a function. The rules relevant to these notes are as follows.
+
+The derivative of a constant is zero.
+
+The derivative of an exponentiation is:
+
+$$
+\frac{d}{dx}x^a=ax^{a-1}
+$$
+
+For example:
+
+$$
+\frac{d}{dx}x^2=2x
+$$
+
+You can see from this that for any value of $x$ greater than zero, the derivative is greater than zero, signifying that the function $f(x)=x^2$ is increasing and has positive slope. For any value of $x$ less than zero, the derivative is less than zero, signifying that the function is decreasing and has negative slope.
+
+The derivative of the exponential function is:
+
+$$
+\frac{d}{dx}e^x=e^x
+$$
+
+This derivative is positive for all values of $x$, signifying that the function $f(x)=e^x$ is increasing and has positive slope.
+
+The derivative of the logarithmic function is:
+
+$$
+\frac{d}{dx}\ln(x)=\frac{1}{x}
+$$
+
+The derivative of a fraction is:
+
+$$
+\frac{d}{dx}\frac{1}{f(x)}=-\frac{f'(x)}{f(x)^2}
+$$
+
+For example:
+
+$$
+\frac{d}{dx}\frac{1}{x}=-\frac{1}{x^2}
+$$
+
+Where you have a function $\frac{1}{x^a}$, it is often easier to write it as $x^{-a}$ and use the rule for exponentiation. For example:
+
+$$
+\frac{d}{dx}\frac{1}{x}=\frac{d}{dx}x^{-1}=-1x^{-2}=-\frac{1}{x^2}
+$$
+
+#### The second derivative
+
+The second derivative of the function is a measure of the curvature of the function or the rate of change of the slope.
+
+We can use the second derivative to determine whether a function is concave or convex. A function is concave if the second derivative is negative and convex if the second derivative is positive.
+
+The second derivative of a function is the derivative of the derivative. It is written as $\frac{d^2f(x)}{dx^2}$ or $\frac{d^2 y}{dx^2}$ or $f''(x)$.
+
+For example, if $f(x)=x^2$, then:
+
+$$
+\frac{d^2f(x)}{dx^2}=2
+$$
+
+The second derivative of the logarithmic function is:
+
+$$
+\frac{d^2}{dx^2}\ln(x)=\frac{d}{dx}\frac{1}{x}=-\frac{1}{x^2}
+$$
+
+You will not be asked to differentiate any functions when working through these notes. However, understanding what differentiation is and what it is showing will help you understand the intuition behind the concepts that I discuss.
