@@ -1,6 +1,6 @@
 # Behavioural game theory
 
-In our analysis of game theory, I assumed rational agents in that they use all available information and are able to successfully determine their best action given their opponent's (also rational) action.
+In our analysis of game theory, I assumed rational agents in that they use all available information and can successfully determine their best action given their opponent's (also rational) action.
 
 But what if agents have limited rationality or vary in their rationality?
 

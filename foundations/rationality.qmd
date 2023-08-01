@@ -8,7 +8,7 @@ Rationality simply means that preferences respect some desirable principles. The
 
 Economists tend to keep the number of assumptions as small as possible. They choose the assumptions that they need for the particular analytical problem they have at hand.
 
-In its most stripped back form, analysis of consumer choice rests on just two assumptions. These are completeness and transitivity.
+In its most stripped-back form, analysis of consumer choice rests on just two assumptions. These are completeness and transitivity.
 
 ## Completeness
 
@@ -20,7 +20,7 @@ Formally, we can state the completeness axiom as follows:
 
 > For all $x$ and $y$, either $x \succcurlyeq y$ or $y \succcurlyeq x$ (or both).
 
-Completeness means people always have a preference for $x$ or $y$, or are indifferent between the two.
+Completeness means people always prefer $x$ or $y$, or are indifferent between the two.
 
 While the completeness axiom appears sensible, it is possible to develop examples where it may not hold. Consider a choice between two possible holiday destinations. Or two potential dates or spouses. If you are torn between the options and unable to make up your mind, this would represent a breach of the completeness axiom.
 
@@ -32,11 +32,25 @@ Under transitivity, if a person prefers A to B and B to C, they will prefer A to
 
 Formally, we can state the transitivity axiom as follows:
 
-> For all $x$, $y$, $z$, if $x \succcurlyeq y$ and $y \succcurlyeq z$, then $x \succcurlyeq z$.
+> For all $x$, $y$ and $z$, if $x \succcurlyeq y$ and $y \succcurlyeq z$, then $x \succcurlyeq z$.
 
 One classic argument for transitivity is the concept of a "money pump" (@davidson1955).
 
-Suppose you have a person who prefers A to B, B to C and C to A. That is, they have intransitive preferences. They have \$20 and an endowment of C. They are offered B in exchange for their endowment of C for some small nominal cost (say \$1). If they make the trade they now have B and \$19. They are then offered A in exchange for their endowment of B, again for a nominal cost. Finally, they are offered C in exchange for their endowment of A for a further nominal cost. They now have an endowment of C and \$17. This process can be repeated until the agent has no money.
+Suppose you have a person who prefers A to B, B to C and C to A. That is, they have intransitive preferences. They have \$20 and an endowment of C.
+
+![](img/money-pump-1.png)
+
+They are offered B in exchange for their endowment of C for some small nominal cost (say \$1). If they make the trade they now have B and \$19.
+
+![](img/money-pump-2.png)
+
+They are then offered A in exchange for their endowment of B, again for a nominal cost.
+
+![](img/money-pump-3.png)
+
+Finally, they are offered C in exchange for their endowment of A for a further nominal cost. They now have an endowment of C and \$17. This process can be repeated until the agent has no money.
+
+![](img/money-pump-4.png)
 
 ## Preference Orderings
 
@@ -52,7 +66,7 @@ That preference ordering, a simple rank of which options an agent prefers, is al
 
 This definition of rationality, accordance to the axioms of completeness and transitivity, provides little constraint on preferences.
 
-You could prefer less money to more. You could prefer sums of money that are divisible by seven with no remainder. You could prefer more for yourself or more for someone else.
+You could prefer less money to more. You could prefer sums of money divisible by seven with no remainder. You could prefer more for yourself or more for someone else.
 
 These axioms do not lead to an assumption that people are selfish, unless you define selfishness to be simply acting in accordance with their preferences.
 

@@ -230,8 +230,8 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/notation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation</span></span></a>
+  <a href="../risk-and-uncertainty/notation-and-mathematical-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -602,8 +602,9 @@ div.csl-indent {
   </ul></li>
   <li><a href="#the-charness-rabin-model" id="toc-the-charness-rabin-model" class="nav-link" data-scroll-target="#the-charness-rabin-model"><span class="header-section-number">48.3</span> The Charness-Rabin model</a>
   <ul class="collapse">
-  <li><a href="#example-advice" id="toc-example-advice" class="nav-link" data-scroll-target="#example-advice"><span class="header-section-number">48.3.1</span> Example: advice</a></li>
-  <li><a href="#example-the-trust-game" id="toc-example-the-trust-game" class="nav-link" data-scroll-target="#example-the-trust-game"><span class="header-section-number">48.3.2</span> Example: the trust game</a></li>
+  <li><a href="#the-dictator-game" id="toc-the-dictator-game" class="nav-link" data-scroll-target="#the-dictator-game"><span class="header-section-number">48.3.1</span> The dictator game</a></li>
+  <li><a href="#forms-of-distributional-preferences" id="toc-forms-of-distributional-preferences" class="nav-link" data-scroll-target="#forms-of-distributional-preferences"><span class="header-section-number">48.3.2</span> Forms of distributional preferences</a></li>
+  <li><a href="#example-the-trust-game" id="toc-example-the-trust-game" class="nav-link" data-scroll-target="#example-the-trust-game"><span class="header-section-number">48.3.3</span> Example: the trust game</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -651,8 +652,7 @@ U_i(x_i,x_j)=x_i+\alpha x_j
 <p>The idea behind inequality aversion is that people may dislike having less than other people and dislike having more than other people.</p>
 <section id="the-fehr-schmidt-model" class="level3" data-number="48.2.1">
 <h3 data-number="48.2.1" class="anchored" data-anchor-id="the-fehr-schmidt-model"><span class="header-section-number">48.2.1</span> The Fehr-Schmidt model</h3>
-<p>One basic mode of inquality aversion comes from the utility function in <span class="citation" data-cites="fehr1999">Fehr and Schmidt (<a href="../references.html#ref-fehr1999" role="doc-biblioref">1999</a>)</span>:</p>
-<p>It is of the following form:</p>
+<p>One basic mode of inquality aversion comes from the utility function in <span class="citation" data-cites="fehr1999">Fehr and Schmidt (<a href="../references.html#ref-fehr1999" role="doc-biblioref">1999</a>)</span>. It is of the following form:</p>
 <p><span class="math display">
 u_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\}
 </span></p>
@@ -680,7 +680,7 @@ u_i(x_i,x_j)=x_i-\left\{\begin{matrix}
 <section id="the-ultimatum-game" class="level3" data-number="48.2.2">
 <h3 data-number="48.2.2" class="anchored" data-anchor-id="the-ultimatum-game"><span class="header-section-number">48.2.2</span> The ultimatum game</h3>
 <p>We can examine the Fehr-Schmidt model in the context of the ultimatum game.</p>
-<p>Suppose two players of the ultimatum game have Fehr-Schmidt preferences.</p>
+<p>Suppose two players of the ultimatum game have Fehr-Schmidt preferences, with <span class="math inline">\beta=0.25</span> and <span class="math inline">\alpha=0.5</span>.</p>
 <p>What offers <span class="math inline">x</span> would the responder reject where the proposer has $10 to split between them?</p>
 <p>If the responder rejects, the payoff to the proposer and responder is zero. That is:</p>
 <p><span class="math display">
@@ -701,15 +701,13 @@ x−\alpha\text{max}\{10−2x,0\}−\beta\text{max}\{2x−10, 0\}&amp;&gt;0 \\
 <p>If the offer is more than $5, the <span class="math inline">\alpha</span> term is multiplied by zero and the inequality becomes:</p>
 <span class="math display">\begin{align*}
 x−\beta\text{max}\{2𝑥−10, 0\}&gt;0 \\[6pt]
-x−\beta(2x−10)&gt;0 \\[6pt]
-(1−\beta)x+\beta(10−x)&gt;0
+x−\beta(2x−10)&gt;0
 \end{align*}</span>
-<p>This will always hold for any <span class="math inline">\beta&lt;1</span>. Recall that if <span class="math inline">\beta&lt;1</span> the responder has higher utility from a higher payoff but at a decreasing rate when they have more than the proposer. In this case, if <span class="math inline">\beta&lt;1</span> the responder will always accept offers greater than $5.</p>
+<p>This will always hold for any <span class="math inline">\beta&lt;1</span> as <span class="math inline">x&gt;5</span> and <span class="math inline">5\geq 2x-10&gt;0</span>. Therefore the condition will hold for the agent with <span class="math inline">\beta=0.5</span>. Recall that if <span class="math inline">\beta&lt;1</span> the responder has higher utility from a higher payoff but at a decreasing rate when they have more than the proposer. In this case, if <span class="math inline">\beta&lt;1</span> the responder will always accept offers greater than $5.</p>
 <p>If the offer is less than $5, the <span class="math inline">\beta</span> term is multiplied by zero and the inequality becomes:</p>
 <span class="math display">\begin{align*}
 x−\alpha\text{max}\{10−2x,0\}&gt;0 \\[6pt]
-x−\alpha(10−2x)&gt;0 \\[6pt]
-(1+\alpha)x−\alpha(10−𝑥)&gt;0
+x−\alpha(10−2x)&gt;0
 \end{align*}</span>
 <p>Whether this holds depends on the value of <span class="math inline">\alpha</span> and the size of the offer <span class="math inline">x</span>. If <span class="math inline">\alpha=1/2</span>, then:</p>
 <span class="math display">\begin{align*}
@@ -718,7 +716,7 @@ x−\alpha(10−2x)&gt;0 \\[6pt]
 x&amp;&gt;2.5
 \end{align*}</span>
 <p>A responder with <span class="math inline">\alpha=1/2</span> will reject any offer under $2.50.</p>
-<p>We can plot the utility function for this game as the size of the offer increases. As the offer is not independent of the proposer’s payoff, I will derive the shape of the utility curve as a function of <span class="math inline">x_R</span>.</p>
+<p>We can plot the utility function for this game as the size of the offer increases. As the offer is not independent of the proposer’s payoff, I will derive the shape of the utility curve as a function of <span class="math inline">x_R=x</span>.</p>
 <span class="math display">\begin{align*}
 U_R(x_P,x_R)&amp;=x_R-\alpha\text{max}\{x_P-x_R,0\}-\beta\text{max}\{x_R-x_P,0\} \\[6pt]
 &amp;=x-\alpha\text{max}\{10-2x,0\}-\beta\text{max}\{2x-10,0\}
@@ -750,9 +748,11 @@ u_i(x_i,x_j)=\left\{\begin{matrix}
 </span></p>
 <p>Where <span class="math inline">x_i</span> is the payoff to player <span class="math inline">i</span> and <span class="math inline">x_j</span> is the payoff to the other player.</p>
 <p><span class="math inline">\rho</span> and <span class="math inline">\sigma</span> capture the agent’s attitudes toward others. When the agent is ahead the other player’s welfare enters their utility via <span class="math inline">\rho</span>. When the agent is behind the other player’s welfare enters agent’s utility via <span class="math inline">\sigma</span>. For most people <span class="math inline">\rho&gt;\sigma</span>. They give more weight to others’ utility when they are better off. <span class="math inline">\sigma</span> can also be less than zero. If they are behind someone they place negative weight on further gains by that person.</p>
-<p>This utility function is equivalent to that of <span class="citation" data-cites="fehr1999">Fehr and Schmidt (<a href="../references.html#ref-fehr1999" role="doc-biblioref">1999</a>)</span>. You can rearrange the terms to show that <span class="math inline">\beta=\rho</span> and <span class="math inline">\alpha=-\sigma</span>. However, <span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> argued that there was evidence for distributional preferences beyond inequality aversion and that a broader range of parameters for <span class="math inline">\rho</span> and <span class="math inline">\sigma</span> were needed.</p>
+<p>This utility function is equivalent to that of <span class="citation" data-cites="fehr1999">Fehr and Schmidt (<a href="../references.html#ref-fehr1999" role="doc-biblioref">1999</a>)</span>. You can rearrange the terms to show that <span class="math inline">\beta=\rho</span> and <span class="math inline">\alpha=-\sigma</span>. However, expressing the utility function in this way allows us to consider distributional preferences other than inequality aversion in a more intuitive way.</p>
+<section id="the-dictator-game" class="level3" data-number="48.3.1">
+<h3 data-number="48.3.1" class="anchored" data-anchor-id="the-dictator-game"><span class="header-section-number">48.3.1</span> The dictator game</h3>
 <p>Consider the following example of the dictator game. In the dictator game, the dictator makes a unilateral offer to the receiver. The game then ends. The receiver has an empty strategy set.</p>
-<p>In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where $(x_D,x_R) represent the payoffs for the dictator and receiver respectively. Under each distribution they have less than the other player. Their <span class="math inline">\sigma=−1/2</span>. As they have less than the other player, <span class="math inline">\sigma</span> is the relevant parameter.</p>
+<p>In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where <span class="math inline">(x_D,x_R)</span> represent the payoffs for the dictator and receiver respectively. The dictator’s <span class="math inline">\sigma=−1/2</span>. As the dictator has less than the other player under each distribution, <span class="math inline">\sigma</span> is the relevant parameter.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-dictator-game-distribution" class="quarto-figure quarto-figure-center anchored">
@@ -761,7 +761,7 @@ u_i(x_i,x_j)=\left\{\begin{matrix}
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="distribution_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="distribution_files/figure-html/mermaid-figure-1.png" style="width:4in;height:1.55in" class="figure-img"></a></p>
+<p><a href="distribution_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="distribution_files/figure-html/mermaid-figure-1.png" style="width:4in;height:1.56in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -769,7 +769,7 @@ u_i(x_i,x_j)=\left\{\begin{matrix}
 </div>
 </div>
 </div>
-<p>The dictator calculates the utility of each allocation.</p>
+<p>The calculate the dictator’s utility of each allocation.</p>
 <span class="math display">\begin{align*}
 U(0,1)&amp;=\sigma\times 1+(1−\sigma)\times 0 \\[6pt]
 &amp;=−1/2×1+(1+1/2)\times 0 \\[6pt]
@@ -780,35 +780,20 @@ U(1,5)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 \end{align*}</span>
 <p>The dictator prefers to allocate (0,1), even though it is worse for them, because it is also worse for the other player.</p>
 <p><span class="math inline">\sigma&lt;0</span> can also account for the rejection of low offers in the ultimatum game.</p>
-<p>The <span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> model can capture many forms of distributional preferences. Some are as follows.</p>
-<p>If <span class="math inline">\sigma&gt;0</span> and <span class="math inline">\rho&gt;0</span>, the agent is altruistic. A higher payoff to the other player increases the agent’s utility</p>
+</section>
+<section id="forms-of-distributional-preferences" class="level3" data-number="48.3.2">
+<h3 data-number="48.3.2" class="anchored" data-anchor-id="forms-of-distributional-preferences"><span class="header-section-number">48.3.2</span> Forms of distributional preferences</h3>
+<p>We can adjust the values of <span class="math inline">\rho</span> and <span class="math inline">\sigma</span> to capture many forms of distributional preferences. Some are as follows.</p>
+<p>If <span class="math inline">\sigma&gt;0</span> and <span class="math inline">\rho&gt;0</span>, the agent is altruistic. A higher payoff to the other player increases the agent’s utility.</p>
 <p>If <span class="math inline">1\geq\rho\geq 0&gt;\sigma</span>, the agent is inequality averse. If the other player has more, the agent’s utility decreases with further gains for the other player. If the other player has less, the agent’s utility increases with further gains for either agent.</p>
 <p>If <span class="math inline">0&gt;\rho\geq\sigma</span>, the agent is status-seeking. They gain more utility by having more than the other player. Their utility goes up when either they get more or the other player gets less.</p>
 <p>If <span class="math inline">\rho=\sigma=0</span> we are left with the classical self-interested utility function. The agent only cares about their own payoff.</p>
-<p>If <span class="math inline">\rho=1</span> and <span class="math inline">\sigma=0</span>: <span class="math inline">u_i(x_i,x_j)=\text{min}\{x_i,x_j\}</span>, the agent has Rawlsian preferences whereby the agent seeks the greatest benefit for the least advantaged.</p>
-<p>If <span class="math inline">\rho=\sigma=1/2</span>: <span class="math inline">u_i(x_i,x_j)=x_i+x_j</span>, the agent has utilitarian preferences whereby the agent seeks to maximise total utility.</p>
-<section id="example-advice" class="level3" data-number="48.3.1">
-<h3 data-number="48.3.1" class="anchored" data-anchor-id="example-advice"><span class="header-section-number">48.3.1</span> Example: advice</h3>
-<p>Agent A is going to their financial adviser to buy some life insurance. The adviser can sell them insurance that does not cover heart attacks but for which the adviser receives a huge sales commission (bad insurance). Or the adviser can sell Agent A comprehensive insurance for which their sales commission is lower (good insurance).</p>
-<p>The payoffs <span class="math inline">(x,y)</span> for each decision are indicated in the game tree below, with <span class="math inline">x</span> being the satisfaction of Agent A and <span class="math inline">y</span> being the satisfaction of the adviser.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/adviser-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/adviser-1.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
-</figure>
-</div>
-<p>Earlier we determined that if the adviser only cares about the payoffs, the adviser will choose to sell bad insurance.</p>
-<p>Agent A will therefore compare a payoff of 0 for no purchase and a payoff of -2 for purchase (knowing that they will be sold bad insurance). They will choose not to buy insurance.</p>
-<p>But uppose the adviser has social preferences, with a distaste for inequality. If the payoffs <span class="math inline">x</span> for Agent A and <span class="math inline">y</span> for the adviser are unequal, the adviser experiences dissatisfaction and their payoff becomes <span class="math inline">y-3</span>. What would happen to the outcome in this case?</p>
-<p>The adviser’s payoff for selling the bad insurance is now <span class="math inline">4-3=1</span>. This is less than the payoff of 2 they receive for selling good insurance. They will now sell good insurance.</p>
-<p>Agent A now has a choice of a payoff of 0 for not purchasing insurance, and 2 for purchasing. They make the purchase.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/adviser-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/adviser-2.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
-</figure>
-</div>
+<p>If <span class="math inline">\rho=1</span> and <span class="math inline">\sigma=0</span>, then <span class="math inline">u_i(x_i,x_j)=\text{min}\{x_i,x_j\}</span>. The agent has Rawlsian preferences whereby the agent seeks the greatest benefit for the least advantaged.</p>
+<p>If <span class="math inline">\rho=\sigma=1/2</span>, then <span class="math inline">u_i(x_i,x_j)=x_i+x_j</span>. The agent has utilitarian preferences whereby the agent seeks to maximise total utility.</p>
+<p>We could develop similar forms of preferences by adjusting the values of <span class="math inline">\alpha</span> and <span class="math inline">\beta</span> in the Fehr-Schmidt model.</p>
 </section>
-<section id="example-the-trust-game" class="level3" data-number="48.3.2">
-<h3 data-number="48.3.2" class="anchored" data-anchor-id="example-the-trust-game"><span class="header-section-number">48.3.2</span> Example: the trust game</h3>
+<section id="example-the-trust-game" class="level3" data-number="48.3.3">
+<h3 data-number="48.3.3" class="anchored" data-anchor-id="example-the-trust-game"><span class="header-section-number">48.3.3</span> Example: the trust game</h3>
 <p>In the exercises in <a href="../game-theory/game-theory-exercises.html#sec-investment"><span>Section&nbsp;43.3</span></a>, I considered whether Linda should invest in Marco’s startup:</p>
 <blockquote class="blockquote">
 <p>Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by an Marco. Marco is looking for seed funding.</p>
@@ -824,7 +809,7 @@ U(1,5)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="distribution_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="distribution_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.68in" class="figure-img"></a></p>
+<p><a href="distribution_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="distribution_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.69in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -833,7 +818,7 @@ U(1,5)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 </div>
 </div>
 <p>Macro, who is effectively playing a dictator game, would shut down and keep the $30. As a result, Linda would not invest.</p>
-<p>Suppose now that Linda and Marco have <span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> preferences as follows:</p>
+<p>Suppose now that Linda and Marco have preferences as follows:</p>
 <p><span class="math display">
 U_L(x_L,x_M)=\left\{\begin{matrix}
 \frac{1}{3}x_L+\frac{2}{3}x_M \quad &amp;\textrm{if} \quad x_L \geq x_M\\[6pt]
@@ -847,7 +832,7 @@ x_M \quad &amp;\textrm{if} \quad x_M &lt; x_L
 \end{matrix}\right.
 </span></p>
 <p>Where <span class="math inline">U_L</span> and <span class="math inline">U_M</span> are Linda and Marco’s utility functions. <span class="math inline">x_L</span> and <span class="math inline">x_M</span> are the outcomes for Linda and Marco.</p>
-<p>Both Marco and Linda give positive weight to the payoff of the other in most circumstances, except for Marco, who only cares about himself when he is behind Linda.</p>
+<p>Both Marco and Linda give positive weight to the payoff of the other in most circumstances, except for Marco, who, when he is behind Linda, only cares about himself.</p>
 <p>Marco and Linda know each other’s utility functions.</p>
 <p>What is the equilibrium with these distributional preferences?</p>
 <p>If Linda chooses trust, Marco has a choice between $15 each and $30 for himself. Marco calculates the utility of each option.</p>
@@ -889,7 +874,7 @@ U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="distribution_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="distribution_files/figure-html/mermaid-figure-3.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
+<p><a href="distribution_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="distribution_files/figure-html/mermaid-figure-3.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -897,7 +882,7 @@ U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 </div>
 </div>
 </div>
-<p>In this game, Marco can return a dividend for utility 15 or shut down for utility 7.5. He chooses to return the dividend. As a result, Linda will invest for utility 15, rather than not invest for utility 3.33.</p>
+<p>In this game, Marco can return a dividend for utility 15 or shut down for utility 7.5. He chooses to return the dividend. As a result, Linda will invest for utility 15, rather than not invest for utility 3.33. Linda invests.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-trust-game-example-3" class="quarto-figure quarto-figure-center anchored">
@@ -906,7 +891,7 @@ U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="distribution_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="distribution_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
+<p><a href="distribution_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="distribution_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.67in" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -1211,7 +1196,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":true,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

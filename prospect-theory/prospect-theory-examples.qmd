@@ -711,127 +711,15 @@ An agent is considering insurance against bushfire for its \$1,000,000 house. Th
 
 The first question we will ask is whether an expected value maximiser or risk-neutral person would purchase the insurance.
 
-A risk-neutral agent will choose the option with the highest expected value.
-
-First, we calculate the expected value of purchasing insurance policy $I$. $R$ is the premium paid.
-
-\begin{align*}
-E[I]&=-R \\
-&=-\$1,100
-\end{align*}
-
-The expected value of purchasing insurance is the guaranteed loss of the premium.
-
-Then we calculate the expected value of not purchasing the insurance. $H$ is the value of the house.
-
-\begin{align*}
-E[\neg I]&=p\times -H \\
-&=-0.001\times 1000000 \\
-&=-\$1000
-\end{align*}
-
-The expected value of purchasing insurance is \$100 less than the expected value of risking the house burning down. A risk-neutral agent (who maximises expected value) would not purchase this insurance.
+A risk-neutral agent will choose the option with the highest expected value. In @sec-expected-value-of-insurance I showed that the expected value of purchasing insurance is \$100 less than the expected value of risking the house burning down. A risk-neutral agent (who maximises expected value) would not purchase this insurance.
 
 ### Expected utility
 
 Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function ($U(x)=ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000.
 
-First, we calculate the expected utility of purchasing insurance policy $I$, which is simply the utility of the wealth after the premium is paid.
+In @sec-purchasing-insurance I showed that the expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
 
-\begin{align*}
-E[U(I)]&=\text{ln}(W-R) \\[6pt]
-&=\text{ln}(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\[6pt]
-&=`r round(log(1000000+10000-1100), 4)`
-\end{align*}
-
-Then we calculate the expected utility of not purchasing the insurance.
-
-\begin{align*}
-E[U(\neg I)]&=0.999\times \text{ln}(W)+0.001\times \text{ln}(W-H) \\[6pt]
-&=0.999\times \text{ln}(1,010,000)+0.001\times \text{ln}(10,000) \\[6pt]
-&=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
-\end{align*}
-
-The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.
-
-The following diagram illustrates. The agent's utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked - wealth after losing the house when uninsured $(W-H)$, wealth after paying the insurance premium $(W-R)$, and wealth if uninsured but the house does not burn down $(W)$.
-
-The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The precise point is $p$ along this line from $U(W)$ (or $1-p$ along the line from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $E[\neg I]$.
-
-The utility of purchasing insurance ($U(W-R)$) is greater than the expected utility of not purchasing insurance $(E[U(\neg I)])$. The agent will purchase insurance.
-
-```{r}
-#| label: fig-euinsurance
-#| fig-cap: Insurance choice by a risk averse expected utility maximiser
-
-library(ggplot2)
-library(latex2exp)
-
-u <- function(x){
-  log(x)
-}
-
-df <- data.frame(
-  x=seq(1,100,0.1),
-  y=NA
-)
-
-df$y <- u(df$x)
-
-#Variables for plot (may not match labels as not done to scale)
-#Payoffs from gamble
-x1<-3 #loss
-x2<-90 #win
-ev<-77 #expected value of gamble
-xc<-70 #certain outcome
-px2<-(ev-x1)/(x2-x1)
-
-ggplot(mapping = aes(x, y)) +
-    geom_line(data = df) +
-    geom_vline(xintercept = 0, linewidth=0.25)+ 
-    geom_hline(yintercept = 0, linewidth=0.25)+
-    labs(x = "x", y = "U(x)")+
-
-    # Set the theme
-    theme_minimal()+
-
-    #remove numbers on each axis
-    theme(axis.text.x = element_blank(),
-            axis.text.y = element_blank(),
-            axis.title=element_text(size=14,face="bold"),
-            axis.title.y = element_text(angle=0, vjust=0.5))+
-
-    #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
-    coord_cartesian(xlim = c(-8, 100), ylim = c(0, 5))+
-
-    #Add labels W, U(W) and line to curve indicating each
-    annotate("text", x = x2, y = 0, label = "W", size = 4, hjust = 0.4, vjust = 1.5)+
-    annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("text", x = 0, y = u(x2), label = "U(W)", size = 4, hjust = 1.1, vjust = 0.4)+
-
-    #Add labels W-R, U(W_R) and line to curve indicating each
-    annotate("text", x = xc, y = 0, label = "W-R", size = 4, hjust = 0.5, vjust = 1.5)+
-    annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("text", x = 0, y = u(xc), label = "U(W-R)", size = 4, hjust = 1.05, vjust = 0.45)+
-
-    #Add expected utility line
-    annotate("segment", x = x2, xend = x1, y = u(x2), yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotdash")+
-
-    #Add labels W-H, U(W_H) and line to curve indicating each
-    annotate("text", x = x1, y = 0, label = "W-H", size = 4, hjust = 0.4, vjust = 1.5)+
-    annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("text", x = 0, y = u(x1), label = "U(W-H)", size = 4, hjust = 1.05, vjust = 0.45)+
-
-    #Add labels E[not I], E[U(not I)] and curve indicating each
-    annotate("text", x = ev, y = 0, label = TeX("E[$\\neg$ I]", output='character'), parse=TRUE, size = 4, hjust = 0.4, vjust = 1.4)+
-    annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
-    annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
-    annotate("text", x = 0, y = u(3)+(u(x2)-u(x1))*px2, label = TeX("E[U($\\neg$ I)]", output='character'), parse=TRUE, size = 4, hjust = 1.05, vjust = 0.45)
-
-```
+The intuition for this is that diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth. Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.
 
 ### The reflection effect
 

@@ -48,13 +48,39 @@ Exponentiation is written as $f(x)=x^a$. That is, $x$ is multiplied by itself $a
 
 The exponent $a$ can be any real number, including fractions and negative numbers. For example, $2^{1/2}=\sqrt{2}=1.4142$ and $2^{-1}=1/2=0.5$.
 
+A plot of the function $f(x)=x^{0.5}$ is shown in @fig-square-root.
+
+```{r}
+#| label: fig-square-root
+#| fig-cap: "Square root function"
+
+library(ggplot2)
+
+x <- seq(0, 5, 0.1)
+
+y <- x^0.5
+
+df <- data.frame(x, y)
+
+ggplot(df, aes(x, y)) +
+  geom_line() +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "f(x)=x^0.5") +
+  theme_minimal()
+
+```
+
 ### The exponential function
 
 The exponential function is written as $f(x)=e^x$. The letter $e$ is a constant, approximately equal to 2.71828. It is a special case of exponentiation where the base is $e$, which is multiplied by itself $x$ times.
 
-A plot of the exponential function is shown below.
+A plot of the exponential function is shown in @fig-exponential-function.
 
 ```{r}
+#| label: fig-exponential-function
+#| fig-cap: "The exponential function"
+
 library(ggplot2)
 
 x <- seq(-5, 5, 0.1)
@@ -78,13 +104,33 @@ The logarithmic function is written as $f(x)=\ln(x)$ or $\log_e(x)$.
 
 The logarithmic function is the inverse of the exponential function. That is, if $f(x)=e^x$, then $x=\ln(f(x))$.
 
+A plot of the exponential function is shown in @fig-logarithmic-function.
+
+```{r}
+#| label: fig-logarithmic-function
+#| fig-cap: "The logarithmic function"
+
+x <- seq(0.01, 5, 0.01)
+y <- log(x)
+
+df <- data.frame(x, y)
+
+ggplot(df, aes(x, y)) +
+  geom_line() +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "f(x)=ln(x)") +
+  theme_minimal()
+
+```
+
+Note that the logarithmic function is only defined for positive values of $x$. The logarithm of zero is undefined.
+
 ### Differentiation
 
-Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as $\frac{df(x)}{dx}$ or $\frac{dy}{dx}$ or $f'(x)$.
+Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as $\frac{d}{dx}f(x)$ or $\frac{dy}{dx}$ or $f'(x)$.
 
-For example, if $f(x)=x^2$, then $\frac{df(x)}{dx}=2x$.
-
-There are a number of simple rules to differentiate a function. The rules relevant to these notes are as follows.
+There are several simple rules to differentiate a function. The rules relevant to these notes are as follows.
 
 The derivative of a constant is zero.
 
@@ -100,7 +146,15 @@ $$
 \frac{d}{dx}x^2=2x
 $$
 
-You can see from this that for any value of $x$ greater than zero, the derivative is greater than zero, signifying that the function $f(x)=x^2$ is increasing and has positive slope. For any value of $x$ less than zero, the derivative is less than zero, signifying that the function is decreasing and has negative slope.
+You can see from this that for any value of $x$ greater than zero, the derivative of $x^2$ is greater than zero, signifying that the function $f(x)=x^2$ is increasing and has positive slope for $x>0$. For any value of $x$ less than zero, the derivative is less than zero, signifying that the function is decreasing and has negative slope.
+
+As another example:
+
+$$
+\frac{d}{dx}x^{0.5}=0.5x^{-0.5}
+$$
+
+You can see from this that for any value of $x$ greater than zero, the derivative of $x^{0.5}$ is greater than zero, signifying that the function $f(x)=x^{0.5}$ is increasing and has positive slope for $x>0$. The function is not defined for $x<0$. This is shown in @fig-square-root.
 
 The derivative of the exponential function is:
 
@@ -108,13 +162,15 @@ $$
 \frac{d}{dx}e^x=e^x
 $$
 
-This derivative is positive for all values of $x$, signifying that the function $f(x)=e^x$ is increasing and has positive slope.
+This derivative is positive for all values of $x$, signifying that the function $f(x)=e^x$ is increasing and has positive slope. You can see this in @fig-exponential-function.
 
 The derivative of the logarithmic function is:
 
 $$
 \frac{d}{dx}\ln(x)=\frac{1}{x}
 $$
+
+This derivative is positive for all values of $x$ for which $\ln(x)$ is defined. Therefore $\ln(x)$ is increasing in $x$. You can see this in @fig-logarithmic-function.
 
 The derivative of a fraction is:
 
@@ -140,13 +196,23 @@ The second derivative of the function is a measure of the curvature of the funct
 
 We can use the second derivative to determine whether a function is concave or convex. A function is concave if the second derivative is negative and convex if the second derivative is positive.
 
-The second derivative of a function is the derivative of the derivative. It is written as $\frac{d^2f(x)}{dx^2}$ or $\frac{d^2 y}{dx^2}$ or $f''(x)$.
+The second derivative of a function is the derivative of the derivative. It is written as $\frac{d^2}{dx^2}f(x)$ or $\frac{d^2 y}{dx^2}$ or $f''(x)$.
 
 For example, if $f(x)=x^2$, then:
 
 $$
-\frac{d^2f(x)}{dx^2}=2
+\frac{d^2}{dx^2}f(x)=2
 $$
+
+The second derivative is positive (equal to 2) for all values of $x$. This implies that $f(x)=x^2$ is increasing at an increasing rate. The function is convex.
+
+The second derivative of $x^{0.5}$ is:
+
+$$
+\frac{d^2}{dx^2}x^{0.5}=-0.25x^{-1.5}
+$$
+
+The second derivative is negative for all values of $x$ for which $x^{0.5}$ is defined. This implies that $x^{0.5}$ is increasing at a decreasing rate. The function is concave. You can see this in @fig-square-root.
 
 The second derivative of the logarithmic function is:
 
@@ -154,4 +220,6 @@ $$
 \frac{d^2}{dx^2}\ln(x)=\frac{d}{dx}\frac{1}{x}=-\frac{1}{x^2}
 $$
 
-You will not be asked to differentiate any functions when working through these notes. However, understanding what differentiation is and what it is showing will help you understand the intuition behind the concepts that I discuss.
+This second derivative is negative for all values of $x$ for which $\ln(x)$ is defined. This implies that $\ln(x)$ is increasing at a decreasing rate. The function is concave. You can see this in @fig-logarithmic-function.
+
+You will not be asked to differentiate any functions when working through these notes. However, understanding what differentiation is and what it is showing will help you understand the intuition behind the concepts that I discuss. We will use the functions $f(x)=\ln(x)$ and $f(x)=x^{0.5}$ in future sections.

@@ -67,14 +67,14 @@ $$
 
 The two companies simultaneously bid for the field in a first-price auction. The highest bid wins and pays their bid.
 
-Assume company 1 is cursed and therefore assumes that company 2’s bid is independent of $v_2$. Company 1 assumes $v_2$ is on average \$50 and that company 2 bids half of the time regardless of $v_2$.
+Assume company 1 is cursed and therefore assumes that company 2’s bid is independent of $v_2$. Company 1 assumes $v_2$ is on average \$50 and that company 2 always bids.
 
 Company 1’s expected profit, if they bid $v_1$, is:
 
 \begin{align*}
-\hat {\text{E}}[\pi_1|\text{bid }v_1]&=\underbrace{\frac{1}{2}\pi_1(2\text{ no bid})}_{\text{company 2 does not bid}}+\underbrace{\frac{1}{2}\bigg(\frac{1}{2}\pi_1(\text{lose})+\frac{1}{2}\pi_1(\text{win})\bigg)}_{\text{company 2 bids}} \\[30pt]
-&=\frac{1}{2}\bigg(\frac{v_1+50}{2}-v_1\bigg)+\frac{1}{4}\times 0+\frac{1}{4}\bigg(\frac{v_1+50}{2}-v_1\bigg) \\[12pt]
-&=\frac{3}{4}(25-\frac{v_1}{2})
+\hat {\text{E}}[\pi_1|\text{bid }v_1]&=\frac{1}{2}\pi_1(\text{lose})+\frac{1}{2}\pi_1(\text{win}) \\[12pt]
+&=\frac{1}{2}\times 0+\frac{1}{2}\bigg(\frac{v_1+50}{2}-v_1\bigg) \\[12pt]
+&=\frac{1}{4}(50-v_1)
 \end{align*}
 
 We can see that:
@@ -87,7 +87,7 @@ That is, company 1 expects to make a profit if they receive a private valaution 
 
 However, as shown in @sec-winners-curse, this bidding approach leads to, on average, a loss. Company 1 under-appreciates that company 2 is more likely not to bid when company 2’s information is bad. Therefore, company 1 under-appreciate the extent to which winning the auction is bad news.
 
-## Examples
+## Example
 
 ### Acquiring a company
 

@@ -4,9 +4,9 @@ Economists use the preference relation to capture the ordering that an agent giv
 
 The first is the strong (or strict) preference relation. We use the strong preference relation to indicate that an agent considers one option "better than" another. We represent strong preference with the symbol $\succ$.
 
-The second is the weak preference relation. We use the weak preference relation to indicate that an agent considers one option to be "at least as good as" another. We represent weak preference with the symbol $\succcurlyeq$.
+The second is the weak preference relation. We use the weak preference relation to indicate that an agent considers one option "at least as good as" another. We represent weak preference with the symbol $\succcurlyeq$.
 
-The third is indifference. Indifference occurs where an agent considers that each option is "as good as" the other or that the the agent is "indifferent between" the options. We represent indifference with the symbol $\sim$.
+The third is indifference. Indifference occurs when an agent considers that each option is "as good as" the other or that the agent is "indifferent between" the options. We represent indifference with the symbol $\sim$.
 
 Here are a couple of illustrations of these relations.
 
@@ -16,14 +16,14 @@ Suppose I strongly prefer bananas to apples. I would write:
 
 Bananas are better than apples.
 
-Similarly, if I am indifferent between bananas and oranges I would write:
+Similarly, if I am indifferent between bananas and oranges, I would write:
 
 - bananas $\sim$ oranges
 
 Bananas are as good as oranges. Oranges are as good as bananas.
 
-There is an important link between indifference and the weak preference relation. I am indifferent to $x$ and $y$ ($x \sim y$) if and only if I weakly prefer $x$ to $y$ ($x \succcurlyeq y$) and I weakly prefer $y$ to $$x$ ($y \succcurlyeq x$). The weak preference relation includes the possibility of indifference.
+There is an important link between indifference and the weak preference relation. I am indifferent between $x$ and $y$ ($x \sim y$) if and only if I weakly prefer $x$ to $y$ ($x \succcurlyeq y$) and I weakly prefer $y$ to $x$ ($y \succcurlyeq x$). The weak preference relation includes the possibility of indifference.
 
-In that case of my example of my indifference between oranges and bananas, I could also say that I weakly prefer bananas to oranges, and that I weakly prefer oranges to bananas:
+In that case of the example of my indifference between oranges and bananas, I could also say that I weakly prefer bananas to oranges and that I weakly prefer oranges to bananas:
 
 - bananas $\succcurlyeq$ oranges and oranges $\succcurlyeq$ bananas

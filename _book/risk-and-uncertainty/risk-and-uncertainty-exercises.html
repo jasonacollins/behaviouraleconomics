@@ -249,8 +249,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/notation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation</span></span></a>
+  <a href="../risk-and-uncertainty/notation-and-mathematical-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -614,12 +614,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#expected-value-of-roulette" id="toc-expected-value-of-roulette" class="nav-link active" data-scroll-target="#expected-value-of-roulette"><span class="header-section-number">12.1</span> Expected value of roulette</a></li>
-  <li><a href="#expected-value-of-insurance" id="toc-expected-value-of-insurance" class="nav-link" data-scroll-target="#expected-value-of-insurance"><span class="header-section-number">12.2</span> Expected value of insurance</a></li>
+  <li><a href="#sec-expected-value-of-insurance" id="toc-sec-expected-value-of-insurance" class="nav-link" data-scroll-target="#sec-expected-value-of-insurance"><span class="header-section-number">12.2</span> Expected value of insurance</a></li>
   <li><a href="#a-bet-or-a-certain-payment" id="toc-a-bet-or-a-certain-payment" class="nav-link" data-scroll-target="#a-bet-or-a-certain-payment"><span class="header-section-number">12.3</span> A bet or a certain payment?</a></li>
   <li><a href="#a-5050-gamble" id="toc-a-5050-gamble" class="nav-link" data-scroll-target="#a-5050-gamble"><span class="header-section-number">12.4</span> A 50:50 gamble</a></li>
   <li><a href="#a-6040-gamble" id="toc-a-6040-gamble" class="nav-link" data-scroll-target="#a-6040-gamble"><span class="header-section-number">12.5</span> A 60:40 gamble</a></li>
   <li><a href="#another-6040-gamble" id="toc-another-6040-gamble" class="nav-link" data-scroll-target="#another-6040-gamble"><span class="header-section-number">12.6</span> Another 60:40 gamble</a></li>
-  <li><a href="#purchasing-insurance" id="toc-purchasing-insurance" class="nav-link" data-scroll-target="#purchasing-insurance"><span class="header-section-number">12.7</span> Purchasing insurance</a></li>
+  <li><a href="#sec-purchasing-insurance" id="toc-sec-purchasing-insurance" class="nav-link" data-scroll-target="#sec-purchasing-insurance"><span class="header-section-number">12.7</span> Purchasing insurance</a></li>
   <li><a href="#insurance-but-not-a-lottery-ticket" id="toc-insurance-but-not-a-lottery-ticket" class="nav-link" data-scroll-target="#insurance-but-not-a-lottery-ticket"><span class="header-section-number">12.8</span> Insurance but not a lottery ticket</a></li>
   <li><a href="#an-anomaly-in-expected-utility" id="toc-an-anomaly-in-expected-utility" class="nav-link" data-scroll-target="#an-anomaly-in-expected-utility"><span class="header-section-number">12.9</span> An anomaly in expected utility</a></li>
   </ul>
@@ -670,8 +670,8 @@ E[X]&amp;=\sum_{i=1}^n p_ix_i \\[6pt]
 </div>
 </div>
 </section>
-<section id="expected-value-of-insurance" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="expected-value-of-insurance"><span class="header-section-number">12.2</span> Expected value of insurance</h2>
+<section id="sec-expected-value-of-insurance" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="sec-expected-value-of-insurance"><span class="header-section-number">12.2</span> Expected value of insurance</h2>
 <p>An agent is considering insurance against bushfire for its $1,000,000 house. The house has a 1 in 1000 (<span class="math inline">p=0.001</span>) chance of burning down. An insurer is willing to offer full coverage for premium $1100.</p>
 <p>a) What is the expected value of purchasing insurance?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -898,7 +898,7 @@ Answer
 <div id="fig-anika" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;12.1: A bet or a certain payment?</figcaption>
-<p><a href="risk-and-uncertainty-exercises_files/figure-html/fig-anika-1.png" class="lightbox" title="A bet or a certain payment?" data-gallery="quarto-lightbox-gallery-1"><img src="risk-and-uncertainty-exercises_files/figure-html/fig-anika-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="risk-and-uncertainty-exercises_files/figure-html/fig-anika-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A bet or a certain payment?"><img src="risk-and-uncertainty-exercises_files/figure-html/fig-anika-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -933,7 +933,7 @@ E[X]&amp;=\sum_{i=1}^n p_ix_i \\[12pt]
 &amp;=0.5(550)+0.5(-500) \\[6pt]
 &amp;=25
 \end{align*}</span>
-<p>This is greater than $20, so a risk neutral agent will be willing to pay $20 to participate in the gamble.</p>
+<p>This is greater than $20, so a risk neutral agent will be willing to pay $20 to participate in the gamble. The most they would be willing to pay is $25.</p>
 <p>We could also have solved this by determining the expected value if they had paid $20:</p>
 <span class="math display">\begin{align*}
 E[X]-c&amp;=\sum_{i=1}^n p_ix_i-c \\[12pt]
@@ -1228,8 +1228,8 @@ ln(W)&amp;=0.6ln(W+100)+0.4ln(W-100)
 </div>
 </div>
 </section>
-<section id="purchasing-insurance" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="purchasing-insurance"><span class="header-section-number">12.7</span> Purchasing insurance</h2>
+<section id="sec-purchasing-insurance" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="sec-purchasing-insurance"><span class="header-section-number">12.7</span> Purchasing insurance</h2>
 <p>An agent is considering insurance against bushfire for its $1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for $1100.</p>
 <p>a) Would a risk neutral agent purchase the insurance?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1271,7 +1271,90 @@ E[U(\text{don't})]&amp;=0.999*\ln(W)+0.001*\ln(W-value_{\text{house}}) \\
 &amp;=13.8208
 \end{align*}</span></p>
 <p>The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will purchase insurance. They are risk averse.</p>
-<p>What is the intuition for this agent’s purchase of insurance? Diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth (e.g.&nbsp;<span class="math inline">U(\$0)+U(\$200)&lt;U(\$100)+U(\$100)</span>). Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.</p>
+<p>The following diagram illustrates. The agent’s utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked - wealth after losing the house when uninsured <span class="math inline">(W-H)</span>, wealth after paying the insurance premium <span class="math inline">(W-R)</span>, and wealth if uninsured but the house does not burn down <span class="math inline">(W)</span>.</p>
+<p>The expected utility of not purchasing insurance is on the dash-dot line between <span class="math inline">U(W-H)</span> and <span class="math inline">U(W)</span>. The precise point is <span class="math inline">p</span> along this line from <span class="math inline">U(W)</span> (or <span class="math inline">1-p</span> along the line from <span class="math inline">U(W-H)</span>). This point aligns with the expected value of leaving the house uninsured <span class="math inline">E[\neg I]</span>.</p>
+<p>The utility of purchasing insurance (<span class="math inline">U(W-R)</span>) is greater than the expected utility of not purchasing insurance <span class="math inline">(E[U(\neg I)])</span>. The agent will purchase insurance.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">log</span>(x)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">100</span>,<span class="fl">0.1</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span><span class="cn">NA</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="fu">u</span>(df<span class="sc">$</span>x)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Variables for plot (may not match labels as not done to scale)</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Payoffs from gamble</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>x1<span class="ot">&lt;-</span><span class="dv">3</span> <span class="co">#loss</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>x2<span class="ot">&lt;-</span><span class="dv">90</span> <span class="co">#win</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ev<span class="ot">&lt;-</span><span class="dv">77</span> <span class="co">#expected value of gamble</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>xc<span class="ot">&lt;-</span><span class="dv">70</span> <span class="co">#certain outcome</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>px2<span class="ot">&lt;-</span>(ev<span class="sc">-</span>x1)<span class="sc">/</span>(x2<span class="sc">-</span>x1)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data =</span> df) <span class="sc">+</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"U(x)"</span>)<span class="sc">+</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set the theme</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">#remove numbers on each axis</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">vjust=</span><span class="fl">0.5</span>))<span class="sc">+</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">#limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">100</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>))<span class="sc">+</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add labels W, U(W) and line to curve indicating each</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> x2, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.4</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> x2, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> x2, <span class="at">yend =</span> <span class="fu">u</span>(x2), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x2), <span class="at">xend =</span> x2, <span class="at">yend =</span> <span class="fu">u</span>(x2), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x2), <span class="at">label =</span> <span class="st">"U(W)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.1</span>, <span class="at">vjust =</span> <span class="fl">0.4</span>)<span class="sc">+</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add labels W-R, U(W_R) and line to curve indicating each</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> xc, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W-R"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> xc, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> xc, <span class="at">yend =</span> <span class="fu">u</span>(xc), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(xc), <span class="at">xend =</span> xc, <span class="at">yend =</span> <span class="fu">u</span>(xc), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(xc), <span class="at">label =</span> <span class="st">"U(W-R)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)<span class="sc">+</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add expected utility line</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> x2, <span class="at">xend =</span> x1, <span class="at">y =</span> <span class="fu">u</span>(x2), <span class="at">yend =</span> <span class="fu">u</span>(x1), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotdash"</span>)<span class="sc">+</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add labels W-H, U(W_H) and line to curve indicating each</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> x1, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W-H"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.4</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> x1, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> x1, <span class="at">yend =</span> <span class="fu">u</span>(x1), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1), <span class="at">xend =</span> x1, <span class="at">yend =</span> <span class="fu">u</span>(x1), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1), <span class="at">label =</span> <span class="st">"U(W-H)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)<span class="sc">+</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add labels E[not I], E[U(not I)] and curve indicating each</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="fu">TeX</span>(<span class="st">"E[$</span><span class="sc">\\</span><span class="st">neg$ I]"</span>, <span class="at">output=</span><span class="st">'character'</span>), <span class="at">parse=</span><span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.4</span>, <span class="at">vjust =</span> <span class="fl">1.4</span>)<span class="sc">+</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(<span class="dv">3</span>)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="fu">TeX</span>(<span class="st">"E[U($</span><span class="sc">\\</span><span class="st">neg$ I)]"</span>, <span class="at">output=</span><span class="st">'character'</span>), <span class="at">parse=</span><span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-euinsurance" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<figcaption class="figure-caption">Figure&nbsp;12.2: Insurance choice by a risk averse expected utility maximiser</figcaption>
+<p><a href="risk-and-uncertainty-exercises_files/figure-html/fig-euinsurance-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Insurance choice by a risk averse expected utility maximiser"><img src="risk-and-uncertainty-exercises_files/figure-html/fig-euinsurance-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>What is the intuition for this agent’s purchase of insurance?</p>
+<p>Diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth (e.g.&nbsp;<span class="math inline">U(\$0)+U(\$200)&lt;U(\$100)+U(\$100)</span>). Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.</p>
 </div>
 </div>
 </div>
@@ -1352,7 +1435,7 @@ U(10,000)&amp;&gt;0.10U(50,000)+0.89U(10,000)+0.01U(0) \\[6pt]
 <p>Here is a representation of the choices.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/allais-paradox-4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/allais-paradox-4.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/allais-paradox-4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/allais-paradox-4.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>The bets in the two shaded areas are the same. They are paired with an outcomes of either $10,000 or $0. Preferring B to A and A’ to B’ is a violation of the axiom of the <a href="@sec-independence">independence of irrelevant alternatives</a>: Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble.</p>
@@ -1665,7 +1748,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox"});</script>
 
 
 

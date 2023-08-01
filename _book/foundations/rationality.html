@@ -60,6 +60,9 @@ div.csl-indent {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,10 +104,16 @@ div.csl-indent {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 2&nbsp; Rationality">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/foundations/img/money-pump-1.png">
 <meta property="og:site-name" content="Notes on behavioural economics">
+<meta property="og:image:height" content="1773">
+<meta property="og:image:width" content="3437">
 <meta name="twitter:title" content="Notes on behavioural economics - 2&nbsp; Rationality">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/foundations/img/money-pump-1.png">
+<meta name="twitter:image-height" content="1773">
+<meta name="twitter:image-width" content="3437">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -225,8 +234,8 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../risk-and-uncertainty/notation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation</span></span></a>
+  <a href="../risk-and-uncertainty/notation-and-mathematical-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -620,7 +629,7 @@ div.csl-indent {
 <p>However, rationality in economics has a different definition to the ‘lay’ definition of rationality.</p>
 <p>Rationality simply means that preferences respect some desirable principles. These principles are assumptions, not rules of behaviour.</p>
 <p>Economists tend to keep the number of assumptions as small as possible. They choose the assumptions that they need for the particular analytical problem they have at hand.</p>
-<p>In its most stripped back form, analysis of consumer choice rests on just two assumptions. These are completeness and transitivity.</p>
+<p>In its most stripped-back form, analysis of consumer choice rests on just two assumptions. These are completeness and transitivity.</p>
 <section id="completeness" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="completeness"><span class="header-section-number">2.1</span> Completeness</h2>
 <p>Completeness means that an agent can always compare any two options. The agent cannot fail to have a preference between two options (although that preference may be indifference).</p>
@@ -629,7 +638,7 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>For all <span class="math inline">x</span> and <span class="math inline">y</span>, either <span class="math inline">x \succcurlyeq y</span> or <span class="math inline">y \succcurlyeq x</span> (or both).</p>
 </blockquote>
-<p>Completeness means people always have a preference for <span class="math inline">x</span> or <span class="math inline">y</span>, or are indifferent between the two.</p>
+<p>Completeness means people always prefer <span class="math inline">x</span> or <span class="math inline">y</span>, or are indifferent between the two.</p>
 <p>While the completeness axiom appears sensible, it is possible to develop examples where it may not hold. Consider a choice between two possible holiday destinations. Or two potential dates or spouses. If you are torn between the options and unable to make up your mind, this would represent a breach of the completeness axiom.</p>
 <p>Incomplete preferences are different from indifference. If you are indifferent, you would be able to decide by, say, flipping a coin. You will be equally satisfied whatever the outcome. Incompleteness makes choice impossible.</p>
 </section>
@@ -638,10 +647,33 @@ div.csl-indent {
 <p>Under transitivity, if a person prefers A to B and B to C, they will prefer A to C.</p>
 <p>Formally, we can state the transitivity axiom as follows:</p>
 <blockquote class="blockquote">
-<p>For all <span class="math inline">x</span>, <span class="math inline">y</span>, <span class="math inline">z</span>, if <span class="math inline">x \succcurlyeq y</span> and <span class="math inline">y \succcurlyeq z</span>, then <span class="math inline">x \succcurlyeq z</span>.</p>
+<p>For all <span class="math inline">x</span>, <span class="math inline">y</span> and <span class="math inline">z</span>, if <span class="math inline">x \succcurlyeq y</span> and <span class="math inline">y \succcurlyeq z</span>, then <span class="math inline">x \succcurlyeq z</span>.</p>
 </blockquote>
 <p>One classic argument for transitivity is the concept of a “money pump” (<span class="citation" data-cites="davidson1955">Davidson et al. (<a href="../references.html#ref-davidson1955" role="doc-biblioref">1955</a>)</span>).</p>
-<p>Suppose you have a person who prefers A to B, B to C and C to A. That is, they have intransitive preferences. They have $20 and an endowment of C. They are offered B in exchange for their endowment of C for some small nominal cost (say $1). If they make the trade they now have B and $19. They are then offered A in exchange for their endowment of B, again for a nominal cost. Finally, they are offered C in exchange for their endowment of A for a further nominal cost. They now have an endowment of C and $17. This process can be repeated until the agent has no money.</p>
+<p>Suppose you have a person who prefers A to B, B to C and C to A. That is, they have intransitive preferences. They have $20 and an endowment of C.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/money-pump-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/money-pump-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>They are offered B in exchange for their endowment of C for some small nominal cost (say $1). If they make the trade they now have B and $19.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/money-pump-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/money-pump-2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>They are then offered A in exchange for their endowment of B, again for a nominal cost.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/money-pump-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/money-pump-3.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Finally, they are offered C in exchange for their endowment of A for a further nominal cost. They now have an endowment of C and $17. This process can be repeated until the agent has no money.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/money-pump-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/money-pump-4.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 </section>
 <section id="preference-orderings" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="preference-orderings"><span class="header-section-number">2.3</span> Preference Orderings</h2>
@@ -653,7 +685,7 @@ div.csl-indent {
 <section id="defining-rationality" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="defining-rationality"><span class="header-section-number">2.4</span> Defining rationality</h2>
 <p>This definition of rationality, accordance to the axioms of completeness and transitivity, provides little constraint on preferences.</p>
-<p>You could prefer less money to more. You could prefer sums of money that are divisible by seven with no remainder. You could prefer more for yourself or more for someone else.</p>
+<p>You could prefer less money to more. You could prefer sums of money divisible by seven with no remainder. You could prefer more for yourself or more for someone else.</p>
 <p>These axioms do not lead to an assumption that people are selfish, unless you define selfishness to be simply acting in accordance with their preferences.</p>
 <p>These axioms place some constraints on behaviour, and empirical evidence suggests those constraints are sometimes breached by decision makers. But they are constraints that allow much behaviour to be described as rational.</p>
 
@@ -949,6 +981,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":true,"selector":".lightbox"});</script>
 
 
 

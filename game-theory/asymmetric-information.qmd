@@ -64,15 +64,13 @@ $$
 
 Generalising what is happening here:
 
-1. When buyers cannot observe product quality, given $p$, sellers have an incentive to pass off lemons.
+1. When buyers cannot observe product quality, sellers have an incentive to pass off lemons as good cars.
 
 2. Rational buyers expect this seller behaviour and they lower their willingness to pay.
 
-3. Prices then decline.
+3. Sellers cannot sell good cars at high prices even though buyers would be willing to pay high prices for good cars.
 
-4. Sellers lower quality further to make profits at the lower prices. Sellers cannot sell high-quality cars at high prices even though buyers would be willing to pay high prices for high-quality cars.
-
-5.  Quality declines until nothing but lemons are left.
+4. At the lower prices, sellers only offer to sell lemons.
 
 Information asymmetry is sufficient to result in a market failure even if the agents are rational.
 
@@ -144,23 +142,11 @@ On average, in this state of the world company 2's signal is \$12.50 (due to the
 
 Company 1's profit is $\$31.25 − \$25 = \$6.25$ on average. However, they will win only 25% of the time.
 
-Let's now work out the profit-maximising bid in cases where company 1 wins and company 2 continues to bid $v_2$.
-
-Suppose company 1 bids $\delta v_1$.
-
-If company 1 wins, $\delta v_1>v_2$.
-
-On average, in this state of the world, company 2's signal is $0.5\delta v_1$ (due to the uniform distribution). The average value of the tract is therefore $(v_1+0.5\delta v_1 )∕2=(0.5+0.25\delta)v_1$.
-
-Company 1's net profit on average is $\pi=(0.5+0.25\delta)v_1−\delta v_1=(0.5−0.75\delta)v_1$. They make a profit where $0.5−0.75\delta>0$, that is where $\delta<2/3$.
-
-The lower $\delta$ the higher their profit, but that is conditional on company 1 having the winning bid, which decreases in probability as they decrease $\delta$.
-
-This analysis has a complication in that it does not account for the fact that company 2 is also a strategic player. We assumed company 2 bids $v_2$, but as for company 1, this strategy would lead to an expected loss for company 2.
+This analysis also has a complication in that it does not account for the fact that company 2 is also a strategic player. We assumed company 2 bids $v_2$, but as for company 1, this strategy would lead to an expected loss for company 2.
 
 So what does each firm do at equilibrium?
 
-As each firm will have the same strategy at equilibrium, we can solve for company 1 assuming company 2 does the same strategy in response. At equilibrium, we can also assume that each company will have an expected profit of zero as each company would otherwise have an incentive to change their bid to gain a share of that profit.
+As each firm will have the same strategy at equilibrium, we can solve for company 1 assuming company 2 does the same strategy in response. At equilibrium, we can also assume that each company will have an expected profit of zero as each company would otherwise have an incentive to change their bid to gain a share of the positive profit.
 
 Company 1 will win if $\delta v_1>\delta v_2$; in other words, if $v_1>v_2$. On average, in this state of the world company 2's signal is $0.5v_1$ (due to the uniform distribution), so that the average value of the tract is $(v_1+0.5v_1)/2=0.75v_1$.
 
