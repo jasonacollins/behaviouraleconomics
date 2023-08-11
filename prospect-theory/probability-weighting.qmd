@@ -1,12 +1,12 @@
 # Probability weighting
 
-In expected utility theory, probabilities enter the expected utility function linearly. That is, if an event is twice as likely as another outcome, it has double the weight.
+In expected utility theory, probabilities enter the expected utility function linearly. For example, if an event is twice as likely as another outcome, it has double the weight.
 
 In contrast, prospect theory incorporates non-linear weighting of probabilities by applying decision weights to each potential outcome.
 
 ## Empirical evidence
 
-Experimental observation confirms that when making decisions under risk we approximate linear weights for intermediate probabilities.
+Experimental observation indicates that we approximate linear weights for intermediate probabilities when making decisions under risk.
 
 But, there is strong evidence that we overweight certain events, when the probability of the event is one, relative to near certain events, such as when the probability is, say, 99\%. This overweighting of certainty is effectively the same as overweighting very low-probability events.
 
@@ -16,7 +16,7 @@ The following diagram from @tversky1992 illustrates the relationship between obj
 
 For this particular curve, where the probability is very low, such as around $p=0.05$, the weight is around 0.15. Similarly, at high probability, such as $p=0.95$, the weight is around 0.8. For intermediate probabilities, the observed weight is relatively closer to the objective probability.
 
-@kahneman2011 calls the large psychological value of the change from 0 to 5% (or some other small probability) the possibility effect. Unlikely but possible outcomes are given more weight than similar increases in probability for events that are already possible. He calls the large psychological value of the change to 100% the certainty effect. We will pay a lot more for certainty than near certainty.
+@kahneman2011 calls the large psychological value of the change from 0 to 5% (or some other small probability) the possibility effect. He calls the large psychological value of the change to 100% the certainty effect. We will pay a lot more for certainty than near certainty.
 
 ## The Allais Paradox
 

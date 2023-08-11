@@ -138,13 +138,13 @@ div.csl-indent {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 14&nbsp; Loss aversion">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/loss-aversion_files/figure-html/unnamed-chunk-1-1.png">
+<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/loss-aversion_files/figure-html/loss-aversion-1.png">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="Notes on behavioural economics - 14&nbsp; Loss aversion">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/loss-aversion_files/figure-html/unnamed-chunk-1-1.png">
+<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/loss-aversion_files/figure-html/loss-aversion-1.png">
 <meta name="twitter:image-height" content="960">
 <meta name="twitter:image-width" content="1344">
 <meta name="twitter:card" content="summary_large_image">
@@ -660,7 +660,7 @@ div.csl-indent {
 
 </header>
 
-<p>Loss aversion is the concept that losses loom larger than gains. People feel more strongly about a loss than they do an equivalent gain, so are often willing to reject gambles with a materially positive expected value.</p>
+<p>Loss aversion is the concept that losses loom larger than gains. People feel more strongly about a loss than an equivalent gain, so they are often willing to reject gambles with a materially positive expected value.</p>
 <p>For example, if someone feels losses with twice the feeling of gains, a 50:50 bet to win $550, lose $500 will be unattractive. This provides an alternative explanation to the absurd levels of risk aversion required to reject this bet (as discussed in <a href="../risk-and-uncertainty/anomalies-in-expected-utility-theory.html#sec-absurd"><span>Section&nbsp;11.2</span></a>).</p>
 <section id="a-value-function-with-loss-aversion" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="a-value-function-with-loss-aversion"><span class="header-section-number">14.1</span> A value function with loss aversion</h2>
@@ -673,7 +673,7 @@ x \space &amp;\textrm{where} \space x \geq 0\\
 </span></p>
 <p><span class="math inline">x</span> is the outcome relative to the reference point.</p>
 <p>In this value function, losses are experienced with twice the force of gains, with each loss multiplied by a factor of two.</p>
-<p>As an example example, suppose someone is given $100. If their initial reference point is their wealth before receiving the $100, <span class="math inline">x</span> will be $100. Therefore their change in value is +100. If the same person instead loses $100, their change in value would be -200.</p>
+<p>As an example, suppose someone is given $100. If their initial reference point is their wealth before receiving the $100, <span class="math inline">x</span> will be $100. Therefore their change in value is +100. If the same person instead loses $100, their change in value would be -200.</p>
 <p>This plot shows the increased effect of the loss under this value function:</p>
 <div class="cell">
 <details>
@@ -710,7 +710,7 @@ x \space &amp;\textrm{where} \space x \geq 0\\
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="loss-aversion_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="loss-aversion_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="loss-aversion_files/figure-html/loss-aversion-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="loss-aversion_files/figure-html/loss-aversion-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -740,7 +740,7 @@ x \space &amp;\textrm{where} \space x \geq 0\\
 V(x)=v(m-r_m)+v(5c-5r_c)
 </span></p>
 <p><span class="math inline">r_m</span> is Bruce’s reference point as it relates to money and <span class="math inline">r_c</span> is his reference point as it relates to mugs.</p>
-<p>To illustrate how this value function works, imagine Bruce has two mugs and he drops one. It breaks. His change in the value function is:</p>
+<p>To illustrate how this value function works, imagine Bruce has two mugs, and he drops one. It breaks. His change in the value function is:</p>
 <p><span class="math display">\begin{align*}
 V(x)&amp;=v(5c-5r_c) \\
 &amp;=v(5\times 1-5\times 2) \\
@@ -749,7 +749,7 @@ V(x)&amp;=v(5c-5r_c) \\
 \end{align*}</span></p>
 <p>The loss of a mug results in value of -10.</p>
 <p>At the beginning of the experiment, Bruce is given a mug. Assuming Bruce’s reference point adapts such that he considers the mug his, how much would Bruce need to be paid to give up the mug?</p>
-<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between losing the mug and gaining $p.&nbsp;That is the point where, after losing the mug and receiving payment, Bruce’s change in value is equal to zero.</p>
+<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between losing the mug and gaining <span class="math inline">\$p</span>. That is the point where, after losing the mug and receiving payment, Bruce’s change in value is equal to zero.</p>
 <p>We assume a reference point for money of his current wealth and are instructed that his reference point for mugs is ownership of the mug.</p>
 <p><span class="math display">\begin{align*}
 V(x)&amp;=0 \\[6pt]
@@ -762,7 +762,7 @@ p&amp;=10
 \end{align*}</span></p>
 <p>Bruce would need to be paid at least $10 to give up the mug. Giving up the mug is seen as a loss and given greater weight than the money gained.</p>
 <p>Now assume Bruce was not given a mug, but rather an opportunity to purchase a mug. How much would Bruce be willing to pay for the mug?</p>
-<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between gaining the mug and losing $p.&nbsp;That is the point where, after receiving the mug and making payment, Bruce’s change in value is equal to zero.</p>
+<p>We can calculate this by calculating what payment <span class="math inline">\$p</span> would make Bruce indifferent between gaining the mug and losing <span class="math inline">\$p</span>. That is the point where, after receiving the mug and making payment, Bruce’s change in value is equal to zero.</p>
 <p>We assume a reference point for money of his current wealth and are instructed that his reference point for mugs is no mug.</p>
 <p><span class="math display">\begin{align*}
 V(x)&amp;=0 \\[6pt]
@@ -772,7 +772,7 @@ V(x)&amp;=v(m-r_m)+v(5c-5r_c) \\[6pt]
 &amp;=-2p+5 \\[6pt]
 p&amp;=2.5
 \end{align*}</span></p>
-<p>The most Bruce would be willing to pay for the mug is $2.50. He sees the foregone money as a loss, so it is given greater weight than the mug gained.</p>
+<p>The most Bruce would be willing to pay for the mug is $2.50. He sees the foregone money as a loss, giving it greater weight than the mug gained.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
@@ -1067,7 +1067,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true});</script>
 
 
 

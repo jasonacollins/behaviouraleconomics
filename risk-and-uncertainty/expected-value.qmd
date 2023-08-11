@@ -17,7 +17,7 @@ E[X]&=p_1x_1+p_2x_2+...+p_nx_n \\[6pt]
 
 In this equation, $p_i$ is the probability of outcome $x_i$.
 
-For those who are unfamiliar with the mathematical notation in the second line, the large symbol sigma allows us to write what could be a long expression much more succinctly. It means that we sum the term $p_ix_i$ for each value of $i$ for 1 through to $n$. We sum $p_1x_1$ with $p_2x_2$ and so on until we reach $p_nx_n$. Breaking it down in this way shows that the second line is equivalent to what I wrote in the first line.
+For those unfamiliar with the mathematical notation in the second line, the large symbol sigma allows us to write what could be a long expression much more succinctly. It means that we sum the term $p_ix_i$ for each value of $i$ for 1 through to $n$. We sum $p_1x_1$ with $p_2x_2$ and so on until we reach $p_nx_n$. Breaking it down this way shows that the second line is equivalent to what I wrote in the first line.
 
 ## Expected value examples
 

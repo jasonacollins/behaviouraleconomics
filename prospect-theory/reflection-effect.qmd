@@ -5,9 +5,9 @@ engine: knitr #added as otherwise inline r code does not execute
 
 The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.
 
-When people make a risky choice related to gains, they are risk averse. They prefer a certain option of lower value than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.
+When people make a risky choice related to gains, they are risk averse.  They prefer a certain option with value lower than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.
 
-The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory where the pain of losses increases as they grow in size.
+The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory, where the pain of losses increases as they grow in size.
 
 ## The Asian Disease problem
 
@@ -41,7 +41,7 @@ Another group of experimental participants were shown the following:
 
 ## The reflection effect in the value function
 
-The following value function is an example of a function where there is diminishing sensitivity to both gains and losses. This function can generate the reflection effect.
+The following value function is an example of a function with diminishing sensitivity to both gains and losses. This function can generate the reflection effect.
 
 \begin{equation*}
 v(x)= \Bigg\{
@@ -53,9 +53,12 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 
 As $x$ increases in magnitude in either direction, the marginal increase in value from each incremental unit of $x$ decreases.
 
-The result of this value function is risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.
+This value function results in risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.
 
 ```{r}
+#| label: fig-reflection-effect
+#| fig-cap: The reflection effect
+
 library(ggplot2)
 
 loss_fun <- function(x){
@@ -106,13 +109,14 @@ v(\text{bet})&=0.5\times v(20)+0.5\times v(0) \\[6pt]
 &=`r round(0.5*20^0.5, 2)`
 \end{align*}
 
-The $10 for certain has a higher value for the agent. This agent is risk averse in the gain domain and therefore prefers an amount for certain over a bet with the same expected value.
+The \$10 for certain has a higher value for the agent. This agent is risk averse in the gain domain and therefore prefers an amount for certain over a bet with the same expected value.
 
 The following chart illustrates. Plotted are the value of the certain payment of \$10 and the outcome from winning the gamble, \$20. A loss results in value of 0.
 
-The value of the gamble itself is the probability weighted average of the two gamble outcomes. Due to diminishing marginal utility in the gain domain, the value of the gamble is less than the value of \$10 with certainty. The extra $\10 over the certain outcome from winning the bet is less than the value of the first \$10. As a result, the agent does not want to risk the bet.
+The value of the gamble itself is the probability-weighted average of the two gamble outcomes. Due to diminishing marginal utility in the gain domain, the value of the gamble is less than the value of \$10 with certainty. The extra \$10 over the certain outcome from winning the bet is less than the value of the first \$10. As a result, the agent does not want to risk the bet.
 
 ```{r}
+#| label: fig-reflection-effect-gain
 #| fig-cap: The reflection effect in the gain domain
 
 library(ggplot2)
@@ -192,9 +196,10 @@ This bet delivers higher value than the certain loss, despite the bet and the ce
 
 The following chart illustrates. Plotted are the value of the certain payment of -\$10 and the outcome from losing the gamble, -\$20. A win results in value of 0.
 
-The value of the gamble itself is the probability weighted average of the two gamble outcomes. Due to diminishing marginal utility in the loss domain, the value of the gamble is greater than the value of -\$10 with certainty. The potential loss of another $\10 over and above the certain loss is given less weight than the first \$10. As a result, the agent wants to take the risk.
+The value of the gamble itself is the probability-weighted average of the two gamble outcomes. Due to diminishing marginal utility in the loss domain, the value of the gamble is greater than the value of -\$10 with certainty. The potential loss of another \$10 over and above the certain loss is given less weight than the first \$10. As a result, the agent wants to take the risk.
 
 ```{r}
+#| label: fig-reflection-effect-loss
 #| fig-cap: The reflection effect in the loss domain
 
 library(ggplot2)

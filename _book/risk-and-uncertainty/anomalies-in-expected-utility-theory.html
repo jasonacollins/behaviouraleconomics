@@ -624,38 +624,36 @@ div.csl-indent {
 <p>In this part, I show several anomalies in expected utility theory.</p>
 <section id="sec-allais" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="sec-allais"><span class="header-section-number">11.1</span> The Allais Paradox</h2>
-<p>The first is one of the most famous anomalies in expected utility theory, the Allais paradox.</p>
+<p>The Allais paradox is one of the most famous anomalies in expected utility theory.</p>
 <p>The paradox was first identified by Maurice <span class="citation" data-cites="allais1953">Allais (<a href="../references.html#ref-allais1953" role="doc-biblioref">1953</a>)</span>. It emerges from the pattern of response to two pairs of bets. The following example comes from <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span>.</p>
 <p>For choice 1, the player is asked to choose one of the following bets:</p>
-<blockquote class="blockquote">
-<p>Bet A:</p>
+<p>Under Bet A, the player wins:</p>
 <ul>
 <li>$2500 with probability 33%</li>
 <li>$2400 with probability 66%</li>
 <li>$0 with probability 1%</li>
 </ul>
-<p>Bet B:</p>
+<p>Under Bet B, the player wins:</p>
 <ul>
 <li>$2400 with probability 100%</li>
 </ul>
-</blockquote>
+<p>Which do you prefer?</p>
 <p>When <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> ran this experiment, 82% of participants chose option B.</p>
 <p>For choice 2, the player is again asked to choose one of two bets:</p>
-<blockquote class="blockquote">
-<p>Bet C:</p>
+<p>Under Bet C, the player wins:</p>
 <ul>
 <li>$2500 with probability 33%<br>
 </li>
 <li>$0 with probability 67%</li>
 </ul>
-<p>Bet D:</p>
+<p>Under Bet D, the player wins:</p>
 <ul>
 <li>$2400 with probability 34%</li>
 <li>$0 with probability 66%</li>
 </ul>
-</blockquote>
+<p>Which do you prefer?</p>
 <p>When <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> ran this experiment, 83% of participants chose option C.</p>
-<p>Let’s now examine this pair of preferences, with over 80% of experimental participants selecting B in Choice 1 and C in Choice 2, under the lens of expected utility theory.</p>
+<p>Let’s examine this pair of preferences, with over 80% of experimental participants selecting B in Choice 1 and C in Choice 2.</p>
 <p>According to expected utility theory, if an agent selects B, the expected utility of B must be greater than the expected utility of A. That is:</p>
 <p><span class="math display">
 U(2400)&gt;0.33U(2500)+0.66U(2400)+0.01U(0)
@@ -664,7 +662,7 @@ U(2400)&gt;0.33U(2500)+0.66U(2400)+0.01U(0)
 <p><span class="math display">
 0.34U(2400)&gt;0.33U(2500)+0.01U(0)
 </span></p>
-<p>According to expected utility theory, if an agent selects C, the expected utility of C must be greater than the expected utility of D. That is:</p>
+<p>We can do the same analysis with the second choice. According to expected utility theory, if an agent selects C, the expected utility of C must be greater than the expected utility of D. That is:</p>
 <p><span class="math display">
 0.33U(2500)+0.67U(0)&gt; 0.34U(2400)+ 0.66U(0)
 </span></p>
@@ -672,28 +670,28 @@ U(2400)&gt;0.33U(2500)+0.66U(2400)+0.01U(0)
 <p><span class="math display">
 0.33U(2500)+0.01U(0)&gt; 0.34U(2400)
 </span></p>
-<p>This is a contradiction. Under expected utility theory, if an agent chooses A it should choose C. And if the agent chooses B it should choose D.</p>
+<p>This is a contradiction. The two inequalities point in opposite directions. Under expected utility theory, if an agent chooses A it should choose C. And if the agent chooses B, it should choose D.</p>
 <p>Why does this occur? What axiom is being breached?</p>
-<p>To understand this, I will show you another representation of the choices in the form of this table. The left half of the table shows the bets for choice 1, and the right half shows the bets for choice 2. Within each choice, the bets are represented as a payoff-chance pair. For example, I can read from the table that bet A involves a 66% chance of $2400, a 1% chance of $0, and a 33% chance of $2500. Bet B involves a 100% chance of $2400.</p>
+<p>To understand this, I will show you another representation of the choices in this table. The left half of the table shows the bets for choice 1, and the right half for choice 2. Within each choice, the bets are represented as a payoff-chance pair. For example, I can read from the table that bet A involves a 66% chance of $2400, a 1% chance of $0, and a 33% chance of $2500. Bet B involves a 100% chance of $2400.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/allais-paradox-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/allais-paradox-1.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>I can then break up each of these payoff-chance pairs to create an equivalent representation as in this second table. I have split the outcomes in bets B and C. For example, I have written the 100% chance of $2400 in option B as a 66% chance of $2400 and a 34% chance of $2400. I have written the 67% chance of $0 in bet C as a 66% chance of $0 and a 1% chance of $0.</p>
+<p>I can then break up these payoff-chance pairs to create an equivalent representation as in this second table. I have split the outcomes in bets B and C. For example, I have written the 100% chance of $2400 in option B as a 66% chance of $2400 and a 34% chance of $2400. I have written the 67% chance of $0 in bet C as a 66% chance of $0 and a 1% chance of $0.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/allais-paradox-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/allais-paradox-2.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>With this split, you can see that the bets contained in the bottom two rows of choice 1 and choice 2 are the same. Both choice 1 and choice 2 involve a choice between, in one bet, a 1% chance of nothing and 33% chance of $2,500 and in the other bet, a 34% chance of $2,400.</p>
+<p>With this split, you can see that the bets in the bottom two rows of choice 1 and choice 2 are the same. Both choice 1 and choice 2 involve a choice between, in one bet, a 1% chance of nothing and a 33% chance of $2,500 and in the other bet, a 34% chance of $2,400.</p>
 <p>That common bet in choice 1 and choice 2 is paired with a 66% chance of the same payoff regardless of the preferred bet. For choice 1 that common payoff across bet A and bet B is $2400. For choice 2, that common payoff across bet C and bet D is $0.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/allais-paradox-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/allais-paradox-3.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>This representation allows us to see that preferring bet B to bet A and bet C to bet D is a violation of the axiom of the <a href="@sec-independence">independence of irrelevant alternatives</a>. Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble. In this case, the two bets are contained in the last two rows. The irrelevant alternative is the 66% chance of either $2400 or $\0. It is an irrelevant alternative as regardless of whether you choose A or B, or C and D, the payoff is the same.</p>
+<p>This representation allows us to see that preferring bet B to bet A and bet C to bet D violates the axiom of the <a href="@sec-independence">independence of irrelevant alternatives</a>. Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble. In this case, the two bets are contained in the last two rows. The irrelevant alternative is the 66% chance of $2400 or $0. It is an irrelevant alternative as the payoff is the same regardless of whether you choose A or B, or C and D.</p>
 <p>I can express this in terms of the formal definition of the independence of irrelevant alternatives axiom. The formal definition states that if:</p>
 <ul>
 <li><p><span class="math inline">x</span> and <span class="math inline">y</span> are lotteries with <span class="math inline">x\succcurlyeq y</span> and</p></li>
@@ -709,31 +707,104 @@ pz+(1-p)x\succcurlyeq pz+(1-p)y
 <li><p><span class="math inline">z</span> is $2400 in choice 1 and $0 in choice 2.</p></li>
 </ul>
 <p>If <span class="math inline">p=0</span>, we simply have <span class="math inline">x\succcurlyeq y</span>. For any non-zero value of <span class="math inline">p</span>, such as the 66% in both choices, the preference between <span class="math inline">x</span> and <span class="math inline">y</span> should not change.</p>
-<p>Here’s another intuitive way to think about it.</p>
-<p>Suppose I am going to randomly generate one number between 0 and 100.</p>
+<p>Here’s another intuitive way to think about this bet.</p>
+<p>Suppose I am going to generate one number between 1 and 100 randomly.</p>
 <p>If a number between 1 and 66 is generated, you win the prize in the first row. If number 67 is generated, you win the amount in the second. If a number from 68 to 100 is generated, you win the sum in the third.</p>
 <p>Suppose that you know that the number generated is between 1 and 66. Would you prefer bet A or B in choice 1? As you would win $2400 with either choice, you will be indifferent. You will similarly be indifferent between bet C and D in choice 2, winning $0 no matter what.</p>
-<p>Suppose instead that a number between 67 and 100 is generated, but you don’t know which. You can see that if you prefer A to B, you should also prefer C to D. In each choice you are effectively facing the same bet. Let’s assume for the moment that you prefer A and C.</p>
-<p>Finally, suppose you don’t know what number will be generated. We have just determined that if you know the ticket is between 1 and 66 you are indifferent between the options, but if between 67 and 100 is drawn you prefer A and C. You do not prefer B or D when the ticket range is 1 to 66 or 67 to 100, so you should not prefer B or D when the ticket number is unknown.</p>
-<p>However, the responses to the bets generated by <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> and many other experimentalists suggests that when the number is unknown, the size of the certain amount for numbers 1 through 66 does matter. This irrelevant alternative is changing the preferences of the experimental participants.</p>
+<p>Suppose instead that a number between 67 and 100 is generated, but you don’t know which. If you prefer A to B, you should also prefer C to D. In each choice, you effectively face the same bet. Let’s assume for the moment that you prefer A and C.</p>
+<p>Finally, suppose you don’t know what number will be generated. We have just determined that if you know the ticket is between 1 and 66, you are indifferent between the options, but if between 67 and 100 is drawn, you prefer A and C. You do not prefer B or D when the ticket range is 1 to 66 or 67 to 100, so you should not prefer B or D when the ticket number is unknown.</p>
+<p>However, the responses to the bets generated by <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> and many other experimentalists suggest that when the number is unknown, the size of the certain amount for numbers 1 through 66 does matter. This irrelevant alternative is changing the preferences of the experimental participants.</p>
 </section>
 <section id="sec-absurd" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="sec-absurd"><span class="header-section-number">11.2</span> Absurd rates of risk aversion</h2>
-<p>I offer you the following one-off bet by flipping a coin:</p>
+<p>An important anomaly in expected utility theory concerns the level of risk aversion required to explain observed behaviour.</p>
+<p>Consider the following one-off bet involving the flip of a coin:</p>
 <blockquote class="blockquote">
 <p>Head: You win $550</p>
 <p>Tail: You lose $500</p>
 </blockquote>
 <p>Would you accept this bet?</p>
-<p><span class="citation" data-cites="barberis2006">Barberis et al. (<a href="../references.html#ref-barberis2006" role="doc-biblioref">2006</a>)</span> offered a real $550:$500 bet to experimental participants including those with substantial wealth (MBA students, hedge fund managers, etc.).</p>
-<p>70% of the sample turned down the bet, including professional investors with wealth above $10 million.</p>
-<p>Under the axiom of diminishing marginal utility, we would conclude people are risk averse to small bets.</p>
-<p>But, for sufficiently high levels of wealth, <span class="math inline">u(x)</span> is approximately linear and people always take favourable bets.</p>
-<p>The minimum <span class="math inline">u(x)</span> curvature required to reconcile an investor with $10 million investor downing a 50:50 bet as small as +$550 or -$500 would imply that agents reject immensely favourable bets, which is not realistic.</p>
+<p><span class="citation" data-cites="barberis2006">Barberis et al. (<a href="../references.html#ref-barberis2006" role="doc-biblioref">2006</a>)</span> offered this bet to experimental participants, including those with substantial wealth such as professional investors with wealth above $10 million.</p>
+<p>70% of the sample turned down the bet.</p>
+<p>Under the axiom of diminishing marginal utility, we could conclude people are risk averse to small bets.</p>
+<p>But, for sufficiently high levels of wealth, the expected utility curve is approximately linear, and people tend to take favourable bets.</p>
+<p>The minimum utility function curvature required to reconcile an investor with $10 million declining a 50:50 bet as small as +$550 or -$500 would imply that they reject immensely favourable bets, which is not realistic.</p>
 <p><span class="citation" data-cites="rabin2000">Rabin (<a href="../references.html#ref-rabin2000" role="doc-biblioref">2000</a>)</span> showed that rejection of bets over moderate stakes can require absurd rates of risk aversion. For instance, if a person who acts consistent with expected utility theory always turns down a 50:50 bet to win $110 or lose $100 whatever their initial level of wealth, they will also turn down a 50:50 bet to win $1 billion, lose $1,000.</p>
+<p>At face value, that is ridiculous, and that is the crux of Rabin’s argument. Rejection of the low-value bet to win $110 and lose $100 would lead to absurd responses to higher-value bets. This leads Rabin to argue that risk aversion or the diminishing value of money has nothing to do with the rejection of the low-value bets.</p>
+<p>The intuition behind Rabin’s argument is as follows.</p>
+<p>Suppose we have someone who rejects a 50:50 bet to gain $110, lose $100. They are an expected utility maximiser with a weakly concave utility curve: that is, they are risk neutral or risk averse at all levels of wealth.</p>
+<p>We can plot this on a chart. The horizontal axis is wealth and the vertical axis is utility. The current wealth and utility of that wealth is marked.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/rabin-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>We can then mark the two possible outcomes of the bet, the gain of $110 and the loss of $100. This graph is not to scale: I am exaggerating the size of the gain to make the point visually stark, but the argument holds regardless. The utility of each outcome will be a point on these vertical lines.</p>
+<p>The expected value of the bet is W+5. That is also marked.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/rabin-3.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>As the person rejected the bet, the expected utility of the bet must be less than or equal to the utility of current wealth. The point on the vertical line at W+5 where we mark expected utility must align with or below the point on the vertical line at W where we mark current utility.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/rabin-4.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The expected utility of the bet is the probability-weighted utility of each of the two possible outcomes. The angle of this new line doesn’t matter, simply that it is of positive slope.</p>
+<p>From this, we can infer the relative utility of winning and losing the bet.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/rabin-6.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>As the person is risk averse at all levels of wealth, we can draw the following lines as the least risk averse they could be while still rejecting the bet. We now have part of the utility curve.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/rabin-7.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The slope of these two lines allows us to infer that they weight the average of each dollar between their current wealth (W) and their wealth if they win the bet (W+110) only 100/110<span class="math inline">^{\text{ths}}</span> (or 10/11<span class="math inline">^{\text{ths}}</span>) as much as they weight the average dollar of the last $100 of their current wealth (between W-100 and W). We can also say that they, therefore, weight their W+110th dollar at most 10/11<span class="math inline">^{\text{ths}}</span> as much as their W-100th dollar.</p>
+<p>We can now do the same at W+210. We have assumed that they will reject the bet at all levels of wealth, so they will also reject at this wealth. We can therefore infer another piece of the utility curve (or, more specifically, a curve for the least risk averse they could be).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/rabin-8.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Iterating the previous calculations, we can say that they will weight their W+320nd dollar only 10/11 as much as their W+110th dollar. This means they value their W+320th dollar only (10/11)<sup>2</sup> as much as their W-100th dollar.</p>
+<p>As we infer additional pieces, we can see that this person rapidly declines in the rate at which they place utility on further wealth.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/rabin-10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/rabin-10.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/rabin-11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/rabin-11.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can also extended in the other direction, with losses below their current wealth.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="img/rabin-12.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Keep iterating in this way and you end up with some ridiculous results. You value the 2100th dollar above your current wealth only 40% as much as your last current dollar of your wealth - (10/11)<sup>10</sup>&nbsp;- reducing by a constant factor of 10/11 every $210. Or you value the 9000th dollar above your current wealth at only 2% of your last current dollar [(10/11)<sup>40</sup>]. This is an absurd rate of discounting.</p>
+<p>Taking this iteration to the extreme, it doesn’t take long for additional money to have effectively zero value. Hence the result, reject the 50:50 win $110, lose $100 bet, and you’ll reject the win any amount, lose $1,000 bet.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/rabin-13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="img/rabin-13.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 </section>
 <section id="framing" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="framing"><span class="header-section-number">11.3</span> Framing</h2>
+<p>Under expected utility theory, a person’s choices should not be affected by how the options are described or by how their preferences are elicited.</p>
 <p><span class="citation" data-cites="kahneman1984">Kahneman and Tversky (<a href="../references.html#ref-kahneman1984" role="doc-biblioref">1984</a>)</span> reported the following experiment.</p>
 <blockquote class="blockquote">
 <p>A group of experimental participants were shown the following:</p>
@@ -751,16 +822,18 @@ pz+(1-p)x\succcurlyeq pz+(1-p)y
 <p>Which of the two programs would you favour?</p>
 </blockquote>
 <p>22% of participants chose option C.</p>
-<p>72% of participants chose A and 22% of participants chose option C. Yet these two options are equivalent.</p>
+<p>72% of participants chose A and 22% of participants chose option C. Yet these two options are equivalent. The only difference is the framing of the options, which under expected utility theory should not matter.</p>
 </section>
 <section id="reference-points" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="reference-points"><span class="header-section-number">11.4</span> Reference points</h2>
-<p>Consider the following two scenarios:</p>
+<p>An auxiliary axiom of expected utility theory is that people use a reference point of zero wealth. They consider the utility of the absolute outcomes.</p>
+<p>However, consider the following two scenarios:</p>
 <ul>
 <li><p>You have not checked your share portfolio in a while. You expect that the portfolio is worth around $40,000. Today when you check, it is worth $30,000. Do you feel rich or poor?</p></li>
 <li><p>You have not checked your share portfolio in a while. You expect that the portfolio is worth around $20,000. Today when you check, it is worth $30,000. Do you feel rich or poor?</p></li>
 </ul>
-<p>Under expected utility theory, those two scenarios should feel the same as you have <span class="math inline">U</span>($30,000) in both cases.</p>
+<p>Under expected utility theory, those two scenarios should feel the same as you have <span class="math inline">U(\$30,000)</span> in both cases.</p>
+<p>However, in the first case, you feel poor and in the second case you feel rich. This is because you are comparing the outcome to your reference point of $40,000 in the first case and $20,000 in the second case. You are not assessing the absolute outcome but appear to be using a reference point.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
@@ -1066,7 +1139,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox"});</script>
 
 
 

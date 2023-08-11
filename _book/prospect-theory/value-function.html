@@ -646,8 +646,8 @@ div.csl-indent {
 
 </header>
 
-<p>The three phenomena, reference dependence, loss aversion and the reflection effect are each incorporated into the prospect theory value function.</p>
-<p>First, the value function of prospect theory is defined on changes in wealth or welfare, rather than on final wealth levels. In other words, gains and losses are defined relative to a reference point. The reference point might be the status quo, lagged consumption, a goal, or an expectation about the outcome.</p>
+<p>The three phenomena, reference dependence, loss aversion and the reflection effect, are each incorporated into the prospect theory value function.</p>
+<p>First, the value function of prospect theory is defined on changes in wealth or welfare rather than on final wealth levels. In other words, gains and losses are defined relative to a reference point. The reference point might be the status quo, lagged consumption, a goal, or an expectation about the outcome.</p>
 <p>Utility from an outcome depends on the distance to the relevant reference level. A multi-millionaire may reject a 50:50 bet to win $550, lose $500 because they are not comparing the outcomes to their total wealth but rather are making a judgment relative to the reference point of the status quo.</p>
 <p>Second, perceptions of both gains and losses are characterised by diminishing marginal sensitivity in either direction. Successive incremental changes have a smaller marginal impact.</p>
 <p>This is similar to decreasing marginal utility of wealth in expected utility theory. Prospect theory and expected utility theory differ in the baseline. In expected utility theory, the starting value is typically zero wealth, with increases from there decreasing in marginal utility. In prospect theory, the starting value is the reference point, with both increases and decreases having smaller marginal effects as they increase in magnitude.</p>
@@ -662,7 +662,7 @@ div.csl-indent {
 </figure>
 </div>
 <p>The following diagrams illustrate the different shapes of the expected utility function and the Prospect Theory value function.</p>
-<p>The expected utility function has diminishing marginal utility as utility increases. Utility is measured from a reference point of zero.</p>
+<p>The expected utility function, in this case <span class="math inline">U(x)=ln(x)</span>, has diminishing marginal utility as utility increases. Utility is measured from a reference point of zero.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -683,9 +683,10 @@ div.csl-indent {
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-expected-utility" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="value-function_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="value-function_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;16.1: Expected utility function</figcaption>
+<p><a href="value-function_files/figure-html/fig-expected-utility-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Expected utility function"><img src="value-function_files/figure-html/fig-expected-utility-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -694,7 +695,7 @@ div.csl-indent {
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>loss_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>loss_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(x){<span class="co">#| </span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gain_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
@@ -724,9 +725,10 @@ div.csl-indent {
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-value-function" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="value-function_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="value-function_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;16.2: Prospect theory value function</figcaption>
+<p><a href="value-function_files/figure-html/fig-value-function-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Prospect theory value function"><img src="value-function_files/figure-html/fig-value-function-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1033,7 +1035,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
 
 
 

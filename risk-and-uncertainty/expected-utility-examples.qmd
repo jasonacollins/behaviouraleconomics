@@ -358,15 +358,17 @@ You can see that the expected utility of the gamble is lower than the utility of
 
 ## The St. Petersburg game
 
-The St. Petersburg game was invented by Swiss mathematician Nicolas Bernoulli.
+The St. Petersburg game was invented by the Swiss mathematician Nicolas Bernoulli.
 
-The game starts with a pot containing \$2. A dealer then flips a coin. The pot doubles every time a head appears. The game ends and the player wins the pot as soon as a tail appears.
+The game starts with a pot containing \$2. A dealer then flips a coin. The pot doubles every time a head appears. The game ends, and the player wins the pot when a tail appears.
 
 - A tail on the first flip leads to a payment of \$2.
 - A tail on the second flip leads to a payment of \$4
 - A tail on the third flip leads to a payment of  \$8
 
 And so on.
+
+Consider what you would be willing to pay to play this game. Would you pay \$5? \$10? \$25? \$50? More?
 
 The expected value of this game is equal to the sum of the following series.
 
@@ -378,9 +380,15 @@ E[X]&=\underbrace{\frac{1}{2}\times 2}_\textrm{Tail first}+\underbrace{\bigg(\fr
 &=\infty
 \end{align*}
 
+The first term in the series captures the 50% chance of a tail on the first flip, paying \$2. The second term represents the 50% chance of a head on the first flip, followed by the 50% chance of the tail second flip, paying \$4. The third term represents the 50% chance of a head on the first flip, followed by the 50\% chance of a head on the second flip, followed by the 50\% chance of a tail on the third flip, paying \$8. And so on.
+
+Multiplying out each of those terms results in a series of 1s.
+
 The $\sum$ operator means “sum for $k=1$ to $k=\infty$”.
 
-The first term in the series captures the 50% chance of a tail on the first flip, paying \$2. The second term represents the 50% chance of a head on the first flip followed by the 50% chance of the tail second flip, paying \$4. The third term represents the 50% chance of a head the first flip followed by the 50\% chance of a head second flip followed by the 50\% chance of a tail third flip, paying \$8. And so on.
+Contrast this expected value of $\infty$ with the sum you would pay to play the game. You were likely not willing to pay an infinite amount.
+
+This "paradox" is often resolved by introducing an expected utility function.
 
 The expected utility of this game is equal to:
 
@@ -392,21 +400,34 @@ E[U(X)]&=\underbrace{\frac{1}{2}\times U(W+2)}_\textrm{Tail first}+\underbrace{\
 &=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+2^k)
 \end{align*}
 
-Similar to the calculation of the expected value, the first term in the series captures the 50% chance of a tail on the first flip, paying \$2. The second term represents the 50\% chance of a head on the first flip followed by the 50\% chance of the tail second flip, paying \$4. And so on. But here we are using the utility function $U(x)$.
+Similar to the calculation of the expected value, the first term in the series captures the 50% chance of a tail on the first flip, paying \$2. The second term represents the 50\% chance of a head on the first flip, followed by the 50\% chance of the tail on the second flip, paying \$4. And so on. But here, we are using the utility function $U(x)$.
 
-What is the maximum sum a risk-neutral player with $U(x)=x$ would be willing to pay to play the game? One strategy to determine this sum is to ask what sum the player would be indifferent between accepting and rejecting a chance to play. That is the maximum sum $c$ that they would be willing to pay. They will be indifferent when $U(W)=E[U(X-c)]$.
+In the second line, I multiplied the probabilities of each coin flip together.
 
-We can solve this equation as follows. In the second line, we use the sum we created earlier. In the third line, we substitute the utility function $U(x)=x$. We can then simplify as in the fourth line, which allows us to see that, given the infinite expected value of the game, the player would be willing to pay an infinite amount to play. 
+In the third line, I expressed this infinite sum more compactly.
+
+To take this equation further, we need to consider the particular utility function of the decision maker.
+
+What maximum sum would a risk-neutral player with $U(x)=x$ be willing to pay to play the game?
+
+One strategy to determine this sum is to ask what sum would result in the player being indifferent between paying and rejecting a chance to play. That is the maximum sum $c$ that they would be willing to pay. They will be indifferent when $U(W)=E[U(X-c)]$.
+
+We can solve this equation as follows.
 
 \begin{align*}
 U(W)&=E[U(X-c)] \\[6pt]
-U(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
-W&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(W+2^k-c) \\[6pt]
-W&=W-c+\sum_{k=1}^{k=\infty}1 \qquad \Bigg(\text{as }\sum_{k=1}^{k=\infty}\frac{1}{2^k}=1\Bigg) \\[12pt]
-c&=\infty
+&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
+W&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(W+2^k-c)  \qquad \text{(substituting in the utility function)}\\[6pt]
+&=W-c+\sum_{k=1}^{k=\infty}1 \qquad \Bigg(\text{as }\sum_{k=1}^{k=\infty}\frac{1}{2^k}=1\Bigg) \\[12pt]
+c&=\sum_{k=1}^{k=\infty}1 \\[6pt]
+&=\infty
 \end{align*}
 
+In the second line, we use the sum we created earlier. In the third line, I substitute the utility function $U(x)=x$. We can then simplify as in the fourth line, which allows us to see that, given the infinite expected value of the game, the player would be willing to pay an infinite amount to play. 
+
 That is, a risk-neutral player would pay any amount \$$c$ to play.
+
+We could also have inferred this from the game's expected value being infinite.
 
 What is the maximum sum a risk-averse player with $U(x)=\text{ln}(x)$ would be willing to pay to play the game? How does their wealth affect their willingness to pay?
 
@@ -452,9 +473,9 @@ c1000 <- round(find_c(10^3), 2)
 c001 <- round(find_c(0.01), 2)
 ```
 
-There is no closed-form solution to this equation to enable us to determine $c$. It needs to be solved via numerical methods (such as testing and iterating to a solution).
+There is no closed-form solution to this equation to enable us to determine $c$. We need to solve via numerical methods (such as testing and iterating to a solution).
 
-If we did solve, we would find that someone who has wealth of \$0.01 would be willing to pay up to \$`r c001`. They would need to borrow. Someone with wealth \$1000 would be willing to pay \$`r c1000`. A person with a wealth of \$1 million would be willing to pay \$`r c1000000`.
+If we did solve this, we would find that someone who has wealth of \$0.01 would be willing to pay up to \$`r c001`. They would need to borrow. Someone with wealth \$1000 would be willing to pay \$`r c1000`. A person with a wealth of \$1 million would be willing to pay \$`r c1000000`.
 
 We cannot solve for a person with no wealth as $\text{ln}⁡(0)$ is undefined. 
 
@@ -466,10 +487,9 @@ One way to gain an intuition for why this gamble now has a finite value is to ca
 
 \begin{align*}
 E[U(X)]&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[12pt]
-&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(2^k) \\[12pt]
-&=\sum_{k=1}^{k=\infty}\frac{k}{2^k}\text{ln}(2) \\[12pt]
-&=\frac{1}{2}\text{ln}(2)+\frac{2}{4}\text{ln}(2)+\frac{3}{8}\text{ln}(2)+\frac{4}{16}\text{ln}(2)+\frac{5}{32}\text{ln}(2)+... \\[12pt]
-&=\bigg(\frac{1}{2}+\frac{1}{2}+\frac{3}{8}+\frac{1}{4}+\frac{5}{32}+...\bigg)\text{ln}(2) \\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(2^k) \qquad \text{(substituting in the utility function)}\\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{k}{2^k}\text{ln}(2)  \qquad \text{(using the rule }\ln(x^a)=a\ln(x)) \\[12pt]
+&=\bigg(\frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\frac{5}{32}+...\bigg)\text{ln}(2) \\[12pt]
 &=2\text{ln}(2)
 \end{align*}
 
@@ -482,13 +502,13 @@ U(W)=\text{ln}(W)=2\text{ln}(2) \\[12pt]
 W=e^{2\text{ln}2}=4
 $$
 
-The expected utility from the game is equal to the utility of \$4 
+The expected utility from the game is equal to the utility of \$4.
 
 ## Risk neutrality versus risk aversion
 
 Anika and Anthony are offered a choice between options A and B:
 
-A: Lottery $X=(0.5, \$100; 0.5, \$20)$. This is a gamble with a 50% chance of winning $100 and a 50% chance of winning $20.
+A: Lottery $A=(0.5, \$100; 0.5, \$20)$. This is a gamble with a 50% chance of winning $100 and a 50% chance of winning $20.
 
 B: $40 for certain.
 
@@ -508,7 +528,7 @@ The expected value of option B is \$40.
 
 Anika will choose option A because \$60 is greater than \$40.
 
-\(b) Anthony is risk averse with wealth $100 and utility function $U(x)=\text{ln}(X)$. Will Anthony choose A or B?
+\(b) Anthony is risk averse with wealth $100 and utility function $U(x)=\text{ln}(x)$. Will Anthony choose A or B?
 
 Anthony will select the option that gives the highest expected utility.
 

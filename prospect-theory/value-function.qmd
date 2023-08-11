@@ -1,8 +1,8 @@
 # The value function
 
-The three phenomena, reference dependence, loss aversion and the reflection effect are each incorporated into the prospect theory value function.
+The three phenomena, reference dependence, loss aversion and the reflection effect, are each incorporated into the prospect theory value function.
 
-First, the value function of prospect theory is defined on changes in wealth or welfare, rather than on final wealth levels. In other words, gains and losses are defined relative to a reference point. The reference point might be the status quo, lagged consumption, a goal, or an expectation about the outcome.
+First, the value function of prospect theory is defined on changes in wealth or welfare rather than on final wealth levels. In other words, gains and losses are defined relative to a reference point. The reference point might be the status quo, lagged consumption, a goal, or an expectation about the outcome.
 
 Utility from an outcome depends on the distance to the relevant reference level. A multi-millionaire may reject a 50:50 bet to win \$550, lose \$500 because they are not comparing the outcomes to their total wealth but rather are making a judgment relative to the reference point of the status quo.
 
@@ -24,9 +24,12 @@ These phenomena result in the following famous figure from @kahneman1979.
 
 The following diagrams illustrate the different shapes of the expected utility function and the Prospect Theory value function.
 
-The expected utility function has diminishing marginal utility as utility increases. Utility is measured from a reference point of zero.
+The expected utility function, in this case $U(x)=ln(x)$, has diminishing marginal utility as utility increases. Utility is measured from a reference point of zero.
 
 ```{r}
+#| label: fig-expected-utility
+#| fig-cap: Expected utility function
+
 library(ggplot2)
 df <- data.frame(
   x = seq(0.05,20,0.05),
@@ -47,7 +50,10 @@ ggplot(mapping = aes(x, y))+
 For the prospect theory function, you can see the kink at zero, with losses weighted more heavily than gains, with gains and losses determined relative to a reference point. There is diminishing sensitivity to further changes in both directions
 
 ```{r}
-loss_fun <- function(x){
+#| label: fig-value-function
+#| fig-cap: Prospect theory value function
+
+loss_fun <- function(x){#| 
   -2*(-x)^0.5
 }
 gain_fun <- function(x){

@@ -138,13 +138,13 @@ div.csl-indent {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 15&nbsp; The reflection effect">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reflection-effect_files/figure-html/unnamed-chunk-1-1.png">
+<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reflection-effect_files/figure-html/fig-reflection-effect-1.png">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="Notes on behavioural economics - 15&nbsp; The reflection effect">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reflection-effect_files/figure-html/unnamed-chunk-1-1.png">
+<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reflection-effect_files/figure-html/fig-reflection-effect-1.png">
 <meta name="twitter:image-height" content="960">
 <meta name="twitter:image-width" content="1344">
 <meta name="twitter:card" content="summary_large_image">
@@ -659,8 +659,8 @@ div.csl-indent {
 </header>
 
 <p>The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.</p>
-<p>When people make a risky choice related to gains, they are risk averse. They prefer a certain option of lower value than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.</p>
-<p>The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory where the pain of losses increases as they grow in size.</p>
+<p>When people make a risky choice related to gains, they are risk averse. They prefer a certain option with value lower than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.</p>
+<p>The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory, where the pain of losses increases as they grow in size.</p>
 <section id="the-asian-disease-problem" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="the-asian-disease-problem"><span class="header-section-number">15.1</span> The Asian Disease problem</h2>
 <p>The reflection effect explains the framing effects in the following experiment by <span class="citation" data-cites="kahneman1984">Kahneman and Tversky (<a href="../references.html#ref-kahneman1984" role="doc-biblioref">1984</a>)</span>.</p>
@@ -684,7 +684,7 @@ div.csl-indent {
 </section>
 <section id="the-reflection-effect-in-the-value-function" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="the-reflection-effect-in-the-value-function"><span class="header-section-number">15.2</span> The reflection effect in the value function</h2>
-<p>The following value function is an example of a function where there is diminishing sensitivity to both gains and losses. This function can generate the reflection effect.</p>
+<p>The following value function is an example of a function with diminishing sensitivity to both gains and losses. This function can generate the reflection effect.</p>
 <p><span class="math display">\begin{equation*}
 v(x)= \Bigg\{
 \begin{matrix}
@@ -693,7 +693,7 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 \end{matrix}
 \end{equation*}</span></p>
 <p>As <span class="math inline">x</span> increases in magnitude in either direction, the marginal increase in value from each incremental unit of <span class="math inline">x</span> decreases.</p>
-<p>The result of this value function is risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.</p>
+<p>This value function results in risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -729,9 +729,10 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-reflection-effect" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="reflection-effect_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="reflection-effect_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;15.1: The reflection effect</figcaption>
+<p><a href="reflection-effect_files/figure-html/fig-reflection-effect-1.png" class="lightbox" title="The reflection effect" data-gallery="quarto-lightbox-gallery-1"><img src="reflection-effect_files/figure-html/fig-reflection-effect-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -753,7 +754,7 @@ v(\text{bet})&amp;=0.5\times v(20)+0.5\times v(0) \\[6pt]
 \end{align*}</span></p>
 <p>The $10 for certain has a higher value for the agent. This agent is risk averse in the gain domain and therefore prefers an amount for certain over a bet with the same expected value.</p>
 <p>The following chart illustrates. Plotted are the value of the certain payment of $10 and the outcome from winning the gamble, $20. A loss results in value of 0.</p>
-<p>The value of the gamble itself is the probability weighted average of the two gamble outcomes. Due to diminishing marginal utility in the gain domain, the value of the gamble is less than the value of $10 with certainty. The extra $\10 over the certain outcome from winning the bet is less than the value of the first $10. As a result, the agent does not want to risk the bet.</p>
+<p>The value of the gamble itself is the probability-weighted average of the two gamble outcomes. Due to diminishing marginal utility in the gain domain, the value of the gamble is less than the value of $10 with certainty. The extra $10 over the certain outcome from winning the bet is less than the value of the first $10. As a result, the agent does not want to risk the bet.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -817,10 +818,10 @@ v(\text{bet})&amp;=0.5\times v(20)+0.5\times v(0) \\[6pt]
 <span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"v(bet)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-reflection-effect-gain" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">The reflection effect in the gain domain</figcaption>
-<p><a href="reflection-effect_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" title="The reflection effect in the gain domain" data-gallery="quarto-lightbox-gallery-2"><img src="reflection-effect_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;15.2: The reflection effect in the gain domain</figcaption>
+<p><a href="reflection-effect_files/figure-html/fig-reflection-effect-gain-1.png" class="lightbox" title="The reflection effect in the gain domain" data-gallery="quarto-lightbox-gallery-2"><img src="reflection-effect_files/figure-html/fig-reflection-effect-gain-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -837,7 +838,7 @@ v(\text{bet})&amp;=0.5\times v(-20)+0.5\times v(0) \\[6pt]
 \end{align*}</span></p>
 <p>This bet delivers higher value than the certain loss, despite the bet and the certain loss having the same expected value. The agent is willing to take a risk to avoid a loss. They are risk seeking in the loss domain.</p>
 <p>The following chart illustrates. Plotted are the value of the certain payment of -$10 and the outcome from losing the gamble, -$20. A win results in value of 0.</p>
-<p>The value of the gamble itself is the probability weighted average of the two gamble outcomes. Due to diminishing marginal utility in the loss domain, the value of the gamble is greater than the value of -$10 with certainty. The potential loss of another $\10 over and above the certain loss is given less weight than the first $10. As a result, the agent wants to take the risk.</p>
+<p>The value of the gamble itself is the probability-weighted average of the two gamble outcomes. Due to diminishing marginal utility in the loss domain, the value of the gamble is greater than the value of -$10 with certainty. The potential loss of another $10 over and above the certain loss is given less weight than the first $10. As a result, the agent wants to take the risk.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -901,10 +902,10 @@ v(\text{bet})&amp;=0.5\times v(-20)+0.5\times v(0) \\[6pt]
 <span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"v(bet)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-reflection-effect-loss" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">The reflection effect in the loss domain</figcaption>
-<p><a href="reflection-effect_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" title="The reflection effect in the loss domain" data-gallery="quarto-lightbox-gallery-3"><img src="reflection-effect_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;15.3: The reflection effect in the loss domain</figcaption>
+<p><a href="reflection-effect_files/figure-html/fig-reflection-effect-loss-1.png" class="lightbox" title="The reflection effect in the loss domain" data-gallery="quarto-lightbox-gallery-3"><img src="reflection-effect_files/figure-html/fig-reflection-effect-loss-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1202,7 +1203,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 

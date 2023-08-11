@@ -4,7 +4,7 @@ Subjective expected utility theory is used in situations of uncertainty, where t
 
 The agent maximises subjective expected utility, $E[U(x)]$, using a subjective probability $\pi(x_i)$ for each outcome $x_i$.
 
-While people may have different beliefs about the probabilities of different outcomes, as the word "subjective" indicates, these are typically assumed to comply with Bayesian probability theory. Decision makers are Bayesian, in that, given the evidence, they have beliefs that are consistent with Bayes' rule.
+While people may have different beliefs about the probabilities of different outcomes, as the word "subjective" indicates, these are typically assumed to comply with Bayesian probability theory. Decision makers are Bayesian, in that, given the evidence, they have beliefs that are consistent with Bayes' rule. I discuss Bayes' rule in more detail later.
 
 The equation for subjective utility theory is as that for expected utility theory, except that the probabilities are subjective.
 

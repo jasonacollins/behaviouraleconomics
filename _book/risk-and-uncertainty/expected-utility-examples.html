@@ -976,14 +976,15 @@ E[U(X)]&amp;=\sum_{i=1}^n p_iU(X_i) \\[6pt]
 </section>
 <section id="the-st.-petersburg-game" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="the-st.-petersburg-game"><span class="header-section-number">10.4</span> The St.&nbsp;Petersburg game</h2>
-<p>The St.&nbsp;Petersburg game was invented by Swiss mathematician Nicolas Bernoulli.</p>
-<p>The game starts with a pot containing $2. A dealer then flips a coin. The pot doubles every time a head appears. The game ends and the player wins the pot as soon as a tail appears.</p>
+<p>The St.&nbsp;Petersburg game was invented by the Swiss mathematician Nicolas Bernoulli.</p>
+<p>The game starts with a pot containing $2. A dealer then flips a coin. The pot doubles every time a head appears. The game ends, and the player wins the pot when a tail appears.</p>
 <ul>
 <li>A tail on the first flip leads to a payment of $2.</li>
 <li>A tail on the second flip leads to a payment of $4</li>
 <li>A tail on the third flip leads to a payment of $8</li>
 </ul>
 <p>And so on.</p>
+<p>Consider what you would be willing to pay to play this game. Would you pay $5? $10? $25? $50? More?</p>
 <p>The expected value of this game is equal to the sum of the following series.</p>
 <p><span class="math display">\begin{align*}
 E[X]&amp;=\underbrace{\frac{1}{2}\times 2}_\textrm{Tail first}+\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\bigg)\times 4}_\textrm{Tail second}+\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\times \frac{1}{2}\bigg)\times 8}_\textrm{Tail third} \\[24pt]
@@ -992,8 +993,11 @@ E[X]&amp;=\underbrace{\frac{1}{2}\times 2}_\textrm{Tail first}+\underbrace{\bigg
 &amp;=\sum_{k=1}^\infty 1 \\
 &amp;=\infty
 \end{align*}</span></p>
+<p>The first term in the series captures the 50% chance of a tail on the first flip, paying $2. The second term represents the 50% chance of a head on the first flip, followed by the 50% chance of the tail second flip, paying $4. The third term represents the 50% chance of a head on the first flip, followed by the 50% chance of a head on the second flip, followed by the 50% chance of a tail on the third flip, paying $8. And so on.</p>
+<p>Multiplying out each of those terms results in a series of 1s.</p>
 <p>The <span class="math inline">\sum</span> operator means “sum for <span class="math inline">k=1</span> to <span class="math inline">k=\infty</span>”.</p>
-<p>The first term in the series captures the 50% chance of a tail on the first flip, paying $2. The second term represents the 50% chance of a head on the first flip followed by the 50% chance of the tail second flip, paying $4. The third term represents the 50% chance of a head the first flip followed by the 50% chance of a head second flip followed by the 50% chance of a tail third flip, paying $8. And so on.</p>
+<p>Contrast this expected value of <span class="math inline">\infty</span> with the sum you would pay to play the game. You were likely not willing to pay an infinite amount.</p>
+<p>This “paradox” is often resolved by introducing an expected utility function.</p>
 <p>The expected utility of this game is equal to:</p>
 <p><span class="math display">\begin{align*}
 E[U(X)]&amp;=\underbrace{\frac{1}{2}\times U(W+2)}_\textrm{Tail first}+\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\bigg)\times U(W+4)}_\textrm{Tail second} \\[24pt]
@@ -1002,17 +1006,24 @@ E[U(X)]&amp;=\underbrace{\frac{1}{2}\times U(W+2)}_\textrm{Tail first}+\underbra
 &amp;=\frac{1}{2}U(W+2)+\frac{1}{4}U(W+4)+\frac{1}{8}U(W+8)+\frac{1}{16}U(W+16)+...  \\[12pt]
 &amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+2^k)
 \end{align*}</span></p>
-<p>Similar to the calculation of the expected value, the first term in the series captures the 50% chance of a tail on the first flip, paying $2. The second term represents the 50% chance of a head on the first flip followed by the 50% chance of the tail second flip, paying $4. And so on. But here we are using the utility function <span class="math inline">U(x)</span>.</p>
-<p>What is the maximum sum a risk-neutral player with <span class="math inline">U(x)=x</span> would be willing to pay to play the game? One strategy to determine this sum is to ask what sum the player would be indifferent between accepting and rejecting a chance to play. That is the maximum sum <span class="math inline">c</span> that they would be willing to pay. They will be indifferent when <span class="math inline">U(W)=E[U(X-c)]</span>.</p>
-<p>We can solve this equation as follows. In the second line, we use the sum we created earlier. In the third line, we substitute the utility function <span class="math inline">U(x)=x</span>. We can then simplify as in the fourth line, which allows us to see that, given the infinite expected value of the game, the player would be willing to pay an infinite amount to play.</p>
+<p>Similar to the calculation of the expected value, the first term in the series captures the 50% chance of a tail on the first flip, paying $2. The second term represents the 50% chance of a head on the first flip, followed by the 50% chance of the tail on the second flip, paying $4. And so on. But here, we are using the utility function <span class="math inline">U(x)</span>.</p>
+<p>In the second line, I multiplied the probabilities of each coin flip together.</p>
+<p>In the third line, I expressed this infinite sum more compactly.</p>
+<p>To take this equation further, we need to consider the particular utility function of the decision maker.</p>
+<p>What maximum sum would a risk-neutral player with <span class="math inline">U(x)=x</span> be willing to pay to play the game?</p>
+<p>One strategy to determine this sum is to ask what sum would result in the player being indifferent between paying and rejecting a chance to play. That is the maximum sum <span class="math inline">c</span> that they would be willing to pay. They will be indifferent when <span class="math inline">U(W)=E[U(X-c)]</span>.</p>
+<p>We can solve this equation as follows.</p>
 <p><span class="math display">\begin{align*}
 U(W)&amp;=E[U(X-c)] \\[6pt]
-U(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
-W&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(W+2^k-c) \\[6pt]
-W&amp;=W-c+\sum_{k=1}^{k=\infty}1 \qquad \Bigg(\text{as }\sum_{k=1}^{k=\infty}\frac{1}{2^k}=1\Bigg) \\[12pt]
-c&amp;=\infty
+&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
+W&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(W+2^k-c)  \qquad \text{(substituting in the utility function)}\\[6pt]
+&amp;=W-c+\sum_{k=1}^{k=\infty}1 \qquad \Bigg(\text{as }\sum_{k=1}^{k=\infty}\frac{1}{2^k}=1\Bigg) \\[12pt]
+c&amp;=\sum_{k=1}^{k=\infty}1 \\[6pt]
+&amp;=\infty
 \end{align*}</span></p>
+<p>In the second line, we use the sum we created earlier. In the third line, I substitute the utility function <span class="math inline">U(x)=x</span>. We can then simplify as in the fourth line, which allows us to see that, given the infinite expected value of the game, the player would be willing to pay an infinite amount to play.</p>
 <p>That is, a risk-neutral player would pay any amount $<span class="math inline">c</span> to play.</p>
+<p>We could also have inferred this from the game’s expected value being infinite.</p>
 <p>What is the maximum sum a risk-averse player with <span class="math inline">U(x)=\text{ln}(x)</span> would be willing to pay to play the game? How does their wealth affect their willingness to pay?</p>
 <p>Again we will determine at what $<span class="math inline">c</span> the player is indifferent between accepting and rejecting a chance to play, which occurs when <span class="math inline">U(W)=E[U(X-c)]</span>.</p>
 <p><span class="math display">\begin{align*}
@@ -1055,18 +1066,17 @@ U(W)&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>c001 <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">find_c</span>(<span class="fl">0.01</span>), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>There is no closed-form solution to this equation to enable us to determine <span class="math inline">c</span>. It needs to be solved via numerical methods (such as testing and iterating to a solution).</p>
-<p>If we did solve, we would find that someone who has wealth of $0.01 would be willing to pay up to $2.01. They would need to borrow. Someone with wealth $1000 would be willing to pay $10.95. A person with a wealth of $1 million would be willing to pay $20.87.</p>
+<p>There is no closed-form solution to this equation to enable us to determine <span class="math inline">c</span>. We need to solve via numerical methods (such as testing and iterating to a solution).</p>
+<p>If we did solve this, we would find that someone who has wealth of $0.01 would be willing to pay up to $2.01. They would need to borrow. Someone with wealth $1000 would be willing to pay $10.95. A person with a wealth of $1 million would be willing to pay $20.87.</p>
 <p>We cannot solve for a person with no wealth as <span class="math inline">\text{ln}⁡(0)</span> is undefined.</p>
 <p>Why does willingness to pay increase with wealth?</p>
 <p>With log utility, as wealth increases, the slope of the log function increasingly approximates a linear function (the second derivative approaches zero). Hence, the gambler displays less risk-averse (closer to risk-neutral) behaviour.</p>
 <p>One way to gain an intuition for why this gamble now has a finite value is to calculate the utility of a risk-averse player whose only asset is the opportunity to play this game.</p>
 <p><span class="math display">\begin{align*}
 E[U(X)]&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[12pt]
-&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(2^k) \\[12pt]
-&amp;=\sum_{k=1}^{k=\infty}\frac{k}{2^k}\text{ln}(2) \\[12pt]
-&amp;=\frac{1}{2}\text{ln}(2)+\frac{2}{4}\text{ln}(2)+\frac{3}{8}\text{ln}(2)+\frac{4}{16}\text{ln}(2)+\frac{5}{32}\text{ln}(2)+... \\[12pt]
-&amp;=\bigg(\frac{1}{2}+\frac{1}{2}+\frac{3}{8}+\frac{1}{4}+\frac{5}{32}+...\bigg)\text{ln}(2) \\[12pt]
+&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(2^k) \qquad \text{(substituting in the utility function)}\\[12pt]
+&amp;=\sum_{k=1}^{k=\infty}\frac{k}{2^k}\text{ln}(2)  \qquad \text{(using the rule }\ln(x^a)=a\ln(x)) \\[12pt]
+&amp;=\bigg(\frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\frac{5}{32}+...\bigg)\text{ln}(2) \\[12pt]
 &amp;=2\text{ln}(2)
 \end{align*}</span></p>
 <p>The change in the utility from each flip rapidly declines. Ultimately the series of fractions sum to two.</p>
@@ -1075,12 +1085,12 @@ E[U(X)]&amp;=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[12pt]
 U(W)=\text{ln}(W)=2\text{ln}(2) \\[12pt]
 W=e^{2\text{ln}2}=4
 </span></p>
-<p>The expected utility from the game is equal to the utility of $4</p>
+<p>The expected utility from the game is equal to the utility of $4.</p>
 </section>
 <section id="risk-neutrality-versus-risk-aversion" class="level2" data-number="10.5">
 <h2 data-number="10.5" class="anchored" data-anchor-id="risk-neutrality-versus-risk-aversion"><span class="header-section-number">10.5</span> Risk neutrality versus risk aversion</h2>
 <p>Anika and Anthony are offered a choice between options A and B:</p>
-<p>A: Lottery <span class="math inline">X=(0.5, \$100; 0.5, \$20)</span>. This is a gamble with a 50% chance of winning $100 and a 50% chance of winning $20.</p>
+<p>A: Lottery <span class="math inline">A=(0.5, \$100; 0.5, \$20)</span>. This is a gamble with a 50% chance of winning $100 and a 50% chance of winning $20.</p>
 <p>B: $40 for certain.</p>
 <p>(a) Anika is risk-neutral. Will Anika choose A or B?</p>
 <p>A risk-neutral decision-maker maximises expected value.</p>
@@ -1092,7 +1102,7 @@ W=e^{2\text{ln}2}=4
 \end{align*}</span></p>
 <p>The expected value of option B is $40.</p>
 <p>Anika will choose option A because $60 is greater than $40.</p>
-<p>(b) Anthony is risk averse with wealth $100 and utility function <span class="math inline">U(x)=\text{ln}(X)</span>. Will Anthony choose A or B?</p>
+<p>(b) Anthony is risk averse with wealth $100 and utility function <span class="math inline">U(x)=\text{ln}(x)</span>. Will Anthony choose A or B?</p>
 <p>Anthony will select the option that gives the highest expected utility.</p>
 <p>The expected utility of option A is:</p>
 <p><span class="math display">\begin{align*}
@@ -1588,7 +1598,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox"});</script>
 
 
 

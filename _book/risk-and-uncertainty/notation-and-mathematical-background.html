@@ -646,7 +646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="notation" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="notation"><span class="header-section-number">5.1</span> Notation</h2>
-<p>Before we get into our analysis of decision-making under risk and uncertainty, I will introduce some notation.</p>
+<p>Before analysing decision-making under risk and uncertainty, I will introduce some notation.</p>
 <p>Suppose we have a lottery <span class="math inline">L</span> with <span class="math inline">n</span> possible outcomes <span class="math inline">x_1, x_2, ..., x_n</span> each with probabilities <span class="math inline">p_1, p_2, ..., p_n</span>. A shorthand way to write this is:</p>
 <p><span class="math display">
 L=(p_1,x_1; p_2,x_2; ...; p_n,x_n)
@@ -671,13 +671,12 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 </section>
 <section id="mathematical-background" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="mathematical-background"><span class="header-section-number">5.2</span> Mathematical background</h2>
-<p>In the analysis of expected utility, we will use some basic mathematical concepts. I will briefly review these concepts here.</p>
+<p>We will use some basic mathematical concepts to analyse expected utility. I will briefly review these concepts here.</p>
 <section id="exponentiation" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="exponentiation"><span class="header-section-number">5.2.1</span> Exponentiation</h3>
 <p>Exponentiation is a mathematical operation where a number is multiplied by itself a certain number of times.</p>
 <p>Exponentiation is written as <span class="math inline">f(x)=x^a</span>. That is, <span class="math inline">x</span> is multiplied by itself <span class="math inline">a</span> times. For example, <span class="math inline">2^3=2\times2\times2=8</span>.</p>
-<p>The exponent <span class="math inline">a</span> can be any real number, including fractions and negative numbers. For example, <span class="math inline">2^{1/2}=\sqrt{2}=1.4142</span> and <span class="math inline">2^{-1}=1/2=0.5</span>.</p>
-<p>A plot of the function <span class="math inline">f(x)=x^{0.5}</span> is shown in <a href="#fig-square-root">Figure&nbsp;<span>5.1</span></a>.</p>
+<p>The exponent <span class="math inline">a</span> can be any real number, including fractions and negative numbers. For example, a plot of the function <span class="math inline">f(x)=x^{0.5}</span> is shown in <a href="#fig-square-root">Figure&nbsp;<span>5.1</span></a>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -700,7 +699,7 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <div id="fig-square-root" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;5.1: Square root function</figcaption>
-<p><a href="notation-and-mathematical-background_files/figure-html/fig-square-root-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Square root function"><img src="notation-and-mathematical-background_files/figure-html/fig-square-root-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="notation-and-mathematical-background_files/figure-html/fig-square-root-1.png" class="lightbox" title="Square root function" data-gallery="quarto-lightbox-gallery-1"><img src="notation-and-mathematical-background_files/figure-html/fig-square-root-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -731,7 +730,7 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <div id="fig-exponential-function" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;5.2: The exponential function</figcaption>
-<p><a href="notation-and-mathematical-background_files/figure-html/fig-exponential-function-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The exponential function"><img src="notation-and-mathematical-background_files/figure-html/fig-exponential-function-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="notation-and-mathematical-background_files/figure-html/fig-exponential-function-1.png" class="lightbox" title="The exponential function" data-gallery="quarto-lightbox-gallery-2"><img src="notation-and-mathematical-background_files/figure-html/fig-exponential-function-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -741,7 +740,7 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="the-logarithmic-function"><span class="header-section-number">5.2.3</span> The logarithmic function</h3>
 <p>The logarithmic function is written as <span class="math inline">f(x)=\ln(x)</span> or <span class="math inline">\log_e(x)</span>.</p>
 <p>The logarithmic function is the inverse of the exponential function. That is, if <span class="math inline">f(x)=e^x</span>, then <span class="math inline">x=\ln(f(x))</span>.</p>
-<p>A plot of the exponential function is shown in <a href="#fig-logarithmic-function">Figure&nbsp;<span>5.3</span></a>.</p>
+<p>A plot of the logarithmic function is shown in <a href="#fig-logarithmic-function">Figure&nbsp;<span>5.3</span></a>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -761,7 +760,7 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <div id="fig-logarithmic-function" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;5.3: The logarithmic function</figcaption>
-<p><a href="notation-and-mathematical-background_files/figure-html/fig-logarithmic-function-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The logarithmic function"><img src="notation-and-mathematical-background_files/figure-html/fig-logarithmic-function-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="notation-and-mathematical-background_files/figure-html/fig-logarithmic-function-1.png" class="lightbox" title="The logarithmic function" data-gallery="quarto-lightbox-gallery-3"><img src="notation-and-mathematical-background_files/figure-html/fig-logarithmic-function-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -773,6 +772,9 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <p>Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as <span class="math inline">\frac{d}{dx}f(x)</span> or <span class="math inline">\frac{dy}{dx}</span> or <span class="math inline">f'(x)</span>.</p>
 <p>There are several simple rules to differentiate a function. The rules relevant to these notes are as follows.</p>
 <p>The derivative of a constant is zero.</p>
+<p><span class="math display">
+\frac{d}{dx}c=0
+</span></p>
 <p>The derivative of an exponentiation is:</p>
 <p><span class="math display">
 \frac{d}{dx}x^a=ax^{a-1}
@@ -781,17 +783,12 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <p><span class="math display">
 \frac{d}{dx}x^2=2x
 </span></p>
-<p>You can see from this that for any value of <span class="math inline">x</span> greater than zero, the derivative of <span class="math inline">x^2</span> is greater than zero, signifying that the function <span class="math inline">f(x)=x^2</span> is increasing and has positive slope for <span class="math inline">x&gt;0</span>. For any value of <span class="math inline">x</span> less than zero, the derivative is less than zero, signifying that the function is decreasing and has negative slope.</p>
+<p>You can see from this that for any value of <span class="math inline">x</span> greater than zero, the derivative of <span class="math inline">x^2</span> is greater than zero, signifying that the function <span class="math inline">f(x)=x^2</span> is increasing and has positive slope. For any value of <span class="math inline">x</span> less than zero, the derivative is less than zero, signifying that the function is decreasing and has negative slope.</p>
 <p>As another example:</p>
 <p><span class="math display">
 \frac{d}{dx}x^{0.5}=0.5x^{-0.5}
 </span></p>
-<p>You can see from this that for any value of <span class="math inline">x</span> greater than zero, the derivative of <span class="math inline">x^{0.5}</span> is greater than zero, signifying that the function <span class="math inline">f(x)=x^{0.5}</span> is increasing and has positive slope for <span class="math inline">x&gt;0</span>. The function is not defined for <span class="math inline">x&lt;0</span>. This is shown in <a href="#fig-square-root">Figure&nbsp;<span>5.1</span></a>.</p>
-<p>The derivative of the exponential function is:</p>
-<p><span class="math display">
-\frac{d}{dx}e^x=e^x
-</span></p>
-<p>This derivative is positive for all values of <span class="math inline">x</span>, signifying that the function <span class="math inline">f(x)=e^x</span> is increasing and has positive slope. You can see this in <a href="#fig-exponential-function">Figure&nbsp;<span>5.2</span></a>.</p>
+<p>You can see from this that for any value of <span class="math inline">x</span> greater than zero, the derivative of <span class="math inline">x^{0.5}</span> is greater than zero, signifying that the function <span class="math inline">f(x)=x^{0.5}</span> is increasing and has positive slope. The function is not defined for <span class="math inline">x&lt;0</span>. This is shown in <a href="#fig-square-root">Figure&nbsp;<span>5.1</span></a>.</p>
 <p>The derivative of the logarithmic function is:</p>
 <p><span class="math display">
 \frac{d}{dx}\ln(x)=\frac{1}{x}
@@ -811,17 +808,17 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 </span></p>
 <section id="the-second-derivative" class="level4" data-number="5.2.4.1">
 <h4 data-number="5.2.4.1" class="anchored" data-anchor-id="the-second-derivative"><span class="header-section-number">5.2.4.1</span> The second derivative</h4>
-<p>The second derivative of the function is a measure of the curvature of the function or the rate of change of the slope.</p>
+<p>The second derivative of the function is a measure of the curvature of the function or the rate of change of the slope. We can calculate the second derivative by taking the derivative of the first derivative.</p>
 <p>We can use the second derivative to determine whether a function is concave or convex. A function is concave if the second derivative is negative and convex if the second derivative is positive.</p>
-<p>The second derivative of a function is the derivative of the derivative. It is written as <span class="math inline">\frac{d^2}{dx^2}f(x)</span> or <span class="math inline">\frac{d^2 y}{dx^2}</span> or <span class="math inline">f''(x)</span>.</p>
+<p>The second derivative of a function is written as <span class="math inline">\frac{d^2}{dx^2}f(x)</span> or <span class="math inline">\frac{d^2 y}{dx^2}</span> or <span class="math inline">f''(x)</span>.</p>
 <p>For example, if <span class="math inline">f(x)=x^2</span>, then:</p>
 <p><span class="math display">
-\frac{d^2}{dx^2}f(x)=2
+\frac{d^2}{dx^2}x^2=\frac{d}{dx}2x=2
 </span></p>
 <p>The second derivative is positive (equal to 2) for all values of <span class="math inline">x</span>. This implies that <span class="math inline">f(x)=x^2</span> is increasing at an increasing rate. The function is convex.</p>
 <p>The second derivative of <span class="math inline">x^{0.5}</span> is:</p>
 <p><span class="math display">
-\frac{d^2}{dx^2}x^{0.5}=-0.25x^{-1.5}
+\frac{d^2}{dx^2}x^{0.5}=\frac{d}{dx}0.5x^{-0.5}=-0.25x^{-1.5}
 </span></p>
 <p>The second derivative is negative for all values of <span class="math inline">x</span> for which <span class="math inline">x^{0.5}</span> is defined. This implies that <span class="math inline">x^{0.5}</span> is increasing at a decreasing rate. The function is concave. You can see this in <a href="#fig-square-root">Figure&nbsp;<span>5.1</span></a>.</p>
 <p>The second derivative of the logarithmic function is:</p>
@@ -829,7 +826,7 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 \frac{d^2}{dx^2}\ln(x)=\frac{d}{dx}\frac{1}{x}=-\frac{1}{x^2}
 </span></p>
 <p>This second derivative is negative for all values of <span class="math inline">x</span> for which <span class="math inline">\ln(x)</span> is defined. This implies that <span class="math inline">\ln(x)</span> is increasing at a decreasing rate. The function is concave. You can see this in <a href="#fig-logarithmic-function">Figure&nbsp;<span>5.3</span></a>.</p>
-<p>You will not be asked to differentiate any functions when working through these notes. However, understanding what differentiation is and what it is showing will help you understand the intuition behind the concepts that I discuss. We will use the functions <span class="math inline">f(x)=\ln(x)</span> and <span class="math inline">f(x)=x^{0.5}</span> in future sections.</p>
+<p>When working through these notes, you will not be asked to differentiate any functions. However, understanding what differentiation is and what it shows will help you understand the intuition behind the concepts I discuss. I will use the functions <span class="math inline">f(x)=\ln(x)</span> and <span class="math inline">f(x)=x^{0.5}</span> in future sections.</p>
 
 
 </section>
@@ -1120,7 +1117,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 

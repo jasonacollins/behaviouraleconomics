@@ -108,7 +108,7 @@ B. (1, 2)
 
 C. (1.1, 1)
 
-Their preference ranking will be $C\succ B \succ A$. They prefer $C$ as it has more $x$ than the other two options. As $A$ and $B$ have the same amount of $x$, the agent distinguishes them based on the quantity of $Y$, preferring $B$.
+Their preference ranking will be $C\succ B \succ A$. They prefer $C$ as it has more $x$ than the other two options. As $A$ and $B$ have the same amount of $x$, the agent distinguishes them based on the quantity of $y$, preferring $B$.
 
 This function is not continuous as there is a "jump" whenever there is an increase in $x$, even if $y$ is large. Add an infinitesimal amount $\epsilon$ of $x$ to bundle $A$ and the preference relation between bundle $A$ and bundle $B$ flips.
 
@@ -216,7 +216,7 @@ The idea behind non-satiation is that no matter what you have, there is always a
 
 In this diagram I have plotted an indifference curve. Point $x$ is on the curve. For non-satiation, there will always be a point, such as $y$, that is strictly preferred to $x$.
 
-```{r, warning=FALSE, message=FALSE}
+```{r non-satiation, warning=FALSE, message=FALSE}
 ## Load ggplot2
 library(ggplot2)
 
@@ -258,7 +258,7 @@ Monotonicity implies downward-sloping indifference curves. This is because any i
 
 This can be seen in the following diagram. Point x lies on the indifference curve. Increasing the amount of either good will take you to a higher indifference curve. That is true for all points on that indifference curve.
 
-```{r, warning=FALSE, message=FALSE}
+```{r monotonicity, warning=FALSE, message=FALSE}
 ## Load ggplot2
 library(ggplot2)
 
@@ -304,7 +304,7 @@ $$
 
 This definition is illustrated in the following diagram. The curve represents an indifference curve for different combinations of two goods. There are two bundles, $x$ and $y$. In this case, $x\succcurlyeq y$ (as $x\sim y$). Any weighted combination of $x$ and $y$, which would be on the line between the two, can be seen to be strictly preferred to either $x$ or $y$ as it would be on a higher indifference curve (a curve further from the origin).
 
-```{r}
+```{r convexity}
 library(ggplot2)
 
 # Create a data frame
