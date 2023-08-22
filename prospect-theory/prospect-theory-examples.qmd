@@ -41,9 +41,10 @@ They will not want to play this gamble as it has a negative value for the agent.
 
 The reason for this negative value is that the agent is loss averse. The loss of \$100 is given twice the weight of an equivalent gain.
 
-The following chart illustrates. Note that $V(A)$ is a probability weighted average of the two possible outcomes from the bet, and is projected from the straight line between those two outcomes.
+The following chart illustrates. Note that $V(A)$ is a probability-weighted average of the two possible outcomes from the bet, and is projected from the straight line between those two outcomes.
 
 ```{r}
+#| label: fig-50-50-gamble
 #| fig-cap: A 50:50 gamble
 
 library(ggplot2)
@@ -136,6 +137,7 @@ They will now want to play the gamble as it has a greater value than staying wit
 The choice is illustrated in the following chart.
 
 ```{r}
+#| label: fig-50-50-gamble-after-loss
 #| fig-cap: A 50:50 gamble after a loss
 
 library(ggplot2)
@@ -235,9 +237,10 @@ V(\neg A)&=v(10000) \\[6pt]
 
 The gamble is now attractive. The agent is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.
 
-The following chart illustrates. As we move further into the gain domain, the agent becomes increasingly risk neutral. You can see this through the line becoming approximately straight. As a result, at a high enough wealth the positive value bet becomes attractive
+The following chart illustrates. The agent becomes increasingly risk neutral as we move further into the gain domain. You can see this through the line becoming approximately straight. As a result, at a high enough wealth, the positive value bet becomes attractive
 
 ```{r}
+#| label: fig-50-50-gamble-after-win
 #| fig-cap: A 50:50 gamble after a win (not to scale)
 
 library(ggplot2)
@@ -346,6 +349,7 @@ Paddy rejects the bet as $V(A)$ is less than the $V(0)=0$ that Paddy could get b
 The following figure shows Paddy's value function, the bets and the value of the bets. The figure illustrates that Paddy's rejection is caused by both Paddy's loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.
 
 ```{r}
+#| label: fig-60-40-gamble
 #| fig-cap: A 60:40 gamble
 
 library(ggplot2)
@@ -436,6 +440,7 @@ Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of
 The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain. The potential loss of another $100 results in a smaller incremental loss of value than an equivalent win of $100.
 
 ```{r}
+#| label: fig-60-40-gamble-after-loss
 #| fig-cap: A 60:40 gamble after a loss
 
 library(ggplot2)
@@ -537,7 +542,7 @@ V(\$100)&=100^{0.5} \\
 
 As $V(A) > V(\$100)$, Bill will prefer gamble the \$100 for certain.
 
-\(ii) What features of the value function leads Bill to accept or reject the gamble?
+\(ii) What features of the value function lead Bill to accept or reject the gamble?
 
 Bill rejects the gamble because of the diminishing sensitivity to gains. This leads him to be risk averse and reject the higher expected value option of the gamble.
 
@@ -548,6 +553,7 @@ The following chart shows Bill's choices before the shock, whereby all possible 
 As he is risk averse, the value of the \$100 for certain exceeds the weighted value of the gamble. This can be seen through $v(A)$ being less than $v(\$100)$. Bill will therefore choose the \$100 for certain.
 
 ```{r}
+#| label: fig-bill-gamble
 #| fig-cap: Bill's consideration of gamble A and the \$100
 
 library(ggplot2)
@@ -625,6 +631,7 @@ The following diagram illustrates Bill's decision after the shock. After the los
 Due to the convex curvature of the curve in the loss domain, Bill is risk seeking. As a result, the utility of the gamble is greater than the utility of the certain outcome. This can be seen in $v(L+A)$ being greater than $v(L+100)$.
 
 ```{r}
+#| label: fig-bill-gamble-after-shock
 #| fig-cap: Bill's consideration of gamble A and the \$100 after the shock
 
 library(ggplot2)
@@ -753,6 +760,7 @@ As $V(purchase)<V(don't)$, the agent does not purchase insurance. The diminishin
 Including loss aversion in the value function does not change the decision as all possible outcomes are in the loss domain.
 
 ```{r}
+#| label: fig-reflection-effect-insurance
 #| fig-cap: The reflection effect and insurance
 
 library(ggplot2)

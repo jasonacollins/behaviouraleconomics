@@ -4,13 +4,13 @@ One concept developed to account for anomalies in the exponential discounting mo
 
 Present bias occurs when we place additional weight on costs and benefits at the present time.
 
-## The $\beta\delta$ model
+## The $\beta\delta$ (beta-delta) model
 
 One simple model of present bias is the quasi-hyperbolic discounting model, otherwise known as the $\beta\delta$ model. ^[This model is a discrete-time version of hyperbolic discounting.]
 
-Under the quasi-hyperbolic discounting model, there are two discount factors applied to future costs and benefits.
+Under the quasi-hyperbolic discounting model, two discount factors are applied to future costs and benefits.
 
-The first is $\beta$, the short-term discount factor. All future payoffs are discounted by a single application of $\beta$, a number between 0 and 1. The discount $\beta$ is applied simply because the payoff is not immediate. The higher the short-term discount factor, the less the agent discounts payoffs that are not received now.
+The first is $\beta$ (beta), the short-term discount factor. All future payoffs are discounted by a single application of $\beta$, a number between 0 and 1. The discount $\beta$ is applied simply because the payoff is not immediate. The higher the short-term discount factor, the less the agent discounts payoffs that are not received now.
 
 The second is the discount factor $\delta$ that is also present in the exponential discounting model. Each additional period of delay results in a discount of a future cost or benefit by a factor of $\delta$. The discount factor $\delta$ is also a number between 0 and 1. The higher the discount factor, the less the agent discounts future costs and benefits.
 
@@ -61,9 +61,9 @@ The exponential discounting model is underpinned by many assumptions. These incl
 
 - Stationary preferences, whereby $U_t=U_{t+k}$. The utility function is stationary across periods.
 
-- Utility independence, whereby all that matters is maximizing the sum of discounted utilities. Decision makers are assumed to have no preference for the distribution of utilities.
+- Utility independence, whereby all that matters is maximising the sum of discounted utilities. Decision makers are assumed to have no preference for the distribution of utilities.
 
-Under the $\beta\delta$ model we are loosening the assumption of time consistency. An agent may change their initial plan over time.
+Under the $\beta\delta$ model, we are loosening the assumption of time consistency. An agent may change their initial plan over time.
 
 However, we maintain the assumptions of consumption independence, stationary preferences and utility independence.
 

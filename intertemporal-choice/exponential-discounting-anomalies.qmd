@@ -6,7 +6,7 @@ Empirical investigation of people's choices over time has revealed several anoma
 
 The first anomaly is that estimates of the discount factor $\delta$ are highly variable.
 
-@frederick2002 plotted estimates of 𝛿 from a set of published papers. Figure 1a shows that the estimated discount factor increases with the time horizon. If studies with horizons of one year or less are excluded, there is no relationship between the discount factor and time horizon (Figure 1b).
+@frederick2002 plotted estimates of $\delta$ from a set of published papers. Figure 1a shows that the estimated discount factor increases with the time horizon. If studies with horizons of one year or less are excluded, there is no relationship between the discount factor and time horizon (Figure 1b).
 
 ![](img/Frederick_at_al_2002_Figure_1.jpg)
 
@@ -40,7 +40,7 @@ Some people might select one apple today in the first choice, but no-one would s
 
 ### Healthy choices
 
-We can also see evidence for preference reversal in situations where the choice is between a healthy and unhealthy option.
+We can also see evidence for preference reversal when choosing between a healthy and unhealthy option.
 
 @read1998 asked 200 study participants to choose between healthy or unhealthy snacks that they would receive in one week. For example, for their snack next week, they might choose between a banana, apple, Mars bar or Snickers bar.  48% of men and 51% of women chose the healthy choice.
 

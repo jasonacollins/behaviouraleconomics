@@ -382,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Preference over profiles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Delayed gratification, spread and variation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -579,7 +579,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-betadelta-model" id="toc-the-betadelta-model" class="nav-link active" data-scroll-target="#the-betadelta-model"><span class="header-section-number">25.1</span> The <span class="math inline">\beta\delta</span> model</a></li>
+  <li><a href="#the-betadelta-beta-delta-model" id="toc-the-betadelta-beta-delta-model" class="nav-link active" data-scroll-target="#the-betadelta-beta-delta-model"><span class="header-section-number">25.1</span> The <span class="math inline">\beta\delta</span> (beta-delta) model</a></li>
   <li><a href="#visualising-present-bias" id="toc-visualising-present-bias" class="nav-link" data-scroll-target="#visualising-present-bias"><span class="header-section-number">25.2</span> Visualising present bias</a></li>
   <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions"><span class="header-section-number">25.3</span> Assumptions</a></li>
   </ul>
@@ -607,11 +607,11 @@ ul.task-list li input[type="checkbox"] {
 
 <p>One concept developed to account for anomalies in the exponential discounting model is present bias.</p>
 <p>Present bias occurs when we place additional weight on costs and benefits at the present time.</p>
-<section id="the-betadelta-model" class="level2" data-number="25.1">
-<h2 data-number="25.1" class="anchored" data-anchor-id="the-betadelta-model"><span class="header-section-number">25.1</span> The <span class="math inline">\beta\delta</span> model</h2>
+<section id="the-betadelta-beta-delta-model" class="level2" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="the-betadelta-beta-delta-model"><span class="header-section-number">25.1</span> The <span class="math inline">\beta\delta</span> (beta-delta) model</h2>
 <p>One simple model of present bias is the quasi-hyperbolic discounting model, otherwise known as the <span class="math inline">\beta\delta</span> model. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Under the quasi-hyperbolic discounting model, there are two discount factors applied to future costs and benefits.</p>
-<p>The first is <span class="math inline">\beta</span>, the short-term discount factor. All future payoffs are discounted by a single application of <span class="math inline">\beta</span>, a number between 0 and 1. The discount <span class="math inline">\beta</span> is applied simply because the payoff is not immediate. The higher the short-term discount factor, the less the agent discounts payoffs that are not received now.</p>
+<p>Under the quasi-hyperbolic discounting model, two discount factors are applied to future costs and benefits.</p>
+<p>The first is <span class="math inline">\beta</span> (beta), the short-term discount factor. All future payoffs are discounted by a single application of <span class="math inline">\beta</span>, a number between 0 and 1. The discount <span class="math inline">\beta</span> is applied simply because the payoff is not immediate. The higher the short-term discount factor, the less the agent discounts payoffs that are not received now.</p>
 <p>The second is the discount factor <span class="math inline">\delta</span> that is also present in the exponential discounting model. Each additional period of delay results in a discount of a future cost or benefit by a factor of <span class="math inline">\delta</span>. The discount factor <span class="math inline">\delta</span> is also a number between 0 and 1. The higher the discount factor, the less the agent discounts future costs and benefits.</p>
 <p>As for exponential discounting, an agent with a choice between alternative streams of payoffs under the <span class="math inline">\beta\delta</span> model will seek to maximize the discounted utility of the future path of consumption.</p>
 <p>The following equation provides a mathematical representation of the <span class="math inline">\beta\delta</span> model, with a stream of costs or benefits <span class="math inline">x_0</span> through to <span class="math inline">x_T</span> incurred at periods 0 through to <span class="math inline">T</span>. <span class="math inline">U_0</span> is the discounted utility of the stream of payoffs at time <span class="math inline">t=0</span>. <span class="math inline">x_t</span> is the payoff in period <span class="math inline">t</span>.</p>
@@ -635,21 +635,21 @@ U_0&amp;=u(x_0)+\beta \delta u(x_1)+\beta \delta^2 u(x_2)+ ... + \beta \delta^T 
 <div id="fig-present_bias_1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;25.1: Discount curves 1</figcaption>
-<p><a href="img/discount-curves.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Discount curves 1"><img src="img/discount-curves.png" class="img-fluid figure-img"></a></p>
+<p><a href="img/discount-curves.png" class="lightbox" title="Discount curves 1" data-gallery="quarto-lightbox-gallery-1"><img src="img/discount-curves.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p><a href="#fig-present_bias_2">Figure&nbsp;<span>25.2</span></a> shows the discount curve for present-biased and exponential discounting agents with different parameters. The present-biased agent and exponential discounter have the same discount factor <span class="math inline">\delta=0.75</span>. The present-biased agent also has the short-term discount factor <span class="math inline">\beta=0.75</span>. Again, the present-biased agent discounts the first period of delay more than the exponential discounter.</p>
 <div id="fig-present_bias_2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;25.2: Discount curves 2</figcaption>
-<p><a href="img/discount-curves-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Discount curves 2"><img src="img/discount-curves-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="img/discount-curves-1.png" class="lightbox" title="Discount curves 2" data-gallery="quarto-lightbox-gallery-2"><img src="img/discount-curves-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p><a href="#fig-present_bias_3">Figure&nbsp;<span>25.3</span></a> shows a scenario where the present-biased agent has a higher discount factor <span class="math inline">\delta=0.9</span> than the exponential discounter with <span class="math inline">\delta=0.75</span>. The present-biased agent also has the short-term discount factor <span class="math inline">\beta=0.75</span>. The present-biased agent discounts the first period of delay more than the exponential discounter. However, due to their higher <span class="math inline">\delta</span>, the present-biased agent discounts additional periods of delay less than the exponential discounter and ultimately has a lower total discount for periods further in the future.</p>
 <div id="fig-present_bias_3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <figcaption class="figure-caption">Figure&nbsp;25.3: Discount curves 3</figcaption>
-<p><a href="img/discount-curves-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Discount curves 3"><img src="img/discount-curves-2.png" class="img-fluid figure-img"></a></p>
+<p><a href="img/discount-curves-2.png" class="lightbox" title="Discount curves 3" data-gallery="quarto-lightbox-gallery-3"><img src="img/discount-curves-2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -660,9 +660,9 @@ U_0&amp;=u(x_0)+\beta \delta u(x_1)+\beta \delta^2 u(x_2)+ ... + \beta \delta^T 
 <li><p>Time consistency, whereby once the agent starts moving along the consumption path, they are time-consistent with their initial plan.</p></li>
 <li><p>Consumption independence, whereby utility in period <span class="math inline">t+k</span> is independent of consumption in any other period. An outcome’s utility is unaffected by outcomes in prior or future periods.</p></li>
 <li><p>Stationary preferences, whereby <span class="math inline">U_t=U_{t+k}</span>. The utility function is stationary across periods.</p></li>
-<li><p>Utility independence, whereby all that matters is maximizing the sum of discounted utilities. Decision makers are assumed to have no preference for the distribution of utilities.</p></li>
+<li><p>Utility independence, whereby all that matters is maximising the sum of discounted utilities. Decision makers are assumed to have no preference for the distribution of utilities.</p></li>
 </ul>
-<p>Under the <span class="math inline">\beta\delta</span> model we are loosening the assumption of time consistency. An agent may change their initial plan over time.</p>
+<p>Under the <span class="math inline">\beta\delta</span> model, we are loosening the assumption of time consistency. An agent may change their initial plan over time.</p>
 <p>However, we maintain the assumptions of consumption independence, stationary preferences and utility independence.</p>
 
 
@@ -958,7 +958,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox"});</script>
 
 
 

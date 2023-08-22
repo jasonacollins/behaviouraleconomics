@@ -116,7 +116,7 @@ The discounted utility of the \$10 in five days is:
 \begin{align*}
 U_0(5,\$10)&=\beta\delta^5u(\$10) \\[6pt]
 &=0.75\times 0.9^5\times 10 \\[6pt]
-&=`r pbe2a <- round(0.75*0.9^5*10, 2); pbe2a` \\[6pt]
+&=`r pbe2a <- round(0.75*0.9^5*10, 2); pbe2a`
 \end{align*}
 
 The discounted utility of the \$20 in 10 days is:
@@ -127,7 +127,7 @@ U_0(10,\$20)&=\beta\delta^{10} u(\$20) \\[6pt]
 &=`r pbe2b <- round(0.75*0.9^10*20, 2); pbe2b`
 \end{align*}
 
-As $U_0(5,\$10)=`r pbe2a`>`r pbe2b`=U_0(10,\$0)$, this present-biased agent will prefer to receive \$20 in 10 days.
+As $U_0(5,\$10)=`r pbe2a`<`r pbe2b`=U_0(10,\$20)$, this present-biased agent will prefer to receive \$20 in 10 days.
 
 Five days pass so we are now at $t=5$. We ask the agent if they would like to change their mind.
 

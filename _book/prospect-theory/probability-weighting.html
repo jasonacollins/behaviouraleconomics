@@ -431,7 +431,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Preference over profiles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Delayed gratification, spread and variation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -701,13 +701,13 @@ div.csl-indent {
 <p>People tend to prefer Bet C.</p>
 <p>It can be shown that this pair of preferences, Bet B and Bet C, does not conform with expected utility theory.</p>
 <p>One explanation for this pair of decisions comes from probability weighting. If you look at Bet B, the outcome is certain. Certain events tend to be overweighted relative to near-certain events, such as the 99% chance of $2400 or $2500 in Bet A. An alternative way of thinking about this is that the 1% probability of nothing in Bet A is overweighted.</p>
-<p>Conversely, for the intermediate probabilities in Bet C and Bet D, they are weighted closer to linearly, which can result in the slightly higher expected value Bet C being preferred.</p>
+<p>Conversely, the intermediate probabilities in Bet C and Bet D are weighted closer to linearly, which can result in the slightly higher expected value Bet C being preferred.</p>
 </section>
 <section id="the-decision-weight" class="level2" data-number="17.3">
 <h2 data-number="17.3" class="anchored" data-anchor-id="the-decision-weight"><span class="header-section-number">17.3</span> The decision weight</h2>
 <p>The weighting of probabilities is applied in prospect theory through a decision weight <span class="math inline">\pi(p_i)</span>. The decision weight is a function of the probability of the outcome.</p>
-<p>This decision-weighting function reflects the empirical regularity that people overweight certain events relative to near-certain events and overweight very low probability events.</p>
-<p>An example probability weighting function, of a type proposed by <span class="citation" data-cites="prelec1998">Prelec (<a href="../references.html#ref-prelec1998" role="doc-biblioref">1998</a>)</span>, is as follows:</p>
+<p>This decision-weighting function reflects the empirical regularity that people overweight certain events relative to near-certain events and overweight low-probability events.</p>
+<p>An example probability weighting function of a type proposed by <span class="citation" data-cites="prelec1998">Prelec (<a href="../references.html#ref-prelec1998" role="doc-biblioref">1998</a>)</span> is as follows:</p>
 <p><span class="math display">
 \pi(p)=e^{-(-ln(p))^\alpha}\\[6pt]
 o&lt;\alpha&lt;1
@@ -749,9 +749,10 @@ o&lt;\alpha&lt;1
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-probability-weighting" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="probability-weighting_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="probability-weighting_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;17.1: Probability weighting function</figcaption>
+<p><a href="probability-weighting_files/figure-html/fig-probability-weighting-1.png" class="lightbox" title="Probability weighting function" data-gallery="quarto-lightbox-gallery-2"><img src="probability-weighting_files/figure-html/fig-probability-weighting-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1055,7 +1056,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox","openEffect":"zoom"});</script>
 
 
 

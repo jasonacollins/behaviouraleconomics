@@ -130,7 +130,7 @@ The discounted utility of the \$10 in five days is:
 \begin{align*}
 U_0(5,\$10)&=\delta^5u(\$10) \\
 &=0.95^5\times 10 \\
-&=`r round(0.95^5*10, 2)` \\
+&=`r round(0.95^5*10, 2)`
 \end{align*}
 
 The discounted utility of the \$20 in 10 days is:

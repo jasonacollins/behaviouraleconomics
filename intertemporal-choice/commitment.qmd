@@ -352,3 +352,9 @@ U_0(\text{exercise+massage})&=u(\text{exercise})+u(\text{massage})\\[6pt]
 $U_0(\text{exercise+massage})>U_0(\text{television})$, so Beth now chooses to exercise.
 
 This example is not strictly a commitment device as Beth could cheat. Beth could watch television and get the massage. But people are often good at creating “mental accounts” by which they make certain money or activities out-of-bounds unless certain conditions are met.
+
+### Gym attendance
+
+One empirical illustration of temptation bundling comes from an experiment to increase gym attendance.
+
+@kirgios2020 found that teaching gym-goers how to temptation bundle with a free audiobook boosts gym visits. Simply receiving a free audiobook with no explicit instruction boosts exercise, implying that people who are given audiobooks by gyms can infer they should temptation bundle. However, teaching temptation bundling modestly outperforms simply giving gym-goers free audiobooks.

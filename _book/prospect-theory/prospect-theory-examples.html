@@ -119,13 +119,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 19&nbsp; Prospect theory examples">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/unnamed-chunk-1-1.png">
+<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
 <meta property="og:site-name" content="Notes on behavioural economics">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="Notes on behavioural economics - 19&nbsp; Prospect theory examples">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/unnamed-chunk-1-1.png">
+<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
 <meta name="twitter:image-height" content="960">
 <meta name="twitter:image-width" content="1344">
 <meta name="twitter:card" content="summary_large_image">
@@ -416,7 +416,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Preference over profiles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Delayed gratification, spread and variation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -684,7 +684,7 @@ V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 \end{align*}</span></p>
 <p>They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.</p>
 <p>The reason for this negative value is that the agent is loss averse. The loss of $100 is given twice the weight of an equivalent gain.</p>
-<p>The following chart illustrates. Note that <span class="math inline">V(A)</span> is a probability weighted average of the two possible outcomes from the bet, and is projected from the straight line between those two outcomes.</p>
+<p>The following chart illustrates. Note that <span class="math inline">V(A)</span> is a probability-weighted average of the two possible outcomes from the bet, and is projected from the straight line between those two outcomes.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -749,10 +749,10 @@ V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-50-50-gamble" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">A 50:50 gamble</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A 50:50 gamble"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.1: A 50:50 gamble</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png" class="lightbox" title="A 50:50 gamble" data-gallery="quarto-lightbox-gallery-1"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -847,10 +847,10 @@ V(\neg A)&amp;=v(-100) \\[6pt]
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-50-50-gamble-after-loss" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">A 50:50 gamble after a loss</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="A 50:50 gamble after a loss"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.2: A 50:50 gamble after a loss</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-loss-1.png" class="lightbox" title="A 50:50 gamble after a loss" data-gallery="quarto-lightbox-gallery-2"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-loss-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -878,7 +878,7 @@ V(\neg A)&amp;=v(10000) \\[6pt]
 &amp;=100
 \end{align*}</span></p>
 <p>The gamble is now attractive. The agent is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.</p>
-<p>The following chart illustrates. As we move further into the gain domain, the agent becomes increasingly risk neutral. You can see this through the line becoming approximately straight. As a result, at a high enough wealth the positive value bet becomes attractive</p>
+<p>The following chart illustrates. The agent becomes increasingly risk neutral as we move further into the gain domain. You can see this through the line becoming approximately straight. As a result, at a high enough wealth, the positive value bet becomes attractive</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -949,10 +949,10 @@ V(\neg A)&amp;=v(10000) \\[6pt]
 <span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-50-50-gamble-after-win" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">A 50:50 gamble after a win (not to scale)</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="A 50:50 gamble after a win (not to scale)"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.3: A 50:50 gamble after a win (not to scale)</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-win-1.png" class="lightbox" title="A 50:50 gamble after a win (not to scale)" data-gallery="quarto-lightbox-gallery-3"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-win-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1051,10 +1051,10 @@ V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-60-40-gamble" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">A 60:40 gamble</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="A 60:40 gamble"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.4: A 60:40 gamble</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-60-40-gamble-1.png" class="lightbox" title="A 60:40 gamble" data-gallery="quarto-lightbox-gallery-4"><img src="prospect-theory-examples_files/figure-html/fig-60-40-gamble-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1142,10 +1142,10 @@ V(\text{L})&amp;=v(L) \\[6pt]
 <span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-60-40-gamble-after-loss" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">A 60:40 gamble after a loss</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="A 60:40 gamble after a loss"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.5: A 60:40 gamble after a loss</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-60-40-gamble-after-loss-1.png" class="lightbox" title="A 60:40 gamble after a loss" data-gallery="quarto-lightbox-gallery-5"><img src="prospect-theory-examples_files/figure-html/fig-60-40-gamble-after-loss-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1177,7 +1177,7 @@ V(\$100)&amp;=100^{0.5} \\
 &amp;=10
 \end{align*}</span></p>
 <p>As <span class="math inline">V(A) &gt; V(\$100)</span>, Bill will prefer gamble the $100 for certain.</p>
-<p>(ii) What features of the value function leads Bill to accept or reject the gamble?</p>
+<p>(ii) What features of the value function lead Bill to accept or reject the gamble?</p>
 <p>Bill rejects the gamble because of the diminishing sensitivity to gains. This leads him to be risk averse and reject the higher expected value option of the gamble.</p>
 <p>Loss aversion does not affect his decision as all possible outcomes (at least under our assumed reference point) are in the gain domain. Note that we do not use the value function for <span class="math inline">x&lt;0</span> in determining Bill’s choice.</p>
 <p>The following chart shows Bill’s choices before the shock, whereby all possible outcomes are in the gain domain. The possible outcomes from the gamble are zero and $250. The certain outcome on offer is $100. The expected value of the gamble is $125.</p>
@@ -1250,10 +1250,10 @@ V(\$100)&amp;=100^{0.5} \\
 <span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-bill-gamble" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Bill’s consideration of gamble A and the $100</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Bill’s consideration of gamble A and the $100"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.6: Bill’s consideration of gamble A and the $100</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-bill-gamble-1.png" class="lightbox" title="Bill’s consideration of gamble A and the $100" data-gallery="quarto-lightbox-gallery-6"><img src="prospect-theory-examples_files/figure-html/fig-bill-gamble-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1332,10 +1332,10 @@ V(\$100)&amp;=100^{0.5} \\
 <span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"v(L+A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-bill-gamble-after-shock" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">Bill’s consideration of gamble A and the $100 after the shock</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Bill’s consideration of gamble A and the $100 after the shock"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.7: Bill’s consideration of gamble A and the $100 after the shock</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-bill-gamble-after-shock-1.png" class="lightbox" title="Bill’s consideration of gamble A and the $100 after the shock" data-gallery="quarto-lightbox-gallery-7"><img src="prospect-theory-examples_files/figure-html/fig-bill-gamble-after-shock-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1446,10 +1446,10 @@ V(don't)&amp;=0.999\times (0)+0.001\times v(-1,000,000) \\
 <span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"v(don't)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-reflection-effect-insurance" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<figcaption class="figure-caption">The reflection effect and insurance</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="The reflection effect and insurance"><img src="prospect-theory-examples_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;19.8: The reflection effect and insurance</figcaption>
+<p><a href="prospect-theory-examples_files/figure-html/fig-reflection-effect-insurance-1.png" class="lightbox" title="The reflection effect and insurance" data-gallery="quarto-lightbox-gallery-8"><img src="prospect-theory-examples_files/figure-html/fig-reflection-effect-insurance-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1837,7 +1837,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true,"closeEffect":"zoom"});</script>
 
 
 

@@ -6,11 +6,11 @@ Under prospect theory, people assess the weighted value of a prospect in two pha
 
 Editing involves simplification of prospects for subsequent evaluation.
 
-@kahneman1979 describes the editing phase as having four main operations: coding, combination, segregation and cancellation.
+@kahneman1979 describe the editing phase as having four main operations: coding, combination, segregation and cancellation.
 
--   In the coding phase, prospects are coded as gains or losses relative to a reference point.
+-   In the coding operation, prospects are coded as gains or losses relative to a reference point.
 
--   In the combination phase, prospects are simplified by combining probabilities for identical outcomes. For example, (0.25, 200; 0.25, 200; 0.50, 0) will become (0.50, 200; 0.50, 0).
+-   In the combination operation, prospects are simplified by combining probabilities for identical outcomes. For example, (0.25, 200; 0.25, 200; 0.50, 0) will become (0.50, 200; 0.50, 0).
 
 -   During segregation, riskless components are segregated from risky components. For example (0.80, 300; 0.20, 200) corresponds to a sure gain of 200 and the risky gamble (0.80, 100; 0.20, 0).
 
@@ -18,7 +18,7 @@ Editing involves simplification of prospects for subsequent evaluation.
 
 ## Evaluation
 
-In the evaluation phase, the prospects are evaluated and the option with the highest weighted value is chosen.
+In the evaluation phase, the prospects are evaluated, and the option with the highest weighted value is chosen.
 
 The weighted value of a prospect is made up of:
 
@@ -42,7 +42,7 @@ Prospect theory results in a four-fold pattern of risk attitudes, as shown in th
 |                            | Gains         | Losses        |
 |----------------------------|---------------|---------------|
 | **High probability**       | Risk aversion | Risk seeking  |
-| **Low probability**        | Rick seeking  | Risk aversion |
+| **Low probability**        | Risk seeking  | Risk aversion |
 
 For high-probability gambles, the reflection effect leads to people being people risk averse in the domain of gains and risk seeking in the domain of losses. For the top left quadrant, the low possibility of missing out on the gain is overweighted, making the gamble less attractive and amplifying the risk-averse behaviour. For the top right quadrant, the low probability of avoiding the loss is also overweighted, amplifying the risk-seeking behaviour we see in the domain of losses.
 

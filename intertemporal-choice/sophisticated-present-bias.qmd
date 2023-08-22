@@ -135,7 +135,7 @@ In this example, being naive or sophisticated does not change their final choice
 
 ### Watching a movie
 
-Suppose we have a naive and a sophisticated present-biased agent, each with $\beta=0.5$ and $\delta=1$. They are present-biased, but beyond that present-bias demonstrate no impatience.
+Suppose we have a naive and a sophisticated present-biased agent, each with $\beta=0.5$ and $\delta=1$. They are present-biased, but beyond that present bias demonstrate no impatience.
 
 We offer them the following choice.
 

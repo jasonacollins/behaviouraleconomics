@@ -58,15 +58,15 @@ It can be shown that this pair of preferences, Bet B and Bet C, does not conform
 
 One explanation for this pair of decisions comes from probability weighting. If you look at Bet B, the outcome is certain. Certain events tend to be overweighted relative to near-certain events, such as the 99% chance of \$2400 or \$2500 in Bet A. An alternative way of thinking about this is that the 1% probability of nothing in Bet A is overweighted.
 
-Conversely, for the intermediate probabilities in Bet C and Bet D, they are weighted closer to linearly, which can result in the slightly higher expected value Bet C being preferred.
+Conversely, the intermediate probabilities in Bet C and Bet D are weighted closer to linearly, which can result in the slightly higher expected value Bet C being preferred.
 
 ## The decision weight
 
 The weighting of probabilities is applied in prospect theory through a decision weight $\pi(p_i)$. The decision weight is a function of the probability of the outcome.
 
-This decision-weighting function reflects the empirical regularity that people overweight certain events relative to near-certain events and overweight very low probability events.
+This decision-weighting function reflects the empirical regularity that people overweight certain events relative to near-certain events and overweight low-probability events.
 
-An example probability weighting function, of a type proposed by @prelec1998, is as follows:
+An example probability weighting function of a type proposed by @prelec1998 is as follows:
 
 $$
 \pi(p)=e^{-(-ln(p))^\alpha}\\[6pt]
@@ -76,6 +76,9 @@ $$
 This function, with $\alpha=0.6$, is plotted below.
 
 ```{r}
+#| label: fig-probability-weighting
+#| fig-cap: Probability weighting function
+
 #Plot of probability weighting function using ggplot2
 library(ggplot2)
 
