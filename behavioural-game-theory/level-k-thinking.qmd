@@ -56,7 +56,7 @@ And so on.
 
 The following charts come from @nagel1995, with $p=1/2$ and $p=2/3$. The charts show the distribution of chosen numbers in the p-beauty contest.
 
-In the chart with $p=2/3$, you can see spikes at 22.2 and 33.3, suggesting players are playing at level-2 and level-1 respectively. This matches with other experimental evidence on the p-beauty game, where there are few level-0 players. Most are level-1, level-2 and level-3.
+The chart with $p=2/3$ spikes at 22.2 and 33.3, suggesting players are playing at level-2 and level-1, respectively. This matches with other experimental evidence on the p-beauty game, with few level-0 players. Most are level-1, level-2 and level-3.
 
 ::: {#fig-nagel1 layout-ncol="2"}
 ![$p=1/2$](img/nagel-1995-12.jpg)
@@ -128,7 +128,7 @@ Player A calculates their best response to a level-1 player B. A level-1 player 
 
 Although we know a level-2 player B will shirk as as shirk is their dominant strategy, we can show this by considering their best response to a level-1 player A. A level-1 player A always plays shirk. Player B's best response to shirk is to shirk. The level-2 player B shirks.
 
-At a certain level of thinking, the players will discover the Nash equilibrium. Here they have discovered it at level-2 thinking. For any higher level of thinking, they will remain at the Nash equilibrium. That is, if players endowed with level $k=\bar k$ rationality play Nash, all players with $k>\bar k$ play Nash.
+At a certain level of thinking, the players will discover the Nash equilibrium. Here, they have discovered it at level-2 thinking. For any higher level of thinking, they will remain at the Nash equilibrium. That is, if players endowed with level $k=\bar k$ rationality play Nash, all players with $k>\bar k$ play Nash.
 
 | Level-k | Player A | Player B |
 |---------|----------|----------|
@@ -156,7 +156,7 @@ What do people do when playing the centipede game in the lab?
 
 People tend to pass until a few stages before the end (depending on the length of the centipede) and then take. They do not play the Nash equilibrium strategy.
 
-Can level-k thinking provide an insight into this behaviour?
+Can level-k thinking provide insight into this behaviour?
 
 Suppose a level-0 player passes until the end. They are possibly lucky if they are player 1 playing against another level-0 player.
 
@@ -182,8 +182,6 @@ The expected payoffs for each combination of actions are as follows, with the pa
 
 ![](img/army.png){width=80%}
 
-a\) Are there any pure-strategy Nash equilibria? If so, what are they?
-
 We determine the pure-strategy Nash equilibria by considering the best response of each player to each of the other player's strategies.
 
 If the South defends Hobart, North can choose Hobart for a payoff of -1 or Launceston for a payoff of 4. Launceston is the best response.
@@ -198,7 +196,7 @@ There is no pure-strategy Nash equilibrium. For any combination of choices, one 
 
 ![](img/army-2.png){width=80%}
 
-b\) Suppose the commanders of the North and South are level-k thinkers.
+Suppose the commanders of the North and South are level-k thinkers.
 
 If they were level-0, both would choose Hobart or Launceston with equal probability.
 
@@ -224,7 +222,7 @@ U_S(\text{Launceston})=0.5\times 4+0.5\times 0=2
 
 South is indifferent between defending Hobart and Launceston. They can choose either.
 
-c\) What would each player do if they were a level-2 thinker?
+What would each player do if they were a level-2 thinker?
 
 A level-2 thinker assumes that the other player is a level-1 thinker. Each level-2 thinker plays the optimal strategy on this assumption.
 

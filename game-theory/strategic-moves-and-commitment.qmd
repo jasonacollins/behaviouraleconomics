@@ -34,7 +34,7 @@ Strategic moves come in two forms:
 
 - And conditional strategic moves, which we call threats and promises
 
-## Unconditional strategic moves
+### Unconditional strategic moves
 
 An unconditional strategic move is a commitment.  For example, removing your steering wheel in chicken is a commitment.
 
@@ -44,7 +44,7 @@ If your opponent cannot observe your commitment, you can claim to have made the 
 
 If your commitment is reversible, the game remains as if you had never made it.
 
-## Conditional strategic moves
+### Conditional strategic moves
 
 A conditional strategic move involves specifying to your opponent how you will respond to each move.
 
@@ -52,7 +52,7 @@ A threat involves specifying negative consequences to the other player if they d
 
 A promise involves specifying positive consequences to the other player if they do play as you wish. “If you clean your room, you can have dessert.”
 
-## Credibility of strategic moves
+### Credibility of strategic moves
 
 Commitments, threats and promises only achieve their objective if they are credible. That is, they only work if the other player believes they will be carried out as stated.
 

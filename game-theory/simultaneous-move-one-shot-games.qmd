@@ -4,7 +4,7 @@ In a simultaneous-move one-shot game, you make decisions without knowing the act
 
 ## The normal form
 
-We usually write simultaneous move one-shot games in what is called the “strategic” or “normal” form. In this form, all of the monetary or non-monetary outcomes are represented in a matrix. 
+We usually write simultaneous move one-shot games in the “strategic” or “normal” form. In this form, all of the monetary or non-monetary outcomes are represented in a matrix. 
 
 I will now illustrate the normal form of the game with a game called the prisoner's dilemma.
 
@@ -64,7 +64,7 @@ Another important concept is the Nash equilibrium.
 
 A set of strategies is a Nash equilibrium if every player is playing a best response to their rivals’ strategies. No one has an incentive to change strategy.
 
-A Nash equilibrium is self-enforcing and stable. If the players agree to play a certain way, they’ll both go through with it. Unilateral deviations are not worthwhile.
+A Nash equilibrium is self-enforcing and stable. If the players agree to play a certain way, they’ll both do it. Unilateral deviations are not worthwhile.
 
 The prisoner's dilemma has a single Nash equilibrium: (Confess, Confess). Visually, where the preferred response of both players to the other player's action falls within the same cell, this indicates a Nash equilibrium.
 
@@ -169,7 +169,7 @@ graph TD
 
 In Nash equilibrium in the public goods game, nobody transfers anything to the pot. Any contributions are split between all players, so if there are more players than the multiple, which is normally the case by design, contributions result in a loss to that individual player.
 
-Consider the previous game, but this time Player E contributes nothing. There is then \$20 in the pot, which is doubled to $40. The pot is then split equally between the players, with each player receiving $8 from the pot. The result is that Player E is better off having not contributed, ending with \$18, compared to the \$15 they would have received had they contributed \$5 like the other players.
+Consider the previous game, but this time Player E contributes nothing. There is then \$20 in the pot, which is doubled to $40. The pot is then split equally between the players, each receiving $8 from the pot. The result is that Player E is better off having not contributed, ending with \$18, compared to the \$15 they would have received had they contributed \$5 like the other players.
 
 ```{mermaid}
 %%| fig-width: 5
@@ -201,7 +201,7 @@ graph TD
 
 ```
 
-The Pareto optimal result, however, is for all players to contribute their full endowment and each receives back their multiplied contribution. The Pareto optimal result is not stable, however, as each player has an incentive to defect and contribute nothing.
+The Pareto optimal result, however, is for all players to contribute their full endowment and each receives back their multiplied contribution. However, the Pareto optimal result is not stable, as each player has an incentive to defect and contribute nothing.
 
 ```{mermaid}
 %%| fig-width: 5

@@ -151,7 +151,7 @@ P(\text{Ace 2nd}|\text{Ace 1st})&=\frac{P(\text{Ace 1st}\cap\text{Ace 2nd})}{P(\
 ```
 ### The Monty Hall problem
 
-Consider the following problem as answered by Maryln vos Savant in her column Ask Marilyn in Parade magazine [@vossavant1990]:
+Consider the following problem as answered by Marilyn vos Savant in her column Ask Marilyn in Parade magazine [@vossavant1990]:
 
 > Suppose you're on a game show and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
 

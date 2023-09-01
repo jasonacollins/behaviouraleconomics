@@ -614,7 +614,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>If a fund manager is skilled, the probability that they outperform the market is 80%.</p></li>
 <li><p>If a fund manager is unskilled, the probability that they outperform the market is 40%.</p></li>
 </ul>
-<p>a) You observe an outperforming fund manager. What is the probability that the fund manager is skilled?</p>
+<p>You observe an outperforming fund manager. What is the probability that the fund manager is skilled?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -647,7 +647,12 @@ P(\text{skilled}|\text{outperform})&amp;=\frac{P(\text{outperform}|\text{skilled
 </div>
 </div>
 </div>
-<p>b) A person calculates the probability that the fund manager is skilled by putting the same probability on all possible hypotheses (a uniform prior). What do they believe is the probability that the fund manager is skilled?</p>
+</section>
+<section id="detecting-a-terrorist" class="level2" data-number="38.2">
+<h2 data-number="38.2" class="anchored" data-anchor-id="detecting-a-terrorist"><span class="header-section-number">38.2</span> Detecting a terrorist</h2>
+<p>Every month 100 million people fly on commercial airlines. Imagine 10 of them are terrorists.</p>
+<p>Airport security are able to correctly identify that a person is a terrorist in 99% of cases and a non-terrorist in 99.9% of cases.</p>
+<p>a) A person is identified by airport security as a terrorist. Using Bayes’ rule, what is the probability that they are a terrorist?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -659,35 +664,6 @@ Answer
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>We use Bayes’ Theorem but with uniform priors.</p>
-<p><span class="math display">\begin{align*}
-P(\text{skilled}|\text{outperform})&amp;=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
-&amp;=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{\begin{aligned}P(&amp;\text{outperform}|\text{skilled})P(\text{skilled})\\&amp;+P(\text{outperform}|\text{unskilled})P(\text{unskilled})\end{aligned}} \\[6pt]
-&amp;=\frac{0.8\times 0.5}{0.8\times 0.5+0.4\times 0.5} \\[6pt]
-&amp;=0.667
-\end{align*}</span></p>
-<p>Starting with uniform priors – effectively ignoring the base rate – gives us a higher probability of 67%.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="detecting-a-terrorist" class="level2" data-number="38.2">
-<h2 data-number="38.2" class="anchored" data-anchor-id="detecting-a-terrorist"><span class="header-section-number">38.2</span> Detecting a terrorist</h2>
-<p>Every month 100 million people fly on commercial airlines. Imagine 10 of them are terrorists.</p>
-<p>Airport security are able to correctly identify that a person is a terrorist in 99% of cases and a non-terrorist in 99.9% of cases.</p>
-<p>a) A person is identified by airport security as a terrorist. Using Bayes’ rule, what is the probability that they are a terrorist?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We can use Bayes’ Theorem to calculate the conditional probability:</p>
 <p><span class="math display">
@@ -701,10 +677,24 @@ P(\text{terrorist | identified}) &amp;= \dfrac{P(\text{identified | terrorist})P
 </div>
 </div>
 </div>
-<p>b) Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to:</p>
-<ol type="i">
-<li>confusion of conditional probabilities</li>
-</ol>
+<p>b) Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to confusion of conditional probabilities.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If a person confuses <span class="math inline">P(\text{terrorist | identified})</span> with <span class="math inline">P(\text{identified | terrorist})</span> they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g.&nbsp;identification of cabs problem discussed in class.</p>
+</div>
+</div>
+</div>
+<p>c) State and solve the question in part a) in terms of natural frequencies.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -716,50 +706,6 @@ Answer
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>If a person confuses <span class="math inline">P(\text{terrorist | identified})</span> with <span class="math inline">P(\text{identified | terrorist})</span> they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g.&nbsp;identification of cabs problem discussed in class.</p>
-</div>
-</div>
-</div>
-<ol start="2" type="i">
-<li>people placing the same probability on all possible hypotheses (uniform priors).</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>If a person assumed uniform priors on any individual, they would calculate Bayes’ Theorem as follows:</p>
-<p><span class="math display">
-\begin{aligned}
-P(\text{terrorist | identified}) &amp;= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
-&amp;= \dfrac{0.99*0.5}{0.99*0.5+0.001*0.5} \\[12 pt]
-&amp;= 0.999
-\end{aligned}
-</span></p>
-<p>This is substantially higher than the actual probability.</p>
-</div>
-</div>
-</div>
-<p>c) State and solve the question in part a) in terms of natural frequencies.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Number of passengers: 100,000,000</p>
 <p>Number of terrorists: 10</p>
@@ -780,7 +726,7 @@ Answer
 <p>You pull one die out of your pocket and roll it. You did not check which die it was before you rolled. (Assume you could have pulled either die out of your pocket with equal probability.)</p>
 <p>a) The die shows a six. What is the probability that it is the loaded die?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -789,7 +735,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <span class="math display">\begin{align*}
 P(\text{D1 loaded}|6)&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[6pt]
@@ -803,7 +749,7 @@ P(\text{D1 loaded}|6)&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)}
 </div>
 <p>b) You pull the other die out of your pocket and roll it. It shows a 5. What is the updated probability that the first die is the loaded die?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -812,7 +758,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <span class="math display">\begin{align*}
 P(\text{D2 fair}|5)&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6pt]
@@ -830,7 +776,7 @@ P(\text{D2 fair}|5)&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6p
 <p>These two related questions come from magazine columnist Marilyn vos Savant.</p>
 <p>a) A shopkeeper says she has two new baby beagles to show you, but she doesn’t know whether they’re male, female, or a pair. You tell her that you want only a male, and she telephones the fellow who’s giving them a bath. “Is at least one a male?” she asks him. “Yes!” she informs you with a smile. What is the probability that the other one is a male?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -839,7 +785,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The prior probabilities are:</p>
 <span class="math display">\begin{align*}
@@ -860,7 +806,7 @@ P(MM|M)&amp;=\frac{P(M|MM)P(MM)}{P(M)} \\[6pt]
 </div>
 <p>b) Say that a woman and a man (who are unrelated) each have two children. We know that at least one of the woman’s children is a boy and that the man’s oldest child is a boy. Can you explain why the chances that the woman has two boys do not equal the chances that the man has two boys?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -869,7 +815,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For the woman, the prior probabilities before learning she has a boy are:</p>
 <span class="math display">\begin{align*}
@@ -1032,7 +978,7 @@ P(BB|B)&amp;=\frac{P(B|BB)P(BB)}{P(B)} \\[12pt]
 </table>
 <p>a) You have been waiting 5 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1041,7 +987,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\begin{align*}
 P(\text{false}|\text{not arrived after 5})&amp;=\frac{P(\text{not arrived after 5}|\text{false})P(\text{false})}{P(\text{not arrived after 5})} \\[12pt]
@@ -1055,7 +1001,7 @@ P(\text{false}|\text{not arrived after 5})&amp;=\frac{P(\text{not arrived after 
 </div>
 <p>b) You have been waiting 9 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1064,7 +1010,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\begin{align*}
 P(\text{false}|\text{not arrived after 9})&amp;=\frac{P(\text{not arrived after 9}|\text{false})P(\text{false})}{P(\text{not arrived after 9})} \\[12pt]
@@ -1078,7 +1024,7 @@ P(\text{false}|\text{not arrived after 9})&amp;=\frac{P(\text{not arrived after 
 </div>
 <p>c) You have been waiting 10 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1087,7 +1033,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\begin{align*}
 P(\text{false}|\text{not arrived after 10})&amp;=\frac{P(\text{not arrived after 10}|\text{false})P(\text{false})}{P(\text{not arrived after 10})} \\[12pt]
@@ -1110,7 +1056,7 @@ P(\text{SIDS death}\land\text{SIDS death})&amp;=P(\text{SIDS death})\times P(\te
 &amp;=\frac{1}{7.3\times 10^{7}}
 \end{align*}</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1119,7 +1065,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Reason 1: The probability of a 2nd SIDS death given first SIDS death is not independent. e.g.&nbsp;SIDS deaths are related due to genetics, family environment. That is, the relevant probability is:</p>
 <p><span class="math display">
@@ -1152,7 +1098,7 @@ P(\text{murder}|{2\text{ deaths}})=\frac{P(2\text{ deaths}|\text{murder})P(\text
 </ul>
 <p>a) Your alarm goes off. What is the probability that your house is on fire?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1161,7 +1107,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <span class="math display">\begin{align*}
 P(\text{fire}|\text{alarm})&amp;=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[12pt]
@@ -1175,7 +1121,7 @@ P(\text{fire}|\text{alarm})&amp;=\frac{P(\text{alarm}|\text{fire})P(\text{fire})
 </div>
 <p>b) Many people given this problem estimate the probability of the house being on fire as close to 95%. Provide one possible explanation for this error.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1184,7 +1130,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>People often confuse P(A|B) with P(B|A). In this case, such confusion would lead them to conclude that P(fire|alarm)=P(alarm|fire)=95%. You might also think of this as anchoring on the 95% and insufficiently adjusting from there.</p>
 <p>Alternatively, people sometimes act as though they have assumed uniform priors: e.g.&nbsp;50:50 as to whether a fire or not.</p>
@@ -1200,7 +1146,7 @@ P(\text{fire}|\text{alarm})&amp;=\frac{P(\text{alarm}|\text{fire})P(\text{fire})
 </div>
 <p>c) Express and solve this problem using natural frequencies.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1209,7 +1155,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Your house will catch fire on 100 out of 1,000,000 days. (You could choose any base number of days - I chose 1 million as gives round numbers for the following items.)</p></li>
@@ -1237,7 +1183,7 @@ P(\text{fire}|\text{alarm})&amp;=\frac{95}{95+10000} \\[12pt]
 <p>Consider the model we used to examine behaviour involving a belief in the law of small numbers whereby the decision maker acts as though the process has the character of balls being drawn out of an urn without replacement. Lincoln develops his beliefs using this model with <span class="math inline">N = 12</span>.</p>
 <p>a) Lincoln thinks Neville is mediocre. What does Lincoln believe is the probability that Neville beats the market in the first quarter?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1246,7 +1192,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Lincoln thinks the realisation of Neville’s performance is like drawing from an urn with <span class="math inline">N=12</span> balls. Because he believes Neville is mediocre, he thinks half (6) of the balls are good-performance balls and half (6) are bad-performance balls. The likelihood of drawing a good ball (<span class="math inline">G</span>) the first quarter is <span class="math inline">6/12</span>.</p>
 <p><span class="math display">\begin{align*}
@@ -1259,7 +1205,7 @@ Answer
 </div>
 <p>b) Neville beats the market in the first quarter. What does Lincoln believe is the probability he does it again in the second quarter?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1268,7 +1214,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In Lincoln’s mind, the balls are not replaced once drawn. If Neville has a good first quarter, Lincoln believes that only five good balls remain. Therefore, Lincoln believes that the probability of Neville having a good second quarter is <span class="math inline">5/11</span>.</p>
 <p><span class="math display">\begin{align*}
@@ -1280,7 +1226,7 @@ Answer
 </div>
 <p>c) Neville beats the market again. What does Lincoln believe is the probability that he will do so in the third quarter?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1289,7 +1235,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>After two good quarters, Lincoln believes only four good balls remain. Therefore, the probability of Neville having another good quarter is <span class="math inline">4/10</span>.</p>
 <p><span class="math display">\begin{align*}
@@ -1301,7 +1247,7 @@ Answer
 </div>
 <p>d) Lincoln observes Jill, who he believes is a skilled fund manager. What does Lincoln believe is the probability of her having 10 consecutive periods of out-performance?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1310,7 +1256,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Lincoln believes that in 12 quarters Jill will have nine quarters of out-performance. As a result, he does not believe it is possible for her to have ten consecutive periods of out-performance. After nine periods, only three balls are left in the urn. None of those balls are good.</p>
 <p><span class="math display">\begin{align*}
@@ -1323,7 +1269,7 @@ Answer
 </div>
 <p>e) What psychological bias does Lincoln’s behaviour reflect? Explain.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1332,7 +1278,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Each time Neville has a good quarter, Lincoln thinks it is less likely that Neville will have another. This is an example of gambler’s fallacy. Lincoln thinks that Neville’s sequence of pxerformances should be the typical sequence of a mediocre fund manager, with the same number of good and bad quarters. This leads Lincoln to expect bad quarters to be more likely after a sequence of good quarters.</p>
 <p>Similarly for Jill, Lincoln expects a string of success to correct itself and her record to revert to the average for a skilled manager.</p>
@@ -1348,7 +1294,7 @@ Answer
 <p>Subjects were shown brief personality descriptions of several individuals, allegedly sampled at random from a group of 100 professionals-engineers and lawyers. The subjects were askcd to assess, for each description, the probability that it belonged to an engineer rather than to a lawyer. In one experimental condition, subjects were told that the group from which the descriptions had been drawn consisted of 70 engineers and 30 lawyers. In another condition, subjects were told that the group consisted of 30 engineers and 70 lawyers. The odds that any particular description belongs to an engineer rather than to a lawyer should be higher in the first condition, where there is a majority of engineers, than in the second condition, where there is a majority of lawyers. Specifically, it can be shown by applying Bayes’ rule that the ratio of these odds should be (<span class="math inline">.7/.3^2</span>), or 5.44, for each description. In a sharp violation of Bayes’ rule, the subjects in the two conditions produced essentially the same probability judgments.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1357,7 +1303,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:</p>
 <blockquote class="blockquote">
@@ -1372,7 +1318,7 @@ Answer
 <p>Suppose one samples a word (of three letters or more) at random from an English text. Is it more likely that the word starts with r or that r is the third letter? … [M]ost people judge words that begin with a given consonant to be more numerous than words in which the same consonant appears in the third position. They do so even for consonants, such as r or k, that are more frequent in the third position than in the first.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1381,7 +1327,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This behaviour might be explained by availability. Tverksy and Kahneman (1974) write:</p>
 <blockquote class="blockquote">
@@ -1400,7 +1346,7 @@ Answer
 <p>The median estimate for the ascending sequence was 512, while the median estimate for the descending sequence was 2,250. The correct answer is 40,320.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1409,7 +1355,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This behaviour might be explained by anchoring and adjustment. Tverksy and Kahneman (1974) write:</p>
 <blockquote class="blockquote">
@@ -1423,7 +1369,7 @@ Answer
 <p>In considering tosses of a coin for heads or tails … people regard the sequence H-T-H-T-T-H to be more likely than the sequence H-H-H-T-T-T … [or] … the sequence H-H-H-H-T-H.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1432,7 +1378,7 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:</p>
 <blockquote class="blockquote">
@@ -1447,6 +1393,42 @@ Answer
 <p>Consider the following three statements. Suppose that each statement is an instance of overconfidence. For each statement name and define the form of overconfidence that provides the best explanation for the students’ beliefs.</p>
 <p>a) 90% of students believe they will score above the class average in the final exam.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Overplacement.</p>
+<p>Overplacement is the erroneous relative judgement that we are better than others.</p>
+</div>
+</div>
+</div>
+<p>b) 90% of students believe they will receive a high distinction.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Overestimation.</p>
+<p>Overestimation is the belief that we can perform at a level beyond that which we realistically can.</p>
+</div>
+</div>
+</div>
+<p>c) Arthur believes with 90% probability that he will score between 74% and 76% in the final exam.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1457,42 +1439,6 @@ Answer
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-27" class="callout-27-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Overplacement.</p>
-<p>Overplacement is the erroneous relative judgement that we are better than others.</p>
-</div>
-</div>
-</div>
-<p>b) 90% of students believe they will receive a high distinction.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Overestimation.</p>
-<p>Overestimation is the belief that we can perform at a level beyond that which we realistically can.</p>
-</div>
-</div>
-</div>
-<p>c) Arthur believes with 90% probability that he will score between 74% and 76% in the final exam.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Overprecision.</p>
 <p>Overprecision is the tendency to believe that our predictions or estimates are more accurate than they actually are.</p>
@@ -1535,7 +1481,7 @@ Answer
 </table>
 <p>What heuristic could lead to this pattern of overestimation and underestimation? Why?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1544,11 +1490,11 @@ Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The most overestimated events tend to be vivid events that are often the subject of news. The most underestimated are much less vivid and likely receive less coverage.</p>
 <p>This pattern could be driven by the availability heuristic. When using the availability heuristic, people judge the frequency of events by the ease with which instances of those events come to mind.</p>
-<p>When asked to estimate the frequency of vivid events regularly in the news, instances of those events will easily come to mind. The availability heuristic will lead these events to be judged more frequent.</p>
+<p>When asked to estimate the frequency of vivid events often in the news, instances of those events will easily come to mind. The availability heuristic will lead these events to be judged more probable.</p>
 <p>Conversely, people will find it harder to call to mind those events which are less vivid and newsworthy, leading them to judge those events as being less frequent.</p>
 </div>
 </div>

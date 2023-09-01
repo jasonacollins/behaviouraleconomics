@@ -13,7 +13,7 @@ You want to know if a fund manager is skilled as you believe skilled management 
 
 -   If a fund manager is unskilled, the probability that they outperform the market is 40%.
 
-a\) You observe an outperforming fund manager. What is the probability that the fund manager is skilled?
+You observe an outperforming fund manager. What is the probability that the fund manager is skilled?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -47,23 +47,6 @@ P(\text{skilled}|\text{outperform})&=\frac{P(\text{outperform}|\text{skilled})P(
 A fund manager who outperforms is skilled with `r PSO` probability. You cannot neglect that low base rate of skilled managers.
 :::
 
-b\) A person calculates the probability that the fund manager is skilled by putting the same probability on all possible hypotheses (a uniform prior). What do they believe is the probability that the fund manager is skilled?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-We use Bayes’ Theorem but with uniform priors.
-
-\begin{align*}
-P(\text{skilled}|\text{outperform})&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
-&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{\begin{aligned}P(&\text{outperform}|\text{skilled})P(\text{skilled})\\&+P(\text{outperform}|\text{unskilled})P(\text{unskilled})\end{aligned}} \\[6pt]
-&=\frac{0.8\times 0.5}{0.8\times 0.5+0.4\times 0.5} \\[6pt]
-&=`r round((0.8*0.5)/(0.8*0.5+0.4*0.5), 3)`
-\end{align*}
-
-Starting with uniform priors – effectively ignoring the base rate – gives us a higher probability of 67%.
-:::
-
 ## Detecting a terrorist
 
 Every month 100 million people fly on commercial airlines. Imagine 10 of them are terrorists.
@@ -88,32 +71,12 @@ $$
 Or approximately 1 in 10,000.
 :::
 
-b\) Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to:
-
-i) confusion of conditional probabilities
+b\) Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to confusion of conditional probabilities.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
 
 If a person confuses $P(\text{terrorist | identified})$ with $P(\text{identified | terrorist})$ they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g. identification of cabs problem discussed in class.
-:::
-
-ii) people placing the same probability on all possible hypotheses (uniform priors).
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-If a person assumed uniform priors on any individual, they would calculate Bayes' Theorem as follows:
-
-$$
-\begin{aligned}
-P(\text{terrorist | identified}) &= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
-&= \dfrac{0.99*0.5}{0.99*0.5+0.001*0.5} \\[12 pt]
-&= 0.999
-\end{aligned}
-$$
-
-This is substantially higher than the actual probability.
 :::
 
 c\) State and solve the question in part a) in terms of natural frequencies.
@@ -656,7 +619,7 @@ The most overestimated events tend to be vivid events that are often the subject
 
 This pattern could be driven by the availability heuristic. When using the availability heuristic, people judge the frequency of events by the ease with which instances of those events come to mind.
 
-When asked to estimate the frequency of vivid events regularly in the news, instances of those events will easily come to mind. The availability heuristic will lead these events to be judged more frequent.
+When asked to estimate the frequency of vivid events often in the news, instances of those events will easily come to mind. The availability heuristic will lead these events to be judged more probable.
 
 Conversely, people will find it harder to call to mind those events which are less vivid and newsworthy, leading them to judge those events as being less frequent.
 :::

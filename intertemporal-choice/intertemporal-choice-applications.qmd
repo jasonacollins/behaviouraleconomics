@@ -2,7 +2,7 @@
 
 In this part, I discuss several applications of the intertemporal choice concepts we have covered.
 
-## Savings 1
+## Savings
 
 The first example relates to the use of commitment devices to increase savings.
 
@@ -14,7 +14,7 @@ This extract from Table 3 in the paper shows the proportion of funds allocated t
 
 You can see that where the interest rates between the liquid and illiquid accounts were equal, the accounts with harsher constraints attracted more money. The account with a higher withdrawal penalty (20% compared to 10%) attracted more money, and the account that barred withdrawals attracted even more.
 
-This result suggests a demand among sophisticated, present-based agents for products that will enable them to control their future behaviours.
+This result suggests a demand among sophisticated, present-biased agents for products that will enable them to control their future behaviours.
 
 This behaviour has also been observed outside the lab.
 
@@ -52,7 +52,7 @@ Green countries have an opt-out policy known as presumed consent. Citizens are p
 
 This outcome is a classic example of a default effect. Defaults are sticky. The stickiness of defaults is typically assumed to come from loss aversion or present bias.
 
-Present bias might influence the decision as follows. There is an immediate cost of changing from the default, be that time, effort or money). That cost is not discounted. In contrast, the future benefit of their action is discounted.
+Present bias might influence the decision as follows. There is an immediate cost of changing from the default, be that time, effort or money. That cost is not discounted. In contrast, the future benefit of their action is discounted.
 
 If you asked these people about their future plans, they might say they intend to change their organ donation registration. In the hypothetical, both the costs and benefits and in the future. They believe they will switch later.
 
@@ -68,11 +68,13 @@ One alternative is using defaults more transparently with easy opt out. For exam
 
 Another alternative is "active choice", where citizens are required to indicate whether or not they wish to be registered. This choice could also be built into a form such as a driver's licence application or renewal.
 
+![](img/organ-donation-choice.png)
+
 ## Save More Tomorrow
 
 The next example of intertemporal choice relates to retirement savings.
 
-The Save More Tomorrow program designed by @thaler2004 combines prospect theory and time preference principles to increase retirement savings.
+The Save More Tomorrow program, designed by @thaler2004, combines prospect theory and time preference principles to increase retirement savings.
 
 Under Save More Tomorrow, customers are asked to commit in advance to allocating a fraction of their future salary increases toward their retirement savings accounts.
 
@@ -82,7 +84,7 @@ The program capitalises on participants' propensity to stick with the status quo
 
 That ability to opt out also reduces regret and disappointment aversion.
 
-The first tests of the Save More Tomorrow program by @thaler2004 resulted in 78 per cent of those offered the plan joining, 80% of those remaining in the plan through the fourth pay rise, and average savings rates increasing from 3.5% to 13.6% over 40 months. This compares to much lower savings rates by those who declined advice, accepted a recommended savings rate or took advice but declined to enrol in Save More Tomorrow.
+The first tests of the Save More Tomorrow program by @thaler2004 resulted in 78 per cent of those offered the plan joining, 80 per cent of those remaining in the plan through the fourth pay rise, and average savings rates increasing from 3.5 per cent to 13.6 per cent over 40 months. This compares to much lower savings rates by those who declined advice, accepted a recommended savings rate or took advice but declined to enrol in Save More Tomorrow.
 
 @fig-smart illustrates the results. Along the horizontal axis are the four groups: those who declined to enrol in the program, those who declined to receive advice, those who accepted a recommended savings rate, and those who accepted the Save More Tomorrow program. The vertical axis shows the percentage of income saved at each of five measurement points; before they received advice and after the following four raises.
 
@@ -130,17 +132,21 @@ Note the savings rate is higher than the default rate in Australia. Could the de
 
 Another applied example of how we can use intertemporal choice in an applied setting concerns ANZ bank's progress saver account.
 
-[ANZ bank's progress saver account](https://www.anz.com.au/personal/bank-accounts/savings-accounts/progress-saver/) pays bonus monthly bonus interest on the condition that a customer deposits at least \$10 into the account and makes no withdrawals. The bonus interest was 3.74% per year at the time of writing. If you fail to make the minimum deposit or withdraw from the account, you are paid a nominal interest rate of 0.01% per year on your savings for the month.
+[ANZ bank's progress saver account](https://www.anz.com.au/personal/bank-accounts/savings-accounts/progress-saver/) pays bonus monthly interest on the condition that a customer deposits at least \$10 into the account and makes no withdrawals. The bonus interest was 3.74% per year at the time of writing. If you fail to make the minimum deposit or withdraw from the account, you are paid a nominal interest rate of 0.01% per year on your savings for the month.
+
+![](img/anz-progress-saver.png)
 
 Many account holders do not receive bonus interest each month. Most notably, while they often make deposits, they later withdraw funds, leading to the loss of the bonus interest.
 
 This behaviour may be evidence of a preference reversal due to present bias. Today, the customer may have a preference for saving money for a long-term goal rather than short-term spending at a closer date. But when that opportunity for spending arrives, they prefer withdrawing from the account and spending the money now. That spending is no longer subject to the short-term discount factor $\beta$, whereas the long-term savings goal and any interest toward achieving it are.
 
-For example, suppose a customer is deciding whether to save money for their house deposit far in the future or spend the money on a new pair of shoes when they go shopping next week. Both are in the future and subject to a short-term discount factor. In that circumstance, saving for the deposit might be preferred. However, when the shopping day comes the shoes could be bought **now**. The shoes are not subject to the short-term discount factor and may give higher discounted utility than the long-term savings goal. The customer then withdraws the funds for the shoes, having changed their mind.
+For example, suppose a customer is deciding whether to save money for their house deposit far in the future or spend the money on a new pair of shoes when they go shopping next week. Both are in the future and are subject to a short-term discount factor. In that circumstance, saving for the deposit might be preferred. However, when the shopping day comes, the shoes can be bought **now**. The shoes are not subject to the short-term discount factor and may give higher discounted utility than the long-term savings goal. The customer then withdraws the funds for the shoes, having changed their mind.
 
-The behaviour could also note could be for rational reasons, such as a change in circumstances.
+The behaviour could also be for rational reasons, such as a change in circumstances.
 
 The bank has another product, a term deposit savings account, that pays, at the time of writing, 0.15% interest if you commit your money for 12 months. Many customers still use the term deposit despite paying much lower interest than the progress saver account and constraining access to funds.
+
+![](img/anz-term-deposit.png)
 
 Why do people use this apparently sub-optimal product?
 

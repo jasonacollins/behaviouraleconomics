@@ -94,7 +94,7 @@ However, in experiments, dictators tend to give a positive sum of money. The fol
 ::: {#fig-dictator layout-ncol="2"}
 ![Mean per treatment](img/engel-2011-fig-1.jpg){#fig-engel1}
 
-![Individual give rates](img/engel-2011-fig-1.jpg){#fig-engel2}
+![Individual give rates](img/engel-2011-fig-2.jpg){#fig-engel2}
 
 Distribution of amount given in the dictator game [@engel2011].
 :::

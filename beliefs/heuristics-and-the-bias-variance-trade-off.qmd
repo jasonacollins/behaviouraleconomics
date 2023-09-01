@@ -1,6 +1,6 @@
 # Heuristics and the bias-variance trade-off
 
-Much of the heuristics and biases literature of Kahneman, Tversky and those who followed in their footsteps focuses on the errors that can be caused by the use of heuristics. However, there are also powerful reasons why we use heuristics in decision making.
+Much of the heuristics and biases literature of Kahneman, Tversky and those who followed in their footsteps focuses on the errors that can be caused by using heuristics. However, there are also powerful reasons why we use heuristics in decision making.
 
 One of the strongest arguments for the use of heuristics relates to what is called the bias-variance trade-off.
 
@@ -24,7 +24,7 @@ However, as the term bias-variance trade-off suggests, you typically can't choos
 
 The result of this bias-variance trade-off means that heuristics can sometimes be better than more complex decision making strategies. This is not just because they are tractable for the human mind - unlike, say prospect theory calculations or Bayesian updating - but also because they find a better bias-variance trade-off. Despite our focus on how heuristics can cause biases decisions, they can also lead to lower error.
 
-### Simple heuristics
+## Simple heuristics
 
 In a chapter in Simple Heuristics That Make Us Smart, @czerlinski1999 describe a competition between some simple heuristics and multiple regression. Both were used to predict outcomes across 20 environments, such as school dropout rates and fish fertility.
 

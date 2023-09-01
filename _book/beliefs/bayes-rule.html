@@ -683,13 +683,13 @@ P(\text{rigged}|\text{head})&amp;=\frac{P(\text{head}|\text{rigged})P(\text{rigg
 <span class="math display">\begin{align*}
 P(\text{10 heads})&amp;=P(\text{10 heads}|\text{rigged})P(\text{rigged})+P(\text{10 heads}|\text{fair})P(\text{fair}) \\[6pt]
 &amp;=1\times \frac{4}{5}+\bigg(\frac{1}{2}\bigg)^{10}\times \frac{1}{5} \\[6pt]
-&amp;=0.8001953
+&amp;=0.8002
 \end{align*}</span>
 <p>Putting this into Bayes’ rule:</p>
 <span class="math display">\begin{align*}
 P(\text{rigged}|\text{10 heads})&amp;=\frac{P(\text{10 heads}|\text{rigged})P(\text{rigged})}{P(\text{10 heads})} \\[12pt]
-&amp;=\frac{1\times \frac{4}{5}}{0.8001953} \\[12pt]
-&amp;=0.9997559
+&amp;=\frac{1\times \frac{4}{5}}{0.8002} \\[12pt]
+&amp;=0.99976
 \end{align*}</span>
 <p>We now believe the coin is rigged with greater than 99.9% probability.</p>
 </section>
@@ -801,7 +801,7 @@ P(\text{D2 fair}|5)&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6p
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Technically we want <span class="math inline">P(C2|D3\cap X1)</span> where X1 is our selection of Door 1. However, adding this complication to the calculation does not change the answer.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Technically, we want <span class="math inline">P(C2|D3\cap X1)</span> where <span class="math inline">X1</span> is our selection of Door 1. However, adding this complication to the calculation does not change the answer.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

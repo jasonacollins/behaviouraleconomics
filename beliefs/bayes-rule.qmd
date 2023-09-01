@@ -138,7 +138,7 @@ The total probability of flipping 10 heads is:
 \begin{align*}
 P(\text{10 heads})&=P(\text{10 heads}|\text{rigged})P(\text{rigged})+P(\text{10 heads}|\text{fair})P(\text{fair}) \\[6pt]
 &=1\times \frac{4}{5}+\bigg(\frac{1}{2}\bigg)^{10}\times \frac{1}{5} \\[6pt]
-&=`r heads<-1*4/5+(1/2)^10*1/5; heads`
+&=`r heads<-1*4/5+(1/2)^10*1/5; round(heads, 4)`
 \end{align*}
 ```
 
@@ -147,8 +147,8 @@ Putting this into Bayes' rule:
 ```{=tex}
 \begin{align*}
 P(\text{rigged}|\text{10 heads})&=\frac{P(\text{10 heads}|\text{rigged})P(\text{rigged})}{P(\text{10 heads})} \\[12pt]
-&=\frac{1\times \frac{4}{5}}{`r heads`} \\[12pt]
-&=`r (1*4/5)/(1*4/5+0.5^10*1/5)`
+&=\frac{1\times \frac{4}{5}}{`r round(heads, 4)`} \\[12pt]
+&=`r round((1*4/5)/(1*4/5+0.5^10*1/5),5)`
 \end{align*}
 ```
 
@@ -231,7 +231,7 @@ Assume that the rules of this game show are that:
 
 -   The host must always offer you the choice to switch between the chosen door and the remaining closed door.
 
-We want to know the probability that the car is behind Door 2 given the host opened Door 3. We want to know $P(C2|D3)$. ^[Technically we want $P(C2|D3\cap X1)$ where X1 is our selection of Door 1. However, adding this complication to the calculation does not change the answer.]
+We want to know the probability that the car is behind Door 2 given the host opened Door 3. We want to know $P(C2|D3)$. ^[Technically, we want $P(C2|D3\cap X1)$ where $X1$ is our selection of Door 1. However, adding this complication to the calculation does not change the answer.]
 
 To determine this using Bayes' rule, we would use the following formula:
 

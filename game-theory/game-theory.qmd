@@ -36,7 +36,7 @@ There are many different types of games analysed in game theory. Some of the del
 
 First, games are often divided into cooperative and non-cooperative games.
 
-In non-cooperative games, players are not allowed to negotiate binding contracts. In cooperative games, players are allowed to negotiate binding contracts that allow them to implement joint strategies.
+In non-cooperative games, players are not allowed to negotiate binding contracts. In cooperative games, players can negotiate binding contracts that allow them to implement joint strategies.
 
 In these notes, I will focus on non-cooperative games.
 
@@ -46,6 +46,5 @@ Second, games can involve simultaneous or sequential moves.
 
 In a simultaneous move game, you make decisions without knowing the action of your rival.
 
-In sequential games, players make sequential decisions knowing the action of the other player.
-
+In sequential games, players make sequential decisions knowing the other player's action.
 We will examine both of these types of game in these notes.

@@ -6,7 +6,7 @@ I will now explore two examples where we relax this assumption and allow the par
 
 ## The market for lemons {#sec-market-for-lemons}
 
-This example draws on the work of @akerlof1970
+This example draws on the work of @akerlof1970.
 
 An agent decides to buy a used car. Price $p$ is fixed and quality is unobservable.
 
@@ -26,7 +26,9 @@ Let $\mu$ be the probability that a car that is sold is good. If sellers are wil
 
 Therefore, the expected value of a car to a buyer is:
 
-$E=\mu 15000+(1−\mu)7500=7500+7500\mu$
+$$
+E=\mu 15000+(1−\mu)7500=7500+7500\mu
+$$
 
 Hence, the buyer will be willing to pay up to $p=7500+7500\mu$.
 
@@ -88,7 +90,7 @@ Common-value auctions contrast with private-value auctions in which bidders have
 
 The winner's curse is a phenomenon in common value auctions whereby the winner tends to experience a loss.
 
-The term was invented by petroleum engineers in discussing why oil companies in the Gulf of Mexico had poor results in the 1950s through 1970s. Oil companies in the Gulf acquired drilling rights through auctions. Their rights tended to lead to losses or less in profits than expected. In hindsight, the winning bids were unreasonably high.
+Petroleum engineers invented the term in discussing why oil companies in the Gulf of Mexico had poor results in the 1950s through 1970s. Oil companies in the Gulf acquired drilling rights through auctions. Their rights tended to lead to losses or less in profits than expected. In hindsight, the winning bids were unreasonably high.
 
 The winner's curse is widely documented in experimental settings and has been observed in corporate environments.
 
@@ -164,4 +166,4 @@ Alternatively, we may say that winning the auction is bad news regarding the val
 
 Because of the winner's curse, the Nash equilibrium is to bid more conservatively.
 
-The mistake that oil companies make is to ignore or underestimate the winner's curse. If an oil company wins an auction, it's likely in part because its geologists have the highest estimates of the field's value. But if all other geologists have lower estimates of the value, the company's geologists have probably overestimated it.
+The mistake that oil companies make is ignoring or underestimating the winner's curse. If an oil company wins an auction, it's likely because its geologists have the highest estimates of the field's value. But if all other geologists have lower estimates of the value, the company's geologists have probably overestimated it.

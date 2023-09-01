@@ -85,7 +85,7 @@ $$
 
 That is, company 1 expects to make a profit if they receive a private valaution of more than \$50.
 
-However, as shown in @sec-winners-curse, this bidding approach leads to, on average, a loss. Company 1 under-appreciates that company 2 is more likely not to bid when company 2’s information is bad. Therefore, company 1 under-appreciate the extent to which winning the auction is bad news.
+However, as shown in @sec-winners-curse, this bidding approach leads to, on average, a loss. Company 1 under-appreciates that company 2 is more likely not to bid when company 2’s information is bad. Therefore, company 1 under-appreciates the extent to which winning the auction is bad news.
 
 ## Example
 
@@ -101,7 +101,7 @@ Company A is considering what price per share they should offer. This offer must
 
 a\) Show that for any offer above zero Company A expects to lose money.
 
-If Company A offers $\$x$, Company T will accept $x$\% of the time, whenever the firm is worth between \$0 and $\$x$. Since all of those values are equally likely, the firm will be worth on average $\$x/2$ to company T when they accept. The shares will therefore be worth $1.5\times x/2=3x/4$ on average for company A. That gives Company A profit of:
+If Company A offers $\$x$, Company T will accept $x$\% of the time, whenever the firm is worth between \$0 and $\$x$. Since all those values are equally likely, the firm will be worth on average $\$x/2$ to company T when they accept. The shares will therefore be worth $1.5\times x/2=3x/4$ on average for company A. That gives Company A profit of:
 
 \begin{align*}
 \pi_A&=\frac{3x}{4}-x \\[6pt]
@@ -110,7 +110,7 @@ If Company A offers $\$x$, Company T will accept $x$\% of the time, whenever the
 
 Any offer above \$0 generates a negative expected return, a loss of 25% of the offer.
 
-To give an example, if Company A offered \$60 it will be accepted 60% of the time - whenever the firm is worth between \$0 and \$60 for company T. Since all those values are equally likely, the firm will be worth on average \$30 to company T when they accept, meaning it will be worth \$45 on average for company A. A \$60 offer will result in an average loss of \$15.
+To give an example, if Company A offered \$60, it will be accepted 60% of the time - whenever the firm is worth between \$0 and \$60 for company T. Since all those values are equally likely, the firm will be worth on average \$30 to company T when they accept, meaning it will be worth \$45 on average for company A. A \$60 offer will result in an average loss of \$15.
 
 b\) People given this problem tend to bid between \$50 and \$75 per share. A typical explanation offered by these people is that the average outcome for Company T is \$50, making the value for Company A \$75. Any offer in the range between these two values would be agreeable to both parties.
 

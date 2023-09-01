@@ -106,13 +106,13 @@ Below is the extensive form of the ultimatum game with $m=\$10$ and an assumptio
 
 ![](img/ultimatum-game-1.jpg)
 
-If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is where the offer is $0$, but they still might.
+If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is where the offer is 0, but they still might.
 
-Given this, the proposer will offer $\$0$ or $\$1$ only.
+Given this, the proposer will offer \$0 or \$1 only.
 
 ![](img/ultimatum-game-2.png)
 
-We can say that there are two subgame perfect Nash equilibria. The first is for the proposer to offer $\$1$ and the responder to accept if offered \$1 and reject if offered \$0. The other (weak) subgame perfect Nash equilibrium is an offer of \$0 and acceptance.
+We can say that there are two subgame perfect Nash equilibria. The first is for the proposer to offer \$1 and the responder to accept if offered \$1 and reject if offered \$0. The other (weak) subgame perfect Nash equilibrium is an offer of \$0 and acceptance.
 
 More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If the players have monotonic preferences - that is, more is better - the responder accepts any $x>0$ (and possibly even if $x=0$) and the the proposer offers the smallest amount the proposer can offer.
 
@@ -142,7 +142,6 @@ graph LR
     style D stroke:#FFF
     style E stroke:#FFF
 ```
-
 
 The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff $m$ (which is bolded).
 
@@ -248,7 +247,7 @@ graph LR
 
 If both receivers have utility function $u(x)=x$ the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.
 
-We can see this by backward induction. The receiver can either return $y$ for a payoff of $10+3x-y$ or return $0$ for a payoff of $10+3x$. The receiver will return $0$.
+We can see this by backward induction. The receiver can either return $y$ for a payoff of $10+3x-y$ or return 0 for a payoff of $10+3x$. The receiver will return 0.
 
 One way to think about this problem is that the receiver is effectively playing a dictator game.
 

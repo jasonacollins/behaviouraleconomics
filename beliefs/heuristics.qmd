@@ -66,7 +66,7 @@ Payoffs for accuracy did not reduce the effect of the anchor.
 
 You are shopping for a used car. You see a car you like and ask the salesperson how much it costs.
 
-She says "one hundred thousand dollars". You know this number is too high and after some negotiation purchase the car for $20,000. You feel pleased with your negotiation skills.
+She says "one hundred thousand dollars". You know this number is too high, and after some negotiation, purchase the car for $20,000. You feel pleased with your negotiation skills.
 
 You later see a similar car for sale for $15,000.
 
@@ -86,13 +86,13 @@ You see a person who drives a luxury car and wears designer clothes. You decide 
 
 a\) What heuristic could lead to this belief?
 
-This belief could be caused by the representativeness heuristic.
+The representativeness heuristic could cause this belief.
 
 Under the representativeness heuristic, people evaluate probabilities by the degree to which $A$ is representative of (similar to) $B$.
 
 In this case, a person driving a luxury car and wearing designer clothes is highly representative of a wealthy person. You place a high probability on them being wealthy.
 
-b\) Explain how the use of this heuristic would differ from the use of Bayes' rule in this situation.
+b\) Explain how using this heuristic would differ from using Bayes' rule in this situation.
 
 Under Bayes' rule, the probability that someone is wealthy is a function of:
 
@@ -102,5 +102,5 @@ Under Bayes' rule, the probability that someone is wealthy is a function of:
 
 They take that prior probability and update it based on the evidence they have observed.
 
-Bayes' rule differs from that under the representativeness heuristic in that it takes into account the base rate of the population. What proportion of people are wealthy? The representativeness heuristic does not. The representativeness heuristic is largely based on the probability that a wealthy person will drive a luxury car and wear designer clothes relative to a non-wealthy person - that is, how representative clothing and cars are of wealth.
+Bayes' rule differs from that under the representativeness heuristic in that it considers the population's base rate. What proportion of people are wealthy? The representativeness heuristic does not. The representativeness heuristic is largely based on the probability that a wealthy person will drive a luxury car and wear designer clothes relative to a non-wealthy person - that is, how representative clothing and cars are of wealth.
 
