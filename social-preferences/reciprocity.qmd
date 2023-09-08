@@ -98,7 +98,7 @@ graph LR
 
 In the first scenario, responders reject offers of \$2. In the second, they accept them. How can (\$8, \$2) be better than (\$0, \$0) in one scenario but not in the other?
 
-Rejection in this case cannot be explained by distributional concerns. An offer of (\$8, \$2) leads to the same distribution in both scenarios.
+Distributional concerns cannot explain rejection in this case. An offer of (\$8, \$2) leads to the same distribution in both scenarios.
 
 Instead, responders do not base their decision on the outcome alone. They use their knowledge of the proposer's options, consider the proposer's intentions and reciprocate them.
 
@@ -114,7 +114,7 @@ Both the sender and receiver are given an initial sum $m$.
 
 The sender sends a share $x$ of their $m$ to the receiver. This amount $x$ is often called the investment.
 
-Before the investment is received by the receiver, it is multiplied by some factor $k$. Therefore, the receiver receives $kx$.
+Before the receiver receives the investment, it is multiplied by some factor $k$. Therefore, the receiver receives $kx$.
 
 The receiver then returns to the sender some share $y$ of their total allocation $m+kx$.
 
@@ -155,12 +155,12 @@ These two figures from @johnson2011 illustrate the distribution of investments a
 ::: {#fig-trust layout-ncol="2"}
 ![Sent](img/johnson-and-mislin-2011-fig-1a.jpg){#fig-johnson1a}
 
-![Returned](img/johnson-and-mislin-2011-fig-1a.jpg){#fig-johnson1b}
+![Returned](img/johnson-and-mislin-2011-fig-1b.jpg){#fig-johnson1b}
 
 Distribution of proportion sent and proportion returned [@johnson2011].
 :::
 
-One possible explanations for this behaviour is that the receiver feels that they should reciprocate the sender's investment. They are responding to the sender's intentions. The sender trusts that due to reciprocation some of their investment will be repaid.
+One possible explanation for this behaviour is that the receiver feels they should reciprocate the sender's investment. They are responding to the sender's intentions. The sender trusts that some of their investment will be repaid due to reciprocation.
 
 The receiver's behaviour is also consistent with altruism and inequality aversion.
 
@@ -168,11 +168,11 @@ The receiver's behaviour is also consistent with altruism and inequality aversio
 
 As a final example of reciprocity, consider the public goods game.
 
-In this game, each of N participants is given an initial endowment.
+Each of $N$ participants is given an initial endowment.
 
 Each participant secretly and simultaneously chooses how much of their endowment they wish to contribute to a public pot.
 
-The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than one, but less than the number of players.
+The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than one but less than the number of players.
 
 ```{mermaid}
 %%| fig-width: 5

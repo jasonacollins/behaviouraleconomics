@@ -4,13 +4,13 @@ Distributional preferences are preferences that relate to the relative amount of
 
 It is often easy to incorporate distributional preferences into economic analysis as they are a natural extension of how economists think about individuals' preferences. We can extend to other people the typical assumption that a person cares about their own material outcomes.
 
-We will examine two types of distributional preferences, altruism and inequality aversion.
+We will examine two types of distributional preferences: altruism and inequality aversion.
 
 ## Altruism
 
 Altruism is concern for the outcomes of others.
 
-To incorporate altruism, we simply need to provide a positive weight to the utility of others in the utility function. An example utility function might be:
+To incorporate altruism, we give a positive weight to the utility of others in the utility function. An example utility function might be:
 
 $$
 U_i(x_i,x_j)=x_i+\alpha x_j
@@ -20,19 +20,19 @@ where $U_i$ is the utility of agent $i$, $x_i$ the outcome for agent $i$ and $x_
 
 Altruism might have different drivers.
 
-For example, the agent might exhibit pure altruism, where the agent has a genuine concern for others' wellbeing.
+For example, the agent might exhibit pure altruism, with genuine concern for others' wellbeing.
 
 Alternatively, the agent might exhibit impure altruism. They experience a "warm glow" about doing good without actually caring about the other's wellbeing.
 
 Altruism, however, is insufficient to explain some experimental results, such as those in the ultimatum game. While it could predict non-zero offers by the proposer, it does not predict the rejection of any offers by the responder. Rejection harms both the responder and the proposer.
 
-The proposer could only reject if a negative weight was applied to either their own or the proposer's outcome.
+The proposer could only reject if a negative weight were applied to either their own or the proposer's outcome.
 
 ## Inequality aversion
 
 An alternative distributional preference model that may explain some of these results is inequality aversion.
 
-The idea behind inequality aversion is that people may dislike having less than other people and dislike having more than other people.
+The idea behind inequality aversion is that people may dislike having less than others and dislike having more than others.
 
 ### The Fehr-Schmidt model
 
@@ -79,7 +79,7 @@ $$
 x_P=x_R=0
 $$
 
-If the responder accepts, the responder receives $x$ and the proposer keeps the remainder. That is:
+If the responder accepts, the responder receives $x$, and the proposer keeps the remainder. That is:
 
 \begin{align*}
 x_P&=10−x \\[6pt]
@@ -106,7 +106,7 @@ x−\beta(2x−10)>0
 \end{align*}
 ```
 
-This will always hold for any $\beta<1$ as $x>5$ and $5\geq 2x-10>0$. Therefore the condition will hold for the agent with $\beta=0.5$. Recall that if $\beta<1$ the responder has higher utility from a higher payoff but at a decreasing rate when they have more than the proposer. In this case, if $\beta<1$ the responder will always accept offers greater than \$5.
+This will always hold for any $\beta<1$ as $x>5$ and $5\geq 2x-10>0$. Therefore, the condition will hold for the agent with $\beta=0.5$. Recall that if $\beta<1$ the responder has higher utility from a higher payoff but at a decreasing rate when they have more than the proposer. In this case, if $\beta<1$ the responder will always accept offers greater than \$5.
 
 If the offer is less than \$5, the $\beta$ term is multiplied by zero and the inequality becomes:
 
@@ -165,7 +165,7 @@ $$
 
 Where $x_i$ is the payoff to player $i$ and $x_j$ is the payoff to the other player.
 
-$\rho$ and $\sigma$ capture the agent's attitudes toward others. When the agent is ahead the other player's welfare enters their utility via $\rho$. When the agent is behind the other player's welfare enters agent's utility via $\sigma$. For most people $\rho>\sigma$. They give more weight to others' utility when they are better off. $\sigma$ can also be less than zero. If they are behind someone they place negative weight on further gains by that person.
+$\rho$ and $\sigma$ capture the agent's attitudes toward others. When the agent is ahead the other player's welfare enters their utility via $\rho$. When the agent is behind the other player's welfare enters agent's utility via $\sigma$. For most people $\rho>\sigma$. They give more weight to others' utility when they are better off. $\sigma$ can also be less than zero. If they are behind someone, they place negative weight on further gains by that person.
 
 This utility function is equivalent to that of @fehr1999. You can rearrange the terms to show that $\beta=\rho$ and $\alpha=-\sigma$. However, expressing the utility function in this way allows us to consider distributional preferences other than inequality aversion in a more intuitive way.
 
@@ -173,7 +173,7 @@ This utility function is equivalent to that of @fehr1999. You can rearrange the 
 
 Consider the following example of the dictator game. In the dictator game, the dictator makes a unilateral offer to the receiver. The game then ends. The receiver has an empty strategy set.
 
-In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where $(x_D,x_R)$ represent the payoffs for the dictator and receiver respectively. The dictator's $\sigma=−1/2$. As the dictator has less than the other player under each distribution, $\sigma$ is the relevant parameter.
+In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where $(x_D,x_R)$ represent the payoffs for the dictator and receiver, respectively. The dictator's $\sigma=−1/2$. As the dictator has less than the other player under each distribution, $\sigma$ is the relevant parameter.
 
 ```{mermaid}
 %%| fig-width: 4
@@ -192,7 +192,7 @@ graph LR
     style E stroke:#FFF
 ```
 
-The calculate the dictator's utility of each allocation.
+We can calculate the dictator's utility of each allocation.
 
 ```{=tex}
 \begin{align*}
@@ -205,7 +205,7 @@ U(1,5)&=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 \end{align*}
 ```
 
-The dictator prefers to allocate (0,1), even though it is worse for them, because it is also worse for the other player.
+The dictator prefers to allocate (0,1), even though it is worse for them because it is also worse for the other player.
 
 $\sigma<0$ can also account for the rejection of low offers in the ultimatum game.
 
@@ -231,7 +231,7 @@ We could develop similar forms of preferences by adjusting the values of $\alpha
 
 In the exercises in @sec-investment, I considered whether Linda should invest in Marco's startup:
 
-> Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by an Marco. Marco is looking for seed funding.
+> Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by Marco. Marco is looking for seed funding.
 >
 > Linda can invest \$10.
 >

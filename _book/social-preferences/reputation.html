@@ -624,12 +624,12 @@ div.csl-indent {
 
 <p>People care about what other people think. They fear the social stigma that can result from “selfish” behaviour.</p>
 <p>Partly, this is for strategic reasons. For example, to attract reciprocal behaviour, people may need to be aware of your intentions.</p>
-<p>However, there is also evidence that people simply care about what other people think.</p>
+<p>However, there is also evidence that people care about what other people think.</p>
 <section id="example" class="level2" data-number="49.1">
 <h2 data-number="49.1" class="anchored" data-anchor-id="example"><span class="header-section-number">49.1</span> Example</h2>
 <p>One example of this comes from <span class="citation" data-cites="andreoni2009">Andreoni and Bernheim (<a href="../references.html#ref-andreoni2009" role="doc-biblioref">2009</a>)</span>, who ran a non-anonymous dictator game.</p>
 <p>Each dictator was endowed with $20.</p>
-<p>A computer then chose a distribution between the dictator and the receiver, selecting either ($0, $20) or ($20, $0) with equal probability. The dictator observes the allocation chosen by the computer, but the receiver does not.</p>
+<p>A computer then chose a distribution between the dictator and the receiver, selecting either ($0, $20) or ($20, $0) with equal probability. The dictator observes the computer’s allocation, but the receiver does not.</p>
 <p>The computer’s allocation is then implemented with a probability <span class="math inline">p</span>. Otherwise, the dictator’s allocation is made. This probability is known to both the dictator and the receiver.</p>
 <p>If the dictator’s choice is to be implemented, the dictator makes a split of the $20, offering <span class="math inline">x</span> to the receiver. The receiver learns only the allocation. They do not learn the dictator’s choice.</p>
 <div class="cell">
@@ -648,16 +648,16 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Distributional preferences predict that <span class="math inline">p</span> should not affect the dictator’s choice. The dictator should just think about the situation in which their choice matters.</p>
+<p>Distributional preferences predict that <span class="math inline">p</span> should not affect the dictator’s choice. The dictator should only think about the situation in which their choice matters.</p>
 <p>However, the experimental results did not conform with this prediction. Dictators condition their decision on the common knowledge of <span class="math inline">p</span>.</p>
-<p>This chart shows how offers change with <span class="math inline">p</span> in circumstances the computer will offer 0 if selected. The x-axis shows <span class="math inline">p</span> equal to 0, 0.25, 0.5 and 0.75. Each line represents a different bucket of offers. The red line is the proportion of dictators offering 0. The blue line represents the proportion of participants offering $10, a 50:50 split.</p>
+<p>This chart shows how offers change with (p) when the computer’s offer of 0 if selected. The x-axis shows <span class="math inline">p</span> equal to 0, 0.25, 0.5 and 0.75. Each line represents a different bucket of offers. The red line is the proportion of dictators offering 0. The blue line represents the proportion of participants offering $10, a 50:50 split.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/andreoni-and-bernheim-2009-fig-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/andreoni-and-bernheim-2009-fig-3.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>For <span class="math inline">p</span> of 0.5 or 0.75 and a computer allocation of 0 to the receiver, most dictators will offer 0. If the receiver receives a low allocation, the receiver will likely infer it is due to the computer’s decision. They will not blame the dictator.</p>
-<p>For <span class="math inline">p</span> of 0 and a computer allocation of 0 to the receiver, the majority of dictators will offer $10 to the receiver. In this case, if the receiver receives a low allocation, the receiver will infer it is due to the dictator’s decision, not that of the computer.</p>
+<p>For <span class="math inline">p</span> of 0 and a computer allocation of 0 to the receiver, more than half of dictators will offer $10 to the receiver. In this case, if the receiver receives a low allocation, the receiver will infer it is due to the dictator’s decision, not the computer’s.</p>
 <p>For a <span class="math inline">p</span> of 0.25, a slim majority of participants offer zero, with some plausible deniability due to the 25% probability of the offer coming from the computer.</p>
 <p>These results suggest the dictator cares about their reputation in the eyes of the receiver.</p>
 
@@ -953,7 +953,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
 
 
 
