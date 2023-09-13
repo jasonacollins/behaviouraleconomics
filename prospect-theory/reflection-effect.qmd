@@ -91,7 +91,7 @@ ggplot(mapping = aes(x, y)) +
   theme_minimal()
 ```
 
-In the gain domain, the function is convex, indicating risk aversion. In the loss domain, the concave function indicates risk-seeking behaviour.
+In the gain domain, the function is concave, indicating risk aversion. In the loss domain, the convex function indicates risk-seeking behaviour.
 
 ## An example
 
