@@ -1,5 +1,5 @@
 # Decision making under risk and uncertainty
 
-In this part I examine the basic economic approach to decision making under risk and uncertainty.
+In this part, I examine the basic economic approach to decision making under risk and uncertainty.
 
-I introduce the basic axioms on which the economic approach is based, discuss expected utility theory, and provide a set of empirical anomalies in expected utility theory that provide grounds for the behavioural economic approach.
+I introduce the mathematical concepts on which our analysis is built, describe the concept of expected value, define the axioms that underpin our discussion of risk and uncertainty, and discuss expected utility theory. I then describe a set of empirical anomalies in expected utility theory that provide grounds for the behavioural economic approach.

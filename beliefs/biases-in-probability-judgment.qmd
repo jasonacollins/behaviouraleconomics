@@ -118,7 +118,7 @@ The correct answer is as follows:
 \begin{align*}
 P(\text{blue}|\text{claim blue})&=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{P(\text{claim blue})} \\[12pt]
 &=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{\Bigg(\begin{aligned}P(&\text{claim blue}|\text{blue})P(\text{blue})\\&+P(\text{claim blue}|\neg\text{blue})P(\neg\text{blue})\end{aligned}\Bigg)} \\[30pt]
-&=\frac{0.8\times 0.15}{0.8\times 0.1+0.2\times 0.85} \\[12pt]
+&=\frac{0.8\times 0.15}{0.8\times 0.15+0.2\times 0.85} \\[12pt]
 &=0.41
 \end{align*}
 ```

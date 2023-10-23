@@ -688,11 +688,16 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <p>Each player needs to decide if they will work or shirk. If they both work, they receive a good payoff. They receive an ever better payoff, however, if they shirk while the other works.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/assignment-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/assignment-1.jpg" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="img/assignment-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/assignment-1.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 <p>Working through the payoffs for each player, if player B works, player A is better off shirking, receiving payoff of 9. If player B shirks, player 1 is better off working, receiving payoff of 1. If player A works, player 2 is better off shirking, receiving payoff of 9. If player A shirks, player B is still better off shirking, receiving payoff of 0.</p>
 <p>There is a unique Nash equilibrium (work, shirk), with shirk the dominant strategy for Player B.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/assignment-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/assignment-2.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+</figure>
+</div>
 <p>Consider, however, if instead of fully rational agents, we have level-k thinkers playing the game.</p>
 <p>In this case, the outcome of the game will depend on the level of thinking of each player.</p>
 <p>If both players are level-0, they will each play randomly.</p>
@@ -765,18 +770,18 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <p>The numbers 1 and 2 along the top of the centipede represent the decision nodes for two players. At the first node, player 1 has the choice to take or pass. If player 1 passes, player 2 has the choice to take or pass, and so on. At the final node, the game ends regardless of what player 2 chooses.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/centipede.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/centipede.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="img/centipede.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/centipede.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>The payoff when a player takes and ends the game is represented by the numbers in the brackets. The first number is the payoff for player 1 and the second number is the payoff for player 2.</p>
-<p>There is a unique subgame perfect equilibrium for the centipede game: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player 1 and player 2 respectively. We solve for this in <a href="../game-theory/sequential-games.html#sec-solving-the-centipede-game"><span>Section&nbsp;40.2.1</span></a>.</p>
+<p>The payoff when a player takes and ends the game is represented by the numbers in the brackets. The first number is the payoff for player A and the second number is the payoff for player B.</p>
+<p>There is a unique subgame perfect equilibrium for the centipede game: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player A and player B respectively. We solve for this in <a href="../game-theory/sequential-games.html#sec-solving-the-centipede-game"><span>Section&nbsp;40.2.1</span></a>.</p>
 <p>What do people do when playing the centipede game in the lab?</p>
 <p>People tend to pass until a few stages before the end (depending on the length of the centipede) and then take. They do not play the Nash equilibrium strategy.</p>
 <p>Can level-k thinking provide insight into this behaviour?</p>
-<p>Suppose a level-0 player passes until the end. They are possibly lucky if they are player 1 playing against another level-0 player.</p>
-<p>A level-1 player 2 would take at (4,6) as the level-0 player 1 would pass until then. A Level-1 player 1 would be planning to take (6,5) at the end as they believe the level-0 player 2 will keep passing.</p>
-<p>A level-2 player 2 would plan to take at the final stage (4,6) as they believe the level-1 player 1 passes. A level-2 player 1 would take the payoff at (5,3) as they believe a level-1 player 2 would take at (4,6).</p>
-<p>A level-3 player 2 would plan to take at (2,4) as they believe the level-1 player 1 will take at (5,3). A level-3 player 1 would plan to take at (5,3) as they believe a level-2 player 2 would take at (4,6).</p>
+<p>Suppose a level-0 player passes until the end. They are possibly lucky if they are player A playing against another level-0 player.</p>
+<p>A level-1 player B would take at (4,6) as the level-0 player A would pass until then. A Level-1 player A would be planning to take (6,5) at the end as they believe the level-0 player B will keep passing.</p>
+<p>A level-2 player B would plan to take at the final stage (4,6) as they believe the level-1 player A passes. A level-2 player A would take the payoff at (5,3) as they believe a level-1 player B would take at (4,6).</p>
+<p>A level-3 player B would plan to take at (2,4) as they believe the level-1 player A will take at (5,3). A level-3 player A would plan to take at (5,3) as they believe a level-2 player B would take at (4,6).</p>
 <p>And so on.</p>
 </section>
 <section id="a-military-attack" class="level3" data-number="44.1.4">
@@ -788,7 +793,7 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <p>The expected payoffs for each combination of actions are as follows, with the payoff (<span class="math inline">x,y</span>) being the payoffs for the North and South respectively.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/army.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/army.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p><a href="img/army.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/army.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 <p>We determine the pure-strategy Nash equilibria by considering the best response of each player to each of the other player’s strategies.</p>
@@ -799,7 +804,7 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <p>There is no pure-strategy Nash equilibrium. For any combination of choices, one of the armies has an incentive to change their choice.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/army-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/army-2.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p><a href="img/army-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/army-2.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 <p>Suppose the commanders of the North and South are level-k thinkers.</p>
@@ -1129,7 +1134,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 
