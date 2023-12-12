@@ -4,6 +4,8 @@ Under expected utility theory, people do not seek to maximize expected value but
 
 Under expected utility theory, people choose between risky prospects (prospect being another word for lottery or gamble common in the literature) by comparing expected utility values. An agent would pick the option that maximises their expected utility.
 
+## Calculating expected utility theory
+
 Consider a prospect with final outcomes $x_1, ..., x_n$, with each outcome occurring with probability $p_1, ..., p_n$. Each outcome would deliver utility $U(x_i)$.
 
 Expected utility, $E[U(X)]$, is calculated using the following formula:

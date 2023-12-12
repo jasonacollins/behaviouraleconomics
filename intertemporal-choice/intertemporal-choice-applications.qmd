@@ -80,6 +80,8 @@ Under Save More Tomorrow, customers are asked to commit in advance to allocating
 
 Save More Tomorrow is designed to reduce loss aversion when deciding contribution amounts. A commitment of a proportion of a pay rise means that the contribution can increase over time, but pay never decreases.
 
+The program is designed to reduce the effect of present bias. The cost of the savings is in the future, meaning that the costs are subject to the short-term discount factor and not disproportionately overweighted relative to the benefits.
+
 The program capitalises on participants' propensity to stick with the status quo, as people are unlikely to unwind their future commitments despite being able to opt out at any time.
 
 That ability to opt out also reduces regret and disappointment aversion.
