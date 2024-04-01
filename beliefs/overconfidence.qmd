@@ -60,4 +60,4 @@ A consistent finding in the analysis of trading behaviour is that more trading l
 
 To test whether over-trading may be linked to overconfidence, @barber2001 examined investors by gender. Men tend to be more overconfident than women - a point they support with evidence of overprecision, overplacement and overestimation. If overconfidence leads to more trading, you would predict that men would trade more than women.
 
-@barber2001 examined trading account data from over 35,000 households for the period from February 1991 to January 1997.  They found that men traded 45 percent more than women, reducing their net returns by 2.65 percentage points a year as opposed to 1.72 percentage points for women.
+@barber2001 examined trading account data from over 35,000 households for the period from February 1991 to January 1997. They found that men traded 45 percent more than women, reducing their net returns by 2.65 percentage points a year as opposed to 1.72 percentage points for women.

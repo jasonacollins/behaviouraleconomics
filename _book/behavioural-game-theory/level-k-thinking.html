@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -69,7 +70,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -78,11 +85,21 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZFSLJY1DR4"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
+</script>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -101,24 +118,49 @@ div.csl-indent {
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 44&nbsp; Level-k thinking">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/img/nagel-1995-12.jpg">
-<meta property="og:site-name" content="Notes on behavioural economics">
+<meta property="og:site_name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 44&nbsp; Level-k thinking">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/img/nagel-1995-12.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Notes on behavioural economics</span>
     </a>
@@ -130,52 +172,44 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf" rel="" target="">
- <span class="menu-text">PDF version</span></a>
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf"> 
+<span class="menu-text">PDF version</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/about/" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/jasonacollins" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/jasonacollins"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-    <a href="https://github.com/jasonacollins/behaviouraleconomics" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../behavioural-game-theory/behavioural-game-theory.html">Behavioural game theory</a></li><li class="breadcrumb-item"><a href="../behavioural-game-theory/level-k-thinking.html"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Level-k thinking</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../behavioural-game-theory/behavioural-game-theory.html">Behavioural game theory</a></li><li class="breadcrumb-item"><a href="../behavioural-game-theory/level-k-thinking.html"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Level-k thinking</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -587,7 +621,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -602,12 +636,12 @@ div.csl-indent {
   <li><a href="#a-military-attack" id="toc-a-military-attack" class="nav-link" data-scroll-target="#a-military-attack"><span class="header-section-number">44.1.4</span> A military attack</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../behavioural-game-theory/behavioural-game-theory.html">Behavioural game theory</a></li><li class="breadcrumb-item"><a href="../behavioural-game-theory/level-k-thinking.html"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Level-k thinking</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Level-k thinking</span></h1>
 </div>
@@ -622,7 +656,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <p>The idea behind level-k thinking is that a player forms an expectation of what others will do and tries to be “one step ahead”.</p>
 <p>That is, a level-k player plays the best response to level-(k-1) players.</p>
@@ -661,20 +697,28 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <p>The following charts come from <span class="citation" data-cites="nagel1995">Nagel (<a href="../references.html#ref-nagel1995" role="doc-biblioref">1995</a>)</span>, with <span class="math inline">p=1/2</span> and <span class="math inline">p=2/3</span>. The charts show the distribution of chosen numbers in the p-beauty contest.</p>
 <p>The chart with <span class="math inline">p=2/3</span> spikes at 22.2 and 33.3, suggesting players are playing at level-2 and level-1, respectively. This matches with other experimental evidence on the p-beauty game, with few level-0 players. Most are level-1, level-2 and level-3.</p>
 <div id="fig-nagel1" class="quarto-layout-panel">
-<p></p><figcaption>Figure&nbsp;44.1: Choices by players of the p-beauty game</figcaption><p></p>
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-nagel1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;44.1: Choices by players of the p-beauty game
+</figcaption>
+<div aria-describedby="fig-nagel1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
-<figcaption class="figure-caption"><span class="math inline">p=1/2</span></figcaption>
-<p><a href="img/nagel-1995-12.jpg" class="lightbox" title="p=1/2" data-gallery="quarto-lightbox-gallery-1"><img src="img/nagel-1995-12.jpg" class="img-fluid figure-img"></a></p>
+<figcaption><span class="math inline">p=1/2</span></figcaption>
+<p><a href="img/nagel-1995-12.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="p=1/2"><img src="img/nagel-1995-12.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<figcaption class="figure-caption"><span class="math inline">p=2/3</span></figcaption>
-<p><a href="img/nagel-1995-23.jpg" class="lightbox" title="p=2/3" data-gallery="quarto-lightbox-gallery-2"><img src="img/nagel-1995-23.jpg" class="img-fluid figure-img"></a></p>
+<figcaption><span class="math inline">p=2/3</span></figcaption>
+<p><a href="img/nagel-1995-23.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="p=2/3"><img src="img/nagel-1995-23.jpg" class="img-fluid figure-img"></a></p>
 </figure>
+</div>
+</div>
 </div>
 </div>
 </figure>
@@ -686,18 +730,10 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <h3 data-number="44.1.2" class="anchored" data-anchor-id="the-assignment-game-with-level-k-thinking"><span class="header-section-number">44.1.2</span> The assignment game with level-k thinking</h3>
 <p>Let’s consider another example of level-k thinking involving a game called the assignment game.</p>
 <p>Each player needs to decide if they will work or shirk. If they both work, they receive a good payoff. They receive an ever better payoff, however, if they shirk while the other works.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/assignment-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/assignment-1.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
-</figure>
-</div>
+<p><a href="img/assignment-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/assignment-1.png" class="img-fluid" style="width:60.0%"></a></p>
 <p>Working through the payoffs for each player, if player B works, player A is better off shirking, receiving payoff of 9. If player B shirks, player 1 is better off working, receiving payoff of 1. If player A works, player 2 is better off shirking, receiving payoff of 9. If player A shirks, player B is still better off shirking, receiving payoff of 0.</p>
 <p>There is a unique Nash equilibrium (work, shirk), with shirk the dominant strategy for Player B.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/assignment-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/assignment-2.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
-</figure>
-</div>
+<p><a href="img/assignment-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/assignment-2.png" class="img-fluid" style="width:60.0%"></a></p>
 <p>Consider, however, if instead of fully rational agents, we have level-k thinkers playing the game.</p>
 <p>In this case, the outcome of the game will depend on the level of thinking of each player.</p>
 <p>If both players are level-0, they will each play randomly.</p>
@@ -768,13 +804,9 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <p>Another example of level-k thinking is the centipede game.</p>
 <p>This centipede game has six stages. At each stage, a player can “take” and end the game or they can “pass”, increasing the total payoff. The other player then has a move.</p>
 <p>The numbers 1 and 2 along the top of the centipede represent the decision nodes for two players. At the first node, player 1 has the choice to take or pass. If player 1 passes, player 2 has the choice to take or pass, and so on. At the final node, the game ends regardless of what player 2 chooses.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/centipede.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/centipede.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/centipede.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/centipede.png" class="img-fluid"></a></p>
 <p>The payoff when a player takes and ends the game is represented by the numbers in the brackets. The first number is the payoff for player A and the second number is the payoff for player B.</p>
-<p>There is a unique subgame perfect equilibrium for the centipede game: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player A and player B respectively. We solve for this in <a href="../game-theory/sequential-games.html#sec-solving-the-centipede-game"><span>Section&nbsp;40.2.1</span></a>.</p>
+<p>There is a unique subgame perfect equilibrium for the centipede game: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player A and player B respectively. We solve for this in <a href="../game-theory/sequential-games.html#sec-solving-the-centipede-game" class="quarto-xref"><span>Section 40.2.1</span></a>.</p>
 <p>What do people do when playing the centipede game in the lab?</p>
 <p>People tend to pass until a few stages before the end (depending on the length of the centipede) and then take. They do not play the Nash equilibrium strategy.</p>
 <p>Can level-k thinking provide insight into this behaviour?</p>
@@ -791,22 +823,14 @@ y_3=\frac{2}{3}\bar y=2/3\times 22.2=14.8
 <p>The South needs to decide which city it will plan to defend.</p>
 <p>If the North attacks an undefended city, it will win. The South can repel any attack on a city it has chosen to defend.</p>
 <p>The expected payoffs for each combination of actions are as follows, with the payoff (<span class="math inline">x,y</span>) being the payoffs for the North and South respectively.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/army.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/army.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
-</figure>
-</div>
+<p><a href="img/army.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/army.png" class="img-fluid" style="width:80.0%"></a></p>
 <p>We determine the pure-strategy Nash equilibria by considering the best response of each player to each of the other player’s strategies.</p>
 <p>If the South defends Hobart, North can choose Hobart for a payoff of -1 or Launceston for a payoff of 4. Launceston is the best response.</p>
 <p>If the South defends Launceston, North can choose Hobart for a payoff of 4 or Launceston for a payoff of 0. Hobart is the best response.</p>
 <p>If the North attacks Hobart, South can defend Hobart for a payoff of 4 or Launceston for a payoff of 0. Hobart is the best response.</p>
 <p>If the North attacks Launceston, South can defend Hobart for a payoff of 0 or Launceston for a payoff of 4. Launceston is the best response.</p>
 <p>There is no pure-strategy Nash equilibrium. For any combination of choices, one of the armies has an incentive to change their choice.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/army-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/army-2.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
-</figure>
-</div>
+<p><a href="img/army-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/army-2.png" class="img-fluid" style="width:80.0%"></a></p>
 <p>Suppose the commanders of the North and South are level-k thinkers.</p>
 <p>If they were level-0, both would choose Hobart or Launceston with equal probability.</p>
 <p>What would each player do if they were a level-1 thinker?</p>
@@ -836,7 +860,11 @@ U_N(\text{Launceston})=0.5\times 4+0.5\times 0=2
 <p>A level-2 South knows that the level-1 North attacks Launceston. The South defends Launceston for payoff of 4 (rather than Hobart for payoff of 0).</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1"><span class="math inline">p=1/2</span></span>
+<span class="glightbox-desc lightbox-desc-2"><span class="math inline">p=2/3</span></span>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-keynes1936" class="csl-entry" role="listitem">
 Keynes, J. M. (1936). <em>The general theory of employment, interest, and money</em>. Macmillan. <a href="http://gutenberg.net.au/ebooks03/0300071h/printall.html">http://gutenberg.net.au/ebooks03/0300071h/printall.html</a>
 </div>
@@ -930,10 +958,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -943,8 +988,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -957,6 +1011,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1000,6 +1173,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1025,6 +1199,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1082,30 +1282,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../behavioural-game-theory/behavioural-game-theory.html" class="pagination-link">
+      <a href="../behavioural-game-theory/behavioural-game-theory.html" class="pagination-link" aria-label="Behavioural game theory">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Behavioural game theory</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html" class="pagination-link">
+      <a href="../behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html" class="pagination-link" aria-label="Asymmetric information and the curse of knowledge">
         <span class="nav-page-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Asymmetric information and the curse of knowledge</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1119,7 +1305,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">Copyright: CC-BY</a>
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">
+<p>Copyright: CC-BY</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/jasonacollins">
@@ -1128,13 +1316,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
 
 
 

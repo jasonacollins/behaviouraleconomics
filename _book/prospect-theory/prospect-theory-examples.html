@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -84,7 +84,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -93,11 +99,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZFSLJY1DR4"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
+</script>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -116,28 +132,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 19&nbsp; Prospect theory examples">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
-<meta property="og:site-name" content="Notes on behavioural economics">
-<meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1344">
+<meta property="og:site_name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 19&nbsp; Prospect theory examples">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
-<meta name="twitter:image-height" content="960">
-<meta name="twitter:image-width" content="1344">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Notes on behavioural economics</span>
     </a>
@@ -149,52 +186,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf" rel="" target="">
- <span class="menu-text">PDF version</span></a>
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf"> 
+<span class="menu-text">PDF version</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/about/" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/jasonacollins" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/jasonacollins"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-    <a href="https://github.com/jasonacollins/behaviouraleconomics" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../prospect-theory/prospect-theory.html">Prospect theory</a></li><li class="breadcrumb-item"><a href="../prospect-theory/prospect-theory-examples.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../prospect-theory/prospect-theory.html">Prospect theory</a></li><li class="breadcrumb-item"><a href="../prospect-theory/prospect-theory-examples.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -606,7 +635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -635,12 +664,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#a-multi-bet" id="toc-a-multi-bet" class="nav-link" data-scroll-target="#a-multi-bet"><span class="header-section-number">19.5</span> A multi-bet</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../prospect-theory/prospect-theory.html">Prospect theory</a></li><li class="breadcrumb-item"><a href="../prospect-theory/prospect-theory-examples.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></h1>
 </div>
@@ -655,7 +684,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <section id="a-5050-gamble" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="a-5050-gamble"><span class="header-section-number">19.1</span> A 50:50 gamble</h2>
@@ -686,7 +717,7 @@ V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <p>The reason for this negative value is that the agent is loss averse. The loss of $100 is given twice the weight of an equivalent gain.</p>
 <p>The following chart illustrates. Note that <span class="math inline">V(A)</span> is a probability-weighted average of the two possible outcomes from the bet, and is projected from the straight line between those two outcomes.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -749,10 +780,14 @@ V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-50-50-gamble" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.1: A 50:50 gamble</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png" class="lightbox" title="A 50:50 gamble" data-gallery="quarto-lightbox-gallery-1"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-50-50-gamble" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-50-50-gamble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.1: A 50:50 gamble
+</figcaption>
+<div aria-describedby="fig-50-50-gamble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -778,7 +813,7 @@ V(\neg A)&amp;=v(-100) \\[6pt]
 <p>They will now want to play the gamble as it has a greater value than staying with their current loss. The gamble becomes attractive as it allows recovery the loss. The agent is risk seeking in the loss domain. (They would even accept a 50:50 gamble to win $100, lose $100 with an expected value of zero.)</p>
 <p>The choice is illustrated in the following chart.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -847,10 +882,14 @@ V(\neg A)&amp;=v(-100) \\[6pt]
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-50-50-gamble-after-loss" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.2: A 50:50 gamble after a loss</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-loss-1.png" class="lightbox" title="A 50:50 gamble after a loss" data-gallery="quarto-lightbox-gallery-2"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-loss-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-50-50-gamble-after-loss" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-50-50-gamble-after-loss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.2: A 50:50 gamble after a loss
+</figcaption>
+<div aria-describedby="fig-50-50-gamble-after-loss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-loss-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-loss-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -880,7 +919,7 @@ V(\neg A)&amp;=v(10000) \\[6pt]
 <p>The gamble is now attractive. The agent is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.</p>
 <p>The following chart illustrates. The agent becomes increasingly risk neutral as we move further into the gain domain. You can see this through the line becoming approximately straight. As a result, at a high enough wealth, the positive value bet becomes attractive</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -949,10 +988,14 @@ V(\neg A)&amp;=v(10000) \\[6pt]
 <span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-50-50-gamble-after-win" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.3: A 50:50 gamble after a win (not to scale)</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-win-1.png" class="lightbox" title="A 50:50 gamble after a win (not to scale)" data-gallery="quarto-lightbox-gallery-3"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-win-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-50-50-gamble-after-win" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-50-50-gamble-after-win-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.3: A 50:50 gamble after a win (not to scale)
+</figcaption>
+<div aria-describedby="fig-50-50-gamble-after-win-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-win-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="prospect-theory-examples_files/figure-html/fig-50-50-gamble-after-win-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -988,7 +1031,7 @@ V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <p>Paddy rejects the bet as <span class="math inline">V(A)</span> is less than the <span class="math inline">V(0)=0</span> that Paddy could get by simply rejecting the bet. He rejects the bet due to his loss aversion and the diminishing sensitivity to gains. The loss is weighted double that of an equivalent gain, outweighing both the larger potential gain and 60% probability.</p>
 <p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure illustrates that Paddy’s rejection is caused by both Paddy’s loss aversion and his diminishing sensitivity in the gain domain, which has a larger effect than the diminishing sensitivity in the loss domain due to the larger magnitude of the potential gain.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1051,10 +1094,14 @@ V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-60-40-gamble" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.4: A 60:40 gamble</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-60-40-gamble-1.png" class="lightbox" title="A 60:40 gamble" data-gallery="quarto-lightbox-gallery-4"><img src="prospect-theory-examples_files/figure-html/fig-60-40-gamble-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-60-40-gamble" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-60-40-gamble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.4: A 60:40 gamble
+</figcaption>
+<div aria-describedby="fig-60-40-gamble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-60-40-gamble-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4"><img src="prospect-theory-examples_files/figure-html/fig-60-40-gamble-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -1079,7 +1126,7 @@ V(\text{L})&amp;=v(L) \\[6pt]
 <p>Paddy accepts the bet as <span class="math inline">V(A)</span> is greater than the value of the certain loss of $150.</p>
 <p>The following figure shows Paddy’s value function, the bets and the value of the bets. The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain. The potential loss of another $100 results in a smaller incremental loss of value than an equivalent win of $100.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1142,10 +1189,14 @@ V(\text{L})&amp;=v(L) \\[6pt]
 <span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-60-40-gamble-after-loss" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.5: A 60:40 gamble after a loss</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-60-40-gamble-after-loss-1.png" class="lightbox" title="A 60:40 gamble after a loss" data-gallery="quarto-lightbox-gallery-5"><img src="prospect-theory-examples_files/figure-html/fig-60-40-gamble-after-loss-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-60-40-gamble-after-loss" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-60-40-gamble-after-loss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.5: A 60:40 gamble after a loss
+</figcaption>
+<div aria-describedby="fig-60-40-gamble-after-loss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-60-40-gamble-after-loss-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="prospect-theory-examples_files/figure-html/fig-60-40-gamble-after-loss-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -1183,7 +1234,7 @@ V(\$100)&amp;=100^{0.5} \\
 <p>The following chart shows Bill’s choices before the shock, whereby all possible outcomes are in the gain domain. The possible outcomes from the gamble are zero and $250. The certain outcome on offer is $100. The expected value of the gamble is $125.</p>
 <p>As he is risk averse, the value of the $100 for certain exceeds the weighted value of the gamble. This can be seen through <span class="math inline">v(A)</span> being less than <span class="math inline">v(\$100)</span>. Bill will therefore choose the $100 for certain.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1250,10 +1301,14 @@ V(\$100)&amp;=100^{0.5} \\
 <span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-bill-gamble" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.6: Bill’s consideration of gamble A and the $100</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-bill-gamble-1.png" class="lightbox" title="Bill’s consideration of gamble A and the $100" data-gallery="quarto-lightbox-gallery-6"><img src="prospect-theory-examples_files/figure-html/fig-bill-gamble-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-bill-gamble" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-bill-gamble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.6: Bill’s consideration of gamble A and the $100
+</figcaption>
+<div aria-describedby="fig-bill-gamble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-bill-gamble-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6"><img src="prospect-theory-examples_files/figure-html/fig-bill-gamble-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -1263,7 +1318,7 @@ V(\$100)&amp;=100^{0.5} \\
 <p>The following diagram illustrates Bill’s decision after the shock. After the loss of wealth but no change in reference point, the outcomes would now be in the loss domain. Let <span class="math inline">L</span> be a large negative number, the loss. The potential outcomes from the gamble are now <span class="math inline">L</span> and <span class="math inline">L+250</span>. The certain outcome of accepting the $100 is <span class="math inline">L+100</span>. The expected value of the gamble is <span class="math inline">L+125</span>. The weighted value of the gamble is <span class="math inline">v(L+125)</span>. The value of the certain outcome is <span class="math inline">v(L+100)</span>.</p>
 <p>Due to the convex curvature of the curve in the loss domain, Bill is risk seeking. As a result, the utility of the gamble is greater than the utility of the certain outcome. This can be seen in <span class="math inline">v(L+A)</span> being greater than <span class="math inline">v(L+100)</span>.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1332,10 +1387,14 @@ V(\$100)&amp;=100^{0.5} \\
 <span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"v(L+A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-bill-gamble-after-shock" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.7: Bill’s consideration of gamble A and the $100 after the shock</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-bill-gamble-after-shock-1.png" class="lightbox" title="Bill’s consideration of gamble A and the $100 after the shock" data-gallery="quarto-lightbox-gallery-7"><img src="prospect-theory-examples_files/figure-html/fig-bill-gamble-after-shock-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-bill-gamble-after-shock" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-bill-gamble-after-shock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.7: Bill’s consideration of gamble A and the $100 after the shock
+</figcaption>
+<div aria-describedby="fig-bill-gamble-after-shock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-bill-gamble-after-shock-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7"><img src="prospect-theory-examples_files/figure-html/fig-bill-gamble-after-shock-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -1351,12 +1410,12 @@ V(\$100)&amp;=100^{0.5} \\
 <section id="expected-value" class="level3" data-number="19.4.1">
 <h3 data-number="19.4.1" class="anchored" data-anchor-id="expected-value"><span class="header-section-number">19.4.1</span> Expected value</h3>
 <p>The first question we will ask is whether an expected value maximiser or risk-neutral person would purchase the insurance.</p>
-<p>A risk-neutral agent will choose the option with the highest expected value. In <a href="../risk-and-uncertainty/risk-and-uncertainty-exercises.html#sec-expected-value-of-insurance"><span>Section&nbsp;12.2</span></a> I showed that the expected value of purchasing insurance is $100 less than the expected value of risking the house burning down. A risk-neutral agent (who maximises expected value) would not purchase this insurance.</p>
+<p>A risk-neutral agent will choose the option with the highest expected value. In <a href="../risk-and-uncertainty/risk-and-uncertainty-exercises.html#sec-expected-value-of-insurance" class="quarto-xref"><span>Section 12.2</span></a> I showed that the expected value of purchasing insurance is $100 less than the expected value of risking the house burning down. A risk-neutral agent (who maximises expected value) would not purchase this insurance.</p>
 </section>
 <section id="expected-utility" class="level3" data-number="19.4.2">
 <h3 data-number="19.4.2" class="anchored" data-anchor-id="expected-utility"><span class="header-section-number">19.4.2</span> Expected utility</h3>
 <p>Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function (<span class="math inline">U(x)=ln(x)</span>) and they have $10,000 in cash in addition to their house, giving them wealth (<span class="math inline">W</span>) of $1,010,000.</p>
-<p>In <a href="../risk-and-uncertainty/risk-and-uncertainty-exercises.html#sec-purchasing-insurance"><span>Section&nbsp;12.7</span></a> I showed that the expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.</p>
+<p>In <a href="../risk-and-uncertainty/risk-and-uncertainty-exercises.html#sec-purchasing-insurance" class="quarto-xref"><span>Section 12.7</span></a> I showed that the expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will insure against the fire despite it being actuarially unfair.</p>
 <p>The intuition for this is that diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth. Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.</p>
 </section>
 <section id="the-reflection-effect" class="level3" data-number="19.4.3">
@@ -1383,7 +1442,7 @@ V(don't)&amp;=0.999\times (0)+0.001\times v(-1,000,000) \\
 <p>As <span class="math inline">V(purchase)&lt;V(don't)</span>, the agent does not purchase insurance. The diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house.</p>
 <p>Including loss aversion in the value function does not change the decision as all possible outcomes are in the loss domain.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1446,10 +1505,14 @@ V(don't)&amp;=0.999\times (0)+0.001\times v(-1,000,000) \\
 <span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"v(don't)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-reflection-effect-insurance" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;19.8: The reflection effect and insurance</figcaption>
-<p><a href="prospect-theory-examples_files/figure-html/fig-reflection-effect-insurance-1.png" class="lightbox" title="The reflection effect and insurance" data-gallery="quarto-lightbox-gallery-8"><img src="prospect-theory-examples_files/figure-html/fig-reflection-effect-insurance-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-reflection-effect-insurance" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-reflection-effect-insurance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19.8: The reflection effect and insurance
+</figcaption>
+<div aria-describedby="fig-reflection-effect-insurance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="prospect-theory-examples_files/figure-html/fig-reflection-effect-insurance-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8"><img src="prospect-theory-examples_files/figure-html/fig-reflection-effect-insurance-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
 </figure>
 </div>
 </div>
@@ -1551,6 +1614,16 @@ V(don't)&amp;=\sum_{i=1}^n \pi(p_i)v(x_i) \\
 <p>Finally, Betty’s weighting of probabilities will also affect her decision. Overweighting certainty means overweighting small probabilities, such as the small probability of Geelong losing. This overweighting would push her towards cashing out as the loss would have greater weight in her calculation of the weighted value of each option.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;19.1: A 50:50 gamble</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;19.2: A 50:50 gamble after a loss</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;19.3: A 50:50 gamble after a win (not to scale)</span>
+<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;19.4: A 60:40 gamble</span>
+<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;19.5: A 60:40 gamble after a loss</span>
+<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;19.6: Bill’s consideration of gamble A and the $100</span>
+<span class="glightbox-desc lightbox-desc-7">Figure&nbsp;19.7: Bill’s consideration of gamble A and the $100 after the shock</span>
+<span class="glightbox-desc lightbox-desc-8">Figure&nbsp;19.8: The reflection effect and insurance</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1633,10 +1706,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1646,8 +1736,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1660,6 +1759,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1703,6 +1921,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1728,6 +1947,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1785,30 +2030,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../prospect-theory/prospect-theory-implementation.html" class="pagination-link">
+      <a href="../prospect-theory/prospect-theory-implementation.html" class="pagination-link" aria-label="Prospect theory implementation">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../prospect-theory/prospect-theory-applications.html" class="pagination-link">
+      <a href="../prospect-theory/prospect-theory-applications.html" class="pagination-link" aria-label="Prospect theory applications">
         <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1822,7 +2053,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">Copyright: CC-BY</a>
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">
+<p>Copyright: CC-BY</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/jasonacollins">
@@ -1831,13 +2064,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
 
 
 

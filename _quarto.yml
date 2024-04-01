@@ -101,6 +101,7 @@ book:
         href: https://twitter.com/jasonacollins
   open-graph: true
   twitter-card: true
+  google-analytics: "G-ZFSLJY1DR4"
 
 bibliography: references.bib
 csl: apa-no-ampersand.csl
@@ -124,8 +125,6 @@ format:
     fig-width: 6
     fig-height: 4
 
-filters:
-  - lightbox
 lightbox: auto
 
 execute:

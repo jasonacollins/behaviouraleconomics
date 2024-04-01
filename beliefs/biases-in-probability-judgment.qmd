@@ -1,6 +1,12 @@
 # Biases in probability judgment
 
-In this part, I introduce several biases in probability judgment.
+In this part, I introduce several biases in probability judgment:
+
+-   The conjunction fallacy
+-   Base-rate neglect
+-   Probability matching
+-   The gambler's fallacy
+-   The hot hand fallacy
 
 ## The conjunction fallacy
 
@@ -122,7 +128,6 @@ P(\text{blue}|\text{claim blue})&=\frac{P(\text{claim blue}|\text{blue})P(\text{
 &=0.41
 \end{align*}
 ```
-
 ### Medical diagnosis
 
 We can also see base rate neglect in the context of diagnosing a rare disease.
@@ -159,8 +164,7 @@ P(\text{COVID}|\text{+ve})&=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\
 &=`r round((0.9*0.01)/(0.9*0.01 + 0.09*0.99), 3)`
 \end{align*}
 ```
-
-## Natural frequencies
+### Natural frequencies
 
 Let us reconsider this medical problem with an alternative representation. This representation uses "natural frequencies".
 
@@ -174,12 +178,13 @@ Let us reconsider this medical problem with an alternative representation. This 
 
 Seeing a representation in this manner makes the base rate (and the rate of false positives) much more salient, and leads to more accurate estimates of the conditional probabilities. We can see that the probability that we have COVID-19, given we tested positive for COVID-19, equals the number of people who have COVID-19 who have tested positive, divided by the total number of positive tests:
 
+```{=tex}
 \begin{align*}
 P(\text{COVID}|\text{+ve})&=\frac{n(\text{+ve }\cap \text{COVID})}{n(\text{+ve})} \\[12pt]
 &=\frac{9}{9+89} \\[12pt]
 &=`r round(9/(9+89), 3)`
 \end{align*}
-
+```
 @cosmides1996 first proposed using natural frequencies in this way. We derive natural frequencies by observing cases representatively sampled from a population.
 
 @hoffrage1998 reported that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.
@@ -192,15 +197,15 @@ The numbers at the bottom of the conditional probability tree do not contain the
 
 To illustrate this point, consider what happens if we convert the numbers at the bottom of the conditional probability tree into frequencies: 900 in 1000, 10 in 1000, 90 in 1000 and 910 in 1000. Gigerenzer calls these simple frequencies. While simple frequencies can make a problem more tractable, they do not allow us to calculate conditional probabilities. Simple frequencies are just a restatement of the probabilities. In contrast, natural frequencies are joint frequencies, such as the number of people who test positive and who have COVID-19.
 
-### Identifying a finch
+#### Identifying a finch
 
 The following example provides another illustration of the use of Bayes' rule and natural frequencies.
 
 You are trying to spot a rare type of bird, the Darwin finch. It looks very similar to the Wallace finch, except for a slight difference in the shape of its beak. You know the following about the finches in your area:
 
-- 99% of the finches are Wallace finches. The remaining 1% are Darwin finches.
-- If you spot a Darwin finch, you will correctly identify it as a Darwin finch 95% of the time. The other 5% of the time, you identify it as a Wallace finch.
-- If you spot a Wallace finch, you will correctly identify it as a Wallace finch 95% of the time. The other 5% of the time, you identify it as a Darwin finch.
+-   99% of the finches are Wallace finches. The remaining 1% are Darwin finches.
+-   If you spot a Darwin finch, you will correctly identify it as a Darwin finch 95% of the time. The other 5% of the time, you identify it as a Wallace finch.
+-   If you spot a Wallace finch, you will correctly identify it as a Wallace finch 95% of the time. The other 5% of the time, you identify it as a Darwin finch.
 
 You spot a finch and identify it as a Darwin finch.
 
@@ -208,13 +213,14 @@ What is the probability that the finch is a Darwin finch?
 
 First, I use Bayes' rule to calculate the probability.
 
+```{=tex}
 \begin{align*}
 P(D|I)&=\frac{P(I|D)P(D)}{P(I)} \\[6pt]
 &=\frac{P(I|D)P(D)}{P(I|D)P(D)+P(I|\neg D)P(\neg D)} \\[6pt]
 &=\frac{0.95\times 0.01}{0.95\times 0.01 + 0.05\times 0.99} \\[6pt]
 &=`r round((0.95*0.01)/(0.95*0.01+0.05*0.99), 2)`
 \end{align*}
-
+```
 The probability that it is a Darwin finch is 16%.
 
 Next, I use natural frequencies to calculate that same conditional probability.
@@ -231,11 +237,12 @@ That means 95 of the 95+495=590 birds I identify as Darwin finches would be Darw
 
 Therefore:
 
+```{=tex}
 \begin{align*}
 P(D|I)&=\frac{95}{590} \\[6pt]
 &=`r round(95/590, 2)` \\
 \end{align*}
-
+```
 Note that in this example, I have started with a number of finches, 10,000, which allows me to avoid fractions and small decimals. If I started with only 100 finches, I would later be talking about an unintuitive 4.95 finches. If you are using natural frequencies to solve a problem of conditional probability, you should choose a large enough number to avoid complicated fractions and decimals. Alternatively (or in conjunction), round any unintuitive numbers to the nearest whole number, giving you an approximate answer in your final calculation.
 
 ## Probability matching

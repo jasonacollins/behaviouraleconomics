@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -59,35 +65,39 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZFSLJY1DR4"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Notes on behavioural economics - 46&nbsp; Emotions">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/emotions_files/figure-html/mermaid-figure-1.png">
-<meta property="og:site-name" content="Notes on behavioural economics">
-<meta property="og:image:height" content="1852">
-<meta property="og:image:width" content="3136">
+<meta property="og:site_name" content="Notes on behavioural economics">
 <meta name="twitter:title" content="Notes on behavioural economics - 46&nbsp; Emotions">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/emotions_files/figure-html/mermaid-figure-1.png">
-<meta name="twitter:image-height" content="1852">
-<meta name="twitter:image-width" content="3136">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Notes on behavioural economics</span>
     </a>
@@ -99,52 +109,44 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf" rel="" target="">
- <span class="menu-text">PDF version</span></a>
+    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf"> 
+<span class="menu-text">PDF version</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/about/" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/jasonacollins" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/jasonacollins"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-    <a href="https://github.com/jasonacollins/behaviouraleconomics" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../behavioural-game-theory/behavioural-game-theory.html">Behavioural game theory</a></li><li class="breadcrumb-item"><a href="../behavioural-game-theory/emotions.html"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Emotions</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../behavioural-game-theory/behavioural-game-theory.html">Behavioural game theory</a></li><li class="breadcrumb-item"><a href="../behavioural-game-theory/emotions.html"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Emotions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -556,7 +558,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -570,12 +572,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#receiving-a-faulty-product" id="toc-receiving-a-faulty-product" class="nav-link" data-scroll-target="#receiving-a-faulty-product"><span class="header-section-number">46.1.3</span> Receiving a faulty product</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../behavioural-game-theory/behavioural-game-theory.html">Behavioural game theory</a></li><li class="breadcrumb-item"><a href="../behavioural-game-theory/emotions.html"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Emotions</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Emotions</span></h1>
 </div>
@@ -590,7 +592,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>Emotions are mental states that signal positive or negative outcomes.</p>
 <p>One function of emotions may be to act as a commitment device:</p>
@@ -612,16 +616,16 @@ ul.task-list li input[type="checkbox"] {
 <p>We determined this by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.</p>
 <p>The company, therefore, has a choice between providing good service for a payoff of 1 or bad service for a payoff of 2. They will provide bad service. The company has the same payoff for bad service regardless of the presence of the threat to complain as the threat is not credible.</p>
 <p>For the customer’s initial choice of whether to threaten to complain, it does not matter either way. Regardless of their threat, they receive bad service.</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-complaint-3" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;46.1: Complaining is costly</figcaption>
+<div id="fig-complaint-3" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-complaint-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;46.1: Complaining is costly
+</figcaption>
+<div aria-describedby="fig-complaint-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="emotions_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="emotions_files/figure-html/mermaid-figure-1.png" style="width:6in;height:2.89in" class="figure-img"></a></p>
-</figure>
+<p><a href="emotions_files/figure-html/mermaid-figure-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="emotions_files/figure-html/mermaid-figure-1.png" style="width:6in;height:2.86in" class="figure-img"></a></p>
 </div>
 </div>
 </figure>
@@ -629,16 +633,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>But what if the customer gets a strong sense of satisfaction from complaining worth +3? Then their payoffs become as follows:</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-complaint-4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;46.2: When the threat is credible</figcaption>
+<div id="fig-complaint-4" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-complaint-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;46.2: When the threat is credible
+</figcaption>
+<div aria-describedby="fig-complaint-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="emotions_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="emotions_files/figure-html/mermaid-figure-4.png" style="width:6in;height:2.8in" class="figure-img"></a></p>
-</figure>
+<p><a href="emotions_files/figure-html/mermaid-figure-4.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="emotions_files/figure-html/mermaid-figure-4.png" style="width:6in;height:2.76in" class="figure-img"></a></p>
 </div>
 </div>
 </figure>
@@ -647,16 +651,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The threat to complain is now credible. If they receive bad service, they complain for a payoff of 2 rather than not complain for a payoff of 1.</p>
 <p>The company now provides good service following a threat to complain. Absent that threat, they would provide bad service.</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-complaint-5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;46.3: When the threat is credible</figcaption>
+<div id="fig-complaint-5" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-complaint-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;46.3: When the threat is credible
+</figcaption>
+<div aria-describedby="fig-complaint-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="emotions_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="emotions_files/figure-html/mermaid-figure-3.png" style="width:6in;height:3.07in" class="figure-img"></a></p>
-</figure>
+<p><a href="emotions_files/figure-html/mermaid-figure-3.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="emotions_files/figure-html/mermaid-figure-3.png" style="width:6in;height:3.04in" class="figure-img"></a></p>
 </div>
 </div>
 </figure>
@@ -667,30 +671,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="chicken" class="level3" data-number="46.1.2">
 <h3 data-number="46.1.2" class="anchored" data-anchor-id="chicken"><span class="header-section-number">46.1.2</span> Chicken</h3>
 <p>As another example, recall the game of chicken. Two players are driving toward each other. Whoever swerves first loses. If neither swerves, they crash and die.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/chicken-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/chicken-1.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/chicken-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/chicken-1.jpg" class="img-fluid"></a></p>
 <p>There are two pure-strategy Nash equilibria: (Straight, Swerve) and (Swerve, Straight). If the other player swerves, they want to go straight. If the other player goes straight, they want to swerve.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/chicken-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/chicken-2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/chicken-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/chicken-2.png" class="img-fluid"></a></p>
 <p>Now suppose player A is crazy. They are afraid of nothing and will never swerve. Player B knows this.</p>
 <p>Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If player A will not swerve, player B will.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/chicken-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/chicken-3.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/chicken-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/chicken-3.jpg" class="img-fluid"></a></p>
 <p>The Nash equilibrium is (Straight, Swerve). The crazy player A wins the game of chicken.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/chicken-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/chicken-4.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/chicken-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/chicken-4.png" class="img-fluid"></a></p>
 </section>
 <section id="receiving-a-faulty-product" class="level3" data-number="46.1.3">
 <h3 data-number="46.1.3" class="anchored" data-anchor-id="receiving-a-faulty-product"><span class="header-section-number">46.1.3</span> Receiving a faulty product</h3>
@@ -699,16 +687,16 @@ ul.task-list li input[type="checkbox"] {
 <p>However, the customer still complained to the Department of Fair Trading.</p>
 <p>a) Use concepts from game theory to explain why the firm might have held that belief.</p>
 <p>We can draw the extensive form of the game as follows:</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-punishment" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<figcaption class="figure-caption">Figure&nbsp;46.4: Extensive form of the game</figcaption>
+<div id="fig-punishment" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-punishment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;46.4: Extensive form of the game
+</figcaption>
+<div aria-describedby="fig-punishment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="emotions_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="emotions_files/figure-html/mermaid-figure-2.png" style="width:6in;height:1.26in" class="figure-img"></a></p>
-</figure>
+<p><a href="emotions_files/figure-html/mermaid-figure-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8"><img src="emotions_files/figure-html/mermaid-figure-2.png" style="width:6in;height:1.21in" class="figure-img"></a></p>
 </div>
 </div>
 </figure>
@@ -721,6 +709,12 @@ ul.task-list li input[type="checkbox"] {
 <p>The customer’s emotional response may lead them to complain. They might be angry or obtain satisfaction from seeing the firm punished. In that case, the customer will complain even though it is not in their material best interest to do so. Emotionally, it is worthwhile. They incur the cost of complaining but get the benefit of both the refund and the satisfaction from punishing the firm.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;46.1: Complaining is costly</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;46.2: When the threat is credible</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;46.3: When the threat is credible</span>
+<span class="glightbox-desc lightbox-desc-8">Figure&nbsp;46.4: Extensive form of the game</span>
+</div>
 </section>
 </section>
 
@@ -804,10 +798,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -817,8 +828,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -831,6 +851,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -874,6 +1013,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -899,6 +1039,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -956,30 +1122,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html" class="pagination-link">
+      <a href="../behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html" class="pagination-link" aria-label="Asymmetric information and the curse of knowledge">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Asymmetric information and the curse of knowledge</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../behavioural-game-theory/behavioural-game-theory-exercises.html" class="pagination-link">
+      <a href="../behavioural-game-theory/behavioural-game-theory-exercises.html" class="pagination-link" aria-label="Behavioural game theory exercises">
         <span class="nav-page-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Behavioural game theory exercises</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -993,7 +1145,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">Copyright: CC-BY</a>
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">
+<p>Copyright: CC-BY</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/jasonacollins">
@@ -1002,13 +1156,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
 
 
 
