@@ -173,7 +173,7 @@ Finally, the horizontal dashed line identifying E[U(X)] allows us to identify th
 
 ### Risk neutrality
 
-A risk-neutral person is an expected value maximiser. They are indifferent between $10 for certain and a gamble with an expected value of $10. The certainty equivalent of the prospect for this person would also be $10.
+A risk-neutral person is an expected value maximiser. They are indifferent between \$10 for certain and a gamble with an expected value of \$10. The certainty equivalent of the prospect for this person would also be \$10.
 
 The following chart illustrates. Again we have two possible outcomes, $x_1$ and $x_2$ with resulting utility $U(x_1)$ and $U(x_2)$.
 
