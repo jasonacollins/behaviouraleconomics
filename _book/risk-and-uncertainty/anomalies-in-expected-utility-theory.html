@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -171,10 +205,6 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf"> 
-<span class="menu-text">PDF version</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://www.jasoncollins.blog/"> 
 <span class="menu-text">Blog</span></a>
@@ -742,56 +772,481 @@ pz+(1-p)x\succcurlyeq pz+(1-p)y
 <section id="sec-absurd" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="sec-absurd"><span class="header-section-number">11.2</span> Absurd rates of risk aversion</h2>
 <p>An important anomaly in expected utility theory concerns the level of risk aversion required to explain observed behaviour.</p>
+<p>People reject many small-scale bets. The crux of the anomaly is that if we are expected utility maximisers, rejection implies that we would reject some highly favourable larger-scale bets so favourable almost no one would reject them.</p>
 <p>Consider the following one-off bet involving the flip of a coin:</p>
 <blockquote class="blockquote">
-<p>Head: You win $550</p>
-<p>Tail: You lose $500</p>
+<p>Head: You win $110</p>
+<p>Tail: You lose $100</p>
 </blockquote>
-<p>Would you accept this bet?</p>
-<p><span class="citation" data-cites="barberis2006">Barberis et al. (<a href="../references.html#ref-barberis2006" role="doc-biblioref">2006</a>)</span> offered this bet to experimental participants, including those with substantial wealth such as professional investors with wealth above $10 million.</p>
-<p>70% of the sample turned down the bet.</p>
-<p>Under the axiom of diminishing marginal utility, we could conclude people are risk averse to small bets.</p>
-<p>But, for sufficiently high levels of wealth, the expected utility curve is approximately linear, and people tend to take favourable bets.</p>
-<p>The minimum utility function curvature required to reconcile an investor with $10 million declining a 50:50 bet as small as +$550 or -$500 would imply that they reject immensely favourable bets, which is not realistic.</p>
-<p><span class="citation" data-cites="rabin2000">Rabin (<a href="../references.html#ref-rabin2000" role="doc-biblioref">2000</a>)</span> showed that rejection of bets over moderate stakes can require absurd rates of risk aversion. For instance, if a person who acts consistent with expected utility theory always turns down a 50:50 bet to win $110 or lose $100 whatever their initial level of wealth, they will also turn down a 50:50 bet to win $1 billion, lose $1,000.</p>
-<p>At face value, that is ridiculous, and that is the crux of Rabin’s argument. Rejection of the low-value bet to win $110 and lose $100 would lead to absurd responses to higher-value bets. This leads Rabin to argue that risk aversion or the diminishing value of money has nothing to do with the rejection of the low-value bets.</p>
-<p>The intuition behind Rabin’s argument is as follows.</p>
-<p>Suppose we have someone who rejects a 50:50 bet to gain $110, lose $100. They are an expected utility maximiser with a weakly concave utility curve: that is, they are risk neutral or risk averse at all levels of wealth.</p>
-<p>We can plot this on a chart. The horizontal axis is wealth and the vertical axis is utility. The current wealth and utility of that wealth is marked.</p>
-<p><a href="img/rabin-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/rabin-1.png" class="img-fluid"></a></p>
-<p>We can then mark the two possible outcomes of the bet, the gain of $110 and the loss of $100. This graph is not to scale: I am exaggerating the size of the gain to make the point visually stark, but the argument holds regardless. The utility of each outcome will be a point on these vertical lines.</p>
-<p>The expected value of the bet is W+5. That is also marked.</p>
-<p><a href="img/rabin-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/rabin-3.png" class="img-fluid"></a></p>
-<p>As the person rejected the bet, the expected utility of the bet must be less than or equal to the utility of current wealth. The point on the vertical line at W+5 where we mark expected utility must align with or below the point on the vertical line at W where we mark current utility.</p>
-<p><a href="img/rabin-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/rabin-4.png" class="img-fluid"></a></p>
-<p>The expected utility of the bet is the probability-weighted utility of each of the two possible outcomes. The angle of this new line doesn’t matter, simply that it is of positive slope.</p>
-<p>From this, we can infer the relative utility of winning and losing the bet.</p>
-<p><a href="img/rabin-6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/rabin-6.png" class="img-fluid"></a></p>
-<p>As the person is risk averse at all levels of wealth, we can draw the following lines as the least risk averse they could be while still rejecting the bet. We now have part of the utility curve.</p>
-<p><a href="img/rabin-7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/rabin-7.png" class="img-fluid"></a></p>
-<p>The slope of these two lines allows us to infer that they weight the average of each dollar between their current wealth (W) and their wealth if they win the bet (W+110) only 100/110<span class="math inline">^{\text{ths}}</span> (or 10/11<span class="math inline">^{\text{ths}}</span>) as much as they weight the average dollar of the last $100 of their current wealth (between W-100 and W). We can also say that they, therefore, weight their W+110th dollar at most 10/11<span class="math inline">^{\text{ths}}</span> as much as their W-100th dollar.</p>
-<p>We can now do the same at W+210. We have assumed that they will reject the bet at all levels of wealth, so they will also reject at this wealth. We can therefore infer another piece of the utility curve (or, more specifically, a curve for the least risk averse they could be).</p>
-<p><a href="img/rabin-8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/rabin-8.png" class="img-fluid"></a></p>
-<p>Iterating the previous calculations, we can say that they will weight their W+320nd dollar only 10/11 as much as their W+110th dollar. This means they value their W+320th dollar only (10/11)<sup>2</sup> as much as their W-100th dollar.</p>
-<p>As we infer additional pieces, we can see that this person rapidly declines in the rate at which they place utility on further wealth.</p>
-<div>
-
+<p>Suppose you reject. You would not be alone in doing this. There is ample evidence that people reject favourable low-stakes bets, even when they have material wealth. <span class="citation" data-cites="barberis2006">Barberis et al. (<a href="../references.html#ref-barberis2006" role="doc-biblioref">2006</a>)</span> described an experiment where they offered a 50:50 bet to win $550 or lose $500 to a group of wealthy experimental participants. These participants included clients of a bank’s private wealth management division, with a median wealth above $10 million. Seventy-one percent of the private wealth clients turned down the bet.</p>
+<p>Under the axiom of diminishing marginal utility, we could conclude that you rejected it as you are risk averse. However, the minimum utility function curvature required to reconcile an expected utility maximiser declining bets of this nature when you hold any material level of wealth implies that you would reject immensely favourable bets.</p>
+<p>Examples in <span class="citation" data-cites="rabin2000">Rabin (<a href="../references.html#ref-rabin2000" role="doc-biblioref">2000</a>)</span> and <span class="citation" data-cites="rabin2001">Rabin and Thaler (<a href="../references.html#ref-rabin2001" role="doc-biblioref">2001</a>)</span> illustrate this. Suppose a person who acts consistent with expected utility theory always turns down a 50:50 bet to win $110 or lose $100, whatever their wealth. That person will also turn down a 50:50 bet to win $1 billion, lose $1,000. Another expected utility maximiser turns down a 50:50 bet to win $11, lose $10 at all levels of wealth. That person will turn down any 50:50 bet where they could lose $100, no matter the upside.</p>
+<p>At face value, that is ridiculous. But that is the crux of the argument. Turning down a low-value bet with a positive expected value implies that the marginal utility of money must decline quickly for small changes in wealth. Rejection of a low-value bet to win $110 or lose $100 would lead to absurd responses to higher-value bets. This leads <span class="citation" data-cites="rabin2000">Rabin (<a href="../references.html#ref-rabin2000" role="doc-biblioref">2000</a>)</span> to argue that risk aversion or the diminishing value of money has nothing to do with the rejection of low-value bets.</p>
+<p>The intuition behind the rejection of small-scale bets leading to the rejection of immensely favourable bets is as follows.</p>
+<p>Suppose we have an expected utility maximiser with a weakly concave utility curve. That is, they are risk neutral or risk averse at all levels of wealth. If we drew their utility curve, it would always be increasing at a constant or decreasing rate, depending on where you were on the utility curve.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>absurdBase <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Plot the utility curve</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.5</span>)<span class="sc">+</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Wealth"</span>, <span class="at">y =</span> <span class="st">"Utility"</span>)<span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set the theme</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">#remove numbers on each axis</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">vjust=</span><span class="fl">0.5</span>))</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>annotate_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(plot, <span class="at">W1=</span><span class="dv">250</span>, <span class="at">UW1=</span><span class="dv">3</span>, <span class="at">win=</span><span class="dv">150</span>, <span class="at">loss=</span><span class="dv">100</span>, bets, labels, <span class="at">points=</span><span class="cn">TRUE</span>) {</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(bets)) {</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    bet <span class="ot">&lt;-</span> bets[i]</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    label <span class="ot">&lt;-</span> labels[i]</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    W <span class="ot">&lt;-</span> W1<span class="sc">+</span>(win<span class="sc">+</span>loss)<span class="sc">*</span>(bet<span class="dv">-1</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (bet <span class="sc">==</span> <span class="dv">1</span>){</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>      UW <span class="ot">&lt;-</span> UW1</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>      UW <span class="ot">&lt;-</span> UW1</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(bet<span class="dv">-1</span>)) {</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        UW <span class="ot">&lt;-</span> UW <span class="sc">+</span> (loss<span class="sc">/</span>win)<span class="sc">^</span>(j<span class="dv">-1</span>)<span class="sc">+</span>(loss<span class="sc">/</span>win)<span class="sc">^</span>(j)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (label){</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      plot <span class="ot">&lt;-</span> plot <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"W+"</span>,W<span class="dv">-250</span>), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (label){</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>      plot <span class="ot">&lt;-</span> plot <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W, <span class="at">yend =</span> UW, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    plot <span class="ot">&lt;-</span> plot <span class="sc">+</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W, <span class="at">y =</span> UW, <span class="at">xend =</span> W<span class="sc">-</span>loss, <span class="at">yend =</span> UW<span class="sc">-</span>(<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>)<span class="sc">^</span>(bet<span class="dv">-1</span>), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W, <span class="at">y =</span> UW, <span class="at">xend =</span> W<span class="sc">+</span>win, <span class="at">yend =</span> UW<span class="sc">+</span>(<span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>)<span class="sc">^</span>(bet<span class="dv">-1</span>), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (points){</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>      plot <span class="ot">&lt;-</span> plot <span class="sc">+</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>              <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W, <span class="at">y =</span> UW, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(plot)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>absurd0 <span class="ot">&lt;-</span> <span class="fu">annotate_plot</span>(absurdBase, <span class="at">bets=</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>), <span class="at">labels=</span><span class="fu">rep</span>(<span class="cn">FALSE</span>, <span class="dv">15</span>), <span class="at">points=</span><span class="cn">FALSE</span>)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>absurd0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-0" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.1: Weakly concave utility curve
+</figcaption>
+<div aria-describedby="fig-absurd-0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-0-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-0-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="img/rabin-10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/rabin-10.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="img/rabin-11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/rabin-11.png" class="img-fluid"></a></p>
+</figure>
 </div>
 </div>
 </div>
-<p>We can also extended in the other direction, with losses below their current wealth.</p>
-<p><a href="img/rabin-12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="img/rabin-12.png" class="img-fluid"></a></p>
-<p>Keep iterating in this way and you end up with some ridiculous results. You value the 2100th dollar above your current wealth only 40% as much as your last current dollar of your wealth - (10/11)<sup>10</sup>&nbsp;- reducing by a constant factor of 10/11 every $210. Or you value the 9000th dollar above your current wealth at only 2% of your last current dollar [(10/11)<sup>40</sup>]. This is an absurd rate of discounting.</p>
-<p>Taking this iteration to the extreme, it doesn’t take long for additional money to have effectively zero value. Hence the result, reject the 50:50 win $110, lose $100 bet, and you’ll reject the win any amount, lose $1,000 bet.</p>
-<p><a href="img/rabin-13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="img/rabin-13.png" class="img-fluid"></a></p>
+<p>This person rejects a 50:50 bet to gain $150, lose $100. (I have chosen this size bet so I can draw this visually to scale and make the point clear. The argument follows the same logic for a win $110, lose $100 bet.) We also assume this person would reject the bet regardless of their level of wealth at the time the bet was offered to them.</p>
+<p>I can plot this on a chart. I will develop this chart step by step so that you can understand each element.</p>
+<p>In <a href="#fig-absurd-1" class="quarto-xref">Figure&nbsp;<span>11.2</span></a>, the horizontal axis is wealth and the vertical axis is utility. I have marked the current wealth, <span class="math inline">W</span>, and utility of that person’s wealth, <span class="math inline">U(W)</span>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>W1 <span class="ot">&lt;-</span> <span class="dv">250</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>win <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>loss <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>UW1<span class="ot">=</span><span class="dv">3</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>absurdBase <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Plot the utility curve</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.5</span>)<span class="sc">+</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Wealth"</span>, <span class="at">y =</span> <span class="st">"Utility"</span>)<span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set the theme</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">#remove numbers on each axis</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">vjust=</span><span class="fl">0.5</span>))</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>absurd1 <span class="ot">&lt;-</span> absurdBase<span class="sc">+</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">#set limits - need to include room for labels</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">45</span>, <span class="dv">720</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">6</span>))<span class="sc">+</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add labels W, U(W), dot at W/U(W) and line to curve indicating each</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1, <span class="at">yend =</span> UW1, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW1, <span class="at">xend =</span> W1, <span class="at">yend =</span> UW1, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW1, <span class="at">label =</span> <span class="st">"U(W)"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W1, <span class="at">y =</span> UW1, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>absurd1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.2: Utility of current wealth
+</figcaption>
+<div aria-describedby="fig-absurd-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-1-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-1-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>I can then mark in <a href="#fig-absurd-2" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> the two possible outcomes of the bet, the gain of $150 (<span class="math inline">W+150</span>) and the loss of $100 (<span class="math inline">W-100</span>). The utility of each outcome will be a point on these vertical lines.</p>
+<p>The expected value of the bet is a gain of $25. That is also marked.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>absurd2 <span class="ot">&lt;-</span> absurd1<span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the possible win of the first bet</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">+</span>win, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">+</span>win, <span class="at">yend =</span> <span class="dv">4</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">+</span>win, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+150"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>absurd2<span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the possible loss of the first bet</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">-</span>loss, <span class="at">yend =</span> <span class="dv">4</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W-100"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the expected value of the first bet</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> <span class="dv">4</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+25"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.3: Outcomes of the bet
+</figcaption>
+<div aria-describedby="fig-absurd-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-2-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-2-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>As the person rejected the bet, the expected utility of the bet must be less than or equal to the utility of current wealth. The point on the vertical line at <span class="math inline">W+25</span> where I mark expected utility must be level with or below the point on the vertical line at <span class="math inline">W</span> where we mark current utility (<span class="math inline">U(W)</span>). I have placed a dot on the <span class="math inline">W+25</span> line in <a href="#fig-absurd-3" class="quarto-xref">Figure&nbsp;<span>11.4</span></a> indicating the highest that the expected utility can be.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>absurd3 <span class="ot">&lt;-</span> absurd2<span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Extend line for expected utility of the first bet including dot</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1, <span class="at">y =</span> UW1, <span class="at">xend =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> UW1, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> UW1, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>absurd3<span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the possible loss of the first bet</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">-</span>loss, <span class="at">yend =</span> <span class="dv">4</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W-100"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the expected value of the first bet</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> <span class="dv">4</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+25"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-3" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.4: Expected utility of the bet
+</figcaption>
+<div aria-describedby="fig-absurd-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-3-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-3-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>The expected utility of the bet is the probability-weighted utility of each of the two possible outcomes. Therefore, If I draw a line between the utility of each outcome, that line will pass through the expected utility of the bet.</p>
+<p>I have added a line in <a href="#fig-absurd-4" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> between the utility for the two possible outcomes, with the expected utility of the bet on that line (or more specifically, in the middle of the line as each outcome has probability 50%).</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>absurd4 <span class="ot">&lt;-</span> absurd3<span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add line between utility for possible outcomes of the first bet plus dots</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> UW1<span class="dv">-1</span>, <span class="at">xend =</span> W1<span class="sc">+</span>win, <span class="at">yend =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> UW1<span class="dv">-1</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W1<span class="sc">+</span>win, <span class="at">y =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the possible loss of the first bet</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">-</span>loss, <span class="at">yend =</span> <span class="dv">2</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W-100"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the expected value of the first bet</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> <span class="dv">3</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+25"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add horizontal line for U(W+150) and U(W-100) and expected value</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">xend =</span> W1<span class="sc">+</span><span class="dv">150</span>, <span class="at">yend =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">label =</span> <span class="st">"U(W+150)"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW1<span class="dv">-1</span>, <span class="at">xend =</span> W1<span class="sc">-</span>loss, <span class="at">yend =</span> UW1<span class="dv">-1</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW1<span class="dv">-1</span>, <span class="at">label =</span> <span class="st">"U(W-100)"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>absurd4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-4" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.5: Utility of the outcomes of the bet
+</figcaption>
+<div aria-describedby="fig-absurd-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-4-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-4-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>We now have three points on the utility curve: current wealth and their utility if the person lost or won the bet.</p>
+<p>As the person is risk averse at all levels of wealth, we know that all parts of the utility curve are at a minimum weakly concave. We can therefore draw in <a href="#fig-absurd-5" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> part of the utility curve as the least risk averse they could be while still rejecting the bet. This is drawn in the solid black line.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>absurd5 <span class="ot">&lt;-</span> absurd4<span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add line linking the utility of the two first bet outcomes and utility of current wealth</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1, <span class="at">y =</span> UW1, <span class="at">xend =</span> W1<span class="sc">-</span>loss, <span class="at">yend =</span> UW1<span class="dv">-1</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1, <span class="at">y =</span> UW1, <span class="at">xend =</span> W1<span class="sc">+</span>win, <span class="at">yend =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>absurd5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-5" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.6: Utility curve
+</figcaption>
+<div aria-describedby="fig-absurd-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-5-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-5-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>From the rejection of the bet, we know that:</p>
+<p><span class="math display">
+U(W+150)-U(W)\leq U(W)-U(W-100)
+</span></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>absurd5a <span class="ot">&lt;-</span> absurd5<span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#add curly bracket indicating increase in utility with win</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">425</span>, <span class="at">y =</span> <span class="fl">3.44</span>, <span class="at">label =</span> <span class="st">'{'</span>, <span class="at">angle =</span> <span class="dv">180</span>, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">family =</span> <span class="st">'Source Sans Pro ExtraLight'</span>)<span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">500</span>, <span class="at">y =</span> <span class="fl">3.62</span>, <span class="at">label =</span> <span class="st">"U(W+150) - U(W)"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.4</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#add curly bracket indicating decrease in utility with loss</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">425</span>, <span class="at">y =</span> <span class="fl">2.44</span>, <span class="at">label =</span> <span class="st">'{'</span>, <span class="at">angle =</span> <span class="dv">180</span>, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">family =</span> <span class="st">'Source Sans Pro ExtraLight'</span>)<span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">500</span>, <span class="at">y =</span> <span class="fl">2.62</span>, <span class="at">label =</span> <span class="st">"U(W) - U(W-100)"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.4</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>absurd5a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-5a" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-5a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.7: Utility curve
+</figcaption>
+<div aria-describedby="fig-absurd-5a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-5a-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-5a-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>This means that you value each dollar between <span class="math inline">W</span> and <span class="math inline">W+150</span>, on average, by at most 100/150ths (or 2/3rds) as much as you value each dollar, on average, between <span class="math inline">W</span> and <span class="math inline">W-100</span>. We can see this in the slope of the two black lines forming the part of the utility curve we have drawn. The second part has two thirds the slope of the first.</p>
+<p>Further, by weak concavity, we can say that you value your <span class="math inline">W+150</span>th dollar at most two thirds as much as you value your <span class="math inline">W-100</span>th dollar. The relative value of each dollar has declined by at least one third over the span of $250.</p>
+<p>Let us now consider what would happen if this person had $250 more wealth: that is, they have <span class="math inline">W+250</span>. They are then offered the same bet.</p>
+<p>We have assumed that they will reject the bet at all levels of wealth, so they will also reject at this wealth. We can, therefore, infer another piece of the utility curve (or, more specifically, a curve for the least risk averse they could be). I have marked in <a href="#fig-absurd-6" class="quarto-xref">Figure&nbsp;<span>11.8</span></a> the utility of their wealth, the highest the expected utility of the bet can be if they reject the bet, and the utility of the two possible outcomes of the bet. The next section of solid black line represents another part of the utility curve that is at the minimum risk aversion they could be while still rejecting the bet.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>W2 <span class="ot">&lt;-</span> W1 <span class="sc">+</span> <span class="dv">250</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>UW2 <span class="ot">&lt;-</span> UW1 <span class="sc">+</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">/</span><span class="dv">3</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>absurd6 <span class="ot">&lt;-</span> <span class="fu">annotate_plot</span>(absurdBase, <span class="at">bets=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">labels=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>absurd6<span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add horizontal line for U(W2) and expected value</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW2, <span class="at">xend =</span> W2<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> UW2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW2, <span class="at">label =</span> <span class="st">"U(W+250)"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.6</span>)<span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line and dot for the possible win of the first bet</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">+</span>win, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">+</span>win, <span class="at">yend =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">+</span>win, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+150"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W1<span class="sc">+</span>win, <span class="at">y =</span> UW1<span class="sc">+</span><span class="dv">1</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line and dot for the possible loss of the first bet</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W1<span class="sc">-</span>loss, <span class="at">yend =</span> UW1<span class="dv">-1</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W-100"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W1<span class="sc">-</span>loss, <span class="at">y =</span> UW1<span class="dv">-1</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add labels and line W+250 - doing here as want to remove later</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W2, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+250"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W2, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W2, <span class="at">yend =</span> UW2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the possible win of the second bet, including a dot</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">yend =</span> UW2<span class="sc">+</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">y =</span> <span class="fl">5.333</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+400"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add line linking for the expected utility of the two second bet outcomes</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W2<span class="dv">-100</span>, <span class="at">y =</span> UW2<span class="dv">-2</span><span class="sc">/</span><span class="dv">3</span>, <span class="at">xend =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">yend =</span> UW2<span class="sc">+</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line and dot for the expected value of the second bet</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W2<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> UW2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+275"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> UW2, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="co">#set limits - need to include room for labels</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">45</span>, <span class="dv">720</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-6" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.8: Utility curve extended
+</figcaption>
+<div aria-describedby="fig-absurd-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-6-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="quarto-lightbox-gallery-11"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-6-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>Iterating the previous calculations, I can say that they will weight their <span class="math inline">W+400</span>th dollar only two thirds as much as their <span class="math inline">W+150</span>th dollar. This means they value their <span class="math inline">W+400</span>th dollar only (2/3)<sup>2</sup> or 4/9 as much as their <span class="math inline">W-100</span>th dollar. Or put another way, over the span of $500, the relative value of each dollar has declined by five ninths.</p>
+<p>As we infer additional pieces, we can see in <a href="#fig-absurd-7" class="quarto-xref">Figure&nbsp;<span>11.9</span></a> that this person rapidly declines in the rate at which they place utility on further wealth. The increase in slope for each additional sum becomes less and less.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>W3 <span class="ot">&lt;-</span> W2 <span class="sc">+</span> <span class="dv">250</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>UW3 <span class="ot">&lt;-</span> UW2 <span class="sc">+</span> <span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span><span class="sc">/</span><span class="dv">9</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>absurd7 <span class="ot">&lt;-</span> <span class="fu">annotate_plot</span>(absurd6, <span class="at">bets=</span><span class="fu">c</span>(<span class="dv">3</span>), <span class="at">labels=</span><span class="fu">c</span>(<span class="cn">FALSE</span>))<span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W3, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W3, <span class="at">yend =</span> UW3, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>absurd7<span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add line for U(W2) and expected value</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW3, <span class="at">xend =</span> W3<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> UW3, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> UW3, <span class="at">label =</span> <span class="st">"U(W+500)"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.6</span>)<span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add labels W+500 - doing here so can centre later</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W3, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+500"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line for the possible win of the second bet, including a dot</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">yend =</span> UW2<span class="sc">+</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">y =</span> <span class="fl">5.333</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W2<span class="sc">+</span><span class="dv">150</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+400"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line and dot for the possible win of the third bet</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W3<span class="sc">+</span>win, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W3<span class="sc">+</span>win, <span class="at">yend =</span> UW3<span class="sc">+</span><span class="dv">4</span><span class="sc">/</span><span class="dv">9</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W3<span class="sc">+</span>win, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+650"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W3<span class="sc">+</span>win, <span class="at">y =</span> UW3<span class="sc">+</span><span class="dv">4</span><span class="sc">/</span><span class="dv">9</span>, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add line linking for the expected utility of the two third bet outcomes</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W3<span class="dv">-100</span>, <span class="at">y =</span> UW3<span class="dv">-4</span><span class="sc">/</span><span class="dv">9</span>, <span class="at">xend =</span> W3<span class="sc">+</span><span class="dv">150</span>, <span class="at">yend =</span> UW3<span class="sc">+</span><span class="dv">4</span><span class="sc">/</span><span class="dv">9</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add vertical line and dot for the expected value of the third bet</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> W3<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> W3<span class="sc">+</span><span class="dv">25</span>, <span class="at">yend =</span> UW3, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W3<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+525"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"point"</span>, <span class="at">x =</span> W3<span class="sc">+</span><span class="dv">25</span>, <span class="at">y =</span> UW3, <span class="at">size =</span> <span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>  <span class="co">#set limits - need to include room for labels</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">55</span>, <span class="dv">920</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-7" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.9: Utility curve further extended
+</figcaption>
+<div aria-describedby="fig-absurd-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-7-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-12" data-gallery="quarto-lightbox-gallery-12"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-7-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>Over time, the slope approaches a horizontal asymptote: effectively, a cap on the level of utility they can achieve, however wealthy they may become. This is shown in <a href="#fig-absurd-8" class="quarto-xref">Figure&nbsp;<span>11.10</span></a>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>absurd8 <span class="ot">&lt;-</span> <span class="fu">annotate_plot</span>(absurd7, <span class="at">bets=</span><span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>), <span class="at">labels=</span><span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))<span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add labels W+500</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> W3, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"W+500"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>absurd8<span class="sc">+</span>  </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#set limits - need to include room for labels</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">45</span>, <span class="dv">2500</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-8" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.10: Utility curve asymptote
+</figcaption>
+<div aria-describedby="fig-absurd-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-8-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-13" data-gallery="quarto-lightbox-gallery-13"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-8-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>Keep iterating in this way and you end up with some ridiculous results. You value the 2500th dollar above your current wealth only 2% as much as your last current dollar of your wealth - (2/3)<sup>10</sup> - reducing by a constant factor of 2/3 every $250. This is an absurd rate of discounting.</p>
+<p>Taking this iteration to the extreme, it doesn’t take long for additional money to have effectively zero value. In <a href="#fig-absurd-9" class="quarto-xref">Figure&nbsp;<span>11.11</span></a>, we see the utility curve approaching a limit. Any gain of money from <span class="math inline">W+3000</span> upwards is valued at almost nothing, meaning a gain beyond that level, no matter how large, could compensate for the possibility of losing $1,000.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>absurd9 <span class="ot">&lt;-</span> <span class="fu">annotate_plot</span>(absurd8, <span class="at">bets=</span><span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>,<span class="dv">15</span>), <span class="at">labels=</span><span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>absurd9 <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#set limits - need to include room for labels</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">45</span>, <span class="dv">4000</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-absurd-9" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-absurd-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.11: Utility curve limit
+</figcaption>
+<div aria-describedby="fig-absurd-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-9-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-14" data-gallery="quarto-lightbox-gallery-14"><img src="anomalies-in-expected-utility-theory_files/figure-html/fig-absurd-9-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="framing" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="framing"><span class="header-section-number">11.3</span> Framing</h2>
@@ -827,6 +1282,19 @@ pz+(1-p)x\succcurlyeq pz+(1-p)y
 <p>However, in the first case, you feel poor and in the second case you feel rich. This is because you are comparing the outcome to your reference point of $40,000 in the first case and $20,000 in the second case. You are not assessing the absolute outcome but appear to be using a reference point.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;11.1: Weakly concave utility curve</span>
+<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;11.2: Utility of current wealth</span>
+<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;11.3: Outcomes of the bet</span>
+<span class="glightbox-desc lightbox-desc-7">Figure&nbsp;11.4: Expected utility of the bet</span>
+<span class="glightbox-desc lightbox-desc-8">Figure&nbsp;11.5: Utility of the outcomes of the bet</span>
+<span class="glightbox-desc lightbox-desc-9">Figure&nbsp;11.6: Utility curve</span>
+<span class="glightbox-desc lightbox-desc-10">Figure&nbsp;11.7: Utility curve</span>
+<span class="glightbox-desc lightbox-desc-11">Figure&nbsp;11.8: Utility curve extended</span>
+<span class="glightbox-desc lightbox-desc-12">Figure&nbsp;11.9: Utility curve further extended</span>
+<span class="glightbox-desc lightbox-desc-13">Figure&nbsp;11.10: Utility curve asymptote</span>
+<span class="glightbox-desc lightbox-desc-14">Figure&nbsp;11.11: Utility curve limit</span>
+</div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-allais1953" class="csl-entry" role="listitem">
 Allais, M. (1953). Le comportement de l’homme rationnel devant le risque: Critique des postulats et axiomes de l’ecole americaine. <em>Econometrica</em>, <em>21</em>(4), 503–546. <a href="https://doi.org/10.2307/1907921">https://doi.org/10.2307/1907921</a>
@@ -842,6 +1310,9 @@ Kahneman, D., and Tversky, A. (1984). Choices, values, and frames. <em>American 
 </div>
 <div id="ref-rabin2000" class="csl-entry" role="listitem">
 Rabin, M. (2000). Risk Aversion and Expected-Utility Theory: A Calibration Theorem. <em>Econometrica</em>, <em>68</em>(5), 1281–1292. <a href="http://www.jstor.org/stable/2999450">http://www.jstor.org/stable/2999450</a>
+</div>
+<div id="ref-rabin2001" class="csl-entry" role="listitem">
+Rabin, M., and Thaler, R. H. (2001). Anomalies: Risk Aversion. <em>Journal of Economic Perspectives</em>, <em>15</em>(1), 219–232. <a href="https://doi.org/10.1257/jep.15.1.219">https://doi.org/10.1257/jep.15.1.219</a>
 </div>
 </div>
 </section>
@@ -1290,7 +1761,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

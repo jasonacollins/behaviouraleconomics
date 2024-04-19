@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "20 October 2023"
+  date: "19 April 2024"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -81,8 +81,6 @@ book:
     background: primary
     search: true
     right:
-      - text: "PDF version"
-        href: https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf
       - text: "Blog"
         href: https://www.jasoncollins.blog/
       - text: "About"
@@ -117,13 +115,14 @@ format:
     link-external-newwindow: true
     code-fold: true
     fig-cap-location: top
-#    mermaid-format: png (commented out as problem when doing full build)
-  pdf:
-    documentclass: report
-    echo: false
-    toc-depth: 1
-    fig-width: 6
-    fig-height: 4
+    mermaid-format: png (commented out as problem when doing full build)
+  # pdf:
+  #   documentclass: report
+  #   echo: false
+  #   toc-depth: 1
+  #   fig-width: 7
+  #   fig-height: 5
+  #   fig-format: png
 
 lightbox: auto
 

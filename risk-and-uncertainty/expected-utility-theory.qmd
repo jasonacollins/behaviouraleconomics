@@ -69,7 +69,7 @@ I will now look at each of the attitudes in turn.
 
 ### Risk aversion
 
-A risk-averse person prefers a sure amount to a gamble with the same expected value. If I strongly prefer $10 for certain to a gamble with an expected value of $10, I am risk averse. The certainty equivalent of the prospect for this person would be less than $10.
+A risk-averse person prefers a sure amount to a gamble with the same expected value. If I strongly prefer \$10 for certain to a gamble with an expected value of \$10, I am risk averse. The certainty equivalent of the prospect for this person would be less than \$10.
 
 The following chart illustrates. The x-axis is the amount of the good over which the person receives utility. In the case of monetary gambles of the type we are talking about, the x-axis is the amount of money. The y-axis is the utility the person receives from that money.
 
@@ -77,7 +77,7 @@ The utility curve is a plot of the utility function for each amount of money.
 
 The gamble shown in this chart has two possible outcomes, $x_1$ and $x_2$. An outcome of $x_1$ would result in utility $U(x_1)$. An outcome of $x_2$ would result in utility $U(x_2)$.
 
-I have drawn a straight dash-dot-dot line between the points on the utility curve for each of those outcomes. The expected utility from any gamble involving those two outcomes would fall on that dashed line. Where on that line would depend on the probability of each outcome and it would occur at a point in line with the expected value of the gamble. You can see the expected value of the gamble marked on the x-axis. If we extend up from that point we can read the expected utility of the gamble, E[U(X)], from the y-axis.
+I have drawn a straight dash-dot line between the points on the utility curve for each of those outcomes. The expected utility from any gamble involving those two outcomes would fall on that line. Where on that line would depend on the probability of each outcome and it would occur at a point in line with the expected value of the gamble. You can see the expected value of the gamble marked on the x-axis. If we extend up from that point we can read the expected utility of the gamble, E[U(X)], from the y-axis.
 
 One way to think about why projecting the expected value onto the expected utility line identifies the expected utility of the bet is that each of the expected value and expected utility are weighted by the same probabilities. They both lie the same horizontal distance between the two potential outcomes.
 
@@ -87,7 +87,87 @@ $$
 U(E[x])>E[U(x)]
 $$
 
-![](img/risk-averse.png)
+```{r}
+#| label: fig-risk-aversion
+#| fig-cap: "Risk aversion"
+
+library(ggplot2)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+p1 <- 0.5
+x1 <- 30 #loss
+p2 <- 0.5
+x2 <- 200 #win
+ev <- p1*x1+p2*x2 #expected value of gamble
+xc <-115 #certain outcome
+ce <-(p1*u(x1)+p2*u(x2))^(1/1.5) #certainty equivalent
+px2 <-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
+
+  #Add labels x1, U(x1) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "x1", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(x1)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add line to curve indicating utility of expected value
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U[E(X)]", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels x2, U(x2) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "x2", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(x2)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[X], E[U(X)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
+
+The expected utility line between the two outcomes is always below the the utility curve as the curve is concave. A concave curve leads to risk aversion.
 
 Finally, the horizontal dashed line identifying E[U(X)] allows us to identify the certainty equivalent of the gamble. At the point on the x-axis marked CE, the utility from CE is equal to the expected utility of the prospect with expected value E[X]. As the certainty equivalent is less than the expected value, this provides another way of saying that the person is risk averse.
 
@@ -99,7 +179,75 @@ The following chart illustrates. Again we have two possible outcomes, $x_1$ and 
 
 A line between the points on the utility curve for each of those outcomes lies on the utility curve itself. For any probability, the utility of the expected value and the expected utility are the same.
 
-![](img/risk-neutral.png)
+```{r}
+#| label: fig-risk-neutral
+#| fig-cap: "Risk neutral"
+
+library(ggplot2)
+
+u <- function(x){
+  x
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+p1 <- 0.5
+x1 <- 30 #loss
+p2 <- 0.5
+x2 <- 200 #win
+ev <- p1*x1+p2*x2 #expected value of gamble
+xc <-115 #certain outcome
+ce <-p1*u(x1)+p2*u(x2) #certainty equivalent
+px2 <-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #set limits - need to include room for labels
+  coord_cartesian(xlim = c(-40, 220), ylim = c(-0.25, 220))+
+
+  #Add labels x1, U(x1) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "x1", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(x1)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add line to curve indicating utility of expected value
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U[E(X)]=E[U(X)]", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add labels x2, U(x2) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "x2", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(x2)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[X], E[U(X)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]=CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
 
 ### Risk seeking
 
@@ -107,4 +255,85 @@ A risk-seeking person prefers a gamble to a sure sum equal to the expected value
 
 The following chart illustrates. Again I have drawn a dash-dot-dot line between the points on the utility curve for each of those outcomes. That line is always above the utility curve. That is, for any probabilities involving those two outcomes (except one of those outcomes with certainty), the expected utility of the prospect is more than the utility of the expected value of the prospect.
 
-![](img/risk-seeking.png)
+```{r}
+#| label: fig-risk-seeking
+#| fig-cap: "Risk seeking"
+
+library(ggplot2)
+
+u <- function(x){
+  x^1.5
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+p1 <- 0.5
+x1 <- 30 #loss
+p2 <- 0.5
+x2 <- 200 #win
+ev <- p1*x1+p2*x2 #expected value of gamble
+xc <-115 #certain outcome
+ce <-(p1*u(x1)+p2*u(x2))^(1/1.5) #certainty equivalent
+px2 <-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 3000))+
+
+  #Add labels x1, U(x1) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "x1", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(x1)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add line to curve indicating utility of expected value
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U[E(X)]", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels x2, U(x2) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "x2", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(x2)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[X], E[U(X)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE" plus line extending to utility curve
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = 0, y = u(ce), xend = ce, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")
+
+```
+
+The expected utility line between the two outcomes is always above the the utility curve as the curve is convex. A convex curve leads to risk seeking behaviour.
