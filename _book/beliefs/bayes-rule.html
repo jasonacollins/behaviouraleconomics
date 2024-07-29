@@ -646,7 +646,6 @@ window.Quarto = {
   <li><a href="#a-rigged-coin" id="toc-a-rigged-coin" class="nav-link" data-scroll-target="#a-rigged-coin"><span class="header-section-number">33.2</span> A rigged coin</a></li>
   <li><a href="#balls-from-an-urn" id="toc-balls-from-an-urn" class="nav-link" data-scroll-target="#balls-from-an-urn"><span class="header-section-number">33.3</span> Balls from an urn</a></li>
   <li><a href="#the-monty-hall-problem" id="toc-the-monty-hall-problem" class="nav-link" data-scroll-target="#the-monty-hall-problem"><span class="header-section-number">33.4</span> The Monty Hall problem</a></li>
-  <li><a href="#a-loaded-dice" id="toc-a-loaded-dice" class="nav-link" data-scroll-target="#a-loaded-dice"><span class="header-section-number">33.5</span> A loaded dice</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -844,31 +843,6 @@ P(C2|D3)&amp;=\frac{P(D3|C2)P(C2)}{P(D3)} \\[12pt]
 &amp;=\frac{2}{3}
 \end{align*}</span>
 <p>The contestant should switch doors.</p>
-</section>
-<section id="a-loaded-dice" class="level2" data-number="33.5">
-<h2 data-number="33.5" class="anchored" data-anchor-id="a-loaded-dice"><span class="header-section-number">33.5</span> A loaded dice</h2>
-<p>You have two six-sided dice.</p>
-<ul>
-<li><p>One die is fair with the numbers 1 through to 6 occurring with equal probability.</p></li>
-<li><p>The other die is loaded and always rolls an even number. It rolls a 2, 4 or 6 with equal probability.</p></li>
-</ul>
-<p>You pull one die out of your pocket and roll it. You did not check which die it was before you rolled. (Assume you could have pulled either die out of your pocket with equal probability.)</p>
-<p>a) The die shows a six. What is the probability that it is the loaded die? Calculate your answer using Bayes’ rule.</p>
-<span class="math display">\begin{align*}
-P(\text{D1 loaded}|6)&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[6pt]
-&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6|\text{D1 loaded})P(\text{D1 loaded})+P(6|\text{D1 fair})P(\text{D1 fair})} \\[6pt]
-&amp;=\frac{\frac{1}{3}\times 0.5}{\frac{1}{3}\times 0.5+\frac{1}{6}\times 0.5} \\[6pt]
-&amp;=0.67
-\end{align*}</span>
-<p>The first die is the loaded die with 66.7% probability.</p>
-<p>b) You pull the other die out of your pocket and roll it. It shows a 5. What is the updated probability that the first die you pulled out of your pocket is the loaded die? Calculate your answer using Bayes’ rule.</p>
-<span class="math display">\begin{align*}
-P(\text{D2 fair}|5)&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6pt]
-&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5|\text{D2 fair})P(\text{D2 fair})+P(5|\text{D2 loaded})P(\text{D2 loaded})} \\[6pt]
-&amp;=\frac{\frac{1}{6}\times \frac{2}{3}}{\frac{1}{6}\times \frac{2}{3}+0\times \frac{1}{3}} \\[6pt]
-&amp;=1
-\end{align*}</span>
-<p>The first die is the loaded die with 100% probability. This should make intuitive sense. The second die showed a 5 and is, therefore, fair with 100% probability. The loaded die never shows a 5.</p>
 
 
 </section>

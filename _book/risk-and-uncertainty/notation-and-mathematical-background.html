@@ -682,10 +682,8 @@ window.Quarto = {
   <li><a href="#notation" id="toc-notation" class="nav-link active" data-scroll-target="#notation"><span class="header-section-number">5.1</span> Notation</a></li>
   <li><a href="#mathematical-background" id="toc-mathematical-background" class="nav-link" data-scroll-target="#mathematical-background"><span class="header-section-number">5.2</span> Mathematical background</a>
   <ul class="collapse">
-  <li><a href="#exponentiation" id="toc-exponentiation" class="nav-link" data-scroll-target="#exponentiation"><span class="header-section-number">5.2.1</span> Exponentiation</a></li>
-  <li><a href="#the-exponential-function" id="toc-the-exponential-function" class="nav-link" data-scroll-target="#the-exponential-function"><span class="header-section-number">5.2.2</span> The exponential function</a></li>
-  <li><a href="#the-logarithmic-function" id="toc-the-logarithmic-function" class="nav-link" data-scroll-target="#the-logarithmic-function"><span class="header-section-number">5.2.3</span> The logarithmic function</a></li>
-  <li><a href="#differentiation" id="toc-differentiation" class="nav-link" data-scroll-target="#differentiation"><span class="header-section-number">5.2.4</span> Differentiation</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="header-section-number">5.2.1</span> Functions</a></li>
+  <li><a href="#differentiation" id="toc-differentiation" class="nav-link" data-scroll-target="#differentiation"><span class="header-section-number">5.2.2</span> Differentiation</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -740,8 +738,10 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <section id="mathematical-background" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="mathematical-background"><span class="header-section-number">5.2</span> Mathematical background</h2>
 <p>We will use some basic mathematical concepts to analyse expected utility. I will briefly review these concepts here.</p>
-<section id="exponentiation" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="exponentiation"><span class="header-section-number">5.2.1</span> Exponentiation</h3>
+<section id="functions" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="functions"><span class="header-section-number">5.2.1</span> Functions</h3>
+<section id="exponentiation" class="level4" data-number="5.2.1.1">
+<h4 data-number="5.2.1.1" class="anchored" data-anchor-id="exponentiation"><span class="header-section-number">5.2.1.1</span> Exponentiation</h4>
 <p>Exponentiation is a mathematical operation where a number is multiplied by itself a certain number of times.</p>
 <p>Exponentiation is written as <span class="math inline">f(x)=x^a</span>. That is, <span class="math inline">x</span> is multiplied by itself <span class="math inline">a</span> times. For example, <span class="math inline">2^3=2\times2\times2=8</span>.</p>
 <p>The exponent <span class="math inline">a</span> can be any real number, including fractions and negative numbers. For example, a plot of the function <span class="math inline">f(x)=x^{0.5}</span> is shown in <a href="#fig-square-root" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>.</p>
@@ -777,8 +777,8 @@ Figure&nbsp;5.1: Square root function
 </div>
 </div>
 </section>
-<section id="the-exponential-function" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="the-exponential-function"><span class="header-section-number">5.2.2</span> The exponential function</h3>
+<section id="the-exponential-function" class="level4" data-number="5.2.1.2">
+<h4 data-number="5.2.1.2" class="anchored" data-anchor-id="the-exponential-function"><span class="header-section-number">5.2.1.2</span> The exponential function</h4>
 <p>The exponential function is written as <span class="math inline">f(x)=e^x</span>. The letter <span class="math inline">e</span> is a constant, approximately equal to 2.71828. It is a special case of exponentiation where the base is <span class="math inline">e</span>, which is multiplied by itself <span class="math inline">x</span> times.</p>
 <p>A plot of the exponential function is shown in <a href="#fig-exponential-function" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>.</p>
 <div class="cell">
@@ -812,8 +812,8 @@ Figure&nbsp;5.2: The exponential function
 </div>
 </div>
 </section>
-<section id="the-logarithmic-function" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="the-logarithmic-function"><span class="header-section-number">5.2.3</span> The logarithmic function</h3>
+<section id="the-logarithmic-function" class="level4" data-number="5.2.1.3">
+<h4 data-number="5.2.1.3" class="anchored" data-anchor-id="the-logarithmic-function"><span class="header-section-number">5.2.1.3</span> The logarithmic function</h4>
 <p>The logarithmic function is written as <span class="math inline">f(x)=\ln(x)</span> or <span class="math inline">\log_e(x)</span>.</p>
 <p>The logarithmic function is the inverse of the exponential function. That is, if <span class="math inline">f(x)=e^x</span>, then <span class="math inline">x=\ln(f(x))</span>.</p>
 <p>A plot of the logarithmic function is shown in <a href="#fig-logarithmic-function" class="quarto-xref">Figure&nbsp;<span>5.3</span></a>.</p>
@@ -847,8 +847,9 @@ Figure&nbsp;5.3: The logarithmic function
 </div>
 <p>Note that the logarithmic function is only defined for positive values of <span class="math inline">x</span>. The logarithm of zero is undefined.</p>
 </section>
-<section id="differentiation" class="level3" data-number="5.2.4">
-<h3 data-number="5.2.4" class="anchored" data-anchor-id="differentiation"><span class="header-section-number">5.2.4</span> Differentiation</h3>
+</section>
+<section id="differentiation" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="differentiation"><span class="header-section-number">5.2.2</span> Differentiation</h3>
 <p>Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as <span class="math inline">\frac{d}{dx}f(x)</span> or <span class="math inline">\frac{dy}{dx}</span> or <span class="math inline">f'(x)</span>.</p>
 <p>There are several simple rules to differentiate a function. The rules relevant to these notes are as follows.</p>
 <p>The derivative of a constant is zero.</p>
@@ -886,10 +887,18 @@ Figure&nbsp;5.3: The logarithmic function
 <p><span class="math display">
 \frac{d}{dx}\frac{1}{x}=\frac{d}{dx}x^{-1}=-1x^{-2}=-\frac{1}{x^2}
 </span></p>
-<section id="the-second-derivative" class="level4" data-number="5.2.4.1">
-<h4 data-number="5.2.4.1" class="anchored" data-anchor-id="the-second-derivative"><span class="header-section-number">5.2.4.1</span> The second derivative</h4>
+<section id="the-second-derivative" class="level4" data-number="5.2.2.1">
+<h4 data-number="5.2.2.1" class="anchored" data-anchor-id="the-second-derivative"><span class="header-section-number">5.2.2.1</span> The second derivative</h4>
 <p>The second derivative of the function is a measure of the curvature of the function or the rate of change of the slope. We can calculate the second derivative by taking the derivative of the first derivative.</p>
+<p><span class="math display">
+\frac{d^2}{dx^2}f(x)=\frac{d}{dx}\left(\frac{d}{dx}f(x)\right)
+</span></p>
 <p>We can use the second derivative to determine whether a function is concave or convex. A function is concave if the second derivative is negative and convex if the second derivative is positive.</p>
+<p><span class="math display">
+\frac{d^2}{dx^2}f(x)&gt;0 \text{ for all } x \Rightarrow \text{f(x) is convex}
+</span> <span class="math display">
+\frac{d^2}{dx^2}f(x)&lt;0 \text{ for all } x \Rightarrow \text{f(x) is concave}
+</span></p>
 <p>The second derivative of a function is written as <span class="math inline">\frac{d^2}{dx^2}f(x)</span> or <span class="math inline">\frac{d^2 y}{dx^2}</span> or <span class="math inline">f''(x)</span>.</p>
 <p>For example, if <span class="math inline">f(x)=x^2</span>, then:</p>
 <p><span class="math display">
@@ -1377,7 +1386,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

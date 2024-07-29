@@ -40,7 +40,9 @@ It is typically not difficult to determine which is which.
 
 We will use some basic mathematical concepts to analyse expected utility. I will briefly review these concepts here.
 
-### Exponentiation
+### Functions
+
+#### Exponentiation
 
 Exponentiation is a mathematical operation where a number is multiplied by itself a certain number of times.
 
@@ -69,7 +71,7 @@ ggplot(df, aes(x, y)) +
 
 ```
 
-### The exponential function
+#### The exponential function
 
 The exponential function is written as $f(x)=e^x$. The letter $e$ is a constant, approximately equal to 2.71828. It is a special case of exponentiation where the base is $e$, which is multiplied by itself $x$ times.
 
@@ -96,7 +98,7 @@ ggplot(df, aes(x, y)) +
 ```
 
 
-### The logarithmic function
+#### The logarithmic function
 
 The logarithmic function is written as $f(x)=\ln(x)$ or $\log_e(x)$.
 
@@ -188,7 +190,18 @@ $$
 
 The second derivative of the function is a measure of the curvature of the function or the rate of change of the slope. We can calculate the second derivative by taking the derivative of the first derivative.
 
+$$
+\frac{d^2}{dx^2}f(x)=\frac{d}{dx}\left(\frac{d}{dx}f(x)\right)
+$$
+
 We can use the second derivative to determine whether a function is concave or convex. A function is concave if the second derivative is negative and convex if the second derivative is positive.
+
+$$
+\frac{d^2}{dx^2}f(x)>0 \text{ for all } x \Rightarrow \text{f(x) is convex}
+$$
+$$
+\frac{d^2}{dx^2}f(x)<0 \text{ for all } x \Rightarrow \text{f(x) is concave}
+$$
 
 The second derivative of a function is written as $\frac{d^2}{dx^2}f(x)$ or $\frac{d^2 y}{dx^2}$ or $f''(x)$.
 
