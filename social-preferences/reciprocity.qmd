@@ -106,7 +106,7 @@ A proposer who offers \$2 instead of \$0 is seen as having good intentions. A pr
 
 ## The trust game
 
-The trust game provides another potential example of reciprocity.
+The trust game, which I introduced in @sec-trust_game, provides another potential example of reciprocity.
 
 The trust game involves two players: a sender and a receiver
 

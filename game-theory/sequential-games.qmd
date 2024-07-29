@@ -163,7 +163,7 @@ graph LR
 
 ```
 
-### The trust game
+### The trust game{#sec-trust_game}
 
 The final example is the trust game.
 

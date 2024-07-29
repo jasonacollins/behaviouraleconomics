@@ -127,7 +127,7 @@ The level-2 hider knows that the level-1 seeker chooses B. They select any box a
 
 The level-2 seeker knows that the level-1 hider will select A. They select A.
 
-The level-2 seeker wins with probability $1/3$.
+The level-2 seeker wins with probability 1/3.
 :::
 
 c\) What box do the level-3 hider and seeker choose?
@@ -139,7 +139,7 @@ The level-3 hider knows that the level-2 seeker chooses A. They select any box a
 
 The level-3 seeker knows that the level-2 hider will select any box except B with equal probability. They select one of A1, A2 or A with equal probability.
 
-The level-3 seeker wins with probability $1/3×1/3+1/3×1/3=2/9$.
+The level-3 seeker wins with probability $1/3\times 1/3+1/3\times 1/3=2/9$.
 :::
 
 d\) What box do the level-4 hider and seeker choose?
@@ -151,7 +151,7 @@ The level-4 hider knows that the level-3 seeker selected A1, A2 and A with equal
 
 The level-4 seeker knows that the level-3 hider selected any box apart from A with equal probability. They also select those boxes with equal probability.
 
-The level-4 seeker wins with probability $1/3$.
+The level-4 seeker wins with probability 1/3.
 :::
 
 ## Matching pennies (with a twist)
@@ -272,68 +272,6 @@ Given your answers to b) through d), what mix of level-k players might explain t
 ## Answer
 
 That 3/4 of Player "A"s choose X and 3/4 of Player "B"s choose Y suggests there are many level-2 players (or possibly level-4). They each assume that the other player is level-1 and has picked the option with the highest payoff for themselves. They are effectively trying to coordinate with the other player by assuming that the other will seek their highest paying option. However, if both do this, both receive nothing.
-:::
-
-## Cafe
-
-Two friends, Player 1 and Player 2, have arranged to meet at a cafe. Neither can remember which of the two cafes in town they had arranged to meet at.
-
-Each player has a favourite cafe. However, they would prefer to go to their less-favourite cafe with a friend than go to their favourite cafe alone.
-
-Each chooses a cafe and goes there. The payoffs for each combination of choices are in the table below, with the payoffs $(x, y)$ being the payoffs for Player 1 and Player 2 respectively.
-
-![](img/cafe-1.jpg){width=60%}
-
-a\) What are the pure-strategy Nash equilbria of this game?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-If player 2 chooses cafe A, player 1 wants to choose cafe A.
-
-If player 2 chooses cafe B, player 1 wants to choose cafe B.
-
-If player 1 chooses cafe A, player 1 wants to choose cafe A.
-
-If player 1 chooses cafe B, player 1 wants to choose cafe B.
-
-![](img/cafe-2.jpg){width=60%}
-
-The two pure-strategy Nash equilibria are (cafe A, cafe A) and (cafe B, cafe B).
-:::
-
-b\) What would Player 1 and Player 2 do if each was a level-1 thinker? Explain.
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-If Player 2 chooses randomly, Player 1's payoff's from each option are:
-
-\begin{align*}
-U_1(\text{cafe A})&=0.5\times 2+0.5\times 0=1 \\[6pt]
-U_1(\text{cafe B})&=0.5\times 0+0.5\times 1=0.5
-\end{align*}
-
-Player 1 chooses cafe A.
-
-If Player 1 chooses randomly, Player 2's payoff's from each option are:
-
-\begin{align*}
-U_2(\text{cafe A})&=0.5\times 1+0.5\times 0=0.5 \\[6pt]
-U_2(\text{cafe B})&=0.5\times 0+0.5\times 3=1.5
-\end{align*}
-
-Player 2 chooses cafe B.
-:::
-
-c\) What would Player 1 and Player 2 do if each was a level-2 thinker? Explain.
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-The level-2 Player 1 assumes that Player 2 is level-1. Therefore, they assume that Player 2 will choose cafe B. Accordingly, they choose cafe B.
-
-The level-2 Player 2 assumes that Player 1 is level-1. Therefore, they assume that Player 1 will choose cafe A. Accordingly, they choose cafe A.
 :::
 
 ## Buying a car

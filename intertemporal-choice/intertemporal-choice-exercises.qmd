@@ -142,7 +142,7 @@ U_0(\$7)&=\delta^2\times 7 \\
 &=\frac{7}{4}
 \end{align*}
 
-Kate chooses the $3 now.
+Kate chooses the \$3 now.
 :::
 
 b\) Jack is a hyperbolic discounter with $\beta=\frac{1}{2}$ and $delta=1$ what does Jack choose?
@@ -216,9 +216,9 @@ In the next figure we move forward to $t=1$. Jack's preferred option changes. He
 
 ## Small reward now or large reward later?
 
-a\) Alfred and Blake are exponential discounters. They can choose between a small reward now or a larger reward later. Alfred discounts the future heavily (low $\delta$). Blake does not ($\delta$ close to one).
+Alfred and Blake are exponential discounters. They can choose between a small reward now or a larger reward later. Alfred discounts the future heavily (low $\delta$). Blake does not ($\delta$ close to one).
 
-How might Alfred and Blake’s choices be affected by their discount factor?
+a\) How might Alfred and Blake’s choices be affected by their discount factor?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -295,8 +295,8 @@ Now considering his choice at $t=1$.
 
 ```{=tex}
 \begin{align*}
-U_1(\$4\text{ at }t=1)&=4 \\
-U_1(\$7\text{ at }t=2)&=\beta\delta\times 7 \\
+U_1(\$4\text{ at }t=1)&=4 \\[6pt]
+U_1(\$7\text{ at }t=2)&=\beta\delta\times 7 \\[6pt]
 &=3.5
 \end{align*}
 ```
@@ -306,8 +306,8 @@ Allan now considers $t=0$ with the knowledge he will take the \$4 at $t=1$. He k
 
 ```{=tex}
 \begin{align*}
-U_0(\$3\text{ at }t=0)&=3 \\
-U_0(\$4\text{ at }t=1)&=\beta\delta\times 4 \\
+U_0(\$3\text{ at }t=0)&=3 \\[6pt]
+U_0(\$4\text{ at }t=1)&=\beta\delta\times 4 \\[6pt]
 &=2
 \end{align*}
 ```
@@ -323,7 +323,7 @@ At $t=3$ they incur the costs of their diet and pay a cost of $8$. The total cos
 
 Kelvin and Linda have preferences of $\beta=0.5$ and $\delta=1$.
 
-To illustrate, if Kelvin or Linda eat at $t=1$ they receive a benefit of $12$ at $t=1$ and a cost of $8$ at $t=3$. If Kelvin or Linda eat at both at $t=1$ and at $t=2$, they receive a benefit of $12$ at $t=1$ and $6$ at $t=2$ and a cost of $16$ at $t=3$.
+To illustrate, if Kelvin or Linda eat at $t=1$ they receive a benefit of 12 at $t=1$ and a cost of 8 at $t=3$. If Kelvin or Linda eat at both at $t=1$ and at $t=2$, they receive a benefit of 12 at $t=1$ and 6 at $t=2$ and a cost of 16 at $t=3$.
 
 Kelvin is naive, Linda is sophisticated.
 
@@ -404,7 +404,7 @@ Linda anticipates that she will eat at $t=2$.
 
 Linda knows she will eat at $t=2$, so she don't need to reconsider her plan for then at $t=1$.
 
-At $t=1$
+At $t=1$:
 
 ```{=tex}
 \begin{align*}
@@ -467,7 +467,6 @@ For instance:
 - If you submit at $t=6$, you will experience a utility cost of 1 on each day from $t=1$ to $t=6$ for the marks lost, plus a utility cost of 10 at $t=6$ for completing the assignment.
 
 You are a hyperbolic discounter with $\beta=0.75$ and $\delta=1$.
-
 
 a\) When do you finish if you are naive?
 
@@ -676,105 +675,16 @@ U_0(spend)&=\beta\delta u_1+\beta\delta^2 u_2 \\
 Grant now chooses to commit at a price of one unit of utility at $t=2$.
 :::
 
-## Work or party?
-
-Ruby is a sophisticated present-biased agent with $\beta=0.5$ and $\delta=1$. She has utility function $u(x)=x$.
-
-Ruby is deciding today ($t=0$) whether she will either:
-
-- work tomorrow ($t=1$) for \$10 income to be received the day after she works ($t=2$) or
-- party tomorrow ($t=1$) for immediate utility of 8 but no income.
-
-That is, she is deciding between (2, 10) and (1,8).
-
-a\) What does Ruby decide?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-Ruby is sophisticated, so uses backward induction to decide her preferred course of action.
-
-At $t=2$ there is no decision to make. Ruby bears the consequences of her earlier decisions.
-
-At $t=1$ she compares the discounted utility of the two options:
-
-\begin{align*}
-U_1(\text{work})&=\beta\delta u(\text{work}) \\
-&=0.5\times 1\times 10 \\
-&=5 \\
-\\
-U_1(\text{party})&=u(\text{party}) \\
-&=8
-\end{align*}
-
-At $t=1$ the discounted utility partying is higher than that of working ($U_1(\text{party})>U_1(\text{work})$), so Penny prefers to party.
-
-At $t=0$ Penny knows that she will party at $t=1$ no matter what she decides at $t=0$, so she accepts that she will party.
-:::
-
-b\) Ruby is able to commit to working at $t=1$ by posting a letter at $t=0$ declining the party invitation (at no cost). Once she sends the letter, she cannot change her mind. Will she decline the invitation?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-The presence of the commitment device allows Ruby to include the option of working when she makes a decision at $t=0$. She will now compare the discounted utility of using the commitment device with the discounted utility of working.
-
-\begin{align*}
-U_0(\text{commit+work})&=\beta\delta^2 u(\text{commit+work}) \\
-&=0.5\times 1^2\times 10 \\
-&=5 \\
-\\
-U_0(\text{party})&=\beta\delta u(\text{party}) \\
-&=0.5\times 1\times 8 \\
-&=4
-\end{align*}
-
-$U_0(\text{commit+work})>U_0(\text{party})$, so Ruby commits to working by declining the invitation.
-:::
-
-c\) Suppose declining the party invitation comes at a cost to Ruby's reputation at $t=2$. What is the largest utility cost that Ruby would be willing to incur such that she would still use the commitment device of declining the invitation?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-The largest cost she would be willing to incur is the cost where the discounted utility of each option is equal. Setting the cost as $c$:
-
-\begin{align*}
-U_0(\text{commit})&=\beta\delta^2 u(\text{work}-c) \\
-&=0.5\times 1^2\times (10-c) \\
-&=5-0.5c \\
-\\
-U_0(\text{party})&=\beta\delta u(\text{party}) \\
-&=0.5\times 1\times 8 \\
-&=4
-\end{align*}
-
-Ruby will be indifferent where $5-0.5c=4$ or where $c=2$. The largest utility cost she would be willing to incur is 2.
-
-:::
-
-d\) Victoria is a naive present-biased agent with $\beta=0.5$ and $\delta=1$. She has utility function $u(x)=x$.
-
-Victoria faces the same choice as Ruby and also has the chance to decline at $t=0$ the party invitation at a cost to Victoria's reputation at $t=2$. Will Victoria decline the invitation?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-As Victoria has the same discount function as Ruby, we know from question b) that Victoria will decide to work at $t=0$. We also know from question a) that she will then change her mind and party at $t=1$.
-
-However, as Victoria is naive she does not see her future self-control problem and does not have the foresight to realise at $t=0$ that she will not work as planned. As a result, she would see no need in the commitment device and would not be willing to incur any cost to use it.
-:::
-
 ## Buy-now pay-later
 
-Buy-now pay-later works as follows: a person purchases an item with an initial payment of one-quarter of the purchase price. They get access to the purchased item immediately. They then pay three equal instalments each fortnight until they have paid for the purchase in full. If they fail to make a payment on time, they are required to pay a fee of $10 and are barred from using the buy-now pay-later facility in the future.
+Buy-now pay-later works as follows: a person purchases an item with an initial payment of one-quarter of the purchase price. They get access to the purchased item immediately. They then pay three equal instalments each fortnight until they have paid for the purchase in full. If they fail to make a payment on time, they are required to pay a fee of \$10 and are barred from using the buy-now pay-later facility in the future.
 
 Vernon used a buy-now pay-later provider to purchase a new jacket for \$200. He paid \$50 on the day of the purchase and is now required to pay the next \$50 instalment in two weeks. That is, Vernon's schedule of costs and benefits is:
 
-- Purchase date: Gains jacket and pays $50
-- In two weeks: Pays $50
-- In four weeks: Pays $50
-- In six weeks: Pays $50
+- Purchase date: Gains jacket and pays \$50
+- In two weeks: Pays \$50
+- In four weeks: Pays \$50
+- In six weeks: Pays \$50
 
 At that time of the purchase Vernon intends to pay for the jacket as required by the buy-now pay-later provider in two, four and six weeks.
 

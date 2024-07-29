@@ -16,15 +16,13 @@ Incompleteness is different from indifference. Is the ass was merely indifferent
 
 ## Picking a mobile plan
 
-You are considering two mobile phone plans. Each has different monthly fees, data caps, excess data charges, international inclusions and 5G coverage. You realise it will take all day to work through the fine print to undserstand the plans.
+You are considering two mobile phone plans. Each has different monthly fees, data caps, excess data charges, international inclusions and 5G coverage. You realise it will take all day to work through the fine print to understand the plans.
 
 You decide that your options are:
 
-a\) Pick a plan by flipping a coin.
-
-b\) Spend the day working through the plans and choose one.
-
-c\) Avoid the work by reading a book instead.
+- Pick a plan by flipping a coin.
+- Spend the day working through the plans and choose one.
+- Avoid the work by reading a book instead.
 
 Does this decision accord with the axioms we have discussed?
 

@@ -74,7 +74,7 @@ B)  \$4 for certain
 
 Anika has zero wealth besides this offer.
 
-a\) What is the expected value of option A)?
+a\) What is the expected value of option A?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -84,7 +84,7 @@ The expected value of option A) is:
 ```{=tex}
 \begin{align*}
 E[A]&=\sum_{i=1}^n p_ix_i \\[12pt]
-&=0.5*\$10+0.5*0 \\[6pt]
+&=0.5\times \$10+0.5\times 0 \\[6pt]
 &=\$5
 \end{align*}
 ```
@@ -102,7 +102,7 @@ The expected utility of option A) is:
 ```{=tex}
 \begin{align*}
 EU(A)&=p_1U(x_1)+p_2U(x_2) \\
-&=0.5*\sqrt{10}+0.5*\sqrt{0} \\
+&=0.5\times \sqrt{10}+0.5\times \sqrt{0} \\
 &=1.58
 \end{align*}
 ```
@@ -286,23 +286,23 @@ In fact, they would not pay any positive sum to participate in the gamble. If th
 ```{=tex}
 \begin{align*}
 EU(x)&=0.5(1000+550)^{1/2}+0.5(1000-500)^{1/2} \\[6pt]
-&=30.86
+&=`r qfree <- 0.5*(1000+550)^0.5+0.5*(1000-500)^0.5; round(qfree, 2)`
 \end{align*}
 ```
 
 This is less than if they simply turned down the gamble. They would be willing to pay to avoid the gamble. How much?
 
-We can determine this by asking what wealth a utility of 30.86 is:
+We can determine this by asking what wealth a utility of `r round(qfree, 2)` is:
 
 ```{=tex}
 \begin{align*}
-W^{1/2}&=30.86 \\[6pt]
-W&=30.51^2 \\[6pt]
-&=\$952.67
+W^{1/2}&=`r round(qfree, 2)` \\[6pt]
+W&=`r round(qfree, 2)`^2 \\[6pt]
+&=\$`r round(qfree^2, 2)`
 \end{align*}
 ```
 
-The certainty equivalent of the gamble is \$952.67. The agent would be willing to pay up to \$47.33 to avoid the gamble.
+The certainty equivalent of the gamble is \$`r round(qfree^2, 2)`. The agent would be willing to pay up to \$`r 1000-round(qfree^2, 2)` to avoid the gamble.
 :::
 
 c\) Would the expected utility maximiser with utility function $U(x)=x^{1/2}$ change their decision if they had \$1 million in wealth? Explain.
@@ -354,172 +354,6 @@ The agent would be willing to pay up to \$`r W-1000000` for the gamble. This is 
 Intuitively, as the agent's wealth increases their utility function becomes increasingly linear (second derivative approaches zero) and they become closer to risk neutral.
 :::
 
-## A 60:40 gamble
-
-Penny is an expected utility maximiser with utility function $u(x)=ln(x)$ and wealth of \$300.
-
-Penny is offered the following bet A:
-
-- a 60% probability to win \$150
-- a 40% probability to lose \$100.
-
-a\) Does Penny accept bet A?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-Penny compares the utility of taking versus not taking the bet:
-
-\begin{align*}
-U(\text{A})&=p_1u(x_1)+p_2u(x_2) \\
-&=0.6ln(W+150)+0.4ln(W-100) \\
-&=0.6ln(450)+0.4ln(200) \\
-&=`r round(0.6*log(450)+0.4*log(200), 3)` \\
-\\
-U(W)&=ln(W) \\
-&=ln(300) \\
-&=`r round(log(300), 3)`
-\end{align*}
-
-$U(A)>U(W)$, so Penny accepts the bet.
-:::
-
-b\) Following some bad economic news, Penny wealth declines to \$150.
-
-Penny is offered bet A again. Does Penny accept the bet?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-Penny compares the utility of taking versus not taking the bet:
-
-\begin{align*}
-U(\text{A})&=p_1u(x_1)+p_2u(x_2) \\
-&=0.6ln(W+150)+0.4ln(W-100) \\
-&=0.6ln(300)+0.4ln(50) \\
-&=`r round(0.6*log(300)+0.4*log(50), 3)` \\
-\\
-U(W)&=ln(W) \\
-&=ln(150) \\
-&=`r round(log(150), 3)`
-\end{align*}
-
-$U(A)<U(W)$, so Penny rejects the bet.
-:::
-
-## Another 60:40 gamble
-
-Gamble A is as follows:
-
-(\$100, 0.6; -\$100, 0.4)
-
-This is a gamble with a 60% chance of winning \$100 and a 40% chance of losing \$100.
-
-a\) Would a risk neutral decision-maker (who maximises expected value) be willing to pay \$10 to play gamble A? What is the most they would be willing to pay to play?
-
-::: {.callout-tip collapse="true"}
-## Answer
-A risk neutral decision maker will accept any offer with positive expected value. The expected value of the bet is:
-
-\begin{align*}
-E[A]&=p_1x_1+p_2x_2 \\
-&=0.6*100+0.4*(-100) \\
-&=\$`r 0.6*100+0.4*(-100)`
-\end{align*}
-
-The risk neutral decision maker would pay $10 as this is less than the expected value of the bet. They would be willing to pay up to the expected value of the bet: \$20. At that point they would be indifferent between paying for the bet and refusing the bet.
-:::
-
-b\) Would an expected utility maximiser with wealth \$200 and utility function $U(x)=ln(x)$ be willing to pay \$10 to play gamble A? What is the most they would be willing to pay to play?
-
-::: {.callout-tip collapse="true"}
-## Answer
-The expected utility maximiser will play if their utility from playing and paying is greater than their utility of refusing.
-
-\begin{align*}
-U(W)&=ln(W) \\
-&=ln(\$200) \\
-&=`r log(200)` \\
-\\
-E[U(A-c)]&=p_1U(x_1)+p_2U(x_2) \\
-&=0.6U(W+100-10)+0.4U(W-100-10) \\
-&=0.6ln(200+100-10)+0.4ln(200-100-10) \\
-&=`r 0.6*log(200+100-10)+0.4*log(200-100-10)`
-\end{align*}
-
-$U(W)>U(A-c)$ so the decision maker will not be willing to pay \$10.
-
-To determine the most they would be willing to pay, we will first check whether they will pay any positive sum. We will do that by examining the expected utility of the gamble with no payment.
-
-\begin{align*}
-E[U(A)]&=p_1U(x_1)+p_2U(x_2) \\
-&=0.6U(W+100)+0.4U(W-100) \\
-&=0.6ln(200+100)+0.4ln(200-100) \\
-&=`r b1<-0.6*log(200+100)+0.4*log(200-100); b1`
-\end{align*}
-
-$U(W)>U()$ so the decision maker will not be willing to pay any amount. In fact, they would pay to avoid the bet.
-
-To calculate how much, we determine what the certainty equivalent of the bet is:
-
-\begin{align*}
-U(CE)&=E[U(A)] \\
-ln(CE)&=`r b1`\\
-CE&=e^{`r b1`} \\
-&=\$`r b2<-round(exp(b1),2)`
-\end{align*}
-
-Having wealth of \$200 and the bet is the equivalent of having wealth of \$`r b2`. They would be willing to pay up to \$`r 200-b2` to avoid the bet.
-:::
-
-c\) Would the expected utility maximiser with utility function change their decision if they had \$1000 in wealth? Explain.
-
-::: {.callout-tip collapse="true"}
-## Answer
-The expected utility maximiser will play if their utility from playing and paying is greater than their utility of refusing.
-
-\begin{align*}
-U(W)&=ln(W) \\
-&=ln(\$1000) \\
-&=`r log(1000)` \\
-\\
-E[U(A-c)]&=p_1U(x_1)+p_2U(x_2) \\
-&=0.6U(W+100-10)+0.4U(W-100-10) \\
-&=0.6ln(1000+100-10)+0.4ln(1000-100-10) \\
-&=`r 0.6*log(1000+100-10)+0.4*log(1000-100-10)`
-\end{align*}
-
-$U(W)<U(A-c)$ so the decision maker is now willing to pay \$10.
-
-As the agent’s wealth increases their utility function becomes increasingly linear (second derivative approaches zero) and they become closer to risk neutral. As a result, the positive expected value bet becomes increasingly attractive.
-:::
-
-d\) At what wealth is the expected utility maximiser with utility function $U(x)=ln(x)$ indifferent between accepting gamble A or not?
-
-::: {.callout-tip collapse="true"}
-## Answer
-The expected utility maximiser will be indifferent when:
-
-\begin{align*}
-U(W)&=E[U(A)] \\
-U(W)&=0.6U(W+100)+0.4U(W-100) \\
-ln(W)&=0.6ln(W+100)+0.4ln(W-100)
-\end{align*}
-
-There isn't a simple closed form solution to this equation, but we know from questions b) and c) that $W$ is somewhere between \$200 and \$1000.
-
-If we wanted to calculate exact solution, you could use tool such as Mathematica or Matlab to solve, write a short code to solve in R or even iterate toward a solution using Excel.
-```{r}
-equation <- function(W){
-  log(W) - 0.6 * log(W + 100) - 0.4 * log(W - 100)
-}
-
-indifference <- uniroot(equation, c(200, 1000))
-```
-
-The expected utility maximiser is indifferent when $W=$\$`r round(indifference$root, 2)`.
-:::
-
 ## Purchasing insurance {#sec-purchasing-insurance}
 
 An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for \$1100.
@@ -540,8 +374,8 @@ E[U(\text{purchase})]&=\ln(W-premium) \\
 &=\ln(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
 &=`r round(log(1000000+10000-1100), 4)`\\
 \\
-E[U(\text{don't})]&=0.999*\ln(W)+0.001*\ln(W-value_{\text{house}}) \\
-&=0.999*\ln(1,010,000)+0.001*\ln(10,000) \\
+E[U(\text{don't})]&=0.999\times \ln(W)+0.001\times \ln(W-value_{\text{house}}) \\
+&=0.999\times \ln(1,010,000)+0.001\times \ln(10,000) \\
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 
@@ -702,7 +536,7 @@ Here is a representation of the choices.
 
 ![](img/allais-paradox-4.jpg)
 
-The bets in the two shaded areas are the same. They are paired with an outcomes of either \$10,000 or \$0. Preferring B to A and A' to B' is a violation of the axiom of the [independence of irrelevant alternatives](@sec-independence): Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble.
+The bets in the two shaded areas are the same. They are paired with an outcomes of either \$10,000 or \$0. Preferring B to A and A' to B' is a violation of the axiom of the [independence of irrelevant alternatives](@sec-independence). Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble.
 
 Using this representation in the table, here is another way of understanding why this combination of choices is an anomaly. Imagine there are 100 tickets numbered 1 to 100. One ticket will be drawn. If a ticket between 1 and 89 is drawn, you win the prize in the first column. If a ticket between 90 and 99 is drawn, you win the amount in the second. If a 100 is drawn, you win the sum in the third.
 

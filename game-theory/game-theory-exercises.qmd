@@ -56,9 +56,9 @@ Sean is interested in the training as he could use it to boost his career, but s
 
 The extensive form of the game is laid out below, with the payoffs ($x,y$) being for Robyn and Sean respectively.
 
-a\) Will Robyn offer the position to Sean?
-
 ![](img/employment-1.jpg)
+
+a\) Will Robyn offer the position to Sean?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -88,11 +88,11 @@ A contract is both observable and irreversible (at least without mutual agreemen
 
 ## Investment {#sec-investment}
 
-Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by an Marco. Marco is looking for seed funding.
+Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by Marco. Marco is looking for seed funding.
 
 Linda can invest \$10.
 
-If Linda invests, her investment will triple in value. Marco can then decide to either shut down the start-up and keep the \$30 or maintain the start-up in the market and pay a $15 dividend to each of Linda and himself.
+If Linda invests, her investment will triple in value. Marco can then decide to either shut down the start-up and keep the \$30 or maintain the start-up in the market and pay a \$15 dividend to each of Linda and himself.
 
 If Linda does not invest, Linda keeps the \$10. The start-up gets \$0.
 
@@ -140,12 +140,12 @@ By backward induction, Atlantis would prefer to retreat (payoff of 2) compared t
 
 ![](img/island-2.jpg)
 
-The subgame-perfect equilbrium is (Attack, Retreat).
+The subgame-perfect equilibrium is (Attack, Retreat).
 :::
 
 b\) An adviser to the Atlantis army suggests that they burn the bridge behind them to remove the option of retreat.
 
-Draw the new extensive form game that would emerge if Atlantis had the option of the burning the bridge. What is the subgame-perfect equilibrium?
+Draw the new extensive form game that would emerge if Atlantis had the option of burning the bridge. What is the subgame-perfect equilibrium?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -177,7 +177,7 @@ The subgame-perfect equilibrium is (Burn, Retreat; Attack, Concede).
 
 Hayley wants to buy a car. The used-car salesman can sell her a good car (for which he earns a small profit) or a lemon (for which he earns a large profit).
 
-The payoffs (x,y) for each decision are indicated in the game tree below, with $x$ being the Hayley's satisfaction and $y$ being the salesman's profit.
+The payoffs ($x,y$) for each decision are indicated in the game tree below, with $x$ being the Hayley's satisfaction and $y$ being the salesman's profit.
 
 ![](img/car-1.jpg){width=60%}
 

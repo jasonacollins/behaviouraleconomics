@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "19 April 2024"
+  date: "29 July 2024"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -76,6 +76,13 @@ book:
         - social-preferences/reputation.qmd
         - social-preferences/reciprocity.qmd
         - social-preferences/social-preferences-exercises.qmd
+    - part: practice-problems/practice-problems.qmd
+      chapters:
+        - practice-problems/expected-utility-theory-problems.qmd
+        - practice-problems/prospect-theory-problems.qmd
+        - practice-problems/intertemporal-choice-problems.qmd
+        - practice-problems/beliefs-problems.qmd
+        - practice-problems/behavioural-game-theory-problems.qmd
     - references.qmd
   navbar:
     background: primary
@@ -116,13 +123,13 @@ format:
     code-fold: true
     fig-cap-location: top
     mermaid-format: png (commented out as problem when doing full build)
-  # pdf:
-  #   documentclass: report
-  #   echo: false
-  #   toc-depth: 1
-  #   fig-width: 7
-  #   fig-height: 5
-  #   fig-format: png
+  pdf:
+    documentclass: report
+    echo: false
+    toc-depth: 1
+    fig-width: 7
+    fig-height: 5
+    fig-format: png
 
 lightbox: auto
 

@@ -25,7 +25,7 @@ The following diagram illustrates. On the horizontal axis is the probability ($p
 
 From this diagram, you can then see the change in decision weight from each change in probability. The changes from 0% to 5% and from 95% to 100% represent much larger changes in decision weight than the changes in intermediate probabilities.
 
-![](img/Exercise_Q1.jpg)
+![](img/changes-in-probability.jpg)
 :::
 
 ## Bitcoin
@@ -103,7 +103,7 @@ There is no decreases sensitivity as the value function is linear in both domain
 
 b\) Assume Megan has received a birthday card from her aunt, which some years contains \$25 and other years contains nothing.
 
-She opens the card and it contains \$10\.
+She opens the card and it contains \$10.
 
 Consider two alternative reference points: Megan is pessimistic and expects no money in the card, and Megan is optimistic and expects \$25.
 
@@ -119,12 +119,11 @@ v(x)&=v(10) \\[6pt]
 &=10
 \end{align*}
 
-\newpage
 The value of the \$10 from the reference point of expecting \$25 is:
 
 \begin{align*}
 v(x)&=v(10-25) \\[6pt]
-&=2*(-15) \\[6pt]
+&=2\times (-15) \\[6pt]
 &=-30
 \end{align*}
 
@@ -223,24 +222,23 @@ x^\frac{1}{2} \quad &\textrm{where} \quad x \geq 0\\
 \end{matrix}\right.
 $$
 
-\newpage
 This would mean that the difference between $v(-40)$ and $v(-50)$ is:
 
 \begin{align*}
 v(-40)-v(-50)&=-2(40^\frac{1}{2}-50^\frac{1}{2}) \\
-&=`r -2*(40^0.5-50^0.5)`
+&=`r round(-2*(40^0.5-50^0.5), 2)`
 \end{align*}
 
 The difference between $v(-1980)$ and $v(-1990)$ is:
 
 \begin{align*}
 v(-1980)-v(-1990)&=-2(1980^\frac{1}{2}-1990^\frac{1}{2}) \\
-&=`r -2*(1980^0.5-1990^0.5)`
+&=`r round(-2*(1980^0.5-1990^0.5), 2)`
 \end{align*}
 
 Much less value is gained by driving for the 20 minutes across town for the computer.
 
-![](img/Exercise_Q4.jpg){width=70%}
+![](img/saving-on-a-purchase.jpg){width=70%}
 :::
 
 ## A 60:40 gamble
@@ -270,7 +268,7 @@ The utility from the gamble is:
 \begin{align*}
 V(A)&=0.6v(100)-0.4v(-100) \\
 &=0.6\times (100)^{0.75}-0.4\times 2\times (100)^{0.75} \\
-&=`r 0.6*(100)^0.75-0.4*2*(100)^0.75`
+&=`r round(0.6*(100)^0.75-0.4*2*(100)^0.75, 2)`
 \end{align*}
 
 They will not want to play this gamble as it has a negative value for the agent. They could receive value of 0 by simply not playing.
@@ -288,7 +286,7 @@ After losing \$100 but not changing their reference point, they have two possibl
 \begin{align*}
 V(A)&=0.6v(-100+10)-0.4v(-100-100) \\
 &=0.6\times (0)^{0.75}-0.4\times 2\times (200)^{0.75} \\
-&=`r 0.6*(0)^0.75-0.4*2*(200)^0.75`
+&=`r round(0.6*(0)^0.75-0.4*2*(200)^0.75, 2)`
 \end{align*}
 
 The utility of not playing the gamble involves remaining with a loss of \$100:
@@ -296,7 +294,7 @@ The utility of not playing the gamble involves remaining with a loss of \$100:
 \begin{align*}
 V(\neg A)&=v(-100) \\
 &=-2\times (100)^{0.75} \\
-&=`r -2*(100)^0.75`
+&=`r round(-2*(100)^0.75, 2)`
 \end{align*}
 
 They will now want to play the gamble as it has a greater value than staying with their current loss. The reason the gamble becomes attractive is because it gives an opportunity to recover the loss. The agent is risk seeking over the loss domain.
@@ -331,9 +329,7 @@ a\) What feature of Tim's value function leads to loss aversion? Explain.
 The part of the value function that applies when $x<0$ is increased by a factor of two relative to that part of the value function for when $x>0$. This is done by multiplying the bottom portion by 2.
 :::
 
-b\) Tim considers the gamble A: (\$250, 0.5; -\$100, 0.5).
-
-i) Will Tim want to play this gamble?
+b\) Tim considers the gamble A: (\$250, 0.5; -\$100, 0.5). Will Tim want to play this gamble?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -341,14 +337,14 @@ i) Will Tim want to play this gamble?
 \begin{align*}
 V(A)&=p_1v(x_1)+p_2v(x_2) \\
 &=0.5v(\$250)+0.5v(-\$100) \\
-&=0.5*250^{1/2}-0.5*2*100^{1/2} \\
-&=`r 0.5*250^(1/2)-0.5*2*100^(1/2)`
+&=0.5\times 250^{1/2}-0.5\times 2\times 100^{1/2} \\
+&=`r round(0.5*250^(1/2)-0.5*2*100^(1/2), 2)`
 \end{align*}
 
 Tim has negative value from the gamble, when he could simply have zero value by declining. He rejects.
 :::
 
-ii) Explain what features of the value function lead him to accept or reject the gamble.
+c\) Explain what features of the value function lead him to accept or reject the gamble.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -359,7 +355,7 @@ Two features of the value function lead him to reject:
 - Tim has diminishing sensitivity to losses and gains. The larger gain is reduced proportionately more by this diminishing sensitivity.
 :::
 
-c\) Suppose Tim were to experience a large positive or negative shock to his wealth that does not immediately change his reference point. Could either shock cause him to change his decision concerning gamble A? Explain.
+d\) Suppose Tim were to experience a large positive or negative shock to his wealth that does not immediately change his reference point. Could either shock cause him to change his decision concerning gamble A? Explain.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -371,7 +367,7 @@ A large positive shock would place the entire bet into the gain domain. That wou
 A large negative shock would place the entire bet into the loss domain. That would remove loss aversion as a factor in rejecting the bet as there is no gain against which the loss can be given relatively greater weight. Due to diminishing sensitivity to losses, Tim is also risk seeking in the loss domain. This would lead him to accept any bet with a positive expected value.
 :::
 
-## Insurance
+## Insurance AND gambling
 
 Explain how probability weighting as proposed under Prospect Theory can lead a person to simultaneously gamble and purchase insurance.
 
@@ -385,11 +381,137 @@ Decisions under Prospect Theory are the outcome of two factors:
 
 The Prospect Theory value function leads people to be risk averse in the domain of gains and risk seeking in the loss domain. This combination would tend to lead people to purchase neither insurance or lotteries. Their risk seeking behaviour could lead them to avoid the certain loss of the insurance premium. They would rather risk the loss of the insurable asset.
 
-![](img/Exercise_Q6a.jpg){width=80%}
+```{r}
+#| label: fig-insurance-exercises
+#| fig-cap: Purchasing insurance
 
-Their risk averse behaviour in the domain of gains would make a lottery with a negative expected value unattractive.
+library(ggplot2)
 
-![](img/Exercise_Q6b.jpg){width=80%}
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 220, 0.1),
+  y = u(seq(-220, 220, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<- -200 #loss
+x2<- 0 #win
+ev<- -30 #expected value of gamble
+xc<- -60 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 220), ylim = c(-30, 15))+
+
+  #Add labels -V, v(L) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "-V", size = 4, hjust = 0.5, vjust = -0.3)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(-V)", size = 4, hjust = -0.1, vjust = 0.6)+
+
+  #Add labels -P, v(-P) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "-P", size = 4, hjust = 0.8, vjust = -0.3)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "v(-P)", size = 4, hjust = -0.1, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels E[don't], v(don't) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[don't]", size = 4, hjust = 0.5, vjust = -0.3)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "v(don't)", size = 4, hjust = -0.1, vjust = 0.45)
+
+```
+
+Their risk averse behaviour in the domain of gains would make a lottery with a negative expected value unattractive, as the following diagram shows (not drawn to scale - the relative size of a win would typically dwarf the ticket price).
+
+```{r}
+#| label: fig-lottery-exercises
+#| fig-cap: Purchasing a lottery
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-110, 160, 0.1),
+  y = u(seq(-110, 160, 0.1))
+)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1 <- -50 #loss
+x2 <- 150 #win
+ev <- 0.2*x2+0.8*x1 #expected value of gamble
+xc <- 0 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-80, 160), ylim = c(-15, 15))+
+
+  #Add labels -T, v(-T) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "-T", size = 4, hjust = 0.5, vjust = -0.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "v(-T)", size = 4, hjust = -0.1, vjust = 0.45)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels W-T, v(W-T) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "W-T", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "v(W-T)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A], V(A) and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]", size = 4, hjust = 0.4, vjust = -0.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(X)", size = 4, hjust = -0.1, vjust = 0.45)
+
+```
 
 However, the probability weighting function can counteract that effect. By overweighting the small probability of an insurable event or a lottery win, the agent may decide to insure or purchase a lottery despite the risk attitudes inherent in the value function.
 
@@ -455,7 +577,7 @@ Use the fourfold pattern of attitudes to risk under prospect theory to explore w
 Rejecting the offer has a higher expected value than the value of the settlement:
 
 \begin{align*}
-E[\text{reject}]&=p_{win} x_{win} \\
+E[\text{reject}]&=p_{\text{win}} x_{\text{win}} \\
 &=0.95\times 1000000 \\
 &=950000
 \end{align*}
@@ -466,7 +588,7 @@ Two forces under prospect theory would lead Amber to take the option with the lo
 - People overweight small probabilities. The 5% probability of losing is likely overweighted by Amber.
 :::
 
-## Lotteries
+## Lotteries as incentives
 
 A common intervention to encourage behaviour change is to offer a lottery ticket as an incentive. For example, a lottery ticket might be offered to people who complete a survey.
 
@@ -483,7 +605,7 @@ Use concepts from prospect theory to explain why either option might be more suc
 
 There are two opposing forces that could lead to either option being preferred.
 
-Both the lottery and payment of $10 are in the gain domain. Under prospect theory, people tend to be risk averse in the gain domain. This will make the payment, which has the same expected value as the lottery, more attractive.
+Both the lottery and payment of \$10 are in the gain domain. Under prospect theory, people tend to be risk averse in the gain domain. This will make the payment, which has the same expected value as the lottery, more attractive.
 
 Conversely, under prospect theory, people do not weight outcomes directly by their probability. They apply decision weights that tend to overweight small probabilities and underweight probabilities just short of certainty. This means that the small chance of $10 million will likely be overweighted. This could lead to the value of the lottery exceeding that of a certain payment.
 

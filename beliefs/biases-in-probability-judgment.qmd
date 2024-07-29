@@ -94,7 +94,7 @@ For example, if 1% of the population has COVID-19 and the remainder doesn't, the
 
 Base rate neglect is the failure to consider an event's base rate when making a judgment.
 
-### The cab problem
+### The cab problem{#sec-cab_problem}
 
 One illustration of base-rate neglect comes from the cab problem by @tversky1982. It involves the following story:
 

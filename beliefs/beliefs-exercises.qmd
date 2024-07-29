@@ -63,7 +63,7 @@ We can use Bayes' Theorem to calculate the conditional probability:
 $$
 \begin{aligned}
 P(\text{terrorist | identified}) &= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
-&= \dfrac{0.99*0.0000001}{0.99*0.0000001+0.001*0.999999} \\[12 pt]
+&= \dfrac{0.99\times 0.0000001}{0.99\times 0.0000001+0.001\times 0.999999} \\[12 pt]
 &= 0.000099
 \end{aligned}
 $$
@@ -76,7 +76,7 @@ b\) Intuitive responses to questions of this type tend to involve much higher pr
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-If a person confuses $P(\text{terrorist | identified})$ with $P(\text{identified | terrorist})$ they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g. identification of cabs problem discussed in class.
+If a person confuses $P(\text{terrorist | identified})$ with $P(\text{identified | terrorist})$ they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g. identification of cabs problem discussed in @sec-cab_problem.
 :::
 
 c\) State and solve the question in part a) in terms of natural frequencies.
@@ -88,11 +88,11 @@ Number of passengers: 100,000,000
 
 Number of terrorists: 10
 
-Number of terrorists identified as terrorists: 10\*0.999 $\approx$ 10
+Number of terrorists identified as terrorists: $10\times 0.999 \approx 10$
 
-Number of non-terrorists identified as terrorists: 0.001\*100,000,000=100,000
+Number of non-terrorists identified as terrorists: $0.001\times 100,000,000=100,000$
 
-Proportion of people identified as terrorists who are terrorists = 10/(10+100000) $\approx$ 1 in 10000
+Proportion of people identified as terrorists who are terrorists = $10/(10+100000) \approx 1 \text{ in } 10000$
 :::
 
 ## Rolling a die
@@ -118,6 +118,7 @@ P(\text{D1 loaded}|6)&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[
 &=`r PL<-(0.5*0.5)/(0.5*0.5+1/6*0.5); PL`
 \end{align*}
 ```
+
 The first die is the loaded die with `r PL*100`\% probability.
 :::
 
@@ -134,6 +135,7 @@ P(\text{D2 fair}|5)&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6pt]
 &=`r (1/6*0.75)/(1/6*0.75+0.5*0.25)`
 \end{align*}
 ```
+
 Each die is the loaded die with 50\% probability.
 :::
 
@@ -150,8 +152,8 @@ The prior probabilities are:
 
 ```{=tex}
 \begin{align*}
-P(MM)&=0.25 \\
-P(MF)&=P(FM)=0.25 \\
+P(MM)&=0.25 \\[6pt]
+P(MF)&=P(FM)=0.25 \\[6pt]
 P(FF)&=0.25
 \end{align*}
 ```
@@ -224,7 +226,7 @@ Note: questions such are these are typically sensitive to unstated assumptions, 
 
 ## Luggage
 
-You have taken a flight  and are worried that your luggage will not be on the flight. You know that 20\% of bags have not been arriving with the passenger.
+You have taken a flight and are worried that your luggage will not be on the flight. You know that 20\% of bags have not been arriving with the passenger.
 
 The following table of conditional probabilities (from Pearl & Mackenzie (2018)) gives the probability that your bag will be on the luggage carousel conditional on the bag being on the flight and how long you have been waiting at the carousel.
 
@@ -305,8 +307,8 @@ In a [now famous case](https://en.wikipedia.org/wiki/Sally_Clark), Sally Clark w
 The conviction was overturned on a second appeal. For what reasons could the following simple calculation be misleading?
 
 \begin{align*}
-P(\text{SIDS death}\land\text{SIDS death})&=P(\text{SIDS death})\times P(\text{SIDS death}) \\
-&=\frac{1}{8543}\times\frac{1}{8543} \\
+P(\text{SIDS death}\land\text{SIDS death})&=P(\text{SIDS death})\times P(\text{SIDS death}) \\[12pt]
+&=\frac{1}{8543}\times\frac{1}{8543} \\[12pt]
 &=\frac{1}{`r signif(8543*8543, 3)`}
 \end{align*}
 
@@ -371,7 +373,7 @@ b\) Many people given this problem estimate the probability of the house being o
 
 ::: {.callout-tip collapse="true"}
 ## Answer
-People often confuse P(A\|B) with P(B\|A). In this case, such confusion would lead them to conclude that P(fire\|alarm)=P(alarm\|fire)=95%. You might also think of this as anchoring on the 95\% and insufficiently adjusting from there.
+People often confuse P(A\|B) with P(B\|A). In this case, such confusion would lead them to conclude that $P(fire|alarm)=P(alarm|fire)=95\%$. You might also think of this as anchoring on the 95\% and insufficiently adjusting from there.
 
 Alternatively, people sometimes act as though they have assumed uniform priors: e.g. 50:50 as to whether a fire or not.
 
@@ -399,7 +401,7 @@ c\) Express and solve this problem using natural frequencies.
 
 ```{=tex}
 \begin{align*}
-P(\text{fire}|\text{alarm})&=\frac{95}{95+10000} \\[12pt]
+P(\text{fire}|\text{alarm})&=\frac{95}{95+9999} \\[12pt]
 &=`r round(95/(95+9999), 4)`
 \end{align*}
 ```
@@ -426,11 +428,11 @@ a\) Lincoln thinks Neville is mediocre. What does Lincoln believe is the probabi
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-Lincoln thinks the realisation of Neville's performance is like drawing from an urn with $N=12$ balls. Because he believes Neville is mediocre, he thinks half (6) of the balls are good-performance balls and half (6) are bad-performance balls. The likelihood of drawing a good ball ($G$) the first quarter is $6/12$.
+Lincoln thinks the realisation of Neville's performance is like drawing from an urn with $N=12$ balls. Because he believes Neville is mediocre, he thinks half (6) of the balls are good-performance balls and half (6) are bad-performance balls. The likelihood of drawing a good ball ($G$) the first quarter is 6/12.
 
 \begin{align*}
-\hat P(G)&=\frac{G}{N} \\
-&=\frac{6}{12} \\
+\hat P(G)&=\frac{G}{N} \\[12pt]
+&=\frac{6}{12} \\[12pt]
 &=0.5
 \end{align*}
 :::
@@ -440,10 +442,10 @@ b\) Neville beats the market in the first quarter. What does Lincoln believe is 
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-In Lincoln's mind, the balls are not replaced once drawn. If Neville has a good first quarter, Lincoln believes that only five good balls remain. Therefore, Lincoln believes that the probability of Neville having a good second quarter is $5/11$.
+In Lincoln's mind, the balls are not replaced once drawn. If Neville has a good first quarter, Lincoln believes that only five good balls remain. Therefore, Lincoln believes that the probability of Neville having a good second quarter is 5/11.
 
 \begin{align*}
-\hat P(GG|G)&=\frac{G-1}{N-1} \\
+\hat P(GG|G)&=\frac{G-1}{N-1} \\[12pt]
 &=\frac{5}{11}
 \end{align*}
 :::
@@ -453,10 +455,10 @@ c\) Neville beats the market again. What does Lincoln believe is the probability
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-After two good quarters, Lincoln believes only four good balls remain. Therefore, the probability of Neville having another good quarter is $4/10$. 
+After two good quarters, Lincoln believes only four good balls remain. Therefore, the probability of Neville having another good quarter is 4/10. 
 
 \begin{align*}
-\hat P(GGG|GG)&=\frac{G-2}{N-2} \\
+\hat P(GGG|GG)&=\frac{G-2}{N-2} \\[12pt]
 &=\frac{4}{10}
 \end{align*}
 :::
@@ -469,8 +471,8 @@ d\) Lincoln observes Jill, who he believes is a skilled fund manager. What does 
 Lincoln believes that in 12 quarters Jill will have nine quarters of out-performance. As a result, he does not believe it is possible for her to have ten consecutive periods of out-performance. After nine periods, only three balls are left in the urn. None of those balls are good. 
 
 \begin{align*}
-\hat P(GGGGGGGGGG|GGGGGGGGG)&=\frac{G-9}{N-9} \\
-&=\frac{0}{3} \\
+\hat P(GGGGGGGGGG|GGGGGGGGG)&=\frac{G-9}{N-9} \\[12pt]
+&=\frac{0}{3} \\[12pt]
 &=0
 \end{align*}
 :::
@@ -551,7 +553,7 @@ This behaviour might be explained by representativeness. Tverksy and Kahneman (1
 >[P]eople expect that the essential characteristics of the process will be represented, not only globally in the entire sequence, but also locally in each of its parts. A locally representative sequence, however, deviates systematically from chance expectation: it contains too many alternations and too few runs. Another consequence of the belief in local representativeness is the well-known gambler's fallacy. After observing a long run of red on the roulette wheel. for example, most people erroneously believe that black is now due, presumably because the occurrence of black will result in a more representative sequence than the occurrence of an additional red.
 :::
 
-### Overconfidence
+## Overconfidence
 
 Consider the following three statements. Suppose that each statement is an instance of overconfidence. For each statement name and define the form of overconfidence that provides the best explanation for the students' beliefs.
 
@@ -586,7 +588,7 @@ Overprecision.
 Overprecision is the tendency to believe that our predictions or estimates are more accurate than they actually are. 
 :::
 
-### Lethal events
+## Lethal events
 
 When people are asked the frequency of lethal events, they are often inaccurate. The following table lists those events most subject to under- or over-estimation of the frequency.
 
