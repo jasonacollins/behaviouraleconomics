@@ -55,8 +55,8 @@ b\) What is the expected value of not purchasing insurance?
 ## Answer
 
 \begin{align*}
-E[\text{don't}]&=p\times-value_{\text{house}} \\
-&=-0.001\times 1000000 \\
+E[\text{don't}]&=p\times-value_{\text{house}} \\[6pt]
+&=-0.001\times 1000000 \\[6pt]
 &=-\$1000
 \end{align*}
 :::
@@ -446,7 +446,7 @@ ggplot(mapping = aes(x, y)) +
     #Add expected utility line
     annotate("segment", x = x2, xend = x1, y = u(x2), yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotdash")+
 
-    #Add labels W-H, U(W_H) and line to curve indicating each
+    #Add labels W-H, U(W-H) and line to curve indicating each
     annotate("text", x = x1, y = 0, label = "W-H", size = 4, hjust = 0.4, vjust = 1.5)+
     annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
     annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
@@ -456,7 +456,7 @@ ggplot(mapping = aes(x, y)) +
     annotate("text", x = ev, y = 0, label = TeX("E[$\\neg$ I]", output='character'), parse=TRUE, size = 4, hjust = 0.4, vjust = 1.4)+
     annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
     annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
-    annotate("text", x = 0, y = u(3)+(u(x2)-u(x1))*px2, label = TeX("E[U($\\neg$ I)]", output='character'), parse=TRUE, size = 4, hjust = 1.05, vjust = 0.45)
+    annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = TeX("E[U($\\neg$ I)]", output='character'), parse=TRUE, size = 4, hjust = 1.05, vjust = 0.45)
 
 ```
 

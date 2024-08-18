@@ -51,22 +51,22 @@ What is the change in value for each person? Who is happiest?
 Value for Edna:
 
 \begin{align*}
-v(x)&=v(60-50) \\
+v(x)&=v(60-50) \\[6pt]
 &=10
 \end{align*}
 
 Value for Ferdinand:
 
 \begin{align*}
-v(x)&=v(60-80) \\
-&=-2\times 30 \\
-&=-60
+v(x)&=v(60-80) \\[6pt]
+&=-2\times 20 \\[6pt]
+&=-40
 \end{align*}
 
 Value for Gretel:
 
 \begin{align*}
-v(x)&=v(60-60) \\
+v(x)&=v(60-60) \\[6pt]
 &=0
 \end{align*}
 

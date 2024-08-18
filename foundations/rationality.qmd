@@ -38,19 +38,19 @@ One classic argument for transitivity is the concept of a "money pump" (@davidso
 
 Suppose you have a person who prefers A to B, B to C and C to A. That is, they have intransitive preferences. They have \$20 and an endowment of C.
 
-![](img/money-pump-1.png)
+![](img/money-pump-1.png){width=50%}
 
 They are offered B in exchange for their endowment of C for some small nominal cost (say \$1). If they make the trade they now have B and \$19.
 
-![](img/money-pump-2.png)
+![](img/money-pump-2.png){width=50%}
 
 They are then offered A in exchange for their endowment of B, again for a nominal cost.
 
-![](img/money-pump-3.png)
+![](img/money-pump-3.png){width=50%}
 
 Finally, they are offered C in exchange for their endowment of A for a further nominal cost. They now have an endowment of C and \$17. This process can be repeated until the agent has no money.
 
-![](img/money-pump-4.png)
+![](img/money-pump-4.png){width=50%}
 
 ## Preference Orderings
 

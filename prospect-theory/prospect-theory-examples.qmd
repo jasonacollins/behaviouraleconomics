@@ -5,7 +5,7 @@ engine: knitr #added as otherwise inline r code does not execute
 
 ## A 50:50 gamble
 
-Suppose an agent has the following reference-dependent value function:
+Suppose Alby has the following reference-dependent value function:
 
 $$
 v(x)=\left\{\begin{matrix}
@@ -14,19 +14,21 @@ x^\frac{1}{2} \qquad &\textrm{where} \space x \geq 0\\[6pt]
 \end{matrix}\right.
 $$
 
-Where $x$ is the realised outcome relative to the reference point.
+$x$ is the realised outcome relative to the reference point.
 
-Assume that the agent’s reference point is the status quo and that they weight outcomes linearly.
+Assume that Alby’s reference point is the status quo and that he weights outcomes linearly.
 
-The agent is offered the gamble A:
+Alby is offered the gamble A:
 
 $$
 (0.5, \$110; 0.5, −\$100)
 $$
 
-### Accept or reject
+### Accept or reject?
 
-Will they want to play this gamble?
+Will Alby want to play this gamble?
+
+To determine this, we compare the weighted value of the gamble with the weighted value of rejecting the offer.
 
 The weighted value of the gamble is:
 
@@ -37,11 +39,17 @@ V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
 &=`r round(0.5*110^0.5-0.5*2*100^0.5, 2)`
 \end{align*}
 
-They will not want to play this gamble as it has a negative value for the agent. They could receive a weighted value of 0 by simply not playing.
+Alby will not want to play this gamble as it has a negative value. He could receive a weighted value of 0 by simply not playing.
 
-The reason for this negative value is that the agent is loss averse. The loss of \$100 is given twice the weight of an equivalent gain.
+The reason for this negative value is that Alby is loss averse. The loss of \$100 is given twice the weight of an equivalent gain.
 
-The following chart illustrates. Note that $V(A)$ is a probability-weighted average of the two possible outcomes from the bet, and is projected from the straight line between those two outcomes.
+The following chart illustrates. The horizontal axis is the outcome $x$ relative to the reference point. The vertical axis is the value of each outcome. The S-shaped curve represents Alby's value function, with a concave curve in the game domain and a convex curve in the loss domain. The curve is steeper in the loss domain, due to loss aversion.
+
+The gain of $110 and the loss of $100 and their respective values are marked.
+
+I have drawn a straight line between the two outcomes. The weighted value of the two outcomes will be on this line.
+
+As the probability of each outcome is 50 percent, the expected value of A, \$5, is halfway between the two outcomes. If we project to the straight line from the expected value, we get $V(A)$, a probability-weighted average of the two possible outcomes from the bet. $V(A)$ is negative, indicating that the gamble has a lower weighted value than remaining at the status quo. 
 
 ```{r}
 #| label: fig-50-50-gamble
@@ -109,17 +117,19 @@ ggplot(mapping = aes(x, y)) +
 
 ```
 
-### Accept or reject after loss
+### Accept or reject after loss?
 
-Suppose the agent loses their wallet containing \$100. They feel bad about it and perceive it as a loss. Their reference point is unchanged at the original status quo, but the amount of money they have after any outcome is \$100 less than otherwise. Would they be willing to take gamble A now?
+Suppose Alby loses his wallet containing \$100. He feels bad about it and perceives it as a loss. His reference point is unchanged at the original status quo, but the amount of money he will have after any outcome is \$100 less than otherwise. Would he be willing to take gamble A now?
 
-After losing \$100 but not changing their reference point, they have two possible outcomes relative to their reference point: a gain of \$10 (winning \$110 minus the lost money in the wallet) and a loss of \$200 (losing \$100 and also losing their wallet).
+After losing \$100 but not changing his reference point, he has two possible outcomes relative to his reference point: a gain of \$10 (winning \$110 minus the lost money in the wallet) and a loss of \$200 (losing \$100 and also losing his wallet).
+
+![](img/50-50-with-loss.png)
 
 The weighted value of gamble A is now:
 
 \begin{align*}
 V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
-&=0.5\times v(110-100)-0.5\times v(-100-100) \\[6pt]
+&=0.5\times v(110-100)+0.5\times v(-100-100) \\[6pt]
 &=0.5\times (10)^\frac{1}{2}-0.5\times 2\times (200)^\frac{1}{2} \\[6pt]
 &=`r round(0.5*10^0.5-0.5*2*200^0.5, 2)`
 \end{align*}
@@ -132,9 +142,11 @@ V(\neg A)&=v(-100) \\[6pt]
 &=-20
 \end{align*}
 
-They will now want to play the gamble as it has a greater value than staying with their current loss. The gamble becomes attractive as it allows recovery the loss. The agent is risk seeking in the loss domain. (They would even accept a 50:50 gamble to win \$100, lose \$100 with an expected value of zero.)
+He will now want to play the gamble as it has a greater value than staying with his current loss. The gamble becomes attractive as it allows recovery of the loss. Alby is risk seeking in the loss domain. (He would even accept a 50:50 gamble to win \$100, lose \$100 with an expected value of zero.)
 
-The choice is illustrated in the following chart.
+The choice is illustrated in the following chart. The two possible outcomes, $200 below the reference point and $10 above the reference point, plus their values, are marked. The weighted value of those two possible outcomes is also marked, with the expected value, E of A, projected onto the line between the two outcomes to give $V(A)$
+
+It is visually apparent that $V(A)$ is above the value of a loss of $100, the outcome if Alby does not accept the gamble. As a result, Alby wants to accept the gamble.
 
 ```{r}
 #| label: fig-50-50-gamble-after-loss
@@ -208,17 +220,17 @@ ggplot(mapping = aes(x, y)) +
 
 ```
 
-### Accept or reject after adaptation to loss
+### Accept or reject after adaptation to loss?
 
-The agent has now adapted to their loss of \$100. The new reference point is the new wealth level incorporating the loss wallet. Would they take gamble A now?
+Alby has now adapted to his loss of \$100. The new reference point is the new wealth level incorporating the loss wallet. Would he take gamble A now?
 
-We are now back to an identical situation as when they were first offered the gamble with their reference point as the status quo. They will not want to partake in the gamble.
+We are now back to an identical situation as when he was first offered the gamble with his reference point as the status quo. He will not want to partake in the gamble.
 
-### Accept or reject after win
+### Accept or reject after a win?
 
-The agent wins \$10,000 at the casino. They feel good about their win, so their reference point remains at their wealth excluding the win. Would they take gamble A now?
+Alby wins \$10,000 at the casino. He feels good about his win, so his reference point remains at his wealth excluding the win. Would he take gamble A now?
 
-With the additional \$10,000, the value from the gamble is:
+With the additional \$10,000, the value of the gamble is:
 
 \begin{align*}
 V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
@@ -235,9 +247,9 @@ V(\neg A)&=v(10000) \\[6pt]
 &=100
 \end{align*}
 
-The gamble is now attractive. The agent is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.
+The gamble is now attractive. Alby is less risk averse at a higher wealth. Further, the gamble is entirely in the gain domain, meaning that loss aversion does not affect the decision.
 
-The following chart illustrates. The agent becomes increasingly risk neutral as we move further into the gain domain. You can see this through the line becoming approximately straight. As a result, at a high enough wealth, the positive value bet becomes attractive
+The following chart, not drawn to scale, illustrates. Alby becomes increasingly risk neutral as we move further into the gain domain. You can see this through the value function curve becoming approximately straight. As a result, at a high enough wealth, the positive value bet becomes attractive. $V(A)$ is above the value of the certain outcome, $V(10000)$.
 
 ```{r}
 #| label: fig-50-50-gamble-after-win
@@ -337,7 +349,7 @@ Paddy compares the value of taking versus not taking the bet:
 
 \begin{align*}
 V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\[6pt]
-&=0.6\times v(150)-0.4\times v(100) \\[6pt]
+&=0.6\times v(150)+0.4\times v(-100) \\[6pt]
 &=0.6\times (150)^{\frac{1}{2}}-0.4\times 2\times (100)^{\frac{1}{2}} \\[6pt]
 &=`r round(0.6*150^0.5-0.4*2*100^0.5, 3)`
 \end{align*}
@@ -414,30 +426,32 @@ ggplot(mapping = aes(x, y)) +
 
 ```
 
-### Accept or reject after loss
+### Accept or reject after a loss?
 
 Following some bad economic news, Paddy's wealth declines to \$150. Paddy cannot get over the loss, so his reference point remains his former wealth of \$300.
 
 Paddy is offered bet A again. Does Paddy accept the bet?
 
-As Paddy is now in the loss domain, the two potential outcomes from the bet are a gain of \$0 and a loss of \$250. His alternative is remaining at a point \$150 below his reference point ($L$).
+As Paddy is now in the loss domain, the two potential outcomes from the bet are a gain of \$0 and a loss of \$250. His alternative is remaining at a point \$150 below his reference point.
 
-Paddy compares the value of taking versus not taking the bet is:
+![](img/60-40-after-loss.png)
+
+Paddy compares the value of taking versus not taking the bet:
 
 \begin{align*}
 V(\text{A})&=p_1v(x_1)+p_2v(x_2) \\[6pt]
 &=0.6\times v(-150+150)+0.4\times v(-150-100) \\[6pt]
-&=0.6\times (-150+150)^{\frac{1}{2}}-0.4\times 2\times (150+100)^{\frac{1}{2}} \\[6pt]
+&=0.6\times (0)^{\frac{1}{2}}-0.4\times 2\times (250)^{\frac{1}{2}} \\[6pt]
 &=`r round(0.6*0^0.5-0.4*2*250^0.5, 3)` \\
 \\
-V(\text{L})&=v(L) \\[6pt]
+V(\neg\text{A})&=v(-150) \\[6pt]
 &=-2\times (150)^{\frac{1}{2}} \\[6pt]
 &=`r round(-2*150^0.5, 3)`
 \end{align*}
 
 Paddy accepts the bet as $V(A)$ is greater than the value of the certain loss of \$150.
 
-The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain. The potential loss of another $100 results in a smaller incremental loss of value than an equivalent win of $100.
+The following figure shows Paddy's value function, the bets and the value of the bets.  The figure shows that Paddy accepts the bet as he is risk seeking in the loss domain. The potential loss of another \$100 results in a smaller incremental loss of value than an equivalent win of $100.
 
 ```{r}
 #| label: fig-60-40-gamble-after-loss
@@ -518,39 +532,79 @@ $$
 
 $x$ is the change in Bill's position relative to his reference point.
 
-\(a) What feature of Bill's value function leads to the reflection effect?
+What feature of Bill's value function leads to the reflection effect?
 
 The power of $\frac{1}{2}$ applied in both the gain and loss domain leads to diminishing sensitivity to gains and losses. The value function is concave in the gain domain and convex in the loss domain. This curvature leads to risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. This change in risk preference between the gain and loss domains is the reflection effect.
 
-\(b) Bill considers a choice between \$100 for certain and gamble A: (0.5, \$250; 0.5, 0).
+```{r}
+#| label: fig-bill-curve
+#| fig-cap: Bill's value function
 
-\(i) Will Bill prefer the \$100 or gamble A?
+library(ggplot2)
+
+u <- function(x){
+  ifelse (x >= 0, x^0.5, -2*(-x)^0.5)
+}
+
+df <- data.frame(
+  x = seq(-220, 220, 0.1),
+  y = u(seq(-220, 220, 0.1))
+)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "v(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-220, 220), ylim = c(-30, 15))
+
+```
+
+### Accept or reject?
+
+Bill considers a choice between \$100 for certain and gamble A: (0.5, \$250; 0.5, 0).
+
+Will Bill prefer the \$100 or gamble A?
 
 The weighted value of gamble A is:
 
 \begin{align*}
-V(A)&=0.5 \times 250^{0.5} + 0.5 \times 0^{0.5} \\
+V(A)&=p_1v(x_1)+p_2v(x_2) \\[6pt]
+&=0.5\times v(250)+0.5\times v(0) \\[6pt]
+&=0.5 \times 250^{0.5} + 0.5 \times 0^{0.5} \\[6pt]
 &=`r round(0.5*250^0.5 + 0.5*0^0.5, 2)`
 \end{align*}
 
 The value of the \$100 for certain is:
 
 \begin{align*}
-V(\$100)&=100^{0.5} \\
+V(\$100)&=v(100)\\[6pt]
+&=100^{0.5} \\[6pt]
 &=`r round(100^0.5, 2)`
 \end{align*}
 
-As $V(A) > V(\$100)$, Bill will prefer gamble the \$100 for certain.
+As $V(\$100)>V(A)$, Bill will prefer the \$100 for certain to the gamble.
 
-\(ii) What features of the value function lead Bill to accept or reject the gamble?
+The possible outcomes from the gamble are zero and \$250. The certain outcome on offer is \$100. The expected value of the gamble is \$125. The outcomes are in the gain domain.
 
-Bill rejects the gamble because of the diminishing sensitivity to gains. This leads him to be risk averse and reject the higher expected value option of the gamble.
+As he is risk averse in the gain domain, the value of the \$100 for certain exceeds the weighted value of the gamble. This can be seen through $v(A)$ being less than $v(\$100)$. Bill will therefore choose the \$100 for certain.
 
-Loss aversion does not affect his decision as all possible outcomes (at least under our assumed reference point) are in the gain domain. Note that we do not use the value function for $x<0$ in determining Bill's choice.
+The following chart shows Bill's choices. Bill rejects the gamble because of the diminishing sensitivity to gains. This leads him to be risk averse and reject the higher expected value option of the gamble.
 
-The following chart shows Bill's choices before the shock, whereby all possible outcomes are in the gain domain. The possible outcomes from the gamble are zero and \$250. The certain outcome on offer is \$100. The expected value of the gamble is \$125.
-
-As he is risk averse, the value of the \$100 for certain exceeds the weighted value of the gamble. This can be seen through $v(A)$ being less than $v(\$100)$. Bill will therefore choose the \$100 for certain.
+As all possible outcomes under our assumed reference point are in the gain domain, loss aversion does not affect his decision. Note that we do not use the value function for $x<0$ in determining Bill's choice.
 
 ```{r}
 #| label: fig-bill-gamble
@@ -622,13 +676,19 @@ ggplot(mapping = aes(x, y)) +
 
 ```
 
-\(c) Suppose Bill were to experience a large negative shock to his wealth that does not immediately change his reference point. Could this shock cause him to change his decision concerning the \$100 and gamble A?
+## Accept or reject after a negative shock?
+
+Suppose Bill were to experience a large negative shock to his wealth that does not immediately change his reference point. Could this shock cause him to change his decision concerning the \$100 and gamble A?
 
 A large negative shock to Bill's wealth would cause him to change his decision concerning the \$100 and gamble A. The shock would move the two possible outcomes into the loss domain, where Bill is risk seeking. (For this answer, I am assuming a shock of greater than \$250. A smaller shock would change the analysis.)
 
-The following diagram illustrates Bill's decision after the shock. After the loss of wealth but no change in reference point, the outcomes would now be in the loss domain. Let $L$ be a large negative number, the loss. The potential outcomes from the gamble are now $L$ and $L+250$. The certain outcome of accepting the \$100 is $L+100$. The expected value of the gamble is $L+125$. The weighted value of the gamble is $v(L+125)$. The value of the certain outcome is $v(L+100)$.
+The following diagram illustrates the outcomes relative to the reference point. Let $L$ be a large negative number, the loss. The potential outcomes from the gamble are now $L$ and $L+250$. The certain outcome of accepting the \$100 is $L+100$.
 
-Due to the convex curvature of the curve in the loss domain, Bill is risk seeking. As a result, the utility of the gamble is greater than the utility of the certain outcome. This can be seen in $v(L+A)$ being greater than $v(L+100)$.
+![](img/gain-domain-after-loss.png)
+
+The following diagram illustrates Bill's decision after the shock. The outcomes $L$, $L+100$ and $L+250$, and their respective values, are marked. The expected value of the gamble is $L+125$. The weighted value of the gamble is $V(L+A)$.
+
+Due to the convex curvature of the curve in the loss domain, Bill is risk seeking. As a result, the utility of the gamble is greater than the utility of the certain outcome. This can be seen in $V(L+A)$ being greater than $v(L+100)$.
 
 ```{r}
 #| label: fig-bill-gamble-after-shock
@@ -698,7 +758,7 @@ ggplot(mapping = aes(x, y)) +
   annotate("text", x = ev, y = 0, label = "L+E[A]", size = 4, hjust = 0.1, vjust = -0.3)+
   annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
   annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
-  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "v(L+A)", size = 4, hjust = -0.1, vjust = 0.45)
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "V(L+A)", size = 4, hjust = -0.1, vjust = 0.45)
 
 ```
 
