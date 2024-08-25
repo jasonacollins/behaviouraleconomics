@@ -3,6 +3,8 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Prospect theory examples
 
+In this section, I present a series of mathematical examples of prospect theory.
+
 ## A 50:50 gamble
 
 Suppose Alby has the following reference-dependent value function:

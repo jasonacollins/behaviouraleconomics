@@ -3,6 +3,8 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Expected utility examples
 
+In this section, I present a series of mathematical examples of expected utility theory.
+
 ## A 50:50 bet
 
 Suppose your utility function is $U(x)=\text{ln}(x)$.

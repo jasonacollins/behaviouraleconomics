@@ -19,7 +19,7 @@ A sophisticated present-biased agent correctly believes that they will apply bot
 
 A sophisticated and naive person can make different decisions despite having the same level of impatience, $\delta$, and the same level of present bias, $\beta$. Any difference emerges in the way that they reason through an intertemporal choice.
 
-The naive agent makes its plans by forward reasoning, starting from today ($t=0$).
+The naive agent makes their plans by forward reasoning, starting from today ($t=0$).
 
 1.  First, they decide their preferred option for $t=0$, believing that they will stick to their plan once they move to the next period.
 
@@ -27,7 +27,7 @@ The naive agent makes its plans by forward reasoning, starting from today ($t=0$
 
 3.  They repeat this process as they move through time.
 
-In contrast, the sophisticated present-biased agent makes its plans by backward reasoning, starting from the final period ($t=T$).
+In contrast, the sophisticated present-biased agent makes their plans by backward reasoning, starting from the final period ($t=T$).
 
 1.  For that final period, they solve for the preferred action.
 

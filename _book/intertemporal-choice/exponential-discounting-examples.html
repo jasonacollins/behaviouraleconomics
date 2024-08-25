@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -641,13 +675,13 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-exponential_example_1" id="toc-sec-exponential_example_1" class="nav-link active" data-scroll-target="#sec-exponential_example_1"><span class="header-section-number">23.1</span> Example 1</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2"><span class="header-section-number">23.2</span> Example 2</a></li>
-  <li><a href="#example-3" id="toc-example-3" class="nav-link" data-scroll-target="#example-3"><span class="header-section-number">23.3</span> Example 3</a></li>
+  <li><a href="#sec-exponential_example_1" id="toc-sec-exponential_example_1" class="nav-link active" data-scroll-target="#sec-exponential_example_1"><span class="header-section-number">23.1</span> Example 1: $100 today or $110 next week</a></li>
+  <li><a href="#example-2-how-much-for-a-one-year-delay" id="toc-example-2-how-much-for-a-one-year-delay" class="nav-link" data-scroll-target="#example-2-how-much-for-a-one-year-delay"><span class="header-section-number">23.2</span> Example 2: How much for a one-year delay?</a></li>
+  <li><a href="#example-3-10-in-five-days-or-20-in-10-days" id="toc-example-3-10-in-five-days-or-20-in-10-days" class="nav-link" data-scroll-target="#example-3-10-in-five-days-or-20-in-10-days"><span class="header-section-number">23.3</span> Example 3: $10 in five days or $20 in 10 days?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -675,159 +709,332 @@ window.Quarto = {
 
 <p>In this part, I will work through several numerical examples of decisions by an exponential discounter.</p>
 <section id="sec-exponential_example_1" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="sec-exponential_example_1"><span class="header-section-number">23.1</span> Example 1</h2>
-<p>Suppose we have an exponential-discounting agent with discount factor <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>. They are offered two choices.</p>
-<p>Choice 1: Would this agent prefer $100 today (<span class="math inline">t=0</span>) or $110 next week (<span class="math inline">t=1</span>)?</p>
-<p>To determine this, we calculate the discounted utility of each option. The agent will prefer the option with the highest discounted utility.</p>
-<p>The discounted utility of the $100 today is:</p>
+<h2 data-number="23.1" class="anchored" data-anchor-id="sec-exponential_example_1"><span class="header-section-number">23.1</span> Example 1: $100 today or $110 next week</h2>
+<p>Alison is an exponential discounter with discount factor <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>. She is offered two choices.</p>
+<p>Choice 1: Would she prefer $100 today (<span class="math inline">t=0</span>) or $110 next week (<span class="math inline">t=1</span>)?</p>
+<p>To determine this, we calculate the discounted utility of each option. Alison will prefer the option with the highest discounted utility.</p>
+<p>We write the discounted utility of the $100 today as <span class="math inline">U_0(0,\$100)</span>. The subscript 0 indicates that the utility is calculated at time <span class="math inline">t=0</span>. The first number in the brackets indicates the time the payment is received. In this case, the $100 is received at <span class="math inline">t=0</span>, today. The second number in the brackets is the value of the payment.</p>
+<p>The discounted utility of the $100 today, <span class="math inline">U_0(0,\$100)</span>, is:</p>
 <p><span class="math display">\begin{align*}
-U_0(0,\$100)&amp;=u(\$100) \\
+U_0(0,\$100)&amp;=u(\$100) \\[6pt]
 &amp;=100
 \end{align*}</span></p>
+<p>There is no discount <span class="math inline">\delta</span> applied to the $100 as it is received immediately.</p>
+<p>We write the discounted utility of the $110 next week as <span class="math inline">U_0(1,\$110)</span>. The subscript 0 again indicates that the utility is calculated at time <span class="math inline">t=0</span>. The first number in the brackets, 1, indicates the time the payment is received, <span class="math inline">t=1</span>. The second number in the brackets is the value of the payment.</p>
 <p>The discounted utility of the $110 next week is:</p>
 <p><span class="math display">\begin{align*}
-U_0(1,\$110)&amp;=\delta u(\$110) \\
-&amp;=0.95\times 110 \\
+U_0(1,\$110)&amp;=\delta u(\$110) \\[6pt]
+&amp;=0.95\times 110 \\[6pt]
 &amp;=104.5
 \end{align*}</span></p>
-<p>The exponential discounter will prefer to receive $110 next week as it leads to higher discounted utility.</p>
-<p>Choice 2: Would this agent prefer $100 next week (<span class="math inline">t=1</span>) or $110 in two weeks (<span class="math inline">t=2</span>)?</p>
+<p>In this case, a discount of <span class="math inline">\delta=0.95</span> is applied to the $110 as it is received in one week.</p>
+<p>We can now compare the discounted utility of each option. <span class="math inline">U_0(0,\$100)=100&lt;104.5=U_0(1,\$110)</span>. Alison would prefer to receive $110 next week as it leads to higher discounted utility.</p>
+<p><a href="#fig-alison-choice-1" class="quarto-xref">Figure&nbsp;<span>23.1</span></a> visualises the effect of discounting in Choice 1.</p>
+<p>The two bars represent the options: $100 at <span class="math inline">t=0</span> and $110 at <span class="math inline">t=1</span>. The line from the $110 option represents the discounted utility of that option at each time. At <span class="math inline">t=0</span> the discounted utility of the $110 received at <span class="math inline">t=1</span> is 104.5. At <span class="math inline">t=0</span> we can see that the $110 is preferred as the line indicating discounted utility is higher than the utility of the $100 received immediately.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a function to create the discounted bar chart</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Helper function to create discounted values</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>create_discount_data <span class="ot">&lt;-</span> <span class="cf">function</span>(value, time, discount_rate, start) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  times <span class="ot">&lt;-</span> <span class="fu">seq</span>(start, time, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">t =</span> times,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">group =</span> <span class="fu">as.character</span>(time),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> value <span class="sc">*</span> discount_rate<span class="sc">^</span>(time <span class="sc">-</span> times)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function to create the discounted bar chart</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>create_discounted_bar_chart <span class="ot">&lt;-</span> <span class="cf">function</span>(smaller, t_s, larger, t_l, discount_rate, <span class="at">starting_at =</span> <span class="dv">0</span>, <span class="at">y_spacing =</span> <span class="dv">20</span>, <span class="at">x_spacing =</span> <span class="dv">1</span>) {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the data</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">t =</span> <span class="fu">c</span>(t_s, t_l),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">U_t =</span> <span class="fu">c</span>(smaller, larger)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the discounted values, starting from 'starting_at'</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  discounted_data <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">create_discount_data</span>(smaller, t_s, discount_rate, starting_at),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">create_discount_data</span>(larger, t_l, discount_rate, starting_at)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Shift t values based on starting_at</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  data<span class="sc">$</span>t_plot <span class="ot">&lt;-</span> data<span class="sc">$</span>t <span class="sc">-</span> starting_at</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  discounted_data<span class="sc">$</span>t_plot <span class="ot">&lt;-</span> discounted_data<span class="sc">$</span>t <span class="sc">-</span> starting_at</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter out any data points before the starting point</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>t <span class="sc">&gt;=</span> starting_at, ]</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  discounted_data <span class="ot">&lt;-</span> discounted_data[discounted_data<span class="sc">$</span>t <span class="sc">&gt;=</span> starting_at, ]</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Determine x-axis and y-axis limits</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  x_min <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  x_max <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">max</span>(data<span class="sc">$</span>t_plot), <span class="fu">max</span>(discounted_data<span class="sc">$</span>t_plot))</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  y_max <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">max</span>(data<span class="sc">$</span>U_t), <span class="fu">max</span>(discounted_data<span class="sc">$</span>value)) <span class="sc">*</span> <span class="fl">1.1</span>  <span class="co"># 10% buffer</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the plot</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the bars</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_rect</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">xmin =</span> <span class="fu">ifelse</span>(t_plot <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">0</span>, t_plot <span class="sc">-</span> <span class="fl">0.15</span>),</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>                               <span class="at">xmax =</span> <span class="fu">ifelse</span>(t_plot <span class="sc">==</span> <span class="dv">0</span>, <span class="fl">0.15</span>, t_plot <span class="sc">+</span> <span class="fl">0.15</span>),</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>                               <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> U_t),</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the discount lines</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data =</span> discounted_data, <span class="fu">aes</span>(<span class="at">x =</span> t_plot, <span class="at">y =</span> value, <span class="at">group =</span> group), </span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Customize the plot</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(x_min, x_max <span class="sc">+</span> <span class="dv">1</span>, <span class="at">by =</span> x_spacing), </span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>                       <span class="at">limits =</span> <span class="fu">c</span>(x_min, x_max <span class="sc">+</span> <span class="dv">1</span>),</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>                       <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="cf">function</span>(x) x <span class="sc">+</span> starting_at) <span class="sc">+</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, y_max, <span class="at">by =</span> y_spacing), </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>                       <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, y_max),</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>                       <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span> </span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"t"</span>,</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="fu">expression</span>(U[t])) <span class="sc">+</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>      <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>      <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_discounted_bar_chart</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">110</span>, <span class="dv">1</span>, <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-alison-choice-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-alison-choice-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23.1: Alison’s consideration of Choice 1
+</figcaption>
+<div aria-describedby="fig-alison-choice-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="exponential-discounting-examples_files/figure-html/fig-alison-choice-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;23.1: Alison’s consideration of Choice 1"><img src="exponential-discounting-examples_files/figure-html/fig-alison-choice-1-1.png" class="img-fluid figure-img" width="480"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>Choice 2: Would Alison prefer $100 next week (<span class="math inline">t=1</span>) or $110 in two weeks (<span class="math inline">t=2</span>)?</p>
+<p>Again, we calculate the discounted utility of each option. Alison will prefer the option with the highest discounted utility.</p>
 <p>The discounted utility of the $100 next week is:</p>
 <p><span class="math display">\begin{align*}
-U_0(1,\$100)&amp;=\delta u(\$110) \\
-&amp;=0.95\times 100 \\
+U_0(1,\$100)&amp;=\delta u(\$100) \\[6pt]
+&amp;=0.95\times 100 \\[6pt]
 &amp;=95
 \end{align*}</span></p>
 <p>The discounted utility of the $110 in two weeks is:</p>
 <p><span class="math display">\begin{align*}
-U_0(2,\$110)&amp;=\delta^2 u(\$110) \\
-&amp;=0.95^2\times 110 \\
+U_0(2,\$110)&amp;=\delta^2 u(\$110) \\[6pt]
+&amp;=0.95^2\times 110 \\[6pt]
 &amp;=99.275
 \end{align*}</span></p>
-<p>The exponential discounter will prefer to receive $110 in two weeks.</p>
-<p>The set of decisions across Choice 1 and Choice 2 are time consistent. If the agent selected $110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively Choice 1), they would not change their decision.</p>
-<p><a href="#fig-example_1" class="quarto-xref">Figure&nbsp;<span>23.1</span></a> visualises the effect of discounting in Choice 2.</p>
-<p>The two bars represent the options: $100 at <span class="math inline">t=1</span> and $110 at <span class="math inline">t=2</span>. The line from each represents the discounted value of that option at each time. For example, at <span class="math inline">t=1</span> the discounted utility of the $100 received at <span class="math inline">t=1</span> is $100 and the discounted utility of the $110 received at <span class="math inline">t=2</span> is $104.50. We can read those values from the line. For any time <span class="math inline">t</span> we can determine which option would be preferred by seeing which line is higher.</p>
-<div id="fig-example_1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>We can now compare the discounted utility of each option. <span class="math inline">U_0(1,\$100)=95&lt;99.275=U_0(2,\$110)</span>. Alison would prefer to receive $110 in two weeks.</p>
+<p>The set of decisions across Choice 1 and Choice 2 are time consistent. If Alison selected $110 in two weeks for Choice 2 and was given a chance to change her choice after one week (which is effectively Choice 1), she would not change her decision.</p>
+<p><a href="#fig-alison-choice-2" class="quarto-xref">Figure&nbsp;<span>23.2</span></a> visualises the effect of discounting in Choice 2.</p>
+<p>The two bars represent the options: $100 at <span class="math inline">t=1</span> and $110 at <span class="math inline">t=2</span>. The line from each represents the discounted utility of that option at each time.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_discounted_bar_chart</span>(<span class="dv">100</span>, <span class="dv">1</span>, <span class="dv">110</span>, <span class="dv">2</span>, <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-alison-choice-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-example_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;23.1: Choice 2
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-alison-choice-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23.2: Alison’s consideration of Choice 2
 </figcaption>
-<div aria-describedby="fig-example_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="img/example_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;23.1: Choice 2"><img src="img/example_1.jpg" class="img-fluid figure-img" style="width:60.0%"></a>
+<div aria-describedby="fig-alison-choice-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="exponential-discounting-examples_files/figure-html/fig-alison-choice-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;23.2: Alison’s consideration of Choice 2"><img src="exponential-discounting-examples_files/figure-html/fig-alison-choice-2-1.png" class="img-fluid figure-img" width="480"></a>
 </div>
 </figure>
+</div>
+</div>
+</div>
+<p>For example, at <span class="math inline">t=1</span> the discounted utility of the $100 received at <span class="math inline">t=1</span> is 100 and the discounted utility of the $110 received at <span class="math inline">t=2</span> is 104.50. We can read those values from the line. For any time <span class="math inline">t</span> we can determine which option would be preferred by seeing which line is higher.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, create the plot using the existing function</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">create_discounted_bar_chart</span>(<span class="dv">100</span>, <span class="dv">1</span>, <span class="dv">110</span>, <span class="dv">2</span>, <span class="fl">0.95</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the y-intercept for the dashed line</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>y_intercept <span class="ot">&lt;-</span> <span class="dv">110</span> <span class="sc">*</span> <span class="fl">0.95</span>  <span class="co"># 104.5</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the dashed line and the label to the existing plot</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>p_with_line_and_label <span class="ot">&lt;-</span> p <span class="sc">+</span> </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> y_intercept, <span class="at">xend =</span> <span class="dv">1</span>, <span class="at">yend =</span> y_intercept),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.2</span>, <span class="at">y =</span> y_intercept, <span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"%.1f"</span>, y_intercept)),</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">size =</span> <span class="dv">3</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the modified plot</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p_with_line_and_label)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-alison-choice-2-discount" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-alison-choice-2-discount-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23.3: Alison’s consideration of Choice 2 - discounted utilities
+</figcaption>
+<div aria-describedby="fig-alison-choice-2-discount-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="exponential-discounting-examples_files/figure-html/fig-alison-choice-2-discount-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;23.3: Alison’s consideration of Choice 2 - discounted utilities"><img src="exponential-discounting-examples_files/figure-html/fig-alison-choice-2-discount-1.png" class="img-fluid figure-img" width="480"></a>
+</div>
+</figure>
+</div>
+</div>
 </div>
 <p>You will note that the two lines do not cross. For an exponential discounter, if one line is higher at any particular time <span class="math inline">t</span>, it is higher at all times.</p>
-<p><a href="#fig-example_1a" class="quarto-xref">Figure&nbsp;<span>23.2</span></a> visualises Choice 2 reconsidered at <span class="math inline">t=1</span>. The discounted value of the $100 received immediately is less than the discounted utility of $110 in one week.</p>
-<div id="fig-example_1a" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p><a href="#fig-alison-choice-2-reconsidered" class="quarto-xref">Figure&nbsp;<span>23.4</span></a> visualises Choice 2 reconsidered at <span class="math inline">t=1</span>, which as noted earlier, is effectively Choice 1. The discounted utility of the $100 received immediately is less than the discounted utility of $110 in one week. The preference for the higher-value option remains.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_discounted_bar_chart</span>(<span class="dv">100</span>, <span class="dv">1</span>, <span class="dv">110</span>, <span class="dv">2</span>, <span class="fl">0.95</span>, <span class="at">starting_at =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-alison-choice-2-reconsidered" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-example_1a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;23.2: Choice 1
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-alison-choice-2-reconsidered-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23.4: Alison’s reconsideration of Choice 2
 </figcaption>
-<div aria-describedby="fig-example_1a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="img/example_1a.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;23.2: Choice 1"><img src="img/example_1a.jpg" class="img-fluid figure-img" style="width:60.0%"></a>
+<div aria-describedby="fig-alison-choice-2-reconsidered-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="exponential-discounting-examples_files/figure-html/fig-alison-choice-2-reconsidered-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;23.4: Alison’s reconsideration of Choice 2"><img src="exponential-discounting-examples_files/figure-html/fig-alison-choice-2-reconsidered-1.png" class="img-fluid figure-img" width="480"></a>
 </div>
 </figure>
 </div>
+</div>
+</div>
 </section>
-<section id="example-2" class="level2" data-number="23.2">
-<h2 data-number="23.2" class="anchored" data-anchor-id="example-2"><span class="header-section-number">23.2</span> Example 2</h2>
-<p>Suppose we have an exponential discounter with discount factor <span class="math inline">\delta=0.95</span> per week and utility each period of <span class="math inline">u(x_n)=x_n</span></p>
-<p>They are offered $100 today. What sum would they need to be offered in one year (52 weeks) to prefer that later payment to the $100 today?</p>
+<section id="example-2-how-much-for-a-one-year-delay" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="example-2-how-much-for-a-one-year-delay"><span class="header-section-number">23.2</span> Example 2: How much for a one-year delay?</h2>
+<p>Brenda is an exponential discounter with discount factor <span class="math inline">\delta=0.95</span> per week and utility each period of <span class="math inline">u(x_n)=x_n</span></p>
+<p>She is offered $100 today. What sum would she need to be offered in one year (52 weeks) to prefer that later payment to the $100 today?</p>
+<p>To determine this, we calculate what sum received in one year would give Brenda the same discounted utility as receiving $100 today.</p>
 <p>The discounted utility of the $100 today is:</p>
 <p><span class="math display">\begin{align*}
-U_0(0,\$100)&amp;=u(\$100) \\
+U_0(0,\$100)&amp;=u(\$100) \\[6pt]
 &amp;=100
 \end{align*}</span></p>
 <p>The discounted utility of the sum <span class="math inline">y</span> received in 52 weeks is:</p>
 <p><span class="math display">\begin{align*}
-U_0(52,\$y)&amp;=\delta^{52} u(\$x) \\
+U_0(52,\$y)&amp;=\delta^{52} u(\$y) \\[6pt]
 &amp;=0.95^{52}\times y
 \end{align*}</span></p>
-<p>They will prefer $<span class="math inline">y</span> in 52 weeks if <span class="math inline">U(52,\$y)</span> is greater than 100.</p>
+<p>As there is a 52-period delay, the discount factor <span class="math inline">\delta</span> is applied 52 times.</p>
+<p>She will prefer $<span class="math inline">y</span> in 52 weeks if <span class="math inline">U(52,\$y)</span> is greater than 100.</p>
 <p><span class="math display">\begin{align*}
 U_0(52,\$y)&amp;&gt;100 \\[6pt]
 0.95^{52}\times y&amp;&gt;100 \\[6pt]
 y&amp;&gt;\frac{100}{0.95^{52}} \\[6pt]
 y&amp;&gt;\$1440.03
 \end{align*}</span></p>
-<p>The agent would be willing to wait a year for payment if they were paid more than $1440.03.</p>
-<p><a href="#fig-example_2" class="quarto-xref">Figure&nbsp;<span>23.3</span></a> visualises this problem. The bar at <span class="math inline">t=52</span> represents the $1440.03 that the agent would need to be paid to prefer that payment to $100 today. The line extended from that bar back to <span class="math inline">t=0</span> indicates the discounted value of that payment at any time <span class="math inline">t</span>. At <span class="math inline">t=0</span> the discounted value of the $1440.03 is $100.</p>
-<div id="fig-example_2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>Brenda would be willing to wait a year for payment if she was paid more than $1440.03.</p>
+<p><a href="#fig-brenda" class="quarto-xref">Figure&nbsp;<span>23.5</span></a> visualises this problem. The bar at <span class="math inline">t=52</span> represents the $1440.03 Brenda would need to be paid (at minimum) to prefer that payment to $100 today. The line extended from that bar back to <span class="math inline">t=0</span> indicates the discounted utility of that payment at any time <span class="math inline">t</span>. At <span class="math inline">t=0</span> the discounted utility of the $1440.03 is equal to the utility of $100.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_discounted_bar_chart</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">1440.03</span>, <span class="dv">52</span>, <span class="fl">0.95</span>, <span class="at">y_spacing =</span> <span class="dv">100</span>, <span class="at">x_spacing =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-brenda" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-example_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;23.3: Example 2
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-brenda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23.5: Brenda’s choice
 </figcaption>
-<div aria-describedby="fig-example_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="img/example_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;23.3: Example 2"><img src="img/example_2.jpg" class="img-fluid figure-img" style="width:60.0%"></a>
+<div aria-describedby="fig-brenda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="exponential-discounting-examples_files/figure-html/fig-brenda-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;23.5: Brenda’s choice"><img src="exponential-discounting-examples_files/figure-html/fig-brenda-1.png" class="img-fluid figure-img" width="480"></a>
 </div>
 </figure>
 </div>
+</div>
+</div>
 </section>
-<section id="example-3" class="level2" data-number="23.3">
-<h2 data-number="23.3" class="anchored" data-anchor-id="example-3"><span class="header-section-number">23.3</span> Example 3</h2>
-<p>Suppose we have an exponential discounter with discount factor <span class="math inline">\delta=0.75</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>.</p>
-<p>Would this agent prefer $10 in five days (<span class="math inline">t=5</span>) or $20 in 10 days (<span class="math inline">t=10</span>)?</p>
+<section id="example-3-10-in-five-days-or-20-in-10-days" class="level2" data-number="23.3">
+<h2 data-number="23.3" class="anchored" data-anchor-id="example-3-10-in-five-days-or-20-in-10-days"><span class="header-section-number">23.3</span> Example 3: $10 in five days or $20 in 10 days?</h2>
+<p>Chelsea is an exponential discounter with discount factor <span class="math inline">\delta=0.75</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>.</p>
+<p>Would Chelsea prefer $10 in five days (<span class="math inline">t=5</span>) or $20 in 10 days (<span class="math inline">t=10</span>)?</p>
+<p>We calculate the discounted utility of each option. Chelsea will prefer the option with the highest discounted utility.</p>
 <p>The discounted utility of the $10 in five days is:</p>
 <p><span class="math display">\begin{align*}
-U_0(5,\$10)&amp;=\delta^5u(\$10) \\
-&amp;=0.75^5\times 10 \\
+U_0(5,\$10)&amp;=\delta^5u(\$10) \\[6pt]
+&amp;=0.75^5\times 10 \\[6pt]
 &amp;=2.37
 \end{align*}</span></p>
+<p>The discount factor <span class="math inline">\delta</span> is applied five times as the payment is received in five days.</p>
 <p>The discounted utility of the $20 in 10 days is:</p>
 <p><span class="math display">\begin{align*}
-U_0(10,\$20)&amp;=\delta^{10} u(\$20) \\
-&amp;=0.75^{10}\times 20 \\
+U_0(10,\$20)&amp;=\delta^{10} u(\$20) \\[6pt]
+&amp;=0.75^{10}\times 20 \\[6pt]
 &amp;=1.13
 \end{align*}</span></p>
-<p>Discounted utility is higher for the $10 in five days. The agent will prefer to receive $10 in five days.</p>
-<p>What if their discount rate was <span class="math inline">\delta=0.95</span>?</p>
+<p>The discount factor <span class="math inline">\delta</span> is applied 10 times as the payment is received in 10 days.</p>
+<p>We can now compare the discounted utility of each option. <span class="math inline">U_0(5,\$10)=2.37&gt;1.13=U_0(10,\$20)</span>. The discounted utility is higher for the $10 in five days. As a result, Chelsea will prefer to receive $10 in five days.</p>
+<p>Dorothy is an exponential discounter with discount factor <span class="math inline">\delta=0.95</span> and utility each period of <span class="math inline">u(x_n)=x_n</span>. Dorothy has a larger discount factor than Chelsea, meaning that she applies a smaller discount to future outcomes.</p>
+<p>Would Dorothy prefer $10 in five days (<span class="math inline">t=5</span>) or $20 in 10 days (<span class="math inline">t=10</span>)?</p>
 <p>The discounted utility of the $10 in five days is:</p>
 <p><span class="math display">\begin{align*}
-U_0(5,\$10)&amp;=\delta^5u(\$10) \\
-&amp;=0.95^5\times 10 \\
+U_0(5,\$10)&amp;=\delta^5u(\$10) \\[6pt]
+&amp;=0.95^5\times 10 \\[6pt]
 &amp;=7.74
 \end{align*}</span></p>
 <p>The discounted utility of the $20 in 10 days is:</p>
 <p><span class="math display">\begin{align*}
-U_0(10,\$20)&amp;=\delta^{10} u(\$20) \\
-&amp;=0.95^{10}\times 20 \\
+U_0(10,\$20)&amp;=\delta^{10} u(\$20) \\[6pt]
+&amp;=0.95^{10}\times 20 \\[6pt]
 &amp;=11.97
 \end{align*}</span></p>
-<p>Discounted utility is higher for the $20 in 10 days. This agent will prefer to receive $20 in 10 days.</p>
-<p><a href="#fig-example3" class="quarto-xref">Figure&nbsp;<span>23.4</span></a> visualises the choices and the agents’ discounting of the payoffs.</p>
-<p>In both charts, vertical bars represent the $10 in five days and $20 in 10 days. The lines projecting back to <span class="math inline">t=0</span> represent the discounted value of those payoffs at each time.</p>
+<p>The discounted utility is higher for the $20 in 10 days. Dorothy will prefer to receive $20 in 10 days.</p>
+<p><a href="#fig-example3" class="quarto-xref">Figure&nbsp;<span>23.6</span></a> visualises the choices and Chelsea and Dorothy’s discounting of the payoffs.</p>
+<p>In both charts, vertical bars represent the $10 in five days and $20 in 10 days. The lines projecting back to <span class="math inline">t=0</span> represent the discounted utility of those payoffs at each time.</p>
 <p>When <span class="math inline">\delta=0.75</span>, the heavy discount to the more distant payoff means that it has a lower discounted utility than the smaller, sooner payment of $10. When <span class="math inline">\delta=0.95</span>, the discount is less severe and the $20 in 10 days has a higher discounted utility than the $10 in five days.</p>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_discounted_bar_chart</span>(<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">20</span>, <span class="dv">10</span>, <span class="fl">0.75</span>, <span class="at">y_spacing =</span> <span class="dv">5</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">create_discounted_bar_chart</span>(<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">20</span>, <span class="dv">10</span>, <span class="fl">0.95</span>, <span class="at">y_spacing =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div id="fig-example3" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-example3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;23.4: Exponential discounting
+Figure&nbsp;23.6: Exponential discounting
 </figcaption>
 <div aria-describedby="fig-example3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example3" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-example_3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div class="cell quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example3" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output-display quarto-layout-cell-subref" data-ref-parent="fig-example3">
+<div id="fig-chelsea" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-example_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) <span class="math inline">\delta=0.75</span>
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-chelsea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Chelsea’s choice (<span class="math inline">\delta=0.75</span>)
 </figcaption>
-<div aria-describedby="fig-example_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="img/example_3.jpg" class="lightbox" data-gallery="fig-example3" title="Figure&nbsp;23.4&nbsp;(a): \delta=0.75"><img src="img/example_3.jpg" class="img-fluid figure-img" data-ref-parent="fig-example3"></a>
+<div aria-describedby="fig-chelsea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="exponential-discounting-examples_files/figure-html/fig-chelsea-1.png" class="lightbox" data-gallery="fig-example3" title="Figure&nbsp;23.6&nbsp;(a): Chelsea’s choice (\delta=0.75)"><img src="exponential-discounting-examples_files/figure-html/fig-chelsea-1.png" class="img-fluid figure-img" data-ref-parent="fig-example3" width="480"></a>
 </div>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example3" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-example_3a" class="quarto-float quarto-figure quarto-figure-center anchored">
+</div>
+<div class="cell quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example3" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output-display quarto-layout-cell-subref" data-ref-parent="fig-example3">
+<div id="fig-dorothy" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-example_3a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) <span class="math inline">\delta=0.95</span>
+<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-dorothy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Dorothy’s choice (<span class="math inline">\delta=0.95</span>)
 </figcaption>
-<div aria-describedby="fig-example_3a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="img/example_3a.jpg" class="lightbox" data-gallery="fig-example3" title="Figure&nbsp;23.4&nbsp;(b): \delta=0.95"><img src="img/example_3a.jpg" class="img-fluid figure-img" data-ref-parent="fig-example3"></a>
+<div aria-describedby="fig-dorothy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="exponential-discounting-examples_files/figure-html/fig-dorothy-1.png" class="lightbox" data-gallery="fig-example3" title="Figure&nbsp;23.6&nbsp;(b): Dorothy’s choice (\delta=0.95)"><img src="exponential-discounting-examples_files/figure-html/fig-dorothy-1.png" class="img-fluid figure-img" data-ref-parent="fig-example3" width="480"></a>
 </div>
 </figure>
+</div>
 </div>
 </div>
 </div>
@@ -1302,7 +1509,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

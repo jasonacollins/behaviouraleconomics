@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "18 August 2024"
+  date: "26 August 2024"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -96,6 +96,8 @@ book:
         href: https://twitter.com/jasonacollins
   sidebar:
     collapse-level: 1
+    style: "floating"
+    align: left
   repo-url: https://github.com/jasonacollins/behaviouraleconomics
   repo-actions: [issue]
   page-footer: 
@@ -114,6 +116,8 @@ csl: apa-no-ampersand.csl
 format:
   html:
     theme: cosmo
+    grid:
+      gutter-width: 2.5rem
     fontcolor: black
     fontsize: 20px
     linkcolor: blue
@@ -122,7 +126,10 @@ format:
     link-external-newwindow: true
     code-fold: true
     fig-cap-location: top
-    mermaid-format: png (commented out as problem when doing full build)
+#    mermaid-format: png (commented out as problem when doing full build)
+    toc-expand: 2
+    toc-title: "On this page"
+
   pdf:
     documentclass: report
     echo: false
