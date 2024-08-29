@@ -753,17 +753,26 @@ Answer
 <div class="callout-body-container callout-body">
 <p>The weighted value of gamble A is:</p>
 <p><span class="math display">\begin{align*}
-v(A)&amp;=0.6v(-250)+0.4v(0) \\
-&amp;=0.6(-2(250)^{0.5})+0.4(0) \\
+v(A)&amp;=0.6v(-250)+0.4v(0) \\[6pt]
+&amp;=0.6(-2(250)^{0.5})+0.4(0) \\[6pt]
 &amp;=-18.97
 \end{align*}</span></p>
 <p>The value of the certain $100 loss is:</p>
 <p><span class="math display">\begin{align*}
-v(\$100)&amp;=v(-100) \\
-&amp;=-2(100)^{0.5} \\
+v(\$100)&amp;=v(-100) \\[6pt]
+&amp;=-2(100)^{0.5} \\[6pt]
 &amp;=-20
 \end{align*}</span></p>
 <p>As <span class="math inline">V(A) &gt; V(-\$100)</span>, Lisa will prefer the gamble to the certain $100 loss.</p>
+<p>Another way to think about this problem is to calculate the certainty equivalent of gamble A and compare that to the certain loss. The certainty equivalent is the amount of money that Lisa would be indifferent between receiving for certain and the gamble. A benefit of calculating the certainty equivalent is that you can then easily determine whether Lisa would prefer the gamble to a certain loss of any particular amount.</p>
+<p>The certainty equivalent (CE) of gamble A is calculated as:</p>
+<p><span class="math display">\begin{align*}
+v(CE)&amp;=V(A)=-18.97 \\[6pt]
+-2\times (-CE)^{0.5}&amp;=-18.97 \\[6pt]
+(-CE)^{0.5}&amp;=9.49 \\[6pt]
+CE&amp;=-90
+\end{align*}</span></p>
+<p>The certainty equivalent of gamble A is a loss of $90. Lisa would be indifferent between losing $90 for certain and the gamble. For any loss greater than $90, Lisa would prefer the gamble. Given this information, we can say that Lisa will prefer the gamble to the certain loss of $100.</p>
 </div>
 </div>
 </div>
@@ -1528,7 +1537,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

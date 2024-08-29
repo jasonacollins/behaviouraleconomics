@@ -3,37 +3,59 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Sophisticated present bias
 
-Suppose a present-biased agent decides that they will wait for a larger, later payoff in preference to a smaller, sooner payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff. Why did the agent initially choose the larger payoff when they would take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and choose accordingly.
+Suppose a present-biased agent considers whether they prefer a smaller, sooner payoff or a larger, later payoff. They decide they will wait for the larger, later payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff.
 
-For many of us, we are aware that we make time-inconsistent decisions. We know that we often cave when faced with immediate temptation. We know that if there is a jar of cookies in the house we will eat them.
+Why did the agent initially choose the larger payoff when they would take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and plan accordingly.
+
+For many of us, we are aware that we make time-inconsistent decisions. We know that we often cave when faced with immediate temptation. Even if we don't plan to eat a whole packet of cookies for dinner, have more than one beer, or stay up late watching just one more episode, we often do.
 
 ## Naïve and sophisticated present-biased agents
 
-To bring this idea of awareness about our present bias into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated.
+To bring the idea that we are aware of our present bias into the analysis, I will distinguish between two types of present-biased agents: naive and sophisticated.
 
 Consider how a present-biased agent discounts a payoff for each successive period of delay under the $\beta\delta$ model. The first period of delay results in the application of a total discount factor of $\beta\delta$. Each additional period of delay results in the application of an additional discount factor of $\delta$. The discount factor applied for the first period of delay is relatively smaller - or the magnitude of the discount relatively greater - than the additional discount applied for any additional period of delay.
 
-A naive present-biased agent believes that the relative difference in discount between periods that they can see today will persist as time passes. That is, they believe that the discount factor of $\delta$ applied between, say, periods $t=2$ and $t=3$, will still be the relative discount when they reach $t=2$. However, when $t=2$ does arrive, $t=3$ will be discounted by both the short-term discount factor $\beta$ and the usual discount factor $\delta$, compared to no discount for the present period $t=2$. As a result, the relative discount of different payoffs will change when one of those payoffs becomes due today.
+![](img/sophisticated-1.png)
 
-A sophisticated present-biased agent correctly believes that they will apply both the short-term and usual discount factors in the future. As a result, they understand that the relative discount of different payoffs will change when one of those payoffs becomes due today. They understand that if faced with the temptation to take benefits or to delay costs, they will do so.
+A naive present-biased agent believes that the relative difference in discount between periods that they can see today will persist as time passes. That is, they believe that the discount factor of $\delta$ applied between, say, periods 2 and 3, will still be the relative discount when they reach period 2.
+
+![](img/sophisticated-2.png)
+
+However, when period 2 does arrive, the outcome in period 3 will be discounted by both the short-term discount factor $\beta$ and the usual discount factor $\delta$, compared to no discount for the outcome in period 2. As a result, the relative discount of outcomes at different times will change when one of those outcomes becomes due today.
+
+![](img/sophisticated-3.png)
+
+A sophisticated present-biased agent correctly believes that they will apply both the short-term and usual discount factors in the future. As a result, they understand that the relative discount of different outcomes will change when one of those outcomes becomes due today. They understand that if faced with the temptation to take benefits or to delay costs, they will do so.
 
 A sophisticated and naive person can make different decisions despite having the same level of impatience, $\delta$, and the same level of present bias, $\beta$. Any difference emerges in the way that they reason through an intertemporal choice.
 
-The naive agent makes their plans by forward reasoning, starting from today ($t=0$).
+The naive agent makes their plans by forward reasoning, starting from today.
 
-1.  First, they decide their preferred option for $t=0$, believing that they will stick to their plan once they move to the next period.
+1. First, they decide their preferred option for today, period 0, believing that they will stick to their plan in the future.
 
-2.  When they move to the next period ($t=1$) they recompute their preferred plan, again believing they will stick to the plan once they move to the next period.
+![](img/sophisticated-4.png)
 
-3.  They repeat this process as they move through time.
+2. When they move to the next period they recompute their plan, again believing they will stick to the plan once they move to the next period.
 
-In contrast, the sophisticated present-biased agent makes their plans by backward reasoning, starting from the final period ($t=T$).
+![](img/sophisticated-5.png)
 
-1.  For that final period, they solve for the preferred action.
+3. They repeat this process as they move through time.
 
-2.  They then consider one period earlier ($t=T-1$) and solve for the preferred action, accounting for the decision in (1)
+![](img/sophisticated-6.png)
 
-3.  They repeat this process as they move back to today ($t=0$).
+In contrast, the sophisticated present-biased agent makes their plans by backward reasoning, starting from the final period.
+
+1. For that final period, they solve for the preferred action.
+
+![](img/sophisticated-7.png)
+
+2. They then consider one period earlier and solve for the preferred action, accounting for the previous decision. This means, that if they calculate that they will cave into temptation at a certain time, they will remove the option to resist from their choice set. Absent the ability to commit to an action, they will resign themselves to giving into temptation in advance.
+
+![](img/sophisticated-8.png)
+
+3. They repeat this process as they move back to today.
+
+![](img/sophisticated-9.png)
 
 ## Examples
 
@@ -151,15 +173,15 @@ First, we consider the naive agent. They calculate utility from the perspective 
 
 ```{=tex}
 \begin{align*}
-U_0(0,\text{OK})&=u(\text{OK}) \\
+U_0(0,\text{OK})&=u(\text{OK}) \\[6pt]
 &=6 \\
 \\
-U_0(1,\text{good})&=\beta\delta u(\text{good}) \\
-&=0.5\times 1\times 10 \\
+U_0(1,\text{good})&=\beta\delta u(\text{good}) \\[6pt]
+&=0.5\times 1\times 10 \\[6pt]
 &=5 \\
 \\
-U_0(2,\text{great})&=\beta\delta^2 u(\text{great}) \\
-&=0.5\times 1^2\times 16 \\
+U_0(2,\text{great})&=\beta\delta^2 u(\text{great}) \\[6pt]
+&=0.5\times 1^2\times 16 \\[6pt]
 &=8
 \end{align*}
 ```
@@ -170,11 +192,11 @@ But what then happens when the naive agent is given the chance to change their m
 
 ```{=tex}
 \begin{align*}
-U_1(1,\text{good})&=u(\text{good}) \\
+U_1(1,\text{good})&=u(\text{good}) \\[6pt]
 &=10 \\
 \\
-U_1(2,\text{great})&=\beta\delta u(\text{great}) \\
-&=0.5\times 1\times 16 \\
+U_1(2,\text{great})&=\beta\delta u(\text{great}) \\[6pt]
+&=0.5\times 1\times 16 \\[6pt]
 &=8
 \end{align*}
 ```
@@ -187,11 +209,11 @@ They will make their decision today based on correct beliefs about their future 
 
 ```{=tex}
 \begin{align*}
-U_1(1,\text{good})&=u(\text{good}) \\
+U_1(1,\text{good})&=u(\text{good}) \\[6pt]
 &=10 \\
 \\
-U_1(2,\text{great})&=\beta\delta u(\text{great}) \\
-&=0.5\times 1\times 16 \\
+U_1(2,\text{great})&=\beta\delta u(\text{great}) \\[6pt]
+&=0.5\times 1\times 16 \\[6pt]
 &=8
 \end{align*}
 ```
@@ -202,11 +224,11 @@ Knowing this is the case, the sophisticated agent now decides whether they prefe
 
 ```{=tex}
 \begin{align*}
-U_0(0,\text{OK})&=u(\text{OK}) \\
+U_0(0,\text{OK})&=u(\text{OK}) \\[6pt]
 &=6 \\
 \\
-U_0(1,\text{good})&=\beta\delta u(\text{good}) \\
-&=0.5\times 1\times 10 \\
+U_0(1,\text{good})&=\beta\delta u(\text{good}) \\[6pt]
+&=0.5\times 1\times 10 \\[6pt]
 &=5 \\
 \end{align*}
 ```
@@ -231,15 +253,15 @@ The naive agent calculates the utility of each option today.
 
 ```{=tex}
 \begin{align*}
-U_0(0,-\$10)&=u(-\$10) \\
+U_0(0,-\$10)&=u(-\$10) \\[6pt]
 &=-10 \\
 \\
-U_0(1,-\$15)&=\beta\delta u(-\$15) \\
-&=0.5\times 1\times (-15) \\
+U_0(1,-\$15)&=\beta\delta u(-\$15) \\[6pt]
+&=0.5\times 1\times (-15) \\[6pt]
 &=-7.5 \\
 \\
-U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
-&=0.5\times 1^2\times (-25) \\
+U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\[6pt]
+&=0.5\times 1^2\times (-25) \\[6pt]
 &=-12.5
 \end{align*}
 ```
@@ -250,11 +272,11 @@ A week passes and the naive agent is now at $t=1$, the time when they were plann
 
 ```{=tex}
 \begin{align*}
-U_1(1,-\$15)&=u(-\$15) \\
+U_1(1,-\$15)&=u(-\$15) \\[6pt]
 &=-15 \\
 \\
-U_1(2,-\$25)&=\beta\delta u(-\$25) \\
-&=0.5\times 1\times (-25) \\
+U_1(2,-\$25)&=\beta\delta u(-\$25) \\[6pt]
+&=0.5\times 1\times (-25) \\[6pt]
 &=-12.5
 \end{align*}
 ```
@@ -279,11 +301,11 @@ What of $t=1$?
 
 ```{=tex}
 \begin{align*}
-U_1(1,-\$15)&=u(-\$15) \\
+U_1(1,-\$15)&=u(-\$15) \\[6pt]
 &=-15 \\
 \\
-U_1(2,-\$25)&=\beta\delta u(-\$25) \\
-&=0.5\times 1\times (-25) \\
+U_1(2,-\$25)&=\beta\delta u(-\$25) \\[6pt]
+&=0.5\times 1\times (-25) \\[6pt]
 &=-12.5
 \end{align*}
 ```
@@ -294,11 +316,11 @@ Now we iterate at $t=0$. The sophisticated agent only compares \$10 at $t=0$ wit
 
 ```{=tex}
 \begin{align*}
-U_0(0,-\$10)&=u(-\$10) \\
+U_0(0,-\$10)&=u(-\$10) \\[6pt]
 &=-10 \\
 \\
-U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\
-&=0.5\times 1^2\times (-25) \\
+U_0(2,-\$25)&=\beta\delta^2 u(-\$25) \\[6pt]
+&=0.5\times 1^2\times (-25) \\[6pt]
 &=-12.5
 \end{align*}
 ```

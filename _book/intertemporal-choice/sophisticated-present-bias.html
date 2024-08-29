@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -674,27 +677,46 @@ window.Quarto = {
 </header>
 
 
-<p>Suppose a present-biased agent decides that they will wait for a larger, later payoff in preference to a smaller, sooner payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff. Why did the agent initially choose the larger payoff when they would take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and choose accordingly.</p>
-<p>For many of us, we are aware that we make time-inconsistent decisions. We know that we often cave when faced with immediate temptation. We know that if there is a jar of cookies in the house we will eat them.</p>
+<p>Suppose a present-biased agent considers whether they prefer a smaller, sooner payoff or a larger, later payoff. They decide they will wait for the larger, later payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff.</p>
+<p>Why did the agent initially choose the larger payoff when they would take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and plan accordingly.</p>
+<p>For many of us, we are aware that we make time-inconsistent decisions. We know that we often cave when faced with immediate temptation. Even if we don’t plan to eat a whole packet of cookies for dinner, have more than one beer, or stay up late watching just one more episode, we often do.</p>
 <section id="naïve-and-sophisticated-present-biased-agents" class="level2" data-number="27.1">
 <h2 data-number="27.1" class="anchored" data-anchor-id="naïve-and-sophisticated-present-biased-agents"><span class="header-section-number">27.1</span> Naïve and sophisticated present-biased agents</h2>
-<p>To bring this idea of awareness about our present bias into our analysis, I am going to distinguish between two types of present-biased agents: naive and sophisticated.</p>
+<p>To bring the idea that we are aware of our present bias into the analysis, I will distinguish between two types of present-biased agents: naive and sophisticated.</p>
 <p>Consider how a present-biased agent discounts a payoff for each successive period of delay under the <span class="math inline">\beta\delta</span> model. The first period of delay results in the application of a total discount factor of <span class="math inline">\beta\delta</span>. Each additional period of delay results in the application of an additional discount factor of <span class="math inline">\delta</span>. The discount factor applied for the first period of delay is relatively smaller - or the magnitude of the discount relatively greater - than the additional discount applied for any additional period of delay.</p>
-<p>A naive present-biased agent believes that the relative difference in discount between periods that they can see today will persist as time passes. That is, they believe that the discount factor of <span class="math inline">\delta</span> applied between, say, periods <span class="math inline">t=2</span> and <span class="math inline">t=3</span>, will still be the relative discount when they reach <span class="math inline">t=2</span>. However, when <span class="math inline">t=2</span> does arrive, <span class="math inline">t=3</span> will be discounted by both the short-term discount factor <span class="math inline">\beta</span> and the usual discount factor <span class="math inline">\delta</span>, compared to no discount for the present period <span class="math inline">t=2</span>. As a result, the relative discount of different payoffs will change when one of those payoffs becomes due today.</p>
-<p>A sophisticated present-biased agent correctly believes that they will apply both the short-term and usual discount factors in the future. As a result, they understand that the relative discount of different payoffs will change when one of those payoffs becomes due today. They understand that if faced with the temptation to take benefits or to delay costs, they will do so.</p>
+<p><a href="img/sophisticated-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/sophisticated-1.png" class="img-fluid"></a></p>
+<p>A naive present-biased agent believes that the relative difference in discount between periods that they can see today will persist as time passes. That is, they believe that the discount factor of <span class="math inline">\delta</span> applied between, say, periods 2 and 3, will still be the relative discount when they reach period 2.</p>
+<p><a href="img/sophisticated-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/sophisticated-2.png" class="img-fluid"></a></p>
+<p>However, when period 2 does arrive, the outcome in period 3 will be discounted by both the short-term discount factor <span class="math inline">\beta</span> and the usual discount factor <span class="math inline">\delta</span>, compared to no discount for the outcome in period 2. As a result, the relative discount of outcomes at different times will change when one of those outcomes becomes due today.</p>
+<p><a href="img/sophisticated-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/sophisticated-3.png" class="img-fluid"></a></p>
+<p>A sophisticated present-biased agent correctly believes that they will apply both the short-term and usual discount factors in the future. As a result, they understand that the relative discount of different outcomes will change when one of those outcomes becomes due today. They understand that if faced with the temptation to take benefits or to delay costs, they will do so.</p>
 <p>A sophisticated and naive person can make different decisions despite having the same level of impatience, <span class="math inline">\delta</span>, and the same level of present bias, <span class="math inline">\beta</span>. Any difference emerges in the way that they reason through an intertemporal choice.</p>
-<p>The naive agent makes their plans by forward reasoning, starting from today (<span class="math inline">t=0</span>).</p>
+<p>The naive agent makes their plans by forward reasoning, starting from today.</p>
 <ol type="1">
-<li><p>First, they decide their preferred option for <span class="math inline">t=0</span>, believing that they will stick to their plan once they move to the next period.</p></li>
-<li><p>When they move to the next period (<span class="math inline">t=1</span>) they recompute their preferred plan, again believing they will stick to the plan once they move to the next period.</p></li>
-<li><p>They repeat this process as they move through time.</p></li>
+<li>First, they decide their preferred option for today, period 0, believing that they will stick to their plan in the future.</li>
 </ol>
-<p>In contrast, the sophisticated present-biased agent makes their plans by backward reasoning, starting from the final period (<span class="math inline">t=T</span>).</p>
+<p><a href="img/sophisticated-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/sophisticated-4.png" class="img-fluid"></a></p>
+<ol start="2" type="1">
+<li>When they move to the next period they recompute their plan, again believing they will stick to the plan once they move to the next period.</li>
+</ol>
+<p><a href="img/sophisticated-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/sophisticated-5.png" class="img-fluid"></a></p>
+<ol start="3" type="1">
+<li>They repeat this process as they move through time.</li>
+</ol>
+<p><a href="img/sophisticated-6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/sophisticated-6.png" class="img-fluid"></a></p>
+<p>In contrast, the sophisticated present-biased agent makes their plans by backward reasoning, starting from the final period.</p>
 <ol type="1">
-<li><p>For that final period, they solve for the preferred action.</p></li>
-<li><p>They then consider one period earlier (<span class="math inline">t=T-1</span>) and solve for the preferred action, accounting for the decision in (1)</p></li>
-<li><p>They repeat this process as they move back to today (<span class="math inline">t=0</span>).</p></li>
+<li>For that final period, they solve for the preferred action.</li>
 </ol>
+<p><a href="img/sophisticated-7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/sophisticated-7.png" class="img-fluid"></a></p>
+<ol start="2" type="1">
+<li>They then consider one period earlier and solve for the preferred action, accounting for the previous decision. This means, that if they calculate that they will cave into temptation at a certain time, they will remove the option to resist from their choice set. Absent the ability to commit to an action, they will resign themselves to giving into temptation in advance.</li>
+</ol>
+<p><a href="img/sophisticated-8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/sophisticated-8.png" class="img-fluid"></a></p>
+<ol start="3" type="1">
+<li>They repeat this process as they move back to today.</li>
+</ol>
+<p><a href="img/sophisticated-9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/sophisticated-9.png" class="img-fluid"></a></p>
 </section>
 <section id="examples" class="level2" data-number="27.2">
 <h2 data-number="27.2" class="anchored" data-anchor-id="examples"><span class="header-section-number">27.2</span> Examples</h2>
@@ -791,46 +813,46 @@ U_1(2,\$110)&amp;=\beta\delta u(x_2) \\[6pt]
 <p>We also tell the agents that next week they will be offered an opportunity to change their minds.</p>
 <p>First, we consider the naive agent. They calculate utility from the perspective of today.</p>
 <span class="math display">\begin{align*}
-U_0(0,\text{OK})&amp;=u(\text{OK}) \\
+U_0(0,\text{OK})&amp;=u(\text{OK}) \\[6pt]
 &amp;=6 \\
 \\
-U_0(1,\text{good})&amp;=\beta\delta u(\text{good}) \\
-&amp;=0.5\times 1\times 10 \\
+U_0(1,\text{good})&amp;=\beta\delta u(\text{good}) \\[6pt]
+&amp;=0.5\times 1\times 10 \\[6pt]
 &amp;=5 \\
 \\
-U_0(2,\text{great})&amp;=\beta\delta^2 u(\text{great}) \\
-&amp;=0.5\times 1^2\times 16 \\
+U_0(2,\text{great})&amp;=\beta\delta^2 u(\text{great}) \\[6pt]
+&amp;=0.5\times 1^2\times 16 \\[6pt]
 &amp;=8
 \end{align*}</span>
 <p>As <span class="math inline">U_0(2,\text{great})&gt;U_0(0,\text{OK})&gt;U_0(1,\text{good})</span>, the naive agent will choose the great movie in two weeks.</p>
 <p>But what then happens when the naive agent is given the chance to change their mind after one week?</p>
 <span class="math display">\begin{align*}
-U_1(1,\text{good})&amp;=u(\text{good}) \\
+U_1(1,\text{good})&amp;=u(\text{good}) \\[6pt]
 &amp;=10 \\
 \\
-U_1(2,\text{great})&amp;=\beta\delta u(\text{great}) \\
-&amp;=0.5\times 1\times 16 \\
+U_1(2,\text{great})&amp;=\beta\delta u(\text{great}) \\[6pt]
+&amp;=0.5\times 1\times 16 \\[6pt]
 &amp;=8
 \end{align*}</span>
 <p>As <span class="math inline">U_1(1,\text{good})&gt;U_1(2,\text{great})</span>, the naive agent will change their mind and watch the good movie immediately.</p>
 <p>What of our sophisticated agent?</p>
 <p>They will make their decision today based on correct beliefs about their future preferences. To do this, they solve by backward induction. First, what will their decision be next week?</p>
 <span class="math display">\begin{align*}
-U_1(1,\text{good})&amp;=u(\text{good}) \\
+U_1(1,\text{good})&amp;=u(\text{good}) \\[6pt]
 &amp;=10 \\
 \\
-U_1(2,\text{great})&amp;=\beta\delta u(\text{great}) \\
-&amp;=0.5\times 1\times 16 \\
+U_1(2,\text{great})&amp;=\beta\delta u(\text{great}) \\[6pt]
+&amp;=0.5\times 1\times 16 \\[6pt]
 &amp;=8
 \end{align*}</span>
 <p>As <span class="math inline">U_1(1,\text{good})&gt;U_1(2,\text{great})</span>, the sophisticated agent can see that they will choose to watch the good movie immediately.</p>
 <p>Knowing this is the case, the sophisticated agent now decides whether they prefer the OK movie today or the good movie next week.</p>
 <span class="math display">\begin{align*}
-U_0(0,\text{OK})&amp;=u(\text{OK}) \\
+U_0(0,\text{OK})&amp;=u(\text{OK}) \\[6pt]
 &amp;=6 \\
 \\
-U_0(1,\text{good})&amp;=\beta\delta u(\text{good}) \\
-&amp;=0.5\times 1\times 10 \\
+U_0(1,\text{good})&amp;=\beta\delta u(\text{good}) \\[6pt]
+&amp;=0.5\times 1\times 10 \\[6pt]
 &amp;=5 \\
 \end{align*}</span>
 <p>As <span class="math inline">U_0(0,\text{OK})&gt;U_0(1,\text{good})</span>, the sophisticated agent prefers the OK movie today.</p>
@@ -845,25 +867,25 @@ U_0(1,\text{good})&amp;=\beta\delta u(\text{good}) \\
 <p>The agent’s utility is linear in money - that is, <span class="math inline">u(x_n)=x_n</span> - with discount factors <span class="math inline">\beta=0.5</span> and <span class="math inline">\delta=1</span>.</p>
 <p>The naive agent calculates the utility of each option today.</p>
 <span class="math display">\begin{align*}
-U_0(0,-\$10)&amp;=u(-\$10) \\
+U_0(0,-\$10)&amp;=u(-\$10) \\[6pt]
 &amp;=-10 \\
 \\
-U_0(1,-\$15)&amp;=\beta\delta u(-\$15) \\
-&amp;=0.5\times 1\times (-15) \\
+U_0(1,-\$15)&amp;=\beta\delta u(-\$15) \\[6pt]
+&amp;=0.5\times 1\times (-15) \\[6pt]
 &amp;=-7.5 \\
 \\
-U_0(2,-\$25)&amp;=\beta\delta^2 u(-\$25) \\
-&amp;=0.5\times 1^2\times (-25) \\
+U_0(2,-\$25)&amp;=\beta\delta^2 u(-\$25) \\[6pt]
+&amp;=0.5\times 1^2\times (-25) \\[6pt]
 &amp;=-12.5
 \end{align*}</span>
 <p>As <span class="math inline">U_0(1,-\$15)&gt;U_0(0,-\$10)&gt;U_0(2,-\$25)</span>, the naive agent will choose to pay $15 at <span class="math inline">t=1</span>.</p>
 <p>A week passes and the naive agent is now at <span class="math inline">t=1</span>, the time when they were planning to pay the fine. The naive agent reconsiders their decision.</p>
 <span class="math display">\begin{align*}
-U_1(1,-\$15)&amp;=u(-\$15) \\
+U_1(1,-\$15)&amp;=u(-\$15) \\[6pt]
 &amp;=-15 \\
 \\
-U_1(2,-\$25)&amp;=\beta\delta u(-\$25) \\
-&amp;=0.5\times 1\times (-25) \\
+U_1(2,-\$25)&amp;=\beta\delta u(-\$25) \\[6pt]
+&amp;=0.5\times 1\times (-25) \\[6pt]
 &amp;=-12.5
 \end{align*}</span>
 <p>As <span class="math inline">U_1(2,-\$25)=-12.5&gt;=-15=U_1(1,-\$15)</span>, the naive agent changes their decision and further delays their payment. They now choose to pay $25 at <span class="math inline">t=2</span>.</p>
@@ -876,21 +898,21 @@ U_1(2,-\$25)&amp;=\beta\delta u(-\$25) \\
 <p>At <span class="math inline">t=2</span>, they have no choice but to pay the $25.</p>
 <p>What of <span class="math inline">t=1</span>?</p>
 <span class="math display">\begin{align*}
-U_1(1,-\$15)&amp;=u(-\$15) \\
+U_1(1,-\$15)&amp;=u(-\$15) \\[6pt]
 &amp;=-15 \\
 \\
-U_1(2,-\$25)&amp;=\beta\delta u(-\$25) \\
-&amp;=0.5\times 1\times (-25) \\
+U_1(2,-\$25)&amp;=\beta\delta u(-\$25) \\[6pt]
+&amp;=0.5\times 1\times (-25) \\[6pt]
 &amp;=-12.5
 \end{align*}</span>
 <p>The sophisticated agent can see that if they choose at <span class="math inline">t=1</span>, they will choose to pay $25 at <span class="math inline">t=2</span>.</p>
 <p>Now we iterate at <span class="math inline">t=0</span>. The sophisticated agent only compares $10 at <span class="math inline">t=0</span> with $25 at <span class="math inline">t=2</span> because they know that at <span class="math inline">t=1</span> they will select $25 at <span class="math inline">t=2</span>. They know that if they delay once they will delay again and end up paying the largest fine. Hence they limit their comparison to those outcomes that might occur:</p>
 <span class="math display">\begin{align*}
-U_0(0,-\$10)&amp;=u(-\$10) \\
+U_0(0,-\$10)&amp;=u(-\$10) \\[6pt]
 &amp;=-10 \\
 \\
-U_0(2,-\$25)&amp;=\beta\delta^2 u(-\$25) \\
-&amp;=0.5\times 1^2\times (-25) \\
+U_0(2,-\$25)&amp;=\beta\delta^2 u(-\$25) \\[6pt]
+&amp;=0.5\times 1^2\times (-25) \\[6pt]
 &amp;=-12.5
 \end{align*}</span>
 <p>As <span class="math inline">U_0(0,-\$10)&gt;U_0(2,-\$25)</span>, the sophisticated agent will choose to pay $10 at <span class="math inline">t=0</span>.</p>
@@ -1372,6 +1394,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
