@@ -34,6 +34,7 @@ book:
         - prospect-theory/probability-weighting.qmd
         - prospect-theory/prospect-theory-implementation.qmd
         - prospect-theory/prospect-theory-examples.qmd
+        - prospect-theory/prospect-theory-and-insurance.qmd
         - prospect-theory/prospect-theory-applications.qmd
         - prospect-theory/prospect-theory-exercises.qmd
     - part: intertemporal-choice/intertemporal-choice.qmd
