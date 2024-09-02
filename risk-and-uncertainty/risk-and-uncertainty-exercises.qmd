@@ -21,28 +21,31 @@ E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
 
 ## Expected value of insurance {#sec-expected-value-of-insurance}
 
-An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for premium \$1100.
+An agent is considering insurance against bushfire for their house valued at $H=\$1,000,000$. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for a premium ($R$) of \$1100.
 
 a\) What is the expected value of purchasing insurance?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-If you purchase insurance, you pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.
+If the agent purchases insurance, they pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.
 
 $$
-E[\text{purchase}]=-\text{premium}=-\$1,100
+E[\text{I}]=-R=-\$1,100
 $$
 
-The expected value of purchasing insurance is the guaranteed loss of the premium.
+The expected value of purchasing insurance is the guaranteed loss of the premium, \$1100.
 
-You could also think of the expected value of purchasing insurance as involving both the loss of the house and the insurance payout in case of fire. In that case, you would write:
+You could also think of the expected value of purchasing insurance as involving:
+
+- in 1 in 1000 instances, the loss of the house and the insurance payout in case of fire, minus the cost of the premium
+- in the other 999 in 1000 instances, payment of the premium only.
+ 
+In that case, you would write:
 
 \begin{align*}
-E[\text{purchase}]&=p\times(-value_{\text{house}}+payout-premium) \\[6pt]
-&\qquad +(1-p)\times(-premium) \\[6pt]
-&=0.001\times(-1000000+1000000-1100) \\[6pt]
-&\qquad +0.999\times(-1100) \\[6pt]
+E[\text{I}]&=p\times(-H+H-R)+(1-p)\times(-R) \\[6pt]
+&=0.001\times(-1000000+1000000-1100)+0.999\times(-1100) \\[6pt]
 &=-\$1,100
 \end{align*}
 
@@ -54,8 +57,10 @@ b\) What is the expected value of not purchasing insurance?
 ::: {.callout-tip collapse="true"}
 ## Answer
 
+If the agent does not purchase insurance, they face the 1 in 1000 possibility of an uninsured loss.
+
 \begin{align*}
-E[\text{don't}]&=p\times-value_{\text{house}} \\[6pt]
+E[\neg \text{I}]&=p\times(-H) \\[6pt]
 &=-0.001\times 1000000 \\[6pt]
 &=-\$1000
 \end{align*}
@@ -148,6 +153,7 @@ d\) Draw a graph showing Anika's utility curve, the expected value of option A, 
 #| fig-cap: "A bet or a certain payment?"
 
 library(ggplot2)
+library(svglite)
 
 u <- function(x){
   x^(1/2)
@@ -169,7 +175,7 @@ xc<-80 #certain outcome
 ce<-50 #certainty equivalent
 px2<-(ev-x1)/(x2-x1)
 
-ggplot(mapping = aes(x, y)) +
+anika <- ggplot(mapping = aes(x, y)) +
 
   #Plot the utility curve
   geom_line(data = df) +
@@ -213,6 +219,8 @@ ggplot(mapping = aes(x, y)) +
   #Add vertical line indicating certainty equivalent and labelled "CE"
   annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
   annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+anika
 
 ```
 :::
@@ -356,34 +364,56 @@ Intuitively, as the agent's wealth increases their utility function becomes incr
 
 ## Purchasing insurance {#sec-purchasing-insurance}
 
-An agent is considering insurance against bushfire for its \$1,000,000 house. The house has a 1 in 1000 chance of burning down. An insurer is willing to offer full coverage for \$1100.
+An agent is considering insurance against bushfire for their house valued at $H=\$1,000,000$. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for a premium ($R$) of \$1100.
 
-a\) Would a risk neutral agent purchase the insurance?
+a\) Would a risk-neutral agent purchase the insurance?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
-We have already calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk neutral agent would not purchase the insurance.
+We have already calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk-neutral agent would not purchase the insurance.
 :::
 
-b\) Suppose an agent has a logarithmic utility function ($U(x)=\ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000. Would this agent purchase the insurance? Are they risk seeking, risk neutral or risk averse?
+b\) Suppose an agent has a logarithmic utility function ($U(x)=\ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000. 
+
+Are they risk seeking, risk neutral or risk averse?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
+
+The logarithmic utility function has diminishing marginal utility. Diminishing marginal utility is the principle the marginal utility from each additional unit decreases. In the context of wealth, this means that each additional dollar provides less satisfaction than the previous one.
+
+Diminishing marginal utility means that the agent will be risk averse. They will prefer a certain outcome to a gamble with the same expected value.
+
+:::
+
+c\) Would this agent with logarithmic utility purchase the insurance? 
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We need to compare the expected utility of purchasing insurance with the expected utility of not purchasing insurance.
+
+The expected utility of purchasing insurance is:
+
 \begin{align*}
-E[U(\text{purchase})]&=\ln(W-premium) \\
-&=\ln(`r formatC(1000000+10000-1100, format="d", big.mark=",")`) \\
+E[U(\text{I})]&=\ln(W-R) \\[6pt]
+&=\ln(`r prettyNum(1000000+10000-1100, big.mark=",", preserve.width="none")`) \\[6pt]
 &=`r round(log(1000000+10000-1100), 4)`\\
-\\
-E[U(\text{don't})]&=0.999\times \ln(W)+0.001\times \ln(W-value_{\text{house}}) \\
-&=0.999\times \ln(1,010,000)+0.001\times \ln(10,000) \\
+\end{align*}
+
+The expected utility of not purchasing insurance is:
+
+\begin{align*}
+E[U(\neg \text{I})]&=0.999\times \ln(W)+0.001\times \ln(W-H)) \\[6pt]
+&=0.999\times \ln(1,010,000)+0.001\times \ln(10,000) \\[6pt]
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 
-The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will purchase insurance. They are risk averse.
+The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will purchase insurance.
 
-The following diagram illustrates. The agent's utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked - wealth after losing the house when uninsured $(W-H)$, wealth after paying the insurance premium $(W-R)$, and wealth if uninsured but the house does not burn down $(W)$.
+The following diagram illustrates. The agent's utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked: wealth after losing the house when uninsured $(W-H)$, wealth after paying the insurance premium $(W-R)$, and wealth if uninsured but the house does not burn down $(W)$.
 
-The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The precise point is $p$ along this line from $U(W)$ (or $1-p$ along the line from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $E[\neg I]$.
+The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The location of this point is determined by the probability $p$ of incurring a loss. This point lies at a distance of $p$ from $U(W)$ along the line (or equivalently, at a distance of $1-p$ from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $E[\neg I]$.
 
 The utility of purchasing insurance ($U(W-R)$) is greater than the expected utility of not purchasing insurance $(E[U(\neg I)])$. The agent will purchase insurance.
 
@@ -462,7 +492,32 @@ ggplot(mapping = aes(x, y)) +
 
 What is the intuition for this agent's purchase of insurance?
 
-Diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth (e.g. $U(\$0)+U(\$200)<U(\$100)+U(\$100)$). Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.
+Consider the following scenario. You will experience one of two outcomes with equal probability: \$0 in one case and \$200 in the other. Your average wealth in this scenario is:
+
+$$
+\frac{\$0 + \$200}{2} = \$100
+$$
+
+Your average utility (which is expected utility) is:
+
+$$
+\frac{U(\$0) + U(\$200)}{2}
+$$
+
+What if you can insure (costlessly) to give you wealth of \$100 with certainty? In that case, your average wealth is \$100, as per the first scenario, with utility of $U(\$100)$.
+
+Does insurance result in higher utility?
+
+For a risk-averse person with diminishing marginal utility, the jump from $0 to $100 provides a larger increase in utility than the jump from $100 to $200. Therefore:
+
+$$
+U(\$100) > \frac{U(\$0) + U(\$200)}{2}
+$$
+
+The utility of average wealth is greater than the average utility of wealth.
+
+This inequality demonstrates why people with diminishing marginal utility purchase insurance. When wealth is unevenly distributed across potential outcomes, the utility gained from the best outcome is relatively less than the utility lost from the worst outcome. Insurance helps distribute wealth more evenly across all possible outcomes. In good times, the person has slightly less wealth (due to the premium). In bad times, the person avoids a catastrophic loss. This even distribution of wealth across possible outcomes results in higher expected utility for the consumer.
+
 :::
 
 ## Insurance but not a lottery ticket

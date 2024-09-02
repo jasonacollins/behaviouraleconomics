@@ -37,7 +37,7 @@ $$W=e^{2.85}=\$17.30$$
 
 This gamble with an expected value of zero reduces utility by an amount equivalent to \$2.70. 
 
-We could also say that the certainty equivalent of this gamble is the final wealth of \$17.30, or a loss of $2.70.
+We could also say that the certainty equivalent of this gamble is the final wealth of \$17.30, or a loss of \$2.70.
 
 @fig-fiftyfifty illustrates the example.
 
@@ -244,7 +244,7 @@ ggplot(mapping = aes(x, y)) +
 
 The expected utility of the gamble $\text{E}[U(X)]$ is higher than the utility from current wealth but lower than the utility of the expected value. That is, they are risk averse but would still accept this highly favourable bet.
 
-Also plotted is the certainty equivalent. We can identify it as the point on the utility curve where the utility of that certainty equivalent is equal to the expected utility. In this case, it is at $4.08 above current wealth.
+Also plotted is the certainty equivalent. We can identify it as the point on the utility curve where the utility of that certainty equivalent is equal to the expected utility. In this case, it is at \$4.08 above current wealth.
 
 ## Betting a proportion of wealth
 
