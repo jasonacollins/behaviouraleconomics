@@ -146,7 +146,7 @@ As $U_1(1,\$100) > U_1(2,\$110)$, the sophisticated agent sees that next week, a
 
 This is the same pair of calculations that the naive agent made at $t=1$. The difference is that the sophisticated agent makes this calculation at $t=0$ from the perspective of $t=1$. The naive agent does not consider this perspective until $t=1$.
 
-After considering their preference at $t=1$, the sophisticated agent then considers their choice at $t=0$. They see their future decision at $t=1$ and know that \$110 in two weeks is not available to them. The only option they have is to choose \$100 in one week. They effectively accept their future present bias now and choose the \$100 in two weeks.
+After considering their preference at $t=1$, the sophisticated agent then considers their choice at $t=0$. They see their future decision at $t=1$ and know that \$110 in two weeks is not available to them. The only option they have is to choose \$100 in one week. They effectively accept their future present bias now and choose the \$100 in one week.
 
 In this example, being naive or sophisticated does not change their final choice. It only changes their beliefs about their final decision over time. The sophisticated agent knows at $t=0$ what they will do at $t=1$. The naive agent is unaware that at $t=1$ they will make a decision inconsistent with their choice at $t=0$. We can summarise their decisions at each time as follows:
 

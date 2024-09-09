@@ -146,7 +146,7 @@ U_1(1,8)&=0.95^0 \times 8 \\
 The discounted utility of the surfboard received at $t=2$ is:
 
 \begin{align*}
-U_2(2,10)&=0.5\times 0.95^1 \times 10 \\
+U_1(2,10)&=0.5\times 0.95^1 \times 10 \\
 &=`r round(0.5*0.95^1 * 10, 2)`
 \end{align*}
 

@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "2 September 2024"
+  date: "9 September 2024"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -34,7 +34,6 @@ book:
         - prospect-theory/probability-weighting.qmd
         - prospect-theory/prospect-theory-implementation.qmd
         - prospect-theory/prospect-theory-examples.qmd
-        - prospect-theory/prospect-theory-and-insurance.qmd
         - prospect-theory/prospect-theory-applications.qmd
         - prospect-theory/prospect-theory-exercises.qmd
     - part: intertemporal-choice/intertemporal-choice.qmd
@@ -128,7 +127,7 @@ format:
     code-fold: true
     fig-cap-location: top
 #    mermaid-format: png (commented out as problem when doing full build)
-    toc-expand: 2
+    toc-expand: 1
     toc-title: "On this page"
 
   pdf:

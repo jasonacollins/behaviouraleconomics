@@ -103,7 +103,90 @@ There is a kink in the line projecting from the \$110 in two weeks, representing
 
 At $t=0$ the discounted utility of the \$110 at $t=2$ is higher and that payment is therefore preferred. At $t=1$ when the \$100 is no longer discounted by the short-term discount factor $\beta$, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the \$110 due in another week.
 
-![](img/present-bias-example-1.png){width=75%}
+```{r}
+# Create a function to create the discounted bar chart
+library(ggplot2)
+
+# Helper function to create discounted values
+create_discount_data <- function(value, t, beta, delta, start) {
+  times <- seq(start, t, by = 1)
+  data.frame(
+    t = times,
+    group = as.character(t),
+    value = ifelse(t==times, value, value * beta * delta^(t - times))
+  )
+}
+
+# Main function to create the discounted bar chart
+create_discounted_bar_chart <- function(smaller, t_s, larger, t_l, beta, delta, starting_at = 0, y_spacing = 20, x_spacing = 1) {
+  # Create the data
+  data <- data.frame(
+    t = c(t_s, t_l),
+    U_t = c(smaller, larger)
+  )
+  
+  # Create the discounted values, starting from 'starting_at'
+  discounted_data <- rbind(
+    create_discount_data(smaller, t_s, beta, delta, starting_at),
+    create_discount_data(larger, t_l, beta, delta, starting_at)
+  )
+  
+  # Shift t values based on starting_at
+  data$t_plot <- data$t - starting_at
+  discounted_data$t_plot <- discounted_data$t - starting_at
+  
+  # Filter out any data points before the starting point
+  data <- data[data$t >= starting_at, ]
+  discounted_data <- discounted_data[discounted_data$t >= starting_at, ]
+  
+  # Determine x-axis and y-axis limits
+  x_min <- 0
+  x_max <- max(max(data$t_plot), max(discounted_data$t_plot))
+  y_max <- max(max(data$U_t), max(discounted_data$value)) * 1.1  # 10% buffer
+  
+  # Create the plot
+  ggplot() +
+    # Add the bars
+    geom_rect(data = data, aes(xmin = ifelse(t_plot == 0, 0, t_plot - 0.15),
+                               xmax = ifelse(t_plot == 0, 0.15, t_plot + 0.15),
+                               ymin = 0, ymax = U_t),
+              fill = "white", color = "black") +
+    
+    # Add the discount lines
+    geom_line(data = discounted_data, aes(x = t_plot, y = value, group = group, linetype = group), 
+              color = "black", linewidth = 1) +
+    
+    # Customize the plot
+    scale_x_continuous(breaks = seq(x_min, x_max + 1, by = x_spacing), 
+                       limits = c(x_min, x_max + 1),
+                       expand = c(0, 0),
+                       labels = function(x) x + starting_at) +
+    scale_y_continuous(breaks = seq(0, y_max, by = y_spacing), 
+                       limits = c(0, y_max),
+                       expand = c(0, 0)) +
+    geom_vline(xintercept = 0, linewidth = 0.25) + 
+    geom_hline(yintercept = 0, linewidth = 0.25) +
+    labs(x = "t",
+         y = expression(U[t])) +
+    theme_minimal() +
+    theme(
+      axis.title.y = element_text(angle = 0, vjust = 0.5),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "none"
+    )
+}
+
+```
+
+```{r}
+#| label: fig-present-bias-example-1
+#| fig-cap: \$100 next week or \$110 in two weeks?
+#| fig-width: 5
+
+create_discounted_bar_chart(100, 1, 110, 2, 0.95, 0.95)
+
+```
 
 ## A longer delay
 
@@ -154,7 +237,14 @@ The vertical bars represent the payments of \$10 and \$20. The lines projecting 
 
 At $t=0$ (and through to $t=4$) the discounted utility of the \$20 at $t=10$ is higher and that payment is therefore preferred. At $t=5$ when the \$10 is no longer discounted by the short-term discount factor $\beta$, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the \$20 due in another five days.
 
-![](img/present-bias-example-2.jpg){width=75%}
+```{r}
+#| label: fig-present-bias-example-2
+#| fig-cap: \$10 in five days or \$20 in 10 days?
+#| fig-width: 5
+
+create_discounted_bar_chart(10, 5, 20, 10, 0.75, 0.9, y_spacing = 5)
+
+```
 
 ## Paying a loan
 
@@ -208,4 +298,11 @@ The following chart shows each of the two options presented to Charlie, \$100 at
 
 It can be seen that from $t=0$ to $t=6$, the discounted utility of \$200 at $t=14$ is higher than the discounted utility of \$100 at $t=7$. However, at $t=7$, the discounted utility of \$100 at $t=7$ is higher than the discounted utility of \$200 at $t=14$. Hence Charlie changes his mind.
 
-![](img/problem-set-3.png){width=80%}
+```{r}
+#| label: fig-present-bias-example-3
+#| fig-cap: Paying a loan
+#| fig-width: 5
+
+create_discounted_bar_chart(100, 7, 200, 14, 0.5, 0.95)
+
+```
