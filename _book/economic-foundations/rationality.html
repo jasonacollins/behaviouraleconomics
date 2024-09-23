@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Economic foundations – Notes on behavioural economics</title>
+<title>2&nbsp; Rationality – Notes on behavioural economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../foundations/preferences.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../economic-foundations/utility.html" rel="next">
+<link href="../economic-foundations/preferences.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,6 +61,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,12 +101,55 @@ gtag('js', new Date());
 gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 </script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Economic foundations – Notes on behavioural economics">
+<meta property="og:title" content="2&nbsp; Rationality – Notes on behavioural economics">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Notes on behavioural economics">
-<meta name="twitter:title" content="Economic foundations – Notes on behavioural economics">
+<meta name="twitter:title" content="2&nbsp; Rationality – Notes on behavioural economics">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -130,7 +196,7 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../foundations/economic-foundations.html">Economic foundations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../economic-foundations/economic-foundations.html">Economic foundations</a></li><li class="breadcrumb-item"><a href="../economic-foundations/rationality.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -150,7 +216,7 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link active">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,25 +225,25 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -594,15 +660,26 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
+  <li><a href="#completeness" id="toc-completeness" class="nav-link" data-scroll-target="#completeness"><span class="header-section-number">2.2</span> Completeness</a></li>
+  <li><a href="#transitivity" id="toc-transitivity" class="nav-link" data-scroll-target="#transitivity"><span class="header-section-number">2.3</span> Transitivity</a></li>
+  <li><a href="#preference-orderings" id="toc-preference-orderings" class="nav-link" data-scroll-target="#preference-orderings"><span class="header-section-number">2.4</span> Preference Orderings</a></li>
+  <li><a href="#defining-rationality" id="toc-defining-rationality" class="nav-link" data-scroll-target="#defining-rationality"><span class="header-section-number">2.5</span> Defining rationality</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../economic-foundations/economic-foundations.html">Economic foundations</a></li><li class="breadcrumb-item"><a href="../economic-foundations/rationality.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Economic foundations</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></h1>
 </div>
 
 
@@ -619,12 +696,76 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 </header>
 
 
-<p>Behavioural economics builds on the frameworks and tools used by economists. In this part, I introduce some of the core economic concepts that we will build on or explicitly deviate from in our exploration of behavioural economics.</p>
-<p>I will first examine the preference relation used by economists.</p>
-<p>Then I will discuss how economists define rationality, and the foundational axioms of rationality, completeness and transitivity.</p>
-<p>Finally, I will describe how the preference relation and axioms form the basis of utility functions.</p>
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>In economics, rationality means that preferences respect certain principles, not that decisions are necessarily reasonable or self-interested.</li>
+<li>The completeness axiom states that an agent can always compare any two options: for all <span class="math inline">x</span> and <span class="math inline">y</span>, either <span class="math inline">x \succcurlyeq y</span> or <span class="math inline">y \succcurlyeq x</span> (or both).</li>
+<li>The transitivity axiom states that if an agent prefers A to B and B to C, they will prefer A to C: if <span class="math inline">x \succcurlyeq y</span> and <span class="math inline">y \succcurlyeq z</span>, then <span class="math inline">x \succcurlyeq z</span>.</li>
+<li>These axioms allow for the construction of a preference ordering, but they provide minimal constraints on the nature of preferences themselves.</li>
+</ul>
+<hr>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/cUQ6Q4ge45w" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+</section>
+<section id="introduction" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
+<p>A standard economic assumption is that decision makers are rational.</p>
+<p>However, rationality in economics has a different definition to the ‘lay’ definition of rationality.</p>
+<p>Rationality simply means that preferences respect some desirable principles. These principles are assumptions, not rules of behaviour.</p>
+<p>Economists tend to keep the number of assumptions as small as possible. They choose the assumptions that they need for the particular analytical problem they have at hand.</p>
+<p>In its most stripped-back form, analysis of consumer choice rests on just two assumptions. These are completeness and transitivity.</p>
+</section>
+<section id="completeness" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="completeness"><span class="header-section-number">2.2</span> Completeness</h2>
+<p>Completeness means that an agent can always compare any two options. The agent cannot fail to have a preference between two options (although that preference may be indifference).</p>
+<p>For example, if an agent was presented with a choice between an apple and a banana, or a choice between a Mercedes and a BMW, they will always strictly prefer one of them or be indifferent between the two. They will never not know what to choose or be unable to make a choice. They cannot be indecisive.</p>
+<p>Formally, we can state the completeness axiom as follows:</p>
+<blockquote class="blockquote">
+<p>For all <span class="math inline">x</span> and <span class="math inline">y</span>, either <span class="math inline">x \succcurlyeq y</span> or <span class="math inline">y \succcurlyeq x</span> (or both).</p>
+</blockquote>
+<p>Completeness means people always prefer <span class="math inline">x</span> or <span class="math inline">y</span>, or are indifferent between the two.</p>
+<p>While the completeness axiom appears sensible, it is possible to develop examples where it may not hold. Consider a choice between two possible holiday destinations. Or two potential dates or spouses. If you are torn between the options and unable to make up your mind, this would represent a breach of the completeness axiom.</p>
+<p>Incomplete preferences are different from indifference. If you are indifferent, you would be able to decide by, say, flipping a coin. You will be equally satisfied whatever the outcome. Incompleteness makes choice impossible.</p>
+</section>
+<section id="transitivity" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="transitivity"><span class="header-section-number">2.3</span> Transitivity</h2>
+<p>Under transitivity, if a person prefers A to B and B to C, they will prefer A to C.</p>
+<p>Formally, we can state the transitivity axiom as follows:</p>
+<blockquote class="blockquote">
+<p>For all <span class="math inline">x</span>, <span class="math inline">y</span> and <span class="math inline">z</span>, if <span class="math inline">x \succcurlyeq y</span> and <span class="math inline">y \succcurlyeq z</span>, then <span class="math inline">x \succcurlyeq z</span>.</p>
+</blockquote>
+<p>One classic argument for transitivity is the concept of a “money pump” (<span class="citation" data-cites="davidson1955">Davidson et al. (<a href="../references.html#ref-davidson1955" role="doc-biblioref">1955</a>)</span>).</p>
+<p>Suppose you have a person who prefers A to B, B to C and C to A. That is, they have intransitive preferences. They have $20 and an endowment of C.</p>
+<p><a href="img/money-pump-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/money-pump-1.png" class="img-fluid" style="width:50.0%"></a></p>
+<p>They are offered B in exchange for their endowment of C for some small nominal cost (say $1). If they make the trade they now have B and $19.</p>
+<p><a href="img/money-pump-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/money-pump-2.png" class="img-fluid" style="width:50.0%"></a></p>
+<p>They are then offered A in exchange for their endowment of B, again for a nominal cost.</p>
+<p><a href="img/money-pump-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/money-pump-3.png" class="img-fluid" style="width:50.0%"></a></p>
+<p>Finally, they are offered C in exchange for their endowment of A for a further nominal cost. They now have an endowment of C and $17. This process can be repeated until the agent has no money.</p>
+<p><a href="img/money-pump-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/money-pump-4.png" class="img-fluid" style="width:50.0%"></a></p>
+</section>
+<section id="preference-orderings" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="preference-orderings"><span class="header-section-number">2.4</span> Preference Orderings</h2>
+<p>If we assume preferences are transitive and complete, it is possible to construct a preference ordering.</p>
+<p>Completeness guarantees that there will be only one ordering.</p>
+<p>Transitivity guarantees that there will be no cycles in strict preference. Weak preferences can cycle, so that one can prefer a to b and b to c and c to a, but this entails indifference.</p>
+<p>That preference ordering, a simple rank of which options an agent prefers, is all that is required for some analysis of consumer choice.</p>
+</section>
+<section id="defining-rationality" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="defining-rationality"><span class="header-section-number">2.5</span> Defining rationality</h2>
+<p>This definition of rationality, accordance to the axioms of completeness and transitivity, provides little constraint on preferences.</p>
+<p>You could prefer less money to more. You could prefer sums of money divisible by seven with no remainder. You could prefer more for yourself or more for someone else.</p>
+<p>These axioms do not lead to an assumption that people are selfish, unless you define selfishness to be simply acting in accordance with their preferences.</p>
+<p>These axioms place some constraints on behaviour, and empirical evidence suggests those constraints are sometimes breached by decision makers. But they are constraints that allow much behaviour to be described as rational.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-davidson1955" class="csl-entry" role="listitem">
+Davidson, D., McKinsey, J. C. C., and Suppes, P. (1955). Outlines of a Formal Theory of Value, I. <em>Philosophy of Science</em>, <em>22</em>(2), 140–160. <a href="https://doi.org/10.1086/287412">https://doi.org/10.1086/287412</a>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1054,13 +1195,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../economic-foundations/preferences.html" class="pagination-link" aria-label="Preferences">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../foundations/preferences.html" class="pagination-link" aria-label="Preferences">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../economic-foundations/utility.html" class="pagination-link" aria-label="Utility">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1084,12 +1225,44 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

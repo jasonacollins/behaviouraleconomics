@@ -448,3 +448,272 @@ That Stacey later decided to pursue the business opportunity is likely because s
 One mechanism by which this could occur is the utility function becomes increasingly linear with higher wealth (as is the case with $u(x)=\ln(x)$ or $u(x)=x^{0.5}$).
 
 :::
+
+## Risk neutrality versus risk aversion
+
+Anika and Anthony are offered a choice between options A and B:
+
+A: Lottery $A=(0.5, \$100; 0.5, \$20)$. This is a gamble with a 50% chance of winning $100 and a 50% chance of winning $20.
+
+B: $40 for certain.
+
+\(a) Anika is risk-neutral. Will Anika choose A or B?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+A risk-neutral decision-maker maximises expected value.
+
+The expected value of option A is:
+
+\begin{align*}
+\text{E}[A]&=p_1x_1+p_2x_2 \\[6pt]
+&=0.5\times \$100+0.5\times \$20 \\[6pt]
+&=\$60
+\end{align*}
+
+The expected value of option B is \$40.
+
+Anika will choose option A because \$60 is greater than \$40.
+
+:::
+
+\(b) Anthony is risk averse with wealth $100 and utility function $U(x)=\text{ln}(x)$. Will Anthony choose A or B?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Anthony will select the option that gives the highest expected utility.
+
+The expected utility of option A is:
+
+\begin{align*}
+\text{E}[U(A)]&=p_1u(x_1)+p_2u(x_2) \\[6pt]
+&=0.5\times \text{ln}(W+100)+0.5\times \text{ln}(W+20) \\[6pt]
+&=0.5\times \text{ln}(200)+0.5\times \text{ln}(120) \\[6pt]
+&=`r ps1a <- 0.5*log(200)+0.5*log(120); round(ps1a, 2)`
+\end{align*}
+
+The expected utility of option B is:
+
+\begin{align*}
+\text{E}[U(B)]&=u(W+x) \\[6pt]
+&=\text{ln}(140) \\[6pt]
+&=`r ps1b <- log(140); round(ps1b, 2)`
+\end{align*}
+
+Anthony will choose option A because $\text{E}[U(A)]=`r round(ps1a, 2)`>`r round(ps1b, 2)`=\text{E}[U(B)]$.
+
+:::
+
+\(c) Draw a graph showing the choices faced by Anthony, his utility curve and the expected utility of each option. Indicate the certainty equivalent of option A. Explain how the graph shows which option Anthony will choose.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+@fig-anthony shows the choices faced by Anthony, his utility curve and the expected utility of each option. The horizontal axis is the outcome and the vertical axis is utility of each outcome. The utility curve is the function $U(x)=\text{ln}(x)$.
+
+The two possible outcomes of gamble A are W+20=120 and W+100=200, which deliver $U(W+20)$ and $U(W+100)$ respectively. Each are labelled on the chart.
+
+The expected utility of gamble A is the weighted average of these two utilities and lies on the straight line between $U(W+20)$ and $U(W+100)$. As each outcome has a 50% chance of occurring, the expected utility of gamble A is the midpoint of this line (as is the expected value of the gamble). The vertical line from $W+E[A]=160$ identifies that point, with the expected utility $E[U(A)]$ marked on the vertical axis.
+
+The certain outcome from option B, the receipt of \$40 resulting in wealth of \$140 is also marked on the x-axis, leading to utility of $U(W+B)$.
+
+It can be seen that the expected utility of gamble A $E[U(A)]$ is greater than the utility of the certain outcome $U(W+B)$. Anthony will therefore choose gamble A.
+
+The certainty equivalent of option A is identified as the point where $U(CE)=E[U(A)]$. This is identified by drawing a horizontal line from the expected utility of gamble A to the utility curve. The point where this line intersects the utility curve is the certainty equivalent of gamble A, shown by projecting a vertical line downward.
+
+This diagram is not drawn to scale.
+
+```{r}
+#| label: fig-anthony
+#| fig-cap: "Anthony's consideration of option A and B"
+
+library(ggplot2)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-30 #loss
+x2<-200 #win
+ev<-115 #expected value of gamble
+xc<-60 #certain outcome
+ce<-79 #certainty equivalent
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+#set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
+
+  #Add labels W+20, U(W+20) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "W+20", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(W+20)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add labels W+B, U(W+B) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "W+B=140", size = 4, hjust = 0.6, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U(W+B)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels W+100, U(W+100) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "W+100", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(W+100)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels W+E[A], E[U(W+A)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "W+E[A]=160", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(A)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
+
+:::
+
+## Lottery ticket
+
+Buying a lottery ticket has a negative expected value. Andrew is an expected utility maximiser. He purchases a lottery ticket. 
+
+\(a) What risk preferences (attitude to risk) does Andrew have?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If an expected utility maximiser purchases a lottery ticket with negative expected value, he is risk seeking. He values the gamble over and above the expected value of the gamble.
+
+:::
+
+\(b) Use a graph to demonstrate your answer to part (a).
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+@fig-lottery shows Andrew's utility curve. As he is risk seeking it is convex (at least over the domain of the lottery).
+
+Each of the outcomes of the lottery are labelled. Andrew finishes with his wealth minus the cost of the lottery ticket ($W-T$) or his wealth minus the cost of the lottery ticket plus his lottery winnings ($W-T+L$). If he does not purchase the ticket, his wealth remains at $W$. The utility of each possible outcome ($U(W-T)$, $U(W)$, $U(W-T+L)$) is also indicated on the vertical axis.
+
+The expected value of the lottery after buying the ticket is labelled ($E[X]$). As the lottery has a negative expected value, $E[X]$ is less than $W$.
+
+The expected utility of the lottery lies on the straight line between the utility of the two possible lottery outcomes. The place on the line is determined by the probability of winning and is in line with the expected value of the lottery. We can identify the expected utility of the lottery by projecting a line up from $E[X]$ to the straight line.
+
+Finally, the certainty equivalent of the lottery is also marked. As $U(CE)=E[U(X)]$, we can identify the certainty equivalent by projecting a line up from $E[U(X)]$ to the utility curve.
+
+Due to the convex curve, we can see that $E[U(X)]$ is greater than $U(W)$. Andrew prefers the lottery to the certain outcome of $W$. Alternatively, we can see that the certainty equivalent of the lottery is higher than current wealth. Andrew would require a payment of at least $CE-W$ to forgo his opportunity to partake in the lottery.
+
+```{r}
+#| label: fig-lottery
+#| fig-cap: "Andrew's consideration of whether to purchase a lottery ticket"
+
+library(ggplot2)
+
+u <- function(x){
+  x^2
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-30 #loss
+x2<-200 #win
+ev<-65 #expected value of gamble
+xc<-80 #certain outcome
+ce<-95 #certainty equivalent
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+#set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-1000, 40000))+
+
+  #Add labels W-T, U(W-T) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "W-T", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(W-T)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add labels W, U(W) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "W", size = 4, hjust = 0.6, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U(W)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels W-T+L, U(W-T+L) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "W-T+L", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(W-T+L)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[X], E[U(X)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = ev, y = u(x1)+(u(x2)-u(x1))*px2, xend = ce, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
+
+:::

@@ -1,5 +1,21 @@
 # Strategic moves and commitment
 
+## Summary {.unnumbered}
+
+- Strategic moves are actions that change the game being played, typically from a single-stage to a two-stage game. They come in two forms: unconditional (commitments) and conditional (threats and promises).
+- For strategic moves to be effective, they must be observable, irreversible, and credible. Credibility is crucial. If carrying out a threat or promise is too costly for the player making it, it won't influence the other player's actions.
+- The game of "chicken" illustrates how strategic moves can change outcomes. Originally, this game has two pure-strategy Nash equilibria: (Straight, Swerve) and (Swerve, Straight). However, if one player commits to going straight (e.g., by removing their steering wheel), it changes the Nash equilibrium to favour that player.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/_Gc-3ss272U >}}
+
+---
+
+:::
+
 ## Chicken
 
 Consider the following game of chicken. Two players are driving toward each other. Whoever swerves first loses. If neither swerves, they crash and die.
@@ -58,7 +74,7 @@ Commitments, threats and promises only achieve their objective if they are credi
 
 Sticking to a commitment and carrying out a threat or a promise typically reduces the possible actions of the player. If the proposer loses too much from carrying out a threat or promise, they will not carry it out.
 
-### Example
+### Example: Complaining is costly {#sec-complaining}
 
 Here is an example.
 

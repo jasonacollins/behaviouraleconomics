@@ -230,7 +230,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -239,25 +239,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -679,7 +679,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#notation" id="toc-notation" class="nav-link active" data-scroll-target="#notation"><span class="header-section-number">5.1</span> Notation</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation"><span class="header-section-number">5.1</span> Notation</a></li>
   <li><a href="#mathematical-background" id="toc-mathematical-background" class="nav-link" data-scroll-target="#mathematical-background"><span class="header-section-number">5.2</span> Mathematical background</a>
   <ul class="collapse">
   <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="header-section-number">5.2.1</span> Functions</a></li>
@@ -710,8 +711,20 @@ window.Quarto = {
 </header>
 
 
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>Lotteries can be represented as <span class="math inline">L = (p_1, x_1; p_2, x_2; ...; p_n, x_n)</span>, where <span class="math inline">p_i</span> is the probability of outcome <span class="math inline">x_i</span>.</li>
+<li>Mathematical functions used in expected utility theory include exponentiation (<span class="math inline">x^a</span>), exponential (<span class="math inline">e^x</span>), and logarithmic (<span class="math inline">\ln(x)</span>) functions.</li>
+<li>Differentiation finds the rate of change of a function, written as <span class="math inline">\frac{d}{dx} f(x)</span> or <span class="math inline">f'(x)</span>.</li>
+<li>The second derivative (<span class="math inline">\frac{d^2}{dx^2} f(x)</span> or <span class="math inline">f''(x)</span>) measures a function’s curvature, indicating whether it’s convex (<span class="math inline">f''(x) &gt; 0</span>) or concave (<span class="math inline">f''(x) &lt; 0</span>).</li>
+</ul>
+<hr>
+</section>
 <section id="notation" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="notation"><span class="header-section-number">5.1</span> Notation</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ThLYgh_I7Xs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <p>Before analysing decision-making under risk and uncertainty, I will introduce some notation.</p>
 <p>Suppose we have a lottery <span class="math inline">L</span> with <span class="math inline">n</span> possible outcomes <span class="math inline">x_1, x_2, ..., x_n</span> each with probabilities <span class="math inline">p_1, p_2, ..., p_n</span>. A shorthand way to write this is:</p>
 <p><span class="math display">
@@ -740,6 +753,8 @@ L=(x_1,x_2,...,x_n;p_1,p_2,...,p_n)
 <p>We will use some basic mathematical concepts to analyse expected utility. I will briefly review these concepts here.</p>
 <section id="functions" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="functions"><span class="header-section-number">5.2.1</span> Functions</h3>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/MBALkP2bf5Y" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <section id="exponentiation" class="level4" data-number="5.2.1.1">
 <h4 data-number="5.2.1.1" class="anchored" data-anchor-id="exponentiation"><span class="header-section-number">5.2.1.1</span> Exponentiation</h4>
 <p>Exponentiation is a mathematical operation where a number is multiplied by itself a certain number of times.</p>
@@ -850,6 +865,8 @@ Figure&nbsp;5.3: The logarithmic function
 </section>
 <section id="differentiation" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="differentiation"><span class="header-section-number">5.2.2</span> Differentiation</h3>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/VeCqOpcGysY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <p>Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as <span class="math inline">\frac{d}{dx}f(x)</span> or <span class="math inline">\frac{dy}{dx}</span> or <span class="math inline">f'(x)</span>.</p>
 <p>There are several simple rules to differentiate a function. The rules relevant to these notes are as follows.</p>
 <p>The derivative of a constant is zero.</p>
@@ -1386,7 +1403,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

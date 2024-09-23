@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -196,7 +216,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -205,25 +225,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -648,6 +668,9 @@ window.Quarto = {
   <li><a href="#airline-competition" id="toc-airline-competition" class="nav-link active" data-scroll-target="#airline-competition"><span class="header-section-number">56.1</span> Airline competition</a></li>
   <li><a href="#valuing-a-business" id="toc-valuing-a-business" class="nav-link" data-scroll-target="#valuing-a-business"><span class="header-section-number">56.2</span> Valuing a business</a></li>
   <li><a href="#cafe" id="toc-cafe" class="nav-link" data-scroll-target="#cafe"><span class="header-section-number">56.3</span> Cafe</a></li>
+  <li><a href="#a-military-attack" id="toc-a-military-attack" class="nav-link" data-scroll-target="#a-military-attack"><span class="header-section-number">56.4</span> A military attack</a></li>
+  <li><a href="#acquiring-a-company" id="toc-acquiring-a-company" class="nav-link" data-scroll-target="#acquiring-a-company"><span class="header-section-number">56.5</span> Acquiring a company</a></li>
+  <li><a href="#receiving-a-faulty-product" id="toc-receiving-a-faulty-product" class="nav-link" data-scroll-target="#receiving-a-faulty-product"><span class="header-section-number">56.6</span> Receiving a faulty product</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -722,8 +745,7 @@ Answer
 <p><span class="math display">\begin{align*}
 U_Q(\text{high})&amp;=0.5\times 100+0.5\times 40 \\
 &amp;=70
-\end{align*}</span></p>
-<p><span class="math display">\begin{align*}
+\end{align*}</span> <span class="math display">\begin{align*}
 U_Q(\text{low})&amp;=0.5\times 60+0.5\times 50 \\
 &amp;=55
 \end{align*}</span></p>
@@ -732,8 +754,7 @@ U_Q(\text{low})&amp;=0.5\times 60+0.5\times 50 \\
 <p><span class="math display">\begin{align*}
 U_V(\text{high})&amp;=0.5\times 20+0.5\times 0 \\
 &amp;=10
-\end{align*}</span></p>
-<p><span class="math display">\begin{align*}
+\end{align*}</span> <span class="math display">\begin{align*}
 U_V(\text{low})&amp;=0.5\times 30+0.5\times 10 \\
 &amp;=20
 \end{align*}</span></p>
@@ -901,8 +922,213 @@ Answer
 </div>
 </div>
 </div>
+</section>
+<section id="a-military-attack" class="level2" data-number="56.4">
+<h2 data-number="56.4" class="anchored" data-anchor-id="a-military-attack"><span class="header-section-number">56.4</span> A military attack</h2>
+<p>An army from the North is about to attack the South.</p>
+<p>The North can attack one of two cities: Hobart or Launceston. Launceston is easier to attack as it is closer.</p>
+<p>The South needs to decide which city it will plan to defend.</p>
+<p>If the North attacks an undefended city, it will win. The South can repel any attack on a city it has chosen to defend.</p>
+<p>The expected payoffs for each combination of actions are as follows, with the payoff (<span class="math inline">x,y</span>) being the payoffs for the North and South respectively.</p>
+<p><a href="img/army.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/army.png" class="img-fluid" style="width:80.0%"></a></p>
+<p>a) Are there any pure-strategy Nash equilibria? If so, what are they?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We determine the pure-strategy Nash equilibria by considering the best response of each player to each of the other player’s strategies.</p>
+<p>If the South defends Hobart, North can choose Hobart for a payoff of -1 or Launceston for a payoff of 4. Launceston is the best response.</p>
+<p>If the South defends Launceston, North can choose Hobart for a payoff of 4 or Launceston for a payoff of 0. Hobart is the best response.</p>
+<p>If the North attacks Hobart, South can defend Hobart for a payoff of 4 or Launceston for a payoff of 0. Hobart is the best response.</p>
+<p>If the North attacks Launceston, South can defend Hobart for a payoff of 0 or Launceston for a payoff of 4. Launceston is the best response.</p>
+<p>There is no pure-strategy Nash equilibrium. For any combination of choices, one of the armies has an incentive to change their choice.</p>
+<p><a href="img/army-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/army-2.png" class="img-fluid" style="width:80.0%"></a></p>
+</div>
+</div>
+</div>
+<p>b) Suppose the commanders of the North and South are level-k thinkers.</p>
+<p>If they were level-0, both would choose Hobart or Launceston with equal probability.</p>
+<p>What would each player do if they were a level-1 thinker?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A level-1 thinker assumes that the other player is a level-0 thinker. Each level-1 thinker plays the optimal strategy on this assumption.</p>
+<p>A level-1 North plays the optimal strategy against a level-0 South. A level-0 South plays Hobart or Launceston with equal probability. The payoffs to North from each option are:</p>
+<p><span class="math display">\begin{align*}
+U_N(\text{Hobart})=0.5\times -1+0.5\times 4=1.5 \\
+\\
+U_N(\text{Launceston})=0.5\times 4+0.5\times 0=2
+\end{align*}</span></p>
+<p>North attacks Launceston.</p>
+<p><span class="math display">\begin{align*}
+U_S(\text{Hobart})=0.5\times 4+0.5\times 0=2 \\
+\\
+U_S(\text{Launceston})=0.5\times 4+0.5\times 0=2
+\end{align*}</span></p>
+<p>South is indifferent between defending Hobart and Launceston. They can choose either.</p>
+</div>
+</div>
+</div>
+<p>c) What would each player do if they were a level-2 thinker?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A level-2 thinker assumes that the other player is a level-1 thinker. Each level-2 thinker plays the optimal strategy on this assumption.</p>
+<p>A level-2 North knows that the level-1 South is indifferent between defending Hobart and Launceston. If North assumes that South will defend each with equal probability, the payoffs to North from each option are:</p>
+<p><span class="math display">\begin{align*}
+U_N(\text{Hobart})=0.5\times -1+0.5\times 4=1.5 \\
+\\
+U_N(\text{Launceston})=0.5\times 4+0.5\times 0=2
+\end{align*}</span></p>
+<p>North attacks Launceston.</p>
+<p>A level-2 South knows that the level-1 North attacks Launceston. The South defends Launceston for payoff of 4 (rather than Hobart for payoff of 0).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="acquiring-a-company" class="level2" data-number="56.5">
+<h2 data-number="56.5" class="anchored" data-anchor-id="acquiring-a-company"><span class="header-section-number">56.5</span> Acquiring a company</h2>
+<p>The following example draws on <span class="citation" data-cites="bazerman2013">Bazerman and Moore (<a href="../references.html#ref-bazerman2013" role="doc-biblioref">2013</a>)</span>.</p>
+<p>Company A is considering acquiring Company T.</p>
+<p>The value of Company T depends on the outcome of an oil exploration project. If the project fails, the company under current management will be worth nothing ($0 per share). If the project succeeds, the value of the company under current management could be as high as $100 per share. All values between $0 and $100 are equally likely.</p>
+<p>Company T will be worth 50 per cent more in the hands of Company A than under current management. If the project fails, the company will be worth $0 per share under either management. If the exploration project generates a $50 per share value under current management, the value under Company A will be $75 per share. And so on.</p>
+<p>Company A is considering what price per share they should offer. This offer must be made before Company A knows the outcome of the drilling project, but after Company T learns the result. Company T will accept any offer from Company A if it is profitable for them.</p>
+<p>a) Show that for any offer above zero Company A expects to lose money.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If Company A offers <span class="math inline">\$x</span>, Company T will accept <span class="math inline">x</span>% of the time, whenever the firm is worth between $0 and <span class="math inline">\$x</span>. Since all those values are equally likely, the firm will be worth on average <span class="math inline">\$x/2</span> to company T when they accept. The shares will therefore be worth <span class="math inline">1.5\times x/2=3x/4</span> on average for company A. That gives Company A profit of:</p>
+<p><span class="math display">\begin{align*}
+\pi_A&amp;=\frac{3x}{4}-x \\[6pt]
+&amp;=-\frac{x}{4}
+\end{align*}</span></p>
+<p>Any offer above $0 generates a negative expected return, a loss of 25% of the offer.</p>
+<p>To give an example, if Company A offered $60, it will be accepted 60% of the time - whenever the firm is worth between $0 and $60 for company T. Since all those values are equally likely, the firm will be worth on average $30 to company T when they accept, meaning it will be worth $45 on average for company A. A $60 offer will result in an average loss of $15.</p>
+</div>
+</div>
+</div>
+<p>b) People given this problem tend to bid between $50 and $75 per share (<span class="citation" data-cites="samuelson1985">Samuelson and Bazerman (<a href="../references.html#ref-samuelson1985" role="doc-biblioref">1985</a>)</span>). A typical explanation offered by these people is that the average outcome for Company T is $50, making the value for Company A $75. Any offer in the range between these two values would be agreeable to both parties.</p>
+<p>Explain why a “cursed” player representing Company A might make a non-zero offer.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A “cursed” player representing company A does not think that company T’s decision to sell depends on company T’s knowledge of the oil exploration. As a result, they are likely to bid based on their unconditional expected value of the field, not the value conditional on acceptance.</p>
+<p>This bidding approach leads to, on average, a loss. The cursed player under-appreciates that company T is more likely to accept when company T’s valuation is low.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="receiving-a-faulty-product" class="level2" data-number="56.6">
+<h2 data-number="56.6" class="anchored" data-anchor-id="receiving-a-faulty-product"><span class="header-section-number">56.6</span> Receiving a faulty product</h2>
+<p>A customer received a faulty product from a firm and requested a refund as per consumer law. The customer also threatened to complain to the Department of Fair Trading if they did not receive the refund. A customer complaint would be costly to the firm as they would be required to provide a refund in addition to incurring the cost of dealing with the complaint.</p>
+<p>The firm offered a store credit instead, believing that the customer would not complain as the time and effort involved would not be worth the potential refund.</p>
+<p>However, the customer still complained to the Department of Fair Trading.</p>
+<p>a) Use concepts from game theory to explain why the firm might have held that belief.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We can draw the extensive form of the game as follows:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-punishment" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-punishment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;56.1: Extensive form of the game
+</figcaption>
+<div aria-describedby="fig-punishment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<p><a href="behavioural-game-theory-problems_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;56.1: Extensive form of the game"><img src="behavioural-game-theory-problems_files/figure-html/mermaid-figure-1.png" style="width:6in;height:1.21in" class="figure-img"></a></p>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>We work through this game by backward induction. If the cost to to the customer of complaining is greater than the benefit of obtaining the refund, the customer will not complain. In that case, the firm will offer the store credit.</p>
+<p>As the firm believed that the cost to to the customer of complaining is greater than the benefit of obtaining the refund, the customer’s threat to complain would not normally be considered credible.</p>
+</div>
+</div>
+</div>
+<p>b) Use concepts from behavioural game theory to explain why the firm’s belief was ultimately incorrect.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The customer’s emotional response may lead them to complain. They might be angry or obtain satisfaction from seeing the firm punished. In that case, the customer will complain even though it is not in their material best interest to do so. Emotionally, it is worthwhile. They incur the cost of complaining but get the benefit of both the refund and the satisfaction from punishing the firm.</p>
+</div>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-bazerman2013" class="csl-entry" role="listitem">
+Bazerman, M. H., and Moore, D. A. (2013). <em>Judgment in managerial decision making</em> (8. ed). Wiley.
+</div>
+<div id="ref-samuelson1985" class="csl-entry" role="listitem">
+Samuelson, W. F., and Bazerman, M. (1985). <em>Negotiation under the winner<span>’</span>s curse</em> (V. Smith, Ed.). JAI Press.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1369,7 +1595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

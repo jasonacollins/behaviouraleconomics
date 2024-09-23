@@ -193,7 +193,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -202,25 +202,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -637,8 +637,14 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -662,23 +668,38 @@ window.Quarto = {
 </header>
 
 
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>Subjective expected utility theory applies to situations of uncertainty where probabilities are unknown.</li>
+<li>Agents maximize subjective expected utility, <span class="math inline">\mathbb{E}[U(X)]</span>, using subjective probabilities <span class="math inline">\pi(x_i)</span> for each outcome.</li>
+<li>Subjective probabilities typically comply with Bayesian probability theory, with decision-makers assumed to have beliefs consistent with Bayes’ rule.</li>
+<li>The equation for subjective utility theory is similar to expected utility theory, but with subjective probabilities:</li>
+</ul>
+<p><span class="math display">
+\mathbb{E}[U(x)] = \sum_{i=1}^n \pi(x_i)u(x_i)
+</span></p>
+<hr>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/5TIR4oL1Ors" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <p>Subjective expected utility theory is used in situations of uncertainty, where the probabilities are not known. People maximize expected utility using a subjective estimate of probability.</p>
-<p>The agent maximises subjective expected utility, <span class="math inline">E[U(x)]</span>, using a subjective probability <span class="math inline">\pi(x_i)</span> for each outcome <span class="math inline">x_i</span>.</p>
+<p>The agent maximises subjective expected utility, <span class="math inline">\mathbb{E}[U(X)]</span>, using a subjective probability <span class="math inline">\pi(x_i)</span> for each outcome <span class="math inline">x_i</span>.</p>
 <p>While people may have different beliefs about the probabilities of different outcomes, as the word “subjective” indicates, these are typically assumed to comply with Bayesian probability theory. Decision makers are Bayesian, in that, given the evidence, they have beliefs that are consistent with Bayes’ rule. I discuss Bayes’ rule in more detail later.</p>
-<p>The equation for subjective utility theory is as that for expected utility theory, except that the probabilities are subjective.</p>
+<p>The equation for subjective utility theory is the same as that for expected utility theory, except that the probabilities are subjective.</p>
 <p><span class="math display">\begin{align*}
-E[U(x)]&amp;=\pi(x_1)U(x_1)+\pi(x_2)U(x_2)+...+\pi(x_n)U(x_n)\\[6pt]
-&amp;=\sum_{i=1}^n \pi(x_i)U(x_i)
+\mathbb{E}[U(X)]&amp;=\pi(x_1)u(x_1)+\pi(x_2)u(x_2)+...+\pi(x_n)u(x_n)\\[6pt]
+&amp;=\sum_{i=1}^n \pi(x_i)u(x_i)
 \end{align*}</span></p>
 <p>You can think of this formula as comprising the following steps:</p>
 <ol type="1">
-<li><p>Define utility <span class="math inline">U(x_i)</span> over final outcomes <span class="math inline">x_1,...,x_n</span>.</p></li>
+<li><p>Define utility <span class="math inline">u(x_i)</span> over final outcomes <span class="math inline">x_1,...,x_n</span>.</p></li>
 <li><p>Define subjective probability <span class="math inline">\pi(x_i)</span> over final outcomes <span class="math inline">x_1,...,x_n</span>.</p></li>
-<li><p>Weight the utility of each outcome <span class="math inline">U(x_i)</span> by the subjective probability <span class="math inline">\pi(x_i)</span>.</p></li>
+<li><p>Weight the utility of each outcome <span class="math inline">u(x_i)</span> by the subjective probability <span class="math inline">\pi(x_i)</span>.</p></li>
 <li><p>Add the weighted utilities.</p></li>
 </ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1138,7 +1159,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

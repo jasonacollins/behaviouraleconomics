@@ -193,7 +193,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -202,25 +202,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -642,10 +642,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#updating-beliefs" id="toc-updating-beliefs" class="nav-link active" data-scroll-target="#updating-beliefs"><span class="header-section-number">33.1</span> Updating beliefs</a></li>
-  <li><a href="#a-rigged-coin" id="toc-a-rigged-coin" class="nav-link" data-scroll-target="#a-rigged-coin"><span class="header-section-number">33.2</span> A rigged coin</a></li>
-  <li><a href="#balls-from-an-urn" id="toc-balls-from-an-urn" class="nav-link" data-scroll-target="#balls-from-an-urn"><span class="header-section-number">33.3</span> Balls from an urn</a></li>
-  <li><a href="#the-monty-hall-problem" id="toc-the-monty-hall-problem" class="nav-link" data-scroll-target="#the-monty-hall-problem"><span class="header-section-number">33.4</span> The Monty Hall problem</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">33.1</span> Introduction</a></li>
+  <li><a href="#updating-beliefs" id="toc-updating-beliefs" class="nav-link" data-scroll-target="#updating-beliefs"><span class="header-section-number">33.2</span> Updating beliefs</a></li>
+  <li><a href="#a-rigged-coin" id="toc-a-rigged-coin" class="nav-link" data-scroll-target="#a-rigged-coin"><span class="header-section-number">33.3</span> A rigged coin</a></li>
+  <li><a href="#balls-from-an-urn" id="toc-balls-from-an-urn" class="nav-link" data-scroll-target="#balls-from-an-urn"><span class="header-section-number">33.4</span> Balls from an urn</a></li>
+  <li><a href="#the-monty-hall-problem" id="toc-the-monty-hall-problem" class="nav-link" data-scroll-target="#the-monty-hall-problem"><span class="header-section-number">33.5</span> The Monty Hall problem</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -671,6 +673,33 @@ window.Quarto = {
 </header>
 
 
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li><p>Bayes’ rule is a method for calculating the conditional probability of an event.</p></li>
+<li><p>Bayes’ rule gives the probability of outcome <span class="math inline">A</span> given <span class="math inline">B</span>, <span class="math inline">P(A|B)</span>, using the unconditional probability of outcome <span class="math inline">A</span>, the probability of observing <span class="math inline">B</span> given <span class="math inline">A</span> and the total probability of outcome <span class="math inline">B</span>:</p></li>
+</ul>
+<p><span class="math display">
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+</span></p>
+<ul>
+<li>The total probability <span class="math inline">P(B)</span> can be calculated as:</li>
+</ul>
+<p><span class="math display">
+P(B) = P(B|A)P(A) + P(B|\neg A)P(\neg A)
+</span></p>
+<ul>
+<li>Bayes’ rule can be thought of as a way to update beliefs about a hypothesis <span class="math inline">H</span> given evidence <span class="math inline">E</span>:</li>
+</ul>
+<p><span class="math display">
+P(H|E) = \frac{P(E|H)P(H)}{P(E)}
+</span></p>
+<hr>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/hxcnmZq8bGs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+</section>
+<section id="introduction" class="level2" data-number="33.1">
+<h2 data-number="33.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">33.1</span> Introduction</h2>
 <p>Bayes’ rule is a method for estimating the conditional probability of an event.</p>
 <p>Specifically, Bayes’ rule allows us to use the following information to estimate the conditional probability of outcome <span class="math inline">A</span> given outcome <span class="math inline">B</span>:</p>
 <ul>
@@ -693,8 +722,9 @@ P(B)=P(B|A)P(A)+P(B|\neg A)P(\neg A)
 P(A|B)&amp;=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
 &amp;=\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|\neg A)P(\neg A)}
 \end{align*}</span>
-<section id="updating-beliefs" class="level2" data-number="33.1">
-<h2 data-number="33.1" class="anchored" data-anchor-id="updating-beliefs"><span class="header-section-number">33.1</span> Updating beliefs</h2>
+</section>
+<section id="updating-beliefs" class="level2" data-number="33.2">
+<h2 data-number="33.2" class="anchored" data-anchor-id="updating-beliefs"><span class="header-section-number">33.2</span> Updating beliefs</h2>
 <p>We can think of Bayes’ rule as how we should update our beliefs in light of a new event.</p>
 <p>Rational agents should update their beliefs using Bayes’ rule.</p>
 <p>In this case, the following elements are involved:</p>
@@ -710,8 +740,8 @@ P(A|B)&amp;=\frac{P(B|A)P(A)}{P(B)} \\[12pt]
 &amp;=\frac{P(E|H)P(H)}{P(E|H)P(H)+P(E|\neg H)P(\neg H)}
 \end{align*}</span>
 </section>
-<section id="a-rigged-coin" class="level2" data-number="33.2">
-<h2 data-number="33.2" class="anchored" data-anchor-id="a-rigged-coin"><span class="header-section-number">33.2</span> A rigged coin</h2>
+<section id="a-rigged-coin" class="level2" data-number="33.3">
+<h2 data-number="33.3" class="anchored" data-anchor-id="a-rigged-coin"><span class="header-section-number">33.3</span> A rigged coin</h2>
 <p>Suppose your friend has two coins. One is a fair coin with a head on one side and a tail on the other. The second coin is a rigged coin with a head on both sides.</p>
 <p>Your friend takes one of the coins and flips it. The coin shows a head. What is the probability that this coin is the rigged coin?</p>
 <p>We will assume that he randomly selected either coin with a probability of 50%. We take that as our prior belief:</p>
@@ -766,8 +796,8 @@ P(\text{rigged}|\text{10 heads})&amp;=\frac{P(\text{10 heads}|\text{rigged})P(\t
 \end{align*}</span>
 <p>We now believe the coin is rigged with greater than 99.9% probability.</p>
 </section>
-<section id="balls-from-an-urn" class="level2" data-number="33.3">
-<h2 data-number="33.3" class="anchored" data-anchor-id="balls-from-an-urn"><span class="header-section-number">33.3</span> Balls from an urn</h2>
+<section id="balls-from-an-urn" class="level2" data-number="33.4">
+<h2 data-number="33.4" class="anchored" data-anchor-id="balls-from-an-urn"><span class="header-section-number">33.4</span> Balls from an urn</h2>
 <p>You have two urns filled with balls. Urn 1 has 30% black balls and 70% yellow balls. Urn 2 has 70% black balls and 30% yellow balls. The labels have fallen off the urns, so you do not know which urn is which.</p>
 <p>You reach into one of the urns and pull out a yellow ball. What is the probability that you have drawn the ball from urn 1?</p>
 <p>The Bayes’ rule formula to solve this problem is:</p>
@@ -804,8 +834,8 @@ P(\text{urn 1}|\text{black})&amp;=\frac{P(\text{black}|\text{urn 1})P(\text{urn 
 \end{align*}</span>
 <p>The answer of 0.5 should seem intuitive. We have now drawn one black and one yellow ball. In combination, this is uninformative and we are back at our initial prior of 0.5.</p>
 </section>
-<section id="the-monty-hall-problem" class="level2" data-number="33.4">
-<h2 data-number="33.4" class="anchored" data-anchor-id="the-monty-hall-problem"><span class="header-section-number">33.4</span> The Monty Hall problem</h2>
+<section id="the-monty-hall-problem" class="level2" data-number="33.5">
+<h2 data-number="33.5" class="anchored" data-anchor-id="the-monty-hall-problem"><span class="header-section-number">33.5</span> The Monty Hall problem</h2>
 <p>Recall the Monty Hall problem:</p>
 <blockquote class="blockquote">
 <p>Suppose you’re on a game show and you’re given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No.&nbsp;1, and the host, who knows what’s behind the doors, opens another door, say No.&nbsp;3, which has a goat. He then says to you, “Do you want to pick door No.&nbsp;2?” Is it to your advantage to switch your choice?</p>

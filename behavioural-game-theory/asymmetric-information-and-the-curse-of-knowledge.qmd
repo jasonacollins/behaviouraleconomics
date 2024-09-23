@@ -1,5 +1,24 @@
 # Asymmetric information and the curse of knowledge
 
+## Summary {.unnumbered}
+
+- Information asymmetry can cause market failures even with rational agents, but there's evidence that people often don't behave optimally in these situations.
+- The "curse of knowledge" occurs when better-informed agents fail to ignore their private information when predicting less-informed agents' actions, even when it's in their interest to do so.
+- Conversely, less-informed agents often fail to account for others' informational advantages. This is demonstrated in the "market for lemons" example, where a "cursed" buyer might overpay for a car, not realizing only lemons would be sold at their offered price.
+- Similarly, in the "winner's curse" scenario, a "cursed" bidder in an oil field auction might overbid by underestimating the significance of winning, failing to appreciate that winning implies the other bidder's information was less favourable.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/2eIIB12XeNk >}}
+
+---
+
+:::
+
+## Introduction
+
 We saw earlier in our examination of the market for lemons and the winner's curse that asymmetric information can cause market failures even if agents are fully rational. However, the rational agents account for the information and behaviour of others and as a result, behave optimally despite that market imperfection.
 
 There is substantial empirical evidence that people do not behave in this way.
@@ -86,36 +105,3 @@ $$
 That is, company 1 expects to make a profit if they receive a private valaution of more than \$50.
 
 However, as shown in @sec-winners-curse, this bidding approach leads to, on average, a loss. Company 1 under-appreciates that company 2 is more likely not to bid when company 2’s information is bad. Therefore, company 1 under-appreciates the extent to which winning the auction is bad news.
-
-## Example
-
-### Acquiring a company
-
-Company A is considering acquiring Company T.
-
-The value of Company T depends on the outcome of an oil exploration project. If the project fails, the company under current management will be worth nothing (\$0 per share). If the project succeeds, the value of the company under current management could be as high as \$100 per share. All values between \$0 and \$100 are equally likely.
-
-Company T will be worth 50 per cent more in the hands of Company A than under current management. If the project fails, the company will be worth \$0 per share under either management. If the exploration project generates a \$50 per share value under current management, the value under Company A will be \$75 per share. And so on.
-
-Company A is considering what price per share they should offer. This offer must be made before Company A knows the outcome of the drilling project, but after Company T learns the result. Company T will accept any offer from Company A if it is profitable for them.
-
-a\) Show that for any offer above zero Company A expects to lose money.
-
-If Company A offers $\$x$, Company T will accept $x$\% of the time, whenever the firm is worth between \$0 and $\$x$. Since all those values are equally likely, the firm will be worth on average $\$x/2$ to company T when they accept. The shares will therefore be worth $1.5\times x/2=3x/4$ on average for company A. That gives Company A profit of:
-
-\begin{align*}
-\pi_A&=\frac{3x}{4}-x \\[6pt]
-&=-\frac{x}{4}
-\end{align*}
-
-Any offer above \$0 generates a negative expected return, a loss of 25% of the offer.
-
-To give an example, if Company A offered \$60, it will be accepted 60% of the time - whenever the firm is worth between \$0 and \$60 for company T. Since all those values are equally likely, the firm will be worth on average \$30 to company T when they accept, meaning it will be worth \$45 on average for company A. A \$60 offer will result in an average loss of \$15.
-
-b\) People given this problem tend to bid between \$50 and \$75 per share. A typical explanation offered by these people is that the average outcome for Company T is \$50, making the value for Company A \$75. Any offer in the range between these two values would be agreeable to both parties.
-
-Explain why a "cursed" player representing Company A might make a non-zero offer.
-
-A “cursed” player representing company A does not think that company T's decision to sell depends on company T's knowledge of the oil exploration. As a result, they are likely to bid based on their unconditional expected value of the field, not the value conditional on acceptance.
-
-This bidding approach leads to, on average, a loss. The cursed player under-appreciates that company T is more likely to accept when company T’s valuation is low.

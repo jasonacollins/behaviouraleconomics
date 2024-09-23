@@ -1,6 +1,23 @@
 # Notation and mathematical background
 
+## Summary {.unnumbered}
+
+- Lotteries can be represented as $L = (p_1, x_1; p_2, x_2; ...; p_n, x_n)$, where $p_i$ is the probability of outcome $x_i$.
+- Mathematical functions used in expected utility theory include exponentiation ($x^a$), exponential ($e^x$), and logarithmic ($\ln(x)$) functions.
+- Differentiation finds the rate of change of a function, written as $\frac{d}{dx} f(x)$ or $f'(x)$.
+- The second derivative ($\frac{d^2}{dx^2} f(x)$ or $f''(x)$) measures a function's curvature, indicating whether it's convex ($f''(x) > 0$) or concave ($f''(x) < 0$).
+
+---
+
 ## Notation
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/ThLYgh_I7Xs >}}
+
+---
+
+:::
 
 Before analysing decision-making under risk and uncertainty, I will introduce some notation.
 
@@ -41,6 +58,14 @@ It is typically not difficult to determine which is which.
 We will use some basic mathematical concepts to analyse expected utility. I will briefly review these concepts here.
 
 ### Functions
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/MBALkP2bf5Y >}}
+
+---
+
+:::
 
 #### Exponentiation
 
@@ -127,6 +152,14 @@ ggplot(df, aes(x, y)) +
 Note that the logarithmic function is only defined for positive values of $x$. The logarithm of zero is undefined.
 
 ### Differentiation
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/VeCqOpcGysY >}}
+
+---
+
+:::
 
 Differentiation is a mathematical operation that finds the rate of change (or slope) of a function. It is written as $\frac{d}{dx}f(x)$ or $\frac{dy}{dx}$ or $f'(x)$.
 

@@ -789,7 +789,7 @@ An agent is considering insurance against bushfire for their house valued at $H=
 
 ### Expected value
 
-The first question is whether a risk-neutral person would purchase the insurance. A risk-neutral utility function is:
+The first question I will consider is whether a risk-neutral person would purchase the insurance. A risk-neutral utility function is:
 
 $$
 u(x)=x
@@ -797,7 +797,7 @@ $$
 
 A risk-neutral agent will choose the option with the highest expected value.
 
-If the agent purchases insurance, they pay the premium and do not suffer any loss regardless of whether there is a bushfire or not. Therefore, the expected value of purchasing insurance is:
+If the agent purchases insurance, they pay the premium and do not suffer any loss regardless of whether there is a bushfire or not. Therefore, the expected value of purchasing insurance is the loss of the premium:
 
 \begin{align*}
 \mathbb{E}[\text{I}]&=-R \\[6pt]
@@ -806,7 +806,7 @@ If the agent purchases insurance, they pay the premium and do not suffer any los
 
 The expected value of purchasing insurance is the guaranteed loss of the premium, \$1100.
 
-If the agent does not purchase insurance, they face the 1 in 1000 possibility of an uninsured loss. Therefore, the expected value of not purchasing insurance is:
+If the agent does not purchase insurance, they face the 1 in 1000 possibility of an uninsured loss. Therefore, the expected value of not purchasing insurance is the probability of loss times the value of the house:
 
 \begin{align*}
 \mathbb{E}[\neg \text{I}]&=p\times(-H) \\[6pt]
@@ -834,25 +834,21 @@ The expected utility of purchasing insurance is the utility of the certain outco
 &=`r round(log(1000000+10000-1100), 4)`
 \end{align*}
 
-The expected utility of not purchasing insurance is:
+The expected utility of not purchasing insurance is the probability-weighted sum of the utility of the two potential outcomes, the utility of wealth after losing the house and the utility of wealth if the house does not burn down:
 
 \begin{align*}
-\mathbb{E}[U(\neg \text{I})]&=p\times u(W-H))+(1-p)\times u(W) \\[6pt]
+\mathbb{E}[U(\neg \text{I})]&=p\times u(W-H)+(1-p)\times u(W) \\[6pt]
 &=0.001\times \ln(1\,010\,000-1\,000\,000)+0.999\times \ln(1\,010\,000) \\[6pt]
 &=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
 \end{align*}
 
 The expected utility of purchasing insurance is greater than the expected utility of not purchasing insurance. This agent will purchase insurance.
 
-The following diagram illustrates. The agent's utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked: wealth after losing the house when uninsured ($W-H$), wealth after paying the insurance premium ($W-R$), and wealth if uninsured but the house does not burn down ($W$).
-
-The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The location of this point is determined by the probability $p$ of incurring a loss. This point lies at a distance of $p$ from $U(W)$ along the line (or equivalently, at a distance of $1-p$ from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $\mathbb{E}[\neg I]$.
-
-The utility of purchasing insurance, $U(W-R)$, is greater than the expected utility of not purchasing insurance, $\mathbb{E}[U(\neg I)]$. The agent will purchase insurance.
+The following diagrams illustrate. First I plot the agent's utility function. The utility function is concave as the agent is risk averse. Each additional unit of wealth provides less utility than the previous unit.
 
 ```{r}
-#| label: fig-insurance-reflection
-#| fig-cap: Insurance choice by an agent with the reflection effect
+#| label: fig-insurance-eu-curve
+#| fig-cap: The utility function of a risk-averse agent
 
 library(ggplot2)
 library(latex2exp)
@@ -876,7 +872,7 @@ ev<-77 #expected value of gamble
 xc<-70 #certain outcome
 px2<-(ev-x1)/(x2-x1)
 
-ggplot(mapping = aes(x, y)) +
+insurance_eu_1 <- ggplot(mapping = aes(x, y)) +
     geom_line(data = df) +
     geom_vline(xintercept = 0, linewidth=0.25)+ 
     geom_hline(yintercept = 0, linewidth=0.25)+
@@ -892,7 +888,41 @@ ggplot(mapping = aes(x, y)) +
             axis.title.y = element_text(angle=0, vjust=0.5))+
 
     #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
-    coord_cartesian(xlim = c(-8, 100), ylim = c(0, 5))+
+    coord_cartesian(xlim = c(-8, 100), ylim = c(0, 5))
+
+insurance_eu_1
+
+```
+
+I then mark each possible outcome from purchasing or not purchasing insurance on the horizontal axis and the utility of each of those outcomes on the vertical axis. These are: wealth after losing the house when uninsured ($W-H$), wealth after paying the insurance premium ($W-R$), and wealth if uninsured but the house does not burn down ($W$). I have not drawn this to scale.
+
+```{r}
+#| label: fig-insurance-eu-outcomes
+#| fig-cap: The utility of the outcomes of purchasing insurance and not purchasing insurance
+
+library(ggplot2)
+library(latex2exp)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,100,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-3 #loss
+x2<-90 #win
+ev<-77 #expected value of gamble
+xc<-70 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+insurance_eu_2 <- insurance_eu_1 +
 
     #Add labels W, U(W) and line to curve indicating each
     annotate("text", x = x2, y = 0, label = "W", size = 4, hjust = 0.4, vjust = 1.5)+
@@ -906,20 +936,92 @@ ggplot(mapping = aes(x, y)) +
     annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
     annotate("text", x = 0, y = u(xc), label = "U(W-R)", size = 4, hjust = 1.05, vjust = 0.45)+
 
-    #Add expected utility line
-    annotate("segment", x = x2, xend = x1, y = u(x2), yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotdash")+
-
     #Add labels W-H, U(W-H) and line to curve indicating each
     annotate("text", x = x1, y = 0, label = "W-H", size = 4, hjust = 0.4, vjust = 1.5)+
     annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
     annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
-    annotate("text", x = 0, y = u(x1), label = "U(W-H)", size = 4, hjust = 1.05, vjust = 0.45)+
+    annotate("text", x = 0, y = u(x1), label = "U(W-H)", size = 4, hjust = 1.05, vjust = 0.45)
+
+insurance_eu_2
+
+```
+
+The expected utility of not purchasing insurance is the probability-weighted sum of the utility of the two potential outcomes, the utility of wealth after losing the house and the utility of wealth if the house does not burn down. I can show this on the diagram by plotting a dash-dot line between $U(W-H)$ and $U(W)$. The expected utility of not purchasing insurance will be on this line.
+
+```{r}
+#| label: fig-insurance-eu-line
+#| fig-cap: The expected utility line
+
+library(ggplot2)
+library(latex2exp)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,100,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-3 #loss
+x2<-90 #win
+ev<-77 #expected value of gamble
+xc<-70 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+insurance_eu_3 <- insurance_eu_2 +
+
+    #Add expected utility line
+    annotate("segment", x = x2, xend = x1, y = u(x2), yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotdash")
+
+insurance_eu_3
+
+```
+
+The location of the expected utility is determined by the probability $p$ of incurring a loss. This point lies at a distance of $p$ from $U(W)$ along the line (or equivalently, at a distance of $1-p$ from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $\mathbb{E}[\neg \text{I}]$.
+
+The utility of purchasing insurance, $U(W-R)$, is greater than the expected utility of not purchasing insurance, $\mathbb{E}[U(\neg \text{I})]$. We can see this as $U(W-R)$ is above $\mathbb{E}[U(\neg \text{I})]$ on the diagram. This risk-averse agent will purchase insurance.
+
+```{r}
+#| label: fig-insurance-eu
+#| fig-cap: The expected utility of purchasing insurance and not purchasing insurance
+
+library(ggplot2)
+library(latex2exp)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,100,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-3 #loss
+x2<-90 #win
+ev<-77 #expected value of gamble
+xc<-70 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+insurance_eu_4 <- insurance_eu_3 +
 
     #Add labels E[not I], E[U(not I)] and curve indicating each
     annotate("text", x = ev, y = 0, label = TeX("E[$\\neg$ I]", output='character'), parse=TRUE, size = 4, hjust = 0.4, vjust = 1.4)+
     annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
     annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
     annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = TeX("E[U($\\neg$ I)]", output='character'), parse=TRUE, size = 4, hjust = 1.05, vjust = 0.45)
+
+insurance_eu_4
 
 ```
 
@@ -954,28 +1056,26 @@ The weighted value of purchasing insurance is the value of the certain outcome, 
 
 \begin{align*}
 V(\text{I})&=v(-R) \\[6pt]
-&=v(-1,100) \\[6pt]
 &=-(1,100)^{0.8} \\[6pt]
 &=`r round(-(1100)^(0.8), 1)`
 \end{align*}
 
-The weighted value of not purchasing insurance is:
+The weighted value of not purchasing insurance is the probability-weighted sum of the value of the two potential outcomes, the value of wealth after losing the house and the value of wealth if the house does not burn down:
 
 \begin{align*}
 V(\neg\text{I})&=\sum_{i=1}^n p_iv(x_i) \\[6pt]
-&=0.999\times v(0)+0.001\times v(-H) \\[6pt]
-&=0.999\times 0+0.001\times v(-1\,000\,000) \\[6pt]
-&=-0.001\times (1\,000\,000)^{0.8} \\[6pt]
+&=p\times v(-H)+(1-p)\times v(0) \\[6pt]
+&=-0.001\times (1\,000\,000)^{0.8}+0.999\times 0 \\[6pt]
 &=`r round(0.999*0-0.001*(1000000)^(0.8), 1)`
 \end{align*}
 
-As $V(\text{I})<V(\neg\text{I})$, this agent does not purchase insurance. The diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house.
+As the value of purchasing insurance is less than the weighted value of not purchasing insurance, $V(\text{I})<V(\neg\text{I})$, this agent does not purchase insurance. The diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house.
 
 Including loss aversion in the value function does not change the decision as all possible outcomes are in the loss domain.
 
 The following diagram illustrates. The agent's value function is plotted, with the outcome on the horizontal axis and the value of the outcome on the vertical axis. The function is concave in the gain domain and convex in the loss domain, leading to risk averse and risk-seeking behaviour, respectively.
 
-Each outcome and the value of that outcome is marked: the premium payment $-R$ and the value of the house after a bushfire $-H$. If uninsured and no fire, the agent will remain at their reference point of the status quo.
+Each outcome and the value of that outcome is marked: the premium payment $-R$ and the outcome after a bushfire $-H$. If uninsured and no fire, the agent will remain at their reference point of the status quo.
 
 The weighted value of not purchasing insurance is on the dash-dot line between $v(-H)$ and $v(0)$. The location of this point is determined by the probability $p$ of incurring a loss. This point lies at a distance of $p$ from $v(0)$ along the line (or equivalently, at a distance of $1-p$ from $v(-H)$). This point aligns with the expected value of leaving the house uninsured $\mathbb{E}[\neg I]$.
 
@@ -1049,7 +1149,7 @@ ggplot(mapping = aes(x, y)) +
 
 ### Probability weighting
 
-Would a person who is risk seeking in the domain of losses (that is, a person with a value function with reflection effect above) who weights probability in accordance with prospect theory purchase the insurance?
+Would a person who is risk seeking in the domain of losses (that is, a person with a value function with reflection effect discussed earlier) who weights probability in accordance with prospect theory purchase the insurance?
 
 Prospect theory proposes that people overweight small probabilities. They might weight probabilities as per the following table:
 
@@ -1058,28 +1158,31 @@ Prospect theory proposes that people overweight small probabilities. They might 
 |  **Probability**   |   0.001  |   0.01  | 0.1 |0.25   |  0.5   |  0.75   |  0.9   | 0.99    |  0.999   |
 |   **Weight**       |  0.01   |  0.05   |   0.15  |  0.3   |  0.5   |  0.7   | 0.85    |  0.95   |  0.99   |
 
-We need to compare the weighted value of purchasing insurance with the weighted value of not purchasing insurance. The person will purchase insurance if the weighted value of purchasing insurance is greater.
+That is, an outcome with a probability of 0.001 is given a weight of 0.01, ten times what its probability would suggest. An outcome with a probability of 0.01 is given a weight of 0.05, five times the probability.
 
-The weighted value of purchasing insurance is:
+Similarly, a probability of 0.99 is given a weight of 0.95 and a probability of 0.999 is given a weight of 0.99, implying that probabilities near certainty are underweighted relative to certainty itself.
+
+To assess whether this person will purchase insurance, we need to compare the weighted value of purchasing insurance with the weighted value of not purchasing insurance. They will purchase insurance if the weighted value of purchasing insurance is greater.
+
+The weighted value of purchasing insurance is the value of the certain outcome, which is the loss of the premium:
 
 \begin{align*}
 V(\text{I})&=v(-R) \\[6pt]
-&=v(-1,100) \\[6pt]
 &=-(1,100)^{0.8} \\[6pt]
 &=`r round(-(1100)^(0.8), 1)` \\
 \end{align*}
 
-The weighted value of not purchasing insurance is:
+The weighted value of not purchasing insurance is the weighted sum of the value of the two potential outcomes, with the weights from the table above:
 
 \begin{align*}
 V(\neg\text{I})&=\sum_{i=1}^n \pi(p_i)v(x_i) \\[6pt]
 &=\pi(p)\times v(0)+\pi(1-p)\times v(-H) \\[6pt]
-&=\pi(0.999)\times v(0)+\pi(0.001)\times v(-1\,000\,000) \\[6pt]
-&=0.99\times 0-0.01\times (1\,000\,000)^{0.8} \\[6pt]
+&=\pi(0.001)\times v(-1\,000\,000)+\pi(0.999)\times v(0) \\[6pt]
+&=-0.01\times (1\,000\,000)^{0.8}+0.99\times 0 \\[6pt]
 &=`r round(0.99*0-0.01*(1000000)^(0.8), 0)`
 \end{align*}
 
-As $V(\text{I})>V(\neg\text{I})$, this person does not purchase insurance.  
+As the value of purchasing insurance is greater than the value of not purchasing insurance, $V(\text{I})>V(\neg\text{I})$, this person purchases insurance.  
 
 Although the diminishing feeling of loss leads to them weigh the certain loss of the premium relatively more heavily than the chance of losing the value of their house, the overweighting of the probability of fire leads them to purchase insurance. Again, if we had included loss aversion, it would not have changed the decision, as all possible outcomes are in the loss domain.
 

@@ -1,5 +1,17 @@
 # Biases in probability judgment
 
+## Summary {.unnumbered}
+
+- The conjunction fallacy occurs when people judge the probability of two events occurring together as higher than the probability of one of those events occurring alone, violating basic probability rules.
+- Base-rate neglect is the tendency to ignore general probabilities (base rates) when making judgments about specific cases, often leading to errors in conditional probability calculations.
+- Probability matching is a suboptimal strategy where people predict outcomes in proportion to their observed frequencies, rather than always choosing the most likely outcome.
+- The gambler's fallacy is the mistaken belief that if an event occurs more frequently than normal during a given period, it will occur less frequently in the future (or vice versa).
+- The hot hand fallacy is the belief that a person who has experienced success with a random event has a greater chance of further success in additional attempts. Analysing this belief can be complicated by statistical biases in measurement and the potential existence of genuine "hot hands" in some contexts.
+
+---
+
+## Introduction
+
 In this part, I introduce several biases in probability judgment:
 
 -   The conjunction fallacy
@@ -10,7 +22,15 @@ In this part, I introduce several biases in probability judgment:
 
 ## The conjunction fallacy
 
-The first involves the conjunction fallacy. The conjunction fallacy occurs when someone judges the probability of the conjunction of two events to be greater than the probability of one or both events.
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/G461aa705P0 >}}
+
+---
+
+:::
+
+The conjunction fallacy occurs when someone judges the probability of the conjunction of two events to be greater than the probability of one or both events.
 
 For example, if we have two outcomes, $A$ and $B$, the probability of both $A$ and $B$ occurring - that is, the conjunction of $A$ and $B$ - should be less than or equal to each of the individual probabilities.
 
@@ -87,6 +107,14 @@ For example, @tversky1983 created this example involving rolls of a die:
 65% of experimental subjects chose sequence 2. It appears more "representative" of a die with four green faces and two red faces. But note that 1 is contained within 2 and is strictly more likely. The fact subjects are betting on the outcome should remove doubt about interpretation.
 
 ## Base-rate neglect
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/uQHNdtyYO_c >}}
+
+---
+
+:::
 
 The base rate is the probability of an outcome unconditional on any evidence.
 
@@ -247,6 +275,14 @@ Note that in this example, I have started with a number of finches, 10,000, whic
 
 ## Probability matching
 
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/pLwXW9TTUNE >}}
+
+---
+
+:::
+
 Probability matching is the tendency of people to mirror the probability distributions they observe in their predictions of events. For example, if asked to predict whether a die will show a six or not, they will predict six around one in six rolls.
 
 The strategy of probability matching is not optimal for minimising prediction error.
@@ -275,6 +311,14 @@ A better strategy is always to select the event with the highest probability. In
 Similarly, for my earlier example of a die roll, the option with lowest error is always to predict that the die will not show a six.
 
 ## The gambler's fallacy
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/3xaUp0f8Cmk >}}
+
+---
+
+:::
 
 The gambler's fallacy is the false belief that an outcome not recently realised in a sequence of independent draws is more likely to occur on the next draw.
 
@@ -313,7 +357,15 @@ However, Freddy believes that, after four reds, black is more likely on the next
 ```
 In reality, $P(RRRRR|RRRR)=0.5$. Freddy is suffering from the gambler's fallacy.
 
-## Hot hand fallacy
+## The hot hand fallacy
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/htAhQphNZ_A >}}
+
+---
+
+:::
 
 A person subject to the hot hand fallacy believes a streak will persist despite each outcome being independent of the last.
 

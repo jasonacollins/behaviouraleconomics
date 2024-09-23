@@ -1,5 +1,24 @@
 # Rationality
 
+## Summary {.unnumbered}
+
+- In economics, rationality means that preferences respect certain principles, not that decisions are necessarily reasonable or self-interested.
+- The completeness axiom states that an agent can always compare any two options: for all $x$ and $y$, either $x \succcurlyeq y$ or $y \succcurlyeq x$ (or both).
+- The transitivity axiom states that if an agent prefers A to B and B to C, they will prefer A to C: if $x \succcurlyeq y$ and $y \succcurlyeq z$, then $x \succcurlyeq z$.
+- These axioms allow for the construction of a preference ordering, but they provide minimal constraints on the nature of preferences themselves.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/cUQ6Q4ge45w >}}
+
+---
+
+:::
+
+## Introduction
+
 A standard economic assumption is that decision makers are rational.
 
 However, rationality in economics has a different definition to the 'lay' definition of rationality.

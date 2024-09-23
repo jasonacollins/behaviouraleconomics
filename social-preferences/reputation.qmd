@@ -1,5 +1,20 @@
 # Reputation
 
+## Summary {.unnumbered}
+
+- People care about their social image and reputation, often fearing the stigma associated with selfish behaviour. This concern can influence decision-making beyond purely strategic considerations.
+- @andreoni2009's (2009) experiment demonstrates this effect: dictators in a modified dictator game changed their offers based on whether the receiver would infer that the offer came from them.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/Dw2Tx5chudU >}}
+
+:::
+
+## Introduction
+
 People care about what other people think. They fear the social stigma that can result from "selfish" behaviour.
 
 Partly, this is for strategic reasons. For example, to attract reciprocal behaviour, people may need to be aware of your intentions.

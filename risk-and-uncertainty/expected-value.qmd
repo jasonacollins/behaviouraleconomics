@@ -1,5 +1,27 @@
 # Expected value
 
+## Summary {.unnumbered}
+
+- The expected value of a gamble is the average outcome in the long run, calculated as the probability-weighted sum of potential outcomes.
+- For a gamble with $n$ possible outcomes $x_i$, each occuring the probability $p_i$, the expected value is expressed as:
+
+\begin{align*}
+\mathbb{E}[X]&= p_1x_1 + p_2x_2 + ... + p_nx_n \\[6pt]
+&=\sum_{i=1}^n p_ix_i
+\end{align*}
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/S1xWVbEDiTY >}}
+
+---
+
+:::
+
+## Introduction
+
 The expected value of a gamble is the amount you can expect to win on average, in the long run, when you play a gamble.
 
 Suppose I offer to flip a coin. I give you \$1 if it is heads and you will give me \$1 if it is tails. What is the expected value of this gamble?

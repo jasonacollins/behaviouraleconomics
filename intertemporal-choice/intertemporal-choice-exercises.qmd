@@ -127,7 +127,7 @@ Accordingly, substituting (1) into (2):
 
 Kate and Jack have utility function $u(x)=x$ and can choose one of \$3 now ($t=0$), \$4 this afternoon (at $t=1$), or \$7 tonight ($t=2$).
 
-a\) Kate is an exponential discounter with $delta=\frac{1}{2}$. What does she choose?
+a\) Kate is an exponential discounter with $\delta=\frac{1}{2}$. What does she choose?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
@@ -189,7 +189,7 @@ d\) Why did or did not Jack change his mind?
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-At $t=0$ the difference in discount between the \$4 at $t=1$ and \$7 at $t=2$ is $\delta$. Both are discounted by $\beta$ as neither is immediately available. However, at $t=0$ the difference in discount between the \$4 and \$7 is $\beta\delta$. The \$4 is no longer subject to the immediate discount of $\beta$, making it relatively more attractive.
+At $t=0$ the difference in discount between the \$4 at $t=1$ and \$7 at $t=2$ is $\delta$. Both are discounted by $\beta$ as neither is immediately available. However, at $t=1$ the difference in discount between the \$4 and \$7 is $\beta\delta$. The \$4 is no longer subject to the immediate discount of $\beta$, making it relatively more attractive.
 :::
 
 e\) Show the answers to parts a) to d) using a diagram.

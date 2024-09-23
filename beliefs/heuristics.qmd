@@ -1,5 +1,24 @@
 # Heuristics
 
+## Summary {.unnumbered}
+
+- Heuristics are mental shortcuts or rules of thumb people use to make decisions. They often involve limited information and simpler computation than full optimization.
+- The representativeness heuristic involves judging the probability of an event or category membership based on how similar it is to a prototype or stereotype, often neglecting relevant base rates.
+- The availability heuristic leads people to estimate frequency or probability based on how easily examples come to mind, which can be influenced by factors like recency or vividness.
+- Anchoring and adjustment is a process where people start with an initial value (anchor) and adjust insufficiently from it, even when the anchor is arbitrary or irrelevant, leading to biased estimates.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/632jOFN1ua0 >}}
+
+---
+
+:::
+
+## Introduction
+
 Heuristics are mental shortcuts or rules of thumb that people use to make decisions. They differ from optimisation in that they typically involve a limited information set and a more computationally tractable decision method.
 
 An example of a heuristic is the recognition heuristic. Under this heuristic, if one of two objects is recognised, infer that the recognised object is more likely to be the target object. For example, if you want to predict which of two players will win a tennis match, and you know of only one of the two players, infer that the player you know will win. Similarly, if judging the relative size of two cities, of which you have heard of only one, infer that the city you have heard of is larger.

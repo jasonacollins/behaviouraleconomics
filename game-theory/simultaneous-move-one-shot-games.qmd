@@ -1,5 +1,24 @@
 # Simultaneous-move one-shot games
 
+## Summary {.unnumbered}
+
+- Simultaneous-move one-shot games involve players making decisions without knowing their rival's actions. These games are typically represented in a "normal" or "strategic" form using a matrix.
+- The prisoner's dilemma is a classic example of such a game, where two prisoners must decide whether to confess or remain silent.
+- In game theory, a dominant strategy is one that yields the highest payoff regardless of the opponent's actions. In the prisoner's dilemma, confessing is the dominant strategy for both players.
+- A Nash equilibrium occurs when each player's strategy is the best response to the other's strategy. In the prisoner's dilemma, the Nash equilibrium is (Confess, Confess), despite this not being the optimal outcome for either player.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/dT1Hr3xAH-A >}}
+
+---
+
+:::
+
+## Introduction
+
 In a simultaneous-move one-shot game, you make decisions without knowing the action of your rival. This can be interpreted as either players making decisions at the same time or players making decisions before knowing the decisions of their rivals.
 
 ## The normal form
@@ -69,6 +88,14 @@ A Nash equilibrium is self-enforcing and stable. If the players agree to play a 
 The prisoner's dilemma has a single Nash equilibrium: (Confess, Confess). Visually, where the preferred response of both players to the other player's action falls within the same cell, this indicates a Nash equilibrium.
 
 ## Simultaneous-move one-shot game examples
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/e_pcFBB9y5I >}}
+
+---
+
+:::
 
 In this part, I will show some examples of simultaneous-move one-shot games.
 

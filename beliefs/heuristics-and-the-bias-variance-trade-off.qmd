@@ -1,5 +1,25 @@
 # Heuristics and the bias-variance trade-off
 
+## Summary {.unnumbered}
+
+- Heuristics, while often associated with errors, can be powerful and effective decision-making tools due to the bias-variance trade-off.
+- The bias-variance trade-off suggests that as model complexity increases, bias tends to decrease, but variance (sensitivity to data fluctuations) increases. There's an optimal level of complexity that balances these two factors.
+- Simple heuristics can sometimes outperform more complex decision-making strategies by finding a better bias-variance trade-off, leading to lower overall error despite using less information.
+- The "Take the Best" heuristic, which uses cues in order of validity to make predictions, has been shown to perform as well as or better than multiple regression across various environments.
+- The gaze heuristic, used for catching balls, demonstrates how a simple rule (maintaining a constant angle of gaze) can effectively solve a complex problem without requiring complex calculations, even if it results in a seemingly biased movement pattern.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/BlycLb3FCCc >}}
+
+---
+
+:::
+
+## Introduction
+
 Much of the heuristics and biases literature of Kahneman, Tversky and those who followed in their footsteps focuses on the errors that can be caused by using heuristics. However, there are also powerful reasons why we use heuristics in decision making.
 
 One of the strongest arguments for the use of heuristics relates to what is called the bias-variance trade-off.

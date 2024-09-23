@@ -193,7 +193,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -202,25 +202,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -642,10 +642,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#expected-value-examples" id="toc-expected-value-examples" class="nav-link active" data-scroll-target="#expected-value-examples"><span class="header-section-number">6.1</span> Expected value examples</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">6.1</span> Introduction</a></li>
+  <li><a href="#expected-value-examples" id="toc-expected-value-examples" class="nav-link" data-scroll-target="#expected-value-examples"><span class="header-section-number">6.2</span> Expected value examples</a>
   <ul class="collapse">
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1"><span class="header-section-number">6.1.1</span> Example 1</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2"><span class="header-section-number">6.1.2</span> Example 2</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1"><span class="header-section-number">6.2.1</span> Example 1</a></li>
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2"><span class="header-section-number">6.2.2</span> Example 2</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -672,6 +674,22 @@ window.Quarto = {
 </header>
 
 
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>The expected value of a gamble is the average outcome in the long run, calculated as the probability-weighted sum of potential outcomes.</li>
+<li>For a gamble with <span class="math inline">n</span> possible outcomes <span class="math inline">x_i</span>, each occuring the probability <span class="math inline">p_i</span>, the expected value is expressed as:</li>
+</ul>
+<p><span class="math display">\begin{align*}
+\mathbb{E}[X]&amp;= p_1x_1 + p_2x_2 + ... + p_nx_n \\[6pt]
+&amp;=\sum_{i=1}^n p_ix_i
+\end{align*}</span></p>
+<hr>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/S1xWVbEDiTY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+</section>
+<section id="introduction" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">6.1</span> Introduction</h2>
 <p>The expected value of a gamble is the amount you can expect to win on average, in the long run, when you play a gamble.</p>
 <p>Suppose I offer to flip a coin. I give you $1 if it is heads and you will give me $1 if it is tails. What is the expected value of this gamble?</p>
 <p>The expected value is $0. You lose $1 half the time and gain $1 half the time.</p>
@@ -705,11 +723,12 @@ E[X]&amp;=p_1x_1+p_2x_2+...+p_nx_n \\[6pt]
 \end{align*}</span>
 <p>In this equation, <span class="math inline">p_i</span> is the probability of outcome <span class="math inline">x_i</span>.</p>
 <p>For those unfamiliar with the mathematical notation in the second line, the large symbol sigma allows us to write what could be a long expression much more succinctly. It means that we sum the term <span class="math inline">p_ix_i</span> for each value of <span class="math inline">i</span> for 1 through to <span class="math inline">n</span>. We sum <span class="math inline">p_1x_1</span> with <span class="math inline">p_2x_2</span> and so on until we reach <span class="math inline">p_nx_n</span>. Breaking it down this way shows that the second line is equivalent to what I wrote in the first line.</p>
-<section id="expected-value-examples" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="expected-value-examples"><span class="header-section-number">6.1</span> Expected value examples</h2>
+</section>
+<section id="expected-value-examples" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="expected-value-examples"><span class="header-section-number">6.2</span> Expected value examples</h2>
 <p>I will now illustrate the concept of expected value with some simple examples.</p>
-<section id="example-1" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">6.1.1</span> Example 1</h3>
+<section id="example-1" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">6.2.1</span> Example 1</h3>
 <p>You are offered a bet with a 50% chance of winning $10 and a 50% chance of losing $8.</p>
 <p>The expected value of the gamble <span class="math inline">X</span> is:</p>
 <span class="math display">\begin{align*}
@@ -725,8 +744,8 @@ E[X]&amp;=\sum_{i=1}^n p_ix_i \\[12pt]
 &amp;=\$2.80
 \end{align*}</span>
 </section>
-<section id="example-2" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="example-2"><span class="header-section-number">6.1.2</span> Example 2</h3>
+<section id="example-2" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="example-2"><span class="header-section-number">6.2.2</span> Example 2</h3>
 <p>You are offered a bet with a 50% chance of winning 50% of your wealth and a 50% chance of losing 40% of your wealth.</p>
 <p>The expected value of the bet is:</p>
 <span class="math display">\begin{align*}

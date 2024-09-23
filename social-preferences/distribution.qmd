@@ -1,5 +1,22 @@
 # Distribution
 
+## Summary {.unnumbered}
+
+- Distributional preferences relate to how people value the relative distribution of resources among people. They can be incorporated into economic analysis by extending utility functions to include others' outcomes.
+- Altruism is a type of distributional preference where an individual cares about others' outcomes. It can be pure (genuine concern for others) or impure (deriving satisfaction from doing good).
+- Inequality aversion is another type of distributional preference where people dislike having less than others and may also dislike having more than others. The Fehr-Schmidt model provides a mathematical framework for this concept.
+- The Charness-Rabin model offers a more flexible utility function that can capture various forms of distributional preferences, including altruism, inequality aversion, status-seeking, and Rawlsian or utilitarian preferences, depending on the parameter values chosen.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/3MewF0_hic4 >}}
+
+:::
+
+## Introduction
+
 Distributional preferences are preferences that relate to the relative amount of money or resources each person gets or has.
 
 It is often easy to incorporate distributional preferences into economic analysis as they are a natural extension of how economists think about individuals' preferences. We can extend to other people the typical assumption that a person cares about their own material outcomes.

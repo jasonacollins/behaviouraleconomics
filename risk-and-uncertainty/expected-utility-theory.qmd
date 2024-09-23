@@ -1,5 +1,53 @@
 # Expected Utility Theory
 
+## Summary {.unnumbered}
+
+- Expected utility theory states people maximise expected utility, not expected value, in choosing between risky prospects.
+- Expected utility is calculated by weighting the utility of each outcome by its probability and summing.
+
+$$
+\mathbb{E}[U(X)] = \sum_{i=1}^n p_i U(x_i)
+$$
+
+- Outcomes typically represent final wealth positions, not just payoffs, so decisions depend on current wealth. The formula incorporating initial wealth used for calculating expected utility is:
+
+$$
+\mathbb{E}[U(W+X)] = \sum_{i=1}^n p_i U(W+x_i)
+$$
+
+- Expected utility theory allows the examination of an agent's attitude toward risk, which can be risk aversion, risk neutrality, or risk seeking.
+- A risk-averse person prefers a sure amount to a gamble with the same expected value.
+
+$$
+U(\mathbb{E}[X]) > \mathbb{E}[U(X)]
+$$
+
+- A risk-seeking person prefers a gamble to a sure amount of the same expected value.
+
+$$
+U(\mathbb{E}[X]) < \mathbb{E}[U(X)]
+$$
+
+- A risk-neutral person is indifferent between a gamble and receiving its expected value with certainty.
+
+$$
+U(\mathbb{E}[X]) = \mathbb{E}[U(X)]
+$$
+
+- Certainty equivalent (CE) is the amount of money that makes a person indifferent between taking a gamble and taking the money. For risk-averse individuals, $CE < \mathbb{E}[X]$; for risk-neutral, $CE = \mathbb{E}[X]$; for risk-seeking, $CE > \mathbb{E}[X]$.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/O_dmGHfdKnA >}}
+
+---
+
+:::
+
+## Introduction
+
 Under expected utility theory, people do not seek to maximize expected value but instead, maximize expected utility.
 
 Under expected utility theory, people choose between risky prospects (prospect being another word for lottery or gamble common in the literature) by comparing expected utility values. An agent would pick the option that maximises their expected utility.
@@ -54,6 +102,15 @@ E[U(X)]=0.5\times U(\$110)+0.5\times U(\$90)
 $$
 
 ## Attitudes toward risk
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/ubJB8A6KlNE >}}
+
+---
+
+:::
+
 
 Expected utility theory allows us to examine an agent's attitude toward risk.
 

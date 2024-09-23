@@ -1,6 +1,26 @@
 # Axioms for Expected Utility Theory
 
-In my discussion of rationality, I noted that in its most basic form analysis of consumer choice rests on just two assumptions: completeness and transitivity.
+## Summary {.unnumbered}
+
+- Expected Utility Theory is based on four main axioms: completeness, transitivity, continuity, and independence.
+- The continuity axiom states that if an agent prefers option A to B, and B to C, there exists some probability mixture of A and C that the agent finds equally desirable to B.
+- The independence axiom asserts that a preference between two lotteries should not be affected by mixing both with an identical third lottery.
+- These axioms allow for the construction of a cardinal utility function that represents an agent's preferences over lotteries.
+- Additional auxiliary axioms often adopted include a reference point of zero wealth, non-satiation, monotonicity, convexity, and diminishing marginal utility.
+
+---
+
+## Introduction
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/O_dmGHfdKnA >}}
+
+---
+
+:::
+
+In my discussion of [rationality](../economic-foundations/rationality.qmd), I noted that in its most basic form analysis of consumer choice rests on just two assumptions: completeness and transitivity.
 
 For decision-making under risk, we require two additional axioms of desirable behaviour to develop a predictive or descriptive model. These additional axioms are continuity and the independence.
 
@@ -24,6 +44,14 @@ Beyond the axioms of completeness, transitivity, continuity and independence, so
 In the following sections, I discuss each of the von Neumann-Morgenstern axioms and the auxiliary axioms we use in examining decision making under risk.
 
 ## Continuity
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/m_yrcqDfOsQ >}}
+
+---
+
+:::
 
 The idea behind continuity is that people have similar preferences for similar bundles. If $x$ is preferred to $y$, bundles close to $x$ are preferred to bundles close to $y$. There are no "jumps" in utility.
 
@@ -195,6 +223,14 @@ When $p=1$, $B \succ A$. For any $p<1$, $pA+(1-p)C \succ B$ as any non-zero shar
 
 ## Independence {#sec-independence}
 
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/iLWw4DIfuR4 >}}
+
+---
+
+:::
+
 Consider the following scenarios.
 
 In the first, a person has a choice between an orange and an apple. They state that they strictly prefer the orange.
@@ -245,6 +281,14 @@ The independence axiom is specific to lotteries. The logic behind this specifici
 This is not the case for goods. Consider the following example with goods drawn from @page2022. You are again in a restaurant and have a choice between chicken with mashed potato and beef with mashed potato. You choose the chicken. You are then told that the restaurant has run out of mashed potato, and the options are now chicken or beef with peas. Under the axiom of independence, you would not change your choice to beef. However, beef may go better with peas than chicken. There is an interaction between the two, with the options realised together. Due to this interaction, the axiom of independence is less compelling for the case of goods than it is for lotteries.
 
 ## Auxiliary axioms for expected utility theory
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/ocaSdTGZhpQ >}}
+
+---
+
+:::
 
 Beyond completeness, transitivity, continuity and independence, economists often adopt other axioms. These are not required for expected utility theory, but make analysis more practicable.
 

@@ -1,5 +1,23 @@
 # Emotions
 
+## Summary {.unnumbered}
+
+- Emotions are mental states that signal positive or negative outcomes and can function as commitment devices in strategic interactions.
+- Emotions like guilt and anger can serve as credible commitments, enabling trust and cooperation or deterring cheating, even when the emotional response appears "irrational" in the short term.
+- In everyday scenarios, like complaining about bad service or playing "chicken," emotions can change the game's payoff structure and equilibrium, making threats credible and influencing others' behaviour to one's advantage.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/vCdEFyWk3xw >}}
+
+---
+
+:::
+
+## Introduction
+
 Emotions are mental states that signal positive or negative outcomes.
 
 One function of emotions may be to act as a commitment device:
@@ -10,17 +28,17 @@ One function of emotions may be to act as a commitment device:
 
 While this behaviour may appear “irrational”, it allows people to make credible commitments that in turn allow them to enter beneficial trades and cooperative arrangements, while being less likely to being cheated.
 
-## Punishment
-
 Consider the following quote from Richard Nixon:
 
 >I call it the Madman Theory, Bob. I want the North Vietnamese to believe I've reached the point where I might do anything to stop the war. We'll just slip the word to them that, "for God's sake, you know Nixon is obsessed about communism. We can't restrain him when he's angry—and he has his hand on the nuclear button" and Ho Chi Minh himself will be in Paris in two days begging for peace.
 
 Pushing the nuclear button is not in Nixon's interest, and from a purely rational perspective may not be a credible threat. But if a madman has his finger on the button, the calculation changes.
 
+## Examples
+
 ### Complaining for bad service
 
-Recall our earlier example of a customer threatening to complain if they receive bad service. Complaining is costly.
+Recall our earlier example in @sec-complaining, illustrated below in @fig-complaint-3, of a customer threatening to complain if they receive bad service. Complaining is costly.
 
 We determined this by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.
 
@@ -131,62 +149,18 @@ graph LR
 
 As another example, recall the game of chicken. Two players are driving toward each other. Whoever swerves first loses. If neither swerves, they crash and die.
 
-![](img/chicken-1.jpg)
+![](img/chicken-1.jpg){width=60%}
 
 There are two pure-strategy Nash equilibria: (Straight, Swerve) and (Swerve, Straight). If the other player swerves, they want to go straight. If the other player goes straight, they want to swerve. 
 
-![](img/chicken-2.png)
+![](img/chicken-2.png){width=60%}
 
 Now suppose player A is crazy. They are afraid of nothing and will never swerve. Player B knows this.
 
 Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If player A will not swerve, player B will.
 
-![](img/chicken-3.jpg)
+![](img/chicken-3.jpg){width=60%}
 
 The Nash equilibrium is (Straight, Swerve). The crazy player A wins the game of chicken.
 
-![](img/chicken-4.png)
-
-### Receiving a faulty product
-
-A customer received a faulty product from a firm and requested a refund as per consumer law. The customer also threatened to complain to the Department of Fair Trading if they did not receive the refund. A customer complaint would be costly to the firm as they would be required to provide a refund in addition to incurring the cost of dealing with the complaint.
-
-The firm offered a store credit instead, believing that the customer would not complain as the time and effort involved would not be worth the potential refund.
-
-However, the customer still complained to the Department of Fair Trading.
-
-a\) Use concepts from game theory to explain why the firm might have held that belief.
-
-We can draw the extensive form of the game as follows:
-
-```{mermaid}
-%%| fig-width: 6
-%%| label: fig-punishment
-%%| fig-cap: Extensive form of the game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    C(Firm) ---D[Store credit] --> E(Customer)
-    C ---F[Refund] --> G["(refund, -refund)"]
-    E ---H[Complain] --> I["(refund-complaint, -complaint)"]
-    E ---J[Do not complain] --> K["(store credit, 0)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,H,J edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class G,I,K payoff;
-
-```
-
-We work through this game by backward induction. If the cost to to the customer of complaining is greater than the benefit of obtaining the refund, the customer will not complain. In that case, the firm will offer the store credit.
-
-As the firm believed that the cost to to the customer of complaining is greater than the benefit of obtaining the refund, the customer's threat to complain would not normally be considered credible.
-
-b\) Use concepts from behavioural game theory to explain why the firm’s belief was ultimately incorrect.
-
-The customer's emotional response may lead them to complain. They might be angry or obtain satisfaction from seeing the firm punished. In that case, the customer will complain even though it is not in their material best interest to do so. Emotionally, it is worthwhile. They incur the cost of complaining but get the benefit of both the refund and the satisfaction from punishing the firm.
+![](img/chicken-4.png){width=60%}

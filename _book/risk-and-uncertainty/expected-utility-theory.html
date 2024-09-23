@@ -230,7 +230,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -239,25 +239,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -679,13 +679,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#calculating-expected-utility" id="toc-calculating-expected-utility" class="nav-link active" data-scroll-target="#calculating-expected-utility"><span class="header-section-number">8.1</span> Calculating expected utility</a></li>
-  <li><a href="#attitudes-toward-risk" id="toc-attitudes-toward-risk" class="nav-link" data-scroll-target="#attitudes-toward-risk"><span class="header-section-number">8.2</span> Attitudes toward risk</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">8.1</span> Introduction</a></li>
+  <li><a href="#calculating-expected-utility" id="toc-calculating-expected-utility" class="nav-link" data-scroll-target="#calculating-expected-utility"><span class="header-section-number">8.2</span> Calculating expected utility</a></li>
+  <li><a href="#attitudes-toward-risk" id="toc-attitudes-toward-risk" class="nav-link" data-scroll-target="#attitudes-toward-risk"><span class="header-section-number">8.3</span> Attitudes toward risk</a>
   <ul class="collapse">
-  <li><a href="#certainty-equivalent" id="toc-certainty-equivalent" class="nav-link" data-scroll-target="#certainty-equivalent"><span class="header-section-number">8.2.1</span> Certainty equivalent</a></li>
-  <li><a href="#risk-aversion" id="toc-risk-aversion" class="nav-link" data-scroll-target="#risk-aversion"><span class="header-section-number">8.2.2</span> Risk aversion</a></li>
-  <li><a href="#risk-neutrality" id="toc-risk-neutrality" class="nav-link" data-scroll-target="#risk-neutrality"><span class="header-section-number">8.2.3</span> Risk neutrality</a></li>
-  <li><a href="#risk-seeking" id="toc-risk-seeking" class="nav-link" data-scroll-target="#risk-seeking"><span class="header-section-number">8.2.4</span> Risk seeking</a></li>
+  <li><a href="#certainty-equivalent" id="toc-certainty-equivalent" class="nav-link" data-scroll-target="#certainty-equivalent"><span class="header-section-number">8.3.1</span> Certainty equivalent</a></li>
+  <li><a href="#risk-aversion" id="toc-risk-aversion" class="nav-link" data-scroll-target="#risk-aversion"><span class="header-section-number">8.3.2</span> Risk aversion</a></li>
+  <li><a href="#risk-neutrality" id="toc-risk-neutrality" class="nav-link" data-scroll-target="#risk-neutrality"><span class="header-section-number">8.3.3</span> Risk neutrality</a></li>
+  <li><a href="#risk-seeking" id="toc-risk-seeking" class="nav-link" data-scroll-target="#risk-seeking"><span class="header-section-number">8.3.4</span> Risk seeking</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -712,10 +714,54 @@ window.Quarto = {
 </header>
 
 
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>Expected utility theory states people maximise expected utility, not expected value, in choosing between risky prospects.</li>
+<li>Expected utility is calculated by weighting the utility of each outcome by its probability and summing.</li>
+</ul>
+<p><span class="math display">
+\mathbb{E}[U(X)] = \sum_{i=1}^n p_i U(x_i)
+</span></p>
+<ul>
+<li>Outcomes typically represent final wealth positions, not just payoffs, so decisions depend on current wealth. The formula incorporating initial wealth used for calculating expected utility is:</li>
+</ul>
+<p><span class="math display">
+\mathbb{E}[U(W+X)] = \sum_{i=1}^n p_i U(W+x_i)
+</span></p>
+<ul>
+<li>Expected utility theory allows the examination of an agent’s attitude toward risk, which can be risk aversion, risk neutrality, or risk seeking.</li>
+<li>A risk-averse person prefers a sure amount to a gamble with the same expected value.</li>
+</ul>
+<p><span class="math display">
+U(\mathbb{E}[X]) &gt; \mathbb{E}[U(X)]
+</span></p>
+<ul>
+<li>A risk-seeking person prefers a gamble to a sure amount of the same expected value.</li>
+</ul>
+<p><span class="math display">
+U(\mathbb{E}[X]) &lt; \mathbb{E}[U(X)]
+</span></p>
+<ul>
+<li>A risk-neutral person is indifferent between a gamble and receiving its expected value with certainty.</li>
+</ul>
+<p><span class="math display">
+U(\mathbb{E}[X]) = \mathbb{E}[U(X)]
+</span></p>
+<ul>
+<li>Certainty equivalent (CE) is the amount of money that makes a person indifferent between taking a gamble and taking the money. For risk-averse individuals, <span class="math inline">CE &lt; \mathbb{E}[X]</span>; for risk-neutral, <span class="math inline">CE = \mathbb{E}[X]</span>; for risk-seeking, <span class="math inline">CE &gt; \mathbb{E}[X]</span>.</li>
+</ul>
+<hr>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/O_dmGHfdKnA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+</section>
+<section id="introduction" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">8.1</span> Introduction</h2>
 <p>Under expected utility theory, people do not seek to maximize expected value but instead, maximize expected utility.</p>
 <p>Under expected utility theory, people choose between risky prospects (prospect being another word for lottery or gamble common in the literature) by comparing expected utility values. An agent would pick the option that maximises their expected utility.</p>
-<section id="calculating-expected-utility" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="calculating-expected-utility"><span class="header-section-number">8.1</span> Calculating expected utility</h2>
+</section>
+<section id="calculating-expected-utility" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="calculating-expected-utility"><span class="header-section-number">8.2</span> Calculating expected utility</h2>
 <p>Consider a prospect with final outcomes <span class="math inline">x_1, ..., x_n</span>, with each outcome occurring with probability <span class="math inline">p_1, ..., p_n</span>. Each outcome would deliver utility <span class="math inline">U(x_i)</span>.</p>
 <p><span class="math display">
 X=(p_1, x_1;\ p_2, x_2; ...\ ;\ p_n, x_n)
@@ -750,8 +796,10 @@ E[U(W+X)]&amp;=p_1U(W+x_1)+p_2U(W+x_2)  \\[6pt]
 E[U(X)]=0.5\times U(\$110)+0.5\times U(\$90)
 </span></p>
 </section>
-<section id="attitudes-toward-risk" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="attitudes-toward-risk"><span class="header-section-number">8.2</span> Attitudes toward risk</h2>
+<section id="attitudes-toward-risk" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="attitudes-toward-risk"><span class="header-section-number">8.3</span> Attitudes toward risk</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ubJB8A6KlNE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <p>Expected utility theory allows us to examine an agent’s attitude toward risk.</p>
 <p>There are three possible attitudes toward risk: risk aversion, risk neutrality, and risk seeking.</p>
 <p>If a person prefers a sure amount to a gamble with the same expected value, they are risk averse. That is, the utility of the expected value of <span class="math inline">X</span> is greater than the expected utility of <span class="math inline">X</span>.</p>
@@ -766,8 +814,8 @@ U(E[X])&lt;E[U(X)]
 <p><span class="math display">
 U(E[X])=E[U(X)]
 </span></p>
-<section id="certainty-equivalent" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="certainty-equivalent"><span class="header-section-number">8.2.1</span> Certainty equivalent</h3>
+<section id="certainty-equivalent" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="certainty-equivalent"><span class="header-section-number">8.3.1</span> Certainty equivalent</h3>
 <p>One useful concept in the analysis of attitudes to risk is the certainty equivalent. The certainty equivalent (CE) of a gamble X is the amount of money such that you are indifferent between taking the gamble and taking the money. That is, the utility of the certainty equivalent is equal to the expected utility of the gamble.</p>
 <p><span class="math display">
 u(CE)=E[U(X)]
@@ -775,8 +823,8 @@ u(CE)=E[U(X)]
 <p>For a risk-averse person, the certainty equivalent of the bet is less than the expected value of the gamble. The certainty equivalent is equal to the expected value in the case of risk neutrality. A risk-seeking person would have a certainty equivalent higher than the expected value of the gamble.</p>
 <p>I will now look at each of the attitudes in turn.</p>
 </section>
-<section id="risk-aversion" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="risk-aversion"><span class="header-section-number">8.2.2</span> Risk aversion</h3>
+<section id="risk-aversion" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="risk-aversion"><span class="header-section-number">8.3.2</span> Risk aversion</h3>
 <p>A risk-averse person prefers a sure amount to a gamble with the same expected value. If I strongly prefer $10 for certain to a gamble with an expected value of $10, I am risk averse. The certainty equivalent of the prospect for this person would be less than $10.</p>
 <p>The following chart illustrates. The x-axis is the amount of the good over which the person receives utility. In the case of monetary gambles of the type we are talking about, the x-axis is the amount of money. The y-axis is the utility the person receives from that money.</p>
 <p>The utility curve is a plot of the utility function for each amount of money.</p>
@@ -941,8 +989,8 @@ Figure&nbsp;8.4: Risk aversion 4
 </div>
 </div>
 </div>
-<section id="absolute-and-relative-risk-aversion" class="level4" data-number="8.2.2.1">
-<h4 data-number="8.2.2.1" class="anchored" data-anchor-id="absolute-and-relative-risk-aversion"><span class="header-section-number">8.2.2.1</span> Absolute and relative risk aversion</h4>
+<section id="absolute-and-relative-risk-aversion" class="level4" data-number="8.3.2.1">
+<h4 data-number="8.3.2.1" class="anchored" data-anchor-id="absolute-and-relative-risk-aversion"><span class="header-section-number">8.3.2.1</span> Absolute and relative risk aversion</h4>
 <p>In studying economics, you may encounter two measures of risk aversion: absolute risk aversion and relative risk aversion.</p>
 <p>Absolute risk aversion is a measure of how risk averse a person is at any particular level of wealth. A person with constant absolute risk aversion (CARA) responds to a fixed sum bet in the same way, whatever their wealth.</p>
 <p>For example, when faced with a 50-50 bet to win $20 or lose $10, they will make the same decision regardless of whether they have $100 or $1,000,000 in their bank account.</p>
@@ -953,8 +1001,8 @@ Figure&nbsp;8.4: Risk aversion 4
 <p>This above plot is of a utility function with constant relative risk aversion. You can see that as the level of wealth increases, the utility function becomes increasingly linear. This reduction in curvature reflects the declining absolute risk aversion and results in bets of fixed value being more likely to be accepted at higher wealth.</p>
 </section>
 </section>
-<section id="risk-neutrality" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="risk-neutrality"><span class="header-section-number">8.2.3</span> Risk neutrality</h3>
+<section id="risk-neutrality" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="risk-neutrality"><span class="header-section-number">8.3.3</span> Risk neutrality</h3>
 <p>A risk-neutral person is an expected value maximiser. They are indifferent between $10 for certain and a gamble with an expected value of $10. The certainty equivalent of the prospect for a person considering this gamble would also be $10.</p>
 <p>The following chart illustrates. Again, we have two possible outcomes, <span class="math inline">x_1</span> and <span class="math inline">x_2</span>, with resulting utility <span class="math inline">U(x_1)</span> and <span class="math inline">U(x_2)</span>.</p>
 <p>A line between the points on the utility curve for each of those outcomes lies on the utility curve itself. For any probability, the utility of the expected value and the expected utility are the same.</p>
@@ -1039,8 +1087,8 @@ Figure&nbsp;8.5: Risk neutral
 </div>
 </div>
 </section>
-<section id="risk-seeking" class="level3" data-number="8.2.4">
-<h3 data-number="8.2.4" class="anchored" data-anchor-id="risk-seeking"><span class="header-section-number">8.2.4</span> Risk seeking</h3>
+<section id="risk-seeking" class="level3" data-number="8.3.4">
+<h3 data-number="8.3.4" class="anchored" data-anchor-id="risk-seeking"><span class="header-section-number">8.3.4</span> Risk seeking</h3>
 <p>A risk-seeking person prefers a gamble to a sure sum equal to the expected value of that gamble. The certainty equivalent is more than the expected value of the gamble. The gamble has value in and of itself.</p>
 <p>The following chart illustrates. Again I have drawn a dash-dot-dot line between the points on the utility curve for each of those outcomes. That line is always above the utility curve. That is, for any probabilities involving those two outcomes (except one of those outcomes with certainty), the expected utility of the prospect is more than the utility of the expected value of the prospect.</p>
 <div class="cell">
@@ -1604,7 +1652,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

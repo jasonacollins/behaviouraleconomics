@@ -1,5 +1,24 @@
 # Sequential games
 
+## Summary {.unnumbered}
+
+- Sequential games involve players making decisions in order, with knowledge of previous actions. These games are typically represented in "extensive form" using a game tree.
+- The centipede game is an example of a sequential game where players take turns deciding to "take" (end the game) or "pass" (continue), with increasing payoffs at each step.
+- A subgame perfect Nash equilibrium is a solution concept where players' strategies constitute a Nash equilibrium in every subgame of the original game.
+- The centipede game is solved using backward induction, resulting in a subgame perfect Nash equilibrium where the first player "takes" at the very first opportunity, despite this leading to a lower payoff than if players cooperated by passing.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/XgKbH71Mpxk >}}
+
+---
+
+:::
+
+## Introduction
+
 In sequential games, players make sequential decisions knowing the action of the other player.
 
 ## The extensive form
@@ -63,6 +82,14 @@ There is a unique subgame perfect equilibrium for the centipede game: $S_1=(\tex
 In the subgame perfect Nash equilibrium of the centipede game, player 1 takes at the first node.
 
 ## Sequential game examples
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/mkWvysYMv30 >}}
+
+---
+
+:::
 
 In this part, I will discuss some sequential games and their subgame perfect Nash equilibria.
 

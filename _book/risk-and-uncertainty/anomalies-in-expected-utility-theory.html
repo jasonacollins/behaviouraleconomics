@@ -250,7 +250,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Economic foundations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -259,25 +259,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/preferences.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/rationality.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/utility.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
   </div>
 </li>
@@ -699,7 +699,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-allais" id="toc-sec-allais" class="nav-link active" data-scroll-target="#sec-allais"><span class="header-section-number">11.1</span> The Allais Paradox</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#sec-allais" id="toc-sec-allais" class="nav-link" data-scroll-target="#sec-allais"><span class="header-section-number">11.1</span> The Allais Paradox</a></li>
   <li><a href="#sec-absurd" id="toc-sec-absurd" class="nav-link" data-scroll-target="#sec-absurd"><span class="header-section-number">11.2</span> Absurd rates of risk aversion</a></li>
   <li><a href="#framing" id="toc-framing" class="nav-link" data-scroll-target="#framing"><span class="header-section-number">11.3</span> Framing</a></li>
   <li><a href="#reference-points" id="toc-reference-points" class="nav-link" data-scroll-target="#reference-points"><span class="header-section-number">11.4</span> Reference points</a></li>
@@ -728,9 +729,21 @@ window.Quarto = {
 </header>
 
 
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>The Allais Paradox demonstrates that people’s choices between pairs of bets often violate expected utility theory, as their preferences can be inconsistent when a common consequence (a shared outcome with equal probability in both options) is changed.</li>
+<li>Rejection of small-scale bets implies unreasonably high risk aversion for larger bets under expected utility theory. For example, rejecting a 50:50 bet to win $110 or lose $100 at all wealth levels implies rejecting a 50:50 bet to win $1 billion or lose $1,000.</li>
+<li>People’s choices are influenced by how options are framed, contradicting expected utility theory’s assumption of description invariance.</li>
+<li>People evaluate outcomes relative to reference points rather than absolute wealth.</li>
+</ul>
+<hr>
 <p>In this part, I show several anomalies in expected utility theory.</p>
+</section>
 <section id="sec-allais" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="sec-allais"><span class="header-section-number">11.1</span> The Allais Paradox</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/pWDUHRNth3M" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <p>The Allais paradox is one of the most famous anomalies in expected utility theory.</p>
 <p>The paradox was first identified by Maurice <span class="citation" data-cites="allais1953">Allais (<a href="../references.html#ref-allais1953" role="doc-biblioref">1953</a>)</span>. It emerges from the pattern of response to two pairs of bets. The following example comes from <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span>.</p>
 <p>For choice 1, the player is asked to choose one of the following bets:</p>
@@ -784,10 +797,10 @@ U(2400)&gt;0.33U(2500)+0.66U(2400)+0.01U(0)
 <p>I can then break up these payoff-chance pairs to create an equivalent representation as in this second table. I have split the outcomes in bets B and C. For example, I have written the 100% chance of $2400 in option B as a 66% chance of $2400 and a 34% chance of $2400. I have written the 67% chance of $0 in bet C as a 66% chance of $0 and a 1% chance of $0.</p>
 <p><a href="img/allais-paradox-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/allais-paradox-2.jpg" class="img-fluid"></a></p>
 <p>With this split, you can see that the bets in the bottom two rows of choice 1 and choice 2 are the same. Both choice 1 and choice 2 involve a choice between, in one bet, a 1% chance of nothing and a 33% chance of $2,500 and in the other bet, a 34% chance of $2,400.</p>
-<p>That common bet in choice 1 and choice 2 is paired with a 66% chance of the same payoff regardless of the preferred bet. For choice 1 that common payoff across bet A and bet B is $2400. For choice 2, that common payoff across bet C and bet D is $0.</p>
+<p>That shared bet in choice 1 and choice 2 is paired with a 66% chance of the same payoff regardless of the preferred bet. For choice 1 that “common consequence” across bet A and bet B is $2400. For choice 2, that common consequence across bet C and bet D is $0.</p>
 <p><a href="img/allais-paradox-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/allais-paradox-3.jpg" class="img-fluid"></a></p>
-<p>This representation allows us to see that preferring bet B to bet A and bet C to bet D violates the axiom of the <a href="@sec-independence">independence of irrelevant alternatives</a>. Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble. In this case, the two bets are contained in the last two rows. The irrelevant alternative is the 66% chance of $2400 or $0. It is an irrelevant alternative as the payoff is the same regardless of whether you choose A or B, or C and D.</p>
-<p>I can express this in terms of the formal definition of the independence of irrelevant alternatives axiom. The formal definition states that if:</p>
+<p>This representation allows us to see that preferring bet B to bet A and bet C to bet D violates the axiom of <a href="@sec-independence">independence</a>. Under that axiom, two gambles mixed with a third gamble will maintain the same order of preference as when the two are presented independently of the third gamble. In this case, the two gambles are contained in the last two rows. The third gamble is the 66% chance of $2400 or $0. The third gamble is called a “common consequence” as the payoff is the same regardless of whether you choose A or B, or C and D.</p>
+<p>I can express this in terms of the formal definition of the independence axiom. The formal definition states that if:</p>
 <ul>
 <li><p><span class="math inline">x</span> and <span class="math inline">y</span> are lotteries with <span class="math inline">x\succcurlyeq y</span> and</p></li>
 <li><p><span class="math inline">p</span> is the probability that a third option <span class="math inline">z</span> is present, then:</p></li>
@@ -808,10 +821,12 @@ pz+(1-p)x\succcurlyeq pz+(1-p)y
 <p>Suppose that you know that the number generated is between 1 and 66. Would you prefer bet A or B in choice 1? As you would win $2400 with either choice, you will be indifferent. You will similarly be indifferent between bet C and D in choice 2, winning $0 no matter what.</p>
 <p>Suppose instead that a number between 67 and 100 is generated, but you don’t know which. If you prefer A to B, you should also prefer C to D. In each choice, you effectively face the same bet. Let’s assume for the moment that you prefer A and C.</p>
 <p>Finally, suppose you don’t know what number will be generated. We have just determined that if you know the ticket is between 1 and 66, you are indifferent between the options, but if between 67 and 100 is drawn, you prefer A and C. You do not prefer B or D when the ticket range is 1 to 66 or 67 to 100, so you should not prefer B or D when the ticket number is unknown.</p>
-<p>However, the responses to the bets generated by <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> and many other experimentalists suggest that when the number is unknown, the size of the certain amount for numbers 1 through 66 does matter. This irrelevant alternative is changing the preferences of the experimental participants.</p>
+<p>However, the responses to the bets generated by <span class="citation" data-cites="kahneman1979">Kahneman and Tversky (<a href="../references.html#ref-kahneman1979" role="doc-biblioref">1979</a>)</span> and many other experimentalists suggest that when the number is unknown, the size of the common consequence for numbers 1 through 66 does matter. This common consequence is changing the preferences of the experimental participants.</p>
 </section>
 <section id="sec-absurd" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="sec-absurd"><span class="header-section-number">11.2</span> Absurd rates of risk aversion</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/q2QfuNSWLB0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <p>An important anomaly in expected utility theory concerns the level of risk aversion required to explain observed behaviour.</p>
 <p>People reject many small-scale bets. The crux of the anomaly is that if we are expected utility maximisers, rejection implies that we would reject some highly favourable larger-scale bets so favourable almost no one would reject them.</p>
 <p>Consider the following one-off bet involving the flip of a coin:</p>
@@ -1291,6 +1306,8 @@ Figure&nbsp;11.11: Utility curve limit
 </section>
 <section id="framing" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="framing"><span class="header-section-number">11.3</span> Framing</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/pGCBebIUKCw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <p>Under expected utility theory, a person’s choices should not be affected by how the options are described or by how their preferences are elicited.</p>
 <p><span class="citation" data-cites="kahneman1984">Kahneman and Tversky (<a href="../references.html#ref-kahneman1984" role="doc-biblioref">1984</a>)</span> reported the following experiment.</p>
 <blockquote class="blockquote">
@@ -1321,6 +1338,7 @@ Figure&nbsp;11.11: Utility curve limit
 </ul>
 <p>Under expected utility theory, those two scenarios should feel the same as you have <span class="math inline">U(\$30,000)</span> in both cases.</p>
 <p>However, in the first case, you feel poor and in the second case you feel rich. This is because you are comparing the outcome to your reference point of $40,000 in the first case and $20,000 in the second case. You are not assessing the absolute outcome but appear to be using a reference point.</p>
+<p>That is, <span class="math inline">U(W) \neq U(W')</span> when <span class="math inline">W = W'</span> but reference points differ.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
@@ -1809,7 +1827,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

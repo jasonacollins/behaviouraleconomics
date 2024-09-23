@@ -1,5 +1,27 @@
 # Utility
 
+## Summary {.unnumbered}
+
+- Economists use utility functions to represent strength of preference, assigning numbers to different options.
+- Formally, a utility function $u(\cdot)$ maps alternatives to real numbers, assigning larger numbers to preferred alternatives.
+- The preference relation can be expressed using the utility function:
+
+$$
+x \succcurlyeq y \Leftrightarrow u(x) \geq u(y) \\[6pt]
+x \succ y \Leftrightarrow u(x) > u(y) \\[6pt]
+x \sim y \Leftrightarrow u(x) = u(y)
+$$
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/IMXRTT6LCJQ >}}
+
+---
+
+:::
+
 Economists often use numbers to represent strength of preference. This is done through utility functions.
 
 A utility function associates a number with each member of the universe. For example:

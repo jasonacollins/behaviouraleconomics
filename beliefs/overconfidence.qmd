@@ -1,5 +1,25 @@
 # Overconfidence
 
+## Summary {.unnumbered}
+
+- Overconfidence is a robust finding in judgment and decision-making research, but it actually encompasses three distinct phenomena: overprecision, overestimation, and overplacement.
+- Overprecision is the tendency to believe our predictions or estimates are more accurate than they are, often demonstrated in confidence interval tasks.
+- Overestimation is the belief that we can perform better than we realistically can, typically occurring for difficult tasks but not for easy ones.
+- Overplacement is the erroneous judgment that we are better than others, which varies with task difficulty. People tend to overplace on easy tasks and underplace on difficult ones.
+- Overconfidence has been linked to real-world phenomena such as excessive firm entry in markets and over-trading in financial markets, with experiments and studies demonstrating how it can lead to suboptimal outcomes in these domains.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/vjB0K9Dlke8 >}}
+
+---
+
+:::
+
+## Introduction
+
 @debondt1995 wrote "Perhaps the most robust finding in the psychology of judgment and choice is that people are overconfident."
 
 Take the following examples:

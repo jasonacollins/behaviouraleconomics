@@ -1,5 +1,23 @@
 # Asymmetric information
 
+## Summary {.unnumbered}
+
+- Information asymmetry in markets can lead to market failures, even with rational agents. This is illustrated by the "market for lemons" example, where buyers' inability to observe product quality before purchase can result in only low-quality goods being sold.
+- The winner's curse is a phenomenon in common-value auctions where the winning bidder tends to overpay. This occurs because winning implies that other bidders valued the item lower, suggesting the winner's estimate may be too high.
+- The Nash equilibrium strategy in such auctions is to bid more conservatively than your private estimate of the value.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/owl7uGkGIQ0 >}}
+
+---
+
+:::
+
+## Introduction
+
 To date in this section on game theory, I have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.
 
 I will now explore two examples where we relax this assumption and allow the parties to have different information. However, we will retain the assumption of rational behaviour.

@@ -3,6 +3,40 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Bayes' rule
 
+## Summary {.unnumbered}
+
+- Bayes' rule is a method for calculating the conditional probability of an event.
+
+- Bayes' rule gives the probability of outcome $A$ given $B$, $P(A|B)$, using the unconditional probability of outcome $A$, the probability of observing $B$ given $A$ and the total probability of outcome $B$:
+
+$$
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+$$
+
+- The total probability $P(B)$ can be calculated as:
+
+$$
+P(B) = P(B|A)P(A) + P(B|\neg A)P(\neg A)
+$$
+
+- Bayes' rule can be thought of as a way to update beliefs about a hypothesis $H$ given evidence $E$:
+
+$$
+P(H|E) = \frac{P(E|H)P(H)}{P(E)}
+$$
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/hxcnmZq8bGs >}}
+
+---
+
+:::
+
+## Introduction
+
 Bayes' rule is a method for estimating the conditional probability of an event.
 
 Specifically, Bayes' rule allows us to use the following information to estimate the conditional probability of outcome $A$ given outcome $B$:
