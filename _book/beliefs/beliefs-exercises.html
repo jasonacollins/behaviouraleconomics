@@ -809,10 +809,11 @@ Answer
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>We are asked to calculate <span class="math inline">P(\text{D1 loaded}|6)</span>. To calculate this, I will use Bayes’ rule.</p>
 <span class="math display">\begin{align*}
-P(\text{D1 loaded}|6)&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[6pt]
-&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6|\text{D1 loaded})P(\text{D1 loaded})+P(6|\text{D1 fair})P(\text{D1 fair})} \\[6pt]
-&amp;=\frac{0.5\times 0.5}{0.5\times 0.5+\frac{1}{6}\times 0.5} \\[6pt]
+P(\text{D1 loaded}|6)&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[12pt]
+&amp;=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6|\text{D1 loaded})P(\text{D1 loaded})+P(6|\text{D1 fair})P(\text{D1 fair})} \\[12pt]
+&amp;=\frac{0.5\times 0.5}{0.5\times 0.5+\frac{1}{6}\times 0.5} \\[12pt]
 &amp;=0.75
 \end{align*}</span>
 <p>The first die is the loaded die with 75% probability.</p>
@@ -832,13 +833,22 @@ Answer
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>We are asked to calculate <span class="math inline">P(\text{D1 loaded}|\text{D2 } 5)</span>. We have a prior probability of the first die being loaded of 0.75, which comes from the answer in the previous question.</p>
+<p>Putting this into Bayes’ rule:</p>
+<p><span class="math display">\begin{align*}
+P(\text{D1 loaded}|\text{D2 } 5)&amp;=\frac{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})}{P(\text{D2 } 5)} \\[12pt]
+&amp;=\frac{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})}{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})+P(\text{D2 } 5|\text{D1 fair})P(\text{D1 fair})} \\[12pt]
+&amp;=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[12pt]
+&amp;=0.5
+\end{align*}</span></p>
+<p>Each die is loaded with a 50% probability.</p>
+<p>You could reach the same result by calculating the probability that the second die is fair given a 5. This is the same as the probability that the first die is loaded given a 5 on the second die. This approach gives the same result as the above calculation, but you need only think about one die.</p>
 <span class="math display">\begin{align*}
-P(\text{D2 fair}|5)&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6pt]
-&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5|\text{D2 fair})P(\text{D2 fair})+P(5|\text{D2 loaded})P(\text{D2 loaded})} \\[6pt]
-&amp;=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[6pt]
+P(\text{D2 fair}|5)&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[12pt]
+&amp;=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5|\text{D2 fair})P(\text{D2 fair})+P(5|\text{D2 loaded})P(\text{D2 loaded})} \\[12pt]
+&amp;=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[12pt]
 &amp;=0.5
 \end{align*}</span>
-<p>Each die is the loaded die with 50% probability.</p>
 </div>
 </div>
 </div>

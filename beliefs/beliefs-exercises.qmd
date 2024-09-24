@@ -110,11 +110,13 @@ a\) The die shows a six. What is the probability that it is the loaded die?
 ::: {.callout-tip collapse="true"}
 ## Answer
 
+We are asked to calculate $P(\text{D1 loaded}|6)$. To calculate this, I will use Bayes' rule.
+
 ```{=tex}
 \begin{align*}
-P(\text{D1 loaded}|6)&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[6pt]
-&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6|\text{D1 loaded})P(\text{D1 loaded})+P(6|\text{D1 fair})P(\text{D1 fair})} \\[6pt]
-&=\frac{0.5\times 0.5}{0.5\times 0.5+\frac{1}{6}\times 0.5} \\[6pt]
+P(\text{D1 loaded}|6)&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[12pt]
+&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6|\text{D1 loaded})P(\text{D1 loaded})+P(6|\text{D1 fair})P(\text{D1 fair})} \\[12pt]
+&=\frac{0.5\times 0.5}{0.5\times 0.5+\frac{1}{6}\times 0.5} \\[12pt]
 &=`r PL<-(0.5*0.5)/(0.5*0.5+1/6*0.5); PL`
 \end{align*}
 ```
@@ -127,16 +129,30 @@ b\) You pull the other die out of your pocket and roll it. It shows a 5. What is
 ::: {.callout-tip collapse="true"}
 ## Answer
 
+We are asked to calculate $P(\text{D1 loaded}|\text{D2 } 5)$. We have a prior probability of the first die being loaded of 0.75, which comes from the answer in the previous question.
+
+Putting this into Bayes' rule:
+
+\begin{align*}
+P(\text{D1 loaded}|\text{D2 } 5)&=\frac{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})}{P(\text{D2 } 5)} \\[12pt]
+&=\frac{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})}{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})+P(\text{D2 } 5|\text{D1 fair})P(\text{D1 fair})} \\[12pt]
+&=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[12pt]
+&=`r PL2<-(1/6*0.75)/(1/6*0.75+0.5*0.25); PL2`
+\end{align*}
+
+Each die is loaded with a 50\% probability.
+
+You could reach the same result by calculating the probability that the second die is fair given a 5. This is the same as the probability that the first die is loaded given a 5 on the second die. This approach gives the same result as the above calculation, but you need only think about one die.
+
 ```{=tex}
 \begin{align*}
-P(\text{D2 fair}|5)&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[6pt]
-&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5|\text{D2 fair})P(\text{D2 fair})+P(5|\text{D2 loaded})P(\text{D2 loaded})} \\[6pt]
-&=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[6pt]
+P(\text{D2 fair}|5)&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[12pt]
+&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5|\text{D2 fair})P(\text{D2 fair})+P(5|\text{D2 loaded})P(\text{D2 loaded})} \\[12pt]
+&=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[12pt]
 &=`r (1/6*0.75)/(1/6*0.75+0.5*0.25)`
 \end{align*}
 ```
 
-Each die is the loaded die with 50\% probability.
 :::
 
 ## Male or female
