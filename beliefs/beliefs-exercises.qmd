@@ -389,7 +389,7 @@ b\) Many people given this problem estimate the probability of the house being o
 
 ::: {.callout-tip collapse="true"}
 ## Answer
-People often confuse P(A\|B) with P(B\|A). In this case, such confusion would lead them to conclude that $P(fire|alarm)=P(alarm|fire)=95\%$. You might also think of this as anchoring on the 95\% and insufficiently adjusting from there.
+People often confuse $P(A|B)$ with $P(B|A)$. In this case, such confusion would lead them to conclude that $P(\text{fire}|\text{alarm})=P(\text{alarm}|\text{fire})=95\%$. You might also think of this as anchoring on the 95\% and insufficiently adjusting from there.
 
 Alternatively, people sometimes act as though they have assumed uniform priors: e.g. 50:50 as to whether a fire or not.
 
@@ -498,7 +498,7 @@ e\) What psychological bias does Lincoln's behaviour reflect? Explain.
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-Each time Neville has a good quarter, Lincoln thinks it is less likely that Neville will have another. This is an example of gambler's fallacy. Lincoln thinks that Neville's sequence of pxerformances should be the typical sequence of a mediocre fund manager, with the same number of good and bad quarters. This leads Lincoln to expect bad quarters to be more likely after a sequence of good quarters.
+Each time Neville has a good quarter, Lincoln thinks it is less likely that Neville will have another. This is an example of gambler's fallacy. Lincoln thinks that Neville's sequence of performances should be the typical sequence of a mediocre fund manager, with the same number of good and bad quarters. This leads Lincoln to expect bad quarters to be more likely after a sequence of good quarters.
 
 Similarly for Jill, Lincoln expects a string of success to correct itself and her record to revert to the average for a skilled manager.
 :::
@@ -509,7 +509,7 @@ For each of the following experiments from Tverksy and Kahneman (1974), explain 
 
 a\) Tverksy and Kahneman (1974) write:
 
->Subjects were shown brief personality descriptions of several individuals, allegedly sampled at random from a group of 100 professionals-engineers and lawyers. The subjects were askcd to assess, for each description, the probability that it belonged to an engineer rather than to a lawyer. In one experimental condition, subjects were told that the group from which the descriptions had been drawn consisted of 70 engineers and 30 lawyers. In another condition, subjects were told that the group consisted of 30 engineers and 70 lawyers. The odds that any particular description belongs to an engineer rather than to a lawyer should be higher in the first condition, where there is a majority of engineers, than in the second condition, where there is a majority of lawyers. Specifically, it can be shown by applying Bayes' rule that the ratio of these odds should be ($.7/.3^2$), or 5.44, for each description. In a sharp violation of Bayes' rule, the subjects in the two conditions produced essentially the same probability judgments.
+>Subjects were shown brief personality descriptions of several individuals, allegedly sampled at random from a group of 100 professionals-engineers and lawyers. The subjects were asked to assess, for each description, the probability that it belonged to an engineer rather than to a lawyer. In one experimental condition, subjects were told that the group from which the descriptions had been drawn consisted of 70 engineers and 30 lawyers. In another condition, subjects were told that the group consisted of 30 engineers and 70 lawyers. The odds that any particular description belongs to an engineer rather than to a lawyer should be higher in the first condition, where there is a majority of engineers, than in the second condition, where there is a majority of lawyers. Specifically, it can be shown by applying Bayes' rule that the ratio of these odds should be ($.7/.3^2$), or 5.44, for each description. In a sharp violation of Bayes' rule, the subjects in the two conditions produced essentially the same probability judgments.
 
 ::: {.callout-tip collapse="true"}
 ## Answer
