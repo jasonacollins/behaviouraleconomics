@@ -3,6 +3,24 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # The reflection effect
 
+## Summary {.unnumbered}
+
+- The reflection effect describes an asymmetry in risk preferences: people are typically risk-averse for gains but risk-seeking for losses.
+- This effect can be illustrated through framing experiments, such as the Asian Disease problem, where equivalent outcomes are perceived differently when framed as gains versus losses.
+- The reflection effect can be represented in a value function with diminishing sensitivity to both gains and losses, resulting in a concave function in the gain domain (indicating risk aversion) and a convex function in the loss domain (indicating risk-seeking behaviour).
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/UuukHub91OE >}}
+
+---
+
+:::
+
+## Introduction
+
 The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.
 
 When people make a risky choice related to gains, they are risk averse.  They prefer a certain option with value lower than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.

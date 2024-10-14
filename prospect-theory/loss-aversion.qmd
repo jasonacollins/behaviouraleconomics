@@ -1,5 +1,24 @@
 # Loss aversion
 
+## Summary {.unnumbered}
+
+- Loss aversion is the concept that losses have a stronger psychological impact than equivalent gains, often causing people to reject gambles with positive expected value.
+- A value function with loss aversion can be represented mathematically, where losses are experienced with greater intensity than gains (e.g., twice the force).
+- The endowment effect, where people value items they own more highly, is considered an empirical expression of loss aversion.
+- Kahneman et al.'s [-@kahneman1991] experiment demonstrated the endowment effect with mugs, showing a significant difference between willingness to accept and willingness to pay for the same item.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/nGdq7NsRB7A >}}
+
+---
+
+:::
+
+## Introduction
+
 Loss aversion is the concept that losses loom larger than gains. People feel more strongly about a loss than an equivalent gain, so they are often willing to reject gambles with a materially positive expected value.
 
 For example, if someone feels losses with twice the feeling of gains, a 50:50 bet to win \$550, lose \$500 will be unattractive. This provides an alternative explanation to the absurd levels of risk aversion required to reject this bet (as discussed in @sec-absurd).

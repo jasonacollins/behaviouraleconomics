@@ -1,5 +1,24 @@
 # Probability weighting
 
+## Summary {.unnumbered}
+
+- Prospect theory incorporates non-linear weighting of probabilities, contrasting with expected utility theory's linear approach.
+- Empirical evidence shows that people tend to overweight certain events and very low-probability events (the certainty effect and possibility effect) while approximating linear weights for intermediate probabilities.
+- This probability weighting helps explain phenomena like the Allais Paradox, where people's choices in different scenarios appear inconsistent with expected utility theory.
+- The decision weight function, such as Prelec's [-@prelec1998] formula, mathematically represents this non-linear probability weighting in prospect theory, capturing the overweighting of small probabilities.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/BfpUuphvdqY >}}
+
+---
+
+:::
+
+## Introduction
+
 In expected utility theory, probabilities enter the expected utility function linearly. For example, if an event is twice as likely as another outcome, it has double the weight.
 
 In contrast, prospect theory incorporates non-linear weighting of probabilities by applying decision weights to each potential outcome.

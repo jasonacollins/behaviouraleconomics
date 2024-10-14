@@ -1,5 +1,25 @@
 # Exponential discounting
 
+## Summary {.unnumbered}
+
+- Exponential discounting is a model where agents discount future costs and benefits at a consistent rate through time, with each additional period of delay resulting in a discount by a factor of $\delta$.
+- Under this model, agents seek to maximise the discounted utility of future consumption, resulting in a smooth decline in the present value of future payoffs over time.
+- One implication of exponential discounting is time consistency, meaning an agent's relative preference between two future options remains unchanged as time passes and the options draw closer.
+- The model assumes consumption independence, where utility in one period is independent of consumption in other periods, allowing goods to be split and moved across periods without changing their value beyond the discount effect.
+- Additional assumptions include stationary preferences (the utility function remains constant across periods) and utility independence (decision-makers only aim to maximise the sum of discounted utilities without preference for their distribution over time).
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/fkwM4v7CvJc >}}
+
+---
+
+:::
+
+## Introduction
+
 Exponential discounting occurs when an agent discounts future costs and benefits at a consistent rate through time.
 
 Under exponential discounting, each additional period of delay results in a discount of a future cost or benefit by a factor of $\delta$. The discount factor $\delta$ is a number between 0 and 1. The higher the discount factor, the less the agent discounts future costs and benefits.
@@ -68,13 +88,9 @@ ggplot(discounted, aes(x=t, y=discount, group=delta, linetype=delta)) +
 
 ```
 
-## Exponential discounted utility model assumptions
+## Time-consistency
 
-The standard model of exponential discounting is underpinned by several assumptions.
-
-### Time-consistency
-
-The first is time consistency.
+One implication of exponential discounting is time consistency.
 
 Once the agent starts moving along the consumption path, they are time-consistent with their initial plan. For example, consider an agent facing the following two choices:
 
@@ -84,9 +100,13 @@ Would you like \$100 next week or \$110 in two weeks?
 
 An exponential discounter will choose \$100 in both choices or \$110 in both choices. The reason is that after one week the second choice effectively becomes the same as the first choice. Time consistency implies that they will continue to want to make the same choice regardless of when they are making it.
 
+## Exponential discounted utility model assumptions
+
+The standard model of exponential discounting is underpinned by several assumptions.
+
 ### Consumption independence
 
-A second assumption is consumption independence.
+The first assumption is consumption independence.
 
 Consumption independence means that utility in period $t+k$ is independent of consumption in any other period. An outcome’s utility is unaffected by outcomes in prior or future periods.
 
@@ -98,7 +118,7 @@ This assumption allows us to write $x=x_1+x_2+x_3+...+x_n$. That is, good $x$ ca
 
 ### Stationary preferences
 
-A third assumption is stationary preferences.
+A second assumption is stationary preferences.
 
 That is, $U_t=U_{t=K}$.
 
@@ -110,6 +130,6 @@ Similarly, with stationary preferences, you would not learn to appreciate the ta
 
 ### Utility independence
 
-A fourth assumption is utility independence.
+A third assumption is utility independence.
 
 Under utility independence, all that matters is maximizing the sum of discounted utilities. Decision makers have no preference for the distribution of utilities. They don't seek to delay gratification or get unpleasant things out of the way.

@@ -7,6 +7,14 @@ In this section, I present a series of mathematical examples of prospect theory.
 
 ## Mathematical examples
 
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/9KZZlq1yTaA >}}
+
+---
+
+:::
+
 ### A 50:50 gamble
 
 Suppose Alby has the following reference-dependent value function:
@@ -767,6 +775,26 @@ ggplot(mapping = aes(x, y)) +
 ```
 
 ## Insurance
+
+### Summary {.unnumbered}
+
+- Classical economic theory explains insurance purchase through risk aversion, while prospect theory offers an alternative explanation involving risk-seeking behaviour in the loss domain and overweighting of small probabilities.
+- A risk-neutral agent would not purchase insurance due to its negative expected value, but a risk-averse agent with a logarithmic utility function may buy insurance due to diminishing marginal utility.
+- Prospect theory's reflection effect suggests people are risk-seeking in the loss domain, which alone would predict that people wouldn't buy insurance, as it involves choosing between a certain loss (premium) and a potentially larger loss.
+- Probability weighting in prospect theory suggests that people overweight small probabilities and underweight probabilities near certainty, which can make insurance attractive despite being in the loss domain.
+- The combination of a convex value function in the loss domain and overweighting of small probabilities can lead to insurance purchase under prospect theory, even when the reflection effect alone would suggest avoiding insurance.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/nEbxlaFo2NM >}}
+
+---
+
+:::
+
+### Introduction
 
 Insurance has a negative expected value due to the insurer's profit and administrative costs. Why would a consumer purchase insurance?
 

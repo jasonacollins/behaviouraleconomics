@@ -1,5 +1,23 @@
 # The value function
 
+## Summary {.unnumbered}
+
+- Prospect theory's value function incorporates three phenomena: reference dependence, loss aversion, and the reflection effect.
+- The function is defined on changes relative to a reference point, rather than final wealth levels, with diminishing marginal sensitivity to both gains and losses.
+- The value function is characterised by a kink at the reference point, with losses weighted more heavily than gains.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/Ur_Awfilr2c >}}
+
+---
+
+:::
+
+## Introduction
+
 The three phenomena, reference dependence, loss aversion and the reflection effect, are each incorporated into the prospect theory value function.
 
 First, the value function of prospect theory is defined on changes in wealth or welfare rather than on final wealth levels. In other words, gains and losses are defined relative to a reference point. The reference point might be the status quo, lagged consumption, a goal, or an expectation about the outcome.

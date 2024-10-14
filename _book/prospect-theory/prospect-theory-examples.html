@@ -687,10 +687,12 @@ window.Quarto = {
   </ul></li>
   <li><a href="#insurance" id="toc-insurance" class="nav-link" data-scroll-target="#insurance"><span class="header-section-number">19.2</span> Insurance</a>
   <ul class="collapse">
-  <li><a href="#expected-value" id="toc-expected-value" class="nav-link" data-scroll-target="#expected-value"><span class="header-section-number">19.2.1</span> Expected value</a></li>
-  <li><a href="#expected-utility" id="toc-expected-utility" class="nav-link" data-scroll-target="#expected-utility"><span class="header-section-number">19.2.2</span> Expected utility</a></li>
-  <li><a href="#the-reflection-effect" id="toc-the-reflection-effect" class="nav-link" data-scroll-target="#the-reflection-effect"><span class="header-section-number">19.2.3</span> The reflection effect</a></li>
-  <li><a href="#probability-weighting" id="toc-probability-weighting" class="nav-link" data-scroll-target="#probability-weighting"><span class="header-section-number">19.2.4</span> Probability weighting</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">19.2.1</span> Introduction</a></li>
+  <li><a href="#expected-value" id="toc-expected-value" class="nav-link" data-scroll-target="#expected-value"><span class="header-section-number">19.2.2</span> Expected value</a></li>
+  <li><a href="#expected-utility" id="toc-expected-utility" class="nav-link" data-scroll-target="#expected-utility"><span class="header-section-number">19.2.3</span> Expected utility</a></li>
+  <li><a href="#the-reflection-effect" id="toc-the-reflection-effect" class="nav-link" data-scroll-target="#the-reflection-effect"><span class="header-section-number">19.2.4</span> The reflection effect</a></li>
+  <li><a href="#probability-weighting" id="toc-probability-weighting" class="nav-link" data-scroll-target="#probability-weighting"><span class="header-section-number">19.2.5</span> Probability weighting</a></li>
   </ul></li>
   <li><a href="#a-multi-bet" id="toc-a-multi-bet" class="nav-link" data-scroll-target="#a-multi-bet"><span class="header-section-number">19.3</span> A multi-bet</a></li>
   </ul>
@@ -721,6 +723,8 @@ window.Quarto = {
 <p>In this section, I present a series of mathematical examples of prospect theory.</p>
 <section id="mathematical-examples" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="mathematical-examples"><span class="header-section-number">19.1</span> Mathematical examples</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9KZZlq1yTaA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 <section id="a-5050-gamble" class="level3" data-number="19.1.1">
 <h3 data-number="19.1.1" class="anchored" data-anchor-id="a-5050-gamble"><span class="header-section-number">19.1.1</span> A 50:50 gamble</h3>
 <p>Suppose Alby has the following reference-dependent value function:</p>
@@ -1500,6 +1504,21 @@ Figure&nbsp;19.8: Bill’s consideration of gamble A and the $100 after the shoc
 </section>
 <section id="insurance" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="insurance"><span class="header-section-number">19.2</span> Insurance</h2>
+<section id="summary" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="summary">Summary</h3>
+<ul>
+<li>Classical economic theory explains insurance purchase through risk aversion, while prospect theory offers an alternative explanation involving risk-seeking behaviour in the loss domain and overweighting of small probabilities.</li>
+<li>A risk-neutral agent would not purchase insurance due to its negative expected value, but a risk-averse agent with a logarithmic utility function may buy insurance due to diminishing marginal utility.</li>
+<li>Prospect theory’s reflection effect suggests people are risk-seeking in the loss domain, which alone would predict that people wouldn’t buy insurance, as it involves choosing between a certain loss (premium) and a potentially larger loss.</li>
+<li>Probability weighting in prospect theory suggests that people overweight small probabilities and underweight probabilities near certainty, which can make insurance attractive despite being in the loss domain.</li>
+<li>The combination of a convex value function in the loss domain and overweighting of small probabilities can lead to insurance purchase under prospect theory, even when the reflection effect alone would suggest avoiding insurance.</li>
+</ul>
+<hr>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/nEbxlaFo2NM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+</section>
+<section id="introduction" class="level3" data-number="19.2.1">
+<h3 data-number="19.2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">19.2.1</span> Introduction</h3>
 <p>Insurance has a negative expected value due to the insurer’s profit and administrative costs. Why would a consumer purchase insurance?</p>
 <p>The classical economic explanation for the purchase of insurance is based on diminishing marginal utility, which leads to risk aversion. Consumers are willing to buy insurance as the consumer prefers the certainty of the premium payment to the risk of suffering an uninsured loss.</p>
 <p>Prospect theory provides an alternative explanation. The purchase of insurance involves a certain loss (the premium) or a gamble involving the possibility of either a large loss or the status quo. As prospect theory has people as risk seeking in the loss domain, we would not expect them to purchase insurance.</p>
@@ -1528,8 +1547,9 @@ Figure&nbsp;19.8: Bill’s consideration of gamble A and the $100 after the shoc
 </table>
 <p>The following numerical example is an illustration.</p>
 <p>An agent is considering insurance against bushfire for their house valued at <span class="math inline">H=</span> $1 000 000. The house has a 1 in 1000 (<span class="math inline">p=</span> 0.001) chance of burning down. An insurer is willing to offer full coverage for a premium (<span class="math inline">R</span>) of $1100. (Note: $1000 is the actuarially fair price. The additional $100 might represent profit or administrative costs.)</p>
-<section id="expected-value" class="level3" data-number="19.2.1">
-<h3 data-number="19.2.1" class="anchored" data-anchor-id="expected-value"><span class="header-section-number">19.2.1</span> Expected value</h3>
+</section>
+<section id="expected-value" class="level3" data-number="19.2.2">
+<h3 data-number="19.2.2" class="anchored" data-anchor-id="expected-value"><span class="header-section-number">19.2.2</span> Expected value</h3>
 <p>The first question I will consider is whether a risk-neutral person would purchase the insurance. A risk-neutral utility function is:</p>
 <p><span class="math display">
 u(x)=x
@@ -1549,8 +1569,8 @@ u(x)=x
 \end{align*}</span></p>
 <p>The expected value of purchasing insurance is lower than the expected value of not purchasing insurance. Therefore, a risk-neutral agent would not purchase the insurance.</p>
 </section>
-<section id="expected-utility" class="level3" data-number="19.2.2">
-<h3 data-number="19.2.2" class="anchored" data-anchor-id="expected-utility"><span class="header-section-number">19.2.2</span> Expected utility</h3>
+<section id="expected-utility" class="level3" data-number="19.2.3">
+<h3 data-number="19.2.3" class="anchored" data-anchor-id="expected-utility"><span class="header-section-number">19.2.3</span> Expected utility</h3>
 <p>Would a risk-averse agent purchase the insurance? Suppose they have a logarithmic utility function (<span class="math inline">u(x)=\ln(x)</span>) and they have $10 000 in cash in addition to their house, giving them wealth (<span class="math inline">W</span>) of $1 010 000.</p>
 <p>The logarithmic utility function has diminishing marginal utility. Diminishing marginal utility is the principle that the marginal utility from each additional unit decreases. In the context of wealth, this means that each additional dollar provides less satisfaction than the previous one.</p>
 <p>Diminishing marginal utility means that the agent will be risk averse. They will prefer a certain outcome to a gamble with the same expected value.</p>
@@ -1785,8 +1805,8 @@ Figure&nbsp;19.12: The expected utility of purchasing insurance and not purchasi
 </div>
 </div>
 </section>
-<section id="the-reflection-effect" class="level3" data-number="19.2.3">
-<h3 data-number="19.2.3" class="anchored" data-anchor-id="the-reflection-effect"><span class="header-section-number">19.2.3</span> The reflection effect</h3>
+<section id="the-reflection-effect" class="level3" data-number="19.2.4">
+<h3 data-number="19.2.4" class="anchored" data-anchor-id="the-reflection-effect"><span class="header-section-number">19.2.4</span> The reflection effect</h3>
 <p>I will now move on to the elements of prospect theory, introducing them one at a time. The first element is the reflection effect.</p>
 <p>Consider an agent who is risk seeking in the domain of losses but weights probability linearly. Their value function is:</p>
 <p><span class="math display">
@@ -2091,8 +2111,8 @@ Figure&nbsp;19.16: The reflection effect and insurance
 </div>
 </div>
 </section>
-<section id="probability-weighting" class="level3" data-number="19.2.4">
-<h3 data-number="19.2.4" class="anchored" data-anchor-id="probability-weighting"><span class="header-section-number">19.2.4</span> Probability weighting</h3>
+<section id="probability-weighting" class="level3" data-number="19.2.5">
+<h3 data-number="19.2.5" class="anchored" data-anchor-id="probability-weighting"><span class="header-section-number">19.2.5</span> Probability weighting</h3>
 <p>Would a person who is risk seeking in the domain of losses (that is, a person with a value function with reflection effect discussed earlier) who weights probability in accordance with prospect theory purchase the insurance?</p>
 <p>Prospect theory proposes that people overweight small probabilities. They might weight probabilities as per the following table:</p>
 <table class="caption-top table">
@@ -2661,7 +2681,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

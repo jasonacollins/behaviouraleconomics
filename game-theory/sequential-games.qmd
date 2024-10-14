@@ -116,7 +116,7 @@ graph LR
     A(Proposer) ---D[Offer 0] --> E(Responder)
     C ---F[Accept] --> H["(m-x, <b>x</b>)"]
     C ---G[Reject] --> I["(0, 0)"]
-    E ---J[Accept] --> L["(10, <b>0</b>)"]
+    E ---J[Accept] --> L["(m, <b>0</b>)"]
     E ---K[Reject] --> M["(0, <b>0</b>)"]
 
     classDef node fill:#FFF, stroke:#000;

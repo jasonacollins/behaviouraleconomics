@@ -1,5 +1,25 @@
 # Prospect theory implementation
 
+## Summary
+
+- Prospect theory involves two phases: editing and evaluation.
+- The editing phase simplifies prospects through four main operations: coding (as gains or losses), combination (of identical outcomes), segregation (of riskless components), and cancellation (of shared components).
+- In the evaluation phase, prospects are assessed using a formula that combines decision weights applied to probabilities and subjective values of outcomes.
+- Prospect theory results in a fourfold pattern of risk attitudes: risk aversion for high-probability gains and low-probability losses, and risk seeking for low-probability gains and high-probability losses.
+- This pattern explains real-world behaviours such as settlement negotiations in court cases, the attractiveness of lotteries despite typically low expected values, and the purchase of insurance against unlikely events.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/4M9BBjf8cZM >}}
+
+---
+
+:::
+
+## Introduction
+
 Under prospect theory, people assess the weighted value of a prospect in two phases: editing and evaluation.
 
 ## Editing

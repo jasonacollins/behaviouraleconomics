@@ -1,5 +1,25 @@
 # Present bias
 
+## Summary {.unnumbered}
+
+- Present bias is a concept developed to account for anomalies in the exponential discounting model, where people place additional weight on costs and benefits in the present.
+- The $\beta\delta$ model, also known as quasi-hyperbolic discounting, uses two discount factors: $\beta$ for short-term discounting and $\delta$ for long-term discounting.
+- In the $\beta\delta$ model, all future payoffs are discounted by $\beta\delta$ once, and then by $\delta$ for each additional period of delay, resulting in a larger discount for the first period than subsequent periods.
+- Present bias can lead to time inconsistency, where decisions made at one point may be reversed later if given the opportunity to change.
+- The $\beta\delta$ model maintains assumptions of consumption independence, stationary preferences, and utility independence from the exponential discounting model.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/PJ6k0hwAWTA >}}
+
+---
+
+:::
+
+## Introduction
+
 One concept developed to account for anomalies in the exponential discounting model is present bias.
 
 Present bias occurs when we place additional weight on costs and benefits at the present time.

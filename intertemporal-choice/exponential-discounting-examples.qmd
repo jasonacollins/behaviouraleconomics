@@ -3,6 +3,28 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Exponential discounting examples
 
+## Summary {.unnumbered}
+
+- Exponential discounters make decisions by comparing the discounted utility of different options, choosing the one with the highest value.
+- The discount factor $\delta$ determines how much future payoffs are discounted, with a higher $\delta$ resulting in less discounting of future outcomes.
+- Visualisations, such as graphs showing discounted utility over time, can help illustrate how exponential discounters evaluate and compare different options.
+- The following examples illustrate that:
+  - Time consistency is demonstrated through consistent choices across different time frames.
+  - The amount needed to compensate for a delay increases exponentially with time.
+  - Different discount factors can lead to different choices between the same options.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/FfsXWD03l7s >}}
+
+---
+
+:::
+
+## Introduction
+
 In this part, I will work through several numerical examples of decisions by an exponential discounter.
 
 ## Example 1: \$100 today or \$110 next week{#sec-exponential_example_1}
