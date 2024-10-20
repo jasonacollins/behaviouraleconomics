@@ -3,6 +3,27 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Present bias examples
 
+## Summary
+
+- The following examples illustrate the contrast between exponential discounters' time-consistent choices and present-biased agents' time-inconsistent decisions when faced with immediate versus future rewards.
+- The use of graphical representations to visualise how present bias affects the relative attractiveness of rewards over time, particularly when the short-term discount factor no longer applies, can be used to illustrate choice and preference reversal.
+- The following examples illustrate that:
+    - The $\beta\delta$ model creates a "kink" in the discounting curve, with a steeper discount for the immediate future due to the short-term discount factor $\beta$.
+    - Present-biased agents may choose smaller-sooner rewards when available immediately, but larger-later rewards when both options are in the future.
+    - Present bias has practical implications in financial decision-making, demonstrated through scenarios such as loan repayment choices.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/2AzTot-ywb0 >}}
+
+---
+
+:::
+
+## Introduction
+
 In the section, I provide some simple examples of the $\beta\delta$ model.
 
 ## Exponential discounting versus present bias

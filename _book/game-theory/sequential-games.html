@@ -693,6 +693,10 @@ window.Quarto = {
 <li>The centipede game is an example of a sequential game where players take turns deciding to “take” (end the game) or “pass” (continue), with increasing payoffs at each step.</li>
 <li>A subgame perfect Nash equilibrium is a solution concept where players’ strategies constitute a Nash equilibrium in every subgame of the original game.</li>
 <li>The centipede game is solved using backward induction, resulting in a subgame perfect Nash equilibrium where the first player “takes” at the very first opportunity, despite this leading to a lower payoff than if players cooperated by passing.</li>
+<li>The other examples illustrate sequential games and their subgame perfect Nash equilibria, demonstrating concepts like backward induction and the importance of credible threats.</li>
+<li>The ultimatum game shows that rational play leads to minimal offers being accepted, with subgame perfect Nash equilibria of offering $1 (or $0) and accepting.</li>
+<li>The dictator game, with no strategic interaction, predicts the dictator will keep the entire endowment.</li>
+<li>The trust game demonstrates how lack of trust can lead to suboptimal outcomes, with the subgame perfect Nash equilibrium being no investment and no return.</li>
 </ul>
 <hr>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/XgKbH71Mpxk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
@@ -752,27 +756,27 @@ window.Quarto = {
 <p>The proposer is given a fixed amount of money <span class="math inline">m</span>. They then offer a portion <span class="math inline">x</span> of the sum <span class="math inline">m</span> to the responder.</p>
 <p>The responder can either accept or reject the offer. They make this decision knowing the fixed amount <span class="math inline">m</span> held by the proposer and the offer <span class="math inline">x</span>.</p>
 <p>If the responder accepts, the responder receives the offer <span class="math inline">x</span> and the proposer gets the remainder <span class="math inline">m-x</span>. If the responder rejects, both players receive nothing.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-ultimatum-game" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ultimatum-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;40.1: The ultimatum game
-</figcaption>
-<div aria-describedby="fig-ultimatum-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="sequential-games_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;40.1: The ultimatum game"><img src="sequential-games_files/figure-html/mermaid-figure-1.png" style="width:5in;height:2.58in" class="figure-img"></a></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>The ultimatum game</figcaption>
+<p><a href="img/ultimatum-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The ultimatum game"><img src="img/ultimatum-game.png" class="img-fluid figure-img" style="width:80.0%" alt="The ultimatum game"></a></p>
 </figure>
 </div>
-</div>
-</div>
 <p>Below is the extensive form of the ultimatum game with <span class="math inline">m=\$10</span> and an assumption that the offer must be a whole dollar amount. At the first node is the proposer. They can choose to offer any dollar sum between $0 and $10. Whatever the choice, the responder is at the next node. They can choose to accept or reject the offer. The payoffs of each set of actions is indicated in the brackets at the bottom of the game tree, with the first number being the proposer’s payoff and the second number being the responder’s payoff.</p>
-<p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/ultimatum-game-1.jpg" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>Ultimatum game tree</figcaption>
+<p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Ultimatum game tree"><img src="img/ultimatum-game-1.jpg" class="img-fluid figure-img" alt="Ultimatum game tree"></a></p>
+</figure>
+</div>
 <p>If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is where the offer is 0, but they still might.</p>
 <p>Given this, the proposer will offer $0 or $1 only.</p>
-<p><a href="img/ultimatum-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/ultimatum-game-2.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>The ultimatum game Nash equilibrium</figcaption>
+<p><a href="img/ultimatum-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="The ultimatum game Nash equilibrium"><img src="img/ultimatum-game-2.png" class="img-fluid figure-img" alt="The ultimatum game Nash equilibrium"></a></p>
+</figure>
+</div>
 <p>We can say that there are two subgame perfect Nash equilibria. The first is for the proposer to offer $1 and the responder to accept if offered $1 and reject if offered $0. The other (weak) subgame perfect Nash equilibrium is an offer of $0 and acceptance.</p>
 <p>More generally, game theory makes a clear prediction on the outcome of the ultimatum game. If the players have monotonic preferences - that is, more is better - the responder accepts any <span class="math inline">x&gt;0</span> (and possibly even if <span class="math inline">x=0</span>) and the the proposer offers the smallest amount the proposer can offer.</p>
 <p>Where the strategy space is continuous (that is the offer could always be made smaller) the only subgame perfect Nash equilibrium is for the proposer to offer $0 and the receiver to accept.</p>
@@ -782,38 +786,18 @@ Figure&nbsp;40.1: The ultimatum game
 <p>The next example is the dictator game.</p>
 <p>In the dictator game, the dictator is given a fixed amount of money <span class="math inline">m</span>. They then offer a portion <span class="math inline">x</span> of the sum <span class="math inline">m</span> to the receiver. The game then ends.</p>
 <p>Exchange is unilateral. Receivers have an empty strategy set.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-dictator-game" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dictator-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;40.2: The dictator game
-</figcaption>
-<div aria-describedby="fig-dictator-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="sequential-games_files/figure-html/mermaid-figure-6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;40.2: The dictator game"><img src="sequential-games_files/figure-html/mermaid-figure-6.png" style="width:4in;height:1.65in" class="figure-img"></a></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>The dictator game</figcaption>
+<p><a href="img/dictator-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="The dictator game"><img src="img/dictator-game.png" class="img-fluid figure-img" style="width:60.0%" alt="The dictator game"></a></p>
 </figure>
-</div>
-</div>
 </div>
 <p>The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff <span class="math inline">m</span> (which is bolded).</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-dictator-game-solved" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dictator-game-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;40.3: The dictator game solved
-</figcaption>
-<div aria-describedby="fig-dictator-game-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="sequential-games_files/figure-html/mermaid-figure-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;40.3: The dictator game solved"><img src="sequential-games_files/figure-html/mermaid-figure-5.png" style="width:4in;height:2in" class="figure-img"></a></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>The dictator game solved</figcaption>
+<p><a href="img/dictator-game-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="The dictator game solved"><img src="img/dictator-game-solved.png" class="img-fluid figure-img" style="width:60.0%" alt="The dictator game solved"></a></p>
 </figure>
-</div>
-</div>
 </div>
 </section>
 <section id="sec-trust_game" class="level3" data-number="40.4.3">
@@ -830,21 +814,11 @@ Figure&nbsp;40.3: The dictator game solved
 (m-x+y, m+kx-y)
 </span></p>
 <p>The extensive form of the game is as follows.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-trust-game" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-trust-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;40.4: The trust game
-</figcaption>
-<div aria-describedby="fig-trust-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="sequential-games_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;40.4: The trust game"><img src="sequential-games_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.59in" class="figure-img"></a></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>The trust game</figcaption>
+<p><a href="img/trust-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="The trust game"><img src="img/trust-game.png" class="img-fluid figure-img" alt="The trust game"></a></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Here is a numerical example.</p>
 <p>Suppose the sender and receiver are given an initial sum of $10.</p>
@@ -852,41 +826,21 @@ Figure&nbsp;40.4: The trust game
 <p>This is multiplied by a factor of 3. Therefore, the receiver receives $15 and now has $25.</p>
 <p>The receiver then returns to the sender $7.50 of their $25.</p>
 <p>The final outcome is <span class="math inline">(10−5+7.50,  10+15−7.50)=(12.50, 17.50)</span>.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-trust-game-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-trust-game-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;40.5: The trust game
-</figcaption>
-<div aria-describedby="fig-trust-game-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="sequential-games_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;40.5: The trust game"><img src="sequential-games_files/figure-html/mermaid-figure-3.png" style="width:5in;height:0.84in" class="figure-img"></a></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>The trust game example</figcaption>
+<p><a href="img/trust-game-numerical.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="The trust game example"><img src="img/trust-game-numerical.png" class="img-fluid figure-img" alt="The trust game example"></a></p>
 </figure>
-</div>
-</div>
 </div>
 <p>If both receivers have utility function <span class="math inline">u(x)=x</span> the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.</p>
 <p>We can see this by backward induction. The receiver can either return <span class="math inline">y</span> for a payoff of <span class="math inline">10+3x-y</span> or return 0 for a payoff of <span class="math inline">10+3x</span>. The receiver will return 0.</p>
 <p>One way to think about this problem is that the receiver is effectively playing a dictator game.</p>
 <p>Working backwards, the sender therefore has a choice between sending <span class="math inline">x</span> for a payoff of <span class="math inline">10-x</span> or sending <span class="math inline">0</span> for a payoff of <span class="math inline">10</span>. The sender will send <span class="math inline">0</span>.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-trust-game-2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-trust-game-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;40.6: The trust game
-</figcaption>
-<div aria-describedby="fig-trust-game-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="sequential-games_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;40.6: The trust game"><img src="sequential-games_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.59in" class="figure-img"></a></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>The trust game solved</figcaption>
+<p><a href="img/trust-game-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="The trust game solved"><img src="img/trust-game-solved.png" class="img-fluid figure-img" alt="The trust game solved"></a></p>
 </figure>
-</div>
-</div>
 </div>
 <p>Relative to the Pareto optimal outcome whereby the sender’s full endowment is tripled and they receive a positive return on their investment, both players are worse off under the equilibrium outcome.</p>
 
@@ -1358,7 +1312,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

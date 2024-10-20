@@ -6,6 +6,10 @@
 - The centipede game is an example of a sequential game where players take turns deciding to "take" (end the game) or "pass" (continue), with increasing payoffs at each step.
 - A subgame perfect Nash equilibrium is a solution concept where players' strategies constitute a Nash equilibrium in every subgame of the original game.
 - The centipede game is solved using backward induction, resulting in a subgame perfect Nash equilibrium where the first player "takes" at the very first opportunity, despite this leading to a lower payoff than if players cooperated by passing.
+- The other examples illustrate sequential games and their subgame perfect Nash equilibria, demonstrating concepts like backward induction and the importance of credible threats.
+- The ultimatum game shows that rational play leads to minimal offers being accepted, with subgame perfect Nash equilibria of offering $1 (or $0) and accepting.
+- The dictator game, with no strategic interaction, predicts the dictator will keep the entire endowment.
+- The trust game demonstrates how lack of trust can lead to suboptimal outcomes, with the subgame perfect Nash equilibrium being no investment and no return.
 
 ---
 
@@ -105,39 +109,17 @@ The responder can either accept or reject the offer. They make this decision kno
 
 If the responder accepts, the responder receives the offer $x$ and the proposer gets the remainder $m-x$. If the responder rejects, both players receive nothing.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-ultimatum-game
-%%| fig-cap: The ultimatum game
-%%| mermaid-format: png
-
-graph LR
-    A(Proposer) ---B[Offer x] --> C(Responder)
-    A(Proposer) ---D[Offer 0] --> E(Responder)
-    C ---F[Accept] --> H["(m-x, <b>x</b>)"]
-    C ---G[Reject] --> I["(0, 0)"]
-    E ---J[Accept] --> L["(m, <b>0</b>)"]
-    E ---K[Reject] --> M["(0, <b>0</b>)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,G,J,K edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class H,I,L,M payoff;
-```
+![The ultimatum game](img/ultimatum-game.png){width=80%}
 
 Below is the extensive form of the ultimatum game with $m=\$10$ and an assumption that the offer must be a whole dollar amount. At the first node is the proposer. They can choose to offer any dollar sum between $0 and $10. Whatever the choice, the responder is at the next node. They can choose to accept or reject the offer. The payoffs of each set of actions is indicated in the brackets at the bottom of the game tree, with the first number being the proposer's payoff and the second number being the responder's payoff.
 
-![](img/ultimatum-game-1.jpg)
+![Ultimatum game tree](img/ultimatum-game-1.jpg)
 
 If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is where the offer is 0, but they still might.
 
 Given this, the proposer will offer \$0 or \$1 only.
 
-![](img/ultimatum-game-2.png)
+![The ultimatum game Nash equilibrium](img/ultimatum-game-2.png)
 
 We can say that there are two subgame perfect Nash equilibria. The first is for the proposer to offer \$1 and the responder to accept if offered \$1 and reject if offered \$0. The other (weak) subgame perfect Nash equilibrium is an offer of \$0 and acceptance.
 
@@ -153,42 +135,11 @@ In the dictator game, the dictator is given a fixed amount of money $m$. They th
 
 Exchange is unilateral. Receivers have an empty strategy set.
 
-```{mermaid}
-%%| fig-width: 4
-%%| label: fig-dictator-game
-%%| fig-cap: The dictator game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Dictator) ---B[Send x] --> D["(m-x, x)"]
-    A ---C[Send 0] --> E["(m,0)"]
-    style A stroke:#000
-    style B stroke:#FFF
-    style C stroke:#FFF
-    style D stroke:#FFF
-    style E stroke:#FFF
-```
+![The dictator game](img/dictator-game.png){width=60%}
 
 The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff $m$ (which is bolded).
 
-```{mermaid}
-%%| fig-width: 4
-%%| label: fig-dictator-game-solved
-%%| fig-cap: The dictator game solved
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Dictator) ---B[Send x] --> D["(m-x, x)"]
-    A ---C((Send 0)) --> E["(<b>m</b>,0)"]
-    style A stroke:#000
-    style B stroke:#FFF
-    style C stroke:#F00, stroke-width:4px
-    style D stroke:#FFF
-    style E stroke:#FFF
-
-```
+![The dictator game solved](img/dictator-game-solved.png){width=60%}
 
 ### The trust game{#sec-trust_game}
 
@@ -214,29 +165,7 @@ $$
 
 The extensive form of the game is as follows.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-trust-game
-%%| fig-cap: The trust game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Sender) ---B[Send x] --> C{Multplied by k} --> D(Receiver)
-    A ---E((Send 0)) --> F["(10,10)"]
-    D ---G[Return y] --> H["(10-x+y, 10+3x-y)"]
-    D ---I[Return 0] --> J["(10-x, 10+3x)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,E,G,I edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class F,H,J payoff;
-
-```
+![The trust game](img/trust-game.png)
 
 Here is a numerical example.
 
@@ -250,27 +179,7 @@ The receiver then returns to the sender \$7.50 of their \$25.
 
 The final outcome is $(10−5+7.50,  10+15−7.50)=(12.50, 17.50)$.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-trust-game-1
-%%| fig-cap: The trust game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Sender) ---B[Send 5] --> C{5 x 3 = 15} --> D(Receiver)
-    D ---G[Return 7.50] --> H["(12.50, 17.50)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,G edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class H payoff;
-
-```
+![The trust game example](img/trust-game-numerical.png)
 
 If both receivers have utility function $u(x)=x$ the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.
 
@@ -280,31 +189,6 @@ One way to think about this problem is that the receiver is effectively playing 
 
 Working backwards, the sender therefore has a choice between sending $x$ for a payoff of $10-x$ or sending $0$ for a payoff of $10$. The sender will send $0$.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-trust-game-2
-%%| fig-cap: The trust game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Sender) ---B[Send x] --> C{Multplied by k} --> D(Receiver)
-    A ---E((Send 0)) --> F["(10,10)"]
-    D ---G[Return y] --> H["(10-x+y, 10+3x-y)"]
-    D ---I((Return 0)) --> J["(10-x, 10+3x)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,G edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class F,H,J payoff;
-
-    classDef action stroke:#F00, stroke-width:4px;
-    class E,I action;
-
-```
+![The trust game solved](img/trust-game-solved.png)
 
 Relative to the Pareto optimal outcome whereby the sender's full endowment is tripled and they receive a positive return on their investment, both players are worse off under the equilibrium outcome.

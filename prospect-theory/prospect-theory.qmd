@@ -1,5 +1,13 @@
 # Prospect theory
 
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/4VBK_-a4x2Q >}}
+
+---
+
+:::
+
 Prospect theory is a descriptive theory of decision-making under risk. It was developed by Daniel Kahneman and Amos Tversky [-@kahneman1979] as a challenge to expected utility theory.
 
 Prospect theory has the following features:

@@ -1,5 +1,29 @@
 # Commitment
 
+## Summary {.unnumbered}
+
+- Sophisticated present-biased agents can foresee their future actions. This foresight allows them to use commitment devices - mechanisms that lock them into a course of action by changing the value or availability of future options.
+- Commitment devices can work through three main channels:
+    - Forcing the agent to maintain the optimal course of action.
+    - Depressing the value of the undesired action
+    - Increasing the value of the optimal action
+- The following examples illustrate how these commitment devices work in practice:
+    - Forcing optimal action: Buying a non-refundable movie ticket, Odysseus tying himself to the mast, and using lay-by schemes.
+    - Depressing the value of bad actions: Using platforms like stickK to impose penalties for failing to meet goals.
+    - Increasing the value of optimal actions: Temptation bundling, such as pairing exercise with audiobooks or massages.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/FSVi6kKVE3w >}}
+
+---
+
+:::
+
+## Introduction
+
 A sophisticated present-biased agent can foresee their future actions and adjust their decisions today based on their foresight.
 
 This foresight provides an opportunity. By seeing their future selves fail, they can commit themselves to a course of action today that they would not otherwise be able to choose.

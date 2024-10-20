@@ -158,8 +158,8 @@ We can also write this as:
 
 $$
 U_R(x_P,x_R)=\left\{\begin{matrix}
-(1+2\alpha)x−10\alpha \quad &\textrm{if} \quad x \geq 0 \\[6pt]
-(1−2\beta)x+10\beta \quad &\textrm{if} \quad x < 0 
+(1+2\alpha)x−10\alpha \quad &\textrm{if} \quad x \geq 5 \\[6pt]
+(1−2\beta)x+10\beta \quad &\textrm{if} \quad x < 5 
 \end{matrix}\right.
 $$
 
@@ -192,22 +192,7 @@ Consider the following example of the dictator game. In the dictator game, the d
 
 In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where $(x_D,x_R)$ represent the payoffs for the dictator and receiver, respectively. The dictator's $\sigma=−1/2$. As the dictator has less than the other player under each distribution, $\sigma$ is the relevant parameter.
 
-```{mermaid}
-%%| fig-width: 4
-%%| label: fig-dictator-game-distribution
-%%| fig-cap: A constrained dictator game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Dictator) ---B["Choose (0, 1)"] --> D["(0, 1)"]
-    A ---C["Choose (1, 5)"] --> E["(1, 5)"]
-    style A stroke:#000
-    style B stroke:#FFF
-    style C stroke:#FFF
-    style D stroke:#FFF
-    style E stroke:#FFF
-```
+![](img/dictator-game-distribution.png)
 
 We can calculate the dictator's utility of each allocation.
 
@@ -256,29 +241,7 @@ In the exercises in @sec-investment, I considered whether Linda should invest in
 >
 > If Linda does not invest, Linda keeps the \$10. The start-up gets \$0.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-trust-game-example-1
-%%| fig-cap: The trust game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Linda) ---B[Invest $10] --> C{Multplied by 3} --> D(Marco)
-    A ---E((Invest 0)) --> F["(10,0)"]
-    D ---G[Dividend] --> H["(15, 15)"]
-    D ---I[Shut down] --> J["(0, 30)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,E,G,I edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class F,H,J payoff;
-
-```
+![](img/trust-game-example.png)
 
 Macro, who is effectively playing a dictator game, would shut down and keep the \$30. As a result, Linda would not invest.
 
@@ -350,55 +313,8 @@ U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 
 Putting those payoffs into the extensive form of the game, we get the following:
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-trust-game-example-2
-%%| fig-cap: The trust game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Linda) ---B[Invest $10] --> C{Multplied by 3} --> D(Marco)
-    A ---E((Invest 0)) --> F["(3.33,0)"]
-    D ---G[Dividend] --> H["(15, 15)"]
-    D ---I[Shut down] --> J["(10, 7.5)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,E,G,I edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class F,H,J payoff;
-
-```
+![](img/trust-game-example-payoffs.png)
 
 In this game, Marco can return a dividend for utility 15 or shut down for utility 7.5. He chooses to return the dividend. As a result, Linda will invest for utility 15, rather than not invest for utility 3.33. Linda invests.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-trust-game-example-3
-%%| fig-cap: The trust game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Linda) ---B[Invest $10] --> C{Multplied by 3} --> D(Marco)
-    A ---E((Invest 0)) --> F["(3.33,0)"]
-    D ---G[Dividend] --> H["(<b>15</b>, <b>15</b>)"]
-    D ---I[Shut down] --> J["(10, 7.5)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,E,I edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class F,H,J payoff;
-
-    classDef action stroke:#F00, stroke-width:4px;
-    class B,G action;
-
-```
+![](img/trust-game-example-solved.png)

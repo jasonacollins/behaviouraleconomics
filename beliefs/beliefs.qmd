@@ -1,5 +1,13 @@
 # Beliefs
 
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/Ceor2U7Fy3Q >}}
+
+---
+
+:::
+
 Consider the following judgments:
 
 - An investor picking which stock or fund they should invest in

@@ -1,5 +1,25 @@
 # Social preferences
 
+## Summary {.unnumbered}
+
+- Social preferences, or other-regarding preferences, encompass three main types: distribution, reputation, and reciprocity.
+- Distribution preferences relate to how people care about resource division, driven by altruism or inequality aversion.
+- Reputation preferences involve concern for what others think and fear of social stigma from selfish behaviour.
+- Reciprocity preferences reflect how people care about others' intentions and respond in kind to their actions.
+- The ultimatum and dictator games demonstrates social preferences, as dictators and proposers often offer more than the minimum and responders sometimes reject non-zero offers.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/NRiYSgh5RGA >}}
+
+---
+
+:::
+
+## Introduction
+
 People do not care solely about their own outcomes. They care about the outcomes and actions of others. These preferences are known as social preferences, or sometimes "other-regarding preferences".
 
 In this part, I will examine the three types of social preferences: distribution, reputation, and reciprocity.
@@ -26,26 +46,7 @@ The responder can either accept or reject the offer. They make this decision kno
 
 If the responder accepts, the responder receives the offer $x$ and the proposer gets the remainder $m-x$. If the responder rejects, both players receive nothing.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-ultimatum-game-2
-%%| fig-cap: The ultimatum game
-%%| mermaid-format: png
-
-graph LR
-    A(Proposer) ---B[Offer x] --> C(Responder)
-    C ---D[Accept] --> E["(m-x, <b>x</b>)"]
-    C ---F[Reject] --> G["(0, 0)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class E,G payoff;
-```
+![](img/ultimatum-game-process.png)
 
 Generally, if the players have monotonic preferences and the offer strategy set is discrete:
 
@@ -61,7 +62,7 @@ Unlike the game theoretic predictions, proposers rarely offer the minimum amount
 
 For example, @henrich2001 recruited subjects from 15 small-scale societies to play the ultimatum game. The mean offer in all societies was substantially above zero. The rejection rate was low but non-zero.
 
-![](img/henrich-2001-table-1.jpg)
+![](img/henrich-2001-table-1.jpg){width=80%}
 
 These results cannot be explained by examining only the outcomes to the individual. We need to consider their social preferences.
 
@@ -73,19 +74,7 @@ In the dictator game, the dictator is given a fixed amount of money $m$. They th
 
 Exchange is unilateral. Receivers have an empty strategy set.
 
-```{mermaid}
-%%| fig-width: 4
-%%| label: fig-dictator-game-1
-%%| fig-cap: The dictator game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Dictator) ---B[Send x] --> C["(m-x, x)"]
-    style A stroke:#000
-    style B stroke:#FFF
-    style C stroke:#FFF
-```
+![](img/dictator-game-process.png){width=70%}
 
 The standard game theory prediction is that the dictator offers nothing. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff $m$.
 

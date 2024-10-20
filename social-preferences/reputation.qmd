@@ -33,27 +33,7 @@ The computer's allocation is then implemented with a probability $p$. Otherwise,
 
 If the dictator's choice is to be implemented, the dictator makes a split of the \$20, offering $x$ to the receiver. The receiver learns only the allocation. They do not learn the dictator's choice.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-dictator-game-reputation
-%%| fig-cap: The dictator game with reputational concerns
-%%| mermaid-format: png
-
-graph TD
-    classDef default fill:#FFF
-    A[Computer] ---B["($0, $20) or ($20, $0)"] --> C[Random draw]
-    C ---D[p] --> E["($0, $20) or ($20, $0)" <br> as chosen by computer]
-    C ---F[1-p] --> G[Dictator choice] --> H["($20-x, x)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,G node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class E,H payoff;
-```
+![](img/dictator-game-reputation.png)
 
 Distributional preferences predict that $p$ should not affect the dictator's choice. The dictator should only think about the situation in which their choice matters.
 

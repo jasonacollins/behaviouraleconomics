@@ -2,10 +2,11 @@
 
 ## Summary {.unnumbered}
 
-- Game theory studies strategic interactions between players, where each player's outcome depends on the behaviour of others, and strategies depend on beliefs about others' strategies.
-- The components of a game include: players, actions, strategies, information, and payoffs. Players are typically assumed to be rational optimisers who understand the game and assume others are rational optimizers as well.
-- Games can be classified into different types, such as cooperative vs. non-cooperative games. In cooperative games, players can negotiate binding contracts, while in non-cooperative games, they cannot.
-- Games can also be simultaneous or sequential. In simultaneous games, players make decisions without knowing others' actions, while in sequential games, players make decisions knowing the previous actions of other players.
+- Game theory studies strategic interaction between players, where outcomes depend on others' behaviour and beliefs about strategies.
+- Components of a game include players, actions, strategies, information available, and payoffs.
+- Players are typically assumed to be rational optimisers who understand the game and assume the same of other players.
+- Games can be categorised as cooperative vs non-cooperative based on the ability to negotiate binding contracts.
+- Games can also be categorised as simultaneous vs sequential, based on the timing of decisions and knowledge of others' actions.
 
 ---
 

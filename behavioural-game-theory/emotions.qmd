@@ -38,7 +38,7 @@ Pushing the nuclear button is not in Nixon's interest, and from a purely rationa
 
 ### Complaining for bad service
 
-Recall our earlier example in @sec-complaining, illustrated below in @fig-complaint-3, of a customer threatening to complain if they receive bad service. Complaining is costly.
+Recall our earlier example in @sec-complaining, illustrated below, of a customer threatening to complain if they receive bad service. Complaining is costly.
 
 We determined this by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.
 
@@ -46,104 +46,17 @@ The company, therefore, has a choice between providing good service for a payoff
 
 For the customer's initial choice of whether to threaten to complain, it does not matter either way. Regardless of their threat, they receive bad service.
 
-```{mermaid}
-%%| fig-width: 6
-%%| label: fig-complaint-3
-%%| fig-cap: Complaining is costly
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
-    C ---D((Bad <br>service)) --> E(Customer)
-    E ---F[Complain] ---> G["(-1, -1)"]
-    E ---H((Do not <br>complain)) ---> I["(<b>1</b>, <b>2</b>)"]
-    C ---J[Good <br>service] --> K["(2,1)"]
-    A ---L[No threat] --> M(Company)
-    M ---N((Bad <br>service)) --> O["(1, <b>2</b>)"]
-    M ---P[Good <br>service] --> Q["(2,1)"]
-
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E,M node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,J,L,P edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class G,I,K,O,Q payoff;
-
-    classDef action stroke:#F00, stroke-width:4px;
-    class D,H,N action;
-
-```
+![](img/complaining-is-costly-solved.png)
 
 But what if the customer gets a strong sense of satisfaction from complaining worth +3? Then their payoffs become as follows:
 
-```{mermaid}
-%%| fig-width: 6
-%%| label: fig-complaint-4
-%%| fig-cap: When the threat is credible
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
-    C ---D((Bad <br>service)) --> E(Customer)
-    E ---F[Complain] ---> G["(-1+3=2, -1)"]
-    E ---H((Do not <br>complain)) ---> I["(1, 2)"]
-    C ---J[Good <br>service] --> K["(2,1)"]
-    A ---L[No threat] --> M(Company)
-    M ---N((Bad <br>service)) --> O["(1, 2)"]
-    M ---P[Good <br>service] --> Q["(2,1)"]
-
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E,M node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,H,J,L,N,P edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class G,I,K,O,Q payoff;
-
-```
+![](img/complaining-is-credible.png)
 
 The threat to complain is now credible. If they receive bad service, they complain for a payoff of 2 rather than not complain for a payoff of 1.
 
 The company now provides good service following a threat to complain. Absent that threat, they would provide bad service.
 
-```{mermaid}
-%%| fig-width: 6
-%%| label: fig-complaint-5
-%%| fig-cap: When the threat is credible
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Customer) ---B[Threatens <br>to complain] --> C(Company)
-    C ---D((Bad <br>service)) --> E(Customer)
-    E ---F((Complain)) ---> G["(<b>-1+3=2</b>, -1)"]
-    E ---H((Do not <br>complain)) ---> I["(1, 2)"]
-    C ---J((Good <br>service)) --> K["(<b>2</b>,<b>1</b>)"]
-    A ---L[No threat] --> M(Company)
-    M ---N((Bad <br>service)) --> O["(1, <b>2</b>)"]
-    M ---P[Good <br>service] --> Q["(2,1)"]
-
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E,M node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,H,J,L,P edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class G,I,K,O,Q payoff;
-
-    classDef action stroke:#F00, stroke-width:4px;
-    class F,J,N action;
-
-```
+![](img/complaining-is-credible-solved.png)
 
 ### Chicken
 

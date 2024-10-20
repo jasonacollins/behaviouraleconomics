@@ -138,32 +138,7 @@ First, Jason has a choice between Proposal A for a payoff of \$100,000 and Propo
 
 Bezzle Bank therefore has a choice between contributing \$50,000 for a payoff of -\$50,000 or not contributing to remain at the status quo. Bezzle Bank does not contribute.
 
-```{mermaid bezzle-nash}
-%%| fig-width: 5
-%%| label: fig-bezzle-nash
-%%| fig-cap: Nash equilibrium
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Bezzle Bank) ---B[Contribute $50,000] --> C{Multplied by 2} --> D(Jason)
-    A ---E((Contribute 0)) --> F["($0,0)"]
-    D ---G[Proposal A] --> H["($50,000, $100,000)"]
-    D ---I((Proposal B)) --> J["(-$50,000, $150,000)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,G edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class F,H,J payoff;
-
-    classDef action stroke:#F00, stroke-width:4px;
-    class E,I action;
-
-```
+![](img/bezzle-nash.png)
 
 :::
 

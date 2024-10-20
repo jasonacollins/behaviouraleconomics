@@ -809,8 +809,8 @@ U_R(x_P,x_R)&amp;=x_R-\alpha\text{max}\{x_P-x_R,0\}-\beta\text{max}\{x_R-x_P,0\}
 <p>We can also write this as:</p>
 <p><span class="math display">
 U_R(x_P,x_R)=\left\{\begin{matrix}
-(1+2\alpha)x−10\alpha \quad &amp;\textrm{if} \quad x \geq 0 \\[6pt]
-(1−2\beta)x+10\beta \quad &amp;\textrm{if} \quad x &lt; 0
+(1+2\alpha)x−10\alpha \quad &amp;\textrm{if} \quad x \geq 5 \\[6pt]
+(1−2\beta)x+10\beta \quad &amp;\textrm{if} \quad x &lt; 5
 \end{matrix}\right.
 </span></p>
 <p>The slope of each of these curves is twice that we saw earlier as any increase in outcome for the responder is matched by a decrease in outcome for the proposer (and vice versa).</p>
@@ -834,22 +834,7 @@ u_i(x_i,x_j)=\left\{\begin{matrix}
 <h3 data-number="48.4.1" class="anchored" data-anchor-id="the-dictator-game"><span class="header-section-number">48.4.1</span> The dictator game</h3>
 <p>Consider the following example of the dictator game. In the dictator game, the dictator makes a unilateral offer to the receiver. The game then ends. The receiver has an empty strategy set.</p>
 <p>In this version of the game, the dictator must decide between the allocations (0, 1) and (1, 5), where <span class="math inline">(x_D,x_R)</span> represent the payoffs for the dictator and receiver, respectively. The dictator’s <span class="math inline">\sigma=−1/2</span>. As the dictator has less than the other player under each distribution, <span class="math inline">\sigma</span> is the relevant parameter.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-dictator-game-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-dictator-game-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;48.1: A constrained dictator game
-</figcaption>
-<div aria-describedby="fig-dictator-game-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="distribution_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;48.1: A constrained dictator game"><img src="distribution_files/figure-html/mermaid-figure-1.png" style="width:4in;height:1.52in" class="figure-img"></a></p>
-</div>
-</div>
-</figure>
-</div>
-</div>
-</div>
+<p><a href="img/dictator-game-distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/dictator-game-distribution.png" class="img-fluid"></a></p>
 <p>We can calculate the dictator’s utility of each allocation.</p>
 <span class="math display">\begin{align*}
 U(0,1)&amp;=\sigma\times 1+(1−\sigma)\times 0 \\[6pt]
@@ -882,22 +867,7 @@ U(1,5)&amp;=\sigma\times 5+(1−\sigma)\times 1 \\[6pt]
 <p>If Linda invests, her investment will triple in value. Marco can then decide to either shut down the start-up and keep the $30 or maintain the start-up in the market and pay a $15 dividend to each of Linda and himself.</p>
 <p>If Linda does not invest, Linda keeps the $10. The start-up gets $0.</p>
 </blockquote>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-trust-game-example-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-trust-game-example-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;48.2: The trust game
-</figcaption>
-<div aria-describedby="fig-trust-game-example-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="distribution_files/figure-html/mermaid-figure-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;48.2: The trust game"><img src="distribution_files/figure-html/mermaid-figure-4.png" style="width:5in;height:1.73in" class="figure-img"></a></p>
-</div>
-</div>
-</figure>
-</div>
-</div>
-</div>
+<p><a href="img/trust-game-example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/trust-game-example.png" class="img-fluid"></a></p>
 <p>Macro, who is effectively playing a dictator game, would shut down and keep the $30. As a result, Linda would not invest.</p>
 <p>Suppose now that Linda and Marco have preferences as follows:</p>
 <p><span class="math display">
@@ -947,39 +917,9 @@ U_M(10,0)=0 \\
 U_L(10,0)=\frac{1}{3}(10)+\frac{2}{3}(0)=3.33
 \end{align*}</span>
 <p>Putting those payoffs into the extensive form of the game, we get the following:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-trust-game-example-2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-trust-game-example-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;48.3: The trust game
-</figcaption>
-<div aria-describedby="fig-trust-game-example-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="distribution_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;48.3: The trust game"><img src="distribution_files/figure-html/mermaid-figure-3.png" style="width:5in;height:1.72in" class="figure-img"></a></p>
-</div>
-</div>
-</figure>
-</div>
-</div>
-</div>
+<p><a href="img/trust-game-example-payoffs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/trust-game-example-payoffs.png" class="img-fluid"></a></p>
 <p>In this game, Marco can return a dividend for utility 15 or shut down for utility 7.5. He chooses to return the dividend. As a result, Linda will invest for utility 15, rather than not invest for utility 3.33. Linda invests.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-trust-game-example-3" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-trust-game-example-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;48.4: The trust game
-</figcaption>
-<div aria-describedby="fig-trust-game-example-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<p><a href="distribution_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;48.4: The trust game"><img src="distribution_files/figure-html/mermaid-figure-2.png" style="width:5in;height:1.72in" class="figure-img"></a></p>
-</div>
-</div>
-</figure>
-</div>
-</div>
-</div>
+<p><a href="img/trust-game-example-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/trust-game-example-solved.png" class="img-fluid"></a></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
@@ -1457,7 +1397,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "14 October 2024"
+  date: "21 October 2024"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -126,7 +126,6 @@ format:
     link-external-newwindow: true
     code-fold: true
     fig-cap-location: top
-#    mermaid-format: png (commented out as problem when doing full build)
     toc-expand: 1
     toc-title: "On this page"
 

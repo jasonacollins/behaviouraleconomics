@@ -1,5 +1,20 @@
 # Intertemporal choice
 
+## Summary
+
+- Intertemporal choice involves decisions with costs and benefits occurring at different times, which can be significant due to delayed feedback, irreversibility, and high stakes.
+- A core principle is that people tend to discount future costs and benefits, preferring earlier benefits and later costs.
+- In this subject, discrete time is used, where time occurs in a series of steps, as opposed to continuous time.
+- Streams of payoffs in discrete time can be represented using notation like $S=(t_1,x_1;t_2,x_2;...;t_n,x_n)$, where $t_i$ is the time period and $x_i$ is the payoff in that period.
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/weGUysT2fNE >}}
+
+---
+
+:::
+
 Intertemporal choice refers to decisions involving costs and benefits occurring at different times.
 
 Almost every decision is an intertemporal choice. Intertemporal choices can be important because:

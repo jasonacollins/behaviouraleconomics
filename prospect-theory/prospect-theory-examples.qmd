@@ -1,11 +1,14 @@
----
-engine: knitr #added as otherwise inline r code does not execute
----
 # Prospect theory examples
 
-In this section, I present a series of mathematical examples of prospect theory.
-
 ## Mathematical examples
+
+### Summary {.unnumbered}
+
+- In the following mathematical examples, I demonstrate the operation of prospect theory through various scenarios, illustrating how individuals make decisions under uncertainty based on reference points, loss aversion, and diminishing sensitivity to gains and losses.
+- The 50:50 gamble demonstrates loss aversion, with losses weighted more heavily than equivalent gains.
+- The 60:40 gamble shows how diminishing sensitivity and loss aversion interact to influence decision-making.
+- The gamble in the gain domain illustrates the reflection effect, where individuals are risk-averse for gains but become risk-seeking for losses.
+- Changes in wealth or reference points can significantly alter risk preferences, as shown in the examples of accepting or rejecting gambles after losses or wins.
 
 ::: {.content-visible when-format="html"}
 
@@ -14,6 +17,8 @@ In this section, I present a series of mathematical examples of prospect theory.
 ---
 
 :::
+
+In this section, I present a series of mathematical examples of prospect theory.
 
 ### A 50:50 gamble
 

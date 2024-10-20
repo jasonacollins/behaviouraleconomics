@@ -20,81 +20,17 @@ The responder can either accept or reject the offer. They make this decision kno
 
 If the responder accepts, the responder receives the offer $x$ and the proposer gets the remainder $m-x$. If the responder rejects, both players receive nothing.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-ultimatum-game-2
-%%| fig-cap: The ultimatum game
-%%| mermaid-format: png
-
-graph LR
-    A(Proposer) ---B[Offer x] --> C(Responder)
-    C ---D[Accept] --> E["(m-x, <b>x</b>)"]
-    C ---F[Reject] --> G["(0, 0)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class D,F edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class E,G payoff;
-```
+![](img/ultimatum-game-process.png)
 
 Consider this variation of the ultimatum game. In each of two scenarios, the proposer has a constrained choice of offers.
 
 In scenario 1, the proposer has a choice between offering a split of \$8 for the proposer and \$2 for the responder or \$5 for the proposer and \$5 for the responder. Responders tend to reject offers of \$2.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-ultimatum-game-scenario-1
-%%| fig-cap: Scenario 1 of the ultimatum game
-%%| mermaid-format: png
-
-graph LR
-    A(Proposer) ---B[Offer $2] --> C(Responder)
-    A(Proposer) ---D[Offer $5] --> E(Responder)
-    C ---F[Accept] --> H["(8, 2)"]
-    C ---G[Reject] --> I["(0, 0)"]
-    E ---J[Accept] --> L["(5, 5)"]
-    E ---K[Reject] --> M["(0, 0)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,G,J,K edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class H,I,L,M payoff;
-
-```
+![](img/ultimatum-game-scenario-1.png)
 
 In scenario 2, the proposer has a choice between offering a split of \$8 for the proposer and \$2 for the responder or keeping the full \$10 for themselves. Responders tend to accept offers of \$2.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-ultimatum-game-scenario-2
-%%| fig-cap: Scenario 2 of the ultimatum game
-%%| mermaid-format: png
-
-graph LR
-    A(Proposer) ---B[Offer $2] --> C(Responder)
-    A(Proposer) ---D[Offer $0] --> E(Responder)
-    C ---F[Accept] --> H["(8, 2)"]
-    C ---G[Reject] --> I["(0, 0)"]
-    E ---J[Accept] --> L["(10, 0)"]
-    E ---K[Reject] --> M["(0, 0)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,G,J,K edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class H,I,L,M payoff;
-```
+![](img/ultimatum-game-scenario-2.png)
 
 In the first scenario, responders reject offers of \$2. In the second, they accept them. How can (\$8, \$2) be better than (\$0, \$0) in one scenario but not in the other?
 
@@ -120,27 +56,7 @@ The receiver then returns to the sender some share $y$ of their total allocation
 
 The final outcome is the sender has $m-x+y$ and the receiver has $m+kx-y$.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-trust-game-3
-%%| fig-cap: The trust game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    A(Sender) ---B[Send x] --> C{Multplied <br> by k} --> D(Receiver)
-    D ---G[Return y] --> H["(m-x+y, m+kx-y)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,D node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,G edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class H payoff;
-
-```
+![](img/trust-game-process.png)
 
 The game theoretic equilibrium is for the receiver to return nothing, so the sender sends nothing.
 
@@ -174,35 +90,7 @@ Each participant secretly and simultaneously chooses how much of their endowment
 
 The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than one but less than the number of players.
 
-```{mermaid}
-%%| fig-width: 5
-%%| label: fig-public-goods-game-4
-%%| fig-cap: The public goods game
-%%| mermaid-format: png
-
-graph TD
-    classDef default fill:#FFF
-    A[Player A] ---F[Contribute x] --> K[Pot]
-    B[Player B] ---G[Contribute y] --> K[Pot]
-    C[Player C] ---H[Contribute z] --> K[Pot]
-    D[Player D] ---I[Contribute w] --> K[Pot]
-    E[Player E] ---J[Contribute v] --> K[Pot]
-
-    K ---L{Multiplied by k} --> M[Multiplied Pot]
-
-    M ---N[Receive share]--> S[Player A]
-    M ---O[Receive share]--> T[Player B]
-    M ---P[Receive share]--> U[Player C]
-    M ---Q[Receive share]--> V[Player D]
-    M ---R[Receive share]--> W[Player E]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,B,C,D,E,S,T,U,V,W node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class F,G,H,I,J,N,O,P,Q,R edge;
-
-```
+![](img/public-goods-game-process.png)
 
 In Nash equilibrium in the public goods game, nobody transfers anything to the pot. Any contributions are split between all players, so if there are more players than the multiple, which is normally the case by design, contributions result in a loss to that individual player.
 

@@ -3,6 +3,26 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Expected utility examples
 
+## Summary {.unnumbered}
+
+- In the following examples I demonstrate the operation of expected utility theory and concepts such as expected value, expected utility and certainty equivalent through various betting scenarios, illustrating how individuals with risk-averse utility functions make decisions under uncertainty.
+- In a 50:50 bet example with a logarithmic utility function, a gamble with zero expected value reduces utility, demonstrating risk aversion.
+- An 80:20 bet example shows that even risk-averse individuals may accept favourable bets, but the certainty equivalent is still less than the expected value.
+- A bet involving proportions of wealth demonstrates that positive expected value does not always lead to acceptance of a gamble for risk-averse individuals.
+- The St. Petersburg game demonstrates a paradox where the expected value is infinite, yet most people would not pay an infinite amount to play. This paradox can be resolved by introducing expected utility theory, which shows that risk-averse individuals with diminishing marginal utility would only pay a finite amount to play the game.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/EQFexIPUaFI >}}
+
+---
+
+:::
+
+## Introduction
+
 In this section, I present a series of mathematical examples of expected utility theory.
 
 ## A 50:50 bet
@@ -359,6 +379,14 @@ I have added points on the x-axis for the outcomes of the two gambles, a 40% red
 You can see that the expected utility of the gamble is lower than the utility of current wealth. They would reject an offer of this bet.
 
 ## The St. Petersburg game
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/aIdPcOiE7Ec >}}
+
+---
+
+:::
 
 The St. Petersburg game was invented by the Swiss mathematician Nicolas Bernoulli.
 

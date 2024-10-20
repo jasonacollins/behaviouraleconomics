@@ -1105,7 +1105,7 @@ W&amp;=(1000.0124655)^2 \\[6pt]
 <section id="sec-purchasing-insurance" class="level2" data-number="12.5">
 <h2 data-number="12.5" class="anchored" data-anchor-id="sec-purchasing-insurance"><span class="header-section-number">12.5</span> Purchasing insurance</h2>
 <p>An agent is considering insurance against bushfire for their house valued at <span class="math inline">H=\$1,000,000</span>. The house has a 1 in 1000 (<span class="math inline">p=0.001</span>) chance of burning down. An insurer is willing to offer full coverage for a premium (<span class="math inline">R</span>) of $1100.</p>
-<p>a) Would a risk neutral agent purchase the insurance?</p>
+<p>a) Would a risk-neutral agent purchase the insurance?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1118,7 +1118,7 @@ Answer
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>We have already calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk neutral agent would not purchase the insurance.</p>
+<p>We have already calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk-neutral agent would not purchase the insurance.</p>
 </div>
 </div>
 </div>
@@ -1136,7 +1136,8 @@ Answer
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The logarithmic utility function has diminishing marginal utility. This means that the agent will be risk averse. They will prefer a certain outcome to a gamble with the same expected value.</p>
+<p>The logarithmic utility function has diminishing marginal utility. Diminishing marginal utility is the principle the marginal utility from each additional unit decreases. In the context of wealth, this means that each additional dollar provides less satisfaction than the previous one.</p>
+<p>Diminishing marginal utility means that the agent will be risk averse. They will prefer a certain outcome to a gamble with the same expected value.</p>
 </div>
 </div>
 </div>
@@ -1156,19 +1157,19 @@ Answer
 <p>We need to compare the expected utility of purchasing insurance with the expected utility of not purchasing insurance.</p>
 <p>The expected utility of purchasing insurance is:</p>
 <p><span class="math display">\begin{align*}
-E[U(\text{I})]&amp;=\ln(W-R) \\
-&amp;=\ln(1,008,900) \\
+E[U(\text{I})]&amp;=\ln(W-R) \\[6pt]
+&amp;=\ln(1,008,900) \\[6pt]
 &amp;=13.8244\\
 \end{align*}</span></p>
 <p>The expected utility of not purchasing insurance is:</p>
 <p><span class="math display">\begin{align*}
-E[U(\neg \text{I})]&amp;=0.999\times \ln(W)+0.001\times \ln(W-H)) \\
-&amp;=0.999\times \ln(1,010,000)+0.001\times \ln(10,000) \\
+E[U(\neg \text{I})]&amp;=0.999\times \ln(W)+0.001\times \ln(W-H)) \\[6pt]
+&amp;=0.999\times \ln(1,010,000)+0.001\times \ln(10,000) \\[6pt]
 &amp;=13.8208
 \end{align*}</span></p>
-<p>The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will purchase insurance. They are risk averse.</p>
-<p>The following diagram illustrates. The agent’s utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked - wealth after losing the house when uninsured <span class="math inline">(W-H)</span>, wealth after paying the insurance premium <span class="math inline">(W-R)</span>, and wealth if uninsured but the house does not burn down <span class="math inline">(W)</span>.</p>
-<p>The expected utility of not purchasing insurance is on the dash-dot line between <span class="math inline">U(W-H)</span> and <span class="math inline">U(W)</span>. The precise point is <span class="math inline">p</span> along this line from <span class="math inline">U(W)</span> (or <span class="math inline">1-p</span> along the line from <span class="math inline">U(W-H)</span>). This point aligns with the expected value of leaving the house uninsured <span class="math inline">E[\neg I]</span>.</p>
+<p>The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will purchase insurance.</p>
+<p>The following diagram illustrates. The agent’s utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked: wealth after losing the house when uninsured <span class="math inline">(W-H)</span>, wealth after paying the insurance premium <span class="math inline">(W-R)</span>, and wealth if uninsured but the house does not burn down <span class="math inline">(W)</span>.</p>
+<p>The expected utility of not purchasing insurance is on the dash-dot line between <span class="math inline">U(W-H)</span> and <span class="math inline">U(W)</span>. The location of this point is determined by the probability <span class="math inline">p</span> of incurring a loss. This point lies at a distance of <span class="math inline">p</span> from <span class="math inline">U(W)</span> along the line (or equivalently, at a distance of <span class="math inline">1-p</span> from <span class="math inline">U(W-H)</span>). This point aligns with the expected value of leaving the house uninsured <span class="math inline">E[\neg I]</span>.</p>
 <p>The utility of purchasing insurance (<span class="math inline">U(W-R)</span>) is greater than the expected utility of not purchasing insurance <span class="math inline">(E[U(\neg I)])</span>. The agent will purchase insurance.</p>
 <div class="cell">
 <details class="code-fold">
@@ -1254,7 +1255,22 @@ Figure&nbsp;12.2: Insurance choice by a risk averse expected utility maximiser
 </div>
 </div>
 <p>What is the intuition for this agent’s purchase of insurance?</p>
-<p>Diminishing marginal utility means that the utility of average wealth is greater than the average utility of wealth (e.g.&nbsp;<span class="math inline">U(\$0)+U(\$200)&lt;U(\$100)+U(\$100)</span>). Therefore, their expected utility is higher when wealth is distributed evenly across the possible states of the world rather than concentrated in one state - or in the case of a disaster, very low in one state. The consumer insures as a way of evenly distributing wealth across all possible states.</p>
+<p>Consider the following scenario. You will experience one of two outcomes with equal probability: $0 in one case and $200 in the other. Your average wealth in this scenario is:</p>
+<p><span class="math display">
+\frac{\$0 + \$200}{2} = \$100
+</span></p>
+<p>Your average utility (which is expected utility) is:</p>
+<p><span class="math display">
+\frac{U(\$0) + U(\$200)}{2}
+</span></p>
+<p>What if you can insure (costlessly) to give you wealth of $100 with certainty? In that case, your average wealth is $100, as per the first scenario, with utility of <span class="math inline">U(\$100)</span>.</p>
+<p>Does insurance result in higher utility?</p>
+<p>For a risk-averse person with diminishing marginal utility, the jump from $0 to $100 provides a larger increase in utility than the jump from $100 to $200. Therefore:</p>
+<p><span class="math display">
+U(\$100) &gt; \frac{U(\$0) + U(\$200)}{2}
+</span></p>
+<p>The utility of average wealth is greater than the average utility of wealth.</p>
+<p>This inequality demonstrates why people with diminishing marginal utility purchase insurance. When wealth is unevenly distributed across potential outcomes, the utility gained from the best outcome is relatively less than the utility lost from the worst outcome. Insurance helps distribute wealth more evenly across all possible outcomes. In good times, the person has slightly less wealth (due to the premium). In bad times, the person avoids a catastrophic loss. This even distribution of wealth across possible outcomes results in higher expected utility for the consumer.</p>
 </div>
 </div>
 </div>
@@ -1824,7 +1840,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

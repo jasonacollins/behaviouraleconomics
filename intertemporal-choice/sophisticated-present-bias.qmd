@@ -3,6 +3,27 @@ engine: knitr #added as otherwise inline r code does not execute
 ---
 # Sophisticated present bias
 
+## Summary {.unnumbered}
+
+- Present-biased agents can be categorised as naive or sophisticated, based on their awareness of future preference reversals.
+- Naive agents incorrectly believe their future selves will discount rewards consistently, leading to time-inconsistent choices.
+- Sophisticated agents accurately predict their future preference reversals and plan accordingly.
+- Naive agents use forward reasoning in decision-making, while sophisticated agents use backward reasoning.
+- The following examples show that the decision-making processes of naive and sophisticated agents can lead to different choices, even with identical discount factors.
+- Sophisticated agents may sometimes choose worse immediate outcomes to avoid even worse future outcomes due to anticipated preference reversals. They tend to take action earlier than naive agents, a behaviour known as "prepoperation".
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/B3rIbLo55R0 >}}
+
+---
+
+:::
+
+## Introduction
+
 Suppose a present-biased agent considers whether they prefer a smaller, sooner payoff or a larger, later payoff. They decide they will wait for the larger, later payoff. Time passes until the smaller pay-off becomes immediately available. They change their mind and take the smaller payoff.
 
 Why did the agent initially choose the larger payoff when they would take the smaller payoff? Were they aware of the likely outcome of their preferences? If they were aware, they might anticipate changing their mind and plan accordingly.
@@ -58,6 +79,14 @@ In contrast, the sophisticated present-biased agent makes their plans by backwar
 ![](img/sophisticated-9.png)
 
 ## Examples
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/2fmnjKEMa_k >}}
+
+---
+
+:::
 
 The difference between naive and sophisticated present-biased agents is best illustrated through examples.
 

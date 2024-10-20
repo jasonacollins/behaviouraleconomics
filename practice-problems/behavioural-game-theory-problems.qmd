@@ -336,29 +336,7 @@ a\) Use concepts from game theory to explain why the firm might have held that b
 
 We can draw the extensive form of the game as follows:
 
-```{mermaid}
-%%| fig-width: 6
-%%| label: fig-punishment
-%%| fig-cap: Extensive form of the game
-%%| mermaid-format: png
-
-graph LR
-    classDef default fill:#FFF
-    C(Firm) ---D[Store credit] --> E(Customer)
-    C ---F[Refund] --> G["(refund, -refund)"]
-    E ---H[Complain] --> I["(refund-complaint, -complaint)"]
-    E ---J[Do not complain] --> K["(store credit, 0)"]
-
-    classDef node fill:#FFF, stroke:#000;
-    class A,C,E node;
-
-    classDef edge fill:#FFF, stroke:#FFF;
-    class B,D,F,H,J edge;
-
-    classDef payoff fill:#FFF, stroke:#FFF;
-    class G,I,K payoff;
-
-```
+![](img/faulty-product.png)
 
 We work through this game by backward induction. If the cost to to the customer of complaining is greater than the benefit of obtaining the refund, the customer will not complain. In that case, the firm will offer the store credit.
 

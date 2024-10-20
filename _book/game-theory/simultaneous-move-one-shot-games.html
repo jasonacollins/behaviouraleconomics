@@ -649,6 +649,13 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 <li>The prisoner’s dilemma is a classic example of such a game, where two prisoners must decide whether to confess or remain silent.</li>
 <li>In game theory, a dominant strategy is one that yields the highest payoff regardless of the opponent’s actions. In the prisoner’s dilemma, confessing is the dominant strategy for both players.</li>
 <li>A Nash equilibrium occurs when each player’s strategy is the best response to the other’s strategy. In the prisoner’s dilemma, the Nash equilibrium is (Confess, Confess), despite this not being the optimal outcome for either player.</li>
+<li>The examples showcase different types of simultaneous-move one-shot games, demonstrating concepts such as multiple equilibria, coordination problems, and the tension between individual and collective outcomes.
+<ul>
+<li>The driving game demonstrates a coordination game with two Nash equilibria: (Left, Left) and (Right, Right).</li>
+<li>Matching pennies is a zero-sum game with no pure-strategy Nash equilibria.</li>
+<li>The stag hunt game shows a coordination game with two Nash equilibria: (Stag, Stag) and (Hare, Hare), highlighting the tension between cooperation and individual safety.</li>
+<li>The public goods game illustrates the conflict between individual and collective interests, with the Nash equilibrium being no contribution, despite full contribution being Pareto optimal.</li>
+</ul></li>
 </ul>
 <hr>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/dT1Hr3xAH-A" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
@@ -668,19 +675,46 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 <p>The police place each prisoner in a separate cell where they cannot communicate with each other. The police then offer both prisoners a deal: confess and they will let them go free despite the minor crime, but they will then have the evidence required to give their criminal partner a massive sentence for the serious crime.</p>
 <p>If neither confesses, the police will have insufficient evidence to get a conviction for the major crime, so they will both receive a short sentence for the minor crime. If both confess, they will both get a longer sentence, but with some reduction in sentence relative to if they didn’t confess.</p>
 <p>The normal form of the game is as follows:</p>
-<p><a href="img/prisoners-dilemma-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/prisoners-dilemma-1.jpg" class="img-fluid"></a></p>
+<div id="fig-prisoners-dilemma" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-prisoners-dilemma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.1: The prisoner’s dilemma
+</figcaption>
+<div aria-describedby="fig-prisoners-dilemma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/prisoners-dilemma-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;39.1: The prisoner’s dilemma"><img src="img/prisoners-dilemma-1.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 <p>Prisoners A and B have two actions available: to confess and to stay silent. The numbers in the matrix represent the payoffs from each combination of actions, in this case, the number of years they will serve in prison. A higher number is therefore a worse outcome. The left number in each cell of the matrix represents the payoff to the row player, Prisoner A. The number on the right of each matrix cell is the payoff to the column player, Prisoner B.</p>
 <p>For example, if both Prisoner A and Prisoner B choose to confess, they each receive a prison sentence of five years. If Prisoner A confesses and Prisoner B remains silent, Prisoner A gets off without a prison sentence, whereas Prisoner B gets twenty years.</p>
 <p>Equipped with the normal form of the game, we can determine what each player wants to do in response to each action of the other player.</p>
 <p>For example, we can see that if Prisoner B confesses, Prisoner A can either confess and receive five years in prison, or remain silent and receive 20 years in prison. They would choose to confess.</p>
 <p>We indicate the preferred action in response to another player’s action by circling the relevant payoff. For example:</p>
-<p><a href="img/prisoners-dilemma-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/prisoners-dilemma-2.jpg" class="img-fluid"></a></p>
+<div id="fig-prisoners-dilemma-circle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-prisoners-dilemma-circle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.2: The prisoner’s dilemma: representing preferred actions
+</figcaption>
+<div aria-describedby="fig-prisoners-dilemma-circle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/prisoners-dilemma-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;39.2: The prisoner’s dilemma: representing preferred actions"><img src="img/prisoners-dilemma-2.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 <p>If Prisoner B remains silent, Prisoner A could either confess and escape without a sentence, or remain silent and receive a sentence of one year in prison. They would prefer to confess.</p>
 <p>We can then work through the same process for Prisoner B’s actions.</p>
 <p>If Prisoner A confesses, Prisoner B can either confess and receive five years in prison, or remain silent and receive 20 years in prison. They would choose to confess.</p>
 <p>If Prisoner A remains silent, Prisoner B could either confess, and escape without a sentence, or remain silent, and receive a sentence of one year in prison. They would prefer to confess.</p>
 <p>Indicating this set of preferred actions in response to that of the other player gives us this completed matrix.</p>
-<p><a href="img/prisoners-dilemma-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/prisoners-dilemma-3.jpg" class="img-fluid"></a></p>
+<div id="fig-prisoners-dilemma-solved" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-prisoners-dilemma-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.3: The prisoner’s dilemma solved
+</figcaption>
+<div aria-describedby="fig-prisoners-dilemma-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/prisoners-dilemma-3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;39.3: The prisoner’s dilemma solved"><img src="img/prisoners-dilemma-3.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 </section>
 </section>
 <section id="dominant-strategies" class="level2" data-number="39.3">
@@ -707,33 +741,87 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 <section id="the-driving-game" class="level3" data-number="39.5.1">
 <h3 data-number="39.5.1" class="anchored" data-anchor-id="the-driving-game"><span class="header-section-number">39.5.1</span> The driving game</h3>
 <p>Consider the following game between two players deciding what side of the road to drive on. They can drive on the left or the right. If they both drive on the left or right when they approach each other, they will successfully pass. If one drives on the left and the other on the right, they will crash.</p>
-<p><a href="img/driving-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/driving-game-1.jpg" class="img-fluid"></a></p>
+<div id="fig-driving-game" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-driving-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.4: The driving game
+</figcaption>
+<div aria-describedby="fig-driving-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/driving-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;39.4: The driving game"><img src="img/driving-game-1.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 <p>What are the Nash equilibria?</p>
 <p>If Driver 2 drives on the left, Driver 1 can either successfully drive on the left, or drive on the right and crash. They would choose to drive on the left. If Driver 2 drives on the right, Driver 1 can either successfully drive on the right, or drive on the left and crash. They would choose to drive on the right.</p>
 <p>Similarly, if Driver 1 drives on the left, Driver 2 can either successfully drive on the left, or drive on the right and crash. They would choose to drive on the left. If Driver 1 drives on the right, Driver 2 can either successfully drive on the right, or drive on the left and crash. They would choose to drive on the right.</p>
 <p>We can see from the matrix that there are two Nash equilibria. The Nash equilibria are (Left, Left) and (Right, Right). If both drivers are driving on the left, neither has an incentive to change their strategy. If both drivers are driving on the right, again, neither has an incentive to change.</p>
-<p><a href="img/driving-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/driving-game-2.jpg" class="img-fluid"></a></p>
+<div id="fig-driving-game-solved" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-driving-game-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.5: The driving game solved
+</figcaption>
+<div aria-describedby="fig-driving-game-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/driving-game-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;39.5: The driving game solved"><img src="img/driving-game-2.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 </section>
 <section id="matching-pennies" class="level3" data-number="39.5.2">
 <h3 data-number="39.5.2" class="anchored" data-anchor-id="matching-pennies"><span class="header-section-number">39.5.2</span> Matching pennies</h3>
 <p>The next game, called matching pennies, involves two players, Even and Odd, who each have a penny. Each player must select one side of the penny and simultaneously show the penny to the other player. If the pennies match, Even wins. If they don’t match, Odd wins.</p>
-<p><a href="img/matching-pennies-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/matching-pennies-1.jpg" class="img-fluid"></a></p>
+<div id="fig-matching-pennies" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-matching-pennies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.6: Matching pennies
+</figcaption>
+<div aria-describedby="fig-matching-pennies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/matching-pennies-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;39.6: Matching pennies"><img src="img/matching-pennies-1.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 <p>What are the Nash equilibria?</p>
 <p>To determine this, we work through the matrix as we did in the previous example.</p>
 <p>If Odd shows heads, Even can either show heads and win, or show tails and lose. They would choose to show heads. If Odd shows tails, Even can either show tails and win, or show heads and lose. They would choose to show tails.</p>
 <p>Similarly, if Even shows heads, Odd can either show tails and win, or show heads and lose. They would choose to show tails. If Even shows tails, Odd can either show heads and win, or show tails and lose. They would choose to show tails.</p>
-<p><a href="img/matching-pennies-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/matching-pennies-2.jpg" class="img-fluid"></a></p>
+<div id="fig-matching-pennies-solved" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-matching-pennies-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.7: Matching pennies solved
+</figcaption>
+<div aria-describedby="fig-matching-pennies-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/matching-pennies-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;39.7: Matching pennies solved"><img src="img/matching-pennies-2.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 <p>There are no pure-strategy Nash equilibria for this game. For any combination of heads and tails, one of the players would want to change their choice.</p>
 <p>There are what are called “mixed-strategy Nash equilibria” in this game, but mixed-strategy equilibria are beyond the scope of this subject.</p>
 </section>
 <section id="the-stag-hunt" class="level3" data-number="39.5.3">
 <h3 data-number="39.5.3" class="anchored" data-anchor-id="the-stag-hunt"><span class="header-section-number">39.5.3</span> The stag hunt</h3>
 <p>Consider the “stag hunt game” between two players deciding what animal they will hunt. Both hunters need to cooperate to catch the stag. They can catch a hare by themselves, but it provides less meat.</p>
-<p><a href="img/stag-hunt-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/stag-hunt-1.jpg" class="img-fluid"></a></p>
+<div id="fig-stag-hunt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-stag-hunt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.8: The stag hunt game
+</figcaption>
+<div aria-describedby="fig-stag-hunt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/stag-hunt-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;39.8: The stag hunt game"><img src="img/stag-hunt-1.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 <p>What are the Nash equilibria?</p>
 <p>If Hunter 2 hunts the stag, Hunter 1 can either hunt the stag and catch it, or hunt the hare and catch it. They would choose to hunt the stag as it gives a payoff of 3 compared to 1. If Hunter 2 hunts the hare, Hunter 1 can either hunt the stag and not catch it, or hunt the hare and catch it. They would choose to hunt the hare as it gives a payoff of 1 compared to 0.</p>
 <p>Similarly, if Hunter 1 hunts the stag, Hunter 2 can either hunt the stag and catch it, or hunt the hare and catch it. They would choose to hunt the stag as it gives a payoff of 3 compared to 1. If Hunter 1 hunts the hare, Hunter 2 can either hunt the stag and not catch it, or hunt the hare and catch it. They would choose to hunt the hare as it gives a payoff of 1 compared to 0.</p>
-<p><a href="img/stag-hunt-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/stag-hunt-2.jpg" class="img-fluid"></a></p>
+<div id="fig-stag-hunt-solved" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-stag-hunt-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.9: The stag hunt game solved
+</figcaption>
+<div aria-describedby="fig-stag-hunt-solved-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/stag-hunt-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;39.9: The stag hunt game solved"><img src="img/stag-hunt-2.jpg" class="img-fluid figure-img" style="width:70.0%"></a>
+</div>
+</figure>
+</div>
 <p>The Nash equilibria are (Stag, Stag) and (Hare, Hare). On either pair of strategies, neither player has incentive to change. It is an open question, however, as to which Nash equilibrium might emerge if they were to play the game.</p>
 </section>
 <section id="the-public-goods-game" class="level3" data-number="39.5.4">
@@ -743,38 +831,38 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 <p>Each participant secretly and simultaneously chooses how much of their endowment they wish to contribute to a public pot.</p>
 <p>The money in the public pot is multiplied by some amount and split evenly between the players. Typically, the multiple applied to the pot is greater than 1, but less than the number of players.</p>
 <p>For example, five players might each be given $10, with the pot doubled. Suppose they each contribute $5 of their $10 endowment to the pot. The $25 contributed to the pot is multiplied by 2 to a total of $50. Each player then receives $10 from the pot, giving them $15 in total.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="public-goods-game">
-<div>
-<p><a href="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-1.png" style="width:5in;height:4.42in"></a></p>
+<div id="fig-public-goods-game-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-public-goods-game-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.10: The public goods game
+</figcaption>
+<div aria-describedby="fig-public-goods-game-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/public-goods-game-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;39.10: The public goods game"><img src="img/public-goods-game-1.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
-<p>The public goods game</p>
-</div>
-</div>
+</figure>
 </div>
 <p>In Nash equilibrium in the public goods game, nobody transfers anything to the pot. Any contributions are split between all players, so if there are more players than the multiple, which is normally the case by design, contributions result in a loss to that individual player.</p>
 <p>Consider the previous game, but this time Player E contributes nothing. There is then $20 in the pot, which is doubled to $40. The pot is then split equally between the players, each receiving $8 from the pot. The result is that Player E is better off having not contributed, ending with $18, compared to the $15 they would have received had they contributed $5 like the other players.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="public-goods-game-2">
-<div>
-<p><a href="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-3.png" style="width:5in;height:4.42in"></a></p>
+<div id="fig-public-goods-game-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-public-goods-game-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.11: The public goods game with defection
+</figcaption>
+<div aria-describedby="fig-public-goods-game-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/public-goods-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;39.11: The public goods game with defection"><img src="img/public-goods-game-2.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
-<p>The public goods game</p>
-</div>
-</div>
+</figure>
 </div>
 <p>The Pareto optimal result, however, is for all players to contribute their full endowment and each receives back their multiplied contribution. However, the Pareto optimal result is not stable, as each player has an incentive to defect and contribute nothing.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="public-goods-game-3">
-<div>
-<p><a href="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="simultaneous-move-one-shot-games_files/figure-html/mermaid-figure-2.png" style="width:5in;height:4.42in"></a></p>
+<div id="fig-public-goods-game-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-public-goods-game-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;39.12: The public goods game with cooperation
+</figcaption>
+<div aria-describedby="fig-public-goods-game-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/public-goods-game-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;39.12: The public goods game with cooperation"><img src="img/public-goods-game-3.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
-<p>The public goods game</p>
-</div>
-</div>
+</figure>
 </div>
 
 
@@ -1245,7 +1333,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

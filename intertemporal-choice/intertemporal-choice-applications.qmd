@@ -1,5 +1,26 @@
 # Intertemporal choice applications
 
+## Summary {.unnumbered}
+
+- The following examples demonstrate how understanding intertemporal choice can inform policy design and product development to help individuals overcome present bias and achieve long-term goals.
+- People willingly choose illiquid savings accounts with equal or lower interest rates, suggesting demand for commitment devices among sophisticated, present-biased agents.
+- A voluntary commitment product involving forfeitable deposits increased the likelihood of quitting smoking, demonstrating the effectiveness of commitment devices in behaviour change.
+- Default effects significantly influence organ donor registration rates, potentially due to present bias or rational cost-benefit calculations.
+- The Save More Tomorrow program successfully increases retirement savings by mitigating loss aversion and present bias.
+- ANZ Bank's Progress Saver and Term Deposit accounts illustrate how present bias and the demand for commitment devices influence consumer financial decisions.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/cWOxeFP9aT4 >}}
+
+---
+
+:::
+
+## Introduction
+
 In this part, I discuss several applications of the intertemporal choice concepts we have covered.
 
 ## Savings
