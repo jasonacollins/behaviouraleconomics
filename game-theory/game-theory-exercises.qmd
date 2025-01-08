@@ -101,7 +101,8 @@ a\) Draw the extensive form representation of the above sequential game.
 ::: {.callout-tip collapse="true"}
 ## Answer
 
-![](img/applied-trust-1.jpg)
+![](img/investment-game.png)
+
 :::
 
 b\) What is the equilibrium of this game if Linda and Marco are purely self-interested?
@@ -111,7 +112,7 @@ b\) What is the equilibrium of this game if Linda and Marco are purely self-inte
 
 Marco will shutdown (payoff 30 versus payoff of 15), so Linda will not invest (payoff of 10 versus payoff of zero).
 
-![](img/applied-trust-2.jpg)
+![](img/investment-game-solved.png)
 
 :::
 

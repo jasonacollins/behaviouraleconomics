@@ -3,7 +3,8 @@
 ## Summary {.unnumbered}
 
 - Strategic moves are actions that change the game being played, typically from a single-stage to a two-stage game. They come in two forms: unconditional (commitments) and conditional (threats and promises).
-- For strategic moves to be effective, they must be observable, irreversible, and credible. Credibility is crucial. If carrying out a threat or promise is too costly for the player making it, it won't influence the other player's actions.
+- For commitments to be effective, they must be observable and irreversible. 
+- Conditional strategic moves must be credible. If carrying out a threat or promise is too costly for the player making it, the threat or promise won't influence the other player's actions.
 - The game of "chicken" illustrates how strategic moves can change outcomes. Originally, this game has two pure-strategy Nash equilibria: (Straight, Swerve) and (Swerve, Straight). However, if one player commits to going straight (e.g., by removing their steering wheel), it changes the Nash equilibrium to favour that player.
 
 ---
@@ -54,7 +55,7 @@ Strategic moves come in two forms:
 
 An unconditional strategic move is a commitment.  For example, removing your steering wheel in chicken is a commitment.
 
-The commitment needs to be observable and irreversible:
+The commitment needs to be observable and irreversible.
 
 If your opponent cannot observe your commitment, you can claim to have made the commitment when you have not.
 
@@ -66,11 +67,9 @@ A conditional strategic move involves specifying to your opponent how you will r
 
 A threat involves specifying negative consequences to the other player if they do not play as you wish. ”If you don’t clean your room, you won’t get dessert.”
 
-A promise involves specifying positive consequences to the other player if they do play as you wish. “If you clean your room, you can have dessert.”
+A promise involves specifying positive consequences to the other player if they play as you wish. “If you clean your room, you can have dessert.”
 
-### Credibility of strategic moves
-
-Commitments, threats and promises only achieve their objective if they are credible. That is, they only work if the other player believes they will be carried out as stated.
+Threats and promises only achieve their objective if they are credible. That is, they only work if the other player believes they will be carried out as stated.
 
 Sticking to a commitment and carrying out a threat or a promise typically reduces the possible actions of the player. If the proposer loses too much from carrying out a threat or promise, they will not carry it out.
 
