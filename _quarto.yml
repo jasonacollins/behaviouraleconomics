@@ -48,15 +48,18 @@ book:
         - intertemporal-choice/preference-over-profiles.qmd
         - intertemporal-choice/intertemporal-choice-applications.qmd
         - intertemporal-choice/intertemporal-choice-exercises.qmd
-    - part: beliefs/beliefs.qmd
+    - part: probability-theory/probability-theory.qmd
       chapters: 
-        - beliefs/probability-foundations.qmd
-        - beliefs/bayes-rule.qmd
-        - beliefs/heuristics.qmd
-        - beliefs/biases-in-probability-judgment.qmd
-        - beliefs/heuristics-and-the-bias-variance-trade-off.qmd
-        - beliefs/overconfidence.qmd
-        - beliefs/beliefs-exercises.qmd
+        - probability-theory/probability-foundations.qmd
+        - probability-theory/bayes-rule.qmd
+        - probability-theory/probability-theory-exercises.qmd
+    - part: heuristics-and-biases/heuristics-and-biases.qmd
+      chapters: 
+        - heuristics-and-biases/heuristics.qmd
+        - heuristics-and-biases/biases-in-probability-judgment.qmd
+        - heuristics-and-biases/heuristics-and-the-bias-variance-trade-off.qmd
+        - heuristics-and-biases/overconfidence.qmd
+        - heuristics-and-biases/heuristics-and-biases-exercises.qmd
     - part: game-theory/game-theory.qmd
       chapters:
         - game-theory/simultaneous-move-one-shot-games.qmd

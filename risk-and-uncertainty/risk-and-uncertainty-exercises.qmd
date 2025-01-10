@@ -19,53 +19,6 @@ E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
 \end{align*}
 :::
 
-## Expected value of insurance {#sec-expected-value-of-insurance}
-
-An agent is considering insurance against bushfire for their house valued at $H=\$1,000,000$. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for a premium ($R$) of \$1100.
-
-a\) What is the expected value of purchasing insurance?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-If the agent purchases insurance, they pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.
-
-$$
-E[\text{I}]=-R=-\$1,100
-$$
-
-The expected value of purchasing insurance is the guaranteed loss of the premium, \$1100.
-
-You could also think of the expected value of purchasing insurance as involving:
-
-- in 1 in 1000 instances, the loss of the house and the insurance payout in case of fire, minus the cost of the premium
-- in the other 999 in 1000 instances, payment of the premium only.
- 
-In that case, you would write:
-
-\begin{align*}
-E[\text{I}]&=p\times(-H+H-R)+(1-p)\times(-R) \\[6pt]
-&=0.001\times(-1000000+1000000-1100)+0.999\times(-1100) \\[6pt]
-&=-\$1,100
-\end{align*}
-
-This gives the same answer as the first method.
-:::
-
-b\) What is the expected value of not purchasing insurance?
-
-::: {.callout-tip collapse="true"}
-## Answer
-
-If the agent does not purchase insurance, they face the 1 in 1000 possibility of an uninsured loss.
-
-\begin{align*}
-E[\neg \text{I}]&=p\times(-H) \\[6pt]
-&=-0.001\times 1000000 \\[6pt]
-&=-\$1000
-\end{align*}
-:::
-
 ## A bet or a certain payment?
 
 Anika is an expected utility maximiser with the following utility function:
@@ -366,14 +319,60 @@ Intuitively, as the agent's wealth increases their utility function becomes incr
 
 An agent is considering insurance against bushfire for their house valued at $H=\$1,000,000$. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for a premium ($R$) of \$1100.
 
-a\) Would a risk-neutral agent purchase the insurance?
+a\) What is the expected value of purchasing insurance?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
-We have already calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk-neutral agent would not purchase the insurance.
+
+If the agent purchases insurance, they pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.
+
+$$
+E[\text{I}]=-R=-\$1,100
+$$
+
+The expected value of purchasing insurance is the guaranteed loss of the premium, \$1100.
+
+You could also think of the expected value of purchasing insurance as involving:
+
+- in 1 in 1000 instances, the loss of the house and the insurance payout in case of fire, minus the cost of the premium
+- in the other 999 in 1000 instances, payment of the premium only.
+ 
+In that case, you would write:
+
+\begin{align*}
+E[\text{I}]&=p\times(-H+H-R)+(1-p)\times(-R) \\[6pt]
+&=0.001\times(-1000000+1000000-1100)+0.999\times(-1100) \\[6pt]
+&=-\$1,100
+\end{align*}
+
+This gives the same answer as the first method.
+
 :::
 
-b\) Suppose an agent has a logarithmic utility function ($U(x)=\ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000. 
+b\) What is the expected value of not purchasing insurance?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If the agent does not purchase insurance, they face the 1 in 1000 possibility of an uninsured loss.
+
+\begin{align*}
+E[\neg \text{I}]&=p\times(-H) \\[6pt]
+&=-0.001\times 1000000 \\[6pt]
+&=-\$1000
+\end{align*}
+:::
+
+c\) Would a risk-neutral agent purchase the insurance?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Above, we calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk-neutral agent would not purchase the insurance.
+
+:::
+
+d\) Suppose an agent has a logarithmic utility function ($U(x)=\ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000. 
 
 Are they risk seeking, risk neutral or risk averse?
 
@@ -386,7 +385,7 @@ Diminishing marginal utility means that the agent will be risk averse. They will
 
 :::
 
-c\) Would this agent with logarithmic utility purchase the insurance? 
+e\) Would this agent with logarithmic utility purchase the insurance? 
 
 ::: {.callout-tip collapse="true"}
 ## Answer

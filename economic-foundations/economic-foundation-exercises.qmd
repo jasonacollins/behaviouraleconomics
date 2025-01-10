@@ -63,3 +63,39 @@ If we read "narrowly self-interested" to mean that they make decisions in accord
 
 Similarly, the statement "pursues his subjectively defined ends optimally" accords with the idea that under the axioms of completeness and transitivity, the consumer behaves as if they have a utility function $U(x_i)$ over outcomes $x_i$. They are able to choose between any two options. They also do not make errors (although randomness can be built into utility functions). This definition of "optimally" is narrower than might be used in common speech.
 :::
+
+## Apples and oranges
+
+Elmer claims he has no preference between apples and oranges and is genuinely indifferent between the two. Is this stance consistent with the completeness axiom? Explain why or why not. (2 marks) [200 word limit.]
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Elmer's stance of being indifferent between apples and oranges is consistent with the completeness axiom.
+
+The completeness axiom states that for any two options A and B, an individual can always specify exactly one of these three possibilities: A is preferred to B, B is preferred to A, or the individual is indifferent between A and B.
+
+Elmer's claim of indifference between apples and oranges satisfies this axiom. He has a clear preference relation between the two options (indifference), which is one of the three possibilities allowed by the completeness axiom.
+
+:::
+
+## Small or medium coffee?
+
+Sam's local cafe offers two sizes of coffee: small and regular. Each day, Sam orders a small coffee.
+
+The cafe then introduces a new large size. Sam starts ordering the regular.
+
+What axiom is Sam violating? Explain. (2 marks) [200 word limit]
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Sam's action is inconsistent with the independence of irrelevant alternatives.
+
+Under the independence of irrelevant alternatives, if A is preferred to B, then this preference should remain unchanged in the presence of a third option C. 
+
+Initially, Sam prefers small to regular. After the introduction of the large size, Sam switches to preferring regular to small. This change in preference between small and regular, triggered solely by the presence of the large option (which Sam doesn't even choose), contradicts the axiom.
+
+This scenario does not involve probabilities, as the independence axiom is defined, so we can't evaluate it in terms of the independence axiom.
+
+:::

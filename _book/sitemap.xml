@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/economic-foundations/economic-foundation-exercises.html</loc>
-    <lastmod>2024-07-26T01:38:06.604Z</lastmod>
+    <lastmod>2025-01-10T03:03:47.495Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/notation-and-mathematical-background.html</loc>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/risk-and-uncertainty-exercises.html</loc>
-    <lastmod>2024-08-31T21:25:31.949Z</lastmod>
+    <lastmod>2025-01-10T02:38:40.506Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reference-dependence.html</loc>
@@ -129,32 +129,36 @@
     <lastmod>2024-09-09T09:57:15.447Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/probability-foundations.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/probability-foundations.html</loc>
     <lastmod>2024-09-20T06:12:51.365Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/bayes-rule.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/bayes-rule.html</loc>
     <lastmod>2024-09-20T06:08:38.867Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/heuristics.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/probability-theory-exercises.html</loc>
+    <lastmod>2025-01-10T03:32:17.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/heuristics.html</loc>
     <lastmod>2024-09-20T01:26:18.220Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/biases-in-probability-judgment.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/biases-in-probability-judgment.html</loc>
     <lastmod>2024-09-20T02:28:30.898Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/heuristics-and-the-bias-variance-trade-off.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/heuristics-and-the-bias-variance-trade-off.html</loc>
     <lastmod>2024-09-20T02:58:12.525Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/overconfidence.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/overconfidence.html</loc>
     <lastmod>2024-09-20T03:04:10.248Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/beliefs-exercises.html</loc>
-    <lastmod>2024-10-07T03:15:25.397Z</lastmod>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/heuristics-and-biases-exercises.html</loc>
+    <lastmod>2025-01-10T03:32:13.824Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/simultaneous-move-one-shot-games.html</loc>
@@ -253,8 +257,12 @@
     <lastmod>2024-10-17T02:45:50.463Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/beliefs/beliefs.html</loc>
-    <lastmod>2024-10-17T02:40:05.152Z</lastmod>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/probability-theory.html</loc>
+    <lastmod>2025-01-10T03:06:44.486Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/heuristics-and-biases.html</loc>
+    <lastmod>2025-01-10T03:37:18.839Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/game-theory.html</loc>
@@ -270,6 +278,6 @@
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf</loc>
-    <lastmod>2025-01-08T07:21:51.857Z</lastmod>
+    <lastmod>2025-01-10T03:52:43.556Z</lastmod>
   </url>
 </urlset>

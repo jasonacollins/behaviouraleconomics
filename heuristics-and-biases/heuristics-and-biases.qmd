@@ -1,0 +1,13 @@
+# Heuristics and biases
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/Ceor2U7Fy3Q >}}
+
+---
+
+:::
+
+To analyse decision-making under risk and uncertainty, we need to consider how people form beliefs and compute probabilities in any decision.
+
+In this part, I will discuss several heuristics that are proposed to be used in probability judgment. This sets a basis to examine biases in probability judgment and the heuristics and models that have been proposed as explanations for these biases. As a contrast, we will also examine how heuristics can function as effective decision-making tools. Finally, I will consider several dimensions of overconfidence.

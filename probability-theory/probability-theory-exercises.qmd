@@ -1,0 +1,363 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Probability theory exercises
+
+## Judging a fund manager
+
+You want to know if a fund manager is skilled as you believe skilled management can lead to outperformance. The following is known:
+
+-   20% of fund managers are skilled.
+
+-   If a fund manager is skilled, the probability that they outperform the market is 80%.
+
+-   If a fund manager is unskilled, the probability that they outperform the market is 40%.
+
+You observe an outperforming fund manager. What is the probability that the fund manager is skilled?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We calculate the solution using Bayes' rule.
+
+$$
+P(\text{skilled}|\text{outperform})=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})}
+$$
+
+We can calculate $P(outperform)$ using the law of total probability.
+
+```{=tex}
+\begin{align*}
+P(\text{outperform})&=P(\text{outperform}|\text{skilled})P(\text{skilled})+P(\text{outperform}|\text{unskilled})P(\text{unskilled}) \\[6pt]
+&=0.8\times 0.2+0.4\times 0.8 \\[6pt]
+&=`r PO=0.8*0.2+0.4*0.8; PO`
+\end{align*}
+```
+
+Inputting this into Bayes' rule, we get:
+
+```{=tex}
+\begin{align*}
+P(\text{skilled}|\text{outperform})&=\frac{P(\text{outperform}|\text{skilled})P(\text{skilled})}{P(\text{outperform})} \\[6pt]
+&=\frac{0.8\times 0.2}{`r PO`} \\[6pt]
+&=`r PSO=round((0.8*0.2)/PO, 3); PSO`
+\end{align*}
+```
+
+A fund manager who outperforms is skilled with `r PSO` probability. You cannot neglect that low base rate of skilled managers.
+:::
+
+## Detecting a terrorist
+
+Every month 100 million people fly on commercial airlines. Imagine 10 of them are terrorists.
+
+Airport security are able to correctly identify that a person is a terrorist in 99% of cases and a non-terrorist in 99.9% of cases.
+
+A person is identified by airport security as a terrorist. Using Bayes' rule, what is the probability that they are a terrorist?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We can use Bayes' Theorem to calculate the conditional probability:
+
+$$
+\begin{aligned}
+P(\text{terrorist | identified}) &= \dfrac{P(\text{identified | terrorist})P(\text{terrorist})}{P(\text{identified})} \\[12 pt]
+&= \dfrac{0.99\times 0.0000001}{0.99\times 0.0000001+0.001\times 0.999999} \\[12 pt]
+&= 0.000099
+\end{aligned}
+$$
+
+Or approximately 1 in 10,000.
+:::
+
+## Rolling a die
+
+You have two six-sided dice:
+
+-   one die is fair with the numbers 1 through to 6 occurring with equal probability
+
+-   the other die is loaded and always rolls a 5 or a 6 with equal probability.
+
+You pull one die out of your pocket and roll it. You did not check which die it was before you rolled. (Assume you could have pulled either die out of your pocket with equal probability.)
+
+a\) The die shows a six. What is the probability that it is the loaded die?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We are asked to calculate $P(\text{D1 loaded}|6)$. To calculate this, I will use Bayes' rule.
+
+```{=tex}
+\begin{align*}
+P(\text{D1 loaded}|6)&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6)} \\[12pt]
+&=\frac{P(6|\text{D1 loaded})P(\text{D1 loaded})}{P(6|\text{D1 loaded})P(\text{D1 loaded})+P(6|\text{D1 fair})P(\text{D1 fair})} \\[12pt]
+&=\frac{0.5\times 0.5}{0.5\times 0.5+\frac{1}{6}\times 0.5} \\[12pt]
+&=`r PL<-(0.5*0.5)/(0.5*0.5+1/6*0.5); PL`
+\end{align*}
+```
+
+The first die is the loaded die with `r PL*100`\% probability.
+:::
+
+b\) You pull the other die out of your pocket and roll it. It shows a 5. What is the updated probability that the first die is the loaded die?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We are asked to calculate $P(\text{D1 loaded}|\text{D2 } 5)$. We have a prior probability of the first die being loaded of 0.75, which comes from the answer in the previous question.
+
+Putting this into Bayes' rule:
+
+\begin{align*}
+P(\text{D1 loaded}|\text{D2 } 5)&=\frac{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})}{P(\text{D2 } 5)} \\[12pt]
+&=\frac{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})}{P(\text{D2 } 5|\text{D1 loaded})P(\text{D1 loaded})+P(\text{D2 } 5|\text{D1 fair})P(\text{D1 fair})} \\[12pt]
+&=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[12pt]
+&=`r PL2<-(1/6*0.75)/(1/6*0.75+0.5*0.25); PL2`
+\end{align*}
+
+Each die is loaded with a 50\% probability.
+
+You could reach the same result by calculating the probability that the second die is fair given a 5. This is the same as the probability that the first die is loaded given a 5 on the second die. This approach gives the same result as the above calculation, but you need only think about one die.
+
+```{=tex}
+\begin{align*}
+P(\text{D2 fair}|5)&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5)} \\[12pt]
+&=\frac{P(5|\text{D2 fair})P(\text{D2 fair})}{P(5|\text{D2 fair})P(\text{D2 fair})+P(5|\text{D2 loaded})P(\text{D2 loaded})} \\[12pt]
+&=\frac{\frac{1}{6}\times 0.75}{\frac{1}{6}\times 0.75+0.5\times 0.25} \\[12pt]
+&=`r (1/6*0.75)/(1/6*0.75+0.5*0.25)`
+\end{align*}
+```
+
+:::
+
+## Male or female
+
+These two related questions come from magazine columnist Marilyn vos Savant.
+
+a\) A shopkeeper says she has two new baby beagles to show you, but she doesn't know whether they're male, female, or a pair. You tell her that you want only a male, and she telephones the fellow who's giving them a bath. "Is at least one a male?" she asks him. "Yes!" she informs you with a smile. What is the probability that the other one is a male?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The prior probabilities are:
+
+```{=tex}
+\begin{align*}
+P(MM)&=0.25 \\[6pt]
+P(MF)&=P(FM)=0.25 \\[6pt]
+P(FF)&=0.25
+\end{align*}
+```
+
+Using Bayes' rule:
+
+```{=tex}
+\begin{align*}
+P(MM|M)&=\frac{P(M|MM)P(MM)}{P(M)} \\[6pt]
+&=\frac{P(M|MM)P(MM)}{\begin{aligned}P(&M|MM)P(MM)+P(M|MF)P(MF)\\&+P(M|FM)P(FM)+P(M|FF)P(FF)\end{aligned}} \\[6pt]
+&=\frac{1\times\frac{1}{4}}{1\times\frac{1}{4}+1\times\frac{1}{4}+1\times\frac{1}{4}+0\times\frac{1}{4}} \\[6pt]
+&=\frac{\frac{1}{4}}{\frac{3}{4}} \\[6pt]
+&=\frac{1}{3}
+\end{align*}
+```
+:::
+
+b\) Say that a woman and a man (who are unrelated) each have two children. We know that at least one of the woman's children is a boy and that the man's oldest child is a boy. Can you explain why the chances that the woman has two boys do not equal the chances that the man has two boys?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+For the woman, the prior probabilities before learning she has a boy are:
+
+```{=tex}
+\begin{align*}
+P(BB)&=0.25 \\[6pt]
+P(BG)&=P(GB)=0.25 \\[6pt]
+P(GG)&=0.25
+\end{align*}
+```
+
+Using Bayes' rule:
+
+```{=tex}
+\begin{align*}
+P(BB|B)&=\frac{P(B|BB)P(BB)}{P(B)} \\[12pt]
+&=\frac{P(B|BB)P(BB)}{\begin{aligned}P(&B|BB)P(BB)+P(B|BG)P(BG)\\&+P(B|GB)P(GB)+P(B|GG)P(GG)\end{aligned}} \\[12pt]
+&=\frac{1\times\frac{1}{4}}{1\times\frac{1}{4}+1\times\frac{1}{4}+1\times\frac{1}{4}+0\times\frac{1}{4}} \\[12pt]
+&=\frac{\frac{1}{4}}{\frac{3}{4}} \\[12pt]
+&=\frac{1}{3}
+\end{align*}
+```
+
+For the man, the prior probabilities before learning his eldest is a boy are:
+
+```{=tex}
+\begin{align*}
+P(BB)&=0.25 \\[6pt]
+P(BG)&=0.25 \\[6pt]
+P(GB)&=0.25 \\[6pt]
+P(GG)&=0.25
+\end{align*}
+```
+
+Using Bayes' rule:
+
+```{=tex}
+\begin{align*}
+P(BB|B)&=\frac{P(B|BB)P(BB)}{P(B)} \\[12pt]
+&=\frac{P(B|BB)P(BB)}{\begin{aligned}P(&B|BB)P(BB)+P(B|BG)P(BG)\\&+P(B|GB)P(GB)+P(B|GG)P(GG)\end{aligned}} \\[12pt]
+&=\frac{1\times\frac{1}{4}}{1\times\frac{1}{4}+1\times\frac{1}{4}+0\times\frac{1}{4}+0\times\frac{1}{4}} \\[12pt]
+&=\frac{\frac{1}{4}}{\frac{2}{4}} \\[12pt]
+&=\frac{1}{2}
+\end{align*}
+```
+
+Note: questions such are these are typically sensitive to unstated assumptions, particularly around the procedure used to elicit the information around the sex of the child. Due to this, part a) is probably less vulnerable to alternative assumptions than b) as it contains information about the elicitation procedure in the question.
+:::
+
+## Luggage
+
+You have taken a flight and are worried that your luggage will not be on the flight. You know that 20\% of bags have not been arriving with the passenger.
+
+The following table of conditional probabilities (from Pearl & Mackenzie (2018)) gives the probability that your bag will be on the luggage carousel conditional on the bag being on the flight and how long you have been waiting at the carousel.
+
+| Bag on plane | Time elapsed | Carousel=true |
+|--------------|:------------:|:-------------:|
+| False        |      0       |       0       |
+| False        |      1       |       0       |
+| False        |      2       |       0       |
+| False        |      3       |       0       |
+| False        |      4       |       0       |
+| False        |      5       |       0       |
+| False        |      6       |       0       |
+| False        |      7       |       0       |
+| False        |      8       |       0       |
+| False        |      9       |       0       |
+| False        |      10      |       0       |
+| True         |      0       |       0       |
+| True         |      1       |      10       |
+| True         |      2       |      20       |
+| True         |      3       |      30       |
+| True         |      4       |      40       |
+| True         |      5       |      50       |
+| True         |      6       |      60       |
+| True         |      7       |      70       |
+| True         |      8       |      80       |
+| True         |      9       |      90       |
+| True         |      10      |      100      |
+
+a\) You have been waiting 5 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+\begin{align*}
+P(\text{false}|\text{not arrived after 5})&=\frac{P(\text{not arrived after 5}|\text{false})P(\text{false})}{P(\text{not arrived after 5})} \\[12pt]
+&=\frac{P(\text{not arrived after 5}|\text{false})P(\text{false})}{\begin{aligned}P(&\text{not arrived after 5}|\text{false})P(\text{false})\\&+P(\text{not arrived after 5}|\text{true})P(\text{true})\end{aligned}} \\[12pt]
+&=\frac{1\times 0.2}{1\times 0.2+0.5\times 0.8} \\[12pt]
+&=`r false5<-(1*0.2)/(1*0.2+0.5*0.8); round(false5, 3)`
+\end{align*}
+
+The probability that the bag was not on the flight is `r round(false5*100, 0)`\%.
+:::
+
+b\) You have been waiting 9 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+\begin{align*}
+P(\text{false}|\text{not arrived after 9})&=\frac{P(\text{not arrived after 9}|\text{false})P(\text{false})}{P(\text{not arrived after 9})} \\[12pt]
+&=\frac{P(\text{not arrived after 9}|\text{false})P(\text{false})}{\begin{aligned}P(&\text{not arrived after 9}|\text{false})P(\text{false})\\&+P(\text{not arrived after 9}|\text{true})P(\text{true})\end{aligned}} \\[12pt]
+&=\frac{1\times 0.2}{1\times 0.2+0.1\times 0.8} \\[12pt]
+&=`r false9<-(1*0.2)/(1*0.2+0.1*0.8); round(false9, 3)`
+\end{align*}
+
+The probability that the bag was not on the flight is `r round(false9*100, 0)`\%.
+:::
+
+c\)  You have been waiting 10 minutes for your bag and it has not arrived. What is the probability that your bag was not on the flight?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+\begin{align*}
+P(\text{false}|\text{not arrived after 10})&=\frac{P(\text{not arrived after 10}|\text{false})P(\text{false})}{P(\text{not arrived after 10})} \\[12pt]
+&=\frac{P(\text{not arrived after 10}|\text{false})P(\text{false})}{\begin{aligned}P(&\text{not arrived after 10}|\text{false})P(\text{false})\\&+P(\text{not arrived after 10}|\text{true})P(\text{true})\end{aligned}} \\[12pt]
+&=\frac{1\times 0.2}{1\times 0.2+0\times 0.8} \\[12pt]
+&=`r false9<-(1*0.2)/(1*0.2+0*0.8); round(false9, 3)`
+\end{align*}
+
+The probability that the bag was not on the flight is `r round(false9*100, 0)`\%.
+:::
+
+## Murder?
+
+In a [now famous case](https://en.wikipedia.org/wiki/Sally_Clark), Sally Clark was convicted of murder after the death of her two sons. The defence argued both children had died of sudden infant death syndrome. The prosecution called statistical evidence that the chance of a SIDS death was 1 in 8543, so the chance of two children dying of SIDS was 1 in 73 million ($8543\times 8543$).
+
+The conviction was overturned on a second appeal. For what reasons could the following simple calculation be misleading?
+
+\begin{align*}
+P(\text{SIDS death}\land\text{SIDS death})&=P(\text{SIDS death})\times P(\text{SIDS death}) \\[12pt]
+&=\frac{1}{8543}\times\frac{1}{8543} \\[12pt]
+&=\frac{1}{`r signif(8543*8543, 3)`}
+\end{align*}
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Reason 1: The probability of a 2nd SIDS death given first SIDS death is not independent. e.g. SIDS deaths are related due to genetics, family environment. That is, the relevant probability is:
+
+$$
+P(\text{SIDS death}|\text{genetics, family environment, etc})
+$$
+
+This would mean that:
+
+$$
+P(\text{2 SIDS deaths in same family})>(P(\text{1 SIDS death}))^2
+$$
+
+The appropriate calculation is:
+
+$$
+P(\text{SIDS death}\land\text{SIDS death})=P(1^{st}\text{ SIDS death})\times P(2^{nd}\text{ SIDS death}|1^{st}\text{ SIDS death})
+$$
+
+Reason 2: We also need to consider the probability of alternative possibility - i.e. murder. We want calculate:
+
+$$
+P(\text{murder}|{2\text{ deaths}})=\frac{P(2\text{ deaths}|\text{murder})P(\text{murder})}{P(2\text{ deaths})}
+$$
+
+If murder itself is also unlikely, then it is not correct to simply attribute the alternative to SIDS the residual probability.
+:::
+
+## A fire alarm
+
+You know the following statistics about fire:
+
+-   The probability of your house catching fire on any particular day is 1 in 10,000
+
+-   Your fire alarm correctly detects a house fire 95\% of the time
+
+-   The probability that your fire alarm sounds on a day when there is no fire (a false alarm) is 1 in 100.
+
+Your alarm goes off. What is the probability that your house is on fire?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+```{=tex}
+\begin{align*}
+P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[12pt]
+&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm}|\text{fire})P(\text{fire})+P(\text{alarm}|\neg\text{fire})P(\neg\text{fire})} \\[12pt]
+&=\frac{0.95\times 0.0001}{0.95\times 0.0001+0.01\times 0.9999} \\[12pt]
+&=`r PFA<-(0.95*0.0001)/(0.95*0.0001+0.01*0.9999); round(PFA, 4)`
+\end{align*}
+```
+
+The probability of a fire if the alarm goes off is `r round(PFA*100, 2)`%.
+:::
+
