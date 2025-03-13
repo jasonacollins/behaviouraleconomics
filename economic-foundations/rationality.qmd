@@ -21,7 +21,7 @@
 
 A standard economic assumption is that decision makers are rational.
 
-However, rationality in economics has a different definition to the 'lay' definition of rationality.
+However, rationality in economics has a different definition to the ‘lay’ definition of rationality.
 
 Rationality simply means that preferences respect some desirable principles. These principles are assumptions, not rules of behaviour.
 
@@ -73,20 +73,40 @@ Finally, they are offered C in exchange for their endowment of A for a further n
 
 ## Preference Orderings
 
-If we assume preferences are transitive and complete, it is possible to construct a preference ordering.
+When preferences are transitive and complete, we can create a ranking of options from most to least preferred. We can construct a preference ordering.
 
-Completeness guarantees that there will be only one ordering.
+Completeness guarantees that there will be only one ordering. There are no gaps or ambiguous comparisons. If you have three options (A, B and C), you must be able to rank them fully, such as A is better than B is better than C, or I am indifferent between A and B which are both better than C.
 
-Transitivity guarantees that there will be no cycles in strict preference. Weak preferences can cycle, so that one can prefer a to b and b to c and c to a, but this entails indifference.
+Transitivity guarantees that there will be no cycles in strict preference. Weak preferences can cycle, so that one can prefer A to B and B to C and C to A, but this entails indifference.
 
 That preference ordering, a simple rank of which options an agent prefers, is all that is required for some analysis of consumer choice.
 
 ## Defining rationality
 
-This definition of rationality, accordance to the axioms of completeness and transitivity, provides little constraint on preferences.
+This definition of rationality, accordance to the axioms of completeness and transitivity, provides little constraint on preferences, while allowing for diverse preferences and behaviours.
 
 You could prefer less money to more. You could prefer sums of money divisible by seven with no remainder. You could prefer more for yourself or more for someone else.
 
 These axioms do not lead to an assumption that people are selfish, unless you define selfishness to be simply acting in accordance with their preferences.
 
 These axioms place some constraints on behaviour, and empirical evidence suggests those constraints are sometimes breached by decision makers. But they are constraints that allow much behaviour to be described as rational.
+
+## Independence of irrelevant alternatives
+
+While completeness and transitivity are the most basic axioms of rationality, there are others that can be added to provide more structure to preferences. One such axiom is the independence of irrelevant alternatives.
+
+The axiom of independence of irrelevant alternatives states that if an agent prefers $x$ to $y$, the introduction of a third option $z$ should not change the preference order between $x$ and $y$. A new option shouldn't flip how you rank two existing options. For example, if you select fish rather than chicken from a restaurant menu, being told by the waiter that there is a vegetarian option should not lead you to change your selection to chicken.
+
+Mathematically, we can state that:
+
+> If $x \succ y$ in choice set $S = \{x,y\}$, then:
+>
+> $x \succ y$ in choice set $T = \{x,y,z\}$
+
+The axiom has important implications:
+
+- It allows preferences to be context-independent. An agent's choice between two options can be analysed without needing to know the full choice set.
+- It simplifies economic models by making preference orderings more stable and predictable. It eliminates the need to consider complex interactions between irrelevant and relevant options.
+- It prevents the outcomes of decision-making processes from being manipulated by the strategic inclusion or exclusion of alternatives.
+
+The axiom of independence of irrelevant alternatives is used in utility theory, mechanism design, and social choice theory, where it helps establish important results about preference aggregation and voting systems. For example, in voting systems, the axiom prevents a candidate's elimination from changing the relative ranking of other candidates.

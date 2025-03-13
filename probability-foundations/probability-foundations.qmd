@@ -1,0 +1,17 @@
+# Probability foundations
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/Ceor2U7Fy3Q >}}
+
+---
+
+:::
+
+Imagine you're a surgeon deciding whether to operate on a patient. The procedure could save their life, but it also carries risks. Or picture yourself as an investor choosing between stocks for your retirement savings. Each investment offers different potential returns, but also different chances of loss. Or envision yourself at a poker table, trying to judge whether your friend is bluffing with a weak hand or sitting on a royal flush. Calling their hand could have markedly different outcomes.
+
+These decisions share a common thread: we must make choices without perfect information. Sometimes we know the probabilities, like the odds of rolling a six on a fair die. We call this risk. Other times we can only make educated guesses without knowing the probabilities, like whether an investment will pay off. We call this uncertainty. And to analyse decision-making under risk and uncertainty, we need to consider how people form beliefs and compute probabilities. 
+
+Consider that poker game. Your friend just raised the stakes significantly. Are they bluffing? You might consider how often they've bluffed before (your prior belief), combine it with how they're acting now (new evidence), and update your assessment of their hand. This process of updating beliefs based on new evidence - which we'll explore as Bayes' Rule - lies at the heart of probability theory.
+
+In this part, we'll proceed in three steps. First, I will lay out the foundations of probability theory - the basic rules and principles that underpin all probabilistic thinking. Then I will discuss Bayes' Rule, a powerful tool that shows us how to update our beliefs when we get new information. Finally, I will extend these ideas into subjective expected utility theory, which helps us understand how people make decisions when probabilities aren't known.

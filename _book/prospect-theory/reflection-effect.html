@@ -749,7 +749,7 @@ window.Quarto = {
 <section id="summary" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
 <ul>
-<li>The reflection effect describes an asymmetry in risk preferences: people are typically risk-averse for gains but risk-seeking for losses.</li>
+<li>The reflection effect is an asymmetry in risk preferences: people are typically risk-averse for gains but risk-seeking for losses.</li>
 <li>This effect can be illustrated through framing experiments, such as the Asian Disease problem, where equivalent outcomes are perceived differently when framed as gains versus losses.</li>
 <li>The reflection effect can be represented in a value function with diminishing sensitivity to both gains and losses, resulting in a concave function in the gain domain (indicating risk aversion) and a convex function in the loss domain (indicating risk-seeking behaviour).</li>
 </ul>
@@ -761,6 +761,7 @@ window.Quarto = {
 <h2 data-number="15.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">15.1</span> Introduction</h2>
 <p>The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.</p>
 <p>When people make a risky choice related to gains, they are risk averse. They prefer a certain option with value lower than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.</p>
+<p>Put simply, people typically prefer to lock in a sure gain rather than risk it for more, but will take risks to avoid a sure loss.”</p>
 <p>The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory, where the pain of losses increases as they grow in size.</p>
 </section>
 <section id="the-asian-disease-problem" class="level2" data-number="15.2">
@@ -782,11 +783,13 @@ window.Quarto = {
 <p>Which of the two programs would you favour?</p>
 </blockquote>
 <p>22% of participants chose option C.</p>
-<p>72% of participants chose A and 22% of participants chose option C. Yet these two are equivalent. Option A and B are in the gain domain. Therefore the less risky option A is preferred. Options C and D are in the loss domain. Therefore the more risky option C is preferred.</p>
+<p>Despite their differing presentation, these two scenarios are mathematically identical. Programs A and C both result in 200 people living and 400 dying. Similarly, Programs B and D offer a 1 in 3 chance of saving everyone and a 2 in 3 chance of everyone dying.</p>
+<p>The difference is that the first scenario presents a ‘gain frame’, focusing on lives saved. The second scenario presents a ‘loss frame’, focusing on lives lost.” In the gain frame, 72% chose the certain option A over the risky option B. In the loss frame, only 22% chose the certain option C, meaning 78% preferred the risky option D.</p>
+<p>This shift in preferences demonstrates the reflection effect. When the choice is framed in terms of gains - lives saved - people prefer the certain option. When framed in terms of losses - lives lost - they prefer the risky option.</p>
 </section>
 <section id="the-reflection-effect-in-the-value-function" class="level2" data-number="15.3">
 <h2 data-number="15.3" class="anchored" data-anchor-id="the-reflection-effect-in-the-value-function"><span class="header-section-number">15.3</span> The reflection effect in the value function</h2>
-<p>The following value function is an example of a function with diminishing sensitivity to both gains and losses. This function can generate the reflection effect.</p>
+<p>The following value function is an example of a function with diminishing sensitivity to both gains and losses. This function generates the reflection effect.</p>
 <p><span class="math display">\begin{equation*}
 v(x)= \Bigg\{
 \begin{matrix}
@@ -794,7 +797,8 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 -(-x)^\frac{1}{2} \space \text{where} \space x&lt;0
 \end{matrix}
 \end{equation*}</span></p>
-<p>As <span class="math inline">x</span> increases in magnitude in either direction, the marginal increase in value from each incremental unit of <span class="math inline">x</span> decreases.</p>
+<p>As <span class="math inline">x</span> increases in magnitude in either direction, the marginal change in value from each incremental unit of <span class="math inline">x</span> decreases. This decreasing marginal change is implemented via the power of one half. For the value of the gain or loss to double, the size of the gain or loss must quadruple.</p>
+<p>When <span class="math inline">x</span> is less than zero, we apply a negative sign to <span class="math inline">x</span> as the power of one half is only defined for positive numbers. We then apply another negative sign after applying the power to indicate the negative value of losses.</p>
 <p>This value function results in risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.</p>
 <div class="cell">
 <details class="code-fold">
@@ -825,10 +829,15 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> gain) <span class="sc">+</span> </span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"v(X)"</span>)<span class="sc">+</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"v(x)"</span>)<span class="sc">+</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set the theme</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">vjust=</span><span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-reflection-effect" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -843,17 +852,28 @@ Figure&nbsp;15.1: The reflection effect
 </div>
 </div>
 </div>
-<p>In the gain domain, the function is concave, indicating risk aversion. In the loss domain, the convex function indicates risk-seeking behaviour.</p>
+<p>In the gain domain, the function is concave, indicating risk aversion. In the loss domain, the convex function indicates risk-seeking behaviour. The result is an S-shaped curve.</p>
 </section>
 <section id="an-example" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="an-example"><span class="header-section-number">15.4</span> An example</h2>
 <p>The following numerical example illustrates further.</p>
-<p>Suppose an agent with the above value function is offered a choice between $10 for certain and a 50:50 bet to win $20 or end up with nothing. The value of each choice is as follows.</p>
+<p>Suppose an agent has a value function that expresses the reflection effect, with the outcomes in either direction subject to a power of one half.</p>
+<p><span class="math display">\begin{equation*}
+v(x)= \Bigg\{
+\begin{matrix}
+x^\frac{1}{2} \space \text{where} \space x \geq 0\\
+-(-x)^\frac{1}{2} \space \text{where} \space x&lt;0
+\end{matrix}
+\end{equation*}</span></p>
+<p>This agent is offered a choice between $10 for certain and a 50:50 bet to win $20 or end up with nothing. We calculate the value of each option by substituting the outcomes into the value function.</p>
+<p>For the certain gain, we substitute $10 into the value function.</p>
 <p><span class="math display">\begin{align*}
 v(\text{certainty})&amp;=v(10) \\[6pt]
 &amp;=10^{\frac{1}{2}} \\[6pt]
-&amp;=3.16 \\
-\\
+&amp;=3.16
+\end{align*}</span></p>
+<p>For the bet, we calculate the probability weighted value of the potential outcomes.</p>
+<p><span class="math display">\begin{align*}
 v(\text{bet})&amp;=0.5\times v(20)+0.5\times v(0) \\[6pt]
 &amp;=0.5\times 20^{\frac{1}{2}}+0.5\times 0 \\[6pt]
 &amp;=2.24
@@ -936,12 +956,18 @@ Figure&nbsp;15.2: The reflection effect in the gain domain
 </div>
 </div>
 </div>
-<p>Suppose the agent is now offered another choice. They can now have a certain loss of $10 or a 50:50 bet to lose $20 or to lose nothing. The value of each choice is as follows.</p>
+<p>Suppose the agent is now offered another choice. They can now have a certain loss of $10 or a 50:50 bet to lose $20 or to lose nothing.</p>
+<p>Again, we calculate the value of each option by substituting the outcomes into the value function.</p>
+<p>For the certain loss, we substitute -$10 into the value function.</p>
 <p><span class="math display">\begin{align*}
 v(\text{certainty})&amp;=v(-10) \\[6pt]
 &amp;=-10^{\frac{1}{2}} \\[6pt]
-&amp;=-3.16 \\
-\\
+&amp;=-3.16
+\{end{align*}
+
+For the bet, we calculate the probability weighted value of the potential outcomes.
+
+\begin{align*}
 v(\text{bet})&amp;=0.5\times v(-20)+0.5\times v(0) \\[6pt]
 &amp;=-0.5\times 20^{\frac{1}{2}}+0.5\times 0 \\[6pt]
 &amp;=-2.24
@@ -1497,7 +1523,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

@@ -5,7 +5,7 @@ engine: knitr #added as otherwise inline r code does not execute
 
 ## Summary {.unnumbered}
 
-- The reflection effect describes an asymmetry in risk preferences: people are typically risk-averse for gains but risk-seeking for losses.
+- The reflection effect is an asymmetry in risk preferences: people are typically risk-averse for gains but risk-seeking for losses.
 - This effect can be illustrated through framing experiments, such as the Asian Disease problem, where equivalent outcomes are perceived differently when framed as gains versus losses.
 - The reflection effect can be represented in a value function with diminishing sensitivity to both gains and losses, resulting in a concave function in the gain domain (indicating risk aversion) and a convex function in the loss domain (indicating risk-seeking behaviour).
 
@@ -23,7 +23,9 @@ engine: knitr #added as otherwise inline r code does not execute
 
 The reflection effect involves an asymmetry in risk preferences in the gain and loss domains.
 
-When people make a risky choice related to gains, they are risk averse.  They prefer a certain option with value lower than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.
+When people make a risky choice related to gains, they are risk averse. They prefer a certain option with value lower than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.
+
+Put simply, people typically prefer to lock in a sure gain rather than risk it for more, but will take risks to avoid a sure loss."
 
 The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory, where the pain of losses increases as they grow in size.
 
@@ -55,11 +57,15 @@ Another group of experimental participants were shown the following:
 
 22% of participants chose option C.
 
-72% of participants chose A and 22% of participants chose option C. Yet these two are equivalent. Option A and B are in the gain domain. Therefore the less risky option A is preferred. Options C and D are in the loss domain. Therefore the more risky option C is preferred.
+Despite their differing presentation, these two scenarios are mathematically identical. Programs A and C both result in 200 people living and 400 dying. Similarly, Programs B and D offer a 1 in 3 chance of saving everyone and a 2 in 3 chance of everyone dying.
+
+The difference is that the first scenario presents a 'gain frame', focusing on lives saved. The second scenario presents a 'loss frame', focusing on lives lost." In the gain frame, 72% chose the certain option A over the risky option B. In the loss frame, only 22% chose the certain option C, meaning 78% preferred the risky option D.
+
+This shift in preferences demonstrates the reflection effect. When the choice is framed in terms of gains - lives saved - people prefer the certain option. When framed in terms of losses - lives lost - they prefer the risky option.
 
 ## The reflection effect in the value function
 
-The following value function is an example of a function with diminishing sensitivity to both gains and losses. This function can generate the reflection effect.
+The following value function is an example of a function with diminishing sensitivity to both gains and losses. This function generates the reflection effect.
 
 \begin{equation*}
 v(x)= \Bigg\{
@@ -69,7 +75,9 @@ x^\frac{1}{2} \space \text{where} \space x \geq 0\\
 \end{matrix}
 \end{equation*}
 
-As $x$ increases in magnitude in either direction, the marginal increase in value from each incremental unit of $x$ decreases.
+As $x$ increases in magnitude in either direction, the marginal change in value from each incremental unit of $x$ decreases. This decreasing marginal change is implemented via the power of one half. For the value of the gain or loss to double, the size of the gain or loss must quadruple.
+
+When $x$ is less than zero, we apply a negative sign to $x$ as the power of one half is only defined for positive numbers. We then apply another negative sign after applying the power to indicate the negative value of losses.
 
 This value function results in risk-averse behaviour in the gain domain and risk-seeking behaviour in the loss domain. The following plot shows the diminishing effect in each direction.
 
@@ -103,25 +111,47 @@ ggplot(mapping = aes(x, y)) +
   geom_line(data = gain) + 
   geom_vline(xintercept = 0, linewidth=0.25)+ 
   geom_hline(yintercept = 0, linewidth=0.25)+
-  labs(x = "", y = "v(X)")+
+  labs(x = "x", y = "v(x)")+
 
   # Set the theme
-  theme_minimal()
+  theme_minimal()+
+
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))
+
 ```
 
-In the gain domain, the function is concave, indicating risk aversion. In the loss domain, the convex function indicates risk-seeking behaviour.
+In the gain domain, the function is concave, indicating risk aversion. In the loss domain, the convex function indicates risk-seeking behaviour. The result is an S-shaped curve.
 
 ## An example
 
 The following numerical example illustrates further.
 
-Suppose an agent with the above value function is offered a choice between \$10 for certain and a 50:50 bet to win \$20 or end up with nothing. The value of each choice is as follows.
+Suppose an agent has a value function that expresses the reflection effect, with the outcomes in either direction subject to a power of one half.
+
+\begin{equation*}
+v(x)= \Bigg\{
+\begin{matrix}
+x^\frac{1}{2} \space \text{where} \space x \geq 0\\
+-(-x)^\frac{1}{2} \space \text{where} \space x<0
+\end{matrix}
+\end{equation*}
+
+This agent is offered a choice between \$10 for certain and a 50:50 bet to win \$20 or end up with nothing. We calculate the value of each option by substituting the outcomes into the value function.
+
+For the certain gain, we substitute \$10 into the value function.
 
 \begin{align*}
 v(\text{certainty})&=v(10) \\[6pt]
 &=10^{\frac{1}{2}} \\[6pt]
-&=`r round(10^0.5, 2)` \\
-\\
+&=`r round(10^0.5, 2)`
+\end{align*}
+
+For the bet, we calculate the probability weighted value of the potential outcomes.
+
+\begin{align*}
 v(\text{bet})&=0.5\times v(20)+0.5\times v(0) \\[6pt]
 &=0.5\times 20^{\frac{1}{2}}+0.5\times 0 \\[6pt]
 &=`r round(0.5*20^0.5, 2)`
@@ -198,13 +228,21 @@ ggplot(mapping = aes(x, y)) +
 
 ```
 
-Suppose the agent is now offered another choice. They can now have a certain loss of \$10 or a 50:50 bet to lose \$20 or to lose nothing. The value of each choice is as follows.
+Suppose the agent is now offered another choice. They can now have a certain loss of \$10 or a 50:50 bet to lose \$20 or to lose nothing.
+
+Again, we calculate the value of each option by substituting the outcomes into the value function.
+
+For the certain loss, we substitute -\$10 into the value function.
 
 \begin{align*}
 v(\text{certainty})&=v(-10) \\[6pt]
 &=-10^{\frac{1}{2}} \\[6pt]
-&=`r round(-10^0.5, 2)` \\
-\\
+&=`r round(-10^0.5, 2)`
+\{end{align*}
+
+For the bet, we calculate the probability weighted value of the potential outcomes.
+
+\begin{align*}
 v(\text{bet})&=0.5\times v(-20)+0.5\times v(0) \\[6pt]
 &=-0.5\times 20^{\frac{1}{2}}+0.5\times 0 \\[6pt]
 &=`r round(-0.5*20^0.5, 2)`

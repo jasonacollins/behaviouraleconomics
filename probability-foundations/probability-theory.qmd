@@ -1,0 +1,226 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Probability theory
+
+## Summary {.unnumbered}
+
+- The probability function $P(\cdot)$ assigns a real number between 0 and 1 to each event, with $\sum P(\cdot) = 1$ for all possible outcomes.
+- For mutually exclusive events $A$ and $B$, the probability of either event occurring is:
+
+$$
+P(A \cup B) = P(A) + P(B)
+$$
+
+- For non-mutually exclusive events $A$ and $B$, the probability of either event occurring is:
+  
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+
+- For independent events, the probability of both events occurring is the product of their individual probabilities:
+
+$$
+P(A \cap B) = P(A)P(B)
+$$
+
+- Conditional probability $P(A|B)$ is the probability of $A$ given that $B$ has occurred. It's calculated as:
+
+$$
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+- The Monty Hall problem illustrates conditional probability: given the host opens a specific door, what is the probability of the car being behind the unopened door?
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/CtWKcFsVBN0 >}}
+
+---
+
+:::
+
+## Introduction
+
+In this part, I introduce some basic concepts in probability theory.
+
+## The probability function
+
+The probability of an outcome is the chance with which it occurs. We denote the probability of outcome $A$ as $P(A)$, where $P(\cdot)$ represents a probability function that assigns a real number to each event.
+
+The probability function has the following features.
+
+First, the probability of outcome $A$ lies between 0 and 1. That is:
+
+$$
+0 \leq P(A) \leq 1
+$$
+
+For example, the probability of drawing the Ace of Spades from a full deck of 52 cards is 1 in 52 or \~0.02.
+
+The probability of flipping a head with a fair coin is 1 in 2 or 0.5.
+
+Second, the probability of the entire outcome space equals 1.
+
+For example, suppose we have 52 possible cards we can draw from the deck, each with 1 in 52 probability. If we draw a single card, the probability that we draw one of those cards is:
+
+```{=tex}
+\begin{align*}
+\frac{1}{52}+\frac{1}{52}+\frac{1}{52}+...+\frac{1}{52}&=\sum_{n=1}^{n=52}\frac{1}{52} \\[12pt]
+&=1
+\end{align*}
+```
+
+Third, suppose outcomes $A$ and $B$ are mutually exclusive. In that case, the probability of $A$ or $B$ is the sum of the probability of $A$ and the probability of $B$. That is:
+
+```{=tex}
+\begin{align*}
+P(A \text{ or } B)&=P(A \cup B) \\[6pt]
+&=P(A)+P(B)
+\end{align*}
+```
+
+For example, if we have a deck with 52 cards, the probability of pulling out an Ace with a single draw is as follows.
+
+```{=tex}
+\begin{align*}
+P(A\spadesuit \cup A\heartsuit \cup A\diamondsuit \cup A\clubsuit)&=P(A\spadesuit)+P(A\heartsuit)+P(A\diamondsuit)+P(A\clubsuit) \\[6pt]
+&=\frac{1}{52}+\frac{1}{52}+\frac{1}{52}+\frac{1}{52} \\[6pt]
+&=\frac{4}{52}
+\end{align*}
+```
+
+Alternatively, suppose outcomes $A$ and $B$ are not mutually exclusive. In that case, the probability of one or the other is the sum of the probability of $A$ and the probability of $B$ minus the probability of both occurring. That is:
+
+$$
+P(A \cup B)=P(A)+P(B)-P(A\cap B)
+$$
+
+where $P(A \cap B)$ is the probability of both outcome $A$ and $B$.
+
+For example, if we have a deck with 52 cards, the probability of pulling out an Ace or a Diamond with a single draw is as follows.
+
+```{=tex}
+\begin{align*}
+P(A \cup \diamondsuit)&=P(A)+P(\diamondsuit)-P(A \cap \diamondsuit) \\[6pt]
+&=\frac{4}{52}+\frac{1}{4}-\frac{1}{52} \\[6pt]
+&=\frac{16}{52}
+\end{align*}
+```
+
+Finally, if outcomes $A$ and $B$ are independent, the conjunction of the two independent outcomes is the product of their probabilities. That is
+
+$$
+P(A \cap B)=P(A)P(B)
+$$
+
+For example, suppose we draw a single card from a deck of cards, place that card back in the deck, and then make another draw. The probability of drawing the Ace of Spades in either draw is 1⁄52. The probability of drawing the Ace of Spades twice is:
+
+```{=tex}
+\begin{align*}
+P(A\spadesuit \cap A\spadesuit)&=P(A\spadesuit)\times P(A\spadesuit) \\[6pt]
+&=\frac{1}{52}\times \frac{1}{52} \\[12pt]
+&=\frac{1}{2704}
+\end{align*}
+```
+Note that if $A$ and $B$ are mutually exclusive, they are not independent and $P(A \cap B)=0$.
+
+## Conditional probability
+
+Conditional probability concerns the probability of an outcome given another outcome.
+
+For example, drawing a card from a deck of cards with replacement - that is, putting back each card after it is drawn - means that whatever card was drawn in the first draw does not affect the probability of the outcome of the second draw. Each draw is independent of the other.
+
+But what if you draw two cards from the same deck without replacement?
+
+In that case, the two draws are not independent of each other. For instance, if you pull out the Ace of Spades first, the second card cannot be the Ace of Spades.
+
+We say here that the probability of drawing an Ace of Spades on the second draw is conditional on the result of the first draw.
+
+When one outcome is conditional on another, such as the probability of outcome $A$ conditional on outcome $B$ occurring, we write this conditional probability as $P(A|B)$.
+
+Suppose I draw two cards from a deck without replacement. What is the probability of drawing an Ace for both draws?
+
+We know that the first draw affects the probability of drawing an Ace on the second draw. If the first card is an Ace, one less Ace is in the deck for the second draw.
+
+The probability of drawing an Ace on the first draw is 4 in 52. If I draw an Ace in the first draw, the probability of drawing an Ace on the second is 3 in 51. There is one less Ace and one less card than for the first draw. By multiplying the probability of these two events together, we can get the probability of an Ace on both draws.
+
+```{=tex}
+\begin{align*}
+P(\text{Ace 1st}\cap\text{Ace 2nd})&=P(\text{Ace 1st})\times P(\text{Ace 2nd}|\text{Ace 1st}) \\[6pt]
+&=\frac{4}{52}\times \frac{3}{51} \\[12pt]
+&=\frac{1}{221}
+\end{align*}
+```
+
+### Formula for conditional probability
+
+We can see that the solution to this problem has taken the form:
+
+$$
+P(A\cap B)=P(A|B)P(B)
+$$
+
+The joint probability of two outcomes equals the probability of $A$ conditional on $B$ multiplied by the probability of $B$.
+
+We can rearrange this formula to determine the probability of $A$ given outcome $B$.
+
+$$
+P(A|B)=\frac{P(A\cap B)}{P(B)}
+$$
+
+If $A$ and $B$ are independent, $P(A|B)=P(A)$. In that case, the formula simplifies to that for calculating the probability of the conjunction of independent outcomes we saw earlier, $P(A \cap B)=P(A)P(B)$. The equation $P(A\cap B)=P(A|B)P(B)$ is a more general version of how to calculate the conjunction of two events.
+
+Due to symmetry, we can also write the conditional probability as:
+
+$$
+P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
+$$
+
+### Example
+
+As a test of this formula, let's take our previous example of drawing two Aces from the same deck. What is the probability of drawing an Ace on the second draw if you drew an Ace on the first?
+
+```{=tex}
+\begin{align*}
+P(\text{Ace 2nd}|\text{Ace 1st})&=\frac{P(\text{Ace 1st}\cap\text{Ace 2nd})}{P(\text{Ace 1st})} \\[12pt]
+&=\cfrac{\cfrac{1}{221}}{\cfrac{4}{52}} \\[24pt]
+&=\frac{3}{51}
+\end{align*}
+```
+### The Monty Hall problem
+
+Consider the following problem as answered by Marilyn vos Savant in her column Ask Marilyn in Parade magazine [@vossavant1990]:
+
+> Suppose you're on a game show and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
+
+This problem is known as the Monty Hall problem as it is loosely based on the American game show Let's Make a Deal. Monty Hall was the original host of the show.
+
+Assume that the rules of this game show are that:
+
+-   The host must always open a door that you did not choose.
+
+-   The host must always open a door to reveal a goat and never the car.
+
+-   The host must always offer you the choice to switch between the chosen door and the remaining closed door.
+
+For this question, you are effectively being asked: what is the probability that the car is behind Door 2 conditional on the host opening door 3.
+
+To help us think about this problem, consider the following tree that maps the possible outcomes after you select Door 1. The first split of the tree represents the 1/3 probability that the car is behind each of the three doors. Given the car's location, the next split represents the probability that the host opens each door. The final column indicates the probability of each combination of car location and door opened.
+
+![](img/monty-hall.png)
+
+If the car is behind Door 1, which you have selected, the host could open either Door 2 or Door 3 with equal probability. If the car is behind Door 2, the host must open Door 3. If the car is behind Door 3, the host must open Door 2.
+
+Given the host opened Door 3, we can calculate the conditional probability that the car is behind door 2 as follows:
+
+```{=tex}
+\begin{align*}
+P(C2|D3)&=\frac{P(C2\cap D3)}{P(D3)} \\[12pt]
+&=\frac{\frac{1}{3}}{\frac{1}{3}+\frac{1}{6}} \\[12pt]
+&=\frac{2}{3}
+\end{align*}
+```
+
+You should switch to door 2.

@@ -15,16 +15,15 @@ book:
         - economic-foundations/rationality.qmd
         - economic-foundations/utility.qmd
         - economic-foundations/economic-foundation-exercises.qmd
-    - part: risk-and-uncertainty/decision-making-under-risk-and-uncertainty.qmd
+    - part: decision-making-under-risk/decision-making-under-risk.qmd
       chapters:
-        - risk-and-uncertainty/notation-and-mathematical-background.qmd
-        - risk-and-uncertainty/expected-value.qmd
-        - risk-and-uncertainty/axioms-for-expected-utility-theory.qmd
-        - risk-and-uncertainty/expected-utility-theory.qmd
-        - risk-and-uncertainty/subjective-expected-utility.qmd
-        - risk-and-uncertainty/expected-utility-examples.qmd
-        - risk-and-uncertainty/anomalies-in-expected-utility-theory.qmd
-        - risk-and-uncertainty/risk-and-uncertainty-exercises.qmd
+        - decision-making-under-risk/notation-and-mathematical-background.qmd
+        - decision-making-under-risk/expected-value.qmd
+        - decision-making-under-risk/axioms-for-expected-utility-theory.qmd
+        - decision-making-under-risk/expected-utility-theory.qmd
+        - decision-making-under-risk/expected-utility-examples.qmd
+        - decision-making-under-risk/anomalies-in-expected-utility-theory.qmd
+        - decision-making-under-risk/decision-making-under-risk-exercises.qmd
     - part: prospect-theory/prospect-theory.qmd
       chapters:
         - prospect-theory/reference-dependence.qmd
@@ -48,11 +47,12 @@ book:
         - intertemporal-choice/preference-over-profiles.qmd
         - intertemporal-choice/intertemporal-choice-applications.qmd
         - intertemporal-choice/intertemporal-choice-exercises.qmd
-    - part: probability-theory/probability-theory.qmd
+    - part: probability-foundations/probability-foundations.qmd
       chapters: 
-        - probability-theory/probability-foundations.qmd
-        - probability-theory/bayes-rule.qmd
-        - probability-theory/probability-theory-exercises.qmd
+        - probability-foundations/probability-theory.qmd
+        - probability-foundations/bayes-rule.qmd
+        - probability-foundations/probability-theory-exercises.qmd
+        - probability-foundations/subjective-expected-utility.qmd
     - part: heuristics-and-biases/heuristics-and-biases.qmd
       chapters: 
         - heuristics-and-biases/heuristics.qmd

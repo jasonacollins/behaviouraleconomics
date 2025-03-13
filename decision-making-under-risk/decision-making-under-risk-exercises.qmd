@@ -1,0 +1,619 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Decision making under risk exercises
+
+## Expected value of roulette
+
+You are playing roulette at the casino. There are 37 numbered pockets around the edge of the wheel (0 through 36). If you make a straight up bet on one of the 37 single numbers, you are paid \$35 for every dollar you bet (in addition to receiving back your bet). What is the expected value of a \$20 bet.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The expected value of the Roulette bet is:
+
+\begin{align*}
+E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
+&=\frac{36}{37}\times(-\$20)+\frac{1}{37}\times(35\times\$20) \\[6pt]
+&=\$`r round(36/37*(-20)+1/37*(35*20), 2)`
+\end{align*}
+:::
+
+## A bet or a certain payment?
+
+Anika is an expected utility maximiser with the following utility function:
+
+$$U(x)=\sqrt{x}$$
+
+Anika is offered the following choice:
+
+A)  A 50% chance of winning \$10 and a 50% chance of winning nothing
+B)  \$4 for certain
+
+Anika has zero wealth besides this offer.
+
+a\) What is the expected value of option A?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The expected value of option A) is:
+
+```{=tex}
+\begin{align*}
+E[A]&=\sum_{i=1}^n p_ix_i \\[12pt]
+&=0.5\times \$10+0.5\times 0 \\[6pt]
+&=\$5
+\end{align*}
+```
+:::
+
+b\) Will Anika choose A or B? Why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We need to determine the expected utility of each option. Anika will selection the option with the highest expected utility.
+
+The expected utility of option A) is:
+
+```{=tex}
+\begin{align*}
+EU(A)&=p_1U(x_1)+p_2U(x_2) \\
+&=0.5\times \sqrt{10}+0.5\times \sqrt{0} \\
+&=1.58
+\end{align*}
+```
+The expected utility of option B) is:
+
+```{=tex}
+\begin{align*}
+EU(B)&=U(4) \\
+&=\sqrt{4} \\
+&=2
+\end{align*}
+```
+
+Anika will choose option B) as it gives her higher expected utility. Anika is risk averse.
+:::
+
+c\) What is the certainty equivalent of option A?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+To calculate the certainty equivalent of option A, we calculate what payment with certainty would deliver equivalent expected utility. That is:
+
+```{=tex}
+\begin{align*}
+EU(CE)&=1.58 \\
+\sqrt{CE}&=1.58 \\
+CE&=1.58^2 \\
+&=2.5
+\end{align*}
+```
+
+The certainty equivalent of option A is \$2.50. That is, Anika would be indifferent between option A and a payment of \$2.50 for certain.
+:::
+
+d\) Draw a graph showing Anika's utility curve, the expected value of option A, the expected utility of options A) and B) and the certainty equivalent of option A).
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+```{r}
+#| label: fig-anika
+#| fig-cap: "A bet or a certain payment?"
+
+library(ggplot2)
+library(svglite)
+
+u <- function(x){
+  x^(1/2)
+}
+
+df <- data.frame(
+  x=seq(0,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-0 #loss
+x2<-200 #win
+ev<-100 #expected value of gamble
+xc<-80 #certain outcome
+ce<-50 #certainty equivalent
+px2<-(ev-x1)/(x2-x1)
+
+anika <- ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+  coord_cartesian(xlim = c(-25, 220), ylim = c(0, 16))+
+
+  #Add labels 4, U(4) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "4", size = 4, hjust = 0.6, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U(4)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 10, U(10) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "10", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(10)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[A]=5, E[U(A)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[A]=5", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(A)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+anika
+
+```
+:::
+
+## A 50:50 gamble
+
+Consider the following gamble:
+
+> (0.5; \$550; 0.5, -\$500)
+
+This gamble provides a 50% chance of winning \$550 and a 50% chance of losing \$500.
+
+a\) Would a risk neutral agent (who maximises expected value) be willing to pay \$20 to play this gamble? What is the most they would be willing to pay to play?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The expected value of the gamble is:
+
+```{=tex}
+\begin{align*}
+E[X]&=\sum_{i=1}^n p_ix_i \\[12pt]
+&=0.5(550)+0.5(-500) \\[6pt]
+&=25
+\end{align*}
+```
+
+This is greater than \$20, so a risk neutral agent will be willing to pay \$20 to participate in the gamble. The most they would be willing to pay is $25.
+
+We could also have solved this by determining the expected value if they had paid \$20:
+
+```{=tex}
+\begin{align*}
+E[X]-c&=\sum_{i=1}^n p_ix_i-c \\[12pt]
+&=0.5(550)+0.5(-500)-20 \\[6pt]
+&=5
+\end{align*}
+```
+
+As the expected value is positive, the agent would be willing to pay \$20.
+:::
+
+b\) Would a risk averse expected utility maximiser with wealth \$1000 and utility function $U(x)=x^{1/2}$ be willing to pay \$20 to play this gamble? What is the most they would be willing to pay to play?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The expected utility of the gamble for the risk averse agent if they paid \$20 to play is:
+
+```{=tex}
+\begin{align*}
+EU(x)&=p_1(W+x_1-c)+p_2(W+x_2-c) \\[6pt]
+&=0.5(1000+550-20)^{1/2}+0.5(1000-500-20)^{1/2} \\[6pt]
+&=30.51
+\end{align*}
+```
+
+The expected utility of not playing the gamble is:
+
+```{=tex}
+\begin{align*}
+EU(x)&=(1000)^{1/2} \\[6pt]
+&=31.62
+\end{align*}
+```
+
+They would not pay \$20 as they would have higher utility if they turned down the gamble.
+
+In fact, they would not pay any positive sum to participate in the gamble. If they were offered the gamble for free, their expected utility would be:
+
+```{=tex}
+\begin{align*}
+EU(x)&=0.5(1000+550)^{1/2}+0.5(1000-500)^{1/2} \\[6pt]
+&=`r qfree <- 0.5*(1000+550)^0.5+0.5*(1000-500)^0.5; round(qfree, 2)`
+\end{align*}
+```
+
+This is less than if they simply turned down the gamble. They would be willing to pay to avoid the gamble. How much?
+
+We can determine this by asking what wealth a utility of `r round(qfree, 2)` is:
+
+```{=tex}
+\begin{align*}
+W^{1/2}&=`r round(qfree, 2)` \\[6pt]
+W&=`r round(qfree, 2)`^2 \\[6pt]
+&=\$`r round(qfree^2, 2)`
+\end{align*}
+```
+
+The certainty equivalent of the gamble is \$`r round(qfree^2, 2)`. The agent would be willing to pay up to \$`r 1000-round(qfree^2, 2)` to avoid the gamble.
+:::
+
+c\) Would the expected utility maximiser with utility function $U(x)=x^{1/2}$ change their decision if they had \$1 million in wealth? Explain.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If they now have \$1 million in wealth, we simply repeat the calculations above with the new wealth.
+
+```{=tex}
+\begin{align*}
+EU(x)&=0.5(1000000+550-20)^{1/2}+0.5(1000000-500-20)^{1/2} \\[6pt]
+&=`r EUc1<-0.5*(1000000+550-20)^(1/2)+0.5*(1000000-500-20)^(1/2); round(EUc1, 5)`
+\end{align*}
+```
+
+
+The expected utility of not playing the gamble is:
+
+```{=tex}
+\begin{align*}
+EU(x)&=(1000000)^{1/2} \\[6pt]
+&=1000
+\end{align*}
+```
+
+They would be willing to pay \$20 as they would have higher utility if they accepted the gamble.
+
+What is the most they would be willing to pay? If they were offered the gamble for free, their expected utility would be:
+
+```{=tex}
+\begin{align*}
+EU(x)&=0.5(1000000+550)^{1/2}+0.5(1000000-500)^{1/2} \\[6pt]
+&=`r EUc2<-0.5*(1000000+550)^(1/2)+0.5*(1000000-500)^(1/2); round(EUc2, 4)`
+\end{align*}
+```
+
+How much would they be willing to pay for this opportunity? We can determine this by asking what wealth a utility of `r round(EUc2, 4)` is:
+
+```{=tex}
+\begin{align*}
+W&=(`r EUc2`)^2 \\[6pt]
+&=\$`r options(scipen = 999); W<-round(EUc2^2, 2); W`
+\end{align*}
+```
+
+The agent would be willing to pay up to \$`r W-1000000` for the gamble. This is close to the expected value of \$25.
+
+Intuitively, as the agent's wealth increases their utility function becomes increasingly linear (second derivative approaches zero) and they become closer to risk neutral.
+:::
+
+## Purchasing insurance {#sec-purchasing-insurance}
+
+An agent is considering insurance against bushfire for their house valued at $H=\$1,000,000$. The house has a 1 in 1000 ($p=0.001$) chance of burning down. An insurer is willing to offer full coverage for a premium ($R$) of \$1100.
+
+a\) What is the expected value of purchasing insurance?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If the agent purchases insurance, they pay the premium and do not suffer any loss regardless of whether there is a bushfire or not.
+
+$$
+E[\text{I}]=-R=-\$1,100
+$$
+
+The expected value of purchasing insurance is the guaranteed loss of the premium, \$1100.
+
+You could also think of the expected value of purchasing insurance as involving:
+
+- in 1 in 1000 instances, the loss of the house and the insurance payout in case of fire, minus the cost of the premium
+- in the other 999 in 1000 instances, payment of the premium only.
+ 
+In that case, you would write:
+
+\begin{align*}
+E[\text{I}]&=p\times(-H+H-R)+(1-p)\times(-R) \\[6pt]
+&=0.001\times(-1000000+1000000-1100)+0.999\times(-1100) \\[6pt]
+&=-\$1,100
+\end{align*}
+
+This gives the same answer as the first method.
+
+:::
+
+b\) What is the expected value of not purchasing insurance?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If the agent does not purchase insurance, they face the 1 in 1000 possibility of an uninsured loss.
+
+\begin{align*}
+E[\neg \text{I}]&=p\times(-H) \\[6pt]
+&=-0.001\times 1000000 \\[6pt]
+&=-\$1000
+\end{align*}
+:::
+
+c\) Would a risk-neutral agent purchase the insurance?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Above, we calculated that purchasing insurance in this case has a lower expected value than not purchasing the insurance. A risk-neutral agent would not purchase the insurance.
+
+:::
+
+d\) Suppose an agent has a logarithmic utility function ($U(x)=\ln(x)$) and they have \$10,000 in cash in addition to their house, giving them wealth ($W$) of \$1,010,000. 
+
+Are they risk seeking, risk neutral or risk averse?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The logarithmic utility function has diminishing marginal utility. Diminishing marginal utility is the principle the marginal utility from each additional unit decreases. In the context of wealth, this means that each additional dollar provides less satisfaction than the previous one.
+
+Diminishing marginal utility means that the agent will be risk averse. They will prefer a certain outcome to a gamble with the same expected value.
+
+:::
+
+e\) Would this agent with logarithmic utility purchase the insurance? 
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We need to compare the expected utility of purchasing insurance with the expected utility of not purchasing insurance.
+
+The expected utility of purchasing insurance is:
+
+\begin{align*}
+E[U(\text{I})]&=\ln(W-R) \\[6pt]
+&=\ln(`r prettyNum(1000000+10000-1100, big.mark=",", preserve.width="none")`) \\[6pt]
+&=`r round(log(1000000+10000-1100), 4)`\\
+\end{align*}
+
+The expected utility of not purchasing insurance is:
+
+\begin{align*}
+E[U(\neg \text{I})]&=0.999\times \ln(W)+0.001\times \ln(W-H)) \\[6pt]
+&=0.999\times \ln(1,010,000)+0.001\times \ln(10,000) \\[6pt]
+&=`r round(0.999*log(1010000)+0.001*log(10000), 4)`
+\end{align*}
+
+The expected utility of purchasing insurance is greater than the expected utility from not purchasing insurance. This agent will purchase insurance.
+
+The following diagram illustrates. The agent's utility function is plotted, with the outcome on the horizontal axis and the utility of each outcome on the vertical axis. Each outcome and the utility of that outcome is marked: wealth after losing the house when uninsured $(W-H)$, wealth after paying the insurance premium $(W-R)$, and wealth if uninsured but the house does not burn down $(W)$.
+
+The expected utility of not purchasing insurance is on the dash-dot line between $U(W-H)$ and $U(W)$. The location of this point is determined by the probability $p$ of incurring a loss. This point lies at a distance of $p$ from $U(W)$ along the line (or equivalently, at a distance of $1-p$ from $U(W-H)$). This point aligns with the expected value of leaving the house uninsured $E[\neg I]$.
+
+The utility of purchasing insurance ($U(W-R)$) is greater than the expected utility of not purchasing insurance $(E[U(\neg I)])$. The agent will purchase insurance.
+
+```{r}
+#| label: fig-euinsurance
+#| fig-cap: Insurance choice by a risk averse expected utility maximiser
+
+library(ggplot2)
+library(latex2exp)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,100,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-3 #loss
+x2<-90 #win
+ev<-77 #expected value of gamble
+xc<-70 #certain outcome
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+    geom_line(data = df) +
+    geom_vline(xintercept = 0, linewidth=0.25)+ 
+    geom_hline(yintercept = 0, linewidth=0.25)+
+    labs(x = "x", y = "U(x)")+
+
+    # Set the theme
+    theme_minimal()+
+
+    #remove numbers on each axis
+    theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+    #limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)
+    coord_cartesian(xlim = c(-8, 100), ylim = c(0, 5))+
+
+    #Add labels W, U(W) and line to curve indicating each
+    annotate("text", x = x2, y = 0, label = "W", size = 4, hjust = 0.4, vjust = 1.5)+
+    annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(x2), label = "U(W)", size = 4, hjust = 1.1, vjust = 0.4)+
+
+    #Add labels W-R, U(W_R) and line to curve indicating each
+    annotate("text", x = xc, y = 0, label = "W-R", size = 4, hjust = 0.5, vjust = 1.5)+
+    annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(xc), label = "U(W-R)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+    #Add expected utility line
+    annotate("segment", x = x2, xend = x1, y = u(x2), yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+    #Add labels W-H, U(W-H) and line to curve indicating each
+    annotate("text", x = x1, y = 0, label = "W-H", size = 4, hjust = 0.4, vjust = 1.5)+
+    annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+    annotate("text", x = 0, y = u(x1), label = "U(W-H)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+    #Add labels E[not I], E[U(not I)] and curve indicating each
+    annotate("text", x = ev, y = 0, label = TeX("E[$\\neg$ I]", output='character'), parse=TRUE, size = 4, hjust = 0.4, vjust = 1.4)+
+    annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+    annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+    annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = TeX("E[U($\\neg$ I)]", output='character'), parse=TRUE, size = 4, hjust = 1.05, vjust = 0.45)
+
+```
+
+What is the intuition for this agent's purchase of insurance?
+
+Consider the following scenario. You will experience one of two outcomes with equal probability: \$0 in one case and \$200 in the other. Your average wealth in this scenario is:
+
+$$
+\frac{\$0 + \$200}{2} = \$100
+$$
+
+Your average utility (which is expected utility) is:
+
+$$
+\frac{U(\$0) + U(\$200)}{2}
+$$
+
+What if you can insure (costlessly) to give you wealth of \$100 with certainty? In that case, your average wealth is \$100, as per the first scenario, with utility of $U(\$100)$.
+
+Does insurance result in higher utility?
+
+For a risk-averse person with diminishing marginal utility, the jump from $0 to $100 provides a larger increase in utility than the jump from $100 to $200. Therefore:
+
+$$
+U(\$100) > \frac{U(\$0) + U(\$200)}{2}
+$$
+
+The utility of average wealth is greater than the average utility of wealth.
+
+This inequality demonstrates why people with diminishing marginal utility purchase insurance. When wealth is unevenly distributed across potential outcomes, the utility gained from the best outcome is relatively less than the utility lost from the worst outcome. Insurance helps distribute wealth more evenly across all possible outcomes. In good times, the person has slightly less wealth (due to the premium). In bad times, the person avoids a catastrophic loss. This even distribution of wealth across possible outcomes results in higher expected utility for the consumer.
+
+:::
+
+## Insurance but not a lottery ticket
+
+In your own words but using concepts from this subject explain why a risk averse agent who makes decisions according to expected utility theory might purchase insurance but not a lottery ticket.
+
+::: {.callout-tip collapse="true"}
+## Answer
+Both lotteries and insurance have a negative expected value.
+
+The risk averse agent will typically reject a lottery as it has a small probability of a large win for the price of a small loss. Due to diminishing marginal returns, the average weight given to each dollar in the large gain is weighted much less than the average weight given to each dollar in the small price. This makes the lottery unattractive.
+
+In contrast, a risk averse agent may purchase insurance as for a small price they can avoid the possibility of a large loss. Due to diminishing marginal returns, the large loss can have much higher average weight given to each dollar than to the weight given to each dollar for the small premium.
+:::
+
+## An anomaly in expected utility
+
+Consider the following two choices:
+
+**Choice 1**: Choose one of the following bets:
+
+Bet A:
+
+-   \$10,000 with probability: 11%
+-   \$0 with probability: 89%
+
+Bet B:
+
+-   \$50,000 with probability: 10%
+-   \$0 with probability: 90%
+
+**Choice 2**: Choose one of the following bets:
+
+Bet A':
+
+-   \$10,000 with probability: 100%
+
+Bet B':
+
+-   \$50,000 with probability: 10%
+-   \$10,000 with probability: 89%
+-   \$0 with probability: 1%
+
+Many people pick B for Choice 1 and A' for Choice 2.
+
+Does this pair of choices conform with Expected Utility Theory? Why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+According to Expected Utility Theory, if an agent selects B:
+
+```{=tex}
+\begin{align*}
+0.10U(50,000)+0.90U(0)&> 0.11U(10,000)+ 0.89U(0) \\[6pt]
+0.10U(50,000)+0.01U(0)&> 0.11U(10,000)
+\end{align*}
+```
+According to Expected Utility Theory, if an agent selects A':
+
+```{=tex}
+\begin{align*}
+U(10,000)&>0.10U(50,000)+0.89U(10,000)+0.01U(0) \\[6pt]
+0.11U(10,000)&>0.89U(50,000)+0.01U(0)
+\end{align*}
+```
+This is a contradiction. Under expected utility theory, if an agent chooses B it should choose B'. And if the agent chooses A it should choose A'.
+
+This occurs due to a breach in the principle of independence.
+
+Here is a representation of the choices.
+
+![](img/allais-paradox-4.jpg)
+
+The bets in the two shaded areas are the same. They are paired with an outcomes of either \$10,000 or \$0. Preferring B to A and A' to B' is a violation of the axiom of the [independence of irrelevant alternatives](@sec-independence). Under that axiom, two gambles mixed with an irrelevant third gamble will maintain the same order of preference as when the two are presented independently of the third gamble.
+
+Using this representation in the table, here is another way of understanding why this combination of choices is an anomaly. Imagine there are 100 tickets numbered 1 to 100. One ticket will be drawn. If a ticket between 1 and 89 is drawn, you win the prize in the first column. If a ticket between 90 and 99 is drawn, you win the amount in the second. If a 100 is drawn, you win the sum in the third.
+
+Suppose that you know the ticket that is drawn is between 1 and 89. Would you prefer A or B? As you would win \$0 with either choice, you will be indifferent. You will similarly be indifferent between A' and B', winning \$10,00 no matter what.
+
+Suppose instead that a ticket between 90 and 100 is drawn, but you don't know which. You can see that if you prefer A to B, you should also prefer A' to B'. In each choice you are effectively facing the same bet. Let's assume for the moment that you prefer B and B'.
+
+Finally, suppose you don't know what ticket will be drawn. We have just determined that if you know the ticket is between 1 and 89 you are indifferent between the options, but if between 90 and 100 is drawn you prefer B and B'. You do not prefer A or A' when the ticket range is 1 to 89 or 90 to 100, so you should not prefer A or A' when the ticket number is unknown.
+
+Finally, using the formal definition for the independence of irrelevant alternatives axiom:
+
+-   if $x$ and $y$ are lotteries with $x\succcurlyeq y$ and
+-   $p$ is the probability that a third option $z$ is present, then: $$
+    pz+(1-p)x\succcurlyeq pz+(1-p)y
+    $$
+
+For each of the choices in our lottery:
+
+-   $p=89\%$
+
+-   $x$ is a 100% chance of \$10,000
+
+-   $y$ is a 0.01/(1-0.89) chance of \$0 and 0.10/(1-0.89) chance of \$50,000
+
+-   $z$ is \$10,000 in choice 1 and \$0 in choice 2, although $z$'s value does not matter due to its assumed irrelevance.
+:::
