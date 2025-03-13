@@ -25,7 +25,7 @@ The reflection effect involves an asymmetry in risk preferences in the gain and 
 
 When people make a risky choice related to gains, they are risk averse. They prefer a certain option with value lower than the expected value of the risky choice. When choosing an option in the loss domain, they become risk-seeking. This phenomenon is called the reflection effect.
 
-Put simply, people typically prefer to lock in a sure gain rather than risk it for more, but will take risks to avoid a sure loss."
+Put simply, people typically prefer to lock in a sure gain rather than risk it for more, but will take risks to avoid a sure loss.
 
 The reflection effect might also be thought of as diminishing sensitivity to gains or losses in either direction. This contrasts with expected utility theory, where the pain of losses increases as they grow in size.
 
@@ -238,7 +238,7 @@ For the certain loss, we substitute -\$10 into the value function.
 v(\text{certainty})&=v(-10) \\[6pt]
 &=-10^{\frac{1}{2}} \\[6pt]
 &=`r round(-10^0.5, 2)`
-\{end{align*}
+\end{align*}
 
 For the bet, we calculate the probability weighted value of the potential outcomes.
 

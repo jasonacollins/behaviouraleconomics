@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "8 January 2025"
+  date: "13 March 2025"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
