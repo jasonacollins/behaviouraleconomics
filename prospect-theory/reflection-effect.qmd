@@ -13,7 +13,7 @@ engine: knitr #added as otherwise inline r code does not execute
 
 ::: {.content-visible when-format="html"}
 
-{{< video https://youtu.be/UuukHub91OE >}}
+{{< video https://youtu.be/i28P-j3M-Ps >}}
 
 ---
 
