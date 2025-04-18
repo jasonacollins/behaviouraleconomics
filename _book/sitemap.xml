@@ -5,6 +5,10 @@
     <lastmod>2025-03-13T03:00:02.966Z</lastmod>
   </url>
   <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/economic-foundations/economic-foundations.html</loc>
+    <lastmod>2024-09-20T06:47:10.625Z</lastmod>
+  </url>
+  <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/economic-foundations/preferences.html</loc>
     <lastmod>2024-09-20T06:55:35.039Z</lastmod>
   </url>
@@ -21,36 +25,40 @@
     <lastmod>2025-01-10T03:03:47.495Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/notation-and-mathematical-background.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/decision-making-under-risk.html</loc>
+    <lastmod>2025-04-18T09:44:43.066Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/notation-and-mathematical-background.html</loc>
     <lastmod>2024-09-20T07:38:30.863Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-value.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/expected-value.html</loc>
     <lastmod>2024-09-20T09:00:59.797Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/axioms-for-expected-utility-theory.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/axioms-for-expected-utility-theory.html</loc>
     <lastmod>2024-09-21T05:54:14.368Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-utility-theory.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/expected-utility-theory.html</loc>
     <lastmod>2024-09-21T07:46:35.909Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/subjective-expected-utility.html</loc>
-    <lastmod>2024-09-21T20:19:02.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/expected-utility-examples.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/expected-utility-examples.html</loc>
     <lastmod>2024-10-17T02:32:59.714Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/anomalies-in-expected-utility-theory.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/anomalies-in-expected-utility-theory.html</loc>
     <lastmod>2024-09-23T04:48:15.052Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/risk-and-uncertainty-exercises.html</loc>
-    <lastmod>2025-01-10T02:38:40.506Z</lastmod>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/decision-making-under-risk-exercises.html</loc>
+    <lastmod>2025-01-15T07:47:42.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory.html</loc>
+    <lastmod>2024-10-17T02:35:08.236Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/reference-dependence.html</loc>
@@ -87,6 +95,10 @@
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-exercises.html</loc>
     <lastmod>2024-08-15T05:54:48.427Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/intertemporal-choice.html</loc>
+    <lastmod>2024-10-17T02:45:50.463Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/exponential-discounting.html</loc>
@@ -129,16 +141,28 @@
     <lastmod>2024-09-09T09:57:15.447Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/probability-foundations.html</loc>
-    <lastmod>2024-09-20T06:12:51.365Z</lastmod>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/probability-foundations.html</loc>
+    <lastmod>2025-01-16T02:31:47.559Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/bayes-rule.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/probability-theory.html</loc>
+    <lastmod>2025-01-15T07:26:08.497Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/bayes-rule.html</loc>
     <lastmod>2024-09-20T06:08:38.867Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/probability-theory-exercises.html</loc>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/probability-theory-exercises.html</loc>
     <lastmod>2025-01-10T03:32:17.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/subjective-expected-utility.html</loc>
+    <lastmod>2025-01-15T05:45:08.199Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/heuristics-and-biases.html</loc>
+    <lastmod>2025-04-18T09:43:56.316Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/heuristics.html</loc>
@@ -161,6 +185,10 @@
     <lastmod>2025-01-10T03:32:13.824Z</lastmod>
   </url>
   <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/game-theory.html</loc>
+    <lastmod>2024-10-16T00:43:30.093Z</lastmod>
+  </url>
+  <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/simultaneous-move-one-shot-games.html</loc>
     <lastmod>2024-10-17T01:52:12.451Z</lastmod>
   </url>
@@ -181,6 +209,10 @@
     <lastmod>2024-12-29T23:16:53.307Z</lastmod>
   </url>
   <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/behavioural-game-theory.html</loc>
+    <lastmod>2024-09-19T10:14:14.915Z</lastmod>
+  </url>
+  <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/level-k-thinking.html</loc>
     <lastmod>2024-09-19T10:14:29.651Z</lastmod>
   </url>
@@ -197,8 +229,12 @@
     <lastmod>2024-07-27T06:03:06.594Z</lastmod>
   </url>
   <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/social-preferences.html</loc>
+    <lastmod>2024-10-17T02:10:58.238Z</lastmod>
+  </url>
+  <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/distribution.html</loc>
-    <lastmod>2025-01-08T06:57:41.111Z</lastmod>
+    <lastmod>2025-04-18T02:24:47.664Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/reputation.html</loc>
@@ -211,6 +247,10 @@
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/social-preferences-exercises.html</loc>
     <lastmod>2024-10-17T00:39:48.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://behaviouraleconomics.jasoncollins.blog/practice-problems/practice-problems.html</loc>
+    <lastmod>2024-07-24T00:51:17.443Z</lastmod>
   </url>
   <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/practice-problems/expected-utility-theory-problems.html</loc>
@@ -237,103 +277,7 @@
     <lastmod>2022-05-30T08:33:46.000Z</lastmod>
   </url>
   <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/practice-problems/practice-problems.html</loc>
-    <lastmod>2024-07-24T00:51:17.443Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/economic-foundations/economic-foundations.html</loc>
-    <lastmod>2024-09-20T06:47:10.625Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/risk-and-uncertainty/decision-making-under-risk-and-uncertainty.html</loc>
-    <lastmod>2024-09-20T07:19:42.055Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory.html</loc>
-    <lastmod>2024-10-17T02:35:08.236Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/intertemporal-choice/intertemporal-choice.html</loc>
-    <lastmod>2024-10-17T02:45:50.463Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/probability-theory.html</loc>
-    <lastmod>2025-01-13T07:46:22.097Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/heuristics-and-biases.html</loc>
-    <lastmod>2025-01-15T06:41:09.945Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/game-theory/game-theory.html</loc>
-    <lastmod>2024-10-16T00:43:30.093Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/behavioural-game-theory/behavioural-game-theory.html</loc>
-    <lastmod>2024-09-19T10:14:14.915Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/social-preferences/social-preferences.html</loc>
-    <lastmod>2024-10-17T02:10:58.238Z</lastmod>
-  </url>
-  <url>
     <loc>https://behaviouraleconomics.jasoncollins.blog/Notes-on-behavioural-economics.pdf</loc>
-    <lastmod>2025-01-10T03:52:43.556Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-theory/subjective-expected-utility.html</loc>
-    <lastmod>2025-01-15T05:45:08.199Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/probability-foundations.html</loc>
-    <lastmod>2025-01-16T02:31:47.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/probability-theory.html</loc>
-    <lastmod>2025-01-15T07:26:08.497Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/bayes-rule.html</loc>
-    <lastmod>2024-09-20T06:08:38.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/probability-theory-exercises.html</loc>
-    <lastmod>2025-01-10T03:32:17.597Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/probability-foundations/subjective-expected-utility.html</loc>
-    <lastmod>2025-01-15T05:45:08.199Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/decision-making-under-risk.html</loc>
-    <lastmod>2025-01-16T02:34:12.035Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/decision-making-under-risk-exercises.html</loc>
-    <lastmod>2025-01-15T07:47:42.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/notation-and-mathematical-background.html</loc>
-    <lastmod>2024-09-20T07:38:30.863Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/expected-value.html</loc>
-    <lastmod>2024-09-20T09:00:59.797Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/axioms-for-expected-utility-theory.html</loc>
-    <lastmod>2024-09-21T05:54:14.368Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/expected-utility-theory.html</loc>
-    <lastmod>2024-09-21T07:46:35.909Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/expected-utility-examples.html</loc>
-    <lastmod>2024-10-17T02:32:59.714Z</lastmod>
-  </url>
-  <url>
-    <loc>https://behaviouraleconomics.jasoncollins.blog/decision-making-under-risk/anomalies-in-expected-utility-theory.html</loc>
-    <lastmod>2024-09-23T04:48:15.052Z</lastmod>
+    <lastmod>2025-04-18T09:51:53.468Z</lastmod>
   </url>
 </urlset>

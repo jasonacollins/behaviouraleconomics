@@ -2,7 +2,7 @@
 
 ::: {.content-visible when-format="html"}
 
-{{< video https://youtu.be/Ceor2U7Fy3Q >}}
+{{< video https://youtu.be/l1oXlM87-gc >}}
 
 ---
 
@@ -12,7 +12,7 @@ Imagine you are trying to catch a ball.
 
 One strategy would be to calculate the ball's trajectory - that is, it's speed, angle, and spin - make some adjustments for wind resistance. You then move to the spot where the ball will land.
 
-Another would be to use a simple rule: keep your eye on the ball and maintain a constant angle of gaze as you move. This mental shortcut - known as the gaze heuristic - works remarkably well. Yet this same strategy can lead you to run in a curved path rather than straight to where the ball will land. It might lead to to first run away and then run toward the landing point.
+Another would be to use a simple rule: keep your eye on the ball and maintain a constant angle of gaze as you move. This mental shortcut - known as the gaze heuristic - works remarkably well. Yet this same strategy can lead you to run in a curved path rather than straight to where the ball will land. It might lead to first run away and then run toward the landing point.
 
 ![](img/gaze-heuristic.jpg){width=60%}
 

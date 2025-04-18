@@ -11,7 +11,7 @@
 ------------------------------------------------------------------------
 
 ::: {.content-visible when-format="html"}
-{{< video https://youtu.be/3MewF0_hic4 >}}
+{{< video https://youtu.be/ZcJCsZ18-2A >}}
 :::
 
 ## Introduction
@@ -48,17 +48,21 @@ Altruism comes in two forms. Pure altruism reflects genuine concern for others' 
 
 Consider a public goods game where two players each have \$10 and must simultaneously decide how much to contribute to a public project. The total contributions are multiplied by 1.5 and split equally between both players, regardless of their individual contributions.
 
-![](img/public-goods-game-process-distribution.png)
+![Public goods game process](img/public-goods-game-process-distribution.png){#fig-public-goods-game-process-distribution}
 
 This game captures real-world situations: work teams deciding effort on shared projects, neighbors contributing to community improvements, or countries investing in climate change mitigation.
 
 For this scenario, if both players contribute their full \$10, the pot becomes \$30 and each receives \$15.
 
-![](img/public-goods-game-process-distribution-cooperate.png)
+![Public goods game process with cooperation](img/public-goods-game-process-distribution-cooperate.png){#fig-public-goods-game-process-distribution-cooperate}
 
-If neither contributes, each keeps their \$10. If one contributes \$10 and the other \$0, the \$15 pot is split equally so the contributor gets \$7.50 and the non-contributor gets \$17.50.
+If neither contributes, each keeps their \$10.
 
-![](img/public-goods-game-process-distribution-defect.png)
+![Public goods game process with no cooperation](img/public-goods-game-process-distribution-no-cooperation.png){#fig-public-goods-game-process-distribution-no-cooperation}
+
+If one contributes \$10 and the other \$0, the \$15 pot is split equally so the contributor finishes with \$7.50 and the non-contributor end up with \$17.50.
+
+![Public goods game process with defection](img/public-goods-game-process-distribution-defect.png){#fig-public-goods-game-process-distribution-defect}
 
 A self-interested player would contribute nothing. For any contribution by the other player, keeping your money always gives a higher payoff. However, both players would be better off if they both contributed everything.
 
@@ -358,14 +362,14 @@ In the dictator game, the dictator makes a unilateral offer to the receiver. The
 
 ![](img/dictator-game-process.png)
 
-In this version of the game, the dictator has a constrained choice set and must decide between the allocations (0, 1) and (1, 5), where $(x_D,x_R)$ represent the payoffs for the dictator and receiver, respectively. The dictator's $\alpha=1/2$. As the dictator has less than the other player under each distribution, $\alpha$ is the relevant parameter.
+In this version of the game, the dictator has a constrained choice set and must decide between the allocations (0, 1) and (1, 5). That is, the dictator must choose between 0 for themselves and 1 for the receiver, or 1 for themselves and 5 for the receiver. The dictator's $\alpha=1/2$. As the dictator has less than the other player under each distribution, $\alpha$ is the relevant parameter.
 
 ![](img/dictator-game-distribution.png){width="80%"}
 
 We can calculate the dictator's utility of each allocation. The (0,1) allocation gives a utility of zero for the dictator's payoff minus alpha times the inequality.
 
 \begin{align*}
-U(0,1)&=0-\alpha\times (1-0) \\[6pt]
+U_D(0,1)&=0-\alpha\times (1-0) \\[6pt]
 &=-1/2 \times 1 \\[6pt]
 &=−1/2
 \end{align*}
@@ -373,7 +377,7 @@ U(0,1)&=0-\alpha\times (1-0) \\[6pt]
 The (1,5) allocation gives a utility of one for the dictator's payoff minus alpha times the larger inequality.
 
 \begin{align*}
-U(1,5)&=1-\alpha\times (5-1) \\[6pt]
+U_D(1,5)&=1-\alpha\times (5-1) \\[6pt]
 &=1-1/2 \times 4 \\[6pt]
 &=−1
 \end{align*}

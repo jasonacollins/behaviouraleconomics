@@ -2,7 +2,7 @@
 
 ::: {.content-visible when-format="html"}
 
-{{< video https://youtu.be/iS2xziBbJdA >}}
+{{< video https://youtu.be/CR7i1VvLiAU >}}
 
 ---
 

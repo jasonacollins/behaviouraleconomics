@@ -5,7 +5,7 @@ book:
   title: "Notes on behavioural economics"
   site-url: https://behaviouraleconomics.jasoncollins.blog
   author: "Jason Collins"
-  date: "13 March 2025"
+  date: "18 April 2025"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -95,8 +95,6 @@ book:
         href: https://www.jasoncollins.blog/
       - text: "About"
         href: https://www.jasoncollins.blog/about/
-      - icon: twitter
-        href: https://twitter.com/jasonacollins
   sidebar:
     collapse-level: 1
     style: "floating"
@@ -107,8 +105,6 @@ book:
     center:
       - text: "Copyright: CC-BY"
         href: https://creativecommons.org/licenses/by/4.0/
-      - icon: twitter 
-        href: https://twitter.com/jasonacollins
   open-graph: true
   twitter-card: true
   google-analytics: "G-ZFSLJY1DR4"
