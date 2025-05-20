@@ -17,7 +17,7 @@ $$
 
 ::: {.content-visible when-format="html"}
 
-{{< video https://youtu.be/5TIR4oL1Ors >}}
+{{< video https://youtu.be/5DYeisEHn2U >}}
 
 ---
 
@@ -29,7 +29,7 @@ When deciding whether to invest in an untested technology or choose between conf
 
 In standard expected utility theory, probabilities are derived from known frequencies or distributions. In contrast, subjective expected utility theory uses subjective probabilities based on personal judgment.
 
-This subjective approach maintains the mathematical framework of expected utility theory. Agents maximize subjective expected utility, $\mathbb{E}[U(X)]$, by assigning subjective probabilities, $\pi(x_i)$, to outcomes $x_i$. The equation for subjective utility theory is the same as that for expected utility theory, except for these subjective probabilities. Subjective expected utility equals the subjective probability weighted sum of the utilities of each outcome $x_i$:
+This subjective approach maintains the mathematical framework of expected utility theory. Agents maximise subjective expected utility, $\mathbb{E}[U(X)]$, by assigning subjective probabilities, $\pi(x_i)$, to outcomes $x_i$. The equation for subjective expected utility theory is the same as that for expected utility theory, except for these subjective probabilities. Subjective expected utility equals the subjective probability weighted sum of the utilities of each outcome $x_i$:
 
 \begin{align*}
 \mathbb{E}[U(X)]&=\pi(x_1)u(x_1)+\pi(x_2)u(x_2)+...+\pi(x_n)u(x_n)\\[6pt]
@@ -48,7 +48,7 @@ This process involves:
 
 ## Axioms for subjective expected utility
 
-The axioms for subjective utility theory were first set out by Leonard Savage in 1954. These axioms have a close alignment with the axioms for standard expected utility theory, although they are adapted to the subjective nature of the probabilities.
+The axioms for subjective expected utility theory were first set out by Leonard Savage in 1954. These axioms have a close alignment with the axioms for standard expected utility theory, although they are adapted to the subjective nature of the probabilities.
 
 One of these axioms is the **sure-thing principle**. Informally, we could state it as follows:
 
@@ -133,7 +133,7 @@ $$
 \mathbb{E}[U(B_r)] = \pi(r)u(\$100)
 $$
 
-The subjective utility of predicting black for gamble B is the subjective probability of the ball being black times the utility of winning \$100:
+The subjective expected utility of predicting black for gamble B is the subjective probability of the ball being black times the utility of winning \$100:
 
 $$
 \mathbb{E}[U(B_b)] = (1-\pi(r))u(\$100)

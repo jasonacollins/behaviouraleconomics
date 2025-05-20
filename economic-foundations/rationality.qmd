@@ -11,7 +11,7 @@
 
 ::: {.content-visible when-format="html"}
 
-{{< video https://youtu.be/cUQ6Q4ge45w >}}
+{{< video https://youtu.be/z8El6IqdLJs >}}
 
 ---
 
