@@ -1,0 +1,79 @@
+# Emotions
+
+## Summary {.unnumbered}
+
+- Emotions are mental states that signal positive or negative outcomes and can function as commitment devices in strategic interactions.
+- Emotions like guilt and anger can serve as credible commitments, enabling trust and cooperation or deterring cheating, even when the emotional response appears "irrational" in the short term.
+- In everyday scenarios, like complaining about bad service or playing "chicken," emotions can change the game's payoff structure and equilibrium, making threats credible and influencing others' behaviour to one's advantage.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/vCdEFyWk3xw >}}
+
+---
+
+:::
+
+## Introduction
+
+Emotions are mental states that signal positive or negative outcomes.
+
+One function of emotions may be to act as a commitment device:
+
+- The emotion of guilt can constrain a desire to “cheat” where cheating delivers a higher pay-off. This in turn may allow people to trust you.
+
+- The emotion of anger may lead you to punish someone even where delivering the punishment also harms you. This in turn may lead people to be less likely to cheat you.
+
+While this behaviour may appear “irrational”, it allows people to make credible commitments that in turn allow them to enter beneficial trades and cooperative arrangements, while being less likely to being cheated.
+
+Consider the following quote from Richard Nixon:
+
+>I call it the Madman Theory, Bob. I want the North Vietnamese to believe I've reached the point where I might do anything to stop the war. We'll just slip the word to them that, "for God's sake, you know Nixon is obsessed about communism. We can't restrain him when he's angry—and he has his hand on the nuclear button" and Ho Chi Minh himself will be in Paris in two days begging for peace.
+
+Pushing the nuclear button is not in Nixon's interest, and from a purely rational perspective may not be a credible threat. But if a madman has his finger on the button, the calculation changes.
+
+## Examples
+
+### Complaining for bad service
+
+Recall our earlier example in @sec-complaining, illustrated below, of a customer threatening to complain if they receive bad service. Complaining is costly.
+
+We determined this by backward induction. At the final node for the customer, they can complain for a payoff of -1 or not complain for a payoff of 1. They will not complain.
+
+The company, therefore, has a choice between providing good service for a payoff of 1 or bad service for a payoff of 2. They will provide bad service. The company has the same payoff for bad service regardless of the presence of the threat to complain as the threat is not credible.
+
+For the customer's initial choice of whether to threaten to complain, it does not matter either way. Regardless of their threat, they receive bad service.
+
+![](img/complaining-is-costly-solved.png)
+
+But what if the customer gets a strong sense of satisfaction from complaining worth +3? Then their payoffs become as follows:
+
+![](img/complaining-is-credible.png)
+
+The threat to complain is now credible. If they receive bad service, they complain for a payoff of 2 rather than not complain for a payoff of 1.
+
+The company now provides good service following a threat to complain. Absent that threat, they would provide bad service.
+
+![](img/complaining-is-credible-solved.png)
+
+### Chicken
+
+As another example, recall the game of chicken. Two players are driving toward each other. Whoever swerves first loses. If neither swerves, they crash and die.
+
+![](img/chicken-1.jpg){width=60%}
+
+There are two pure-strategy Nash equilibria: (Straight, Swerve) and (Swerve, Straight). If the other player swerves, they want to go straight. If the other player goes straight, they want to swerve. 
+
+![](img/chicken-2.png){width=60%}
+
+Now suppose player A is crazy. They are afraid of nothing and will never swerve. Player B knows this.
+
+Player A’s craziness acts as a commitment device similar to that of removing the Steering Wheel. If player A will not swerve, player B will.
+
+![](img/chicken-3.jpg){width=60%}
+
+The Nash equilibrium is (Straight, Swerve). The crazy player A wins the game of chicken.
+
+![](img/chicken-4.png){width=60%}

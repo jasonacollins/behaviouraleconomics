@@ -1,0 +1,20 @@
+{
+  "hash": "50380ce1ab970ccfadba4dc5e3f97a1b",
+  "result": {
+    "markdown": "# Exponential discounting examples\n\n## Example 1\n\nSuppose we have an exponential discounter with $\\delta=0.95$ and utility each period of $u(x_n)=x_n$.\n\nChoice 1: Would this agent prefer \\$100 today ($t=0$) or \\$110 next week ($t=1$)? \n\n\\begin{align*}\nU_0(0,\\$100)&=u(\\$100) \\\\\n&=100\n\\end{align*}\n\n\\begin{align*}\nU_0(1,\\$110)&=\\delta u(\\$110) \\\\\n&=0.95*110 \\\\\n&=104.50\n\\end{align*}\n\nThe exponential discounter will prefer to receive \\$110 next week.\n\nChoice 2: Would this agent prefer \\$100 next week ($t=1$) or \\$110 in two weeks ($t=2$)? \n\n\\begin{align*}\nU_1(1,\\$100)&=\\delta u(\\$110) \\\\\n&=0.95*100 \\\\\n&=95\n\\end{align*}\n\n\\begin{align*}\nU_1(2,\\$110)&=\\delta^2 u(\\$110) \\\\\n&=0.95^2*110 \\\\\n&=99.275\n\\end{align*}\n\nThe exponential discounter will prefer to receive \\$110 in two weeks. The set of decisions across Choice 1 and Choice 2 are time consistent. If the agent selected \\$110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively Choice 1), they would not change.\n\n## Example 2\n\nSuppose we have an exponential discounter with $\\delta=0.95$ per week and utility each period of $u(x_n)=x_n$\n\nThey are offered \\$100 today. What sum would they need to be offered in one year (52 weeks) to prefer that later payment to the \\$100 today?\n\n\\begin{align*}\nU_0(0,\\$100)&=u(\\$100) \\\\\n&=100\n\\end{align*}\n\n\\begin{align*}\nU_0(52,\\$x)&=\\delta^{52} u(\\$x) \\\\\n&=0.95^{52}*x\n\\end{align*}\n\nThey will prefer \\$$x$ in 52 weeks if $U(\\$x \\text{ at } t=52)$ is greater than 100.\n\n\\begin{align*}\n0.95^{52}*x&>100 \\\\[6pt]\nx&>\\frac{100}{0.95^{52}} \\\\[6pt]\nx&>\\$1440.03\n\\end{align*}\n\nThe agent would be willing to wait a year for payment if they were paid more than $1440.03.\n",
+    "supporting": [
+      "exponential-discounting-examples_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

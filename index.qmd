@@ -1,0 +1,79 @@
+# Preface {.unnumbered}
+
+Welcome to these notes on behavioural economics.
+
+These are the notes for the UTS undergraduate subject [23005 Behavioural Economics](https://handbook.uts.edu.au/subjects/23005.html).
+
+I take a traditional approach. I start with the basic economic and game theory foundations. I then examine what happens when we introduce a richer view of human behaviour. I look at how we make decisions under risk and uncertainty, and over time, how we judge probability and how we interact with others.
+
+The result is a new set of predictions as to how humans might behave and what economic phenomena might emerge.
+
+There are no mathematical prerequisites for this subject. Hence, the mathematics is kept at a basic level.
+
+I have created videos to accompany these notes. You can find links to them and other teaching materials on my website at [www.jasoncollins.blog/teaching/](https://www.jasoncollins.blog/teaching/).
+
+These notes cover the following areas:
+
+- **Economic foundations**: The core economic concepts that we will use and modify in exploring behavioural economics.
+- **Decision making under risk and uncertainty**: The traditional economic approach to decision making under risk and uncertainty, and some empirical anomalies that arise when using this approach.
+- **Prospect theory**: The pre-eminent alternative to expected utility theory, prospect theory, with examples and possible applications.
+- **Inter-temporal choice**: Decision making involving costs and benefits occurring at different times. I look at two types of time preference: exponential discounting and quasi-hyperbolic discounting.
+- **Beliefs**: Some core concepts on beliefs and probability judgment and the empirical evidence on how humans do not adhere to these foundational principles.
+- **Game theory**: The game theoretic concepts that we use in our analysis of behavioural game theory and social preferences.
+- **Behavioural game theory**: How heterogeneous agents and bounded rationality can change our analysis of economic games.
+- **Social preferences**: How agents might incorporate the outcomes and beliefs of others into their decisions.
+
+## What is behavioural economics? {.unnumbered}
+
+Behavioural economics is a discipline that seeks to increase the explanatory power of traditional economic approaches by incorporating more realistic psychological foundations.
+
+Behavioural economics retains the general framework and tools used by economists, but deviates from some assumptions to generate new insights and better predictions. These deviations are generally grounded in observed behaviour rather than abstract principles.
+
+### What is not behavioural economics?
+
+You have probably heard the term behavioural economics in the popular press and books. Many of those references are not what I would consider to be behavioural economics. As a result, it is worth identifying what is not behavioural economics.
+
+The word economics is the key. Economics is the study of how economic agents make decisions under conditions of scarcity and the study of the interactions between those agents.
+
+As I noted, behavioural economics involves the introduction of more realistic psychological foundations to that economic approach.
+
+Behavioural economics is not the general study of human behaviour. Behavioural science is a better term for that general study.
+
+Similarly, psychology is the study of the human mind, decisions and behaviour. Psychology is part of the behavioural sciences. Behavioural economics draws on a small subset of psychology to develop a better understanding of human behaviour.
+
+## Three thought experiments
+
+Many early ideas in behavioural economics emerged from thought experiments concerning human behaviour that was hard to explain with traditional economic frameworks.
+
+Here are three thought experiments to illustrate the types of problems that concern behavioural economists. In this course I will examine potential explanations for each of these behaviours.
+
+### Thought experiment 1
+
+This first thought experiment comes from @kahneman1984.
+
+A. Imagine that you have decided to see a play and paid the admission price of \$100 per ticket. As you enter the theatre, you discover that you have lost the ticket. The seat was not marked, and the ticket cannot be recovered.
+
+Would you pay \$100 for another ticket?
+
+B. Imagine that you have decided to see a play where admission is \$100 per ticket. As you enter the theatre, you discover that you have lost a \$100 bill.
+
+Would you still pay \$100 for a ticket for the play?
+
+The two situations appear equivalent, yet people are more likely to pay \$100 for a ticket in scenario B.
+
+### Thought experiment 2
+
+This second thought experiment comes from @thaler1980.
+
+Mr. R bought a case of good wine ... for about \$5 a bottle. A few years later his wine merchant offered to buy the wine back for \$100 a bottle. He refused, although he has never paid more than \$35 for a bottle of wine.
+
+Why is there such a large difference between the price at which he is willing to buy and the price at which he is willing to sell?
+
+### Thought experiment 3
+
+This third thought experiment also comes from @thaler1980.
+
+A group of hungry economists is awaiting dinner when a large can of cashews is opened and placed on the coffee table. After half the can is devoured in three minutes, everyone agrees to put the rest of the cashews into the pantry.
+
+Why did they agree to remove the cashews when they simply could have not eaten them? Why did they deliberately reduce their choice set?
+

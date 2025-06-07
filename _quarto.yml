@@ -1,0 +1,146 @@
+project:
+  type: book
+
+book:
+  title: "Notes on behavioural economics"
+  site-url: https://behaviouraleconomics.jasoncollins.blog
+  author: "Jason Collins"
+  date: "20 May 2025"
+  date-format: D MMMM YYYY
+  chapters:
+    - index.qmd
+    - part: economic-foundations/economic-foundations.qmd
+      chapters:
+        - economic-foundations/preferences.qmd
+        - economic-foundations/rationality.qmd
+        - economic-foundations/utility.qmd
+        - economic-foundations/economic-foundation-exercises.qmd
+    - part: decision-making-under-risk/decision-making-under-risk.qmd
+      chapters:
+        - decision-making-under-risk/notation-and-mathematical-background.qmd
+        - decision-making-under-risk/expected-value.qmd
+        - decision-making-under-risk/axioms-for-expected-utility-theory.qmd
+        - decision-making-under-risk/expected-utility-theory.qmd
+        - decision-making-under-risk/expected-utility-examples.qmd
+        - decision-making-under-risk/anomalies-in-expected-utility-theory.qmd
+        - decision-making-under-risk/decision-making-under-risk-exercises.qmd
+    - part: prospect-theory/prospect-theory.qmd
+      chapters:
+        - prospect-theory/reference-dependence.qmd
+        - prospect-theory/loss-aversion.qmd
+        - prospect-theory/reflection-effect.qmd
+        - prospect-theory/value-function.qmd
+        - prospect-theory/probability-weighting.qmd
+        - prospect-theory/prospect-theory-implementation.qmd
+        - prospect-theory/prospect-theory-examples.qmd
+        - prospect-theory/prospect-theory-applications.qmd
+        - prospect-theory/prospect-theory-exercises.qmd
+    - part: intertemporal-choice/intertemporal-choice.qmd
+      chapters:
+        - intertemporal-choice/exponential-discounting.qmd
+        - intertemporal-choice/exponential-discounting-examples.qmd
+        - intertemporal-choice/exponential-discounting-anomalies.qmd
+        - intertemporal-choice/present-bias.qmd
+        - intertemporal-choice/present-bias-examples.qmd
+        - intertemporal-choice/sophisticated-present-bias.qmd
+        - intertemporal-choice/commitment.qmd
+        - intertemporal-choice/preference-over-profiles.qmd
+        - intertemporal-choice/intertemporal-choice-applications.qmd
+        - intertemporal-choice/intertemporal-choice-exercises.qmd
+    - part: probability-foundations/probability-foundations.qmd
+      chapters: 
+        - probability-foundations/probability-theory.qmd
+        - probability-foundations/bayes-rule.qmd
+        - probability-foundations/probability-theory-exercises.qmd
+        - probability-foundations/subjective-expected-utility.qmd
+    - part: heuristics-and-biases/heuristics-and-biases.qmd
+      chapters: 
+        - heuristics-and-biases/heuristics.qmd
+        - heuristics-and-biases/biases-in-probability-judgment.qmd
+        - heuristics-and-biases/heuristics-and-the-bias-variance-trade-off.qmd
+        - heuristics-and-biases/overconfidence.qmd
+        - heuristics-and-biases/heuristics-and-biases-exercises.qmd
+    - part: game-theory/game-theory.qmd
+      chapters:
+        - game-theory/simultaneous-move-one-shot-games.qmd
+        - game-theory/sequential-games.qmd
+        - game-theory/asymmetric-information.qmd
+        - game-theory/strategic-moves-and-commitment.qmd
+        - game-theory/game-theory-exercises.qmd
+    - part: behavioural-game-theory/behavioural-game-theory.qmd
+      chapters:
+        - behavioural-game-theory/level-k-thinking.qmd
+        - behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.qmd
+        - behavioural-game-theory/emotions.qmd
+        - behavioural-game-theory/behavioural-game-theory-exercises.qmd
+    - part: social-preferences/social-preferences.qmd
+      chapters:
+        - social-preferences/distribution.qmd
+        - social-preferences/reputation.qmd
+        - social-preferences/reciprocity.qmd
+        - social-preferences/social-preferences-exercises.qmd
+    - part: practice-problems/practice-problems.qmd
+      chapters:
+        - practice-problems/expected-utility-theory-problems.qmd
+        - practice-problems/prospect-theory-problems.qmd
+        - practice-problems/intertemporal-choice-problems.qmd
+        - practice-problems/beliefs-problems.qmd
+        - practice-problems/behavioural-game-theory-problems.qmd
+    - references.qmd
+  navbar:
+    background: primary
+    search: true
+    right:
+      - text: "Blog"
+        href: https://www.jasoncollins.blog/
+      - text: "About"
+        href: https://www.jasoncollins.blog/about/
+  sidebar:
+    collapse-level: 1
+    style: "floating"
+    align: left
+  repo-url: https://github.com/jasonacollins/behaviouraleconomics
+  repo-actions: [issue]
+  page-footer: 
+    center:
+      - text: "Copyright: CC-BY"
+        href: https://creativecommons.org/licenses/by/4.0/
+  open-graph: true
+  twitter-card: true
+  google-analytics: "G-ZFSLJY1DR4"
+
+bibliography: references.bib
+csl: apa-no-ampersand.csl
+
+format:
+  html:
+    theme: cosmo
+    grid:
+      gutter-width: 2.5rem
+    fontcolor: black
+    fontsize: 20px
+    linkcolor: blue
+    css: styles.css
+    html-math-method: katex
+    link-external-newwindow: true
+    code-fold: true
+    fig-cap-location: top
+    toc-expand: 1
+    toc-title: "On this page"
+
+  pdf:
+    documentclass: report
+    echo: false
+    toc-depth: 1
+    fig-width: 7
+    fig-height: 5
+    fig-format: png
+
+lightbox: auto
+
+execute:
+  freeze: auto
+  keep-md: false
+  fig-pos: 'H'
+  
+editor: source

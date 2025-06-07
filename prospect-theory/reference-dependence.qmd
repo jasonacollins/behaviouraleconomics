@@ -1,0 +1,100 @@
+# Reference dependence
+
+## Summary {.unnumbered}
+
+- Prospect theory posits that people evaluate choices based on a reference point, coding outcomes as losses or gains relative to this point.
+- Several theories exist for reference point formation, including status quo, lagged consumption, goals, and recent expectations.
+- The status quo as a reference point works well in lab experiments but may not fit many economic interactions or markets with intangible goods.
+- Lagged consumption as a reference point introduces the concept of adaptation, where people react to shocks initially, but the effect fades over time.
+- Goals as reference points explain how people can react differently to the same outcome based on their set objectives.
+- Recent expectations suggests that beliefs about future outcomes form the reference point, potentially aligning with other theories depending on the stability of expectations.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/22gbot6tyjw >}}
+
+---
+
+:::
+
+## Introduction
+
+Under prospect theory, people assess choices based on a reference point instead of an absolute assessment of their position. Outcomes are coded as losses and gains relative to that reference point.
+
+Consider the following two scenarios:
+
+-  Scenario 1: You have not checked your share portfolio in a while. You expect it to be worth around \$40,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
+
+-  Scenario 2: You have not checked your share portfolio in a while. You expect it to be worth around \$20,000. Today when you check, it is worth \$30,000. Do you feel rich or poor?
+
+Under expected utility theory, those two scenarios should feel the same as you have $U(\$30,000)$ in both cases.
+
+In contrast, under prospect theory, the value function - value function being what the utility function is typically called in prospect theory - applies to changes relative to the reference point.
+
+If their initial reference point is their expectation, the value of that change is $v(\$10,000)$ or $v(\-$10,000)$, depending on whether their expectation is exceeded or not. The importance of that distinction becomes apparent when we examine how people consider choices involving either losses or gains.
+
+## Theories of reference dependence
+
+There are several theories on reference point formation. These include:
+
+-   The status quo
+-   Lagged consumption
+-   Goals
+-   Recent expectations
+
+### The status quo
+
+A common assumption in prospect theory is that the reference point is the status quo, as it was for many examples in the original prospect theory paper by @kahneman1979. The status quo implies a preference for the current state. Any negative change is perceived as a loss.
+
+The status quo appears straightforward and is a reasonable description in many contexts, such as lab experiments.
+
+However, the status quo as a reference point does not appear to be a useful assumption for describing many economic interactions. Suppose you decide to sell your bike. Do you see the foregoing of the bike as a loss?
+
+What if you run a bike shop? Does every sale involve a feeling of loss? For markets where intangible and fungible goods are exchanged (for example, the stock market) the status quo assumption appears a poor fit.
+
+### Lagged consumption
+
+A second theory is that the reference point is lagged consumption.
+
+Imagine you win the lottery.
+
+How do you feel one week after the draw?
+
+How do you feel one year after the draw?
+
+Your reference point likely reflects more recent consumption.
+
+Lagged consumption introduces adaptation into reference point determination:
+
+1.  First, we react to shocks
+2.  Then the effect of the shock fades in time
+
+### Goals
+
+Another theory is that our goals are our reference points.
+
+Consider the following problem from @heath1999:
+
+> Sally and Trish both follow workout plans that usually involve doing 25 sit-ups.
+>
+> One day, Sally sets a goal of performing 31 sit-ups. She finds herself very tired after performing 35 sit-ups and stops.
+>
+> Trish sets a goal of performing 39 sit-ups. She finds herself very tired after performing 35 sit-ups and stops.
+>
+> What emotion is each person experiencing?
+
+With goals as reference points, people see success or failure to achieve a goal as a loss or gain. Although both Sally and Trish have the same performance, Sally will have a positive emotional reaction and Trish a negative reaction.
+
+### Recent expectations
+
+A fourth theory of reference point determination is recent expectations.
+
+In this approach, the reference point is beliefs about future outcomes (@koszegi2006). For example, a 5% pay rise when expecting 10% may be perceived as a loss.
+
+The expectations-based theory can produce the same predictions as alternative theories:
+
+1.  If expectations are stable, recent expectations will reflect the status quo.
+2.  Recent consumption will shape expectations, making lagged consumption a reasonable reference point.
+3.  Goals can also shape (or be shaped by) expectations

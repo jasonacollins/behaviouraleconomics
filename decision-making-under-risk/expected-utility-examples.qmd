@@ -1,0 +1,535 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Expected utility examples
+
+## Summary {.unnumbered}
+
+- In the following examples I demonstrate the operation of expected utility theory and concepts such as expected value, expected utility and certainty equivalent through various betting scenarios, illustrating how individuals with risk-averse utility functions make decisions under uncertainty.
+- In a 50:50 bet example with a logarithmic utility function, a gamble with zero expected value reduces utility, demonstrating risk aversion.
+- An 80:20 bet example shows that even risk-averse individuals may accept favourable bets, but the certainty equivalent is still less than the expected value.
+- A bet involving proportions of wealth demonstrates that positive expected value does not always lead to acceptance of a gamble for risk-averse individuals.
+- The St. Petersburg game demonstrates a paradox where the expected value is infinite, yet most people would not pay an infinite amount to play. This paradox can be resolved by introducing expected utility theory, which shows that risk-averse individuals with diminishing marginal utility would only pay a finite amount to play the game.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/EQFexIPUaFI >}}
+
+---
+
+:::
+
+## Introduction
+
+In this section, I present a series of mathematical examples of expected utility theory.
+
+## A 50:50 bet
+
+Suppose your utility function is $U(x)=\text{ln}(x)$.
+
+You have a 50% chance of winning \$10 and a 50% chance of losing \$10. Assume your starting wealth is \$20.
+
+What is the expected value of this game?
+
+\begin{align*}
+E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
+&=0.5\times 10+0.5\times (-10) \\[6pt]
+&=0
+\end{align*}
+
+The expected value of the game is \$0.
+
+What is the expected utility of this game?
+
+\begin{align*}
+E[U(W+X)]&=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
+&=0.5U(20-10)+0.5U(20+10) \\[6pt]
+&=0.5\text{ln}(10)+0.5\text{ln}(30) \\[6pt]
+&=2.85
+\end{align*}
+
+What does an expected utility of 2.85 mean? To make it tangible, we can ask what wealth would give that utility.
+
+$$U(W)=\text{ln}(W)=2.85$$
+$$W=e^{2.85}=\$17.30$$
+
+This gamble with an expected value of zero reduces utility by an amount equivalent to \$2.70. 
+
+We could also say that the certainty equivalent of this gamble is the final wealth of \$17.30, or a loss of \$2.70.
+
+@fig-fiftyfifty illustrates the example.
+
+```{r}
+#| label: fig-fiftyfifty
+#| fig-cap: "A 50:50 bet"
+
+library(ggplot2)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-30 #loss
+x2<-200 #win
+ev<-115 #expected value of gamble
+xc<-115 #certain outcome
+ce<-79 #certainty equivalent
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
+
+  #Add labels W-10, W-10 and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "W-10", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(W-10)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add line to curve indicating utility of wealth
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U(W)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels W+10, U(W+10) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "W+10", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(W+10)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[X]=W, E[U(X)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]=W", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "W-2.70"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "W-2.70", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
+
+On the x-axis, we have the outcomes and on the y-axis, we have the utility.
+
+I have added points on the x-axis for the outcomes of the two gambles, being $W-10$ and $W+10$. They deliver utility $U(W+10)$ and $U(W-10)$ respectively. The expected utility of the gamble is the probability-weighted average of these two points. It sits on the straight dash-dot-dot line between those two outcomes.
+
+You can see that the expected utility of the gamble is lower than the utility of the expected value (being current wealth).
+
+Also plotted is the certainty equivalent. We can identify it as the point on the utility curve where the utility of that certainty equivalent is equal to the expected utility.
+
+## An 80:20 bet
+
+Suppose your utility function is $U(x)=\text{ln}(x)$.
+
+You have an 80% chance of winning \$10 and a 20% chance of losing \$10. Assume your starting wealth is \$20.
+
+What are the expected value and the expected utility of this game?
+
+\begin{align*}
+E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
+&=0.8\times 10+0.2\times (-10) \\[6pt]
+&=\$6
+\end{align*}
+
+The expected value of the game is \$6.
+
+What is the expected utility of this game?
+
+\begin{align*}
+E[U(W+x)]&=\sum_{i=1}^n p_iU(x_i+W) \\[6pt]
+&=0.8U(20+10)+0.2U(20-10) \\[6pt]
+&=0.8\text{ln}(30)+0.2\text{ln}(10) \\[6pt]
+&=3.18
+\end{align*}
+
+What does an expected utility of 3.18 mean? To make it tangible, we can ask what wealth would give that utility.
+
+$$U(W)=\text{ln}(W)=3.18$$
+$$W=e^{3.18}=\$24.08$$
+
+This gamble with an expected value of \$6 increases utility by an amount equivalent to \$4.08.
+
+We could also say that the certainty equivalent of this gamble is the final wealth of \$24.08.
+
+@fig-eightytwenty illustrates the example.
+
+```{r}
+#| label: fig-eightytwenty
+#| fig-cap: "An 80:20 bet"
+
+library(ggplot2)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-30 #loss
+x2<-200 #win
+ev<-166 #expected value of gamble
+xc<-95 #certain outcome
+ce<-135 #certainty equivalent
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+#set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
+
+  #Add labels W-10, U(W+10) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "W-10", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(W-10)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add labels W, U(W) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "W", size = 4, hjust = 0.6, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U(W)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels W+10, U(W+10) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "W+10", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(W+10)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[X]=W+6, E[U(X)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]=W+6", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "W+4.08", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
+
+The expected utility of the gamble $\text{E}[U(X)]$ is higher than the utility from current wealth but lower than the utility of the expected value. That is, they are risk averse but would still accept this highly favourable bet.
+
+Also plotted is the certainty equivalent. We can identify it as the point on the utility curve where the utility of that certainty equivalent is equal to the expected utility. In this case, it is at \$4.08 above current wealth.
+
+## Betting a proportion of wealth
+
+Suppose your utility function is $U(x)=\text{ln}(x)$.
+
+You have a 50% chance of increasing your wealth by 50% and a 50% chance of decreasing your wealth by 40%.
+
+What are the expected value and the expected utility of this game?
+
+\begin{align*}
+E[X]&=\sum_{i=1}^n p_ix_i \\[6pt]
+&=0.5\times 0.6W+0.5\times 1.5W \\[6pt]
+&=0.3W+0.75W \\[6pt]
+&=1.05W
+\end{align*}
+
+The expected value of the gamble is 5% of your wealth. The gamble has a positive expected value.
+
+\begin{align*}
+E[U(X)]&=\sum_{i=1}^n p_iU(X_i) \\[6pt]
+&=0.5U(0.6W)+0.5U(1.5W) \\[6pt]
+&=0.5\text{ln}(0.6)+0.5\times \text{ln}(W)+0.5\text{ln}(1.5)+0.5\times \text{ln}(W) \\[6pt]
+&=-0.255+0.203+\text{ln}(W) \\[6pt]
+&=−0.053+\text{ln}(W)
+\end{align*}
+
+Here we have a gamble with a positive expected value, 5% of your wealth, but lower expected utility. Someone with log utility would reject this bet.
+
+@fig-wealth illustrates the example.
+
+```{r}
+#| label: fig-wealth
+#| fig-cap: "Betting a proportion of wealth"
+
+library(ggplot2)
+
+u <- function(x){
+  log(x)
+}
+
+df <- data.frame(
+  x=seq(1,220,0.1),
+  y=NA
+)
+
+df$y <- u(df$x)
+
+#Variables for plot (may not match labels as not done to scale)
+#Payoffs from gamble
+x1<-30 #loss
+x2<-200 #win
+ev<-115 #expected value of gamble
+xc<-95 #certain outcome
+ce<-79 #certainty equivalent
+px2<-(ev-x1)/(x2-x1)
+
+ggplot(mapping = aes(x, y)) +
+
+  #Plot the utility curve
+  geom_line(data = df) +
+  geom_vline(xintercept = 0, linewidth=0.25)+ 
+  geom_hline(yintercept = 0, linewidth=0.25)+
+  labs(x = "x", y = "U(x)")+
+
+  # Set the theme
+  theme_minimal()+
+
+  #remove numbers on each axis
+  theme(axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.title=element_text(size=14,face="bold"),
+            axis.title.y = element_text(angle=0, vjust=0.5))+
+
+  #set limits - need to include room for labels
+  coord_cartesian(xlim = c(-25, 220), ylim = c(-0.25, 6))+
+
+  #Add labels 0.6W, U(0.6W) and line to curve indicating each
+  annotate("text", x = x1, y = 0, label = "0.6W", size = 4, hjust = 0.5, vjust = 1.5)+
+  annotate("segment", x = x1, y = 0, xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x1), xend = x1, yend = u(x1), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x1), label = "U(0.6W)", size = 4, hjust = 1.05, vjust = 0.6)+
+
+  #Add labels W, U(W) and line to curve indicating each
+  annotate("text", x = xc, y = 0, label = "W", size = 4, hjust = 0.6, vjust = 1.5)+
+  annotate("segment", x = xc, y = 0, xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(xc), xend = xc, yend = u(xc), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(xc), label = "U(W)", size = 4, hjust = 1.05, vjust = 0.3)+
+
+  #Add expected utility line
+  annotate("segment", x = x1, xend = x2, y = u(x1), yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotdash")+
+
+  #Add labels 1.5W, U(1.5W) and line to curve indicating each
+  annotate("text", x = x2, y = 0, label = "1.5W", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = x2, y = 0, xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("segment", x = 0, y = u(x2), xend = x2, yend = u(x2), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = 0, y = u(x2), label = "U(1.5W)", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add labels E[X]=1.05W, E[U(X)] and curve indicating each
+  annotate("text", x = ev, y = 0, label = "E[X]=1.05W", size = 4, hjust = 0.4, vjust = 1.5)+
+  annotate("segment", x = ev, y = 0, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("segment", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, xend = ev, yend = u(x1)+(u(x2)-u(x1))*px2, linewidth = 0.5, colour = "black", linetype="dashed")+
+  annotate("text", x = 0, y = u(x1)+(u(x2)-u(x1))*px2, label = "E[U(X)]", size = 4, hjust = 1.05, vjust = 0.45)+
+
+  #Add vertical line indicating certainty equivalent and labelled "CE"
+  annotate("segment", x = ce, xend = ce, y = 0, yend = u(ce), linewidth = 0.5, colour = "black", linetype="dotted")+
+  annotate("text", x = ce, y = 0, label = "CE", size = 4, hjust = 0.4, vjust = 1.5)
+
+```
+
+I have added points on the x-axis for the outcomes of the two gambles, a 40% reduction in wealth and a 50% gain in wealth. The expected utility of the gamble is the probability-weighted average of these two points. It sits on the straight dash-dot-dot line between those two outcomes.
+
+You can see that the expected utility of the gamble is lower than the utility of current wealth. They would reject an offer of this bet.
+
+## The St. Petersburg game
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/aIdPcOiE7Ec >}}
+
+---
+
+:::
+
+The St. Petersburg game was invented by the Swiss mathematician Nicolas Bernoulli.
+
+The game starts with a pot containing \$2. A dealer then flips a coin. The pot doubles every time a head appears. The game ends, and the player wins the pot when a tail appears.
+
+- A tail on the first flip leads to a payment of \$2.
+- A tail on the second flip leads to a payment of \$4
+- A tail on the third flip leads to a payment of  \$8
+
+And so on.
+
+Consider what you would be willing to pay to play this game. Would you pay \$5? \$10? \$25? \$50? More?
+
+The expected value of this game is equal to the sum of the following series.
+
+\begin{align*}
+E[X]&=\underbrace{\frac{1}{2}\times 2}_\textrm{Tail first}+\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\bigg)\times 4}_\textrm{Tail second}+\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\times \frac{1}{2}\bigg)\times 8}_\textrm{Tail third} \\[24pt]
+&\qquad +\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\times \frac{1}{2}\times \frac{1}{2}\bigg)\times 16}_\textrm{Tail fourth}+... \\[24pt]
+&=1+1+1+1+... \\
+&=\sum_{k=1}^\infty 1 \\
+&=\infty
+\end{align*}
+
+The first term in the series captures the 50% chance of a tail on the first flip, paying \$2. The second term represents the 50% chance of a head on the first flip, followed by the 50% chance of the tail second flip, paying \$4. The third term represents the 50% chance of a head on the first flip, followed by the 50\% chance of a head on the second flip, followed by the 50\% chance of a tail on the third flip, paying \$8. And so on.
+
+Multiplying out each of those terms results in a series of 1s.
+
+The $\sum$ operator means “sum for $k=1$ to $k=\infty$”.
+
+Contrast this expected value of $\infty$ with the sum you would pay to play the game. You were likely not willing to pay an infinite amount.
+
+This "paradox" is often resolved by introducing an expected utility function.
+
+The expected utility of this game is equal to:
+
+\begin{align*}
+E[U(X)]&=\underbrace{\frac{1}{2}\times U(W+2)}_\textrm{Tail first}+\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\bigg)\times U(W+4)}_\textrm{Tail second} \\[24pt] 
+&\qquad +\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\times \frac{1}{2}\bigg)\times U(W+8)}_\textrm{Tail third}  \\[24pt]
+&\qquad +\underbrace{\bigg(\frac{1}{2}\times \frac{1}{2}\times \frac{1}{2}\times \frac{1}{2}\bigg)\times U(W+16)}_\textrm{Tail fourth}+... \\[24pt]
+&=\frac{1}{2}U(W+2)+\frac{1}{4}U(W+4)+\frac{1}{8}U(W+8)+\frac{1}{16}U(W+16)+...  \\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+2^k)
+\end{align*}
+
+Similar to the calculation of the expected value, the first term in the series captures the 50% chance of a tail on the first flip, paying \$2. The second term represents the 50\% chance of a head on the first flip, followed by the 50\% chance of the tail on the second flip, paying \$4. And so on. But here, we are using the utility function $U(x)$.
+
+In the second line, I multiplied the probabilities of each coin flip together.
+
+In the third line, I expressed this infinite sum more compactly.
+
+To take this equation further, we need to consider the particular utility function of the decision maker.
+
+What maximum sum would a risk-neutral player with $U(x)=x$ be willing to pay to play the game?
+
+One strategy to determine this sum is to ask what sum would result in the player being indifferent between paying and rejecting a chance to play. That is the maximum sum $c$ that they would be willing to pay. They will be indifferent when $U(W)=E[U(X-c)]$.
+
+We can solve this equation as follows.
+
+\begin{align*}
+U(W)&=E[U(X-c)] \\[6pt]
+&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
+W&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}(W+2^k-c)  \qquad \text{(substituting in the utility function)}\\[6pt]
+&=W-c+\sum_{k=1}^{k=\infty}1 \qquad \Bigg(\text{as }\sum_{k=1}^{k=\infty}\frac{1}{2^k}=1\Bigg) \\[12pt]
+c&=\sum_{k=1}^{k=\infty}1 \\[6pt]
+&=\infty
+\end{align*}
+
+In the second line, we use the sum we created earlier. In the third line, I substitute the utility function $U(x)=x$. We can then simplify as in the fourth line, which allows us to see that, given the infinite expected value of the game, the player would be willing to pay an infinite amount to play. 
+
+That is, a risk-neutral player would pay any amount \$$c$ to play.
+
+We could also have inferred this from the game's expected value being infinite.
+
+What is the maximum sum a risk-averse player with $U(x)=\text{ln}(x)$ would be willing to pay to play the game? How does their wealth affect their willingness to pay?
+
+Again we will determine at what \$$c$ the player is indifferent between accepting and rejecting a chance to play, which occurs when $U(W)=E[U(X-c)]$.
+
+\begin{align*}
+U(W)&=E[U(X-c)] \\[6pt]
+U(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(W+\$2^k-c) \\[6pt]
+\text{ln}(W)&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(W+\$2^k-c)
+\end{align*}
+
+```{r}
+#| output: false
+# Calculation of value of gamble for the following paragraph
+# Code based on: https://math.stackexchange.com/questions/2882484/log-utility-function-and-the-st-petersburg-paradox
+EU = function(W, c, epsilon){
+    ans = 0
+    k = 1
+    while(abs(val <- (log(max(epsilon, W + 2^k - c)) - log(W)) / 2^k) > epsilon){
+        k <- k + 1;
+        ans <- ans + val;
+    }
+    ans
+}
+
+find_c = function(W, epsilon=10^(-10)){
+    low = 0
+    c = 0
+    high = 10^10
+    while(abs(low - high) > epsilon){
+        c = (high + low) / 2
+        exp_value = EU(W, c, epsilon)
+        ifelse(exp_value > 0, low <- c, high <- c)
+    }
+    c
+}
+
+# Value of bet to someone with wealth of $1,000,000
+c1000000 <- round(find_c(10^6), 2)
+# Value of bet to someone with wealth of $1,000
+c1000 <- round(find_c(10^3), 2)
+# Value of bet to someone with wealth of $0.01
+c001 <- round(find_c(0.01), 2)
+```
+
+There is no closed-form solution to this equation to enable us to determine $c$. We need to solve via numerical methods (such as testing and iterating to a solution).
+
+If we did solve this, we would find that someone who has wealth of \$0.01 would be willing to pay up to \$`r c001`. They would need to borrow. Someone with wealth \$1000 would be willing to pay \$`r c1000`. A person with a wealth of \$1 million would be willing to pay \$`r c1000000`.
+
+We cannot solve for a person with no wealth as $\text{ln}⁡(0)$ is undefined. 
+
+Why does willingness to pay increase with wealth?
+
+With log utility, as wealth increases, the slope of the log function increasingly approximates a linear function (the second derivative approaches zero). Hence, the gambler displays less risk-averse (closer to risk-neutral) behaviour.
+
+One way to gain an intuition for why this gamble now has a finite value is to calculate the utility of a risk-averse player whose only asset is the opportunity to play this game.
+
+\begin{align*}
+E[U(X)]&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}U(\$2^k) \\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{1}{2^k}\text{ln}(2^k) \qquad \text{(substituting in the utility function)}\\[12pt]
+&=\sum_{k=1}^{k=\infty}\frac{k}{2^k}\text{ln}(2)  \qquad \text{(using the rule }\ln(x^a)=a\ln(x)) \\[12pt]
+&=\bigg(\frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\frac{5}{32}+...\bigg)\text{ln}(2) \\[12pt]
+&=2\text{ln}(2)
+\end{align*}
+
+The change in the utility from each flip rapidly declines. Ultimately the series of fractions sum to two. 
+
+We can then calculate what wealth is equivalent to this expected utility.
+
+\begin{align*}
+U(W)&=\text{ln}(W)=2\text{ln}(2) \\[6pt]
+W&=e^{2\text{ln}2}=4
+\end{align*}
+
+The expected utility from the game is equal to the utility of \$4.

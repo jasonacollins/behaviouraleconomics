@@ -1,0 +1,107 @@
+# Asymmetric information and the curse of knowledge
+
+## Summary {.unnumbered}
+
+- Information asymmetry can cause market failures even with rational agents, but there's evidence that people often don't behave optimally in these situations.
+- The "curse of knowledge" occurs when better-informed agents fail to ignore their private information when predicting less-informed agents' actions, even when it's in their interest to do so.
+- Conversely, less-informed agents often fail to account for others' informational advantages. This is demonstrated in the "market for lemons" example, where a "cursed" buyer might overpay for a car, not realizing only lemons would be sold at their offered price.
+- Similarly, in the "winner's curse" scenario, a "cursed" bidder in an oil field auction might overbid by underestimating the significance of winning, failing to appreciate that winning implies the other bidder's information was less favourable.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/2eIIB12XeNk >}}
+
+---
+
+:::
+
+## Introduction
+
+We saw earlier in our examination of the market for lemons and the winner's curse that asymmetric information can cause market failures even if agents are fully rational. However, the rational agents account for the information and behaviour of others and as a result, behave optimally despite that market imperfection.
+
+There is substantial empirical evidence that people do not behave in this way.
+
+For example, people tend to underestimate the extent to which informational differences drive others' behaviour. They often act as if others have the same information set that they do. Where an agent has information that another doesn't, this phenomenon is known as the curse of knowledge.
+
+Further, better-informed agents often fail to take advantage of their informational advantage against less-informed agents because they don't understand the link between information and behaviour.
+
+## The curse of knowledge
+
+The idea behind the curse of knowledge is that better-informed agents should ignore the additional information they hold when predicting the actions of less-informed agents. Experimental evidence shows that people are unable to ignore their private information even when it is in their interests to do so.
+
+For example, @newton1990 had students participate in an experiment in one of two roles: "Tapper" and "Listener".
+
+Tappers received a list of 25 well-known songs and were asked to "tap out" the rhythm of one of the songs.
+
+Listeners tried to identify the song based solely on the taps.
+
+Tappers predicted that listeners would identify 50% of the songs.
+
+Listeners only identified 3 of 120 songs correctly (a rate of about 2.5%).
+
+## The market for lemons
+
+While that experiment involved agents who had more information than the other players - they knew the song - we also see failures where the other player has additional information but the agent does not account for that fact.
+
+We can explore this idea in the market for lemons.
+
+Recall our earlier example in @sec-market-for-lemons involving the purchase of a used car.
+
+There are two types of cars, good cars and lemons, and only the seller knows the type. The buyer knows that the seller has this information.
+
+A car is good with probability $q$ and a lemon with probability $1−q$. To the seller, good cars are worth \$10,000 and lemons \$5,000. To potential buyers, good cars are worth \$15,000 and lemons \$7,500.
+
+A "cursed" buyer doesn’t think that the seller’s decision whether to trade depends on the seller’s knowledge of the car.
+
+Suppose that $q=0.2$. That is, only 20% of the cars are good.
+
+Suppose the cursed buyer believes that cars are sold with equal probability regardless of type.
+
+In that case, the expected value of a car to a buyer is:
+
+\begin{align*}
+\hat {\text{E}}&=0.2\times 15000+0.8\times 7500 \\[6pt]
+&=9000
+\end{align*}
+
+A buyer would be willing to pay up to \$9000 for a car.
+
+At that price, however, the seller of a good car would not be willing to sell. The market will comprise only lemons, which sellers are more than happy to sell. The buyer will pay \$9000 for a car worth only \$7500 to them.
+
+## The winner's curse
+
+We can also explore this phenomenon in the winner's curse. Recall our example of the winner’s curse in @sec-winners-curse on bidding for an oil field.
+
+Company 1 and company 2 hire a geologist to estimate the value of an oil field. The honest geologist of each company privately reports their estimated valuation to the company. Company 1 learns $v_1$ and company 2 learns $v_2$.
+
+$v_1$ and $v_2$ are uniformly distributed between \$0 and \$100 and independent.
+
+Assume the true value of the oil field is the mean of $v_1$ and $v_2$:
+
+$$
+V=\frac{v_1+v_2}{2}
+$$
+
+The two companies simultaneously bid for the field in a first-price auction. The highest bid wins and pays their bid.
+
+Assume company 1 is cursed and therefore assumes that company 2’s bid is independent of $v_2$. Company 1 assumes $v_2$ is on average \$50 and that company 2 always bids.
+
+Company 1’s expected profit, if they bid $v_1$, is:
+
+\begin{align*}
+\hat {\text{E}}[\pi_1|\text{bid }v_1]&=\frac{1}{2}\pi_1(\text{lose})+\frac{1}{2}\pi_1(\text{win}) \\[12pt]
+&=\frac{1}{2}\times 0+\frac{1}{2}\bigg(\frac{v_1+50}{2}-v_1\bigg) \\[12pt]
+&=\frac{1}{4}(50-v_1)
+\end{align*}
+
+We can see that:
+
+$$
+\hat {\text{E}}[\pi_1|\text{bid} v_1]>0 \Leftrightarrow v_1>50
+$$
+
+That is, company 1 expects to make a profit if they receive a private valaution of more than \$50.
+
+However, as shown in @sec-winners-curse, this bidding approach leads to, on average, a loss. Company 1 under-appreciates that company 2 is more likely not to bid when company 2’s information is bad. Therefore, company 1 under-appreciates the extent to which winning the auction is bad news.

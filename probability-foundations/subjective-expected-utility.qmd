@@ -1,0 +1,153 @@
+# Subjective expected utility theory
+
+## Summary {.unnumbered}
+
+- Subjective expected utility theory applies to situations of uncertainty where probabilities are unknown.
+- Agents maximise subjective expected utility using subjective probabilities. Subjective expected utility is defined as:
+
+$$
+\mathbb{E}[U(x)] = \sum_{i=1}^n \pi(x_i)u(x_i)
+$$
+
+- We assume that decision-makers maintain coherent subjective probabilities consistent with Bayesian probability theory.
+- Probabilistic coherence protects decision-makers from exploitation through Dutch Books.
+- An anomaly in subjective expected utility theory is the Ellsberg paradox, where people's preference for known over unknown probabilities violates the theory's predictions.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/5DYeisEHn2U >}}
+
+---
+
+:::
+
+## Introduction
+
+When deciding whether to invest in an untested technology or choose between conflicting medical treatments, we rarely have access to exact well-defined probabilities. Subjective expected utility theory provides us with a framework for examining decisions in such circumstances, where probabilities are unknown.
+
+In standard expected utility theory, probabilities are derived from known frequencies or distributions. In contrast, subjective expected utility theory uses subjective probabilities based on personal judgment.
+
+This subjective approach maintains the mathematical framework of expected utility theory. Agents maximise subjective expected utility, $\mathbb{E}[U(X)]$, by assigning subjective probabilities, $\pi(x_i)$, to outcomes $x_i$. The equation for subjective expected utility theory is the same as that for expected utility theory, except for these subjective probabilities. Subjective expected utility equals the subjective probability weighted sum of the utilities of each outcome $x_i$:
+
+\begin{align*}
+\mathbb{E}[U(X)]&=\pi(x_1)u(x_1)+\pi(x_2)u(x_2)+...+\pi(x_n)u(x_n)\\[6pt]
+&=\sum_{i=1}^n \pi(x_i)u(x_i)
+\end{align*}
+
+This process involves:
+
+1. Defining utility $u(x_i)$ over final outcomes $x_1,\ldots,x_n$.
+
+2. Defining subjective probabilities $\pi(x_i)$ for each outcome.
+
+3. Weighting each outcome's utility by its subjective probability.
+
+4. Summing the weighted utilities.
+
+## Axioms for subjective expected utility
+
+The axioms for subjective expected utility theory were first set out by Leonard Savage in 1954. These axioms have a close alignment with the axioms for standard expected utility theory, although they are adapted to the subjective nature of the probabilities.
+
+One of these axioms is the **sure-thing principle**. Informally, we could state it as follows:
+
+> Suppose there are two possible states of the world. If you prefer one option (A) over another (B) in one possible state, and you also prefer A over B under the alternative state, then you should prefer A over B even if you do not know which state will occur.
+
+## Coherent probabilities
+
+The Sure-Thing Principle, in combination with other axioms such as continuity, effectively forces subjective probabilities to be coherent.
+
+Each potential event must have a subjective probability of between 0 and 1 (non-negativity). Formally:
+
+$$
+0 \leq \pi(A) \leq 1
+$$
+
+Subjective probabilities must be additive. That is, for mutually exclusive events $A$ and $B$, the subjective probability of either event occurring is:
+
+$$
+\pi(A \cup B) = \pi(A) + \pi(B)
+$$
+
+Further, the sum of the subjective probabilities of all all mutually exclusive, exhaustive events events is one (normalisation):
+  
+$$
+\sum \pi(\cdot) = 1
+$$
+
+Once subjective probabilities satisfy the usual rules of probability, **Bayes’ Rule** becomes the only way to revise these probabilities consistently when new information arrives. If you learn some event B has happened, you must update the probability of A using:
+
+$$
+\pi(A \mid B) = \frac{\pi(A \cap B)}{\pi(B)},
+$$
+
+Otherwise, you could violate the Sure-Thing Principle by preferring one option over another in each conditional scenario (“if B” vs. “if not B”) yet reversing that preference when you do not know whether B has occurred. Thus, coherent subjective probabilities naturally imply Bayesian updating.
+
+### Why coherence matters
+
+Coherence ensures that subjective probabilities avoids paradoxes and do not cause errors in decision-making.
+
+For example, coherent subjective probabilities can allow someone to avoid a **Dutch Book**. A Dutch book is a set of bets that guarantees a loss to one party regardless of the outcome. If probabilities violate coherence requirements, such a set of bets can be constructed against the decision-maker.
+
+For example, consider someone who assigns probabilities that violate additivity:
+
+- Probability of rain tomorrow: 60%
+- Probability of no rain tomorrow: 50%
+
+These probabilities sum to 110%, violating normalisation. A bookmaker could:
+
+- Sell a \$60 bet paying \$100 if it rains
+- Sell a \$50 bet paying \$100 if it doesn't rain
+
+The decision-maker pays \$110 in total. If it rains, they win \$100 from bet 1 and nothing from bet 2. If it doesn't rain, they win \$100 from bet 2 and nothing from bet 1. The decision-maker pays \$110 in total but can only win \$100, guaranteeing a loss of \$10.
+
+The Dutch Book argument thus demonstrates that incoherent probabilities lead to exploitable inconsistencies. Decision-makers who follow the coherence requirements are protected from such guaranteed losses.
+
+## An anomaly: the Ellsberg Paradox
+
+The Ellsberg paradox demonstrates that many people's choices violate subjective expected utility theory.
+
+Consider two urns, each containing 100 balls. In the "risky" urn, there are 50 red and 50 black balls. In the "ambiguous" urn is a mix of red and black balls of unknown proportions. You are offered the following two gambles:
+
+- The first, which we will call gamble A, will involve a draw from the risky urn. If you correctly predict the colour that is drawn, you will win \$100.
+- The second, gamble B, involves a draw from the ambiguous urn. Again, if you correctly predict the colour that is drawn, you will win \$100.
+
+![](img/ellsberg.png){fig-align="center" width=60%}
+
+Most people strictly prefer gamble A to gamble B. However, this robust pattern violates subjective expected utility theory and the sure-thing principle.
+
+To understand why, consider the probability of drawing a ball from the risky urn. The probability of drawing a red ball equals the probability of drawing a black ball which equals 0.5. Whatever colour you predict for gamble A, the expected utility of the draw from the risky urn is 0.5 times the utility of \$100.
+
+$$
+\mathbb{E}[U(A)] = 0.5u(\$100)
+$$
+
+If you draw from the ambiguous urn, we need to know the subjective probabilities you give for each ball colour. These don't have to be 50%. Maybe the experimenter likes red.
+
+Whatever those subjective probabilities, we can calculate subjective expected utility. Let the subjective probability that the ball is red be $\pi(r)$, with the subjective probability of the ball being black being $\pi(b)=1-\pi(r)$ (by normalisation).
+
+The subjective expected utility of predicting red for gamble B is the subjective probability of the ball being red times the utility of winning \$100:
+
+$$
+\mathbb{E}[U(B_r)] = \pi(r)u(\$100)
+$$
+
+The subjective expected utility of predicting black for gamble B is the subjective probability of the ball being black times the utility of winning \$100:
+
+$$
+\mathbb{E}[U(B_b)] = (1-\pi(r))u(\$100)
+$$
+
+As you get to predict the colour, choosing gamble B will deliver you the higher of the subjective expected utility of red or black. Your subjective expected utility is the higher of the probability of red or black times the utility of winning \$100.
+
+\begin{align*}
+\mathbb{E}[U(B)]&=\max\{\pi(r)u(\$100), (1-\pi(r))u(\$100\} \\[12pt]
+&=\max\{\pi(r), 1-\pi(r)\}u(\$100)
+\end{align*}
+
+If $\pi(r)=0.5$, then gambles A and B give the same subjective expected utility. But for any $\pi(r)\neq 0.5$, gamble B should be strictly preferred. This is because when your subjective probability differs from 0.5, you can increase your subjective expected utility by betting on whichever colour you believe is more likely in the ambiguous urn. Therefore, no matter what your subjective belief, gamble B should be at least weakly preferred to gamble A.
+
+To put this into the language of the sure-thing principle, there are 101 possible states of the world (no red balls in the ambiguous urn, one red ball in the ambiguous urn, etc.). For 100 of those states - whenever there are not 50 of each colour in the urn - you should strictly prefer gamble B. In the case of equal numbers of each ball, you should weakly prefer gamble B (indifference). Therefore, given you should prefer gamble B to gamble A whatever the state, you should prefer gamble B not knowing precisely how many balls of each colour are in the ambiguous urn.
+
+This paradox suggests people distinguish between risk (known probabilities) and ambiguity (unknown probabilities) in ways that subjective expected utility theory cannot capture. This result - known as the Ellsberg paradox - illustrates "ambiguity aversion". People tend to prefer gambles with known probabilities over gambles with ambiguous probabilities.

@@ -1,0 +1,156 @@
+# Social preferences exercises
+
+## Fehr-Schmidt preferences
+
+Alby has the following distributional preferences:
+
+$$
+u_A(x_A,x_j)=\underbrace{x_A}_{(1)}\underbrace{-\alpha\text{max}\{x_j-x_A,0\}}_{(2)}\underbrace{-\beta\text{max}\{x_A-x_j,0\}}_{(3)}
+$$
+
+where:
+
+$x_A$ is the outcome for Alby
+
+$x_j$ is the outcome for any agent $j$ with whom Alby interacts.
+
+a\) For $\alpha>0$ and $\beta>0$, what are preferences of this form are normally called?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Inequality aversion.
+:::
+
+b\) For $\alpha>0$ and $\beta>0$, describe the role of each of the three terms labelled (1), (2) and (3) in the utility function.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The first term captures the utility of Alby's own outcome.
+
+The second term captures Alby's dislike of having less than others.
+
+The third term captures Alby's dislike of having more than others.
+:::
+
+c\) Explain the intuition for why we normally set $\alpha>\beta$.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Most people dislike having less than others more than they dislike having more than others. In some instances, $\beta<0$ in which case people like having more than others - they are fine with inequality as long as it is to their advantage.
+:::
+
+## Charness-Rabin preferences
+
+Bob has the following distributional preferences:
+
+$$
+u_B(x_B,x_j)=\left\{\begin{matrix}
+\rho x_j+(1-\rho)x_B\quad &\textrm{if} \quad x_B \geq x_j \\[6pt]
+\sigma x_j+(1-\sigma)x_B \quad &\textrm{if} \quad x_B < x_j 
+\end{matrix}\right.
+$$
+
+where:
+
+$x_B$ is the outcome of the game for Bob
+
+$x_j$ is the outcome of the game for any agent $j$ with whom Bob interacts.
+
+a\) For $1\geq \rho \geq\ 0 \geq \sigma$, what are preferences of this form are normally called?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Inequality aversion.
+:::
+
+b\) For $1\geq \rho \geq\ 0 \geq \sigma$, describe the role of the terms in each of the two equations where $x_B\geq x_j$ and $x_B< x_j$.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+$\sigma$ and $\rho$ are the weight that is Bob gives to the outcome for agent $j$. $\sigma$ is applied where Bob's outcome is better than or equal to that of agent $j$, and $\rho$ where it is worse.
+
+The residual $1-\sigma$ and $1-\rho$ is the weight that Bob gives to his own outcome.
+:::
+
+c\) Explain the intuition why we normally set $\rho>\sigma$ for the utility function.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+People tend to be more willing to see others have better outcomes when those others are worse off than them. Therefore, $\rho$ should be greater than $\sigma$ so that the agent cares more about the other agent when they are the one receiving more. 
+:::
+
+d\) What values of $\rho$ and $\sigma$ would result in a utility function where Bob is purely self-interested?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If Bob were purely self interested, $\rho$ and $\sigma$ would have a value of zero. In that case, agent $j$'s outcomes would not enter into the utility function. The utility function would become $u_B(x_B)=x_B$.
+:::
+
+e\) What value must $\sigma$ have to explain Bob's rejection of low offers in the ultimatum game?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Sigma must be negative such that, if agent $i$ accepts, the decrease in utility from agent $j$'s payoff would be larger than the utility gain agent $i$ would receive from its own payoff.
+:::
+
+f\) Consider the following two scenarios involving the Ultimatum game.
+
+Scenario 1: A proposer has a choice between offering a split of (\$8, \$2) or (\$5, \$5). In experiments with this choice, responders tend to reject offers of (\$8, \$2).
+
+Scenario 2: A proposer has a choice between offering a split of (\$8, \$2) or (\$10, \$0). In experiments with this choice, responders tend to accept offers of (\$8, \$2).
+
+A utility function of the type that Bob has cannot result in this behaviour. Explain why.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+In both cases, the outcome is (\$8, \$2). This would result in the same level of utility regardless of the other option that the proposer had. If compared with the outcome (\$0, \$0) from rejecting the offer, the action should therefore be the same.
+
+An explanation for the difference between scenarios is that people care not just about outcomes, but also the intentions of those with whom they interact. In that circumstance, the good (or otherwise) intentions of the proposer in offering either less than they could or as much as they could would shape the responder's action. However, intentions do not enter into Bob's utility function.
+:::
+
+## A government grant
+
+Jason, an academic, is seeking an industry research grant from the government and Bezzle Bank. Under the grant terms, a \$50,000 contribution by Bezzle Bank will be matched by government. The total research funds of \$100,000 are then under Jason's control.
+
+Jason could use these for research proposal A that benefits both himself and the bank, giving the bank \$100,000 in business benefit and Jason \$100,000 in career benefit. Alternatively, Jason could use the funds to research a new idea B, giving him \$150,000 in career benefit, but little of use for the bank.
+
+Bezzle Bank knows Jason's options and is considering whether to make a contribution.
+
+a\) Show that the Nash equilibrium outcome is for the bank to make no contribution.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+I have represented this problem in the following extensive form game. The possible payoffs for Bezzel Bank are \$50,000 for proposal A (\$100,000 minus it's $50,000 contribution) and -\$50,000 for proposal B (loss of its contribution). If Bezzle Bank does not contribute, both Jason and the Bank have a payoff of zero.
+
+We work through the problem by backward induction.
+
+First, Jason has a choice between Proposal A for a payoff of \$100,000 and Proposal B for a payoff of \$150,000. He chooses proposal B.
+
+Bezzle Bank therefore has a choice between contributing \$50,000 for a payoff of -\$50,000 or not contributing to remain at the status quo. Bezzle Bank does not contribute.
+
+![](img/bezzle-nash.png)
+
+:::
+
+b\) The bank decides to make the contribution and Jason decides to focus on research proposal A. Give possible reasons for this deviation from the Nash equilibrium.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+One explanation involves reciprocation. Jason is responding to the Bank's intentions and wants to reciprocate them. Relatedly, Bezzle Bank trusts Jason based on a belief that Jason will reciprocate their intentions.
+
+Another explanation may relate to reputation. Jason might care about his reputation and be reluctant to take an action that harms it. This may be due to concerns about his self-image, or more instrumental reasons such as a poor reputation harming future opportunities. 
+
+Altruism on the part of the bank may also be a factor. They may gain utility from the benefit to Jason (or the broader societal benefit from the research project). 
+
+:::

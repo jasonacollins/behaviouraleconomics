@@ -1,0 +1,20 @@
+# Behavioural game theory
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/xJdNzMRnJiQ >}}
+
+---
+
+:::
+In our analysis of game theory, I assumed rational agents in that they use all available information and can successfully determine their best action given their opponent's (also rational) action.
+
+But what if agents have limited rationality or vary in their rationality?
+
+In this part, I will examine several departures from rationality.
+
+The first is level-k thinking, in which the agents are assumed to have a certain level of reasoning. For example, a level-0 agent would choose an action randomly. A level-1 agent would assume that the opponent is level-0 and choose the best response to that. A level-2 agent would assume that the opponent is level-1 and choose the best response to that. And so on. The players try to be one step ahead of their opponents.
+
+The second departure involves the degree to which the players account for asymmetric information. We consider what happens if players act as though everyone has the same information or if they fail to appreciate the informational advantage they have relative to less-informed agents.
+
+The third departure involves emotions. We consider the role of emotions in enabling players to commit to courses of action that they otherwise could not credibly stick with.

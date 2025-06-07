@@ -1,0 +1,17 @@
+# Economic foundations
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/SNEDUzSM5-0 >}}
+
+---
+
+:::
+
+Behavioural economics builds on the frameworks and tools used by economists. In this part, I introduce some of the core economic concepts that we will build on or explicitly deviate from in our exploration of behavioural economics.
+
+I will first examine the preference relation used by economists.
+
+Then I will discuss how economists define rationality, and the foundational axioms of rationality, completeness and transitivity.
+
+Finally, I will describe how the preference relation and axioms form the basis of utility functions.

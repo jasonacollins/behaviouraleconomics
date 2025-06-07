@@ -1,0 +1,350 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Exponential discounting examples
+
+## Summary {.unnumbered}
+
+- Exponential discounters make decisions by comparing the discounted utility of different options, choosing the one with the highest value.
+- The discount factor $\delta$ determines how much future payoffs are discounted, with a higher $\delta$ resulting in less discounting of future outcomes.
+- Visualisations, such as graphs showing discounted utility over time, can help illustrate how exponential discounters evaluate and compare different options.
+- The following examples illustrate that:
+  - Time consistency is demonstrated through consistent choices across different time frames.
+  - The amount needed to compensate for a delay increases exponentially with time.
+  - Different discount factors can lead to different choices between the same options.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/FfsXWD03l7s >}}
+
+---
+
+:::
+
+## Introduction
+
+In this part, I will work through several numerical examples of decisions by an exponential discounter.
+
+## Example 1: \$100 today or \$110 next week{#sec-exponential_example_1}
+
+Alison is an exponential discounter with discount factor $\delta=0.95$ and utility each period of $u(x_n)=x_n$. She is offered two choices.
+
+Choice 1: Would she prefer \$100 today ($t=0$) or \$110 next week ($t=1$)?
+
+To determine this, we calculate the discounted utility of each option. Alison will prefer the option with the highest discounted utility.
+
+We write the discounted utility of the \$100 today as $U_0(0,\$100)$. The subscript 0 indicates that the utility is calculated at time $t=0$. The first number in the brackets indicates the time the payment is received. In this case, the \$100 is received at $t=0$, today. The second number in the brackets is the value of the payment.
+
+The discounted utility of the \$100 today, $U_0(0,\$100)$, is:
+
+\begin{align*}
+U_0(0,\$100)&=u(\$100) \\[6pt]
+&=100
+\end{align*}
+
+There is no discount $\delta$ applied to the \$100 as it is received immediately.
+
+We write the discounted utility of the \$110 next week as $U_0(1,\$110)$. The subscript 0 again indicates that the utility is calculated at time $t=0$. The first number in the brackets, 1, indicates the time the payment is received, $t=1$. The second number in the brackets is the value of the payment.
+
+The discounted utility of the \$110 next week is:
+
+\begin{align*}
+U_0(1,\$110)&=\delta u(\$110) \\[6pt]
+&=0.95\times 110 \\[6pt]
+&=`r 0.95*110`
+\end{align*}
+
+In this case, a discount of $\delta=0.95$ is applied to the \$110 as it is received in one week.
+
+We can now compare the discounted utility of each option. $U_0(0,\$100)=100<`r 0.95*110`=U_0(1,\$110)$. Alison would prefer to receive \$110 next week as it leads to higher discounted utility.
+
+@fig-alison-choice-1 visualises the effect of discounting in Choice 1.
+
+The two bars represent the options: \$100 at $t=0$ and \$110 at $t=1$. The line from the \$110 option represents the discounted utility of that option at each time. At $t=0$ the discounted utility of the \$110 received at $t=1$ is `r 0.95*110`. At $t=0$ we can see that the \$110 is preferred as the line indicating discounted utility is higher than the utility of the \$100 received immediately.
+
+```{r}
+# Create a function to create the discounted bar chart
+library(ggplot2)
+
+# Helper function to create discounted values
+create_discount_data <- function(value, time, discount_rate, start) {
+  times <- seq(start, time, by = 1)
+  data.frame(
+    t = times,
+    group = as.character(time),
+    value = value * discount_rate^(time - times)
+  )
+}
+
+# Main function to create the discounted bar chart
+create_discounted_bar_chart <- function(smaller, t_s, larger, t_l, discount_rate, starting_at = 0, y_spacing = 20, x_spacing = 1) {
+  # Create the data
+  data <- data.frame(
+    t = c(t_s, t_l),
+    U_t = c(smaller, larger)
+  )
+  
+  # Create the discounted values, starting from 'starting_at'
+  discounted_data <- rbind(
+    create_discount_data(smaller, t_s, discount_rate, starting_at),
+    create_discount_data(larger, t_l, discount_rate, starting_at)
+  )
+  
+  # Shift t values based on starting_at
+  data$t_plot <- data$t - starting_at
+  discounted_data$t_plot <- discounted_data$t - starting_at
+  
+  # Filter out any data points before the starting point
+  data <- data[data$t >= starting_at, ]
+  discounted_data <- discounted_data[discounted_data$t >= starting_at, ]
+  
+  # Determine x-axis and y-axis limits
+  x_min <- 0
+  x_max <- max(max(data$t_plot), max(discounted_data$t_plot))
+  y_max <- max(max(data$U_t), max(discounted_data$value)) * 1.1  # 10% buffer
+  
+  # Create the plot
+  ggplot() +
+    # Add the bars
+    geom_rect(data = data, aes(xmin = ifelse(t_plot == 0, 0, t_plot - 0.15),
+                               xmax = ifelse(t_plot == 0, 0.15, t_plot + 0.15),
+                               ymin = 0, ymax = U_t),
+              fill = "white", color = "black") +
+    
+    # Add the discount lines
+    geom_line(data = discounted_data, aes(x = t_plot, y = value, group = group), 
+              color = "black", linewidth = 1) +
+    
+    # Customize the plot
+    scale_x_continuous(breaks = seq(x_min, x_max + 1, by = x_spacing), 
+                       limits = c(x_min, x_max + 1),
+                       expand = c(0, 0),
+                       labels = function(x) x + starting_at) +
+    scale_y_continuous(breaks = seq(0, y_max, by = y_spacing), 
+                       limits = c(0, y_max),
+                       expand = c(0, 0)) +
+    geom_vline(xintercept = 0, linewidth = 0.25) + 
+    geom_hline(yintercept = 0, linewidth = 0.25) +
+    labs(x = "t",
+         y = expression(U[t])) +
+    theme_minimal() +
+    theme(
+      axis.title.y = element_text(angle = 0, vjust = 0.5),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank()
+    )
+}
+
+```
+
+```{r}
+#| label: fig-alison-choice-1
+#| fig-cap: Alison's consideration of Choice 1
+#| fig-width: 5
+
+create_discounted_bar_chart(100, 0, 110, 1, 0.95)
+
+```
+
+Choice 2: Would Alison prefer \$100 next week ($t=1$) or \$110 in two weeks ($t=2$)?
+
+Again, we calculate the discounted utility of each option. Alison will prefer the option with the highest discounted utility.
+
+The discounted utility of the \$100 next week is:
+
+\begin{align*}
+U_0(1,\$100)&=\delta u(\$100) \\[6pt]
+&=0.95\times 100 \\[6pt]
+&=`r 0.95*100`
+\end{align*}
+
+The discounted utility of the \$110 in two weeks is:
+
+\begin{align*}
+U_0(2,\$110)&=\delta^2 u(\$110) \\[6pt]
+&=0.95^2\times 110 \\[6pt]
+&=`r 0.95^2*110`
+\end{align*}
+
+We can now compare the discounted utility of each option. $U_0(1,\$100)=`r 0.95*100`<`r 0.95^2*110`=U_0(2,\$110)$. Alison would prefer to receive \$110 in two weeks.
+
+The set of decisions across Choice 1 and Choice 2 are time consistent. If Alison selected \$110 in two weeks for Choice 2 and was given a chance to change her choice after one week (which is effectively Choice 1), she would not change her decision.
+
+@fig-alison-choice-2 visualises the effect of discounting in Choice 2.
+
+The two bars represent the options: \$100 at $t=1$ and \$110 at $t=2$. The line from each represents the discounted utility of that option at each time.
+```{r}
+#| label: fig-alison-choice-2
+#| fig-cap: Alison's consideration of Choice 2
+#| fig-width: 5
+
+create_discounted_bar_chart(100, 1, 110, 2, 0.95)
+
+```
+
+For example, at $t=1$ the discounted utility of the \$100 received at $t=1$ is 100 and the discounted utility of the \$110 received at $t=2$ is 104.50. We can read those values from the line. For any time $t$ we can determine which option would be preferred by seeing which line is higher.
+
+```{r}
+#| label: fig-alison-choice-2-discount
+#| fig-cap: Alison's consideration of Choice 2 - discounted utilities
+#| fig-width: 5
+
+# First, create the plot using the existing function
+p <- create_discounted_bar_chart(100, 1, 110, 2, 0.95)
+
+# Calculate the y-intercept for the dashed line
+y_intercept <- 110 * 0.95  # 104.5
+
+# Add the dashed line and the label to the existing plot
+p_with_line_and_label <- p + 
+  geom_segment(aes(x = 0, y = y_intercept, xend = 1, yend = y_intercept),
+               linetype = "dashed", color = "black") +
+  geom_text(aes(x = 0.2, y = y_intercept, label = sprintf("%.1f", y_intercept)),
+            hjust = 1, vjust = -0.2, size = 3)
+
+# Display the modified plot
+print(p_with_line_and_label)
+
+```
+
+You will note that the two lines do not cross. For an exponential discounter, if one line is higher at any particular time $t$, it is higher at all times.
+
+@fig-alison-choice-2-reconsidered visualises Choice 2 reconsidered at $t=1$, which as noted earlier, is effectively Choice 1. The discounted utility of the \$100 received immediately is less than the discounted utility of \$110 in one week. The preference for the higher-value option remains.
+
+```{r}
+#| label: fig-alison-choice-2-reconsidered
+#| fig-cap: Alison's reconsideration of Choice 2
+#| fig-width: 5
+
+create_discounted_bar_chart(100, 1, 110, 2, 0.95, starting_at = 1)
+
+```
+
+## Example 2: How much for a one-year delay?
+
+Brenda is an exponential discounter with discount factor $\delta=0.95$ per week and utility each period of $u(x_n)=x_n$
+
+She is offered \$100 today. What sum would she need to be offered in one year (52 weeks) to prefer that later payment to the \$100 today?
+
+To determine this, we calculate what sum received in one year would give Brenda the same discounted utility as receiving \$100 today.
+
+The discounted utility of the \$100 today is:
+
+\begin{align*}
+U_0(0,\$100)&=u(\$100) \\[6pt]
+&=100
+\end{align*}
+
+The discounted utility of the sum $y$ received in 52 weeks is:
+
+\begin{align*}
+U_0(52,\$y)&=\delta^{52} u(\$y) \\[6pt]
+&=0.95^{52}\times y
+\end{align*}
+
+As there is a 52-period delay, the discount factor $\delta$ is applied 52 times.
+
+She will prefer \$$y$ in 52 weeks if $U(52,\$y)$ is greater than 100.
+
+\begin{align*}
+U_0(52,\$y)&>100 \\[6pt]
+0.95^{52}\times y&>100 \\[6pt]
+y&>\frac{100}{0.95^{52}} \\[6pt]
+y&>\$`r round(100/(0.95^52), 2)`
+\end{align*}
+
+Brenda would be willing to wait a year for payment if she was paid more than $1440.03.
+
+@fig-brenda visualises this problem. The bar at $t=52$ represents the \$1440.03 Brenda would need to be paid (at minimum) to prefer that payment to \$100 today. The line extended from that bar back to $t=0$ indicates the discounted utility of that payment at any time $t$. At $t=0$ the discounted utility of the \$1440.03 is equal to the utility of \$100.
+
+```{r warning=FALSE}
+#| label: fig-brenda
+#| fig-cap: Brenda's choice
+#| fig-width: 5
+
+create_discounted_bar_chart(0, 0, 1440.03, 52, 0.95, y_spacing = 100, x_spacing = 4)
+
+```
+
+## Example 3: \$10 in five days or \$20 in 10 days?
+
+Chelsea is an exponential discounter with discount factor $\delta=0.75$ and utility each period of $u(x_n)=x_n$.
+
+Would Chelsea prefer \$10 in five days ($t=5$) or \$20 in 10 days ($t=10$)? 
+
+We calculate the discounted utility of each option. Chelsea will prefer the option with the highest discounted utility.
+
+The discounted utility of the \$10 in five days is:
+
+\begin{align*}
+U_0(5,\$10)&=\delta^5u(\$10) \\[6pt]
+&=0.75^5\times 10 \\[6pt]
+&=`r round(0.75^5*10, 2)`
+\end{align*}
+
+The discount factor $\delta$ is applied five times as the payment is received in five days.
+
+The discounted utility of the \$20 in 10 days is:
+
+\begin{align*}
+U_0(10,\$20)&=\delta^{10} u(\$20) \\[6pt]
+&=0.75^{10}\times 20 \\[6pt]
+&=`r round(0.75^10*20, 2)`
+\end{align*}
+
+The discount factor $\delta$ is applied 10 times as the payment is received in 10 days.
+
+We can now compare the discounted utility of each option. $U_0(5,\$10)=`r round(0.75^5*10, 2)`>`r round(0.75^10*20, 2)`=U_0(10,\$20)$. The discounted utility is higher for the \$10 in five days. As a result, Chelsea will prefer to receive \$10 in five days.
+
+Dorothy is an exponential discounter with discount factor $\delta=0.95$ and utility each period of $u(x_n)=x_n$. Dorothy has a larger discount factor than Chelsea, meaning that she applies a smaller discount to future outcomes.
+
+Would Dorothy prefer \$10 in five days ($t=5$) or \$20 in 10 days ($t=10$)? 
+
+The discounted utility of the \$10 in five days is:
+
+\begin{align*}
+U_0(5,\$10)&=\delta^5u(\$10) \\[6pt]
+&=0.95^5\times 10 \\[6pt]
+&=`r round(0.95^5*10, 2)`
+\end{align*}
+
+The discounted utility of the \$20 in 10 days is:
+
+\begin{align*}
+U_0(10,\$20)&=\delta^{10} u(\$20) \\[6pt]
+&=0.95^{10}\times 20 \\[6pt]
+&=`r round(0.95^10*20, 2)`
+\end{align*}
+
+The discounted utility is higher for the \$20 in 10 days. Dorothy will prefer to receive \$20 in 10 days.
+
+@fig-example3 visualises the choices and Chelsea and Dorothy's discounting of the payoffs.
+
+In both charts, vertical bars represent the \$10 in five days and \$20 in 10 days. The lines projecting back to $t=0$ represent the discounted utility of those payoffs at each time.
+
+When $\delta=0.75$, the heavy discount to the more distant payoff means that it has a lower discounted utility than the smaller, sooner payment of \$10. When $\delta=0.95$, the discount is less severe and the \$20 in 10 days has a higher discounted utility than the \$10 in five days.
+
+::: {#fig-example3 layout-ncol=2}
+
+```{r}
+#| label: fig-chelsea
+#| fig-cap: Chelsea's choice ($\delta=0.75$)
+#| fig-width: 5
+
+create_discounted_bar_chart(10, 5, 20, 10, 0.75, y_spacing = 5)
+
+```
+
+```{r}
+#| label: fig-dorothy
+#| fig-cap: Dorothy's choice ($\delta=0.95$)
+#| fig-width: 5
+
+create_discounted_bar_chart(10, 5, 20, 10, 0.95, y_spacing = 5)
+
+```
+
+Exponential discounting
+:::

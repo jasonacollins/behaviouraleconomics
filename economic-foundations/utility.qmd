@@ -1,0 +1,72 @@
+# Utility
+
+## Summary {.unnumbered}
+
+- Economists use utility functions to represent strength of preference, assigning numbers to different options.
+- Formally, a utility function $u(\cdot)$ maps alternatives to real numbers, assigning larger numbers to preferred alternatives.
+- The preference relation can be expressed using the utility function:
+
+$$
+x \succcurlyeq y \Leftrightarrow u(x) \geq u(y) \\[6pt]
+x \succ y \Leftrightarrow u(x) > u(y) \\[6pt]
+x \sim y \Leftrightarrow u(x) = u(y)
+$$
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/IMXRTT6LCJQ >}}
+
+---
+
+:::
+
+Economists often use numbers to represent strength of preference. This is done through utility functions.
+
+A utility function associates a number with each member of the universe. For example:
+
+- Banana: 3
+- Orange: 2
+- Apple: 1
+
+This does not mean that I rate bananas three times higher than apples. It simply means that I prefer bananas to apples. This utility scale is ordinal, not cardinal. The following is equivalent:
+
+- Banana: 300
+- Orange: 2
+- Apple: 1
+
+Formally, the utility function $u(\cdot)$:
+
+- maps the set of alternatives into the set of real numbers
+- assigns larger numbers to preferred alternatives.
+
+For example, we might write:
+
+\begin{align*}
+u(\text{banana})&=3 \\[6pt]
+u(\text{orange})&=2 \\[6pt]
+u(\text{apple})&=1
+\end{align*}
+
+The rank of those numbers gives us the preference relation:
+
+$$
+x\succcurlyeq y \Longleftrightarrow u(x)\geq u(y)
+$$
+
+$$
+x\succ y \Longleftrightarrow u(x)>u(y)
+$$
+
+$$
+x\sim y \Longleftrightarrow u(x)=u(y)
+$$
+
+Again, following from the above:
+
+$$
+u(\text{banana})=3>2=u(\text{orange})\Longleftrightarrow \text{banana}\succ \text{orange}
+$$
+
+This calculation of utility is not how the mind actually works. But under the axioms of completeness and transitivity, the consumer behaves *as if* they have a utility function $u(x_i)$ over outcomes $x_i$.

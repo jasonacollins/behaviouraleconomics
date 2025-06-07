@@ -1,0 +1,329 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Present bias examples
+
+## Summary
+
+- The following examples illustrate the contrast between exponential discounters' time-consistent choices and present-biased agents' time-inconsistent decisions when faced with immediate versus future rewards.
+- The use of graphical representations to visualise how present bias affects the relative attractiveness of rewards over time, particularly when the short-term discount factor no longer applies, can be used to illustrate choice and preference reversal.
+- The following examples illustrate that:
+    - The $\beta\delta$ model creates a "kink" in the discounting curve, with a steeper discount for the immediate future due to the short-term discount factor $\beta$.
+    - Present-biased agents may choose smaller-sooner rewards when available immediately, but larger-later rewards when both options are in the future.
+    - Present bias has practical implications in financial decision-making, demonstrated through scenarios such as loan repayment choices.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/2AzTot-ywb0 >}}
+
+---
+
+:::
+
+## Introduction
+
+In the section, I provide some simple examples of the $\beta\delta$ model.
+
+## Exponential discounting versus present bias
+
+For the first example, we will consider the following pair of choices presented to an exponential discounting agent and a present-biased agent and contrast their decisions.
+
+Choice 1: Would you like \$100 today or \$110 next week? 
+
+Choice 2: Would you like \$100 next week or \$110 in two weeks? 
+
+### The exponential discounter
+
+The exponential discounter has $\delta=0.95$ and utility each period of $u(x_n)=x_n$.
+
+Would the exponential discounter prefer \$100 today ($t=0$) or \$110 next week ($t=1$)?
+
+When we worked through this problem in @sec-exponential_example_1, we calculated that:
+
+$$
+U_0(0,\$100)=100<`r 0.95*110`=U_0(1,\$110)
+$$
+
+The exponential discounter will prefer to receive \$110 next week as it leads to higher discounted utility.
+
+Choice 2: Would the exponential discounter prefer \$100 next week ($t=1$) or \$110 in two weeks ($t=2$)? 
+
+When we worked through this problem in @sec-exponential_example_1, we calculated that:
+
+$$
+U_0(1,\$100)=`r 0.95*100`<`r 0.95^2*110`=U_0(2,\$110)
+$$
+
+The exponential discounter will prefer to receive \$110 in two weeks.
+
+The set of decisions across Choice 1 and Choice 2 are time consistent. If the exponential-discounting agent selected \$110 in two weeks for Choice 2 and was given a chance to change their choice after one week (which is effectively an offer of Choice 1), they would not change their decision.
+
+### The present-biased agent
+
+The present biased agent has $\delta=0.95$, $\beta=0.95$ and utility each period of $u(x_n)=x_n$.
+
+Choice 1: Would this agent prefer \$100 today ($t=0$) or \$110 next week ($t=1$)? 
+
+The discounted utility of the \$100 today is:
+
+\begin{align*}
+U_0(0,\$100)&=u(\$100)\\[6pt]
+&=100
+\end{align*}
+
+The discounted utility of the \$110 next week is:
+
+\begin{align*}
+U_0(1,\$110)&=u(x_0)+\beta u(x_1) \\[6pt]
+&=\beta\delta u(\$110) \\[6pt]
+&=0.95\times 0.95\times 110 \\[6pt]
+&=`r 0.95*0.95*110`
+\end{align*}
+        
+As $U_0(0,\$100) > U_0(1,\$110)$, the present-biased agent will prefer to receive \$100 this week.
+
+Choice 2: Would this present-biased agent prefer \$100 next week ($t=1$) or \$110 in two weeks ($t=2$)? 
+
+The discounted utility of the \$100 next week is:
+
+\begin{align*}
+U_0(1,\$100)&=u(x_0)+\beta u(x_1)+\beta\delta^2 u(x_2) \\[6pt] 
+&=\beta\delta u(\$100) \\[6pt]
+&=0.95\times 0.95\times 100 \\[6pt]
+&=`r e1pb3<-0.95*0.95*100; e1pb3`
+\end{align*}
+
+The discounted utility of the \$110 in two weeks is:
+
+\begin{align*}
+U_0(2,\$110)&=u(x_0)+\beta u(x_1)+\beta\delta^2 u(x_2) \\[6pt]
+&=\beta\delta^2 u(\$110) \\[6pt]
+&=0.95\times 0.95^2\times 110 \\[6pt]
+&=`r e1pb4<-round(0.95*0.95^2*110, 2); e1pb4`
+\end{align*}
+
+As $U_0(1,\$100)=`r e1pb3`<`r e1pb4`=U_0(2,\$110)$, the present-biased agent will prefer to receive \$110 in two weeks.
+
+If we consider those two choices by the present-biased agent together, we see the following pattern.
+
+For choice 1, the present-biased agent will prefer \$100 now to \$110 in one week. Their preference for benefits now due to the short-term discount factor $\beta$ leads them to prefer the immediate payoff.
+
+For choice 2, the present-biased agent will prefer \$110 in two weeks to \$100 in one week. They are willing to wait longer for a larger reward, with both outcomes in the future and subject to the short-term discount factor $\beta$.
+
+Consider what would happen if this present-biased agent selected the \$110 in two weeks in Choice 2, but after one week we asked if they would like to reconsider their choice. They are effectively being offered Choice 1. This would then lead them to change their mind and take the immediate \$100.
+
+This combination of decisions is time inconsistent. The present-biased agent’s actions are not consistent with their initial plan.
+
+We can see this change in preference in the following diagram.
+
+The vertical bars represent the payments of \$100 and \$110. The lines projecting back from the bars to the y-axis represent the discounted utility of each payment at each time.
+
+There is a kink in the line projecting from the \$110 in two weeks, representing the effect of the short-term discount factor $\beta$. Between $t=1$ and $t=2$ both the short-term and usual discount factors are applied. This leads to that part of the curve having a steeper slope than between $t=0$ and $t=1$ where only the usual discount factor is applied.
+
+At $t=0$ the discounted utility of the \$110 at $t=2$ is higher and that payment is therefore preferred. At $t=1$ when the \$100 is no longer discounted by the short-term discount factor $\beta$, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the \$110 due in another week.
+
+```{r}
+# Create a function to create the discounted bar chart
+library(ggplot2)
+
+# Helper function to create discounted values
+create_discount_data <- function(value, t, beta, delta, start) {
+  times <- seq(start, t, by = 1)
+  data.frame(
+    t = times,
+    group = as.character(t),
+    value = ifelse(t==times, value, value * beta * delta^(t - times))
+  )
+}
+
+# Main function to create the discounted bar chart
+create_discounted_bar_chart <- function(smaller, t_s, larger, t_l, beta, delta, starting_at = 0, y_spacing = 20, x_spacing = 1) {
+  # Create the data
+  data <- data.frame(
+    t = c(t_s, t_l),
+    U_t = c(smaller, larger)
+  )
+  
+  # Create the discounted values, starting from 'starting_at'
+  discounted_data <- rbind(
+    create_discount_data(smaller, t_s, beta, delta, starting_at),
+    create_discount_data(larger, t_l, beta, delta, starting_at)
+  )
+  
+  # Shift t values based on starting_at
+  data$t_plot <- data$t - starting_at
+  discounted_data$t_plot <- discounted_data$t - starting_at
+  
+  # Filter out any data points before the starting point
+  data <- data[data$t >= starting_at, ]
+  discounted_data <- discounted_data[discounted_data$t >= starting_at, ]
+  
+  # Determine x-axis and y-axis limits
+  x_min <- 0
+  x_max <- max(max(data$t_plot), max(discounted_data$t_plot))
+  y_max <- max(max(data$U_t), max(discounted_data$value)) * 1.1  # 10% buffer
+  
+  # Create the plot
+  ggplot() +
+    # Add the bars
+    geom_rect(data = data, aes(xmin = ifelse(t_plot == 0, 0, t_plot - 0.15),
+                               xmax = ifelse(t_plot == 0, 0.15, t_plot + 0.15),
+                               ymin = 0, ymax = U_t),
+              fill = "white", color = "black") +
+    
+    # Add the discount lines
+    geom_line(data = discounted_data, aes(x = t_plot, y = value, group = group, linetype = group), 
+              color = "black", linewidth = 1) +
+    
+    # Customize the plot
+    scale_x_continuous(breaks = seq(x_min, x_max + 1, by = x_spacing), 
+                       limits = c(x_min, x_max + 1),
+                       expand = c(0, 0),
+                       labels = function(x) x + starting_at) +
+    scale_y_continuous(breaks = seq(0, y_max, by = y_spacing), 
+                       limits = c(0, y_max),
+                       expand = c(0, 0)) +
+    geom_vline(xintercept = 0, linewidth = 0.25) + 
+    geom_hline(yintercept = 0, linewidth = 0.25) +
+    labs(x = "t",
+         y = expression(U[t])) +
+    theme_minimal() +
+    theme(
+      axis.title.y = element_text(angle = 0, vjust = 0.5),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.position = "none"
+    )
+}
+
+```
+
+```{r}
+#| label: fig-present-bias-example-1
+#| fig-cap: \$100 next week or \$110 in two weeks?
+#| fig-width: 5
+
+create_discounted_bar_chart(100, 1, 110, 2, 0.95, 0.95)
+
+```
+
+## A longer delay
+
+Assume there is a present-biased agent with $\beta=0.75$, $\delta=0.9$ and utility each period of $u(x_n)=x_n$.
+
+Would this agent prefer \$10 in five days ($t=5$) or \$20 in 10 days ($t=10$)? 
+
+The discounted utility of the \$10 in five days is:
+
+\begin{align*}
+U_0(5,\$10)&=\beta\delta^5u(\$10) \\[6pt]
+&=0.75\times 0.9^5\times 10 \\[6pt]
+&=`r pbe2a <- round(0.75*0.9^5*10, 2); pbe2a`
+\end{align*}
+
+The discounted utility of the \$20 in 10 days is:
+
+\begin{align*}
+U_0(10,\$20)&=\beta\delta^{10} u(\$20) \\[6pt]
+&=0.75\times 0.9^{10}\times 20 \\[6pt]
+&=`r pbe2b <- round(0.75*0.9^10*20, 2); pbe2b`
+\end{align*}
+
+As $U_0(5,\$10)=`r pbe2a`<`r pbe2b`=U_0(10,\$20)$, this present-biased agent will prefer to receive \$20 in 10 days.
+
+Five days pass so we are now at $t=5$. We ask the agent if they would like to change their mind.
+
+The discounted utility of the \$10 today is:
+
+\begin{align*}
+U_5(5,\$10)&=u(\$10) \\[6pt]
+&=10
+\end{align*}
+
+The discounted utility of the \$20 in five days is:
+
+\begin{align*}
+U_5(10,\$20)&=\beta\delta^5 u(\$20) \\[6pt]
+&=0.75\times 0.9^5\times 20 \\[6pt]
+&=`r round(0.75*0.9^5*20, 2)`
+\end{align*}
+
+As $U_5(5,\$10)=10>8.86=U_5(10,\$20)$, this present-biased agent will prefer to receive \$10 today. They have changed their preference between the two payments relative to their decision at $t=0$.
+
+We can see this change in preference in the following diagram.
+
+The vertical bars represent the payments of \$10 and \$20. The lines projecting back from the bars to the y-axis represent the discounted utility of each payment at each time. There is a kink in the line in the period immediately before each payment, representing the effect of the short-term discount factor $\beta$.
+
+At $t=0$ (and through to $t=4$) the discounted utility of the \$20 at $t=10$ is higher and that payment is therefore preferred. At $t=5$ when the \$10 is no longer discounted by the short-term discount factor $\beta$, it suddenly becomes more attractive. If offered on that day, would be chosen in substitute of the \$20 due in another five days.
+
+```{r}
+#| label: fig-present-bias-example-2
+#| fig-cap: \$10 in five days or \$20 in 10 days?
+#| fig-width: 5
+
+create_discounted_bar_chart(10, 5, 20, 10, 0.75, 0.9, y_spacing = 5)
+
+```
+
+## Paying a loan
+
+Charlie is a naive present-biased agent with $\beta=0.5$, $\delta=0.95$ and $u(x)=x$.
+
+Charlie loaned \$100 to Carol. Carol is due to pay Charlie back in 7 days (at t=7). Carol tells Charlie that she would prefer to pay him back later, and offers \$200 in 14 days (at $t=14$) if he is willing to wait. Charlie is considering whether to accept Carol's offer.
+
+\(a) What does Charlie choose at $t=0$?
+
+To determine what Charlie chooses at $t=0$, we need to compare the discounted utility of the two options.
+
+The discounted utility of \$100 at $t=7$ is:
+
+\begin{align*}
+U_0(7,100)&=0.5\times 0.95^7 \times 100 \\
+&=`r round(0.5*0.95^7 * 100, 2)`
+\end{align*}
+
+The discounted utility of \$200 at $t=14$ is:
+
+\begin{align*}
+U_0(14,200)&=0.5\times 0.95^{14} \times 200 \\
+&=`r round(0.5*0.95^14 * 200, 2)`
+\end{align*}
+
+Charlie chooses the option with the highest discounted utility, which is \$200 at $t=14$.
+
+\(b) At $t=7$ Charlie considers whether he should now demand payment of \$100 at $t=7$ rather than wait for payment of \$200 at $t=14$. What does Charlie choose at $t=7$?
+
+To determine what Charlie chooses at $t=7$, we need to compare the discounted utility of the two options.
+
+The discounted utility of \$100 at $t=7$ is:
+
+\begin{align*}
+U_7(7,100)&=0.95^0 \times 100 \\
+&=`r round(0.95^0 * 100, 2)`
+\end{align*}
+
+The discounted utility of \$200 at $t=14$ is:
+
+\begin{align*}
+U_7(14,200)&=0.5\times 0.95^7 \times 200 \\
+&=`r round(0.5*0.95^7 * 200, 2)`
+\end{align*}
+
+Charlie chooses the option with the highest discounted utility, which is \$100 at $t=7$. He has changed his mind. This is because the sum at $t=7$ is no longer subject to the short-term discount factor $\beta$.
+
+\(c) Draw a graph illustrating Charlie's choices.
+
+The following chart shows each of the two options presented to Charlie, \$100 at $t=7$ and \$200 at $t=14$. The line extended from each back to $t=0$ represents the the discounted utility of each option at time $t$.
+
+It can be seen that from $t=0$ to $t=6$, the discounted utility of \$200 at $t=14$ is higher than the discounted utility of \$100 at $t=7$. However, at $t=7$, the discounted utility of \$100 at $t=7$ is higher than the discounted utility of \$200 at $t=14$. Hence Charlie changes his mind.
+
+```{r}
+#| label: fig-present-bias-example-3
+#| fig-cap: Paying a loan
+#| fig-width: 5
+
+create_discounted_bar_chart(100, 7, 200, 14, 0.5, 0.95)
+
+```

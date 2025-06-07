@@ -1,0 +1,251 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Intertemporal choice problems
+
+## Work or party?
+
+Ruby is a sophisticated present-biased agent with $\beta=0.5$ and $\delta=1$. She has utility function $u(x)=x$.
+
+Ruby is deciding today ($t=0$) whether she will either:
+
+- work tomorrow ($t=1$) for \$10 income to be received the day after she works ($t=2$) or
+- party tomorrow ($t=1$) for immediate utility of 8 but no income.
+
+That is, she is deciding between (2, 10) and (1,8).
+
+a\) What does Ruby decide?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Ruby is sophisticated, so uses backward induction to decide her preferred course of action.
+
+At $t=2$ there is no decision to make. Ruby bears the consequences of her earlier decisions.
+
+At $t=1$ she compares the discounted utility of the two options:
+
+\begin{align*}
+U_1(\text{work})&=\beta\delta u(\text{work}) \\
+&=0.5\times 1\times 10 \\
+&=5 \\
+\\
+U_1(\text{party})&=u(\text{party}) \\
+&=8
+\end{align*}
+
+At $t=1$ the discounted utility partying is higher than that of working ($U_1(\text{party})>U_1(\text{work})$), so Penny prefers to party.
+
+At $t=0$ Penny knows that she will party at $t=1$ no matter what she decides at $t=0$, so she accepts that she will party.
+:::
+
+b\) Ruby is able to commit to working at $t=1$ by posting a letter at $t=0$ declining the party invitation (at no cost). Once she sends the letter, she cannot change her mind. Will she decline the invitation?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The presence of the commitment device allows Ruby to include the option of working when she makes a decision at $t=0$. She will now compare the discounted utility of using the commitment device with the discounted utility of working.
+
+\begin{align*}
+U_0(\text{commit+work})&=\beta\delta^2 u(\text{commit+work}) \\
+&=0.5\times 1^2\times 10 \\
+&=5 \\
+\\
+U_0(\text{party})&=\beta\delta u(\text{party}) \\
+&=0.5\times 1\times 8 \\
+&=4
+\end{align*}
+
+$U_0(\text{commit+work})>U_0(\text{party})$, so Ruby commits to working by declining the invitation.
+:::
+
+c\) Suppose declining the party invitation comes at a cost to Ruby's reputation at $t=2$. What is the largest utility cost that Ruby would be willing to incur such that she would still use the commitment device of declining the invitation?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The largest cost she would be willing to incur is the cost where the discounted utility of each option is equal. Setting the cost as $c$:
+
+\begin{align*}
+U_0(\text{commit})&=\beta\delta^2 u(\text{work}-c) \\
+&=0.5\times 1^2\times (10-c) \\
+&=5-0.5c \\
+\\
+U_0(\text{party})&=\beta\delta u(\text{party}) \\
+&=0.5\times 1\times 8 \\
+&=4
+\end{align*}
+
+Ruby will be indifferent where $5-0.5c=4$ or where $c=2$. The largest utility cost she would be willing to incur is 2.
+
+:::
+
+d\) Victoria is a naive present-biased agent with $\beta=0.5$ and $\delta=1$. She has utility function $u(x)=x$.
+
+Victoria faces the same choice as Ruby and also has the chance to decline at $t=0$ the party invitation at a cost to Victoria's reputation at $t=2$. Will Victoria decline the invitation?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+As Victoria has the same discount function as Ruby, we know from question b) that Victoria will decide to work at $t=0$. We also know from question a) that she will then change her mind and party at $t=1$.
+
+However, as Victoria is naive she does not see her future self-control problem and does not have the foresight to realise at $t=0$ that she will not work as planned. As a result, she would see no need in the commitment device and would not be willing to incur any cost to use it.
+:::
+
+## Surfboard vs NFT
+
+James is a naive present-biased agent with $\beta=0.5$, $\delta=0.95$ and $u(x)=x$.
+
+James is planning to purchase a surfboard. James also likes to purchase [Bored Ape non-fungible tokens (NFTs)](https://en.wikipedia.org/wiki/Bored_Ape).
+
+The surfboard that James wants to purchase will be available for sale in 2 weeks ($t=2$). Purchasing the surfboard will give him utility of 10 on the day of purchase.
+
+James also knows a new Bored Ape NFT will be available for sale next week ($t=1$). Purchasing the Bored Ape NFT will give him utility of 8 on the day of purchase.
+
+James has enough money to buy only the surfboard or the Bored Ape NFT. He cannot afford both.
+
+\(a) What does James choose at $t=0$? Explain.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+To determine what James chooses at $t=0$, we need to compare the discounted utility of the two options.
+
+The discounted utility of the NFT received at $t=1$ is:
+
+\begin{align*}
+U_0(1,8)&=0.5\times 0.95^1 \times 8 \\
+&=`r round(0.5*0.95^1 * 8, 2)`
+\end{align*}
+
+The discounted utility of the surfboard received at $t=2$ is:
+
+\begin{align*}
+U_0(2,10)&=0.5\times 0.95^2 \times 10 \\
+&=`r round(0.5*0.95^2 * 10, 2)`
+\end{align*}
+
+James chooses the option with the highest discounted utility, which is the surfboard at $t=2$.
+
+:::
+
+\(b) At $t=1$ the NFT becomes available for sale. James is sitting at his laptop contemplating what he should do. What does James choose?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+To determine what James chooses at $t=1$, we need to compare the discounted utility of the two options.
+
+The discounted utility of the NFT received at $t=1$ is:
+
+\begin{align*}
+U_1(1,8)&=0.95^0 \times 8 \\
+&=`r round(0.95^0 * 8, 2)`
+\end{align*}
+
+The discounted utility of the surfboard received at $t=2$ is:
+
+\begin{align*}
+U_1(2,10)&=0.5\times 0.95^1 \times 10 \\
+&=`r round(0.5*0.95^1 * 10, 2)`
+\end{align*}
+
+James chooses the option with the highest discounted utility, which is the NFT at $t=1$. He has changed his mind. This is because the NFT at $t=1$ is no longer subject to the short-term discount factor $\beta$.
+
+:::
+
+\(c) Draw a graph illustrating James's choices and his decisions.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The following chart shows each of the two options presented to James, the NFT at $t=1$ and the surfboard at $t=2$. The line extended from each back to $t=0$ represents the discounted utility of each option at time $t$.
+
+It can be seen that at $t=0$, the discounted utility of the surfboard at $t=2$ is higher than the discounted utility of the NFT at $t=1$. However, at $t=1$, the discounted utility of the NFT is higher than the discounted utility of the surfboard. Hence James changes his mind.
+
+![](img/surfboard-vs-nft.png){width=80%}
+
+:::
+
+\(d) Jane is a sophisticated present-biased agent with $\beta=0.5$, $\delta=0.95$ and $u(x)=x$. Jane also likes surfing and Bored Ape NFTs. She faces the same set of choices as James in part a). What does Jane choose at $t=0$? Explain.
+
+::: {.callout-tip collapse="true"}
+
+## Answer
+
+To determine what Jane chooses at $t=0$, Janes considers the discounted utility of the two options by backward induction.
+
+At $t=2$, Jane will choose the surfboard if she has not already purchased the NFT. 
+
+At $t=1$, the discounted utility of the NFT is:
+
+\begin{align*}
+U_1(1,8)&=0.95^0 \times 8 \\
+&=`r round(0.95^0 * 8, 2)`
+\end{align*}
+
+At $t=1$, the discounted utility of the surfboard received at $t=2$ is:
+
+\begin{align*}
+U_1(2,10)&=0.5\times 0.95^1 \times 10 \\
+&=`r round(0.5*0.95^1 * 10, 2)`
+\end{align*}
+
+Jane would choose the NFT.
+
+Jane now considers what she would choose at $t=0$. She knows that no matter what she chooses now, she will choose the NFT at $t=1$. Hence, she chooses the NFT at $t=0$, the only feasible option.
+
+:::
+
+\(e) Jane discovers that she can place an early deposit of \$100 on the surfboard at $t=0$. If she does so, she cannot afford the Bored Ape NFT at $t=1$. Unfortunately, she will have to walk to the surf shop to place the deposit at a cost of 0.1 utility. What does Jane choose at $t=0$? Explain.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Jane's logic runs as per part d) until she considers what she would choose at $t=0$.
+
+At $t=0$, she has two choices available to her: place the deposit on the surfboard or purchase the NFT.
+
+The discounted utility of the NFT at $t=1$ is:
+
+\begin{align*}
+U_0(1,8)&=0.5\times 0.95^1 \times 8 \\
+&=`r round(0.5*0.95^1 * 8, 2)`
+\end{align*}
+
+The discounted utility of the surfboard at $t=2$ when making the deposit is:
+
+\begin{align*}
+U_0(2,10)&=-0.1+0.5\times 0.95^2 \times 10 \\
+&=`r round(-0.1+0.5*0.95^2 * 10, 2)`
+\end{align*}
+
+As the deposit binds Jane in the future, she can stick to her plan. She chooses buying the surfboard with the deposit rather than buying without the deposit as she knows that the latter choice is not viable: she will change her plans at $t=1$.
+
+:::
+
+## Clearing credit card debt
+
+Yvonne and Wendy each have a credit card with a credit limit of \$3,000. They had used the available credit on the card. They faced a 20% interest rate on their debts.
+
+Yvonne and Wendy also had \$3,000 in their bank accounts. They were not earning any interest on this sum.
+
+Yvonne used her savings to clear her credit card debt, saving her interest. Unfortunately, over the next three months, she used the credit card to make purchases and ended up with a credit card debt of \$3000 again. She is now paying 20% interest on her debt and has no savings.
+
+Wendy put her savings into a term deposit, earning 5% interest. She cannot access her savings for the next year. She kept the credit card debt and made no further purchases but is still paying the 20% interest.
+
+Use concepts from the subject material on intertemporal choice to explore why Yvonne and Wendy might have each made the decisions that they did. You should not make any mathematical calculations in answering this question. Explain the intuition only.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Wendy is likely a sophisticated present-biased agent. She can see that if she pays off her credit card with her savings, she will likely spend in the future.
+
+The term deposit and maxed-out credit card provide Wendy with a commitment device. She cannot access her savings for the next year or use the credit card. This prevents her from spending in the future. Her decision is sub-optimal compared to the option of paying off the card with her savings and not spending on her credit card, but she knows that in the future she will not be able to stick with that course of action. Although this comes at a cost - the higher interest rate - the commitment device was still the preferred option.
+
+Yvonne may be a naive present-biased agent. She paid off her credit card debt with her savings, the apparently wise choice for that moment in time. However, Yvonne would not have foreseen that her present bias would lead her to spend in the future and make a time inconisistent decision. She would not foresee the need for a commitment device.
+
+Alternatively, Yvonne may simply have a high exponential discount rate who prefers to spend at all times.
+
+:::
+

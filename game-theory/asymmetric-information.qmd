@@ -1,0 +1,187 @@
+# Asymmetric information
+
+## Summary {.unnumbered}
+
+- Information asymmetry in markets can lead to market failures, even with rational agents. This is illustrated by the "market for lemons" example, where buyers' inability to observe product quality before purchase can result in only low-quality goods being sold.
+- The winner's curse is a phenomenon in common-value auctions where the winning bidder tends to overpay. This occurs because winning implies that other bidders valued the item lower, suggesting the winner's estimate may be too high.
+- The Nash equilibrium strategy in such auctions is to bid more conservatively than your private estimate of the value.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/owl7uGkGIQ0 >}}
+
+---
+
+:::
+
+## Introduction
+
+To date in this section on game theory, I have assumed perfect information. That is, all players know the rules of the game, the available actions and the payoffs from each set of actions.
+
+I will now explore two examples where we relax this assumption and allow the parties to have different information. However, we will retain the assumption of rational behaviour.
+
+## The market for lemons {#sec-market-for-lemons}
+
+This example draws on the work of @akerlof1970.
+
+An agent decides to buy a used car. Price $p$ is fixed and quality is unobservable.
+
+Suppose there are two types of cars: good cars and lemons. A car is good with probability $q$ and a lemon with probability $1−q$.
+
+The seller knows the type. To the seller, good cars are worth \$10,000 and lemons \$5,000.
+
+To potential buyers, good cars are worth \$15,000 and lemons \$7,500.
+
+Before the purchase, the buyer knows the types of cars in the market and the frequency of each. They only discover the type of car, however, after the purchase.
+
+Given both car types are worth more to buyers than sellers, there should exist advantageous trades for both parties for both types of car. Selling is an efficient solution.
+
+But what happens?
+
+Let $\mu$ be the probability that a car that is sold is good. If sellers are willing to sell their good cars, $\mu=q$. If not, $\mu=0$.
+
+Therefore, the expected value of a car to a buyer is:
+
+$$
+E=\mu 15000+(1−\mu)7500=7500+7500\mu
+$$
+
+Hence, the buyer will be willing to pay up to $p=7500+7500\mu$.
+
+Given the value of each type of cars to sellers, they will sell a lemon if $p\geq 5000$ and a good car if $p\leq 10000$.
+
+Combining the conditions for the buyer and seller, a lemon will be sold if the price lies between the minimum required by the seller for the lemon and the maximum the buyer is willing to pay for the lemon. That is:
+
+$$
+5000\leq p\leq 7500+7500\mu
+$$
+
+This relationship holds regardless of the value of $\mu$, so the seller will always be willing and able to sell the lemon.
+
+They will be able to sell the good car if:
+
+$$
+10000\leq p\leq 7500+\mu7500
+$$
+
+This relation can only hold if $\mu\geq 1/3$.
+
+Assuming risk neutral buyers, we are left with two possible equilibria.
+
+If $q\geq 1/3$, sellers sell both types of cars:
+
+$$
+\mu=q\leq 1/3→10000\leq p^∗\leq 7500+\mu7500
+$$
+
+If $q<1/3$, sellers sell only lemons:
+
+$$
+\mu=0→5000\leq p^∗\leq 7500
+$$
+
+Generalising what is happening here:
+
+1. When buyers cannot observe product quality, sellers have an incentive to pass off lemons as good cars.
+
+2. Rational buyers expect this seller behaviour and they lower their willingness to pay.
+
+3. Sellers cannot sell good cars at high prices even though buyers would be willing to pay high prices for good cars.
+
+4. At the lower prices, sellers only offer to sell lemons.
+
+Information asymmetry is sufficient to result in a market failure even if the agents are rational.
+
+## The winner's curse {#sec-winners-curse}
+
+The second example involves a phenomenon called the winner's curse.
+
+The winner's curse occurs in the context of common-value auctions.
+
+A common-value auction is an auction in which the item for sale has the same value to all the bidders.
+
+Examples include stocks, which all have one value, and oil, where the amount of oil in a tract is the same for all oil companies.
+
+Common-value auctions contrast with private-value auctions in which bidders have different valuations for the item for sale. This typically occurs where the item's valuation reflects bidder tastes, such as art.
+
+The winner's curse is a phenomenon in common value auctions whereby the winner tends to experience a loss.
+
+Petroleum engineers invented the term in discussing why oil companies in the Gulf of Mexico had poor results in the 1950s through 1970s. Oil companies in the Gulf acquired drilling rights through auctions. Their rights tended to lead to losses or less in profits than expected. In hindsight, the winning bids were unreasonably high.
+
+The winner's curse is widely documented in experimental settings and has been observed in corporate environments.
+
+### Winner's curse example
+
+I will now walk through a numerical example of the winner's curse.
+
+Company 1 and company 2 hire a geologist to estimate the value of an oil field. The honest geologist of each company privately reports their estimated valuation to the company. Company 1 learns $v_1$ and company 2 learns $v_2$.
+
+$v_1$ and $v_2$ are uniformly distributed between \$0 and \$100 and independent.
+
+Assume the true value of the oil field is the mean of $v_1$ and $v_2$:
+
+$$
+V=\frac{v_1+v_2}{2}
+$$
+
+The two companies simultaneously bid for the field in a first-price auction. The highest bid wins and pays their bid.
+
+What should a company bid in this auction?
+
+Suppose both companies bid the private valuation they receive. Company 1 receives $v_1=50$, bids \$50 and wins.
+
+If they win, $v_1=\$50>v_2$.
+
+On average, in this state of the world company 2's signal is \$25 (due to the uniform distribution). The average value of the tract is therefore:
+
+$$
+\bar V=(50+25)/2=\$37.50
+$$
+
+The result is that company 1 has, on average, profit of $\$37.50-\$50=-\$12.50$. That is, a loss of \$12.50.
+
+Company 1 now decides to change strategy and bid less than the valuation they receive. What if $v_1=50$ and company 1 bids \$37.50 instead. We will assume that company 2 continues to bid $v_2$ and company 1 wins.
+
+If company 1 wins, $\$37.50>v_2$.
+
+On average, in this state of the world, company 2's signal is \$18.75 (due to the uniform distribution). The average value of the tract is therefore:
+ 
+$$
+(50 + 18.75)/2=\$34.37
+$$
+
+Company 1's profit is, on average, $\$34.37-\$37.50=-\$3.13$.
+
+Company 1 now decides to bid only half the valuation. What if $v_1=\$50$ and company 1 bids \$25. We again assume company 2 bids $v_2$ and company 1 wins.
+
+If company 1 wins, $25>v_2$.
+
+On average, in this state of the world company 2's signal is \$12.50 (due to the uniform distribution), so the average value of the tract is $(50 +12.50)/2=\$31.25$.
+
+Company 1's profit is $\$31.25 − \$25 = \$6.25$ on average. However, they will win only 25% of the time.
+
+This analysis also has a complication in that it does not account for the fact that company 2 is also a strategic player. We assumed company 2 bids $v_2$, but as for company 1, this strategy would lead to an expected loss for company 2.
+
+So what does each firm do at equilibrium?
+
+As each firm will have the same strategy at equilibrium, we can solve for company 1 assuming company 2 does the same strategy in response. At equilibrium, we can also assume that each company will have an expected profit of zero as each company would otherwise have an incentive to change their bid to gain a share of the positive profit.
+
+Company 1 will win if $\delta v_1>\delta v_2$; in other words, if $v_1>v_2$. On average, in this state of the world company 2's signal is $0.5v_1$ (due to the uniform distribution), so that the average value of the tract is $(v_1+0.5v_1)/2=0.75v_1$.
+
+Company 1's profit is:
+
+$$
+\pi_1=0.75v_1-\delta v_1=(0.75-\delta)v_1
+$$
+
+Profit is zero when $\delta=0.75$. The Nash equilibrium is that both parties bid 75% of their private valuation.
+
+In summary, bidding based purely on your own valuation fails to take into account that you only win if the other player's signal is low.
+
+Alternatively, we may say that winning the auction is bad news regarding the value of the field. This is the winner's curse.
+
+Because of the winner's curse, the Nash equilibrium is to bid more conservatively.
+
+The mistake that oil companies make is ignoring or underestimating the winner's curse. If an oil company wins an auction, it's likely because its geologists have the highest estimates of the field's value. But if all other geologists have lower estimates of the value, the company's geologists have probably overestimated it.

@@ -1,0 +1,384 @@
+# Commitment
+
+## Summary {.unnumbered}
+
+- Sophisticated present-biased agents can foresee their future actions. This foresight allows them to use commitment devices - mechanisms that lock them into a course of action by changing the value or availability of future options.
+- Commitment devices can work through three main channels:
+    - Forcing the agent to maintain the optimal course of action.
+    - Depressing the value of the undesired action
+    - Increasing the value of the optimal action
+- The following examples illustrate how these commitment devices work in practice:
+    - Forcing optimal action: Buying a non-refundable movie ticket, Odysseus tying himself to the mast, and using lay-by schemes.
+    - Depressing the value of bad actions: Using platforms like stickK to impose penalties for failing to meet goals.
+    - Increasing the value of optimal actions: Temptation bundling, such as pairing exercise with audiobooks or massages.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/FSVi6kKVE3w >}}
+
+---
+
+:::
+
+## Introduction
+
+A sophisticated present-biased agent can foresee their future actions and adjust their decisions today based on their foresight.
+
+This foresight provides an opportunity. By seeing their future selves fail, they can commit themselves to a course of action today that they would not otherwise be able to choose.
+
+## Commitment device
+
+People often implement the opportunity to commit themselves to a course of action by using a commitment device.
+
+A commitment device is a mechanism that locks you into a course of action by changing the value or availability of future options.
+
+Commitment devices may work through the following channels:
+
+-   They may depress the value of the bad course of action. 
+
+-   They may increase the value of the optimal course of action
+
+-   They may force the agent to maintain the optimal course of action.
+
+## Commitment examples
+
+I will now illustrate those channels with examples.
+
+### Forcing the optimal course of action
+
+A sophisticated present-biased agent with $\beta=0.5$ and $\delta=1$ is choosing between three movies, an OK movie, a good movie, and a great movie. The OK movie would give utility of 6, the good movie would give utility of 10, and the great movie would give utility of 16.
+
+The problem is that only the OK movie is showing today ($t=0$). The good movie is showing next week ($t=1$), and the great movie is showing in two weeks ($t=2$).
+
+The agent has enough money and time to watch only one movie. Should they watch the OK movie today or wait for the good or great movie?
+
+To determine their action, they solve by backward induction. 
+
+First, what will their decision be next week?
+
+```{=tex}
+\begin{align*}
+U_1(1,\text{good})&=u(\text{good}) \\[6pt]
+&=10 \\[6pt]
+\\[6pt]
+U_1(2,\text{great})&=\beta\delta u(\text{great}) \\[6pt]
+&=0.5\times 1\times 16 \\[6pt]
+&=8
+\end{align*}
+```
+
+As $U_1(1,\text{good})>U_1(2,\text{great})$, the sophisticated agent can see that they will choose to watch the good movie immediately.
+
+Knowing this is the case, the sophisticated agent now decides whether they prefer the OK movie today or the good movie next week.
+
+```{=tex}
+\begin{align*}
+U_0(0,\text{OK})&=u(\text{OK}) \\[6pt]
+&=6 \\[6pt]
+\\[6pt]
+U_0(1,\text{good})&=\beta\delta u(\text{good}) \\[6pt]
+&=0.5\times 1\times 10 \\[6pt]
+&=5
+\end{align*}
+```
+
+As $U_0(0,\text{OK})>U_0(1,\text{good})$, the sophisticated agent prefers the OK movie today.
+
+But when they compare all three options at $t=0$, they would prefer the great movie in two weeks.
+
+```{=tex}
+\begin{align*}
+U_0(2,\text{great})&=\beta\delta^2 u(\text{great}) \\[6pt]
+&=0.5\times 1^2\times 16 \\[6pt]
+&=8 \\[6pt]
+&\geq 6=U_0(0,\text{OK})
+\end{align*}
+```
+
+It is only because they can foresee their future failing after one week that they don't wait for the great movie.
+
+But what if they could commit themselves today? For example, suppose they could purchase a non-refundable, non-resalable ticket to the great movie in two weeks. The result is that a sophisticated present-biased agent would buy a ticket to the great movie in two weeks and prevent their future self from changing their action.
+
+### Forcing the optimal course of action: Odysseus
+
+Another example of forcing the agent to maintain the optimal course of action is the story of Odysseus.
+
+Odysseus was required to sail past the sirens at $t=1$. At that time he can either jump off his ship to join the sirens (and die) or sail on past and live, having a great life at $t=2$.
+
+As Odysseus is a sophisticated present-biased agent, he considers what he is likely to do at $t=1$. He realises that he will jump off the ship for the immediate benefit of joining the sirens at the loss of the longer-term discounted benefit of living.
+
+But from the perspective of Odysseus today, at $t=0$, with both the benefits of the sirens and living in the future and therefore discounted, Odysseus would prefer to live. As a result, he decides to commit himself to that course of action by instructing his crew to tie him to the mast (plus leaving his ears unplugged so that he also gets some benefits from the siren song).
+
+### Forcing the optimal course of action: lay-by
+
+Suppose a quasi-hyperbolic discounting agent with discount factors $\beta=1/2$  and $\delta=1$ wants a new jacket for work. They need to save for three months to purchase the jacket. But each month they save they forgo consumption that would boost their utility.
+
+They receive the following payoffs for each action:
+
+|       | t=0 | t=1 | t=2 |
+|-------|:---:|:---:|:---:|
+| Save  |  0  |  0  | 45  |
+| Spend | 10  | 10  | 10  |
+
+First, consider what a naive quasi-hyperbolic discounting agent chooses.
+
+At $t=0$, they calculate the discounted utility of each option.
+
+```{=tex}
+\begin{align*}
+U_0(\text{Save})&=0+\beta\delta \times 0+\beta\delta^2\times 45 \\[6pt]
+&=0.5\times 45 \\[6pt]
+&=22.5 \\[6pt]
+\\[6pt]
+U_0(\text{Spend})&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\[6pt]
+&=10+0.5\times 10+0.5\times 10 \\[6pt]
+&=20
+\end{align*}
+```
+
+At $t=0$, $U_0(\text{Save})>U_0(\text{Spend})$. The agent plans to save for the jacket.
+
+One month now passes. The agent has saved for a month. They could now spend their savings from last month and this month, giving a short-term boost, or keep saving for their jacket. The payoffs for each action are:
+
+|                         | t=1 | t=2 |
+|-------------------------|:---:|:---:|
+| Save                    |  0  | 45  |
+| Start spending at $t=1$ | 20  | 10  |
+
+Again, the naive agent calculates the discounted utility of each option.
+
+```{=tex}
+\begin{align*}
+U_1(\text{Save})&=0+\beta\delta\times 45 \\[6pt]
+&=0.5\times 45 \\[6pt]
+&=22.5 \\[6pt]
+\\[6pt]
+U_1(\text{Start spending at t=1})&=20+\beta\delta \times 10 \\[6pt]
+&=20+0.5\times 10 \\[6pt]
+&=25
+\end{align*}
+```
+
+At $t=1$ spending now has the highest discounted utility. After saving for the first period, the agent spends despite initially wanting to save.
+
+Now let's consider this problem from the point of view of a sophisticated present-biased agent. They see their full choice set as:
+
+|                       | t=0 | t=1 | t=2 |
+|-----------------------|:---:|:---:|:---:|
+| Save                  |  0  |  0  | 45  |
+| Start spending at t=1 |  0  | 20  | 10  |
+| Spend                 | 10  | 10  | 10  |
+
+The sophisticated agent works backward through time. At $t=2$, if they have saved, the agent will buy the jacket. Otherwise, the agent will spend.
+
+The discounted utility of the options at $t=1$ is as follows:
+
+```{=tex}
+\begin{align*}
+U_1(\text{Save})&=0+\beta\delta\times 45 \\[6pt]
+&=0.5\times 45 \\[6pt]
+&=22.5 \\[6pt]
+\\[6pt]
+U_1(\text{Start spending at }t=1)&=20+\beta\delta \times 10 \\[6pt]
+&=20+0.5\times 10 \\[6pt]
+&=25
+\end{align*}
+```
+
+As $U_1(\text{Start spending at }t=1)>U_1(\text{Save})$, the sophisticated agent would spend.
+
+The sophisticated agent now knows that saving for the jacket is not available to them as they will spend at $t=1$ regardless of their initial action. There was no need to consider the option to start spending at $t=0$ as if they had spent then there is no other choice at $t=1$.
+
+The sophisticated agent now chooses between the two feasible options at $t=0$:
+
+```{=tex}
+\begin{align*}
+U_0(\text{Start spending at }t=1)&=0+\beta\delta \times 20+\beta\delta^2\times 10 \\[6pt]
+&=0.5\times 20+0.5\times 10 \\[6pt]
+&=15 \\[6pt]
+\\[6pt]
+U_0(\text{Spend})&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\[6pt]
+&=10+0.5\times 10+0.5\times 10 \\[6pt]
+&=20
+\end{align*}
+```
+
+As $U_0(\text{Spend})<U_0(\text{Start spending at }t=1)$, they start to spend at $t=0$. Contrast this with the naïve agent who chooses Save at $t=0$.
+
+Now consider what the sophisticated agent may do in the presence of lay-by. Lay-by involves paying a deposit and administrative fee toward the purchase of a product. You receive your purchase when you make payment in full later.
+
+For payment of an administrative fee equivalent to 1 unit of utility and an initial deposit (the agent's savings in $t=0$), the agent can reserve the jacket, preventing them from spending that money at $t=2$. The new set of options is:
+
+|                       | t=0 | t=1 | t=2 |
+|-----------------------|:---:|:---:|:---:|
+| Save                  |  0  |  0  | 45  |
+| Start spending at t=1 |  0  | 20  | 10  |
+| Spend                 | 10  | 10  | 10  |
+| Lay-by                | -1  |  0  | 45  |
+
+The lay-by option is strictly worse than Save. But what happens if lay-by is available to the sophisticated present-biased agent?
+
+Again, working backward, at $t=2$, the agent buys the jacket if they have saved and otherwise spends.
+
+At $t=1$, by the same logic we looked at previously, they spend if they can do so. That eliminates Save from their choice set.
+
+At $t=0$, they now compare the feasible options:
+
+```{=tex}
+\begin{align*}
+U_0(\text{Start spending at }t=1)&=0+\beta\delta \times 20+\beta\delta^2\times 10 \\[6pt]
+&=0.5\times 20+0.5\times 10 \\[6pt]
+&=15 \\[6pt]
+\\[6pt]
+U_0(\text{Spend})&=10+\beta\delta \times 10+\beta\delta^2\times 10 \\[6pt]
+&=10+0.5\times 10+0.5\times 10 \\[6pt]
+&=20 \\[6pt]
+\\[6pt]
+U_0(\text{Lay-by})&=-1+\beta\delta \times 0+\beta\delta^2\times 45 \\[6pt]
+&=-1+0.5\times 0+0.5\times 45 \\[6pt]
+&=21.5
+\end{align*}
+```
+
+As $U_0(\text{Lay-by})>U_0(\text{Spend})>U_0(\text{Start spending at }t=1)$, lay-by is the preferred option at $t=0$. As it binds the agent in the future, they can stick to this plan.
+
+Note that lay-by is strictly worse than Save as the agent must pay the administrative fee. But the sophisticated quasi-hyperbolic discounting agent chooses it as the only feasible way to get their jacket. Without lay-by they know they will start spending at $t=1$ and end up with lower utility from the perspective of their $t=0$ self.
+
+### Depressing the value of the bad course of action
+
+[stickK](https://www.stickk.com) is a online platform that enables people to commit to future courses of action. stickK works as follows:
+
+First, you state a time-based goal, such as not smoking during the next month, losing 5kg over the next 90 days, or writing the next chapter of your PhD thesis by Christmas.
+
+Second, you commit a stake that will be paid to a charity (or an anti-charity) if you fail to meet your goal.
+
+At the stated time, you then report (or a referee appointed by you reports) whether you have met your goal. If you fail to report or report that you failed to meet your goal, your credit card is debited by the staked amount.
+
+![](img/stickk.jpg)
+
+I used stickK during my PhD. I regularly set deadlines for tasks and staked, say, a payment of \$500 to the National Rifle Association. If I didn't complete the task, I lost the money. Throughout the PhD, I met my benchmarks every time except for one. 
+
+To understand how stickK works in the context of the $\beta\delta$ model, consider a sophisticated present-biased agent who is weighing the enjoyment they get from smoking versus the long-term health effects.
+
+This sophisticated present-biased agent has $\beta=1/2$ and $\delta=1$. They enjoy smoking, which gives them utility of 5. However, the agent also likes being healthy. Higher health gives utility of 8.
+
+At $t=0$ the agent is deciding whether to smoke over the next month ($t=1$). If the agent doesn't smoke, they will have better health at $t=2$.
+
+The sophisticated agent works backward through time. At $t=1$ its payoffs are:
+
+```{=tex}
+\begin{align*}
+U_1(\text{smoking})&=5 \\
+\\
+U_1(\text{healthy})&=\beta\delta\times 8 \\
+&=4
+\end{align*}
+```
+The agent decides to smoke.
+
+As a result, at $t=0$, knowing that it will cave at $t=1$, the agent doesn't bother committing to not smoking, even though from the perspective of $t=0$ refraining from smoking is the better option:
+
+```{=tex}
+\begin{align*}
+U_0(\text{smoking})&=\beta\delta\times 5 \\[6pt]
+&=2.5 \\[6pt]
+\\[6pt]
+U_0(\text{healthy})&=\beta\delta^2\times 8 \\[6pt]
+&=4
+\end{align*}
+```
+
+But now suppose the agent learns about stickK. The agent has the option of staking a sum at $t=0$ to prevent it from smoking. The agent decides to stake an amount equivalent to utility 5 that would be incurred at $t=2$.
+
+Working backward through time, the agent knows that at $t=1$ if it has not staked any money with stickK, it will smoke. But what if it has?
+
+```{=tex}
+\begin{align*}
+U_1(\text{stickK+smoking})&=u(\text{smoking})+\beta\delta\times u(\text{lost stake}) \\[6pt]
+&=5+\beta\delta\times (-5) \\[6pt]
+&=2.5 \\[6pt]
+\\[6pt]
+U_1(\text{stickK+healthy})&=\beta\delta\times u(\text{healthy}) \\[6pt]
+&=\beta\delta\times 8 \\[6pt]
+&=4
+\end{align*}
+```
+
+The agent would refrain from smoking at $t=1$ due to the penalty they would have to pay.
+
+This means the agent's options at $t=0$ are effectively a comparison between smoking and using stickK to commit to not smoking. The discounted utility of each option is as follows.
+
+```{=tex}
+\begin{align*}
+U_0(\text{smoking})&=\beta\delta\times u(\text{smoking}) \\[6pt]
+&=\beta\delta\times 5 \\[6pt]
+&=2.5 \\[6pt]
+\\[6pt]
+U_0(\text{stickK+healthy})&=\beta\delta^2\times u(\text{healthy}) \\[6pt]
+&=\beta\delta^2\times 8 \\[6pt]
+&=4
+\end{align*}
+```
+
+As $U_0(\text{stickK+healthy})>U_0(\text{smoking})$, the agent chooses to commit using stickK.
+
+One interesting feature of these two options at $t=0$ is that the penalty does not appear in either calculation of the discounted utility. We have already calculated that if the penalty is present at $t=1$, the agent will not smoke. So when they consider their options at $t=1$, there is no cost to committing.
+
+For any problem of this form, the agent could always successfully use stickK to commit to any action. The agent just needs to make the stake high enough.
+
+### Increasing the value of the optimal action: temptation bundling
+
+“Temptation bundling” involves increasing the value of the optimal course of action by adding a temptation to that course.
+
+Consider the following example.
+
+Beth has the choice between exercising and watching television today at $t=0$.
+
+- Beth does not enjoy exercise, which gives utility of 0. However, exercise leads her to be healthy, giving utility of 12 in the future at $t=1$.
+
+- Beth enjoys watching television, which gives utility of 6. However, watching television leads her to be unhealthy with utility of 0 in the future at $t=1$. 
+
+Beth is sophisticated and discounts the future quasi-hyperbolically. Beth’s $\beta=1/2$ and her $\delta=2/3$. Does Beth exercise? 
+
+Beth works through the options by backward induction. At $t=1$ there is no choice to be made, as Beth simply enjoys the utility of the action she chose at $t=0$.
+
+For $t=0$ she calculates the discounted utility of each option as follows:
+
+```{=tex}
+\begin{align*}
+U_0(\text{exercise})&=u(\text{exercise})+\beta\delta u(\text{healthy}) \\[6pt]
+&=0+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
+&=4 \\[6pt]
+\\[6pt]
+U_0(\text{television})&=u(\text{television})+\beta\delta u(\text{unhealthy}) \\[6pt]
+&=6+\frac{1}{2}\times \frac{2}{3}\times 0 \\[6pt]
+&=6
+\end{align*}
+```
+
+Beth chooses to watch television.
+
+But what if Beth loved massages and remembers she has a massage voucher she has been saving? What if she decides that if she exercises today, she will go for a massage straight after? Let us assume that the utility of a massage is 3.
+
+The discounted utility of exercising is now:
+
+```{=tex}
+\begin{align*}
+U_0(\text{exercise+massage})&=u(\text{exercise})+u(\text{massage})\\[6pt]
+&\qquad+\beta\delta u(\text{healthy}) \\[6pt]
+&=3+\frac{1}{2}\times \frac{2}{3}\times 12 \\[6pt]
+&=7
+\end{align*}
+```
+
+$U_0(\text{exercise+massage})>U_0(\text{television})$, so Beth now chooses to exercise.
+
+This example is not strictly a commitment device as Beth could cheat. Beth could watch television and get the massage. But people are often good at creating “mental accounts” by which they make certain money or activities out-of-bounds unless certain conditions are met.
+
+### Gym attendance
+
+One empirical illustration of temptation bundling comes from an experiment to increase gym attendance.
+
+@kirgios2020 found that teaching gym-goers how to temptation bundle with a free audiobook boosts gym visits. Simply receiving a free audiobook with no explicit instruction boosts exercise, implying that people who are given audiobooks by gyms can infer they should temptation bundle. However, teaching temptation bundling modestly outperforms simply giving gym-goers free audiobooks.

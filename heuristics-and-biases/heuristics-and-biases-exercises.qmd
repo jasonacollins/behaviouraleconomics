@@ -1,0 +1,318 @@
+---
+engine: knitr #added as otherwise inline r code does not execute
+---
+# Heuristics and biases exercises
+
+## Detecting a terrorist
+
+Every month 100 million people fly on commercial airlines. Imagine 10 of them are terrorists.
+
+Airport security are able to correctly identify that a person is a terrorist in 99% of cases and a non-terrorist in 99.9% of cases.
+
+a\) Intuitive responses to questions of this type tend to involve much higher probabilities. Discuss how intuitive responses could err due to confusion of conditional probabilities.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+If a person confuses $P(\text{terrorist | identified})$ with $P(\text{identified | terrorist})$ they will wrongly assume the probability that someone identified as a terrorist is a terrorist is 99%. This is a common explanation for mistakes of this nature: e.g. identification of cabs problem discussed in @sec-cab_problem.
+:::
+
+b\) State and solve the question in part a) in terms of natural frequencies.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Number of passengers: 100,000,000
+
+Number of terrorists: 10
+
+Number of terrorists identified as terrorists: $10\times 0.999 \approx 10$
+
+Number of non-terrorists identified as terrorists: $0.001\times 100,000,000=100,000$
+
+Proportion of people identified as terrorists who are terrorists = $10/(10+100000) \approx 1 \text{ in } 10000$
+:::
+
+## A fire alarm
+
+You know the following statistics about fire:
+
+-   The probability of your house catching fire on any particular day is 1 in 10,000
+
+-   Your fire alarm correctly detects a house fire 95\% of the time
+
+-   The probability that your fire alarm sounds on a day when there is no fire (a false alarm) is 1 in 100.
+
+a\) Your alarm goes off. What is the probability that your house is on fire?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+```{=tex}
+\begin{align*}
+P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[12pt]
+&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm}|\text{fire})P(\text{fire})+P(\text{alarm}|\neg\text{fire})P(\neg\text{fire})} \\[12pt]
+&=\frac{0.95\times 0.0001}{0.95\times 0.0001+0.01\times 0.9999} \\[12pt]
+&=`r PFA<-(0.95*0.0001)/(0.95*0.0001+0.01*0.9999); round(PFA, 4)`
+\end{align*}
+```
+
+The probability of a fire if the alarm goes off is `r round(PFA*100, 2)`%.
+:::
+
+b\) Many people given this problem estimate the probability of the house being on fire as close to 95\%. Provide one possible explanation for this error.
+
+::: {.callout-tip collapse="true"}
+## Answer
+People often confuse $P(A|B)$ with $P(B|A)$. In this case, such confusion would lead them to conclude that $P(\text{fire}|\text{alarm})=P(\text{alarm}|\text{fire})=95\%$. You might also think of this as anchoring on the 95\% and insufficiently adjusting from there.
+
+Alternatively, people sometimes act as though they have assumed uniform priors: e.g. 50:50 as to whether a fire or not.
+
+In that case:
+
+```{=tex}
+\begin{align*}
+P(\text{fire}|\text{alarm})&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm})} \\[12pt]
+&=\frac{P(\text{alarm}|\text{fire})P(\text{fire})}{P(\text{alarm}|\text{fire})P(\text{fire})+P(\text{alarm}|\neg\text{fire})P(\neg\text{fire})} \\[12pt]
+&=\frac{0.95\times 0.5}{0.95\times 0.5+0.01\times 0.5} \\[12pt]
+&=`r PFA2<-(0.95*0.5)/(0.95*0.5+0.01*0.5); round(PFA2, 4)`
+\end{align*}
+```
+:::
+
+c\) Express and solve this problem using natural frequencies.
+
+::: {.callout-tip collapse="true"}
+## Answer
+-   Your house will catch fire on 100 out of 1,000,000 days. (You could choose any base number of days - I chose 1 million as gives round numbers for the following items.)
+
+-   Your fire alarm will correctly detect a house fire on 95 of those days.
+
+-   You will have a false alarm on 9,999 out of the 999,900 days without fire.
+
+```{=tex}
+\begin{align*}
+P(\text{fire}|\text{alarm})&=\frac{95}{95+9999} \\[12pt]
+&=`r round(95/(95+9999), 4)`
+\end{align*}
+```
+:::
+
+## The law of small numbers
+
+Lincoln observes performance by fund manager Neville. Neville may be a skilled, mediocre or unskilled manager:
+
+- A skilled fund manager has a 75% chance of beating the market each quarter.
+
+- A mediocre fund manager has a 50% chance of beating the market each quarter.
+
+- An unskilled fund manager has a 25% chance of beating the market each quarter.
+
+Lincoln knows these odds.
+
+The performance of a fund manager is independent from quarter to quarter.
+
+Consider the model we used to examine behaviour involving a belief in the law of small numbers whereby the decision maker acts as though the process has the character of balls being drawn out of an urn without replacement. Lincoln develops his beliefs using this model with $N = 12$. 
+
+a\) Lincoln thinks Neville is mediocre. What does Lincoln believe is the probability that Neville beats the market in the first quarter?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Lincoln thinks the realisation of Neville's performance is like drawing from an urn with $N=12$ balls. Because he believes Neville is mediocre, he thinks half (6) of the balls are good-performance balls and half (6) are bad-performance balls. The likelihood of drawing a good ball ($G$) the first quarter is 6/12.
+
+\begin{align*}
+\hat P(G)&=\frac{G}{N} \\[12pt]
+&=\frac{6}{12} \\[12pt]
+&=0.5
+\end{align*}
+:::
+
+b\) Neville beats the market in the first quarter. What does Lincoln believe is the probability he does it again in the second quarter?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+In Lincoln's mind, the balls are not replaced once drawn. If Neville has a good first quarter, Lincoln believes that only five good balls remain. Therefore, Lincoln believes that the probability of Neville having a good second quarter is 5/11.
+
+\begin{align*}
+\hat P(GG|G)&=\frac{G-1}{N-1} \\[12pt]
+&=\frac{5}{11}
+\end{align*}
+:::
+
+c\) Neville beats the market again. What does Lincoln believe is the probability that he will do so in the third quarter?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+After two good quarters, Lincoln believes only four good balls remain. Therefore, the probability of Neville having another good quarter is 4/10. 
+
+\begin{align*}
+\hat P(GGG|GG)&=\frac{G-2}{N-2} \\[12pt]
+&=\frac{4}{10}
+\end{align*}
+:::
+
+d\) Lincoln observes Jill, who he believes is a skilled fund manager. What does Lincoln believe is the probability of her having 10 consecutive periods of out-performance?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Lincoln believes that in 12 quarters Jill will have nine quarters of out-performance. As a result, he does not believe it is possible for her to have ten consecutive periods of out-performance. After nine periods, only three balls are left in the urn. None of those balls are good. 
+
+\begin{align*}
+\hat P(GGGGGGGGGG|GGGGGGGGG)&=\frac{G-9}{N-9} \\[12pt]
+&=\frac{0}{3} \\[12pt]
+&=0
+\end{align*}
+:::
+
+e\) What psychological bias does Lincoln's behaviour reflect? Explain.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Each time Neville has a good quarter, Lincoln thinks it is less likely that Neville will have another. This is an example of gambler's fallacy. Lincoln thinks that Neville's sequence of performances should be the typical sequence of a mediocre fund manager, with the same number of good and bad quarters. This leads Lincoln to expect bad quarters to be more likely after a sequence of good quarters.
+
+Similarly for Jill, Lincoln expects a string of success to correct itself and her record to revert to the average for a skilled manager.
+:::
+
+## Heuristics
+
+For each of the following experiments from Tverksy and Kahneman (1974), explain what heuristic may be leading to the belief or decision.
+
+a\) Tverksy and Kahneman (1974) write:
+
+>Subjects were shown brief personality descriptions of several individuals, allegedly sampled at random from a group of 100 professionals-engineers and lawyers. The subjects were asked to assess, for each description, the probability that it belonged to an engineer rather than to a lawyer. In one experimental condition, subjects were told that the group from which the descriptions had been drawn consisted of 70 engineers and 30 lawyers. In another condition, subjects were told that the group consisted of 30 engineers and 70 lawyers. The odds that any particular description belongs to an engineer rather than to a lawyer should be higher in the first condition, where there is a majority of engineers, than in the second condition, where there is a majority of lawyers. Specifically, it can be shown by applying Bayes' rule that the ratio of these odds should be ($.7/.3^2$), or 5.44, for each description. In a sharp violation of Bayes' rule, the subjects in the two conditions produced essentially the same probability judgments.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:
+
+>[S]ubjects evaluated the likelihood that a particular description belonged to an engineer rather than to a lawyer, by the degree to which this description was representative of the two stereotypes, with little or no regard for the prior probabilities of the categories.
+>
+>The subjects used prior probabilities correctly when they had no other information. In the absence of a personality sketch, they judged the probability that an unknown individual is an engineer to be .7 and .3, respectively, in the two base-rate conditions. However, prior probabilities were effectively ignored when a description was introduced, even when this description was totally uninformative.
+:::
+
+b\) Tverksy and Kahneman (1974) write:
+
+>Suppose one samples a word (of three letters or more) at random from an English text. Is it more likely that the word starts with r or that r is the third letter? ... [M]ost people judge words that begin with a given consonant to be more numerous than words in which the same consonant appears in the third position. They do so even for consonants, such as r or k, that are more frequent in the third position than in the first.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+This behaviour might be explained by availability. Tverksy and Kahneman (1974) write:
+
+>People approach this problem by recalling words that begin with r (road) and words that have r in the third position (car) and assess the relative frequency by the ease with which words of the two types come to mind. Because it is much easier to search for words by their first letter than by their third letter, most people judge words that begin with a given consonant to be more numerous than words in which the same consonant appears in the third position.
+:::
+
+c\) Tverksy and Kahneman (1974) write:
+
+>Two groups of high school students estimated, within 5 seconds, a numerical expression that was written on the blackboard. One group estimated the product
+>
+>$$8\times 7\times 6\times 5\times 4\times 3\times 2\times 1$$
+>
+while another group estimated the product
+>
+>$$1\times 2\times 3\times 4\times 5\times 6\times 7\times 8$$
+>
+>...
+>
+>The median estimate for the ascending sequence was 512, while the median estimate for the descending sequence was 2,250. The correct answer is 40,320.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+This behaviour might be explained by anchoring and adjustment. Tverksy and Kahneman (1974) write:
+
+>To rapidly answer such questions, people may perform a few steps of computation and estimate the product by extrapolation or adjustment. Because adjustments are typically insufficient, this procedure should lead to underestimation. Furthermore, because the result of the first few steps of multiplication (performed from left to right) is higher in the descending sequence than in the ascending sequence, the former expression should be judged larger than the latter.
+:::
+
+d\) Tverksy and Kahneman (1974) write:
+
+>In considering tosses of a coin for heads or tails ... people regard the sequence H-T-H-T-T-H to be more likely than the sequence H-H-H-T-T-T ... [or] ... the sequence H-H-H-H-T-H.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+This behaviour might be explained by representativeness. Tverksy and Kahneman (1974) write:
+
+>People expect that a sequence of events generated by a random process will represent the essential characteristics of that process even when the sequence is short. ...
+>
+>[P]eople expect that the essential characteristics of the process will be represented, not only globally in the entire sequence, but also locally in each of its parts. A locally representative sequence, however, deviates systematically from chance expectation: it contains too many alternations and too few runs. Another consequence of the belief in local representativeness is the well-known gambler's fallacy. After observing a long run of red on the roulette wheel. for example, most people erroneously believe that black is now due, presumably because the occurrence of black will result in a more representative sequence than the occurrence of an additional red.
+:::
+
+## Overconfidence
+
+Consider the following three statements. Suppose that each statement is an instance of overconfidence. For each statement name and define the form of overconfidence that provides the best explanation for the students' beliefs.
+
+a\) 90% of students believe they will score above the class average in the final exam.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Overplacement.
+
+Overplacement is the erroneous relative judgement that we are better than others.
+:::
+
+
+b\) 90% of students believe they will receive a high distinction.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Overestimation.
+
+Overestimation is the belief that we can perform at a level beyond that which we realistically can.
+:::
+
+c\) Arthur believes with 90% probability that he will score between 74% and 76% in the final exam.
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+Overprecision.
+
+Overprecision is the tendency to believe that our predictions or estimates are more accurate than they actually are. 
+:::
+
+## Lethal events
+
+When people are asked the frequency of lethal events, they are often inaccurate. The following table lists those events most subject to under- or over-estimation of the frequency.
+
++-------------------------+---------------------+
+| Most overestimated      | Most underestimated |
++:=======================:+:===================:+
+| All accidents           | Diabetes            |
+|                         |                     |
+| Motor vehicle accidents | Stomach cancer      |
+|                         |                     |
+| Tornadoes               | Stroke              |
+|                         |                     |
+| Flood                   | Tuberculosis        |
+|                         |                     |
+| All cancer              | Asthma              |
+|                         |                     |
+| Fire and flames         | Emphysema           |
+|                         |                     |
+| Venomous bite or sting  |                     |
+|                         |                     |
+| Homicide                |                     |
++-------------------------+---------------------+
+
+What heuristic could lead to this pattern of overestimation and underestimation? Why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+The most overestimated events tend to be vivid events that are often the subject of news. The most underestimated are much less vivid and likely receive less coverage.
+
+This pattern could be driven by the availability heuristic. When using the availability heuristic, people judge the frequency of events by the ease with which instances of those events come to mind.
+
+When asked to estimate the frequency of vivid events often in the news, instances of those events will easily come to mind. The availability heuristic will lead these events to be judged more probable.
+
+Conversely, people will find it harder to call to mind those events which are less vivid and newsworthy, leading them to judge those events as being less frequent.
+:::

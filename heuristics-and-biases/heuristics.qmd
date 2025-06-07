@@ -1,0 +1,125 @@
+# Heuristics
+
+## Summary {.unnumbered}
+
+- Heuristics are mental shortcuts or rules of thumb people use to make decisions. They often involve limited information and simpler computation than full optimization.
+- The representativeness heuristic involves judging the probability of an event or category membership based on how similar it is to a prototype or stereotype, often neglecting relevant base rates.
+- The availability heuristic leads people to estimate frequency or probability based on how easily examples come to mind, which can be influenced by factors like recency or vividness.
+- Anchoring and adjustment is a process where people start with an initial value (anchor) and adjust insufficiently from it, even when the anchor is arbitrary or irrelevant, leading to biased estimates.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/632jOFN1ua0 >}}
+
+---
+
+:::
+
+## Introduction
+
+Heuristics are mental shortcuts or rules of thumb that people use to make decisions. They differ from optimisation in that they typically involve a limited information set and a more computationally tractable decision method.
+
+An example of a heuristic is the recognition heuristic. Under this heuristic, if one of two objects is recognised, infer that the recognised object is more likely to be the target object. For example, if you want to predict which of two players will win a tennis match, and you know of only one of the two players, infer that the player you know will win. Similarly, if judging the relative size of two cities, of which you have heard of only one, infer that the city you have heard of is larger.
+
+There is substantial evidence that people use heuristics. People don't normally calculate conditional probabilities using Bayes' rule. Instead, the heuristics might approximate Bayes rule under certain conditions.
+
+Heuristics are often accurate and tractable, but in some environments can lead to error.
+
+Tversky and Kahneman [-@tversky1974] defined three now classic heuristics: representativeness, availability and anchoring.
+
+I will illustrate these three and then discuss a series of biases in probability judgment for which these heuristics may provide an explanation.
+
+## Representativeness heuristic
+
+Suppose you wish to estimate the probability that an event or person belongs to a certain class.
+
+-   "What is the probability that event $A$ belongs to class $B$?"
+
+-   "What is the probability that process $B$ will generate event $A$?"
+
+Under the representativeness heuristic, people evaluate probabilities by the degree to which $A$ is representative of (similar to) $B$.
+
+Tversky and Kahneman [-@tversky1974] provide the following example:
+
+> [C]onsider an individual who has been described by a former neighbor as follows:
+>
+> "Steve is very shy and withdrawn, invariably helpful, but with little interest in people, or in the world of reality. A meek and tidy soul, he has a need for order and structure, and a passion for detail."
+>
+> How do people assess the probability that Steve is engaged in a particular occupation from a list of possibilities (for example, farmer, salesman, airline pilot, librarian, or physician)? How do people order these occupations from most to least likely? In the representativeness heuristic, the probability that Steve is a Iibrarian, for example, is assessed by the degree to which he is representative of, or similar to, the stereotype of a librarian. Indeed, research with problems of this type has shown that people order the occupations by probability and by similarity in exactly the same way.
+
+## Availability heuristic
+
+Under the availability heuristic, people assess the frequency of a class or the probability of an event by the ease with which they can recall instances or occurrences. If an event is more “available”, it is judged to have a higher frequency or probability.
+
+For example, if assessing the probability of a heart attack, you might recall occurrences among people you know. If you are assessing the probability of shark attack, you might recall how often you hear of attacks on the news.
+
+In one experiment, @tversky1974 gave experimental subjects lists of names. In some lists, the men were more famous than the women, and in other lists, vice versa. After viewing the list, they were asked whether the list had more men or women.
+
+For each list, the subjects judged that the sex with more famous names was more common. Those names were more available in their minds.
+
+## Anchoring and adjustment
+
+When using anchoring and adjustment, people estimate by starting from an initial value and adjust from that value to obtain the final estimate.
+
+Suppose you know the odds of outcome $A$, and want to estimate the odds of outcome $B$.  Anchoring and adjustment implies that you will start with the odds of outcome $A$ and adjust to obtain the odds of outcome $B$.
+
+The accuracy of anchoring and adjustment depends on the anchor's quality and the size of the adjustment from the anchor.
+
+The quality of the anchor relates to the strength of the correlation between the anchor and the quantity being estimated. Empirically, people tend to use weak or irrelevant anchors.
+
+The size of the adjustment then needs to account for the relationship between the anchor and the quantity being estimated. Empirically, observed adjustments from the anchor are too small.
+
+As an example, Tversky and Kahneman [-@tversky1974] asked subjects to estimate the percentage of African countries in the United Nations.
+
+A number between 0 and 100 was determined by spinning a wheel in the subjects' presence. The subjects were instructed to indicate first whether that number was higher or lower than the estimated percentage, and then to estimate the value of the quantity by moving upward or downward from the given number.
+
+Different groups were given different numbers from the wheel. These arbitrary numbers had a marked effect on estimates. The median estimates of the percentage of African countries in the United Nations were 25 and 45 for groups that received numbers 10 and 65 from the wheel, respectively.
+
+Payoffs for accuracy did not reduce the effect of the anchor.
+
+## Heuristics examples
+
+### A used car
+
+You are shopping for a used car. You see a car you like and ask the salesperson how much it costs.
+
+She says "one hundred thousand dollars". You know this number is too high, and after some negotiation, purchase the car for $20,000. You feel pleased with your negotiation skills.
+
+You later see a similar car for sale for $15,000.
+
+What heuristic could lead to your pattern of behaviour?
+
+This pattern of behaviour could be caused by anchoring and adjustment. 
+
+When using anchoring and adjustment, people estimate by starting from an initial value and adjust from that value to obtain the final estimate. Empirically, people tend to use weak or irrelevant anchors and make insufficient adjustments from the anchor.
+
+When the car dealer stated the high price, this acted as an anchor, even though you knew it was too high. You used a weak anchor.
+
+That you ultimately purchased the car for too much suggests you insufficiently adjusted for that weak anchor.
+
+### A wealthy person
+
+You see a person who drives a luxury car and wears designer clothes. You decide they must be wealthy, even though you have no other information about this person.  
+
+a\) What heuristic could lead to this belief?
+
+The representativeness heuristic could cause this belief.
+
+Under the representativeness heuristic, people evaluate probabilities by the degree to which $A$ is representative of (similar to) $B$.
+
+In this case, a person driving a luxury car and wearing designer clothes is highly representative of a wealthy person. You place a high probability on them being wealthy.
+
+b\) Explain how using this heuristic would differ from using Bayes' rule in this situation.
+
+Under Bayes' rule, the probability that someone is wealthy is a function of:
+
+-  the probability that any particular person in the population is wealthy (the base rate that forms your prior probability)
+-  the probability that a wealthy person will drive a luxury car and wear designer clothes
+-  the probability that a non-wealthy person will drive a luxury car and wear designer clothes.
+
+They take that prior probability and update it based on the evidence they have observed.
+
+Bayes' rule differs from that under the representativeness heuristic in that it considers the population's base rate. What proportion of people are wealthy? The representativeness heuristic does not. The representativeness heuristic is largely based on the probability that a wealthy person will drive a luxury car and wear designer clothes relative to a non-wealthy person - that is, how representative clothing and cars are of wealth.
+

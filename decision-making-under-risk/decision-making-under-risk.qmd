@@ -1,0 +1,29 @@
+# Decision making under risk
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/CR7i1VvLiAU >}}
+
+---
+
+:::
+
+On leaving university, you receive two job offers.
+
+The first is from an established company offering a guaranteed salary of \$150,000.
+
+The second is from a promising startup offering a base salary of \$100,000, plus stock options that will be worth either \$300,000 or nothing, with equal probability.
+
+Despite the potential for a large windfall, many people would choose the established company's lower but guaranteed amount. This common preference reveals something fundamental about how people make decisions under risk.
+
+In this part, I examine the basic frameworks by which economists analyse such decisions under risk. I will explore questions such as:
+
+- How do people evaluate risky choices?
+- How can we mathematically model risk preferences?
+- Where do standard economic models fail in predicting decisions under risk?
+
+I begin by setting out some mathematical foundations, including the concept of expected value. I then lay out the axioms that underlie Expected Utility Theory, the classical economic framework for analysing decisions under risk. Expected utility theory suggests people maximize their expected utility rather than expected value, helping explain phenomena like risk aversion.
+
+However, research has identified anomalies where people's choices systematically deviate from Expected Utility Theory's predictions. We'll examine several anomalies, including the Allais Paradox, where people make inconsistent choices between pairs of gambles. We will look at how framing and reference points affect risk preferences. We will also see cases where small-stakes risk aversion implies implausibly extreme large-stakes risk aversion
+
+Understanding the insights and limitations of Expected Utility Theory provides a foundation for us to later examine alternative theories from behavioural economics to explain decision making under risk.

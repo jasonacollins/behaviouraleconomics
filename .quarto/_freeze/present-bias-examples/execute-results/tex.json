@@ -1,0 +1,20 @@
+{
+  "hash": "4adbde31d316aa808109166008b2329b",
+  "result": {
+    "markdown": "# Present bias examples\n\n## Example 1\n\nChoice 1: Would you like \\$100 today or \\$110 next week? \n\nChoice 2: Would you like \\$100 next week or \\$110 in two weeks? \n\n### The exponential discounter\n\nSuppose we have an exponential discounter with $\\delta=0.95$ and utility each period of $U(x_n)=x_n$.\n\nChoice 1:  Would this agent prefer \\$100 today ($t=0$) or \\$110 next week ($t=1$)?\n\nWe have already worked through this problem and determined that an exponential discounter will prefer to receive \\$110 next week.\n\nChoice 2: Would this agent prefer \\$100 next week ($t=1$) or \\$110 in two weeks ($t=2$)? \n\nSimilarly, we previously determined that the exponential discounter will prefer to receive \\$110 in two weeks. The set of decisions across Choice 1 and Choice 2 are time consistent.\n\n### The present-biased agent\n\nSuppose we have a present biased agent with $\\delta=0.95$, $\\beta=0.95$ and utility each period of $U(x_n)=x_n$.\n\nChoice 1: Would this agent prefer \\$100 today ($t=0$) or \\$110 next week ($t=1$)? \n\n\\begin{align*}\nU_0(0,\\$100)&=u(\\$100)\\\\\n&-100\n\\end{align*}\n\n\\begin{align*}\nU_0(1,\\$110)&=\\beta\\delta u(\\$110) \\\\\n&=0.95*0.95*110 \\\\\n&=99.275\n\\end{align*}\n        \nAs $U_0(0,\\$100) > U_0(1,\\$110)$, the present-biased agent will prefer to receive \\$100 this week.\n\nChoice 2: Would this agent prefer \\$100 next week ($t=1$) or \\$110 in two weeks ($t=2$)? \n\n\\begin{align*}\nU_0(1,\\$100)&=\\beta\\delta u(\\$100) \\\\\n&=0.95*0.95*100 \\\\\n&=90.25\n\\end{align*}\n\n\\begin{align*}\nU_0(2,\\$110)&=\\beta\\delta^2 u(\\$110) \\\\\n&=0.95*0.95^2*110 \\\\\n&=94.31\n\\end{align*}\n\nAs $U_0(1,\\$100) < U_0(2,\\$110)$, the present-biased agent will prefer to receive \\$110 in two weeks.\n\nPutting those two choices together:\n\nChoice 1: The present-biased agent will prefer \\$100 now to \\$110 in one week. Their preference for benefits now ($\\beta$) leads them to prefer the immediate payoff.\n\nChoice 2: The present-biased agent will prefer \\$110 in two weeks to \\$100 in one week. They are willing to wait longer for a larger reward, with both outcomes in the future and subject to the short-term discount ($\\beta$).\n\nConsider what would happen if they selected the \\$110 in two weeks in Choice 2, but after one week were asked if they would like to reconsider their choice. They are effectively being offered Choice 1. This would then lead them to change their mind and take the immediate \\$100.\n\nThis combination of decisions is time inconsistent. The agent’s actions are not consistent with their own initial plan.\n",
+    "supporting": [
+      "present-bias-examples_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

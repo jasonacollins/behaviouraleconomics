@@ -1,0 +1,79 @@
+# Prospect theory implementation
+
+## Summary
+
+- Prospect theory involves two phases: editing and evaluation.
+- The editing phase simplifies prospects through four main operations: coding (as gains or losses), combination (of identical outcomes), segregation (of riskless components), and cancellation (of shared components).
+- In the evaluation phase, prospects are assessed using a formula that combines decision weights applied to probabilities and subjective values of outcomes.
+- Prospect theory results in a fourfold pattern of risk attitudes: risk aversion for high-probability gains and low-probability losses, and risk seeking for low-probability gains and high-probability losses.
+- This pattern explains real-world behaviours such as settlement negotiations in court cases, the attractiveness of lotteries despite typically low expected values, and the purchase of insurance against unlikely events.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/4M9BBjf8cZM >}}
+
+---
+
+:::
+
+## Introduction
+
+Under prospect theory, people assess the weighted value of a prospect in two phases: editing and evaluation.
+
+## Editing
+
+Editing involves simplification of prospects for subsequent evaluation.
+
+@kahneman1979 describe the editing phase as having four main operations: coding, combination, segregation and cancellation.
+
+-   In the coding operation, prospects are coded as gains or losses relative to a reference point.
+
+-   In the combination operation, prospects are simplified by combining probabilities for identical outcomes. For example, (0.25, 200; 0.25, 200; 0.50, 0) will become (0.50, 200; 0.50, 0).
+
+-   During segregation, riskless components are segregated from risky components. For example (0.80, 300; 0.20, 200) corresponds to a sure gain of 200 and the risky gamble (0.80, 100; 0.20, 0).
+
+-   Finally, in cancellation, components that are shared by two prospects are ignored.
+
+## Evaluation
+
+In the evaluation phase, the prospects are evaluated, and the option with the highest weighted value is chosen.
+
+The weighted value of a prospect is made up of:
+
+1\. a decision weight applied to each probability $\pi(p_i)$
+
+2\. the subjective value of each outcome $v(x_i)$
+
+These are applied through the following formula to calculate $V(X)$, the weighted value of the outcomes from gamble $X$.
+
+```{=tex}
+\begin{align*}
+V(X)&=\sum_{i=1}^n\pi(p_i)v(x_i)\\[6pt]
+&=\pi(p_1)v(x_1)+\pi(p_2)v(x_2)+...+\pi(p_n)v(x_n)
+\end{align*}
+```
+
+## Fourfold pattern of risk attitudes
+
+Prospect theory results in a four-fold pattern of risk attitudes, as shown in this table.
+
+|                            | Gains         | Losses        |
+|----------------------------|---------------|---------------|
+| **High probability**       | Risk aversion | Risk seeking  |
+| **Low probability**        | Risk seeking  | Risk aversion |
+
+For high-probability gambles, the reflection effect leads to people being people risk averse in the domain of gains and risk seeking in the domain of losses. For the top left quadrant, the low possibility of missing out on the gain is overweighted, making the gamble less attractive and amplifying the risk-averse behaviour. For the top right quadrant, the low probability of avoiding the loss is also overweighted, amplifying the risk-seeking behaviour we see in the domain of losses.
+
+These top two quadrants can be illustrated by considering an offer to settle a court case.
+
+Imagine one party has a 95% chance of winning a large settlement. The shape of the value function in the gain domain and the certainty effect make a settlement offer attractive. Conversely, the other party overweights their 5% chance of victory and is risk-seeking in the loss domain, making them unlikely to seek settlement unless it is very favourable.
+
+But for low-probability gambles, as in the bottom two quadrants, the probability weighting pushes decisions in the opposite direction to the value function. The possibility of a gain is overweighted, making gambles attractive and inducing risk-seeking behaviour. A similar effect occurs for a low probability of loss, with the overweighted probability making the gamble less attractive, inducing risk-averse behaviour.
+
+The bottom two quadrants can be related to the purchase of insurance and lotteries.
+
+Lotteries involve a small probability of gains. As people overweight that small probability of a win, people will be risk-seeking when considering whether to purchase a lottery despite the gamble being in the gain domain where they are typically risk averse.
+
+Insurance involves a small probability of loss. As people overweight the small probability of a loss, people will be risk-averse when considering whether to purchase insurance despite normally being risk seeking in the loss domain.

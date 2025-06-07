@@ -1,0 +1,64 @@
+# Intertemporal choice
+
+## Summary
+
+- Intertemporal choice involves decisions with costs and benefits occurring at different times, which can be significant due to delayed feedback, irreversibility, and high stakes.
+- A core principle is that people tend to discount future costs and benefits, preferring earlier benefits and later costs.
+- In this subject, discrete time is used, where time occurs in a series of steps, as opposed to continuous time.
+- Streams of payoffs in discrete time can be represented using notation like $S=(t_1,x_1;t_2,x_2;...;t_n,x_n)$, where $t_i$ is the time period and $x_i$ is the payoff in that period.
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/weGUysT2fNE >}}
+
+---
+
+:::
+
+Intertemporal choice refers to decisions involving costs and benefits occurring at different times.
+
+Almost every decision is an intertemporal choice. Intertemporal choices can be important because:
+
+- First, feedback may not be immediate. For example, when will you realise that your retirement savings are inadequate?)
+- Second, your choices may be irreversible. What can you do if you reach retirement age with little savings?
+- And finally, stakes can be large, affecting your health, wealth, family or career.
+
+One of the core principles of intertemporal choice is that people tend to discount future costs and benefits. They prefer to receive benefits earlier, rather than later, and prefer to incur costs later rather than earlier. 
+
+## Discrete versus continuous time
+
+In this subject, we will consider what is called "discrete time". In discrete time, time occurs in a series of steps. For example, we might consider the following sequence of time periods:
+
+$$
+t_0,t_1,t_2,t_3,t_4,t_5,...
+$$
+
+At each discrete moment in time, the agent might make a decision or receive a payoff. We assume that there is no moment between those two steps. For example, if $t=0$ is today and $t=1$ is in one week, we consider only those two moments, not any time between.
+
+Discrete time contrasts with "continuous time", where time is a continuous variable. Time is divisible into an infinite number of steps. For example, if $t=0$ is today and $t=1$ is in one week, there is an infinite number of other points in time between.
+
+## Notation
+
+One way of representing a stream of payoffs in discrete time is the following form:
+
+$$
+S=(t_1,x_1;t_2,x_2;...;t_n,x_n)
+$$
+
+$t_i$ is the period in which the payoff is received. $x_i$ is the payoff received in period $t_i$.
+
+Consider these two simple streams of payoffs.
+
+For both streams, period $t_1=0$, which is now. Period $t_2=1$, which is one year from today.
+
+The first stream is \$100 now and nothing in a year.
+$$
+S_1=(0,\$100;1,0)
+$$
+
+The second stream is nothing today and \$107 in one year.
+$$
+S_2=(0,0;1,\$107)
+$$
+
+Would you prefer $S_1$ or $S_2$?

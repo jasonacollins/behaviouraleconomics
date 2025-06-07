@@ -1,0 +1,25 @@
+# Prospect theory
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/4VBK_-a4x2Q >}}
+
+---
+
+:::
+
+Prospect theory is a descriptive theory of decision-making under risk. It was developed by Daniel Kahneman and Amos Tversky [-@kahneman1979] as a challenge to expected utility theory.
+
+Prospect theory has the following features:
+
+First, it has a value function - that is a function that ascribes a value to each possible outcome. The value function incorporates reference dependence, loss aversion and the reflection effect:
+
+- Reference dependence means that the value of an outcome is judged relative to a reference point.
+- Loss aversion means the value of a loss is greater than the value of an equivalent gain.
+- The reflection effect means that agents are risk-averse in the gain domain and risk-seeking in the loss domain
+
+Second, prospect theory has a probability weighting function, whereby the agent subjectively weights objective probabilities. Small probabilities are weighted relatively more heavily than moderate probabilities. Those weights are then applied to the value of each outcome. 
+
+Prospect theory is an "as if" model of decision-making. People do not perform the calculations implicit in the application of prospect theory. Rather, they act "as if" they are performing those calculations. That makes prospect theory a descriptive theory, not a theory of how people actually make decisions.
+
+The following sections break down each of these elements of prospect theory and explain how they are incorporated in its implementation.

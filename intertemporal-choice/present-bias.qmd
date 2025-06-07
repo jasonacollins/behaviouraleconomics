@@ -1,0 +1,236 @@
+# Present bias
+
+## Summary {.unnumbered}
+
+- Present bias is a concept developed to account for anomalies in the exponential discounting model, where people place additional weight on costs and benefits in the present.
+- The $\beta\delta$ model, also known as quasi-hyperbolic discounting, uses two discount factors: $\beta$ for short-term discounting and $\delta$ for long-term discounting.
+- In the $\beta\delta$ model, all future payoffs are discounted by $\beta\delta$ once, and then by $\delta$ for each additional period of delay, resulting in a larger discount for the first period than subsequent periods.
+- Present bias can lead to time inconsistency, where decisions made at one point may be reversed later if given the opportunity to change.
+- The $\beta\delta$ model maintains assumptions of consumption independence, stationary preferences, and utility independence from the exponential discounting model.
+
+---
+
+::: {.content-visible when-format="html"}
+
+{{< video https://youtu.be/PJ6k0hwAWTA >}}
+
+---
+
+:::
+
+## Introduction
+
+One concept developed to account for anomalies in the exponential discounting model is present bias.
+
+Present bias occurs when we place additional weight on costs and benefits at the present time.
+
+## The $\beta\delta$ (beta-delta) model
+
+One simple model of present bias is the quasi-hyperbolic discounting model, otherwise known as the $\beta\delta$ model. ^[This model is a discrete-time version of hyperbolic discounting.]
+
+Under the quasi-hyperbolic discounting model, two discount factors are applied to future costs and benefits.
+
+The first is $\beta$ (beta), the short-term discount factor. All future payoffs are discounted by a single application of $\beta$, a number between 0 and 1. The discount $\beta$ is applied simply because the payoff is not immediate. The higher the short-term discount factor, the less the agent discounts payoffs that are not received now.
+
+The second is the discount factor $\delta$ that is also present in the exponential discounting model. Each additional period of delay results in a discount of a future cost or benefit by a factor of $\delta$. The discount factor $\delta$ is also a number between 0 and 1. The higher the discount factor, the less the agent discounts future costs and benefits.
+
+As for exponential discounting, an agent with a choice between alternative streams of payoffs under the $\beta\delta$ model will seek to maximize the discounted utility of the future path of consumption.
+
+The following equation provides a mathematical representation of the $\beta\delta$ model, with a stream of costs or benefits $x_0$ through to $x_T$ incurred at periods 0 through to $T$. $U_0$ is the discounted utility of the stream of payoffs at time $t=0$. $x_t$ is the payoff in period $t$.
+
+\begin{align*}
+U_0&=u(x_0)+\beta \delta u(x_1)+\beta \delta^2 u(x_2)+ ... + \beta \delta^T u(x_T) \\[6pt]
+&=u(x_0)+\beta \sum_{t=1}^{t=T}\delta^t u(x_t) \\
+\\
+0&\leq \delta \leq 1 \\
+\\
+0&\leq \beta \leq 1
+\end{align*}
+
+The first period of delay results in a discount of the cost or benefit by a factor of $\beta\delta$. Each further period of delay results in a discount of $\delta$.
+
+As a result, the degree of discounting evolves over time as 1, $\beta\delta$, $\beta\delta^2$, $\beta\delta^3$, $\beta\delta^4$ and so on. This progression results in a larger discount for the first period of delay ($\beta\delta$) than the degree of discount for each subsequent period of delay ($\delta$). There is a relative weighting toward the present.
+
+Present bias of this nature can result in time inconsistency, with decisions at one point reversed at another if the agent is given the opportunity to change their mind.
+
+## Visualising present bias
+
+The following figures illustrate the effect of present bias.
+
+@fig-present-bias-1 plots the size of the discount as a function of $t$ for a present-biased agent with $\beta=0.75$ and $\delta=0.9$. The discount curve for an exponential discounter with $\delta=0.9$ is also plotted. The curve for the present-biased agent has a large drop for the first period of delay. From then on, the discount is proportionally the same as for the exponential discounter.
+
+We can read off the total discount factor at any time $t$ from this chart. For example, the total discount factor for the exponential discounter is $0.9$ at $t=1$, $0.81$ at $t=2$ and $0.43$ at $t=8$. The total discount factor for the present-biased agent is $0.675$ at $t=1$, $0.61$ at $t=2$ and $0.32$ at $t=8$.
+
+```{r}
+#| label: fig-present-bias-1
+#| fig-cap: Exponential versus present bias discount curves
+
+##Load the ggplot2 package
+library(ggplot2)
+library(tidyr)
+
+#Define the agent's discount factors
+agents <- data.frame(
+  agent_id = 1:2,
+  beta = c(1, 0.75),
+  delta = c(0.9, 0.9)
+)
+
+#Define the number of periods
+t <- 0:10
+
+# Define the discount function using agents data frame
+discount <- function(agent_id, t) {
+  beta <- agents$beta[agent_id]
+  delta <- agents$delta[agent_id]
+  ifelse(t==0, 1, beta * delta^t)
+}
+
+#data frame with three rows: t, discount(1, t) and discount(2, t)
+discounted <- data.frame(t, discount(1, t), discount(2, t))
+
+colnames(discounted) <- c("t","exponential","present_bias")
+
+discounted <- pivot_longer(discounted, cols = -t, names_to = "delta", values_to = "discount")
+
+#Plot the discount function with curves for each of the two values of delta using ggplot2
+ggplot(discounted, aes(x=t, y=discount, group=delta, linetype=delta)) +
+    geom_line() +
+    labs(x="t", y="Discount") +
+    theme_minimal() +
+    scale_x_continuous(breaks=1:10) +
+    scale_y_continuous(breaks=seq(0, 1, 0.1)) +
+    geom_vline(xintercept = 0, linewidth=0.25)+ 
+    geom_hline(yintercept = 0, linewidth=0.25)+
+
+    #set vertical lines only at integer values of t
+    theme(panel.grid.minor = element_blank())+
+
+    # remove legend title, change legend item from "present_bias" to "present bias"
+    theme(legend.title=element_blank())+
+    scale_linetype_manual(values=c("solid", "dashed"), labels=c("exponential", "present bias"))
+
+```
+
+@fig-present-bias-2 shows the discount curve for present-biased and exponential discounting agents with different parameters. The present-biased agent and exponential discounter have the same discount factor $\delta=0.75$. The present-biased agent also has the short-term discount factor $\beta=0.75$. Again, the present-biased agent discounts the first period of delay more than the exponential discounter.
+
+```{r}
+#| label: fig-present-bias-2
+#| fig-cap: Exponential versus present bias discount curves - higher discount rate
+
+##Load the ggplot2 package
+library(ggplot2)
+library(tidyr)
+
+#Define the agent's discount factors
+agents <- data.frame(
+  agent_id = 1:2,
+  beta = c(1, 0.75),
+  delta = c(0.75, 0.75)
+)
+
+#Define the number of periods
+t <- 0:10
+
+# Define the discount function using agents data frame
+discount <- function(agent_id, t) {
+  beta <- agents$beta[agent_id]
+  delta <- agents$delta[agent_id]
+  ifelse(t==0, 1, beta * delta^t)
+}
+
+#data frame with three rows: t, discount(1, t) and discount(2, t)
+discounted <- data.frame(t, discount(1, t), discount(2, t))
+
+colnames(discounted) <- c("t","exponential","present_bias")
+
+discounted <- pivot_longer(discounted, cols = -t, names_to = "delta", values_to = "discount")
+
+#Plot the discount function with curves for each of the two values of delta using ggplot2
+ggplot(discounted, aes(x=t, y=discount, group=delta, linetype=delta)) +
+    geom_line() +
+    labs(x="t", y="Discount") +
+    theme_minimal() +
+    scale_x_continuous(breaks=1:10) +
+    scale_y_continuous(breaks=seq(0, 1, 0.1)) +
+    geom_vline(xintercept = 0, linewidth=0.25)+ 
+    geom_hline(yintercept = 0, linewidth=0.25)+
+
+    #set vertical lines only at integer values of t
+    theme(panel.grid.minor = element_blank())+
+
+    # remove legend title, change legend item from "present_bias" to "present bias"
+    theme(legend.title=element_blank())+
+    scale_linetype_manual(values=c("solid", "dashed"), labels=c("exponential", "present bias"))
+
+```
+
+@fig-present-bias-3 shows a scenario where the present-biased agent has a higher discount factor $\delta=0.9$ than the exponential discounter with $\delta=0.75$. The present-biased agent also has the short-term discount factor $\beta=0.75$. The present-biased agent discounts the first period of delay more than the exponential discounter. However, due to their higher $\delta$, the present-biased agent discounts additional periods of delay less than the exponential discounter and ultimately has a lower total discount for periods further in the future.
+
+```{r}
+#| label: fig-present-bias-3
+#| fig-cap: Exponential versus present bias discount curves - different delta
+
+##Load the ggplot2 package
+library(ggplot2)
+library(tidyr)
+
+#Define the agent's discount factors
+agents <- data.frame(
+  agent_id = 1:2,
+  beta = c(1, 0.75),
+  delta = c(0.75, 0.9)
+)
+
+#Define the number of periods
+t <- 0:10
+
+# Define the discount function using agents data frame
+discount <- function(agent_id, t) {
+  beta <- agents$beta[agent_id]
+  delta <- agents$delta[agent_id]
+  ifelse(t==0, 1, beta * delta^t)
+}
+
+#data frame with three rows: t, discount(1, t) and discount(2, t)
+discounted <- data.frame(t, discount(1, t), discount(2, t))
+
+colnames(discounted) <- c("t","exponential","present_bias")
+
+discounted <- pivot_longer(discounted, cols = -t, names_to = "delta", values_to = "discount")
+
+#Plot the discount function with curves for each of the two values of delta using ggplot2
+ggplot(discounted, aes(x=t, y=discount, group=delta, linetype=delta)) +
+    geom_line() +
+    labs(x="t", y="Discount") +
+    theme_minimal() +
+    scale_x_continuous(breaks=1:10) +
+    scale_y_continuous(breaks=seq(0, 1, 0.1)) +
+    geom_vline(xintercept = 0, linewidth=0.25)+ 
+    geom_hline(yintercept = 0, linewidth=0.25)+
+
+    #set vertical lines only at integer values of t
+    theme(panel.grid.minor = element_blank())+
+
+    # remove legend title, change legend item from "present_bias" to "present bias"
+    theme(legend.title=element_blank())+
+    scale_linetype_manual(values=c("solid", "dashed"), labels=c("exponential", "present bias"))
+
+```
+
+## Assumptions
+
+The exponential discounting model is underpinned by many assumptions. These include:
+
+- Time consistency, whereby once the agent starts moving along the consumption path, they are time-consistent with their initial plan.
+
+- Consumption independence, whereby utility in period $t+k$ is independent of consumption in any other period. An outcome’s utility is unaffected by outcomes in prior or future periods.
+
+- Stationary preferences, whereby $U_t=U_{t+k}$. The utility function is stationary across periods.
+
+- Utility independence, whereby all that matters is maximising the sum of discounted utilities. Decision makers are assumed to have no preference for the distribution of utilities.
+
+Under the $\beta\delta$ model, we are loosening the assumption of time consistency. An agent may change their initial plan over time.
+
+However, we maintain the assumptions of consumption independence, stationary preferences and utility independence.
+

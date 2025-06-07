@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>36&nbsp; Biases in probability judgment – Notes on behavioural economics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../heuristics-and-biases/heuristics-and-the-bias-variance-trade-off.html" rel="next">
+<link href="../heuristics-and-biases/heuristics.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-61b399986b2e786a8f3d560b8bfb14aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZFSLJY1DR4"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
+</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="36&nbsp; Biases in probability judgment – Notes on behavioural economics">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/biases-in-probability-judgment_files/figure-html/fig-conjunction-1.png">
+<meta property="og:site_name" content="Notes on behavioural economics">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
+<meta name="twitter:title" content="36&nbsp; Biases in probability judgment – Notes on behavioural economics">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/heuristics-and-biases/biases-in-probability-judgment_files/figure-html/fig-conjunction-1.png">
+<meta name="twitter:image-height" content="960">
+<meta name="twitter:image-width" content="1344">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes on behavioural economics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../heuristics-and-biases/heuristics-and-biases.html">Heuristics and biases</a></li><li class="breadcrumb-item"><a href="../heuristics-and-biases/biases-in-probability-judgment.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Economic foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../decision-making-under-risk/decision-making-under-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision making under risk</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/notation-and-mathematical-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/expected-value.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Expected value</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/axioms-for-expected-utility-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/expected-utility-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/expected-utility-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Expected utility examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/anomalies-in-expected-utility-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Anomalies in expected utility theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/decision-making-under-risk-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Decision making under risk exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../prospect-theory/prospect-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prospect theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reference-dependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reference dependence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/loss-aversion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Loss aversion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reflection-effect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The reflection effect</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/value-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The value function</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/probability-weighting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Probability weighting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-implementation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prospect theory exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../intertemporal-choice/intertemporal-choice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intertemporal choice</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exponential discounting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Exponential discounting examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-anomalies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Exponential discounting anomalies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Present bias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Present bias examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/sophisticated-present-bias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Sophisticated present bias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/commitment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Commitment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Delayed gratification, spread and variation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Intertemporal choice exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../probability-foundations/probability-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/probability-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/bayes-rule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Bayes’ rule</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/probability-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Probability theory exercises</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/subjective-expected-utility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Subjective expected utility theory</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../heuristics-and-biases/heuristics-and-biases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Heuristics and biases</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/heuristics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Heuristics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/overconfidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Overconfidence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/heuristics-and-biases-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Heuristics and biases exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../game-theory/game-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Game theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Simultaneous-move one-shot games</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/sequential-games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Sequential games</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/asymmetric-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Asymmetric information</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/strategic-moves-and-commitment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Strategic moves and commitment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/game-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Game theory exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../behavioural-game-theory/behavioural-game-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Behavioural game theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/level-k-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Level-k thinking</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Asymmetric information and the curse of knowledge</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/emotions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Emotions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/behavioural-game-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Behavioural game theory exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../social-preferences/social-preferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Social preferences</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">People care about resource distribution</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reputation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Reputation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reciprocity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Reciprocity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/social-preferences-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Social preferences exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../practice-problems/practice-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practice problems</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/expected-utility-theory-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Expected utility theory problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/prospect-theory-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Prospect theory problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/intertemporal-choice-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Intertemporal choice problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/beliefs-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Beliefs problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/behavioural-game-theory-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Behavioural game theory problems</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">36.1</span> Introduction</a></li>
+  <li><a href="#the-conjunction-fallacy" id="toc-the-conjunction-fallacy" class="nav-link" data-scroll-target="#the-conjunction-fallacy"><span class="header-section-number">36.2</span> The conjunction fallacy</a></li>
+  <li><a href="#base-rate-neglect" id="toc-base-rate-neglect" class="nav-link" data-scroll-target="#base-rate-neglect"><span class="header-section-number">36.3</span> Base-rate neglect</a>
+  <ul class="collapse">
+  <li><a href="#sec-cab_problem" id="toc-sec-cab_problem" class="nav-link" data-scroll-target="#sec-cab_problem"><span class="header-section-number">36.3.1</span> The cab problem</a></li>
+  <li><a href="#medical-diagnosis" id="toc-medical-diagnosis" class="nav-link" data-scroll-target="#medical-diagnosis"><span class="header-section-number">36.3.2</span> Medical diagnosis</a></li>
+  <li><a href="#natural-frequencies" id="toc-natural-frequencies" class="nav-link" data-scroll-target="#natural-frequencies"><span class="header-section-number">36.3.3</span> Natural frequencies</a></li>
+  </ul></li>
+  <li><a href="#probability-matching" id="toc-probability-matching" class="nav-link" data-scroll-target="#probability-matching"><span class="header-section-number">36.4</span> Probability matching</a></li>
+  <li><a href="#the-gamblers-fallacy" id="toc-the-gamblers-fallacy" class="nav-link" data-scroll-target="#the-gamblers-fallacy"><span class="header-section-number">36.5</span> The gambler’s fallacy</a>
+  <ul class="collapse">
+  <li><a href="#the-law-of-small-numbers" id="toc-the-law-of-small-numbers" class="nav-link" data-scroll-target="#the-law-of-small-numbers"><span class="header-section-number">36.5.1</span> The law of small numbers</a></li>
+  </ul></li>
+  <li><a href="#the-hot-hand-fallacy" id="toc-the-hot-hand-fallacy" class="nav-link" data-scroll-target="#the-hot-hand-fallacy"><span class="header-section-number">36.6</span> The hot hand fallacy</a>
+  <ul class="collapse">
+  <li><a href="#a-bias-in-sequences" id="toc-a-bias-in-sequences" class="nav-link" data-scroll-target="#a-bias-in-sequences"><span class="header-section-number">36.6.1</span> A bias in sequences</a></li>
+  <li><a href="#alternative-intuition" id="toc-alternative-intuition" class="nav-link" data-scroll-target="#alternative-intuition"><span class="header-section-number">36.6.2</span> Alternative intuition</a></li>
+  <li><a href="#the-hot-hand-fallacy-for-truly-random-sequences" id="toc-the-hot-hand-fallacy-for-truly-random-sequences" class="nav-link" data-scroll-target="#the-hot-hand-fallacy-for-truly-random-sequences"><span class="header-section-number">36.6.3</span> The hot hand fallacy for truly random sequences</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../heuristics-and-biases/heuristics-and-biases.html">Heuristics and biases</a></li><li class="breadcrumb-item"><a href="../heuristics-and-biases/biases-in-probability-judgment.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>The conjunction fallacy occurs when people judge the probability of two events occurring together as higher than the probability of one of those events occurring alone, violating basic probability rules.</li>
+<li>Base-rate neglect is the tendency to ignore general probabilities (base rates) when making judgments about specific cases, often leading to errors in conditional probability calculations.</li>
+<li>Probability matching is a suboptimal strategy where people predict outcomes in proportion to their observed frequencies, rather than always choosing the most likely outcome.</li>
+<li>The gambler’s fallacy is the mistaken belief that if an event occurs more frequently than normal during a given period, it will occur less frequently in the future (or vice versa).</li>
+<li>The hot hand fallacy is the belief that a person who has experienced success with a random event has a greater chance of further success in additional attempts. Analysing this belief can be complicated by statistical biases in measurement and the potential existence of genuine “hot hands” in some contexts.</li>
+</ul>
+<hr>
+</section>
+<section id="introduction" class="level2" data-number="36.1">
+<h2 data-number="36.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">36.1</span> Introduction</h2>
+<p>In this part, I introduce several biases in probability judgment:</p>
+<ul>
+<li>The conjunction fallacy</li>
+<li>Base-rate neglect</li>
+<li>Probability matching</li>
+<li>The gambler’s fallacy</li>
+<li>The hot hand fallacy</li>
+</ul>
+</section>
+<section id="the-conjunction-fallacy" class="level2" data-number="36.2">
+<h2 data-number="36.2" class="anchored" data-anchor-id="the-conjunction-fallacy"><span class="header-section-number">36.2</span> The conjunction fallacy</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/G461aa705P0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+<p>The conjunction fallacy occurs when someone judges the probability of the conjunction of two events to be greater than the probability of one or both events.</p>
+<p>For example, if we have two outcomes, <span class="math inline">A</span> and <span class="math inline">B</span>, the probability of both <span class="math inline">A</span> and <span class="math inline">B</span> occurring - that is, the conjunction of <span class="math inline">A</span> and <span class="math inline">B</span> - should be less than or equal to each of the individual probabilities.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a Venn diagram using ggvenn showing P(A), P(B) and P(A and B)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Import required package</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggvenn"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Data</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>venn <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">A =</span> <span class="fu">sort</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">500</span>, <span class="dv">50</span>)),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                  <span class="at">B =</span> <span class="fu">sort</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">500</span>, <span class="dv">50</span>)))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create venn diagram Pairwise</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggvenn</span>(venn, <span class="at">show_percentage =</span> <span class="cn">FALSE</span>, <span class="at">show_elements=</span><span class="cn">FALSE</span>, <span class="at">fill_color=</span><span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"white"</span>), <span class="at">set_name_color=</span><span class="st">"white"</span>,<span class="at">text_color=</span><span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">x =</span>  <span class="fu">c</span>(<span class="sc">-</span>.<span class="dv">75</span>, <span class="fl">0.75</span>, <span class="dv">0</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span>   <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span>  <span class="fu">c</span>(<span class="st">'P(A)'</span>, <span class="st">'P(B)'</span>, <span class="st">'P(A and B)'</span>),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-conjunction" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-conjunction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;36.1: The conjunction of P(A) and P(B)
+</figcaption>
+<div aria-describedby="fig-conjunction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="biases-in-probability-judgment_files/figure-html/fig-conjunction-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;36.1: The conjunction of P(A) and P(B)"><img src="biases-in-probability-judgment_files/figure-html/fig-conjunction-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>The most famous example of the conjunction fallacy comes from Tversky and Kahneman <span class="citation" data-cites="tversky1983">(<a href="../references.html#ref-tversky1983" role="doc-biblioref">1983</a>)</span>. They asked students to read the following statement:</p>
+<blockquote class="blockquote">
+<p>Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations.</p>
+</blockquote>
+<p>Tversky and Kahneman asked the students to rank the following statements from most to least probable:</p>
+<ol type="1">
+<li>Linda is a teacher in elementary school.</li>
+<li>Linda works in a bookstore and takes Yoga classes.</li>
+<li>Linda is active in the feminist movement.</li>
+<li>Linda is a psychiatric social worker.</li>
+<li>Linda is a member of the League of Women Voters.</li>
+<li>Linda is a bank teller.</li>
+<li>Linda is an insurance salesperson.</li>
+<li>Linda is a bank teller and is active in the feminist movement.</li>
+</ol>
+<p>Note that “8. Linda is a bank teller and is active in the feminist movement” is a conjunction of “3. Linda is active in the feminist movement” and “6. Linda is a bank teller”.</p>
+<p>Tversky and Kahneman found in a sample of students that 88% ranked 3 before 8 before 6. “6. Linda is a bank teller” was rated less probable than “8. Linda is a bank teller and is active in the feminist movement”.</p>
+<p>To understand why this is an error, recall that the probability of the conjunction of two outcomes is as follows:</p>
+<p><span class="math display">
+P(A\cap B)=P(A|B)P(B)=P(B|A)P(A)
+</span></p>
+<p>If <span class="math inline">P(A|B)&lt;1</span> and <span class="math inline">P(B|A)&lt;1</span>, <span class="math inline">P(A\cap B)</span> must be less than <span class="math inline">P(A)</span> or <span class="math inline">P(B)</span>.</p>
+<p>One explanation for why people make this error relates to the representativeness heuristic.</p>
+<p>Tversky and Kahneman constructed the description of Linda to be representative of a feminist and unrepresentative of a bank teller. If people use the representativeness heuristic to order the statements, they will likely rank 8 above 6.</p>
+<p>The Linda Problem is one of the most heavily debated experiments in the social sciences.</p>
+<p>For example, <span class="citation" data-cites="hertwig1999">Hertwig and Gigerenzer (<a href="../references.html#ref-hertwig1999" role="doc-biblioref">1999</a>)</span> argue that people infer non-mathematical meaning to the word “probability”, taking it to mean “plausible” or “credible”.</p>
+<p>While this is possibly a fair critique of the Linda problem, other illustrations of the conjunction fallacy appear more robust.</p>
+<p>For example, <span class="citation" data-cites="tversky1983">Tversky and Kahneman (<a href="../references.html#ref-tversky1983" role="doc-biblioref">1983</a>)</span> created this example involving rolls of a die:</p>
+<blockquote class="blockquote">
+<p>Consider a regular six-sided die with four green faces and two red faces. The die will be rolled 20 times and the sequence of greens (G) and reds (R) will be recorded. You are asked to select one sequence, from a set of three, and you will win $25 if the sequence you chose appears on successive rolls of the die. Please check the sequence of greens and reds on which you prefer to bet.</p>
+<ol type="1">
+<li><p>RGRRR</p></li>
+<li><p>GRGRRR</p></li>
+<li><p>GRRRRR</p></li>
+</ol>
+</blockquote>
+<p>65% of experimental subjects chose sequence 2. It appears more “representative” of a die with four green faces and two red faces. But note that 1 is contained within 2 and is strictly more likely. The fact subjects are betting on the outcome should remove doubt about interpretation.</p>
+</section>
+<section id="base-rate-neglect" class="level2" data-number="36.3">
+<h2 data-number="36.3" class="anchored" data-anchor-id="base-rate-neglect"><span class="header-section-number">36.3</span> Base-rate neglect</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/uQHNdtyYO_c" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+<p>The base rate is the probability of an outcome unconditional on any evidence.</p>
+<p>For example, if 1% of the population has COVID-19 and the remainder doesn’t, the base rate of COVID-19 is 1%. If you were to obtain evidence that someone has COVID-19, such as a positive COVID-19 test, you would use that base rate in determining the conditional probability that they have the disease.</p>
+<p>Base rate neglect is the failure to consider an event’s base rate when making a judgment.</p>
+<section id="sec-cab_problem" class="level3" data-number="36.3.1">
+<h3 data-number="36.3.1" class="anchored" data-anchor-id="sec-cab_problem"><span class="header-section-number">36.3.1</span> The cab problem</h3>
+<p>One illustration of base-rate neglect comes from the cab problem by <span class="citation" data-cites="tversky1982">Tversky and Kahneman (<a href="../references.html#ref-tversky1982" role="doc-biblioref">1982</a>)</span>. It involves the following story:</p>
+<blockquote class="blockquote">
+<p>A cab was involved in a hit and run accident at night. Two cab companies, the Green and the Blue, operate in the city. Participants are given the following data:</p>
+<ol type="1">
+<li><p>85% of the cabs in the city are Green, 15% are Blue.</p></li>
+<li><p>A witness identified the cab as Blue. The court tested the reliability of the witness under the same circumstances that existed on the night of the accident and concluded that the witness correctly identified each one of the two colours 80% of the time.</p></li>
+</ol>
+<p>What is the probability that the cab involved in the accident was Blue rather than Green?</p>
+</blockquote>
+<p>In the experiment, the median and modal answer was 80%.</p>
+<p>The correct answer is 41%.</p>
+<p>The experimental result indicates confusion between conditional probabilities. The experimental participants were confusing the probability of the witness identifying a blue cab given that the cab was blue, with the probability of the cab being blue given that the witness identified it as blue. However, we need to use Bayes’ rule to calculate the probability of the cab being blue, given that the witness identified it as blue.</p>
+<p><span class="math display">
+\underbrace{P(\text{claim blue}|\text{blue})}_{80\%}\neq \underbrace{P(\text{blue}|\text{claim blue})}_{\text{Requires Bayes' rule}}
+</span></p>
+<p>The experimental subjects effectively neglected the rarity of blue cabs. A witness seeing a blue cab is representative of what would occur if the cab were blue.</p>
+<p>The correct answer is as follows:</p>
+<span class="math display">\begin{align*}
+P(\text{blue}|\text{claim blue})&amp;=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{P(\text{claim blue})} \\[12pt]
+&amp;=\frac{P(\text{claim blue}|\text{blue})P(\text{blue})}{\Bigg(\begin{aligned}P(&amp;\text{claim blue}|\text{blue})P(\text{blue})\\&amp;+P(\text{claim blue}|\neg\text{blue})P(\neg\text{blue})\end{aligned}\Bigg)} \\[30pt]
+&amp;=\frac{0.8\times 0.15}{0.8\times 0.15+0.2\times 0.85} \\[12pt]
+&amp;=0.41
+\end{align*}</span>
+</section>
+<section id="medical-diagnosis" class="level3" data-number="36.3.2">
+<h3 data-number="36.3.2" class="anchored" data-anchor-id="medical-diagnosis"><span class="header-section-number">36.3.2</span> Medical diagnosis</h3>
+<p>We can also see base rate neglect in the context of diagnosing a rare disease.</p>
+<p>Consider the following problem:</p>
+<blockquote class="blockquote">
+<p>You test yourself for COVID-19. The following information is known:</p>
+<ul>
+<li><p>The probability that a person has COVID-19 is 1% (the prevalence).</p></li>
+<li><p>If a person has COVID-19, the probability that they test&nbsp;positive is 90% (the sensitivity).</p></li>
+<li><p>If a person does not have COVID-19, the probability that they&nbsp;nevertheless test&nbsp;positive is 9% (the false positive rate).</p></li>
+</ul>
+<p>You test positive. What is the chance that you have COVID-19?</p>
+</blockquote>
+<p>When problems of this nature are given to physicians, around 10 to 20% reason using Bayes’ rule (for example, see <span class="citation" data-cites="hoffrage2015">Hoffrage et al. (<a href="../references.html#ref-hoffrage2015" role="doc-biblioref">2015</a>)</span>). The most common answers approximate the sensitivity, 90% for this example.</p>
+<p>As for the cab problem, there is confusion between the conditional probabilities.</p>
+<p><span class="math display">
+P(\text{COVID}|\text{+ve})\neq P(\text{+ve}|\text{COVID})
+</span></p>
+<p>One hypothesis for this error is that a positive test is “representative” of someone with COVID-19. As a result, the test is given greater weight than the more general information about the base rate.</p>
+<p>The correct answer is:</p>
+<span class="math display">\begin{align*}
+P(\text{COVID}|\text{+ve})&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{P(\text{+ve})} \\[12pt]
+&amp;=\frac{P(\text{+ve}|\text{COVID})P(\text{COVID})}{\Bigg(\begin{aligned}P(&amp;\text{+ve}|\text{COVID})P(\text{COVID})\\&amp;+P(\text{+ve}|\neg\text{COVID})P(\neg\text{COVID})\end{aligned}\Bigg)} \\[30pt]
+&amp;=\frac{0.9\times 0.01}{0.9\times 0.01 + 0.09\times 0.99} \\[12pt]
+&amp;=0.092
+\end{align*}</span>
+</section>
+<section id="natural-frequencies" class="level3" data-number="36.3.3">
+<h3 data-number="36.3.3" class="anchored" data-anchor-id="natural-frequencies"><span class="header-section-number">36.3.3</span> Natural frequencies</h3>
+<p>Let us reconsider this medical problem with an alternative representation. This representation uses “natural frequencies”.</p>
+<blockquote class="blockquote">
+<p>You test yourself for COVID-19. The following information is known:</p>
+<ul>
+<li>Ten in every 1000 people have COVID-19&nbsp;(the prevalence).</li>
+<li>Of these 10 people with COVID-19, nine will test positive (the sensitivity).</li>
+<li>Of the 990 people without COVID-19, about 89 nevertheless test positive (the false positive rate).</li>
+</ul>
+<p>You test positive. What is the chance that you have COVID-19?</p>
+</blockquote>
+<p>Seeing a representation in this manner makes the base rate (and the rate of false positives) much more salient, and leads to more accurate estimates of the conditional probabilities. We can see that the probability that we have COVID-19, given we tested positive for COVID-19, equals the number of people who have COVID-19 who have tested positive, divided by the total number of positive tests:</p>
+<span class="math display">\begin{align*}
+P(\text{COVID}|\text{+ve})&amp;=\frac{n(\text{+ve }\cap \text{COVID})}{n(\text{+ve})} \\[12pt]
+&amp;=\frac{9}{9+89} \\[12pt]
+&amp;=0.092
+\end{align*}</span>
+<p><span class="citation" data-cites="cosmides1996">Cosmides and Tooby (<a href="../references.html#ref-cosmides1996" role="doc-biblioref">1996</a>)</span> first proposed using natural frequencies in this way. We derive natural frequencies by observing cases representatively sampled from a population.</p>
+<p><span class="citation" data-cites="hoffrage1998">Hoffrage and Gigerenzer (<a href="../references.html#ref-hoffrage1998" role="doc-biblioref">1998</a>)</span> reported that this change in representation increased the proportion of correct answers among physicians from 10% to 46%.</p>
+<p>There is evidence that you can get further gains through a frequency tree representation (e.g. <span class="citation" data-cites="spiegelhalter2015">Spiegelhalter and Gage (<a href="../references.html#ref-spiegelhalter2015" role="doc-biblioref">2015</a>)</span>). Below is one such tree from <span class="citation" data-cites="gigerenzer2011">Gigerenzer (<a href="../references.html#ref-gigerenzer2011" role="doc-biblioref">2011</a>)</span>, which they compare with a tree using conditional probabilities.</p>
+<p><a href="img/gigerenzer_2011.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/gigerenzer_2011.png" class="img-fluid"></a></p>
+<p>The numbers at the bottom of the conditional probability tree do not contain the base rate information. You can’t simply compare them to calculate conditional probabilities. You need to refer to the middle layer. Conversely, the natural frequency tree contains all you need to calculate the conditional probability in the bottom row.</p>
+<p>To illustrate this point, consider what happens if we convert the numbers at the bottom of the conditional probability tree into frequencies: 900 in 1000, 10 in 1000, 90 in 1000 and 910 in 1000. Gigerenzer calls these simple frequencies. While simple frequencies can make a problem more tractable, they do not allow us to calculate conditional probabilities. Simple frequencies are just a restatement of the probabilities. In contrast, natural frequencies are joint frequencies, such as the number of people who test positive and who have COVID-19.</p>
+<section id="identifying-a-finch" class="level4" data-number="36.3.3.1">
+<h4 data-number="36.3.3.1" class="anchored" data-anchor-id="identifying-a-finch"><span class="header-section-number">36.3.3.1</span> Identifying a finch</h4>
+<p>The following example provides another illustration of the use of Bayes’ rule and natural frequencies.</p>
+<p>You are trying to spot a rare type of bird, the Darwin finch. It looks very similar to the Wallace finch, except for a slight difference in the shape of its beak. You know the following about the finches in your area:</p>
+<ul>
+<li>99% of the finches are Wallace finches. The remaining 1% are Darwin finches.</li>
+<li>If you spot a Darwin finch, you will correctly identify it as a Darwin finch 95% of the time. The other 5% of the time, you identify it as a Wallace finch.</li>
+<li>If you spot a Wallace finch, you will correctly identify it as a Wallace finch 95% of the time. The other 5% of the time, you identify it as a Darwin finch.</li>
+</ul>
+<p>You spot a finch and identify it as a Darwin finch.</p>
+<p>What is the probability that the finch is a Darwin finch?</p>
+<p>First, I use Bayes’ rule to calculate the probability.</p>
+<span class="math display">\begin{align*}
+P(D|I)&amp;=\frac{P(I|D)P(D)}{P(I)} \\[6pt]
+&amp;=\frac{P(I|D)P(D)}{P(I|D)P(D)+P(I|\neg D)P(\neg D)} \\[6pt]
+&amp;=\frac{0.95\times 0.01}{0.95\times 0.01 + 0.05\times 0.99} \\[6pt]
+&amp;=0.16
+\end{align*}</span>
+<p>The probability that it is a Darwin finch is 16%.</p>
+<p>Next, I use natural frequencies to calculate that same conditional probability.</p>
+<p>Suppose there are 10,000 finches.</p>
+<p>That would mean there are 100 Darwin finches and 9,900 Wallace finches.</p>
+<p>If I spotted these 100 Darwin finches, I would identify 95 as Darwin finches.</p>
+<p>If I spotted a Wallace Finch, I would identify <span class="math inline">0.05\times 9900=495</span> as Darwin Finches.</p>
+<p>That means 95 of the 95+495=590 birds I identify as Darwin finches would be Darwin finches.</p>
+<p>Therefore:</p>
+<span class="math display">\begin{align*}
+P(D|I)&amp;=\frac{95}{590} \\[6pt]
+&amp;=0.16 \\
+\end{align*}</span>
+<p>Note that in this example, I have started with a number of finches, 10,000, which allows me to avoid fractions and small decimals. If I started with only 100 finches, I would later be talking about an unintuitive 4.95 finches. If you are using natural frequencies to solve a problem of conditional probability, you should choose a large enough number to avoid complicated fractions and decimals. Alternatively (or in conjunction), round any unintuitive numbers to the nearest whole number, giving you an approximate answer in your final calculation.</p>
+</section>
+</section>
+</section>
+<section id="probability-matching" class="level2" data-number="36.4">
+<h2 data-number="36.4" class="anchored" data-anchor-id="probability-matching"><span class="header-section-number">36.4</span> Probability matching</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/pLwXW9TTUNE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+<p>Probability matching is the tendency of people to mirror the probability distributions they observe in their predictions of events. For example, if asked to predict whether a die will show a six or not, they will predict six around one in six rolls.</p>
+<p>The strategy of probability matching is not optimal for minimising prediction error.</p>
+<p>Consider the following experimental setup:</p>
+<ul>
+<li>A red lamp that turns on with probability <span class="math inline">p=0.70</span></li>
+<li>A green lamp that turns on with probability <span class="math inline">q=0.30</span></li>
+</ul>
+<p>Participants predict which light will turn on after observing a series of flashes.</p>
+<p>What do participants do?</p>
+<p>The predictions tend to reflect the actual probabilities of the two light bulbs being turned on. People tend to predict 70% of the time that the red lamp will come on and 30% of the time that the green lamp will come on.</p>
+<p>With probability matching, the probability of a successful guess is:</p>
+<span class="math display">\begin{align*}
+p(\text{success})&amp;=0.7\times 0.7+0.3\times0.3 \\[6pt]
+&amp;=0.58
+\end{align*}</span>
+<p>A better strategy is always to select the event with the highest probability. In this example, participants should always predict that the red light will be turned on, giving them a 70% probability of a successful guess.</p>
+<p>Similarly, for my earlier example of a die roll, the option with lowest error is always to predict that the die will not show a six.</p>
+</section>
+<section id="the-gamblers-fallacy" class="level2" data-number="36.5">
+<h2 data-number="36.5" class="anchored" data-anchor-id="the-gamblers-fallacy"><span class="header-section-number">36.5</span> The gambler’s fallacy</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/3xaUp0f8Cmk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+<p>The gambler’s fallacy is the false belief that an outcome not recently realised in a sequence of independent draws is more likely to occur on the next draw.</p>
+<p>For example, following three flips of a coin that all come up heads, a person experiencing the gambler’s fallacy would believe that a tail is more likely on the next flip.</p>
+<p>Using data from <span class="citation" data-cites="rapoport1997">Rapoport and Budescu (<a href="../references.html#ref-rapoport1997" role="doc-biblioref">1997</a>)</span>, <span class="citation" data-cites="rabin2010">Rabin and Vayanos (<a href="../references.html#ref-rabin2010" role="doc-biblioref">2010</a>)</span> derived the probability of heads predicted by experimental subjects, given the last three flips being heads or tails. Following a sequence of three heads, they predict heads on the next flip with only 30% probability. But after three tails, they predict heads on the next flip with 70% probability.</p>
+<p><a href="img/gamblers-fallacy.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/gamblers-fallacy.jpg" class="img-fluid"></a></p>
+<p>One explanation for the gambler’s fallacy is representativeness. For example, people do not see the sequence of coin flips HHHHHH as representative of flipping a fair coin six times. They see HHTTHH as more representative, even though both sequences have the same probability of occurring.</p>
+<section id="the-law-of-small-numbers" class="level3" data-number="36.5.1">
+<h3 data-number="36.5.1" class="anchored" data-anchor-id="the-law-of-small-numbers"><span class="header-section-number">36.5.1</span> The law of small numbers</h3>
+<p>An alternative explanation is that people believe in the “law of small numbers” <span class="citation" data-cites="rabin2002">(<a href="../references.html#ref-rabin2002" role="doc-biblioref">Rabin, 2002</a>)</span>. They overestimate the degree to which a small sample will resemble the population from which it is drawn. For example, if a fair coin is flipped six times, they will overestimate the likelihood the result will be three heads and three tails.</p>
+<p>Imagine an urn filled with red balls and black balls. You draw balls from the urn with replacement. The red balls are drawn with probability <span class="math inline">p</span> and the black balls are drawn with probability <span class="math inline">1−p</span>.</p>
+<p>Assume Freddy knows the probabilities <span class="math inline">p</span> and <span class="math inline">1−p</span> but (wrongly) assumes balls are drawn from the urn without replacement. If he believes there are <span class="math inline">N</span> balls in the urn, he expects a sample of <span class="math inline">N</span> balls to match <span class="math inline">p</span> and <span class="math inline">1−p</span> exactly.</p>
+<p>Under Freddy’s beliefs, outcomes are correlated. Under the actual process, where balls are replaced, the outcomes are uncorrelated.</p>
+<p>Imagine Freddy plays roulette. The roulette wheel contains 36 slots, 18 black and 18 red. Assume that Freddy believes there are 18 red and 18 black “balls in the urn”.</p>
+<p>Freddy observes four spins of the wheel before betting. He observes a sequence of four reds.</p>
+<p>An unbiased belief would be that the sequence of reds tells him nothing about future draws because the outcomes are uncorrelated.</p>
+<p>However, Freddy believes that, after four reds, black is more likely on the next spin. He is wrongly computing the probability based on a belief that only 14 reds remain along with 18 blacks.</p>
+<span class="math display">\begin{align*}
+\hat P(RRRRR|RRRR)&amp;=\frac{\text{reds}}{\text{reds}+\text{blacks}} \\[12pt]
+&amp;=\frac{18-4}{18-4+18} \\[12pt]
+&amp;=0.438
+\end{align*}</span>
+<p>In reality, <span class="math inline">P(RRRRR|RRRR)=0.5</span>. Freddy is suffering from the gambler’s fallacy.</p>
+</section>
+</section>
+<section id="the-hot-hand-fallacy" class="level2" data-number="36.6">
+<h2 data-number="36.6" class="anchored" data-anchor-id="the-hot-hand-fallacy"><span class="header-section-number">36.6</span> The hot hand fallacy</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/htAhQphNZ_A" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+<p>A person subject to the hot hand fallacy believes a streak will persist despite each outcome being independent of the last.</p>
+<p>For example, suppose a spectator observes a basketball player taking a series of shots during a game. The spectator then makes predictions based on the observed shots, with good shots predicted to be more likely following a streak of successful shots. After a series of good shots, they believe the player has a “hot hand”.</p>
+<p>Let’s look at this example in more detail.</p>
+<p>Suppose a person takes ten shots in a basketball game. In this image, a ball is a hit, an X is a miss.</p>
+<p>To assess whether this person has a hot hand, we can look at their shots following a previous hit. For instance, in this sequence of shots, there are six occasions where we have a shot following a hit. Five successful shots, such as the highlighted seventh shot, are followed by another hit.</p>
+<p><a href="img/hot-hand.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/hot-hand.jpg" class="img-fluid"></a></p>
+<p>We can then compare the player’s average shooting percentage with the proportion of shots they hit if the shot immediately before was a hit. If their hit rate after a hit is higher than their normal shot probability, we might say they get a hot hand.</p>
+<p>Using this methodology, <span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span> took shot data from various sources, including the Philadelphia 76ers and Boston Celtics, and examined the data for evidence of a hot hand. They also looked at whether there was a hit or miss after streaks of hits or misses.</p>
+<p>From this data, they argued that the hot hand was an illusion. There was no evidence that a player was more likely to make a shot following a series of successful shots.</p>
+<section id="a-bias-in-sequences" class="level3" data-number="36.6.1">
+<h3 data-number="36.6.1" class="anchored" data-anchor-id="a-bias-in-sequences"><span class="header-section-number">36.6.1</span> A bias in sequences</h3>
+<p><span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span> was the first of many examinations of whether there is a hot hand in sports (see <span class="citation" data-cites="bar-eli2006">Bar-Eli et al. (<a href="../references.html#ref-bar-eli2006" role="doc-biblioref">2006</a>)</span>). Through this research, there has been many methodological debates and arguments about whether there might be bias in the data, such as teams adjusting their defence in response to a player with a hot hand. However, the general trend in the literature was a finding of no evidence of a hot hand.</p>
+<p><span class="citation" data-cites="miller2018">Miller and Sanjurjo (<a href="../references.html#ref-miller2018" role="doc-biblioref">2018</a>)</span> provided a compelling critique of this position. They found a statistical bias in the analysis by <span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span> and many others. The intuition behind the statistical bias is as follows.</p>
+<p>Suppose you flip a coin three times. There are eight possible sequences of heads and tails. Each sequence has an equal probability of occurring.</p>
+<p>Considering these sequences, if you were to flip a coin three times, and there is a head followed by another flip in that sequence, what is the expected probability that another head will follow that head?</p>
+<p><a href="#tbl-hothand" class="quarto-xref">Table&nbsp;<span>36.1</span></a> shows the proportion of heads following a previous flip of heads for each sequence. In the table’s first row, HHH, the first flip is a head. Another head follows that first flip. After the second flip, a head, we also have a head. There is no flip after the third head. 100% of the heads in that sequence followed by another flip are followed by a head.</p>
+<p>In the second row of the table, HHT, a head follows 50% of the heads.</p>
+<p>In the third row, there is one head followed by another flip, which is a tail. None of the heads in that sequence are followed by a head.</p>
+<p>And so on until the last two rows, where there are no heads followed by another flip.</p>
+<p>Now, back to our question. If you were to flip a coin three times, and there is a head followed by another flip in that sequence, what is the expected probability that another head will follow that head? It turns out the answer to this question is 42%. I get this number by calculating the expected probability of a head given any particular sequence. This is equal to the average of the probabilities in each sequence.</p>
+<div id="tbl-hothand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hothand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;36.1: Eight possible combinations of heads and tales across three flips
+</figcaption>
+<div aria-describedby="tbl-hothand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Flips</th>
+<th style="text-align: left;"><span class="math inline">p(H_{t+1}|H_t)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">HHH</td>
+<td style="text-align: left;">100%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HHT</td>
+<td style="text-align: left;">50%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HTH</td>
+<td style="text-align: left;">0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HTT</td>
+<td style="text-align: left;">0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">THH</td>
+<td style="text-align: left;">100%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">THT</td>
+<td style="text-align: left;">0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TTH</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TTT</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Expected probability</strong></td>
+<td style="text-align: left;"><strong>41.7%</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>That calculation contrasts with what we get we count across all of the sequences, where we see eight flips of head followed by another flip. Of the subsequent flips, four are heads and four are tails, which is the 50% you expect.</p>
+<p>Why do we find that difference? By looking at these short sequences, we are introducing a bias. The cases of heads following heads tend to cluster together, such as in the first sequence, which has two cases of a head following a head. Yet the sequence THT, which has only one flip occurring after a head, is equally likely to occur as HHH. A tail appears more likely to follow a heads because of this bias, whereby the streaks tend to cluster together. The expected probability I get when taking a series of three flips is 42%, when in fact the actual probability of a head following a head is 50%. As the sequence of flips gets longer, the bias reduces in size, although it increases if we examine longer streaks, such as the probability of a head after three previous heads.</p>
+<p>The net effect of this bias is that the measure of the proportion of heads following another head is biased downwards.</p>
+<p>This bias is relevant to the analysis of the hot hand as it is present in the methodology of the papers that purportedly demonstrated that there was no hot hand in basketball, such as that by <span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span>. They effectively took short streaks of shots and calculated the proportion of hits followed by another hit. Their measure of the proportion of hits following a hit or sequence of hits is biased downwards. Like our calculation using coins, a calculation using that method results in a number lower than the actual probability of hitting a shot.</p>
+<p>Conversely, the hot hand pushes the probability of hitting a shot after a previous hit up. If there is a hot hand, we should see more hits following a previous hit.</p>
+<p>Now consider the net effect of these two forces. If there is a hot hand, the probability of hitting a shot after a previous hit should be higher than the average hit rate. The biased methodology pushes the measure in the other direction. Together, the downward bias and the hot hand counteract each other. In the case of <span class="citation" data-cites="gilovich1985">Gilovich et al. (<a href="../references.html#ref-gilovich1985" role="doc-biblioref">1985</a>)</span>, these two countervailing forces led to the conclusion by researchers that each shot is independent of the last.</p>
+<p>However, if you use a methodology not subject to this bias, you get a true measure of the hot hand. And in the case of the Gilovich et al.&nbsp;data, removing the bias reveals a hot hand. <span class="citation" data-cites="miller2018">Miller and Sanjurjo (<a href="../references.html#ref-miller2018" role="doc-biblioref">2018</a>)</span> found that in the Gilovich et al.&nbsp;data the probability of hitting a shot following a sequence of three previous hits is 13 percentage points higher than after a sequence of three misses.</p>
+</section>
+<section id="alternative-intuition" class="level3" data-number="36.6.2">
+<h3 data-number="36.6.2" class="anchored" data-anchor-id="alternative-intuition"><span class="header-section-number">36.6.2</span> Alternative intuition</h3>
+<p>Here is another way of showing that there is a bias in this sequence.</p>
+<p>To do this, we will use Bayes’ rule with more than two variables. This operates in a similar manner to our previous use of Bayes’ rule.</p>
+<p>To understand this, suppose we have three possible outcomes, <span class="math inline">A</span>, <span class="math inline">B</span> and <span class="math inline">C</span>. For these outcomes we can write the following probabilities:</p>
+<span class="math display">\begin{align*}
+P(A\cap B\cap C)&amp;=P(A\cap B|C)P(C)=P(A|B\cap C)P(B\cap C) \\[6pt]
+&amp;=P(B|A\cap C)P(A\cap C)=P(C|A\cap B)P(A\cap B)
+\end{align*}</span>
+<p>And so on. We can write the joint probability of these events as varying combinations of the conditional probabilities.</p>
+<p>Typically we derive Bayes’ rule by equating any two of these equations. For instance, as <span class="math inline">P(A|B\cap C)P(B\cap C)=P(B|A\cap C)P(A\cap C)</span> we can rearrange this to write:</p>
+<p><span class="math display">
+P(A|B\cap C)=\frac{P(B|A\cap C)P(A\cap C)}{P(B\cap C)}
+</span></p>
+<p>We will use this equation in our example.</p>
+<p>Now, suppose we flip three coins and select at random one of the flips that follows a heads. This means that if we select a flip that follows a head we will select either flip 2 or flip 3.</p>
+<p>If we select flip 2, we know that flip 1 was a head. The first two flips in the sequence are either HT or HH.</p>
+<p>However, we can also say that if we select flip 2, HT is twice as likely as HH. Why? Because if the first two coins were HH we could also have chosen flip 3.</p>
+<p>That is, if the first two flips are HT, we can only select flip 2. We select flip 2 with 100% probability. If the first two flips are HH, we select flip 2 with 50% probability and flip 3 with 50% probability.</p>
+<p>We are twice as likely to observe HT as HH, given we selected flip 2.</p>
+<p>Using <span class="math inline">H_i</span> or <span class="math inline">T_i</span> to represent a head or tail on the <span class="math inline">i</span>-th flip and X_i to represent selection of flip <span class="math inline">i</span>, we can show the probability of a tail given we have selected flip 2 using Bayes’ rule. Using the equation we derived earlier involving three potential outcomes:</p>
+<span class="math display">\begin{align*}
+P(T_2|H_1\cap X_2)&amp;=\frac{P(X_2|H_1\cap T_2)P(H_1\cap T_2)}{P(H_1\cap X_2)} \\[12pt]
+&amp;=\underbrace{
+  \frac{
+    P(X_2|H_1\cap T_2)P(H_1\cap T_2)
+    }{
+      \Bigg(\begin{aligned}P(&amp;X_2|H_1\cap T_2)P(H_1\cap T_2)\\&amp;+P(X_2|H_1\cap H_2)P(H_1\cap H_2)\end{aligned}\Bigg)
+      }
+  }_{\text{Expand denominator using formula for total probability}} \\[48pt]
+&amp;=\frac{1\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
+&amp;=\frac{2}{3} \\[6pt]
+\\
+P(H_2|H_1\cap X_2 )&amp;=\frac{P(X_2|H_1\cap H_2)P(H_1\cap H_2)}{P(H_1\cap X_2)} \\[12pt]
+&amp;=\underbrace{
+  \frac{
+    P(X_2|H_1\cap H_2)P(H_1\cap H_2)
+    }{
+      \Bigg(\begin{aligned}P(&amp;X_2|H_1\cap T_2)P(H_1\cap T_2)\\&amp;+P(X_2|H_1\cap H_2)P(H_1\cap H_2)\end{aligned}\Bigg)
+      }
+  }_{\text{Expand denominator using formula for total probability}} \\[48pt]
+&amp;=\frac{0.5\times 0.25}{1\times 0.25+0.5\times 0.25} \\[12pt]
+&amp;=\frac{1}{3}
+\end{align*}</span>
+<p>As you can only select flip 2 if flip 1 is a head, we can also say that <span class="math inline">P(T_2|H_1\cap X_2)=P(T_2|X_2)=\frac{2}{3}</span> and <span class="math inline">P(H_2|H_1\cap X_2 )=P(H_2|X_2)=\frac{1}{3}</span>. That is, the probability of a tail given we have selected flip 2 is <span class="math inline">2/3</span>. The probability of a head given we have selected flip 2 is <span class="math inline">1/3</span>. We are twice as likely to observe <span class="math inline">T_2</span> as <span class="math inline">H_2</span>, given we have selected flip 2.</p>
+<p>We don’t see the same bias if we select flip 3.</p>
+<p>If we select flip 3, we know that flip 2 was a head. But the fact we select flip 3 does not tell us anything about what flip 3 is, as flip 3 itself does not influence the choice of flip. Whether flip 3 is a head or tail is independent of the choice of flip 3 or the outcome of flip 2.</p>
+<p>Accordingly:</p>
+<span class="math display">\begin{align*}
+P(T_3|H_2\cap X_3)&amp;=P(T_3)=0.5 \\
+\\
+P(H_3|H_2\cap X_3)&amp;=P(H_3)=0.5
+\end{align*}</span>
+<p>We now combine the results of our examination of the second and third flip.</p>
+<p>We are equally likely to select flip 2 or flip 3 as flips 1 and 2 will each be heads with 50% probability. If both are heads, we select one randomly. Given we have selected a flip, what is the probability that the following flip is a head?</p>
+<span class="math display">\begin{align*}
+P(H)&amp;=P(X_2)\times P(H_2|X_2)+P(X_3)\times P(H_3|X_3) \\[6pt]
+&amp;=0.5\times 0.33+0.5\times 0.5 \\[6pt]
+&amp;=0.417
+\end{align*}</span>
+<p>What does this mean for measurement of the hot hand?</p>
+<p>As for before, if I take a sequence of three flips and I look at a flip after a head, if there is at least one head, the probability that flip is a head is 0.42. This is despite the coin flips being independent. It appears I have a cold hand.</p>
+<p>Use that same methodology in a scenario where there is a hot hand, the bias will counteract the hot hand and make it harder to detect, if it can be detected at all.</p>
+</section>
+<section id="the-hot-hand-fallacy-for-truly-random-sequences" class="level3" data-number="36.6.3">
+<h3 data-number="36.6.3" class="anchored" data-anchor-id="the-hot-hand-fallacy-for-truly-random-sequences"><span class="header-section-number">36.6.3</span> The hot hand fallacy for truly random sequences</h3>
+<p>Despite the evidence that there is a hot hand in some sports, there is strong evidence that there still exists a “hot hand fallacy”. People see streaks in truly random processes, with each outcome independent of the last.</p>
+<p>For example, <span class="citation" data-cites="ayton2004">Ayton and Fischer (<a href="../references.html#ref-ayton2004" role="doc-biblioref">2004</a>)</span> found that when people predict the results of a roulette wheel’s spins, they increase their confidence in their predictions after a series of successes. Their confidence increases despite the outcome being random. Interestingly, they also exhibit the gambler’s fallacy in what they predict.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-ayton2004" class="csl-entry" role="listitem">
+Ayton, P., and Fischer, I. (2004). The hot hand fallacy and the gambler<span>’</span>s fallacy: Two faces of subjective randomness? <em>Memory &amp; Cognition</em>, <em>32</em>(8), 1369–1378. <a href="https://doi.org/10.3758/BF03206327">https://doi.org/10.3758/BF03206327</a>
+</div>
+<div id="ref-bar-eli2006" class="csl-entry" role="listitem">
+Bar-Eli, M., Avugos, S., and Raab, M. (2006). Twenty years of <span>“</span>hot hand<span>”</span> research: Review and critique. <em>Psychology of Sport and Exercise</em>, <em>7</em>(6), 525–553. <a href="https://doi.org/10.1016/j.psychsport.2006.03.001">https://doi.org/10.1016/j.psychsport.2006.03.001</a>
+</div>
+<div id="ref-cosmides1996" class="csl-entry" role="listitem">
+Cosmides, L., and Tooby, J. (1996). Are humans good intuitive statisticians after all? Rethinking some conclusions from the literature on judgment under uncertainty. <em>Cognition</em>, <em>58</em>(1), 1–73. <a href="https://doi.org/10.1016/0010-0277(95)00664-8">https://doi.org/10.1016/0010-0277(95)00664-8</a>
+</div>
+<div id="ref-gigerenzer2011" class="csl-entry" role="listitem">
+Gigerenzer, G. (2011). What are natural frequencies? <em>BMJ</em>, <em>343</em>, d6386. <a href="https://doi.org/10.1136/bmj.d6386">https://doi.org/10.1136/bmj.d6386</a>
+</div>
+<div id="ref-gilovich1985" class="csl-entry" role="listitem">
+Gilovich, T., Vallone, R., and Tversky, A. (1985). The hot hand in basketball: On the misperception of random sequences. <em>Cognitive Psychology</em>, <em>17</em>(3), 295–314. <a href="https://doi.org/10.1016/0010-0285(85)90010-6">https://doi.org/10.1016/0010-0285(85)90010-6</a>
+</div>
+<div id="ref-hertwig1999" class="csl-entry" role="listitem">
+Hertwig, R., and Gigerenzer, G. (1999). The <span>‘</span>conjunction fallacy<span>’</span> revisited: how intelligent inferences look like reasoning errors. <em>Journal of Behavioral Decision Making</em>, <em>12</em>(4), 275–305. <a href="https://doi.org/10.1002/(SICI)1099-0771(199912)12:4<275::AID-BDM323>3.0.CO;2-M">https://doi.org/10.1002/(SICI)1099-0771(199912)12:4&lt;275::AID-BDM323&gt;3.0.CO;2-M</a>
+</div>
+<div id="ref-hoffrage1998" class="csl-entry" role="listitem">
+Hoffrage, U., and Gigerenzer, G. (1998). Using natural frequencies to improve diagnostic inferences. <em>Academic Medicine</em>, <em>73</em>(5), 53840. <a href="https://doi.org/10.1097/00001888-199805000-00024">https://doi.org/10.1097/00001888-199805000-00024</a>
+</div>
+<div id="ref-hoffrage2015" class="csl-entry" role="listitem">
+Hoffrage, U., Krauss, S., Martignon, L., and Gigerenzer, G. (2015). Natural frequencies improve bayesian reasoning in simple and complex inference tasks. <em>Frontiers in Psychology</em>, <em>6</em>, 1473. <a href="https://doi.org/10.3389/fpsyg.2015.01473">https://doi.org/10.3389/fpsyg.2015.01473</a>
+</div>
+<div id="ref-miller2018" class="csl-entry" role="listitem">
+Miller, J. B., and Sanjurjo, A. (2018). Surprised by the Hot Hand Fallacy? A Truth in the Law of Small Numbers. <em>Econometrica</em>, <em>86</em>(6), 2019–2047. <a href="https://doi.org/10.3982/ECTA14943">https://doi.org/10.3982/ECTA14943</a>
+</div>
+<div id="ref-rabin2002" class="csl-entry" role="listitem">
+Rabin, M. (2002). Inference by believers in the law of small numbers. <em>The Quarterly Journal of Economics</em>, <em>117</em>(3), 775–816. <a href="https://doi.org/10.1162/003355302760193896">https://doi.org/10.1162/003355302760193896</a>
+</div>
+<div id="ref-rabin2010" class="csl-entry" role="listitem">
+Rabin, M., and Vayanos, D. (2010). The gambler’s and hot-hand fallacies: Theory and applications. <em>The Review of Economic Studies</em>, <em>77</em>(2), 730–778. <a href="https://doi.org/10.1111/j.1467-937X.2009.00582.x">https://doi.org/10.1111/j.1467-937X.2009.00582.x</a>
+</div>
+<div id="ref-rapoport1997" class="csl-entry" role="listitem">
+Rapoport, A., and Budescu, D. V. (1997). Randomization in individual choice behavior. <em>Psychological Review</em>, <em>104</em>, 603–617. <a href="https://doi.org/10.1037/0033-295X.104.3.603">https://doi.org/10.1037/0033-295X.104.3.603</a>
+</div>
+<div id="ref-spiegelhalter2015" class="csl-entry" role="listitem">
+Spiegelhalter, D., and Gage, J. (2015). What can education learn from real-world communication of risk and uncertainty? <em>The Mathematics Enthusiast</em>, <em>12</em>(1), 4–10. <a href="https://doi.org/10.54870/1551-3440.1329">https://doi.org/10.54870/1551-3440.1329</a>
+</div>
+<div id="ref-tversky1982" class="csl-entry" role="listitem">
+Tversky, A., and Kahneman, D. (1982). Evidential impact of base rates. In A. Tversky, D. Kahneman, and P. Slovic (Eds.), <em>Judgment under uncertainty: Heuristics and biases</em> (pp. 153–160). Cambridge University Press. <a href="https://www.cambridge.org/core/books/judgment-under-uncertainty/evidential-impact-of-base-rates/CC35C9E390727085713C4E6D0D1D4633">https://www.cambridge.org/core/books/judgment-under-uncertainty/evidential-impact-of-base-rates/CC35C9E390727085713C4E6D0D1D4633</a>
+</div>
+<div id="ref-tversky1983" class="csl-entry" role="listitem">
+Tversky, A., and Kahneman, D. (1983). Extensional versus intuitive reasoning: The conjunction fallacy in probability judgment. <em>Psychological Review</em>, <em>90</em>(4), 293–315. <a href="https://doi.org/10.1037/0033-295X.90.4.293">https://doi.org/10.1037/0033-295X.90.4.293</a>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../heuristics-and-biases/heuristics.html" class="pagination-link" aria-label="Heuristics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Heuristics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../heuristics-and-biases/heuristics-and-the-bias-variance-trade-off.html" class="pagination-link" aria-label="Heuristics and the bias-variance trade-off">
+        <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">
+<p>Copyright: CC-BY</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

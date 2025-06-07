@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>49&nbsp; People care about resource distribution – Notes on behavioural economics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../social-preferences/reputation.html" rel="next">
+<link href="../social-preferences/social-preferences.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-61b399986b2e786a8f3d560b8bfb14aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZFSLJY1DR4"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
+</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="49&nbsp; People care about resource distribution – Notes on behavioural economics">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/social-preferences/img/public-goods-game-process-distribution.png">
+<meta property="og:site_name" content="Notes on behavioural economics">
+<meta property="og:image:height" content="1480">
+<meta property="og:image:width" content="8312">
+<meta name="twitter:title" content="49&nbsp; People care about resource distribution – Notes on behavioural economics">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/social-preferences/img/public-goods-game-process-distribution.png">
+<meta name="twitter:image-height" content="1480">
+<meta name="twitter:image-width" content="8312">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Notes on behavioural economics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.jasoncollins.blog/about/"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/jasonacollins/behaviouraleconomics" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../social-preferences/social-preferences.html">Social preferences</a></li><li class="breadcrumb-item"><a href="../social-preferences/distribution.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">People care about resource distribution</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../economic-foundations/economic-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Economic foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/preferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preferences</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/rationality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rationality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/utility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Utility</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../economic-foundations/economic-foundation-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Economic foundation exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../decision-making-under-risk/decision-making-under-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision making under risk</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/notation-and-mathematical-background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Notation and mathematical background</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/expected-value.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Expected value</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/axioms-for-expected-utility-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Axioms for Expected Utility Theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/expected-utility-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Expected Utility Theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/expected-utility-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Expected utility examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/anomalies-in-expected-utility-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Anomalies in expected utility theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../decision-making-under-risk/decision-making-under-risk-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Decision making under risk exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../prospect-theory/prospect-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prospect theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reference-dependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Reference dependence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/loss-aversion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Loss aversion</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/reflection-effect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The reflection effect</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/value-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The value function</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/probability-weighting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Probability weighting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-implementation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prospect theory implementation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Prospect theory examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Prospect theory applications</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../prospect-theory/prospect-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prospect theory exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../intertemporal-choice/intertemporal-choice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intertemporal choice</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exponential discounting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Exponential discounting examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/exponential-discounting-anomalies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Exponential discounting anomalies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Present bias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/present-bias-examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Present bias examples</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/sophisticated-present-bias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Sophisticated present bias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/commitment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Commitment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/preference-over-profiles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Delayed gratification, spread and variation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Intertemporal choice applications</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intertemporal-choice/intertemporal-choice-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Intertemporal choice exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../probability-foundations/probability-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Probability foundations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/probability-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Probability theory</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/bayes-rule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Bayes’ rule</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/probability-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Probability theory exercises</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../probability-foundations/subjective-expected-utility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Subjective expected utility theory</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../heuristics-and-biases/heuristics-and-biases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Heuristics and biases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/heuristics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Heuristics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/biases-in-probability-judgment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Biases in probability judgment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/heuristics-and-the-bias-variance-trade-off.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Heuristics and the bias-variance trade-off</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/overconfidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Overconfidence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../heuristics-and-biases/heuristics-and-biases-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Heuristics and biases exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../game-theory/game-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Game theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/simultaneous-move-one-shot-games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Simultaneous-move one-shot games</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/sequential-games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Sequential games</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/asymmetric-information.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Asymmetric information</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/strategic-moves-and-commitment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Strategic moves and commitment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../game-theory/game-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Game theory exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../behavioural-game-theory/behavioural-game-theory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Behavioural game theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/level-k-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Level-k thinking</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/asymmetric-information-and-the-curse-of-knowledge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Asymmetric information and the curse of knowledge</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/emotions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Emotions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioural-game-theory/behavioural-game-theory-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Behavioural game theory exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../social-preferences/social-preferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Social preferences</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/distribution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">People care about resource distribution</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reputation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Reputation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/reciprocity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Reciprocity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../social-preferences/social-preferences-exercises.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Social preferences exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../practice-problems/practice-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practice problems</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/expected-utility-theory-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Expected utility theory problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/prospect-theory-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Prospect theory problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/intertemporal-choice-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Intertemporal choice problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/beliefs-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Beliefs problems</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice-problems/behavioural-game-theory-problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Behavioural game theory problems</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">49.1</span> Introduction</a></li>
+  <li><a href="#altruism" id="toc-altruism" class="nav-link" data-scroll-target="#altruism"><span class="header-section-number">49.2</span> Altruism</a>
+  <ul class="collapse">
+  <li><a href="#example-the-public-goods-game" id="toc-example-the-public-goods-game" class="nav-link" data-scroll-target="#example-the-public-goods-game"><span class="header-section-number">49.2.1</span> Example: the public goods game</a></li>
+  <li><a href="#limitations-of-the-altruism-model" id="toc-limitations-of-the-altruism-model" class="nav-link" data-scroll-target="#limitations-of-the-altruism-model"><span class="header-section-number">49.2.2</span> Limitations of the altruism model</a></li>
+  </ul></li>
+  <li><a href="#inequality-aversion" id="toc-inequality-aversion" class="nav-link" data-scroll-target="#inequality-aversion"><span class="header-section-number">49.3</span> Inequality aversion</a>
+  <ul class="collapse">
+  <li><a href="#a-model-of-inequality-aversion" id="toc-a-model-of-inequality-aversion" class="nav-link" data-scroll-target="#a-model-of-inequality-aversion"><span class="header-section-number">49.3.1</span> A model of inequality aversion</a></li>
+  <li><a href="#example-the-ultimatum-game" id="toc-example-the-ultimatum-game" class="nav-link" data-scroll-target="#example-the-ultimatum-game"><span class="header-section-number">49.3.2</span> Example: the ultimatum game</a></li>
+  <li><a href="#example-the-dictator-game" id="toc-example-the-dictator-game" class="nav-link" data-scroll-target="#example-the-dictator-game"><span class="header-section-number">49.3.3</span> Example: the dictator game</a></li>
+  </ul></li>
+  <li><a href="#other-distributional-preferences" id="toc-other-distributional-preferences" class="nav-link" data-scroll-target="#other-distributional-preferences"><span class="header-section-number">49.4</span> Other distributional preferences</a>
+  <ul class="collapse">
+  <li><a href="#forms-of-distributional-preferences" id="toc-forms-of-distributional-preferences" class="nav-link" data-scroll-target="#forms-of-distributional-preferences"><span class="header-section-number">49.4.1</span> Forms of distributional preferences</a></li>
+  <li><a href="#example-the-trust-game" id="toc-example-the-trust-game" class="nav-link" data-scroll-target="#example-the-trust-game"><span class="header-section-number">49.4.2</span> Example: the trust game</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../social-preferences/social-preferences.html">Social preferences</a></li><li class="breadcrumb-item"><a href="../social-preferences/distribution.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">People care about resource distribution</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">People care about resource distribution</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>Distributional preferences relate to how people value the relative distribution of resources among people.</li>
+<li>Distributional preferences can be incorporated into economic analysis by including others’ outcomes in utility functions.</li>
+<li>Altruism is a type of distributional preference where an individual places a positive weight on others’ outcomes. It can be pure (genuine concern for others) or impure (deriving satisfaction from doing good).</li>
+<li>Inequality aversion is a type of distributional preference where people dislike having less than others and may also dislike having more than others.</li>
+<li>We can also model other distributional preferences, including status-seeking, Rawlsian and utilitarian preferences.</li>
+</ul>
+<hr>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ZcJCsZ18-2A" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="introduction" class="level2" data-number="49.1">
+<h2 data-number="49.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">49.1</span> Introduction</h2>
+<p>In 2008, when the Sacramento Bee created <a href="https://www.sacbee.com/news/databases/state-pay/">a database</a> of California state worker salaries, University of California (UC) employees could learn about their colleagues’ pay for the first time. Researchers at three UC campuses studied the impact by randomly emailing some employees about the database <span class="citation" data-cites="card2012">(<a href="../references.html#ref-card2012" role="doc-biblioref">Card et al., 2012</a>)</span>.</p>
+<p>Employees who learned they earned below the median for their department and role reported lower job satisfaction and began searching for new positions. The effect was strongest among workers in the bottom quartile of their unit’s pay scale. A follow-up two to three years later suggested more lower-paid employees had left their positions.</p>
+<p>In contrast, employees above the median showed no changes in satisfaction or behaviour after learning about peer salaries.</p>
+<p>This research shows that people care about their position relative to others, not just their absolute circumstances. The dissatisfaction and subsequent job-seeking of low-paid UC employees revealed ‘distributional preferences’, preferences about the allocation of resources across individuals.</p>
+<p>To understand how social comparisons influence economic decisions, we can model these distributional preferences mathematically. Economists model distributional preferences by extending utility functions to include others’ outcomes, just as we model preferences over personal consumption.</p>
+<p>This approach allows us to analyse how social considerations influence economic decision-making in contexts ranging from charitable giving to workplace compensation. Understanding distributional preferences can help us explain behaviour that deviates from pure self-interest in experimental games. We can use them to examine how inequality and social comparisons affect economic decisions. This can inform the design of workplace arrangements and economic policies that account for social preferences</p>
+<p>In what follows, I examine two forms of distributional preferences in detail - altruism and inequality aversion - and consider other social preferences. Each helps explain different aspects of observed behaviour, from charitable giving motivated by altruism to rejection of unfair offers driven by inequality aversion.</p>
+</section>
+<section id="altruism" class="level2" data-number="49.2">
+<h2 data-number="49.2" class="anchored" data-anchor-id="altruism"><span class="header-section-number">49.2</span> Altruism</h2>
+<p>Altruism is concern for the outcomes of others, with positive weights on others’ wellbeing.</p>
+<p>To incorporate altruism, we give a positive weight to the utility of others in the utility function. Here’s a simple example where an individual’s utility depends on both their own outcome and another person’s:</p>
+<p><span class="math display">
+U_i(x_i,x_j)=x_i+\alpha x_j
+</span></p>
+<p>The utility of agent <span class="math inline">i</span>, <span class="math inline">U_i</span>, is a function of the the outcome for agent <span class="math inline">i</span>, <span class="math inline">x_i</span>, and agent <span class="math inline">j</span>, <span class="math inline">x_j</span>. <span class="math inline">\alpha</span> is some number greater than zero, with utility increasing linearly with an increased payoff for either agent.</p>
+<p>Altruism comes in two forms. Pure altruism reflects genuine concern for others’ wellbeing. Impure altruism occurs when people get a ‘warm glow’ from doing good, regardless of the actual impact on others.</p>
+<section id="example-the-public-goods-game" class="level3" data-number="49.2.1">
+<h3 data-number="49.2.1" class="anchored" data-anchor-id="example-the-public-goods-game"><span class="header-section-number">49.2.1</span> Example: the public goods game</h3>
+<p>Consider a public goods game where two players each have $10 and must simultaneously decide how much to contribute to a public project. The total contributions are multiplied by 1.5 and split equally between both players, regardless of their individual contributions.</p>
+<div id="fig-public-goods-game-process-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-public-goods-game-process-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;49.1: Public goods game process
+</figcaption>
+<div aria-describedby="fig-public-goods-game-process-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/public-goods-game-process-distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;49.1: Public goods game process"><img src="img/public-goods-game-process-distribution.png" class="img-fluid figure-img"></a>
+</div>
+</figure>
+</div>
+<p>This game captures real-world situations: work teams deciding effort on shared projects, neighbors contributing to community improvements, or countries investing in climate change mitigation.</p>
+<p>For this scenario, if both players contribute their full $10, the pot becomes $30 and each receives $15.</p>
+<div id="fig-public-goods-game-process-distribution-cooperate" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-public-goods-game-process-distribution-cooperate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;49.2: Public goods game process with cooperation
+</figcaption>
+<div aria-describedby="fig-public-goods-game-process-distribution-cooperate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/public-goods-game-process-distribution-cooperate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;49.2: Public goods game process with cooperation"><img src="img/public-goods-game-process-distribution-cooperate.png" class="img-fluid figure-img"></a>
+</div>
+</figure>
+</div>
+<p>If neither contributes, each keeps their $10.</p>
+<div id="fig-public-goods-game-process-distribution-no-cooperation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-public-goods-game-process-distribution-no-cooperation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;49.3: Public goods game process with no cooperation
+</figcaption>
+<div aria-describedby="fig-public-goods-game-process-distribution-no-cooperation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/public-goods-game-process-distribution-no-cooperation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;49.3: Public goods game process with no cooperation"><img src="img/public-goods-game-process-distribution-no-cooperation.png" class="img-fluid figure-img"></a>
+</div>
+</figure>
+</div>
+<p>If one contributes $10 and the other $0, the $15 pot is split equally so the contributor finishes with $7.50 and the non-contributor end up with $17.50.</p>
+<div id="fig-public-goods-game-process-distribution-defect" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-public-goods-game-process-distribution-defect-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;49.4: Public goods game process with defection
+</figcaption>
+<div aria-describedby="fig-public-goods-game-process-distribution-defect-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="img/public-goods-game-process-distribution-defect.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;49.4: Public goods game process with defection"><img src="img/public-goods-game-process-distribution-defect.png" class="img-fluid figure-img"></a>
+</div>
+</figure>
+</div>
+<p>A self-interested player would contribute nothing. For any contribution by the other player, keeping your money always gives a higher payoff. However, both players would be better off if they both contributed everything.</p>
+<p>Now suppose both players have altruistic preferences, placing a positive weight on the other’s outcome (albeit lower than the weight on their own outcome):</p>
+<p><span class="math display">
+U_i(x_i,x_j)=x_i+0.75x_j
+</span></p>
+<p>With these preferences, we can calculate whether contributing is optimal if the other person contributes. If the agent contributes, they receive utility from their $15 and the $15 received by the other agent.</p>
+<p><span class="math display">\begin{align*}
+U_i(\text{contribute})&amp;=15+0.75\times 15\\[6pt]
+&amp;=26.25
+\end{align*}</span></p>
+<p>If they do not contribute, they receive utility from their higher payoff of $17.50, but the lower payoff of $7.50 for the other agent acts as a drag.</p>
+<p><span class="math display">\begin{align*}
+U_i(\text{free ride})&amp;=17.50+0.75\times 7.50\\[6pt]
+&amp;=23.125
+\end{align*}</span></p>
+<p>With these altruistic preferences, contributing is optimal when the other player contributes. The weight placed on the other player’s payoff (<span class="math inline">\alpha=0.75</span>) makes cooperation the best response to cooperation.</p>
+<p>Contributing is actually the best response to any contribution by the other player. For example, here are the payoffs in response to a contribution of $0 by the other player. If the agent contributes, they receive utility from their $7.50 and the other player’s $17.50.</p>
+<p><span class="math display">\begin{align*}
+U_i(\text{contribute})&amp;=7.5+0.75\times 17.5 \\[6pt]
+&amp;=20.625
+\end{align*}</span></p>
+<p>If they do not contribute, they receive utility from their higher payoff of $10, but the lower payoff of $10 for the other player reduces their utility more than they gain for the increased personal payoff.</p>
+<p><span class="math display">\begin{align*}
+U_i(\text{free ride})&amp;=10+0.75\times 10 \\[6pt]
+&amp;=17.50
+\end{align*}</span></p>
+<p>An altruistic player would contribute even if the other player is not an altruist.</p>
+<p>This example shows how moderate altruism can overcome the free-rider problem in public goods provision. The positive weight two altruistic players place on the other’s outcome makes mutual contribution a Nash equilibrium.</p>
+</section>
+<section id="limitations-of-the-altruism-model" class="level3" data-number="49.2.2">
+<h3 data-number="49.2.2" class="anchored" data-anchor-id="limitations-of-the-altruism-model"><span class="header-section-number">49.2.2</span> Limitations of the altruism model</h3>
+<p>While altruism helps explain behaviours like charitable giving, it has limitations.</p>
+<p>Recall the ultimatum game. The first player (the proposer) receives a sum of money (say $10) and must offer some portion of it to the second player (the responder). The responder then has two options:</p>
+<ul>
+<li><p>Accept the offer: both players get the proposed split</p></li>
+<li><p>Reject the offer: both players get nothing</p></li>
+</ul>
+<p><a href="img/ultimatum-game-process-distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/ultimatum-game-process-distribution.png" class="img-fluid"></a></p>
+<p>Altruism can explain why proposers make generous offers, but it fails to explain why responders often reject low offers, knowingly reducing both players’ payoffs. Such rejection would require negative weights on outcomes, contradicting the altruism model.</p>
+</section>
+</section>
+<section id="inequality-aversion" class="level2" data-number="49.3">
+<h2 data-number="49.3" class="anchored" data-anchor-id="inequality-aversion"><span class="header-section-number">49.3</span> Inequality aversion</h2>
+<p>Inequality aversion offers an explanation for such rejections. We dislike being worse off than others, and to a lesser extent, we may feel uncomfortable being better off than others. This captures the intuition that people care about relative standing. Think of how employees react to learning their co-workers earn more, or the guilt some feel about their wealth relative to those in poverty.</p>
+<section id="a-model-of-inequality-aversion" class="level3" data-number="49.3.1">
+<h3 data-number="49.3.1" class="anchored" data-anchor-id="a-model-of-inequality-aversion"><span class="header-section-number">49.3.1</span> A model of inequality aversion</h3>
+<p>To understand how inequality aversion affects decision-making, we need a formal way to represent these preferences. <span class="citation" data-cites="fehr1999">Fehr and Schmidt (<a href="../references.html#ref-fehr1999" role="doc-biblioref">1999</a>)</span> developed an influential model that captures both the dislike of having less than others and the potential discomfort of having more.</p>
+<p>In their model, the utility of agent <span class="math inline">i</span>, <span class="math inline">u_i</span>, is a function of the payoff of agent <span class="math inline">i</span> and the payoff of agent <span class="math inline">j</span>.</p>
+<p><span class="math display">
+u_i(x_i,x_j)=x_i-\alpha\text{max}\{x_j-x_i,0\}-\beta\text{max}\{x_i-x_j,0\} \\[12pt]
+\alpha&gt;0 \quad \textrm{and} \quad \beta&gt;0
+</span></p>
+<p>Each term in this equation represents a distinct psychological effect:</p>
+<ul>
+<li><p><span class="math inline">x_i</span> is their own outcome, such as their payoff or salary</p></li>
+<li><p><span class="math inline">\alpha\text{max}\{x_j-x_i,0\}</span> captures the sting of disadvantageous inequality, like discovering your colleague earns more than you</p></li>
+<li><p><span class="math inline">\beta\text{max}\{x_i-x_j,0\}</span> represents the discomfort of advantageous inequality, like feeling guilty about your high salary compared to others or the guilt of making a low offer in the ultimatum game.</p></li>
+</ul>
+<p>The <span class="math inline">\text{max}</span> function ensures that only the relevant term is included. If agent <span class="math inline">i</span> has more than the other player, with <span class="math inline">x_i</span> higher than <span class="math inline">x_j</span>, the disadvantageous inequality term is zero. If agent <span class="math inline">i</span> has less, the advantageous inequality term is zero.</p>
+<p>To present the utility function in a form you may find more intuitive without the <span class="math inline">\text{max}</span> function, we can rewrite it with utility of agent <span class="math inline">i</span> being their own payoff, minus a penalty for either advantageous or disadvantageous inequality.</p>
+<p><span class="math display">
+u_i(x_i,x_j)=x_i-\left\{\begin{matrix}
+\beta(x_i-x_j) \quad &amp;\textrm{if} \quad x_i \geq x_j \\[6pt]
+\alpha(x_j-x_i) \quad &amp;\textrm{if} \quad x_i &lt; x_j
+\end{matrix}\right.
+</span></p>
+<p>Typically <span class="math inline">\alpha&gt;\beta</span> as people dislike having less than others more than they dislike having more than others. We could also set <span class="math inline">\beta&lt;0</span> for an agent that likes to be better off than others.</p>
+<p>To visualise how inequality aversion affects utility, the following graph shows a plot of utility as a function of <span class="math inline">x_i</span>.</p>
+<p>This utility function has a kink at <span class="math inline">x_j</span> where agent <span class="math inline">i</span> moves from having less to more than agent <span class="math inline">j</span>. Below <span class="math inline">x_j</span>, utility increases due to both the increasing material outcome for agent <span class="math inline">i</span>, plus the reduction in inequality. If <span class="math inline">\beta</span> is between 0 and 1 as in this diagram, the utility of agent <span class="math inline">i</span>, <span class="math inline">U(x_i)</span>, continues to increase in <span class="math inline">x_i</span> above <span class="math inline">x_j</span>, but at a decreasing rate, as inequality degrades the benefits of having more.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define parameter values</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x_i <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="at">by=</span><span class="fl">0.1</span>)  <span class="co"># Range of x_i values</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x_j <span class="ot">&lt;-</span> <span class="dv">5</span>                    <span class="co"># Fixed reference point</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.5</span>                <span class="co"># Disadvantageous inequality parameter</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.25</span>                <span class="co"># Advantageous inequality parameter</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Define utility function</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns utility value given own payoff (x_i), reference payoff (x_j), and inequality parameters</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>u_i <span class="ot">&lt;-</span> <span class="cf">function</span>(x_i, x_j, alpha, beta) {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a> <span class="fu">ifelse</span>(x_i <span class="sc">&gt;=</span> x_j, </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        x_i <span class="sc">-</span> beta<span class="sc">*</span>(x_i <span class="sc">-</span> x_j),    <span class="co"># Case where x_i is higher</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        x_i <span class="sc">-</span> alpha<span class="sc">*</span>(x_j <span class="sc">-</span> x_i))    <span class="co"># Case where x_i is lower</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe for plotting</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x_i=</span>x_i, <span class="at">u_i=</span><span class="fu">u_i</span>(x_i, x_j, alpha, beta))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate plot</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x=</span>x_i, <span class="at">y=</span>u_i)) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept=</span>x_j, <span class="at">linetype=</span><span class="st">"dashed"</span>) <span class="sc">+</span>  <span class="co"># Reference point line</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add x_j label to vertical line</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span>x_j, <span class="at">y=</span><span class="fu">max</span>(df<span class="sc">$</span>u_i), <span class="at">label=</span><span class="fu">expression</span>(x[j]), <span class="at">vjust=</span><span class="sc">-</span><span class="dv">0</span>, <span class="at">size=</span><span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add slope labels at appropriate positions</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">2</span>, <span class="at">y=</span><span class="dv">2</span>, <span class="at">label=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"slope = "</span>, <span class="dv">1</span> <span class="sc">+</span> alpha)), <span class="at">size=</span><span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="fl">6.3</span>, <span class="at">label=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"slope = "</span>, <span class="dv">1</span> <span class="sc">-</span> beta)), <span class="at">size=</span><span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">x=</span><span class="fu">expression</span>(x[i]),</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="fu">expression</span>(u[i](x[i]<span class="sc">*</span><span class="st">","</span><span class="sc">*</span>x[j]))</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a> <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a> <span class="fu">theme</span>(</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">hjust=</span><span class="fl">0.5</span>, <span class="at">size=</span><span class="dv">14</span>),</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">hjust=</span><span class="fl">0.95</span>, <span class="at">vjust=</span><span class="dv">29</span>, <span class="at">size=</span><span class="dv">14</span>),</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),    <span class="co"># Remove x-axis numbers</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>       )    <span class="co"># Remove y-axis numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-inequality-aversion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-inequality-aversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;49.5: An inequality aversion utility function
+</figcaption>
+<div aria-describedby="fig-inequality-aversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="distribution_files/figure-html/fig-inequality-aversion-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;49.5: An inequality aversion utility function"><img src="distribution_files/figure-html/fig-inequality-aversion-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-the-ultimatum-game" class="level3" data-number="49.3.2">
+<h3 data-number="49.3.2" class="anchored" data-anchor-id="example-the-ultimatum-game"><span class="header-section-number">49.3.2</span> Example: the ultimatum game</h3>
+<p>This theoretical model of inequality aversion helps explain real-world behaviors that cannot explained by pure self-interest. This includes behaviour in the ultimatum game, a classic example where people often act against their material self-interest.</p>
+<p>A purely self-interested responder should accept any non-zero offer, as something is better than nothing. Yet people often reject unfair offers, such as job candidates rejecting a low salary even though this leaves both parties worse off. The pain of inequality outweighs the cash.</p>
+<p>Suppose the responder in the ultimatum game has inequality averse preferences with <span class="math inline">\beta=0.25</span> and <span class="math inline">\alpha=0.5</span>. <span class="math display">
+u_i(x_i,x_j)=x_i-0.5\text{max}\{x_j-x_i,0\}-0.25\text{max}\{x_i-x_j,0\}
+</span></p>
+<p>What offers <span class="math inline">x</span> would the responder reject where the proposer has $10 to split between them?</p>
+<p>If the responder rejects, the payoff to the proposer and responder is zero. That is:</p>
+<p><span class="math display">
+x_P=x_R=0
+</span></p>
+<p>If the responder accepts, the responder receives <span class="math inline">x</span>, and the proposer keeps the remainder. That is:</p>
+<p><span class="math display">\begin{align*}
+x_P&amp;=10−x \\[6pt]
+x_R&amp;=x
+\end{align*}</span></p>
+<p>The responder will accept if the utility of accepting is greater than the utility of rejecting.</p>
+<p><span class="math display">
+U_R(\text{accept})&gt;U_R(\text{reject})
+</span></p>
+<p>I will examine offers above and then below $5. First, I will look at offers above.</p>
+<p>We substitute the utility function into the inequality. As the <span class="math inline">\alpha</span> term equals zero, I do not include it here. We then enter the ultimatum game outcomes for acceptance and simplify.</p>
+<p><span class="math display">\begin{align*}
+U_R(\text{accept})&amp;&gt;U_R(\text{reject}) \\[6pt]
+x_R−\beta(x_R−x_P)&amp;&gt;0 \\[6pt]
+x-0.25(x-(10-x))&amp;&gt;0 \\[6pt]
+x−0.25(2x−10)&amp;&gt;0
+\end{align*}</span></p>
+<p>This inequality will hold for any <span class="math inline">\beta&lt;1</span> as <span class="math inline">x \geq 2x-10</span> for any <span class="math inline">x \leq 10</span>. Therefore, the condition will hold for the agent with <span class="math inline">\beta=0.25</span>. Recall that if <span class="math inline">\beta&lt;1</span> the responder has higher utility from a higher payoff but at a decreasing rate when they have more than the proposer.</p>
+<p>When the offer is below $5, the responder gets less than the proposer, so only <span class="math inline">\alpha</span> matters. Again, I substitute the utility function into the inequality, enter the ultimatum game outcomes and simplify.</p>
+<p><span class="math display">\begin{align*}
+U_R(\text{accept})&amp;&gt;U_R(\text{reject}) \\[6pt]
+x_R−\alpha(x_P−x_R)&amp;&gt;0 \\[6pt]
+x−0.5(10−x-x)&amp;&gt;0 \\[6pt]
+x&amp;&gt;2.50
+\end{align*}</span></p>
+<p>The responder with <span class="math inline">\alpha=1/2</span> will reject offers below $2.50.</p>
+<p>We can plot the utility of the responder as a function of the offer <span class="math inline">x</span>. As the offer is not independent of the proposer’s payoff, I will derive the shape of the utility curve as a function of <span class="math inline">x_R=x</span>. I do this by substituting the payoffs and values of alpha into the utility function.</p>
+<p><span class="math display">\begin{align*}
+U_R(x_P,x_R)&amp;=x_R-\alpha\text{max}\{x_P-x_R,0\}-\beta\text{max}\{x_R-x_P,0\} \\[6pt]
+&amp;=x-0.5\text{max}\{10-2x,0\}-0.25\text{max}\{2x-10,0\}
+\end{align*}</span></p>
+<p>We can also write this equation to explicitly show the slope of the curve. I first manipulate the equation into a form showing the slope times (x) plus intercept. I then simplify.</p>
+<p><span class="math display">\begin{align*}
+U_R(x)&amp;=\left\{\begin{matrix}
+(1+2\alpha)x−10\alpha \quad &amp;\textrm{if} \quad x &lt; 5 \\[6pt]
+(1−2\beta)x+10\beta \quad &amp;\textrm{if} \quad x \geq 5
+\end{matrix}\right. \\[12pt]
+&amp;=\left\{\begin{matrix}
+2x−5 \qquad &amp;\textrm{if} \quad x &lt; 5 \\[6pt]
+0.5x+2.5 \qquad &amp;\textrm{if} \quad x \geq 5
+\end{matrix}\right.
+\end{align*}</span></p>
+<p>This diagram shows the responder’s utility curve as a function of the offer <span class="math inline">x</span>. The slope of the curve for <span class="math inline">x&lt;5</span> is <span class="math inline">1+2\alpha=2</span> and for <span class="math inline">x\geq5</span> is <span class="math inline">1-2\beta=0.5</span>. These slopes differ from our earlier inequality aversion utility plot because, here, any gain for the responder means an equal loss for the proposer.</p>
+<p>This relationship creates a double effect on inequality. Consider an offer increase from $4 to $5: the responder’s payoff rises by $1, but the gap between players shrinks by $2. This explains why the slope is steeper when behind.</p>
+<p>The opposite happens when the responder is ahead. If the offer increases from $6 to $7, the responder gains $1 but inequality grows by $2. This larger penalty for inequality acts as a drag on utility, making the slope flatter.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define parameter values</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x_R <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="at">by=</span><span class="fl">0.1</span>)  <span class="co"># Range of x_R values</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>x_5 <span class="ot">&lt;-</span> <span class="dv">5</span>                    <span class="co"># Point where x_R = x_P</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.5</span>                <span class="co"># Disadvantageous inequality parameter</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.25</span>                <span class="co"># Advantageous inequality parameter</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Define utility function</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns utility value given own payoff (x_R), proposer payoff (x_P), and inequality parameters</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>u_i <span class="ot">&lt;-</span> <span class="cf">function</span>(x_R, x_P, alpha, beta) {</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="fu">ifelse</span>(x_R <span class="sc">&gt;=</span> x_P, </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>beta)<span class="sc">*</span>x_R <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>beta,    <span class="co"># Case where x_R is higher</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>alpha)<span class="sc">*</span>x_R <span class="sc">-</span> <span class="dv">10</span><span class="sc">*</span>alpha</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        )    <span class="co"># Case where x_R is lower</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe for plotting</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x_i=</span>x_i, <span class="at">u_i=</span><span class="fu">u_i</span>(x_i, x_j, alpha, beta))</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate plot</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x=</span>x_i, <span class="at">y=</span>u_i)) <span class="sc">+</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span> </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth=</span><span class="fl">0.25</span>)<span class="sc">+</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept=</span>x_j, <span class="at">linetype=</span><span class="st">"dashed"</span>) <span class="sc">+</span>  <span class="co"># Reference point line</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add slope labels at appropriate positions</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">2</span>, <span class="at">y=</span><span class="fl">1.4</span>, <span class="at">label=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"slope = "</span>, <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>alpha)), <span class="at">size=</span><span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="fl">5.8</span>, <span class="at">label=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"slope = "</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>beta)), <span class="at">size=</span><span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add arrow and text for high beta note</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="dv">8</span>, <span class="at">label=</span><span class="st">"For high enough β, the slope</span><span class="sc">\n</span><span class="st">of this part could be negative"</span>, <span class="at">size=</span><span class="fl">3.5</span>) <span class="sc">+</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">8</span>, <span class="at">y=</span><span class="fl">7.5</span>, <span class="at">xend=</span><span class="dv">8</span>, <span class="at">yend=</span><span class="fl">6.5</span>), <span class="at">arrow=</span><span class="fu">arrow</span>(<span class="at">length=</span><span class="fu">unit</span>(<span class="fl">0.2</span>, <span class="st">"cm"</span>))) <span class="sc">+</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="dv">4</span>, <span class="at">y=</span><span class="sc">-</span><span class="dv">3</span>, <span class="at">label=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"The responder would reject any offer below "</span>, <span class="fu">bar</span>(x))), <span class="at">size=</span><span class="fl">3.5</span>) <span class="sc">+</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fl">3.5</span>, <span class="at">y=</span><span class="sc">-</span><span class="fl">2.5</span>, <span class="at">xend=</span><span class="fl">2.8</span>, <span class="at">yend=</span><span class="sc">-</span><span class="fl">0.5</span>), <span class="at">arrow=</span><span class="fu">arrow</span>(<span class="at">length=</span><span class="fu">unit</span>(<span class="fl">0.2</span>, <span class="st">"cm"</span>))) <span class="sc">+</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x=</span><span class="fl">2.5</span>, <span class="at">y=</span><span class="dv">0</span>, <span class="at">label=</span><span class="fu">expression</span>(<span class="fu">bar</span>(x)), <span class="at">size=</span><span class="dv">6</span>, <span class="at">vjust=</span><span class="fl">1.8</span>) <span class="sc">+</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">x=</span><span class="fu">expression</span>(x[R]<span class="sc">*</span><span class="st">"="</span><span class="sc">*</span>x),</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="fu">expression</span>(u[R](x))</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a> <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a> <span class="fu">theme</span>(</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">margin=</span><span class="fu">margin</span>(<span class="at">r=</span><span class="sc">-</span><span class="dv">20</span>), <span class="at">vjust=</span><span class="dv">1</span>, <span class="at">size=</span><span class="dv">14</span>),</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">hjust=</span><span class="fl">0.98</span>, <span class="at">vjust=</span><span class="dv">47</span>, <span class="at">size=</span><span class="dv">14</span>)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>       )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-inequality-aversion-ultimatum" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-inequality-aversion-ultimatum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;49.6: Utility curve for the responder in the ultimatum game with inequality aversion
+</figcaption>
+<div aria-describedby="fig-inequality-aversion-ultimatum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="distribution_files/figure-html/fig-inequality-aversion-ultimatum-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;49.6: Utility curve for the responder in the ultimatum game with inequality aversion"><img src="distribution_files/figure-html/fig-inequality-aversion-ultimatum-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<p>The curve has a kink at <span class="math inline">x=5</span> where the responder moves from having less to more than the proposer. The point where the curve crosses the x-axis represents the point below which the responder would reject the offer.</p>
+</section>
+<section id="example-the-dictator-game" class="level3" data-number="49.3.3">
+<h3 data-number="49.3.3" class="anchored" data-anchor-id="example-the-dictator-game"><span class="header-section-number">49.3.3</span> Example: the dictator game</h3>
+<p>While the ultimatum game shows how inequality aversion affects responses to unfair offers, the dictator game helps us understand how inequality aversion might influence giving behaviour.</p>
+<p>In the dictator game, the dictator makes a unilateral offer to the receiver. The game then ends. The receiver has an empty strategy set.</p>
+<p><a href="img/dictator-game-process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/dictator-game-process.png" class="img-fluid"></a></p>
+<p>In this version of the game, the dictator has a constrained choice set and must decide between the allocations (0, 1) and (1, 5). That is, the dictator must choose between 0 for themselves and 1 for the receiver, or 1 for themselves and 5 for the receiver. The dictator’s <span class="math inline">\alpha=1/2</span>. As the dictator has less than the other player under each distribution, <span class="math inline">\alpha</span> is the relevant parameter.</p>
+<p><a href="img/dictator-game-distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/dictator-game-distribution.png" class="img-fluid" style="width:80.0%"></a></p>
+<p>We can calculate the dictator’s utility of each allocation. The (0,1) allocation gives a utility of zero for the dictator’s payoff minus alpha times the inequality.</p>
+<p><span class="math display">\begin{align*}
+U_D(0,1)&amp;=0-\alpha\times (1-0) \\[6pt]
+&amp;=-1/2 \times 1 \\[6pt]
+&amp;=−1/2
+\end{align*}</span></p>
+<p>The (1,5) allocation gives a utility of one for the dictator’s payoff minus alpha times the larger inequality.</p>
+<p><span class="math display">\begin{align*}
+U_D(1,5)&amp;=1-\alpha\times (5-1) \\[6pt]
+&amp;=1-1/2 \times 4 \\[6pt]
+&amp;=−1
+\end{align*}</span></p>
+<p>The dictator prefers to allocate (0,1) as the cost of the inequality is greater than the benefit from the increased payoff.</p>
+<p><span class="math inline">\alpha&gt;0</span> can also account for the rejection of low offers in the ultimatum game.</p>
+</section>
+</section>
+<section id="other-distributional-preferences" class="level2" data-number="49.4">
+<h2 data-number="49.4" class="anchored" data-anchor-id="other-distributional-preferences"><span class="header-section-number">49.4</span> Other distributional preferences</h2>
+<p>While altruism and inequality aversion explain many observed behaviours, they are not the only types of social preference. Rearranging the inequality aversion model reveals the direct weights people place on others’ outcomes. Where <span class="math inline">x_i&gt;x_j</span>, agent <span class="math inline">i</span> places weight of <span class="math inline">\beta</span> on the other’s outcome and <span class="math inline">1-\beta</span> on their own. Where <span class="math inline">x_i&lt;x_j</span>, agent <span class="math inline">i</span> places weight of <span class="math inline">-\alpha</span> on the other’s outcome and <span class="math inline">1+\alpha</span> on their own.</p>
+<p><span class="math display">
+u_i(x_i,x_j)=\left\{\begin{matrix}
+\beta x_j+(1-\beta)x_i \quad &amp;\textrm{if} \quad x_i \geq x_j \\[6pt]
+-\alpha x_j+(1+\alpha)x_i \quad &amp;\textrm{if} \quad x_i &lt; x_j
+\end{matrix}\right.
+</span></p>
+<p>Arranging in this way makes the weight given to the outcomes for each agent more transparent. It provides a more intuitive way to consider some distributional preferences.</p>
+<p><span class="citation" data-cites="charness2002">Charness and Rabin (<a href="../references.html#ref-charness2002" role="doc-biblioref">2002</a>)</span> used this form with parameters <span class="math inline">\sigma</span> and <span class="math inline">\rho</span> (where <span class="math inline">\sigma=-\alpha</span> and <span class="math inline">\rho=\beta</span>). We’ll follow their approach since having parameters with the same sign makes the analysis more intuitive.</p>
+<p><span class="math display">
+u_i(x_i,x_j)=\left\{\begin{matrix}
+\rho x_j+(1-\rho)x_i \quad &amp;\textrm{if} \quad x_i \geq x_j \\[6pt]
+\sigma x_j+(1-\sigma)x_i \quad &amp;\textrm{if} \quad x_i &lt; x_j
+\end{matrix}\right.
+</span></p>
+<section id="forms-of-distributional-preferences" class="level3" data-number="49.4.1">
+<h3 data-number="49.4.1" class="anchored" data-anchor-id="forms-of-distributional-preferences"><span class="header-section-number">49.4.1</span> Forms of distributional preferences</h3>
+<p>We can adjust the values of <span class="math inline">\rho</span> and <span class="math inline">\sigma</span> to capture many forms of distributional preferences. Some are as follows.</p>
+<p>An altruistic agent has <span class="math inline">\sigma&gt;0</span> and <span class="math inline">\rho&gt;0</span>. They weight others’ payoffs positively in all situations. When someone else gains a dollar, it directly increases the agent’s utility, regardless of whether they are ahead or behind. Compared to our earlier altruism model, this model allows for different degrees of altruism depending on the relative payoffs of the two agents.</p>
+<p>An inequality-averse agent has <span class="math inline">1\geq\rho &gt; 0&gt;\sigma</span>. They like gains for others who are behind but dislike falling further behind themselves. This inequality is equivalent to <span class="math inline">\alpha&gt;0</span> and <span class="math inline">\beta&gt;0</span> in the Fehr-Schmidt model.</p>
+<p>A status-seeking agent has <span class="math inline">0&gt;\rho\geq\sigma</span>. Not only do they dislike others gaining, they actively prefer having more than others. Their utility goes up when either they get more or the other player gets less.</p>
+<p>A classically self-interested agent has <span class="math inline">\rho=\sigma=0</span>. Their utility depends only on their own payoff.</p>
+<p>A Rawlsian agent has <span class="math inline">\rho=1</span> and <span class="math inline">\sigma=0</span>, making their utility <span class="math inline">u_i(x_i,x_j)=\text{min}\{x_i,x_j\}</span>. They maximise the minimum payoff across all players, showing pure concern for the worst-off individual.</p>
+<p>A utilitarian agent has <span class="math inline">\rho=\sigma=1/2</span>, making their utility <span class="math inline">u_i(x_i,x_j)=x_i+x_j</span>. They weight everyone’s payoff equally and simply sum the total, caring about efficiency rather than distribution.</p>
+</section>
+<section id="example-the-trust-game" class="level3" data-number="49.4.2">
+<h3 data-number="49.4.2" class="anchored" data-anchor-id="example-the-trust-game"><span class="header-section-number">49.4.2</span> Example: the trust game</h3>
+<p>Let’s use this form of the utility function to analyse the outcomes in a trust game, where an investor must decide whether to trust an entrepreneur with their money.</p>
+<p>The trust game provides a lens for understanding how social preferences affect economic transactions where success requires sequential cooperation and trust. The trust game captures two key real-world dynamics. First, one party must choose whether to make themselves vulnerable to exploitation by trusting the other. Second, the trusted party must then decide whether to honour or betray that trust.</p>
+<p><a href="img/trust-game-process.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/trust-game-process.png" class="img-fluid"></a></p>
+<p>This structure mirrors some common economic situations. Investors must decide whether to trust entrepreneurs with capital before knowing if they will act in good faith. Business partners often need to commit resources before knowing if their counterparts will uphold their end of the deal. Even simple transactions, like paying in advance for services, involve one party trusting another to deliver as promised.</p>
+<p>In the exercises in <a href="../game-theory/game-theory-exercises.html#sec-investment" class="quarto-xref"><span>Section 44.3</span></a>, I considered a scenario between Linda, a potential investor, and Marco, an entrepreneur. This mirrors common situations where investors must decide whether to trust entrepreneurs with capital, and entrepreneurs must choose between short-term gain and maintaining their reputation. Their choices will depend not just on monetary payoffs, but on how each values the other’s outcomes.</p>
+<blockquote class="blockquote">
+<p>Linda is looking for investment opportunities. She identifies a promising crypto-based start-up created by Marco. Marco is looking for seed funding.</p>
+<p>Linda can invest $10.</p>
+<p>If Linda invests, her investment will triple in value. Marco can then decide to either shut down the start-up and keep the $30 or maintain the start-up in the market and pay a $15 dividend to each of Linda and himself.</p>
+<p>If Linda does not invest, Linda keeps the $10. The start-up gets $0.</p>
+</blockquote>
+<p><a href="img/trust-game-investment.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/trust-game-investment.png" class="img-fluid"></a></p>
+<p>Marco is effectively playing a dictator game. If he were purely self-interested, he would shut down and keep the $30. As a result, a purely self-interested Linda would not invest.</p>
+<p><a href="img/trust-game-investment-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="img/trust-game-investment-solved.png" class="img-fluid"></a></p>
+<p>Let’s examine both players’ actions if their utility functions place weight on the outcome of the other. <span class="math inline">U_L</span> and <span class="math inline">U_M</span> are Linda and Marco’s utility. <span class="math inline">x_L</span> and <span class="math inline">x_M</span> are the outcomes for Linda and Marco.</p>
+<p>Linda’s utility function shows moderate concern for Marco’s outcomes: <span class="math display">
+U_L(x_M,x_L)=\left\{\begin{matrix}
+\frac{2}{3}x_M+\frac{1}{3}x_L \quad &amp;\textrm{if} \quad x_L \geq x_M\\[6pt]
+\frac{1}{3}x_M+\frac{2}{3}x_L \quad &amp;\textrm{if} \quad x_L &lt; x_M
+\end{matrix}\right.
+</span></p>
+<p>When Linda is ahead, she places more weight on Marco’s payoff (<span class="math inline">\rho=2/3</span>) than her own (<span class="math inline">1-\rho=1/3</span>), suggesting significant altruism. When behind, she still values Marco’s payoff positively (<span class="math inline">\sigma=1/3</span>), but prioritises her own outcome (<span class="math inline">1-\sigma=2/3</span>).</p>
+<p>Marco’s preferences are more asymmetric:</p>
+<p><span class="math display">
+U_M(x_L,x_M)=\left\{\begin{matrix}
+\frac{3}{4}x_L+\frac{1}{4}x_M \quad &amp;\textrm{if} \quad x_M \geq x_L\\[6pt]
+x_M \quad &amp;\textrm{if} \quad x_M &lt; x_L
+\end{matrix}\right.
+</span></p>
+<p>He shows concern for Linda’s outcomes only when he’s ahead, otherwise focusing solely on his own payoff. This asymmetry reflects a mix of self-interest and conditional altruism.</p>
+<p>If Marco and Linda know each other’s utility functions, what is the equilibrium with these distributional preferences?</p>
+<p>If Linda chooses trust, Marco has a choice between $15 each and $30 for himself. Marco calculates the utility of each option.</p>
+<p><span class="math display">\begin{align*}
+U_M(15,15)&amp;=\frac{3}{4}(15)+\frac{1}{4}(15)\\[12pt]
+&amp;=15 \\[12pt]
+U_M(0,30)&amp;=\frac{3}{4}(0)+\frac{1}{4}(30) \\[12pt]
+&amp;=7.5
+\end{align*}</span></p>
+<p>Marco receives higher utility by paying the dividend to Linda.</p>
+<p>We can also calculate Linda’s utility for each of Marco’s options if she chooses to trust.</p>
+<p><span class="math display">\begin{align*}
+U_L(15,15)&amp;=\frac{2}{3}(15)+\frac{1}{3}(15) \\[12pt]
+&amp;=15 \\[12pt]
+U_L(0,30)&amp;=\frac{1}{3}(30)+\frac{2}{3}(30) \\[12pt]
+&amp;=10
+\end{align*}</span></p>
+<p>Linda’s utility is higher if Marco pays a dividend.</p>
+<p>For the other node, if Linda does not invest, she will keep $10. Marco will have nothing. Each has the following utility from that failure to invest.</p>
+<p><span class="math display">\begin{align*}
+U_M(10,0)&amp;=0 \\
+\\
+U_L(0,10)&amp;=\frac{2}{3}(0)+\frac{1}{3}(10) \\[12pt]
+&amp;=3.33
+\end{align*}</span></p>
+<p>Putting those payoffs into the extensive form of the game, we get the following, with payoffs of (15,15) if Linda invests and Marco returns the dividend, (10,7.5) if Linda invests and Marco does not return the dividend, and (3.33,0) if Linda does not invest.</p>
+<p><a href="img/trust-game-investment-inequality.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="img/trust-game-investment-inequality.png" class="img-fluid"></a></p>
+<p>To solve for the game’s equilibrium, we use backward induction, starting with Marco’s decision if Linda invests.</p>
+<p>Marco can return a dividend for utility 15 or shut down for utility 7.5. He chooses to return the dividend. As a result, Linda will invest for utility 15, rather than not invest for utility 3.33. Linda invests.</p>
+<p><a href="img/trust-game-investment-inequality-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="img/trust-game-investment-inequality-solved.png" class="img-fluid"></a></p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-card2012" class="csl-entry" role="listitem">
+Card, D., Mas, A., Moretti, E., and Saez, E. (2012). Inequality at Work: The Effect of Peer Salaries on Job Satisfaction. <em>American Economic Review</em>, <em>102</em>(6), 2981–3003. <a href="https://doi.org/10.1257/aer.102.6.2981">https://doi.org/10.1257/aer.102.6.2981</a>
+</div>
+<div id="ref-charness2002" class="csl-entry" role="listitem">
+Charness, G., and Rabin, M. (2002). Understanding social preferences with simple tests. <em>The Quarterly Journal of Economics</em>, <em>117</em>(3), 817–869. <a href="https://www.jstor.org/stable/4132490">https://www.jstor.org/stable/4132490</a>
+</div>
+<div id="ref-fehr1999" class="csl-entry" role="listitem">
+Fehr, E., and Schmidt, K. M. (1999). A theory of fairness, competition, and cooperation. <em>The Quarterly Journal of Economics</em>, <em>114</em>(3), 817–868. <a href="https://www.jstor.org/stable/2586885">https://www.jstor.org/stable/2586885</a>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../social-preferences/social-preferences.html" class="pagination-link" aria-label="Social preferences">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Social preferences</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../social-preferences/reputation.html" class="pagination-link" aria-label="Reputation">
+        <span class="nav-page-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Reputation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">
+<p>Copyright: CC-BY</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jasonacollins/behaviouraleconomics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
