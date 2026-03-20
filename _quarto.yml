@@ -3,7 +3,7 @@ project:
 
 book:
   title: "Notes on behavioural economics"
-  site-url: https://behaviouraleconomics.jasoncollins.blog
+  site-url: https://be.jcx.au
   author: "Jason Collins"
   date: "20 May 2025"
   date-format: D MMMM YYYY
@@ -92,9 +92,9 @@ book:
     search: true
     right:
       - text: "Blog"
-        href: https://www.jasoncollins.blog/
+        href: https://blog.jcx.au/
       - text: "About"
-        href: https://www.jasoncollins.blog/about/
+        href: https://blog.jcx.au/about/
   sidebar:
     collapse-level: 1
     style: "floating"

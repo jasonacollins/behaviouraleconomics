@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.23">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,14 +69,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../prospect-theory/prospect-theory-implementation.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-61b399986b2e786a8f3d560b8bfb14aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5d5643465747552cd5c9df1f25b45fae.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -145,7 +146,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -164,13 +165,13 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="18&nbsp; Prospect theory examples – Notes on behavioural economics">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
+<meta property="og:image" content="https://be.jcx.au/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
 <meta property="og:site_name" content="Notes on behavioural economics">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="18&nbsp; Prospect theory examples – Notes on behavioural economics">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://behaviouraleconomics.jasoncollins.blog/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
+<meta name="twitter:image" content="https://be.jcx.au/prospect-theory/prospect-theory-examples_files/figure-html/fig-50-50-gamble-1.png">
 <meta name="twitter:image-height" content="960">
 <meta name="twitter:image-width" content="1344">
 <meta name="twitter:card" content="summary_large_image">
@@ -183,6 +184,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Notes on behavioural economics</span>
     </a>
@@ -194,11 +197,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/"> 
+    <a class="nav-link" href="https://blog.jcx.au/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.jasoncollins.blog/about/"> 
+    <a class="nav-link" href="https://blog.jcx.au/about/"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -223,6 +226,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -791,7 +798,7 @@ V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -849,7 +856,7 @@ V(A)&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"E[A]"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.3</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-50-50-gamble" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -889,7 +896,7 @@ V(\neg A)&amp;=v(-100) \\[6pt]
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -953,7 +960,7 @@ V(\neg A)&amp;=v(-100) \\[6pt]
 <span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"E[A]"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
 <span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-50-50-gamble-after-loss" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -995,7 +1002,7 @@ V(\neg A)&amp;=v(10000) \\[6pt]
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1059,7 +1066,7 @@ V(\neg A)&amp;=v(10000) \\[6pt]
 <span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"E[A]"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
 <span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-50-50-gamble-after-win" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1107,7 +1114,7 @@ V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1165,7 +1172,7 @@ V(\text{A})&amp;=p_1v(x_1)+p_2v(x_2) \\[6pt]
 <span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"E[A]"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.4</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
 <span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-60-40-gamble" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1203,7 +1210,7 @@ V(\neg\text{A})&amp;=v(-150) \\[6pt]
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1261,7 +1268,7 @@ V(\neg\text{A})&amp;=v(-150) \\[6pt]
 <span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"E[A]=-100"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
 <span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-60-40-gamble-after-loss" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1293,7 +1300,7 @@ x^{1/2} \qquad &amp;\textrm{where} &amp;\space x \geq 0\\
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1322,7 +1329,7 @@ x^{1/2} \qquad &amp;\textrm{where} &amp;\space x \geq 0\\
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">vjust=</span><span class="fl">0.5</span>))<span class="sc">+</span></span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="co">#limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">220</span>, <span class="dv">220</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">15</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">220</span>, <span class="dv">220</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">15</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-bill-curve" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1362,7 +1369,7 @@ V(\$100)&amp;=v(100)\\[6pt]
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1424,7 +1431,7 @@ V(\$100)&amp;=v(100)\\[6pt]
 <span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"E[A]=125"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.12</span>, <span class="at">vjust =</span> <span class="fl">1.5</span>)<span class="sc">+</span></span>
 <span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-bill-gamble" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1451,7 +1458,7 @@ Figure&nbsp;18.7: Bill’s consideration of gamble A and the $100
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1515,7 +1522,7 @@ Figure&nbsp;18.7: Bill’s consideration of gamble A and the $100
 <span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"L+E[A]"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span></span>
 <span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(L+A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="st">"V(L+A)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-bill-gamble-after-shock" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1623,7 +1630,7 @@ u(x)=x
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
@@ -1663,7 +1670,7 @@ u(x)=x
 <span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">#limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)</span></span>
 <span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">100</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>))</span>
 <span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>insurance_eu_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>insurance_eu_1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-eu-curve" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1682,7 +1689,7 @@ Figure&nbsp;18.9: The utility function of a risk-averse agent
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
@@ -1724,7 +1731,7 @@ Figure&nbsp;18.9: The utility function of a risk-averse agent
 <span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1), <span class="at">xend =</span> x1, <span class="at">yend =</span> <span class="fu">u</span>(x1), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
 <span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1), <span class="at">label =</span> <span class="st">"U(W-H)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span>
 <span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>insurance_eu_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>insurance_eu_2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-eu-outcomes" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1743,7 +1750,7 @@ Figure&nbsp;18.10: The utility of the outcomes of purchasing insurance and not p
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
@@ -1770,7 +1777,7 @@ Figure&nbsp;18.10: The utility of the outcomes of purchasing insurance and not p
 <span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Add expected utility line</span></span>
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> x2, <span class="at">xend =</span> x1, <span class="at">y =</span> <span class="fu">u</span>(x2), <span class="at">yend =</span> <span class="fu">u</span>(x1), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotdash"</span>)</span>
 <span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>insurance_eu_3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>insurance_eu_3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-eu-line" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1790,7 +1797,7 @@ Figure&nbsp;18.11: The expected utility line
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
@@ -1820,7 +1827,7 @@ Figure&nbsp;18.11: The expected utility line
 <span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="fu">TeX</span>(<span class="st">"E[U($</span><span class="sc">\\</span><span class="st">neg$ I)]"</span>, <span class="at">output=</span><span class="st">'character'</span>), <span class="at">parse=</span><span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">1.05</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>)</span>
 <span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>insurance_eu_4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>insurance_eu_4</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-eu" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1872,7 +1879,7 @@ V(\neg\text{I})&amp;=\sum_{i=1}^n p_iv(x_i) \\[6pt]
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1909,7 +1916,7 @@ V(\neg\text{I})&amp;=\sum_{i=1}^n p_iv(x_i) \\[6pt]
 <span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">0</span>, <span class="at">vjust=</span><span class="fl">0.5</span>))<span class="sc">+</span></span>
 <span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>  <span class="co">#limit to y greater than zero and x greater than -8 (need -8 so space for y-axis labels)</span></span>
-<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">220</span>, <span class="dv">220</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">15</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">220</span>, <span class="dv">220</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">15</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-value-function" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1928,7 +1935,7 @@ Figure&nbsp;18.13: A value function with the reflection effect
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -1977,7 +1984,7 @@ Figure&nbsp;18.13: A value function with the reflection effect
 <span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> xc, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"-R"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.3</span>)<span class="sc">+</span></span>
 <span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> xc, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> xc, <span class="at">yend =</span> <span class="fu">u</span>(xc), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
 <span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(xc), <span class="at">xend =</span> xc, <span class="at">yend =</span> <span class="fu">u</span>(xc), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(xc), <span class="at">label =</span> <span class="st">"v(-R)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(xc), <span class="at">label =</span> <span class="st">"v(-R)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-reflection-outcomes" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1996,7 +2003,7 @@ Figure&nbsp;18.14: The value of the outcomes of purchasing insurance and not pur
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -2048,7 +2055,7 @@ Figure&nbsp;18.14: The value of the outcomes of purchasing insurance and not pur
 <span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(xc), <span class="at">label =</span> <span class="st">"v(-R)"</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.3</span>)<span class="sc">+</span></span>
 <span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add expected utility line</span></span>
-<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> x1, <span class="at">xend =</span> x2, <span class="at">y =</span> <span class="fu">u</span>(x1), <span class="at">yend =</span> <span class="fu">u</span>(x2), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotdash"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> x1, <span class="at">xend =</span> x2, <span class="at">y =</span> <span class="fu">u</span>(x1), <span class="at">yend =</span> <span class="fu">u</span>(x2), <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dotdash"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-reflection-line" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -2068,7 +2075,7 @@ Figure&nbsp;18.15: The weighted value line
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span> (x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="dv">2</span><span class="sc">*</span>(<span class="sc">-</span>x)<span class="sc">^</span><span class="fl">0.5</span>)</span>
@@ -2126,7 +2133,7 @@ Figure&nbsp;18.15: The weighted value line
 <span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">TeX</span>(<span class="st">"E[$</span><span class="sc">\\</span><span class="st">neg$ I]"</span>)), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.3</span>, <span class="at">parse=</span><span class="cn">TRUE</span>)<span class="sc">+</span></span>
 <span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> ev, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
 <span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">xend =</span> ev, <span class="at">yend =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
-<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">TeX</span>(<span class="st">"V($</span><span class="sc">\\</span><span class="st">neg$ I)"</span>)), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>, <span class="at">parse=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="fu">u</span>(x1)<span class="sc">+</span>(<span class="fu">u</span>(x2)<span class="sc">-</span><span class="fu">u</span>(x1))<span class="sc">*</span>px2, <span class="at">label =</span> <span class="fu">as.character</span>(<span class="fu">TeX</span>(<span class="st">"V($</span><span class="sc">\\</span><span class="st">neg$ I)"</span>)), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="fl">0.45</span>, <span class="at">parse=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-insurance-reflection" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -2300,13 +2307,14 @@ V(\neg\text{I})&amp;=\sum_{i=1}^n \pi(p_i)v(x_i) \\[6pt]
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -2321,7 +2329,7 @@ V(\neg\text{I})&amp;=\sum_{i=1}^n \pi(p_i)v(x_i) \\[6pt]
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/behaviouraleconomics\.jasoncollins\.blog");
+        var filterRegex = new RegExp("https:\/\/be\.jcx\.au");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
