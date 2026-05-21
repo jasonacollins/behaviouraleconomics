@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 This file provides guidance to agents when working with code in this repository.
 
@@ -42,5 +42,6 @@ When working with content:
 
 - The project uses freeze mode (`execute: freeze: auto`) to cache computational results
 - Figures are generated programmatically using R code chunks
+- `_quarto.yml` runs `scripts/add_image_dimensions.py` as a post-render hook. This updates rendered `_book/**/*.html` image tags with intrinsic `width` and `height` attributes to reduce Cumulative Layout Shift. Do not remove this unless replacing it with another CLS-safe image-dimension strategy.
 - Both HTML and PDF output formats are configured
 - The HTML version includes interactive features like code folding and search

@@ -162,7 +162,7 @@ window.Quarto = {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://blog.jcx.au/about/"> 
+    <a class="nav-link" href="https://www.jcx.au/"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -737,7 +737,7 @@ window.Quarto = {
 <h3 data-number="41.2.1" class="anchored" data-anchor-id="sec-centipede-game"><span class="header-section-number">41.2.1</span> The centipede game</h3>
 <p>This centipede game has six decision nodes. At each node, a player can “take”, and end the game, or they can “pass”, increasing the total payoff. The other player then has a move.</p>
 <p>The numbers 1 and 2 along the top of the centipede represent the decision nodes for two players. At the first node, player 1 has the choice to take or pass. If player 1 passes, player 2 has the choice to take or pass, and so on. At the final node, the game ends regardless of what player 2 chooses.</p>
-<p><a href="img/centipede-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/centipede-game-1.jpg" class="img-fluid"></a></p>
+<p><a href="img/centipede-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/centipede-game-1.jpg" class="img-fluid" width="3593" height="811"></a></p>
 <p>The payoff when a player takes and ends the game is represented by the numbers in the brackets. The first number is the payoff for player 1 and the second number is the payoff for player 2. For example, if player 1 takes at the first node, they receive a payoff of 1 and player 2 receives a payoff of 0. At the final node, if player 2 passes they receive a payoff of 5 and Player 1 receives a payoff of 6. If player 2 takes at that final node, they receive a payoff of 6 and Player 1 receives a payoff of 4.</p>
 </section>
 </section>
@@ -748,20 +748,20 @@ window.Quarto = {
 <section id="sec-solving-the-centipede-game" class="level3" data-number="41.3.1">
 <h3 data-number="41.3.1" class="anchored" data-anchor-id="sec-solving-the-centipede-game"><span class="header-section-number">41.3.1</span> Solving the centipede game</h3>
 <p>For example, this final stage of the centipede game is a subgame.</p>
-<p><a href="img/centipede-subgame-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/centipede-subgame-1.png" class="img-fluid" style="width:30.0%"></a></p>
+<p><a href="img/centipede-subgame-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/centipede-subgame-1.png" class="img-fluid" style="width:30.0%" width="889" height="811"></a></p>
 <p>As is this subset of the game.</p>
-<p><a href="img/centipede-subgame-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/centipede-subgame-2.png" class="img-fluid" style="width:80.0%"></a></p>
+<p><a href="img/centipede-subgame-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/centipede-subgame-2.png" class="img-fluid" style="width:80.0%" width="2520" height="811"></a></p>
 <p>A Nash Equilibrium is subgame perfect if every player plays the Nash Equilibrium in every subgame</p>
 <p>We can solve for the subgame perfect Nash equilibrium of sequential games by backward induction. To do that we solve for the decision nodes at the end of the game first and then work our way back to the beginning of the game.</p>
 <p>In our centipede game, using backward induction, player 2 at the final node will “take” for a payoff of 6 instead of passing for a payoff of 5. When marking choices in a sequential game, it is often useful to mark the option taken by the player, or that not taken, in addition to indicating the payoff they would receive.</p>
-<p><a href="img/centipede-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/centipede-game-2.png" class="img-fluid"></a></p>
+<p><a href="img/centipede-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/centipede-game-2.png" class="img-fluid" width="3593" height="811"></a></p>
 <p>At the node immediately before, player 1 will “take” for a payoff of 5 instead of passing, given player 2 will then take, giving player 1 a payoff of 4.</p>
-<p><a href="img/centipede-game-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/centipede-game-3.png" class="img-fluid"></a></p>
+<p><a href="img/centipede-game-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/centipede-game-3.png" class="img-fluid" width="3593" height="811"></a></p>
 <p>Therefore, at the node before, player 2 will take for a payoff of 4 instead of passing for a payoff of 3.</p>
 <p>Therefore, at the node before, player 1 will take for a payoff of 3 instead of passing for a payoff of 2.</p>
 <p>Therefore, player 2 at the node before will take for a payoff of 2 instead of passing for a payoff of 1.</p>
 <p>And therefore, player 1 at the first node will take for a payoff of 1 instead of passing for a payoff of 0.</p>
-<p><a href="img/centipede-game-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/centipede-game-4.png" class="img-fluid"></a></p>
+<p><a href="img/centipede-game-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/centipede-game-4.png" class="img-fluid" width="3625" height="811"></a></p>
 <p>There is a unique subgame perfect equilibrium for the centipede game: <span class="math inline">S_1=(\text{take, take, take})</span> and <span class="math inline">S_2=(\text{take, take, take})</span>, where <span class="math inline">S_1</span> and <span class="math inline">S_2</span> are the set of strategies for player 1 and player 2 respectively.</p>
 <p>In the subgame perfect Nash equilibrium of the centipede game, player 1 takes at the first node.</p>
 </section>
@@ -781,14 +781,14 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>The ultimatum game</figcaption>
-<p><a href="img/ultimatum-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The ultimatum game"><img src="img/ultimatum-game.png" class="img-fluid figure-img" style="width:80.0%" alt="The ultimatum game"></a></p>
+<p><a href="img/ultimatum-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The ultimatum game"><img src="img/ultimatum-game.png" class="img-fluid figure-img" style="width:80.0%" alt="The ultimatum game" width="4680" height="2400"></a></p>
 </figure>
 </div>
 <p>Below is the extensive form of the ultimatum game with <span class="math inline">m=\$10</span> and an assumption that the offer must be a whole dollar amount. At the first node is the proposer. They can choose to offer any dollar sum between $0 and $10. Whatever the choice, the responder is at the next node. They can choose to accept or reject the offer. The payoffs of each set of actions is indicated in the brackets at the bottom of the game tree, with the first number being the proposer’s payoff and the second number being the responder’s payoff.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>Ultimatum game tree</figcaption>
-<p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Ultimatum game tree"><img src="img/ultimatum-game-1.jpg" class="img-fluid figure-img" alt="Ultimatum game tree"></a></p>
+<p><a href="img/ultimatum-game-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Ultimatum game tree"><img src="img/ultimatum-game-1.jpg" class="img-fluid figure-img" alt="Ultimatum game tree" width="3767" height="1219"></a></p>
 </figure>
 </div>
 <p>If we work through this game by backward induction, we can see that for any non-zero amount, the responder will accept the offer. The only time they might not accept is where the offer is 0, but they still might.</p>
@@ -796,7 +796,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>The ultimatum game Nash equilibrium</figcaption>
-<p><a href="img/ultimatum-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="The ultimatum game Nash equilibrium"><img src="img/ultimatum-game-2.png" class="img-fluid figure-img" alt="The ultimatum game Nash equilibrium"></a></p>
+<p><a href="img/ultimatum-game-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="The ultimatum game Nash equilibrium"><img src="img/ultimatum-game-2.png" class="img-fluid figure-img" alt="The ultimatum game Nash equilibrium" width="3767" height="1297"></a></p>
 </figure>
 </div>
 <p>We can say that there are two subgame perfect Nash equilibria. The first is for the proposer to offer $1 and the responder to accept if offered $1 and reject if offered $0. The other (weak) subgame perfect Nash equilibrium is an offer of $0 and acceptance.</p>
@@ -811,14 +811,14 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>The dictator game</figcaption>
-<p><a href="img/dictator-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="The dictator game"><img src="img/dictator-game.png" class="img-fluid figure-img" style="width:60.0%" alt="The dictator game"></a></p>
+<p><a href="img/dictator-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="The dictator game"><img src="img/dictator-game.png" class="img-fluid figure-img" style="width:60.0%" alt="The dictator game" width="2592" height="1056"></a></p>
 </figure>
 </div>
 <p>The standard game theory prediction is no interaction whatsoever. The dictator maximises their payoff by keeping all of the endowment themselves, receiving payoff <span class="math inline">m</span> (which is bolded).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>The dictator game solved</figcaption>
-<p><a href="img/dictator-game-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="The dictator game solved"><img src="img/dictator-game-solved.png" class="img-fluid figure-img" style="width:60.0%" alt="The dictator game solved"></a></p>
+<p><a href="img/dictator-game-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="The dictator game solved"><img src="img/dictator-game-solved.png" class="img-fluid figure-img" style="width:60.0%" alt="The dictator game solved" width="2592" height="1288"></a></p>
 </figure>
 </div>
 </section>
@@ -839,7 +839,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>The trust game</figcaption>
-<p><a href="img/trust-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="The trust game"><img src="img/trust-game.png" class="img-fluid figure-img" alt="The trust game"></a></p>
+<p><a href="img/trust-game.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="The trust game"><img src="img/trust-game.png" class="img-fluid figure-img" alt="The trust game" width="6592" height="2104"></a></p>
 </figure>
 </div>
 <p>Here is a numerical example.</p>
@@ -851,7 +851,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>The trust game example</figcaption>
-<p><a href="img/trust-game-numerical.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="The trust game example"><img src="img/trust-game-numerical.png" class="img-fluid figure-img" alt="The trust game example"></a></p>
+<p><a href="img/trust-game-numerical.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="The trust game example"><img src="img/trust-game-numerical.png" class="img-fluid figure-img" alt="The trust game example" width="6408" height="1064"></a></p>
 </figure>
 </div>
 <p>If both receivers have utility function <span class="math inline">u(x)=x</span> the only subgame-perfect equilibrium is that the receiver will keep all their money, so the sender sends nothing.</p>
@@ -861,7 +861,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <figcaption>The trust game solved</figcaption>
-<p><a href="img/trust-game-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="The trust game solved"><img src="img/trust-game-solved.png" class="img-fluid figure-img" alt="The trust game solved"></a></p>
+<p><a href="img/trust-game-solved.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="The trust game solved"><img src="img/trust-game-solved.png" class="img-fluid figure-img" alt="The trust game solved" width="6656" height="2104"></a></p>
 </figure>
 </div>
 <p>Relative to the Pareto optimal outcome whereby the sender’s full endowment is tripled and they receive a positive return on their investment, both players are worse off under the equilibrium outcome.</p>

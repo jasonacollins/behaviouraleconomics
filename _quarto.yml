@@ -1,11 +1,13 @@
 project:
   type: book
+  post-render:
+    - python3 scripts/add_image_dimensions.py
 
 book:
   title: "Notes on behavioural economics"
   site-url: https://be.jcx.au
   author: "Jason Collins"
-  date: "20 May 2025"
+  date: "22 May 2026"
   date-format: D MMMM YYYY
   chapters:
     - index.qmd
@@ -94,7 +96,7 @@ book:
       - text: "Blog"
         href: https://blog.jcx.au/
       - text: "About"
-        href: https://blog.jcx.au/about/
+        href: https://www.jcx.au/
   sidebar:
     collapse-level: 1
     style: "floating"
