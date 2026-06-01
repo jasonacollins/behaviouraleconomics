@@ -10,7 +10,7 @@ The result is a new set of predictions as to how humans might behave and what ec
 
 There are no mathematical prerequisites for this subject. Hence, the mathematics is kept at a basic level.
 
-I have created videos to accompany these notes. You can find links to them and other teaching materials on my website at [www.jasoncollins.blog/teaching/](https://www.jasoncollins.blog/teaching/).
+I have created videos to accompany these notes. You can find links to them and other teaching materials on my website at [blog.jcx.au/teaching/](https://blog.jcx.au/teaching/).
 
 These notes cover the following areas:
 
