@@ -1,6 +1,7 @@
 project:
   type: book
   post-render:
+    - scripts/normalize-urls.ts https://be.jcx.au
     - python3 scripts/add_image_dimensions.py
 
 book:
@@ -116,6 +117,7 @@ csl: apa-no-ampersand.csl
 
 format:
   html:
+    canonical-url: true
     theme: cosmo
     grid:
       gutter-width: 2.5rem
