@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>23&nbsp; Exponential discounting anomalies – Notes on behavioural economics</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -52,17 +58,17 @@ div.csl-indent {
 <meta name="quarto:offset" content="../">
 <link href="../intertemporal-choice/present-bias.html" rel="next">
 <link href="../intertemporal-choice/exponential-discounting-examples.html" rel="prev">
+<link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5d5643465747552cd5c9df1f25b45fae.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f9311f57480f07e2dd12e593d0499552.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -78,7 +84,6 @@ div.csl-indent {
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -93,14 +98,14 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZFSLJY1DR4"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XR5VGQXN14"></script>
 
 <script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
+gtag('config', 'G-XR5VGQXN14', { 'anonymize_ip': true});
 </script>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
@@ -166,8 +171,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Notes on behavioural economics</span>
     </a>
@@ -208,10 +211,6 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -775,10 +774,10 @@ Frederick, S., Loewenstein, G., and O’Donoghue, T. (2002). Time discounting an
 Green, L., Fristoe, N., and Myerson, J. (1994). Temporal discounting and preference reversals in choice between delayed outcomes. <em>Psychonomic Bulletin &amp; Review</em>, <em>1</em>(3), 383–389. <a href="https://doi.org/10.3758/BF03213979">https://doi.org/10.3758/BF03213979</a>
 </div>
 <div id="ref-kirby1995" class="csl-entry" role="listitem">
-Kirby, K. N., and Herrnstein, R. J. (1995). Preference Reversals Due to Myopic Discounting of Delayed Reward. <em>Psychological Science</em>, <em>6</em>(2), 83–89. <a href="https://doi.org/10.1111/j.1467-9280.1995.tb00311.x">https://doi.org/10.1111/j.1467-9280.1995.tb00311.x</a>
+Kirby, K. N., and Herrnstein, R. J. (1995). Preference reversals due to myopic discounting of delayed reward. <em>Psychological Science</em>, <em>6</em>(2), 83–89. <a href="https://doi.org/10.1111/j.1467-9280.1995.tb00311.x">https://doi.org/10.1111/j.1467-9280.1995.tb00311.x</a>
 </div>
 <div id="ref-read1998" class="csl-entry" role="listitem">
-Read, D., and Leeuwen, B. van. (1998). Predicting Hunger: The Effects of Appetite and Delay on Choice. <em>Organizational Behavior and Human Decision Processes</em>, <em>76</em>(2), 189–205. <a href="https://doi.org/10.1006/obhd.1998.2803">https://doi.org/10.1006/obhd.1998.2803</a>
+Read, D., and Leeuwen, B. van. (1998). Predicting hunger: The effects of appetite and delay on choice. <em>Organizational Behavior and Human Decision Processes</em>, <em>76</em>(2), 189–205. <a href="https://doi.org/10.1006/obhd.1998.2803">https://doi.org/10.1006/obhd.1998.2803</a>
 </div>
 <div id="ref-thaler1981" class="csl-entry" role="listitem">
 Thaler, R. (1981). Some empirical evidence on dynamic inconsistency. <em>Economics Letters</em>, <em>8</em>(3), 201–207. <a href="https://doi.org/10.1016/0165-1765(81)90067-7">https://doi.org/10.1016/0165-1765(81)90067-7</a>

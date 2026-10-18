@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>19&nbsp; Prospect theory applications – Notes on behavioural economics</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -87,17 +93,17 @@ div.csl-indent {
 <meta name="quarto:offset" content="../">
 <link href="../prospect-theory/prospect-theory-exercises.html" rel="next">
 <link href="../prospect-theory/prospect-theory-examples.html" rel="prev">
+<link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5d5643465747552cd5c9df1f25b45fae.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f9311f57480f07e2dd12e593d0499552.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -113,7 +119,6 @@ div.csl-indent {
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -128,14 +133,14 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZFSLJY1DR4"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XR5VGQXN14"></script>
 
 <script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
+gtag('config', 'G-XR5VGQXN14', { 'anonymize_ip': true});
 </script>
 
 
@@ -162,8 +167,6 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Notes on behavioural economics</span>
     </a>
@@ -204,10 +207,6 @@ gtag('config', 'G-ZFSLJY1DR4', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -931,7 +930,7 @@ Camerer, C., Babcock, L., Loewenstein, G., and Thaler, R. (1997). Labor supply o
 Farber, H. S. (2005). Is tomorrow another day? The labor supply of new york city cabdrivers. <em>Journal of Political Economy</em>, <em>113</em>(1), 46–82. <a href="https://doi.org/10.1086/426040">https://doi.org/10.1086/426040</a>
 </div>
 <div id="ref-farber2008" class="csl-entry" role="listitem">
-Farber, H. S. (2008). Reference-Dependent Preferences and Labor Supply: The Case of New York City Taxi Drivers. <em>American Economic Review</em>, <em>98</em>(3), 1069–1082. <a href="https://doi.org/10.1257/aer.98.3.1069">https://doi.org/10.1257/aer.98.3.1069</a>
+Farber, H. S. (2008). Reference-dependent preferences and labor supply: The case of new york city taxi drivers. <em>American Economic Review</em>, <em>98</em>(3), 1069–1082. <a href="https://doi.org/10.1257/aer.98.3.1069">https://doi.org/10.1257/aer.98.3.1069</a>
 </div>
 <div id="ref-farber2015" class="csl-entry" role="listitem">
 Farber, H. S. (2015). Why you can<span>’</span>t find a taxi in the rain and other labor supply lessons from cab drivers. <em>The Quarterly Journal of Economics</em>, <em>130</em>(4), 1975–2026. <a href="https://doi.org/10.1093/qje/qjv026">https://doi.org/10.1093/qje/qjv026</a>
@@ -943,7 +942,7 @@ Genesove, D., and Mayer, C. (2001). Loss aversion and seller behavior: Evidence 
 Martin, V. (2017). When to quit: Narrow bracketing and reference dependence in taxi drivers. <em>Journal of Economic Behavior &amp; Organization</em>, <em>144</em>, 166–187. <a href="https://doi.org/10.1016/j.jebo.2017.09.024">https://doi.org/10.1016/j.jebo.2017.09.024</a>
 </div>
 <div id="ref-shefrin1985" class="csl-entry" role="listitem">
-Shefrin, H., and Statman, M. (1985). The Disposition to Sell Winners Too Early and Ride Losers Too Long: Theory and Evidence. <em>The Journal of Finance</em>, <em>40</em>(3), 777–790. <a href="https://doi.org/10.1111/j.1540-6261.1985.tb05002.x">https://doi.org/10.1111/j.1540-6261.1985.tb05002.x</a>
+Shefrin, H., and Statman, M. (1985). The disposition to sell winners too early and ride losers too long: Theory and evidence. <em>The Journal of Finance</em>, <em>40</em>(3), 777–790. <a href="https://doi.org/10.1111/j.1540-6261.1985.tb05002.x">https://doi.org/10.1111/j.1540-6261.1985.tb05002.x</a>
 </div>
 </div>
 </section>
